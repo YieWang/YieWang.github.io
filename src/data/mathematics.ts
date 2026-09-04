@@ -52,7 +52,7 @@ export const templateData: TemplateItem[] = [
   {
     title: "Seminar Template",
     type: "LaTeX template",
-    previewUrl: "/templates/Seminar_Template_Preview.pdf?v=2",
-    sourceUrl: "/templates/Seminar_Template.zip?v=2",
+    previewUrl: "/templates/Seminar_Template_Preview.pdf?v=3",
+    sourceUrl: "/templates/Seminar_Template.zip?v=3",
   },
 ];
