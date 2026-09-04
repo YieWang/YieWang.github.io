@@ -40,19 +40,19 @@ export const templateData: TemplateItem[] = [
   {
     title: "Chinese Template",
     type: "LaTeX template",
-    previewUrl: "/templates/Chinese_Template_Preview.pdf",
-    sourceUrl: "/templates/Chinese_Template.zip",
+    previewUrl: "/templates/Chinese_Template_Preview.pdf?v=2",
+    sourceUrl: "/templates/Chinese_Template.zip?v=2",
   },
   {
     title: "English Template",
     type: "LaTeX template",
-    previewUrl: "/templates/English_Template_Preview.pdf",
-    sourceUrl: "/templates/English_Template.zip",
+    previewUrl: "/templates/English_Template_Preview.pdf?v=2",
+    sourceUrl: "/templates/English_Template.zip?v=2",
   },
   {
     title: "Seminar Template",
     type: "LaTeX template",
-    previewUrl: "/templates/Seminar_Template_Preview.pdf",
-    sourceUrl: "/templates/Seminar_Template.zip",
+    previewUrl: "/templates/Seminar_Template_Preview.pdf?v=2",
+    sourceUrl: "/templates/Seminar_Template.zip?v=2",
   },
 ];
