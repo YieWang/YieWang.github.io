@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { profileData } from '../data/profile';
-import { thesisData, workInProgressData } from '../data/publications';
-import { interestsData } from '../data/interests';
+import { notesData, expositionData, templateData } from '../data/mathematics';
+import { marginaliaData } from '../data/marginalia';
 
 const currentYear = new Date().getFullYear();
 ---
 
 <Layout
   title={`${profileData.name} (${profileData.chineseName}) – Pure Mathematics`}
-  description={`Official website of ${profileData.name} (${profileData.chineseName}), incoming Master's student in Mathematics at the ${profileData.institution}.`}
+  description={`Official website of ${profileData.name} (${profileData.chineseName}), Master's student in Mathematics at the ${profileData.institution}.`}
 >
   <style>
     /* Julian Perilla 1:1 Silky Smooth Crossfade */
@@ -54,11 +54,11 @@ const currentYear = new Date().getFullYear();
     <main class="w-full max-w-[72rem] mx-auto px-6 sm:px-12 md:px-16 pt-5 sm:pt-8 pb-4 flex-grow flex flex-col justify-start">
       
       <!-- ================================================================= -->
-      <!-- HEADER: Pure Text Navigation (无横线，无方框，适度紧凑)          -->
+      <!-- HEADER: Pure Text Navigation (HOME · MATHEMATICS · MARGINALIA · CV) -->
       <!-- ================================================================= -->
       <header id="header" class="w-full mb-4 sm:mb-6 flex-shrink-0">
         <nav class="py-1">
-          <ul class="flex items-center justify-center gap-8 sm:gap-14 flex-wrap" role="tablist">
+          <ul class="flex items-center justify-center gap-6 sm:gap-10 flex-wrap" role="tablist">
             <li>
               <a
                 href="#home"
@@ -69,31 +69,35 @@ const currentYear = new Date().getFullYear();
                 Home
               </a>
             </li>
+            <li class="text-[#D4D4D4] select-none text-[0.75rem]">·</li>
             <li>
               <a
-                href="#research"
-                id="nav-research"
+                href="#mathematics"
+                id="nav-mathematics"
                 class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.75rem] tracking-[0.25rem] transition-colors duration-200 cursor-pointer no-underline"
                 style="font-family: 'Montserrat', sans-serif;"
               >
-                Research
+                Mathematics
               </a>
             </li>
+            <li class="text-[#D4D4D4] select-none text-[0.75rem]">·</li>
             <li>
               <a
-                href="#notes"
-                id="nav-notes"
+                href="#marginalia"
+                id="nav-marginalia"
                 class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.75rem] tracking-[0.25rem] transition-colors duration-200 cursor-pointer no-underline"
                 style="font-family: 'Montserrat', sans-serif;"
               >
-                Notes
+                Marginalia
               </a>
             </li>
+            <li class="text-[#D4D4D4] select-none text-[0.75rem]">·</li>
             <li>
               <a
                 href={profileData.socials.cvUrl || "/Yi_Wang_CV.pdf"}
                 target="_blank"
                 rel="noopener noreferrer"
+                id="nav-cv"
                 class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.75rem] tracking-[0.25rem] transition-colors duration-200 no-underline"
                 style="font-family: 'Montserrat', sans-serif;"
               >
@@ -193,185 +197,214 @@ const currentYear = new Date().getFullYear();
       </section>
 
       <!-- ================================================================= -->
-      <!-- SECTION 2: RESEARCH (居中大标题 + 严格对齐内容)                   -->
+      <!-- SECTION 2: MATHEMATICS (NOTES · EXPOSITION · TEMPLATE)            -->
       <!-- ================================================================= -->
       <section
-        id="research-section"
+        id="mathematics-section"
         class="page-section hidden max-w-2xl mx-auto w-full space-y-12 py-8"
       >
-        <!-- Section Titles (居中大标题，严格复刻 Julian Perilla) -->
+        <!-- Section Title (居中大标题，严格复刻 Julian Perilla) -->
         <div class="text-center space-y-2">
           <h2
-            class="text-[1.25rem] font-bold uppercase tracking-[0.15rem] text-[#5C5C5C]"
+            class="text-[1.25rem] font-bold uppercase tracking-[0.2rem] text-[#474747]"
             style="font-family: 'Montserrat', sans-serif;"
           >
-            RESEARCH
+            MATHEMATICS
           </h2>
-          <h3
-            class="text-[0.875rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
-            style="font-family: 'Montserrat', sans-serif;"
-          >
-            PUBLICATIONS
-          </h3>
         </div>
 
-        <!-- Papers / Thesis Listing (严格左对齐，标题直跳，无概要) -->
+        <!-- 1. NOTES (正式整理的数学笔记) -->
         <div class="space-y-6 pt-2">
-          {thesisData.map((item) => (
-            <article class="space-y-1 text-left">
-              <h4 class="text-[0.9375rem] leading-[1.6]">
-                {item.url ? (
+          <div class="space-y-1">
+            <h3
+              class="text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              NOTES
+            </h3>
+          </div>
+          <div class="space-y-5 text-left">
+            {notesData.map((item) => (
+              <article class="space-y-1">
+                <h4 class="text-[0.9375rem] leading-[1.5]">
                   <a
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
+                    class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
                     style="font-family: 'Montserrat', sans-serif;"
                   >
                     {item.title}
                   </a>
-                ) : (
-                  <span
-                    class="font-bold text-[#333333]"
+                </h4>
+                <p
+                  class="text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  {item.type} · {item.period}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <!-- 2. EXPOSITION (比较完整的数学写作、研讨班论文、本科毕业论文等) -->
+        <div class="space-y-6 pt-4">
+          <div class="space-y-1">
+            <h3
+              class="text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              EXPOSITION
+            </h3>
+          </div>
+          <div class="space-y-5 text-left">
+            {expositionData.map((item) => (
+              <article class="space-y-1">
+                <h4 class="text-[0.9375rem] leading-[1.5]">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
                     style="font-family: 'Montserrat', sans-serif;"
                   >
                     {item.title}
-                  </span>
-                )}
-              </h4>
-              <p
-                class="text-[0.8125rem] text-[#888888] leading-[1.6] font-light"
-                style="font-family: 'Montserrat', sans-serif;"
-              >
-                {item.journal ? (
-                  <span><em>{item.journal}</em>, {item.year}.</span>
-                ) : item.degree ? (
-                  <span>{item.degree}, {item.institution}, {item.year}.{item.supervisor ? ` Supervisor: ${item.supervisor}.` : ''}</span>
-                ) : (
-                  <span>{item.year}.</span>
-                )}
-              </p>
-            </article>
-          ))}
+                  </a>
+                </h4>
+                <p
+                  class="text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  {item.type} · {item.year}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
 
-        <!-- WORK IN PROGRESS (居中标题 + 与上方论文严格对齐的条目列表) -->
+        <!-- 3. TEMPLATE (成熟稳定的数学 LaTeX 模板) -->
         <div class="space-y-6 pt-4">
-          <div class="text-center space-y-2">
-            <h2
-              class="text-[1.125rem] font-bold uppercase tracking-[0.15rem] text-[#5C5C5C]"
+          <div class="space-y-1">
+            <h3
+              class="text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
               style="font-family: 'Montserrat', sans-serif;"
             >
-              WORK IN PROGRESS
-            </h2>
+              TEMPLATE
+            </h3>
           </div>
-          <div
-            class="space-y-3.5 text-[0.875rem] text-[#5C5C5C] leading-[1.8] font-light text-left"
-            style="font-family: 'Montserrat', sans-serif;"
-          >
-            {workInProgressData.map((item) => (
-              <div class="flex items-start gap-2.5">
-                <span class="text-[#888888] font-normal select-none">–</span>
-                <p class="flex-1">
-                  <strong class="font-medium text-[#474747]">{item.title}:</strong> {item.description}
+          <div class="space-y-5 text-left">
+            {templateData.map((item) => (
+              <article class="space-y-1">
+                <h4
+                  class="text-[0.9375rem] leading-[1.5] font-bold text-[#333333]"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  {item.title}
+                </h4>
+                <p
+                  class="text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem] flex items-center gap-2"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  <span>{item.type}</span>
+                  <span class="text-[#D1D1D1]">·</span>
+                  <a
+                    href={item.previewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-[#666666] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
+                  >
+                    Preview
+                  </a>
+                  <span class="text-[#D1D1D1]">·</span>
+                  <a
+                    href={item.sourceUrl}
+                    download
+                    class="text-[#666666] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
+                  >
+                    Source
+                  </a>
                 </p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       <!-- ================================================================= -->
-      <!-- SECTION 3: NOTES (居中大标题 + 严格对齐内容)                      -->
+      <!-- SECTION 3: MARGINALIA (数学主体之外的重要内容)                     -->
       <!-- ================================================================= -->
       <section
-        id="notes-section"
+        id="marginalia-section"
         class="page-section hidden max-w-2xl mx-auto w-full space-y-12 py-8"
       >
-        <!-- Section Title (居中大标题，严格复刻 Julian Perilla) -->
+        <!-- Section Title (居中大标题) -->
         <div class="text-center space-y-2">
           <h2
-            class="text-[1.25rem] font-bold uppercase tracking-[0.15rem] text-[#5C5C5C]"
+            class="text-[1.25rem] font-bold uppercase tracking-[0.2rem] text-[#474747]"
             style="font-family: 'Montserrat', sans-serif;"
           >
-            NOTES
+            MARGINALIA
           </h2>
-          <h3
-            class="text-[0.875rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
-            style="font-family: 'Montserrat', sans-serif;"
-          >
-            READINGS & MARGINALIA
-          </h3>
         </div>
 
-        <!-- Content Area (与 Research 严格同宽并左对齐) -->
-        <div
-          class="space-y-8 text-[0.875rem] text-[#5C5C5C] leading-[1.875] tracking-[0.025rem] text-left font-light"
-          style="font-family: 'Montserrat', sans-serif;"
-        >
-          <!-- Featured Project: Math Translations -->
-          <div class="space-y-2">
-            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
-              Featured Project
-            </h4>
-            <div class="space-y-1.5">
-              <p>
-                <a
-                  href={interestsData.project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="font-medium text-[#333333] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
-                >
-                  {interestsData.project.name} ({interestsData.project.nameZh} · mathtranslations.org)
-                </a>
-                <span class="text-[#888888] text-[0.8125rem]"> — {interestsData.project.role}</span>
-              </p>
-              <p>
-                {interestsData.project.description}
-              </p>
-              <p class="text-[0.8125rem] text-[#777777]">
-                {interestsData.project.highlights.join(' · ')}
-              </p>
-            </div>
+        <!-- 1. PROJECT (精炼项目呈现) -->
+        <div class="space-y-6 pt-2">
+          <div class="space-y-1">
+            <h3
+              class="text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              PROJECT
+            </h3>
           </div>
-
-          <!-- Mathematical Notes & Seminars -->
-          <div class="space-y-2 pt-2">
-            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
-              Mathematical Notes & Seminars
+          <div class="space-y-1 text-left">
+            <h4 class="text-[0.9375rem] leading-[1.5]">
+              <a
+                href={marginaliaData.project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                {marginaliaData.project.title}
+              </a>
             </h4>
-            <div class="space-y-2.5">
-              {interestsData.notes.map((note) => (
-                <div class="flex items-start gap-2.5">
-                  <span class="text-[#888888] font-normal select-none">–</span>
-                  <p class="flex-1">
-                    <strong class="font-medium text-[#333333]">{note.title} ({note.category}):</strong> {note.detail}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- Mathematical Communication -->
-          <div class="space-y-2 pt-2">
-            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
-              Mathematical Communication
-            </h4>
-            <p>
-              {interestsData.communication.description}
-              <span class="text-[#888888] text-[0.8125rem] block pt-0.5">
-                {interestsData.communication.platforms.map((p) => `${p.name}: ${p.count}`).join(' · ')}
-              </span>
+            <p
+              class="text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              {marginaliaData.project.subtitle}
+            </p>
+            <p class="text-[0.8125rem] pt-1.5">
+              <a
+                href={marginaliaData.project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
+              >
+                {marginaliaData.project.displayUrl}
+              </a>
             </p>
           </div>
+        </div>
 
-          <!-- Marginalia / Beyond Math -->
-          <div class="space-y-2 pt-2">
-            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
-              Marginalia & Life
-            </h4>
-            <p>
-              Beyond mathematics: {interestsData.marginalia.join(', ')}.
+        <!-- 2. INTERESTS (极简兴趣列表) -->
+        <div class="space-y-6 pt-4">
+          <div class="space-y-1">
+            <h3
+              class="text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              INTERESTS
+            </h3>
+          </div>
+          <div class="text-left">
+            <p
+              class="text-[0.875rem] text-[#555555] font-light tracking-[0.04rem]"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              {marginaliaData.interests}
             </p>
           </div>
         </div>
@@ -397,9 +430,17 @@ const currentYear = new Date().getFullYear();
   <script>
     let isTransitioning = false;
 
+    const pageTitles: Record<string, string> = {
+      home: 'Yi Wang (王怡) – Pure Mathematics',
+      mathematics: 'Mathematics · Yi Wang (王怡)',
+      marginalia: 'Marginalia · Yi Wang (王怡)'
+    };
+
     function getHash() {
       const h = window.location.hash ? window.location.hash.substring(1).toLowerCase() : 'home';
-      return (h === 'research' || h === 'notes') ? h : 'home';
+      if (h === 'mathematics' || h === 'research') return 'mathematics';
+      if (h === 'marginalia' || h === 'notes') return 'marginalia';
+      return 'home';
     }
 
     function updateScrollState(targetId: string) {
@@ -418,6 +459,11 @@ const currentYear = new Date().getFullYear();
       if (!targetSec) return;
 
       updateScrollState(targetId);
+
+      // Dynamically update document title for each section
+      if (pageTitles[targetId]) {
+        document.title = pageTitles[targetId];
+      }
 
       // Update Nav Link styles immediately
       document.querySelectorAll('.nav-link').forEach((link) => {
