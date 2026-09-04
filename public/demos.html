@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学术主页三种风格对比 - 极简与优雅白演示</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Ma+Shan+Zheng&display=swap');
+
+    .font-garamond { font-family: 'EB Garamond', Georgia, serif; }
+    .font-newsreader { font-family: 'Newsreader', Georgia, serif; }
+    .font-sans-ui { font-family: 'Inter', -apple-system, sans-serif; }
+    .font-calligraphy { font-family: 'Ma Shan Zheng', 'STKaiti', serif; }
+    .font-mono-ui { font-family: 'JetBrains Mono', monospace; }
+
+    /* Custom switcher pill active */
+    .style-tab.active {
+      background-color: #1c1917;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body class="bg-stone-100 text-stone-900 font-sans-ui antialiased selection:bg-stone-200">
+
+  <!-- Top Global Demo Controller Bar -->
+  <aside class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-300 px-4 py-3 shadow-sm">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+        <span class="text-xs font-semibold tracking-tight text-stone-800 uppercase font-mono-ui">
+          Style Selector · 极简与优雅白方案对比
+        </span>
+      </div>
+
+      <!-- Segmented Control -->
+      <div class="inline-flex rounded-lg p-1 bg-stone-100 border border-stone-200 text-xs font-medium">
+        <button onclick="switchStyle('demo-a')" id="btn-demo-a" class="style-tab active px-3.5 py-1.5 rounded-md transition-all">
+          方案 A · 古典印本 (Folio)
+        </button>
+        <button onclick="switchStyle('demo-b')" id="btn-demo-b" class="style-tab px-3.5 py-1.5 rounded-md text-stone-600 hover:text-stone-900 transition-all">
+          方案 B · 现代双栏 (Split-Screen)
+        </button>
+        <button onclick="switchStyle('demo-c')" id="btn-demo-c" class="style-tab px-3.5 py-1.5 rounded-md text-stone-600 hover:text-stone-900 transition-all">
+          方案 C · 纯粹手稿 (Manuscript)
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================== -->
+  <!-- DEMO A: 古典印本风 (The Classical Folio) - 灵感来源: Yuenian Zhou       -->
+  <!-- 特点: 象牙暖白纸底、EB Garamond 字体、零圆角、直线编目、边注 (Marginalia)  -->
+  <!-- ===================================================================== -->
+  <section id="demo-a" class="min-h-screen py-10 px-4 sm:px-8 bg-[#fbf9f5] text-[#24211d] transition-all">
+    <!-- Design notes badge -->
+    <div class="max-w-4xl mx-auto mb-8 p-3 rounded-none border border-[#b8afa0] bg-[#f5efe6] text-xs text-[#5c5446] flex items-center justify-between font-mono-ui">
+      <span>📖 方案 A 特色：源自 Yuenian Zhou，古董纸本排印、零圆角、零阴影、纯衬线体与边注结构</span>
+      <span class="text-[11px] text-[#173d99] font-semibold">--radius: 0; --shadow: none;</span>
+    </div>
+
+    <div class="max-w-4xl mx-auto border-t-2 border-b-2 border-[#24211d] py-10 px-4 sm:px-10 bg-white">
+      
+      <!-- Folio Header -->
+      <div class="flex justify-between items-baseline border-b border-[#d8d0c2] pb-3 text-xs uppercase tracking-widest text-[#7a7265] font-garamond">
+        <span>Folio 01 / Academic Record</span>
+        <span>Regensburg · Beijing</span>
+        <span>Anno 2026</span>
+      </div>
+
+      <!-- Hero / Title -->
+      <div class="py-10 border-b border-[#d8d0c2]">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-normal font-garamond tracking-tight text-[#1a1815]">
+              Wang Yi <span class="font-calligraphy text-3xl ml-3 text-[#5c5446]">王一</span>
+            </h1>
+            <p class="text-base sm:text-lg font-garamond italic text-[#5c5446] mt-2">
+              Ph.D. Candidate in Computer Science · State Key Laboratory
+            </p>
+          </div>
+          <div class="text-right text-xs font-mono-ui space-y-1 text-[#6b6355]">
+            <div>Office: Lab Bldg. 402</div>
+            <div><a href="#" class="text-[#173d99] underline">wangyi@lab.ac.cn</a></div>
+            <div>[ <a href="#" class="text-[#173d99] hover:underline">Curriculum Vitae</a> ]</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Editorial: Body & Marginalia -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 py-10 border-b border-[#d8d0c2]">
+        <!-- Main Text (2 cols) -->
+        <div class="md:col-span-2 space-y-4 font-garamond text-lg leading-relaxed text-[#2c2824]">
+          <p>
+            I am a doctoral researcher working in the intersection of <strong class="text-[#1a1815] font-semibold">Multimodal Deep Learning</strong> and <strong class="text-[#1a1815] font-semibold">Efficient Neural Architectures</strong>, supervised by Prof. Michael Zhang.
+          </p>
+          <p>
+            My current inquiry focuses on how severe token redundancy in vision-language foundation models can be structurally pruned via dynamic routing, aiming to bring high-fidelity spatial reasoning onto edge compute nodes without accuracy degradation.
+          </p>
+          <div class="pt-2 flex items-center gap-4 text-sm font-mono-ui text-[#173d99]">
+            <a href="#" class="underline hover:text-[#102b68]">Google Scholar (450+)</a>
+            <span>/</span>
+            <a href="#" class="underline hover:text-[#102b68]">arXiv Preprints</a>
+            <span>/</span>
+            <a href="#" class="underline hover:text-[#102b68]">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Marginalia / 边注 (1 col) -->
+        <aside class="border-l border-[#d8d0c2] pl-6 space-y-4 font-garamond">
+          <div class="text-xs uppercase tracking-widest text-[#7a7265] font-mono-ui">
+            Plate 01 · Marginalia
+          </div>
+          <div class="text-xs leading-normal text-[#5c5446] italic">
+            “The search for elegance in computation is not an aesthetic indulgence, but a disciplined subtraction of the non-essential.”
+          </div>
+          <div class="text-xs text-[#5c5446] pt-2 border-t border-[#e8e0d2]">
+            <div class="font-semibold font-sans-ui text-[11px] text-[#24211d]">Recent Dispatch</div>
+            <div class="mt-1">FlashAttn-V4 accepted for oral presentation at CVPR 2026.</div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Selected Treatises (Publications) -->
+      <div class="py-10 space-y-8">
+        <div class="flex items-baseline justify-between border-b border-[#24211d] pb-2">
+          <h2 class="text-2xl font-normal font-garamond tracking-wide uppercase">
+            Selected Papers & Preprints
+          </h2>
+          <span class="text-xs font-mono-ui text-[#7a7265]">Sorted by year</span>
+        </div>
+
+        <!-- Paper Item 1 -->
+        <div class="space-y-2 font-garamond">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xs font-mono-ui font-semibold text-[#173d99]">[CVPR '26 Oral]</span>
+            <h3 class="text-xl font-semibold text-[#1a1815]">
+              FlashAttn-V4: Extreme Sparse Vision-Language Attention with Dynamic Context Compression
+            </h3>
+          </div>
+          <div class="text-base text-[#4a443a]">
+            <strong class="underline decoration-1 underline-offset-4 text-[#1a1815]">Yi Wang</strong>, Lin Chen, Hao Zhang, Ming Sun, Michael Zhang
+          </div>
+          <div class="text-sm text-[#5c5446] italic">
+            IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2026.
+          </div>
+          <p class="text-sm text-[#4a443a] leading-relaxed pt-1">
+            Proposes an input-dependent sparse routing operator for multimodal tokens, achieving a 72% footprint reduction with lossless perceptual fidelity on zero-shot benchmarks.
+          </p>
+          <div class="pt-1 flex gap-4 text-xs font-mono-ui text-[#173d99]">
+            <a href="#" class="hover:underline">[ PDF ]</a>
+            <a href="#" class="hover:underline">[ Code ]</a>
+            <a href="#" class="hover:underline">[ BibTeX ]</a>
+          </div>
+        </div>
+
+        <!-- Paper Item 2 -->
+        <div class="space-y-2 font-garamond pt-4 border-t border-[#e8e0d2]">
+          <div class="flex items-baseline gap-2">
+            <span class="text-xs font-mono-ui font-semibold text-[#5c5446]">[NeurIPS '25 Spotlight]</span>
+            <h3 class="text-xl font-semibold text-[#1a1815]">
+              LatentAlign: Unified Representation Learning Across Modalities via Optimal Transport
+            </h3>
+          </div>
+          <div class="text-base text-[#4a443a]">
+            <strong class="underline decoration-1 underline-offset-4 text-[#1a1815]">Yi Wang</strong>, Zhiwei Zhang, Alice Miller, Michael Zhang
+          </div>
+          <div class="text-sm text-[#5c5446] italic">
+            Advances in Neural Information Processing Systems, 2025.
+          </div>
+          <div class="pt-1 flex gap-4 text-xs font-mono-ui text-[#173d99]">
+            <a href="#" class="hover:underline">[ PDF ]</a>
+            <a href="#" class="hover:underline">[ BibTeX ]</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Humanist Interests Section -->
+      <div class="py-8 border-t border-[#d8d0c2] font-garamond text-sm text-[#5c5446] grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-sans-ui text-xs font-semibold uppercase tracking-wider text-[#24211d] mb-1">Analog Observations</h4>
+          <p>Documenting silent cityscapes on 35mm film (Leica M6, 35mm Summicron). Photography keeps the mind observant to physical geometry.</p>
+        </div>
+        <div>
+          <h4 class="font-sans-ui text-xs font-semibold uppercase tracking-wider text-[#24211d] mb-1">On the Reading Stand</h4>
+          <p>Currently revisiting Hofstadter’s <em>Gödel, Escher, Bach</em>. Exploring recursion and self-referential loops in formal systems.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================== -->
+  <!-- DEMO B: 现代双栏风 (Split-Screen Modern) - 灵感来源: Muhammad Raza    -->
+  <!-- 特点: 纯净优雅白、左侧粘性停靠导航+伸缩横线、右侧顺畅阅读区、层次利落 -->
+  <!-- ===================================================================== -->
+  <section id="demo-b" class="min-h-screen py-10 px-4 sm:px-8 bg-white text-stone-900 hidden transition-all">
+    <!-- Design notes badge -->
+    <div class="max-w-5xl mx-auto mb-6 p-3 rounded-lg border border-stone-200 bg-stone-50 text-xs text-stone-600 flex items-center justify-between font-mono-ui">
+      <span>🏛️ 方案 B 特色：源自 Muhammad Raza，现代双栏画廊布局、左侧导航联动伸缩横线、极高排版留白</span>
+      <span class="text-blue-700 font-semibold">Desktop Split-Screen</span>
+    </div>
+
+    <div class="max-w-5xl mx-auto lg:flex lg:gap-16">
+      
+      <!-- Left Sticky Column (40% width) -->
+      <header class="lg:sticky lg:top-16 lg:h-[calc(100vh-6rem)] lg:w-5/12 lg:flex lg:flex-col lg:justify-between py-6">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-blue-900 font-mono-ui">
+            PhD Candidate · State Key Lab
+          </p>
+          <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-stone-900 font-newsreader mt-3">
+            Wang Yi
+            <span class="block text-xl font-normal text-stone-500 font-sans-ui mt-1">王一</span>
+          </h1>
+          <p class="text-sm text-stone-600 leading-relaxed mt-4 max-w-sm">
+            研究多模态大模型架构与计算效率。致力于在保持严谨学术深度的同时，探索真实而温和的个人生活面貌。
+          </p>
+
+          <!-- Dynamic Line Indicator Navigation -->
+          <nav class="mt-12 hidden lg:block" aria-label="Page navigation">
+            <ul class="space-y-4 text-xs font-mono-ui tracking-wider uppercase">
+              <li>
+                <a href="#b-about" class="group flex items-center gap-3 text-stone-900 font-semibold">
+                  <span class="h-px w-12 bg-stone-900 transition-all group-hover:w-16"></span>
+                  <span>01 · 关于我 (About)</span>
+                </a>
+              </li>
+              <li>
+                <a href="#b-publications" class="group flex items-center gap-3 text-stone-500 hover:text-stone-900">
+                  <span class="h-px w-6 bg-stone-300 transition-all group-hover:w-12 group-hover:bg-stone-900"></span>
+                  <span>02 · 代表论文 (Research)</span>
+                </a>
+              </li>
+              <li>
+                <a href="#b-news" class="group flex items-center gap-3 text-stone-500 hover:text-stone-900">
+                  <span class="h-px w-6 bg-stone-300 transition-all group-hover:w-12 group-hover:bg-stone-900"></span>
+                  <span>03 · 近期动态 (News)</span>
+                </a>
+              </li>
+              <li>
+                <a href="#b-interests" class="group flex items-center gap-3 text-stone-500 hover:text-stone-900">
+                  <span class="h-px w-6 bg-stone-300 transition-all group-hover:w-12 group-hover:bg-stone-900"></span>
+                  <span>04 · 生活札记 (Interests)</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Academic Badges & CV in Left Footer -->
+        <div class="pt-8 space-y-3">
+          <div class="flex items-center gap-3 text-xs font-medium text-stone-600">
+            <a href="#" class="hover:text-blue-900 transition">Google Scholar</a>
+            <span>•</span>
+            <a href="#" class="hover:text-blue-900 transition">arXiv</a>
+            <span>•</span>
+            <a href="#" class="hover:text-blue-900 transition">GitHub</a>
+            <span>•</span>
+            <a href="#" class="hover:text-blue-900 transition">Email</a>
+          </div>
+          <a href="#" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium bg-stone-900 text-white hover:bg-stone-800 transition">
+            <span>下载简历 Curriculum Vitae</span>
+            <span>↓</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Right Scrollable Content (60% width) -->
+      <main class="lg:w-7/12 py-6 space-y-16">
+
+        <!-- 01 About -->
+        <section id="b-about" class="space-y-4">
+          <div class="flex items-baseline gap-3 pb-2 border-b border-stone-200">
+            <span class="font-mono-ui text-xs font-semibold text-blue-900">01</span>
+            <h2 class="text-xl font-bold font-newsreader text-stone-900">研究定位 (Research Vision)</h2>
+          </div>
+          <p class="text-sm sm:text-base text-stone-700 leading-relaxed">
+            我的主要工作围绕着高分辨率视觉-语言模型的推理瓶颈展开。当前学术界往往追求算力无上限的扩张，而我们的目标是用优雅的稀疏化与动态路由机制，让大模型在最严苛的端侧硬件上高效运行。
+          </p>
+          <div class="grid grid-cols-3 gap-3 p-3 rounded-lg bg-stone-50 border border-stone-200 text-center font-mono-ui">
+            <div>
+              <div class="text-[10px] text-stone-500 uppercase">Focus</div>
+              <div class="text-xs font-semibold text-stone-900 mt-0.5">Vision-LLMs</div>
+            </div>
+            <div>
+              <div class="text-[10px] text-stone-500 uppercase">Advisor</div>
+              <div class="text-xs font-semibold text-stone-900 mt-0.5">Prof. Zhang</div>
+            </div>
+            <div>
+              <div class="text-[10px] text-stone-500 uppercase">Scholar</div>
+              <div class="text-xs font-semibold text-blue-900 mt-0.5">450+ Cites</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02 Publications -->
+        <section id="b-publications" class="space-y-6">
+          <div class="flex items-baseline gap-3 pb-2 border-b border-stone-200">
+            <span class="font-mono-ui text-xs font-semibold text-blue-900">02</span>
+            <h2 class="text-xl font-bold font-newsreader text-stone-900">代表性论文 (Publications)</h2>
+          </div>
+
+          <div class="space-y-6">
+            <article class="space-y-2 group">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-blue-50 text-blue-900 border border-blue-200 font-mono-ui">CVPR 2026 Oral</span>
+                <span class="text-xs text-stone-400 font-mono-ui">Top 1.8%</span>
+              </div>
+              <h3 class="text-base font-bold text-stone-900 group-hover:text-blue-900 transition font-newsreader">
+                FlashAttn-V4: Extreme Sparse Vision-Language Attention with Dynamic Context Compression
+              </h3>
+              <p class="text-xs text-stone-600">
+                <strong class="text-stone-900 underline underline-offset-2">Yi Wang</strong>, Lin Chen, Hao Zhang, Ming Sun, Prof. Michael Zhang
+              </p>
+              <p class="text-xs text-stone-500 leading-relaxed">
+                提出动态稀疏路由注意力机制，端侧吞吐提升 4.2 倍，无损精度降显存 72%。
+              </p>
+              <div class="flex gap-3 text-xs font-mono-ui text-stone-600 pt-1">
+                <a href="#" class="hover:text-blue-900 underline">[ PDF ]</a>
+                <a href="#" class="hover:text-blue-900 underline">[ Code (1.2k ⭐) ]</a>
+                <a href="#" class="hover:text-blue-900 underline">[ BibTeX ]</a>
+              </div>
+            </article>
+
+            <article class="space-y-2 pt-4 border-t border-stone-100 group">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-stone-100 text-stone-800 font-mono-ui">NeurIPS 2025</span>
+              </div>
+              <h3 class="text-base font-bold text-stone-900 group-hover:text-blue-900 transition font-newsreader">
+                LatentAlign: Unified Representation Learning Across Modalities via Optimal Transport
+              </h3>
+              <p class="text-xs text-stone-600">
+                <strong class="text-stone-900 underline underline-offset-2">Yi Wang</strong>, Zhiwei Zhang, Alice Miller, Prof. Michael Zhang
+              </p>
+              <div class="flex gap-3 text-xs font-mono-ui text-stone-600 pt-1">
+                <a href="#" class="hover:text-blue-900 underline">[ PDF ]</a>
+                <a href="#" class="hover:text-blue-900 underline">[ BibTeX ]</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 03 Interests -->
+        <section id="b-interests" class="space-y-4">
+          <div class="flex items-baseline gap-3 pb-2 border-b border-stone-200">
+            <span class="font-mono-ui text-xs font-semibold text-blue-900">03</span>
+            <h2 class="text-xl font-bold font-newsreader text-stone-900">生活札记 (Beyond Research)</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg bg-stone-50 border border-stone-200 space-y-1 text-xs text-stone-600">
+              <div class="font-semibold text-stone-900 font-sans-ui">📷 胶片摄影</div>
+              <p>手持 Leica M6 穿梭于雨后街头。对画面的取舍如同对算法架构的精简。</p>
+            </div>
+            <div class="p-4 rounded-lg bg-stone-50 border border-stone-200 space-y-1 text-xs text-stone-600">
+              <div class="font-semibold text-stone-900 font-sans-ui">🏃 半程马拉松</div>
+              <p>PB 1h 38m。规律的长距离训练让人在漫长的学术科研周期中保持沉静耐力。</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================== -->
+  <!-- DEMO C: 纯粹学者手稿风 (Pure Manuscript) - 灵感来源: Santiago Arango   -->
+  <!-- 特点: 单栏定宽居中 (60em)、纯文本超链接、无卡片包裹、真实诚恳学术原貌 -->
+  <!-- ===================================================================== -->
+  <section id="demo-c" class="min-h-screen py-12 px-4 sm:px-8 bg-white text-stone-900 hidden transition-all">
+    <!-- Design notes badge -->
+    <div class="max-w-2xl mx-auto mb-8 p-3 rounded border border-stone-200 bg-stone-50 text-xs text-stone-600 flex items-center justify-between font-mono-ui">
+      <span>📄 方案 C 特色：源自 Santiago Arango，居中纯文本单栏、纯超链接、无卡片、纯粹诚恳手稿质感</span>
+      <span class="text-stone-500">Max-width 60em</span>
+    </div>
+
+    <article class="max-w-2xl mx-auto space-y-10 font-garamond text-[#1a1a1a]">
+
+      <!-- Title & Coordinates Header -->
+      <div class="space-y-4 text-center sm:text-left">
+        <h1 class="text-3xl sm:text-4xl font-normal text-stone-950 font-newsreader">
+          Wang Yi (王一)
+        </h1>
+        <p class="text-base italic text-stone-600">
+          Ph.D. Candidate in Computer Science, State Key Laboratory
+        </p>
+
+        <!-- Coordinates (Clean hyperlinked plain text) -->
+        <div class="pt-2 text-sm text-stone-700 leading-relaxed border-t border-b border-stone-200 py-3 font-sans-ui">
+          <div class="font-semibold text-xs text-stone-500 uppercase tracking-wider mb-1 font-mono-ui">Coordinates</div>
+          <p>
+            Office: Room 402, CS Research Building &nbsp;•&nbsp; Email: <a href="#" class="text-blue-900 underline">wangyi@lab.ac.cn</a>
+          </p>
+          <p class="text-xs text-stone-600 mt-1">
+            Profiles: <a href="#" class="text-blue-900 underline">Google Scholar</a>, <a href="#" class="text-blue-900 underline">arXiv</a>, <a href="#" class="text-blue-900 underline">GitHub</a> &nbsp;|&nbsp; Here is my <a href="#" class="text-blue-900 underline font-medium">Curriculum Vitae (PDF)</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- About statement -->
+      <div class="space-y-3 text-base sm:text-lg leading-relaxed text-stone-800">
+        <h2 class="text-xl font-semibold text-stone-900 font-newsreader border-b border-stone-200 pb-1">
+          About Me
+        </h2>
+        <p>
+          I am a doctoral researcher advised by Prof. Michael Zhang. My research centers around Multimodal Foundation Models and Efficient Deep Learning.
+        </p>
+        <p>
+          Specifically, I investigate how to train and compress large vision-language models so that their inference cost scales gracefully with real-world mobile and edge hardware.
+        </p>
+      </div>
+
+      <!-- Research Articles -->
+      <div class="space-y-4 text-sm sm:text-base leading-relaxed">
+        <h2 class="text-xl font-semibold text-stone-900 font-newsreader border-b border-stone-200 pb-1">
+          Research Articles & Preprints
+        </h2>
+
+        <ol class="space-y-4 list-decimal list-inside text-stone-800">
+          <li class="pl-2">
+            <strong class="text-stone-950">FlashAttn-V4: Extreme Sparse Vision-Language Attention with Dynamic Context Compression</strong>.
+            <br />
+            <span class="text-xs font-sans-ui text-stone-600">With Lin Chen, Hao Zhang, Ming Sun, and Michael Zhang.</span>
+            <br />
+            <em class="text-xs font-sans-ui text-blue-900 font-medium">CVPR 2026 (Oral Presentation)</em>.
+            <span class="text-xs font-mono-ui ml-2">[ <a href="#" class="text-blue-900 underline">arXiv:2603.xxxxx</a> ] [ <a href="#" class="text-blue-900 underline">code</a> ] [ <a href="#" class="text-blue-900 underline">bibtex</a> ]</span>
+          </li>
+
+          <li class="pl-2">
+            <strong class="text-stone-950">LatentAlign: Unified Representation Learning Across Modalities via Optimal Transport</strong>.
+            <br />
+            <span class="text-xs font-sans-ui text-stone-600">With Zhiwei Zhang, Alice Miller, and Michael Zhang.</span>
+            <br />
+            <em class="text-xs font-sans-ui text-stone-600">Advances in Neural Information Processing Systems (NeurIPS 2025)</em>.
+            <span class="text-xs font-mono-ui ml-2">[ <a href="#" class="text-blue-900 underline">arXiv:2509.xxxxx</a> ] [ <a href="#" class="text-blue-900 underline">bibtex</a> ]</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Talks & Academic Service -->
+      <div class="space-y-2 text-sm text-stone-700 leading-relaxed">
+        <h2 class="text-xl font-semibold text-stone-900 font-newsreader border-b border-stone-200 pb-1">
+          Talks & Presentations
+        </h2>
+        <ul class="list-disc list-inside space-y-1.5 text-xs font-sans-ui">
+          <li><strong>Apr 2026</strong>: Invited Talk at Beijing AI Workshop, <em>Efficient Quantization for Multimodal Agents</em>.</li>
+          <li><strong>Dec 2025</strong>: National Scholarship for Outstanding Graduate Students.</li>
+        </ul>
+      </div>
+
+      <!-- Beyond the Blackboard -->
+      <div class="space-y-2 text-sm text-stone-700 leading-relaxed pt-2">
+        <h2 class="text-xl font-semibold text-stone-900 font-newsreader border-b border-stone-200 pb-1">
+          Beyond Research
+        </h2>
+        <p class="text-xs sm:text-sm font-sans-ui text-stone-600 leading-relaxed">
+          Outside the terminal and laboratory, I practice street and landscape photography with a mechanical Leica M6 (35mm film). I am also an endurance runner (Half Marathon PB: 1h 38m) and an avid reader of Douglas Hofstadter.
+        </p>
+      </div>
+
+      <!-- Minimal footer -->
+      <footer class="pt-8 border-t border-stone-200 text-xs text-stone-400 font-sans-ui flex justify-between">
+        <span>Last updated: September 2026</span>
+        <span>Hosted on GitHub Pages</span>
+      </footer>
+
+    </article>
+  </section>
+
+  <!-- Global Controller Script -->
+  <script>
+    function switchStyle(demoId) {
+      ['demo-a', 'demo-b', 'demo-c'].forEach(id => {
+        const el = document.getElementById(id);
+        const btn = document.getElementById('btn-' + id);
+        if (id === demoId) {
+          el.classList.remove('hidden');
+          btn.classList.add('active');
+          btn.classList.remove('text-stone-600');
+        } else {
+          el.classList.add('hidden');
+          btn.classList.remove('active');
+          btn.classList.add('text-stone-600');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

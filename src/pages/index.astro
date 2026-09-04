@@ -1,0 +1,586 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { profileData } from '../data/profile';
+import { thesisData, workInProgressData } from '../data/publications';
+import { interestsData } from '../data/interests';
+
+const currentYear = new Date().getFullYear();
+---
+
+<Layout
+  title={`${profileData.name} (${profileData.chineseName}) – Pure Mathematics`}
+  description={`Official website of ${profileData.name} (${profileData.chineseName}), incoming Master's student in Mathematics at the ${profileData.institution}.`}
+>
+  <style>
+    /* Julian Perilla 1:1 Silky Smooth Crossfade */
+    .page-section {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .page-section.inactive {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+    }
+
+    /* 首页单屏零滚动控制 (Zero-Scroll Single Viewport on Desktop) */
+    @media (min-width: 768px) {
+      body.home-active {
+        overflow: hidden;
+        height: 100vh;
+      }
+      body.home-active #site-wrapper {
+        height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+      }
+    }
+
+    /* Remove default disclosure triangle on summary for Safari & Chrome */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+
+  <!-- Site Wrapper (Zero Lines, Zero Boxes, Pure Spacious White) -->
+  <div
+    id="site-wrapper"
+    class="min-h-screen bg-white text-[#474747] flex flex-col justify-between selection:bg-[#E5E5E5] selection:text-black"
+  >
+    
+    <!-- Main Inner Container (72rem max-width) -->
+    <main class="w-full max-w-[72rem] mx-auto px-6 sm:px-12 md:px-16 pt-5 sm:pt-8 pb-4 flex-grow flex flex-col justify-start">
+      
+      <!-- ================================================================= -->
+      <!-- HEADER: Pure Text Navigation (无横线，无方框，适度紧凑)          -->
+      <!-- ================================================================= -->
+      <header id="header" class="w-full mb-4 sm:mb-6 flex-shrink-0">
+        <nav class="py-1">
+          <ul class="flex items-center justify-center gap-8 sm:gap-14 flex-wrap" role="tablist">
+            <li>
+              <a
+                href="#home"
+                id="nav-home"
+                class="nav-link active-nav text-black font-bold uppercase text-[0.75rem] tracking-[0.25rem] transition-colors duration-200 cursor-pointer no-underline"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#research"
+                id="nav-research"
+                class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.75rem] tracking-[0.25rem] transition-colors duration-200 cursor-pointer no-underline"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                Research
+              </a>
+            </li>
+            <li>
+              <a
+                href="#notes"
+                id="nav-notes"
+                class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.75rem] tracking-[0.25rem] transition-colors duration-200 cursor-pointer no-underline"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                Notes
+              </a>
+            </li>
+            <li>
+              <a
+                href={profileData.socials.cvUrl || "/Yi_Wang_CV.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.75rem] tracking-[0.25rem] transition-colors duration-200 no-underline"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                CV
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- ================================================================= -->
+      <!-- SECTION 1: HOME (单屏无滚动：大尺度 2:3 占位画幅 + 沉降精炼文字)    -->
+      <!-- ================================================================= -->
+      <section
+        id="home-section"
+        class="page-section active-section block my-auto py-1 sm:py-2"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-14 xl:gap-20 items-center">
+          
+          <!-- Left Column: 50% ratio (6 cols) - 文字稍微低一点 (md:pt-10 lg:pt-16) -->
+          <div class="md:col-span-6 lg:col-span-6 space-y-6 lg:space-y-8 md:pt-10 lg:pt-16">
+            <!-- Scholar Name (Yi Wang: Josefin Sans 700 Bold) -->
+            <h1
+              class="text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-bold uppercase tracking-[0.5rem] lg:tracking-[0.65rem] text-[#474747] leading-[1.15]"
+              style="font-family: 'Josefin Sans', sans-serif; width: calc(100% + 0.65rem);"
+            >
+              {profileData.name}
+            </h1>
+
+            <!-- Bio text (直接说明在雷根斯堡大学读硕士，去除 incoming) -->
+            <div
+              class="space-y-3 text-[1rem] lg:text-[1.0625rem] text-[#474747] leading-[1.8] tracking-[0.025rem] text-left"
+              style="font-family: 'Montserrat', sans-serif; font-weight: 300;"
+            >
+              <p>
+                I am {profileData.name} ({profileData.chineseName}), a Master's student in Mathematics at the {profileData.institution}.
+              </p>
+              <p>
+                My research interests lie in Arithmetic Geometry, Algebraic Geometry, and Algebraic Number Theory.
+              </p>
+            </div>
+
+            <!-- Single Email Icon (仅保留单个邮箱图标) -->
+            <div class="pt-2 flex items-center">
+              <a
+                href={profileData.socials.email}
+                aria-label="Email"
+                class="text-[#636363] hover:text-[#0F0F0F] transition-colors duration-200 inline-block"
+                title="Email"
+              >
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 40 40">
+                  <path d="M37.5,12.6l-17.5,11.9L2.5,12.6c-.2-.1-.3-.2-.5-.2v-2.7c0-.8.6-1.4,1.4-1.4h33.1c.8,0,1.4.6,1.4,1.4v2.7c-.2,0-.4,0-.5.2ZM19.5,26.3c.2.1.3.2.5.2s.4,0,.5-.2l17.5-11.9v16.9c0,.8-.6,1.4-1.4,1.4H3.4c-.8,0-1.4-.6-1.4-1.4V14.4l17.5,11.9Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: 50% ratio (6 cols) - 纯净放大的算术调和波（无方框、无公式、纯粹经纬测地线） -->
+          <div class="md:col-span-6 lg:col-span-6 flex justify-center md:justify-end w-full">
+            <div class="w-full max-w-[380px] sm:max-w-[440px] lg:max-w-[480px] xl:max-w-[520px] h-[min(580px,68vh)] flex flex-col justify-between items-center relative select-none">
+              
+              <!-- Top Anchor: REGENSBURG (雷根斯堡) -->
+              <div class="w-full text-center space-y-1.5 relative z-10">
+                <div class="text-[0.6875rem] sm:text-[0.75rem] font-mono text-[#737373] tracking-[0.16rem]">
+                  49°00′06″ N · 12°05′47″ E
+                </div>
+                <h3
+                  class="text-[0.8125rem] sm:text-[0.875rem] font-medium tracking-[0.28rem] text-[#111111] uppercase"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  REGENSBURG
+                </h3>
+              </div>
+
+              <!-- Middle Animated Harmonic Wave Stage (大幅面纯粹无框画幅) -->
+              <div class="relative flex-1 w-full my-2 flex items-center justify-center overflow-hidden">
+                <canvas id="geodetic-canvas" class="w-full h-full block"></canvas>
+              </div>
+
+              <!-- Bottom Anchor: HANGZHOU (杭州) -->
+              <div class="w-full text-center space-y-1.5 relative z-10">
+                <h3
+                  class="text-[0.8125rem] sm:text-[0.875rem] font-medium tracking-[0.28rem] text-[#111111] uppercase"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  HANGZHOU
+                </h3>
+                <div class="text-[0.6875rem] sm:text-[0.75rem] font-mono text-[#737373] tracking-[0.16rem]">
+                  30°18′55″ N · 120°21′52″ E
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SECTION 2: RESEARCH (居中大标题 + 严格对齐内容)                   -->
+      <!-- ================================================================= -->
+      <section
+        id="research-section"
+        class="page-section hidden max-w-2xl mx-auto w-full space-y-12 py-8"
+      >
+        <!-- Section Titles (居中大标题，严格复刻 Julian Perilla) -->
+        <div class="text-center space-y-2">
+          <h2
+            class="text-[1.25rem] font-bold uppercase tracking-[0.15rem] text-[#5C5C5C]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            RESEARCH
+          </h2>
+          <h3
+            class="text-[0.875rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            PUBLICATIONS
+          </h3>
+        </div>
+
+        <!-- Papers / Thesis Listing (严格左对齐，标题直跳，无概要) -->
+        <div class="space-y-6 pt-2">
+          {thesisData.map((item) => (
+            <article class="space-y-1 text-left">
+              <h4 class="text-[0.9375rem] leading-[1.6]">
+                {item.url ? (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
+                    style="font-family: 'Montserrat', sans-serif;"
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  <span
+                    class="font-bold text-[#333333]"
+                    style="font-family: 'Montserrat', sans-serif;"
+                  >
+                    {item.title}
+                  </span>
+                )}
+              </h4>
+              <p
+                class="text-[0.8125rem] text-[#888888] leading-[1.6] font-light"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                {item.journal ? (
+                  <span><em>{item.journal}</em>, {item.year}.</span>
+                ) : item.degree ? (
+                  <span>{item.degree}, {item.institution}, {item.year}.{item.supervisor ? ` Supervisor: ${item.supervisor}.` : ''}</span>
+                ) : (
+                  <span>{item.year}.</span>
+                )}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        <!-- WORK IN PROGRESS (居中标题 + 与上方论文严格对齐的条目列表) -->
+        <div class="space-y-6 pt-4">
+          <div class="text-center space-y-2">
+            <h2
+              class="text-[1.125rem] font-bold uppercase tracking-[0.15rem] text-[#5C5C5C]"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              WORK IN PROGRESS
+            </h2>
+          </div>
+          <div
+            class="space-y-3.5 text-[0.875rem] text-[#5C5C5C] leading-[1.8] font-light text-left"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            {workInProgressData.map((item) => (
+              <div class="flex items-start gap-2.5">
+                <span class="text-[#888888] font-normal select-none">–</span>
+                <p class="flex-1">
+                  <strong class="font-medium text-[#474747]">{item.title}:</strong> {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- SECTION 3: NOTES (居中大标题 + 严格对齐内容)                      -->
+      <!-- ================================================================= -->
+      <section
+        id="notes-section"
+        class="page-section hidden max-w-2xl mx-auto w-full space-y-12 py-8"
+      >
+        <!-- Section Title (居中大标题，严格复刻 Julian Perilla) -->
+        <div class="text-center space-y-2">
+          <h2
+            class="text-[1.25rem] font-bold uppercase tracking-[0.15rem] text-[#5C5C5C]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            NOTES
+          </h2>
+          <h3
+            class="text-[0.875rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            READINGS & MARGINALIA
+          </h3>
+        </div>
+
+        <!-- Content Area (与 Research 严格同宽并左对齐) -->
+        <div
+          class="space-y-8 text-[0.875rem] text-[#5C5C5C] leading-[1.875] tracking-[0.025rem] text-left font-light"
+          style="font-family: 'Montserrat', sans-serif;"
+        >
+          <!-- Featured Project: Math Translations -->
+          <div class="space-y-2">
+            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
+              Featured Project
+            </h4>
+            <div class="space-y-1.5">
+              <p>
+                <a
+                  href={interestsData.project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-[#333333] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
+                >
+                  {interestsData.project.name} ({interestsData.project.nameZh} · mathtranslations.org)
+                </a>
+                <span class="text-[#888888] text-[0.8125rem]"> — {interestsData.project.role}</span>
+              </p>
+              <p>
+                {interestsData.project.description}
+              </p>
+              <p class="text-[0.8125rem] text-[#777777]">
+                {interestsData.project.highlights.join(' · ')}
+              </p>
+            </div>
+          </div>
+
+          <!-- Mathematical Notes & Seminars -->
+          <div class="space-y-2 pt-2">
+            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
+              Mathematical Notes & Seminars
+            </h4>
+            <div class="space-y-2.5">
+              {interestsData.notes.map((note) => (
+                <div class="flex items-start gap-2.5">
+                  <span class="text-[#888888] font-normal select-none">–</span>
+                  <p class="flex-1">
+                    <strong class="font-medium text-[#333333]">{note.title} ({note.category}):</strong> {note.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Mathematical Communication -->
+          <div class="space-y-2 pt-2">
+            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
+              Mathematical Communication
+            </h4>
+            <p>
+              {interestsData.communication.description}
+              <span class="text-[#888888] text-[0.8125rem] block pt-0.5">
+                {interestsData.communication.platforms.map((p) => `${p.name}: ${p.count}`).join(' · ')}
+              </span>
+            </p>
+          </div>
+
+          <!-- Marginalia / Beyond Math -->
+          <div class="space-y-2 pt-2">
+            <h4 class="font-bold text-[#474747] text-[0.9375rem] tracking-[0.05rem]">
+              Marginalia & Life
+            </h4>
+            <p>
+              Beyond mathematics: {interestsData.marginalia.join(', ')}.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- FOOTER: 纯净版权，单屏无缝落位                                   -->
+    <!-- ================================================================= -->
+    <footer id="footer" class="w-full max-w-[72rem] mx-auto px-6 sm:px-12 md:px-16 pb-4 pt-1 flex-shrink-0">
+      <p
+        class="text-center text-[0.7rem] text-[#888888] leading-[1.875] font-light tracking-[0.05rem]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        © {currentYear} {profileData.name}.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Client-side Hash Router with Silky Smooth Fade & Desktop Zero-Scroll -->
+  <script>
+    let isTransitioning = false;
+
+    function getHash() {
+      const h = window.location.hash ? window.location.hash.substring(1).toLowerCase() : 'home';
+      return (h === 'research' || h === 'notes') ? h : 'home';
+    }
+
+    function updateScrollState(targetId: string) {
+      if (targetId === 'home') {
+        document.body.classList.add('home-active');
+      } else {
+        document.body.classList.remove('home-active');
+      }
+    }
+
+    function activateSection(targetId: string, instant = false) {
+      if (isTransitioning) return;
+
+      const currentSec = document.querySelector('.page-section.active-section') as HTMLElement | null;
+      const targetSec = document.getElementById(targetId + '-section');
+      if (!targetSec) return;
+
+      updateScrollState(targetId);
+
+      // Update Nav Link styles immediately
+      document.querySelectorAll('.nav-link').forEach((link) => {
+        link.classList.remove('text-black', 'font-bold', 'active-nav');
+        link.classList.add('text-[#737373]', 'font-medium');
+      });
+
+      const activeLink = document.getElementById('nav-' + targetId);
+      if (activeLink) {
+        activeLink.classList.add('text-black', 'font-bold', 'active-nav');
+        activeLink.classList.remove('text-[#737373]', 'font-medium');
+      }
+
+      // If instant (first load) or same section
+      if (instant || !currentSec || currentSec === targetSec) {
+        document.querySelectorAll('.page-section').forEach((sec) => {
+          sec.classList.add('hidden', 'inactive');
+          sec.classList.remove('block', 'active-section');
+        });
+        targetSec.classList.remove('hidden', 'inactive');
+        targetSec.classList.add('block', 'active-section');
+        return;
+      }
+
+      // Smooth Fade-out -> Switch -> Fade-in (Julian Perilla Paradigm)
+      isTransitioning = true;
+
+      // 1. Fade out current section
+      currentSec.classList.add('inactive');
+
+      setTimeout(() => {
+        // 2. Hide current section
+        currentSec.classList.add('hidden');
+        currentSec.classList.remove('block', 'active-section');
+
+        // 3. Prepare target section in inactive state
+        targetSec.classList.remove('hidden');
+        targetSec.classList.add('block', 'inactive');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+
+        // 4. Trigger fade in on next animation frame
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            targetSec.classList.remove('inactive');
+            targetSec.classList.add('active-section');
+            setTimeout(() => {
+              isTransitioning = false;
+            }, 350);
+          });
+        });
+      }, 200);
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      activateSection(getHash(), true);
+      initGeodeticAnimation();
+    });
+
+    // Handle browser back/forward and hash links
+    window.addEventListener('hashchange', () => {
+      activateSection(getHash(), false);
+    });
+
+    // =========================================================================
+    // GEODETIC HARMONIC WAVE CANVAS ENGINE (纯净算术调和波)
+    // =========================================================================
+    function initGeodeticAnimation() {
+      const canvas = document.getElementById('geodetic-canvas') as HTMLCanvasElement | null;
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let width = 0;
+      let height = 0;
+      let animId: number | null = null;
+      const startTime = performance.now();
+
+      function resize() {
+        if (!canvas || !ctx) return;
+        const rect = canvas.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        width = rect.width;
+        height = rect.height;
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      const ro = new ResizeObserver(() => resize());
+      if (canvas.parentElement) ro.observe(canvas.parentElement);
+      resize();
+
+      // Main Render Loop: 纯粹调和波 (无公式、无多余图元、大幅面起伏)
+      function render(now: number) {
+        if (!ctx || width === 0 || height === 0) {
+          animId = requestAnimationFrame(render);
+          return;
+        }
+
+        // Only draw when home section is visible
+        const homeSec = document.getElementById('home-section');
+        if (homeSec && homeSec.classList.contains('hidden')) {
+          animId = requestAnimationFrame(render);
+          return;
+        }
+
+        const t = (now - startTime) / 1000;
+        ctx.clearRect(0, 0, width, height);
+
+        const padTop = 8;
+        const padBottom = height - 8;
+        const lineH = Math.max(10, padBottom - padTop);
+        const midX = Math.round(width / 2);
+
+        // 增大波幅：更宏大震撼的视觉流动感
+        const ampMax = Math.min(68, width * 0.28);
+
+        // 3组数学调和干涉纤维
+        const fibers = [
+          { f1: 1, f2: 2, sp1: 1.1, sp2: 0.7, ph: 0, color: 'rgba(26, 26, 26, 0.88)', width: 1.6 },
+          { f1: 1.5, f2: 3, sp1: -0.8, sp2: 0.9, ph: 1.4, color: 'rgba(0, 0, 0, 0.28)', width: 1.0 },
+          { f1: 0.8, f2: 1.5, sp1: 0.5, sp2: -0.5, ph: 2.8, color: 'rgba(0, 0, 0, 0.10)', width: 0.75 }
+        ];
+
+        fibers.forEach(fib => {
+          ctx.beginPath();
+          ctx.strokeStyle = fib.color;
+          ctx.lineWidth = fib.width;
+          const steps = 80;
+          for (let i = 0; i <= steps; i++) {
+            const u = i / steps;
+            const y = padTop + u * lineH;
+            // 齐次狄利克雷边界条件：两端经纬坐标点严格固定
+            const envelope = Math.sin(u * Math.PI);
+            const w1 = Math.sin(u * Math.PI * 2 * fib.f1 + t * fib.sp1 + fib.ph);
+            const w2 = Math.sin(u * Math.PI * 2 * fib.f2 - t * fib.sp2 + fib.ph) * 0.35;
+            const x = midX + envelope * ampMax * (w1 + w2);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+          }
+          ctx.stroke();
+        });
+
+        // 顶部与底部经纬锚点（高精度极简微节点）
+        [padTop, padBottom].forEach(y => {
+          ctx.beginPath();
+          ctx.strokeStyle = 'rgba(0, 0, 0, 0.35)';
+          ctx.lineWidth = 1;
+          ctx.arc(midX, y, 4.5, 0, Math.PI * 2);
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.fillStyle = '#111111';
+          ctx.arc(midX, y, 2, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        animId = requestAnimationFrame(render);
+      }
+
+      animId = requestAnimationFrame(render);
+    }
+  </script>
+</Layout>
