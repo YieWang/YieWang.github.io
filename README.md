@@ -1,15 +1,17 @@
 # Yi Wang (王怡) — Personal Academic Homepage
 
-Welcome to the source repository for my personal academic homepage: [https://yiewang.github.io/](https://yiewang.github.io/).
+Welcome to the source repository for the personal academic homepage of **Yi Wang (王怡)**: [https://yiewang.github.io/](https://yiewang.github.io/).
 
 ---
 
 ## 🏛️ About Me
-
-I am a Master's student in Mathematics at the **University of Regensburg** (雷根斯堡大学, 2026–present), having previously graduated with a B.Sc. from **China Jiliang University** (中国计量大学, 2022–2026).
-
-- **Research Interests**: Arithmetic Geometry, Étale Cohomology, Anabelian Geometry, and $p$-adic Hodge Theory.
-- **Coordinates & Anchors**: Regensburg (49°00′06″ N · 12°05′47″ E) ⇄ Hangzhou (30°19′28″ N · 120°21′44″ E).
+- **Name**: Yi Wang (王怡)
+- **Current Affiliation**: University of Regensburg (雷根斯堡大学) — M.Sc. in Mathematics (2026–present)
+- **Previous Affiliation**: China Jiliang University (中国计量大学) — B.S. in Mathematics and Applied Mathematics (2022–2026)
+- **Research Interests**: Arithmetic Geometry, Algebraic Geometry, Algebraic Number Theory
+- **Open Project**: Founder & Maintainer of [Math Translations (数译)](https://mathtranslations.org)
+- **Geodetic Coordinates**: Regensburg (49°00′06″ N · 12°05′47″ E) ⇄ Hangzhou (30°18′55″ N · 120°21′52″ E)
+- **Contact**: [Yi.Wang@stud.uni-regensburg.de](mailto:Yi.Wang@stud.uni-regensburg.de) · [kasaaa0412@gmail.com](mailto:kasaaa0412@gmail.com)
 - **Online Profile**: [https://yiewang.github.io/](https://yiewang.github.io/)
 
 ---
@@ -19,7 +21,7 @@ I am a Master's student in Mathematics at the **University of Regensburg** (雷�
 - **Framework**: [Astro](https://astro.build/) (Static Site Generation) + [Tailwind CSS](https://tailwindcss.com/)
 - **Design Philosophy**: Minimalist Academic Editorial, Julian Perilla 100vh Single-Screen Fluid Geometry
 - **Interactive Art**: Geodetic Harmonic Wave Engine (HTML5 Canvas)
-- **Typography**: Newsreader (Editorial Serif) & Montserrat (Clean Sans-Serif)
+- **Typography**: Josefin Sans (Name Heading) & Montserrat (Body & Nav)
 - **Deployment**: GitHub Pages via GitHub Actions CI/CD
 
 ---
@@ -44,5 +46,5 @@ npm run preview
 
 ## 📄 License
 
-Content & Personal Data © Yi Wang.
+Content & Personal Data © Yi Wang (王怡).  
 Source code available under the MIT License.

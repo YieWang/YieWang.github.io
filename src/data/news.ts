@@ -8,27 +8,19 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
-    date: "2026.07",
-    badge: "Paper",
-    content: '论文 "FlashAttn-V4: Extreme Sparse Vision-Language Attention" 被 CVPR 2026 录用为',
-    highlightText: "Oral Presentation",
-    link: "#publications",
+    date: "2026.10",
+    badge: "Study",
+    content: "Commenced M.Sc. in Mathematics at the University of Regensburg.",
   },
   {
-    date: "2026.04",
-    badge: "Talk",
-    content: "受邀在北京人工智能学术研讨会做关于《端侧多模态模型高效量化与轻量化架构》的主题学术报告。",
+    date: "2026.08",
+    badge: "Project",
+    content: 'Founded and launched "Math Translations" (mathtranslations.org), an open platform for mathematical translations and terminology standardization.',
+    link: "https://mathtranslations.org",
   },
   {
-    date: "2025.12",
-    badge: "Award",
-    content: "荣获博士研究生国家奖学金 (National Scholarship for Graduate Students)。",
-  },
-  {
-    date: "2025.09",
-    badge: "Paper",
-    content: '论文 "LatentAlign: Unified Representation Learning" 被 NeurIPS 2025 录用为',
-    highlightText: "Spotlight Presentation",
-    link: "#publications",
+    date: "2026.06",
+    badge: "Degree",
+    content: 'Graduated with B.S. in Mathematics and Applied Mathematics from China Jiliang University. Completed B.S. thesis "Research on Galois Theory in Algebra".',
   }
 ];
