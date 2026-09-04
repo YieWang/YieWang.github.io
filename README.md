@@ -1,4 +1,4 @@
-# Yi Wang (王意) — Personal Academic Homepage
+# Yi Wang (王怡) — Personal Academic Homepage
 
 Welcome to the source repository for my personal academic homepage: [https://yiewang.github.io/](https://yiewang.github.io/).
 
