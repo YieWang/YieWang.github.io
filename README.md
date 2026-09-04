@@ -6,7 +6,7 @@ Welcome to the source repository for my personal academic homepage: [https://yie
 
 ## 🏛️ About Me
 
-I am a Master's student in Mathematics at the **University of Regensburg** (雷根斯堡大学, 2024–present), having previously graduated with a B.Sc. from **China Jiliang University** (中国计量大学, 2020–2024).
+I am a Master's student in Mathematics at the **University of Regensburg** (雷根斯堡大学, 2026–present), having previously graduated with a B.Sc. from **China Jiliang University** (中国计量大学, 2022–2026).
 
 - **Research Interests**: Arithmetic Geometry, Étale Cohomology, Anabelian Geometry, and $p$-adic Hodge Theory.
 - **Coordinates & Anchors**: Regensburg (49°00′06″ N · 12°05′47″ E) ⇄ Hangzhou (30°19′28″ N · 120°21′44″ E).
