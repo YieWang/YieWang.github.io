@@ -9,7 +9,7 @@ export interface ExpositionItem {
   title: string;
   type: string;
   year: string;
-  url: string;
+  url?: string;
 }
 
 export interface TemplateItem {
@@ -21,22 +21,10 @@ export interface TemplateItem {
 
 export const notesData: NoteItem[] = [
   {
-    title: "Algebraic Number Theory",
+    title: "Abstract Algebra",
     type: "Notes",
-    period: "2026—",
-    url: "/notes/Algebraic_Number_Theory.pdf",
-  },
-  {
-    title: "Algebraic Geometry",
-    type: "Notes",
-    period: "2026—",
-    url: "/notes/Algebraic_Geometry.pdf",
-  },
-  {
-    title: "Arakelov Geometry",
-    type: "Seminar notes",
-    period: "2026—",
-    url: "/notes/Arakelov_Geometry.pdf",
+    period: "2024–2025",
+    url: "/notes/Abstract_Algebra_Notes.pdf",
   },
 ];
 
@@ -45,15 +33,26 @@ export const expositionData: ExpositionItem[] = [
     title: "Research on Galois Theory in Algebra",
     type: "Bachelor's thesis",
     year: "2026",
-    url: "/Research_on_Galois_Theory_in_Algebra.pdf",
   },
 ];
 
 export const templateData: TemplateItem[] = [
   {
-    title: "Mathematical Notes",
+    title: "Chinese Template",
     type: "LaTeX template",
-    previewUrl: "/templates/preview.pdf",
-    sourceUrl: "/templates/math-notes-template.zip",
+    previewUrl: "/templates/Chinese_Template_Preview.pdf",
+    sourceUrl: "/templates/Chinese_Template.zip",
+  },
+  {
+    title: "English Template",
+    type: "LaTeX template",
+    previewUrl: "/templates/English_Template_Preview.pdf",
+    sourceUrl: "/templates/English_Template.zip",
+  },
+  {
+    title: "Seminar Template",
+    type: "LaTeX template",
+    previewUrl: "/templates/Seminar_Template_Preview.pdf",
+    sourceUrl: "/templates/Seminar_Template.zip",
   },
 ];

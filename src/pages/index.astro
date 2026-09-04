@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <Layout
-  title={`${profileData.name} (${profileData.chineseName}) – Pure Mathematics`}
+  title="Yi Wang"
   description={`Official website of ${profileData.name} (${profileData.chineseName}), Master's student in Mathematics at the ${profileData.institution}.`}
 >
   <style>
@@ -261,16 +261,11 @@ const currentYear = new Date().getFullYear();
           <div class="space-y-5 text-left">
             {expositionData.map((item) => (
               <article class="space-y-1">
-                <h4 class="text-[0.9375rem] leading-[1.5]">
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
-                    style="font-family: 'Montserrat', sans-serif;"
-                  >
-                    {item.title}
-                  </a>
+                <h4
+                  class="text-[0.9375rem] leading-[1.5] font-bold text-[#333333]"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  {item.title}
                 </h4>
                 <p
                   class="text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
@@ -376,16 +371,6 @@ const currentYear = new Date().getFullYear();
             >
               {marginaliaData.project.subtitle}
             </p>
-            <p class="text-[0.8125rem] pt-1.5">
-              <a
-                href={marginaliaData.project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
-              >
-                {marginaliaData.project.displayUrl}
-              </a>
-            </p>
           </div>
         </div>
 
@@ -431,9 +416,9 @@ const currentYear = new Date().getFullYear();
     let isTransitioning = false;
 
     const pageTitles: Record<string, string> = {
-      home: 'Yi Wang (王怡) – Pure Mathematics',
-      mathematics: 'Mathematics · Yi Wang (王怡)',
-      marginalia: 'Marginalia · Yi Wang (王怡)'
+      home: 'Yi Wang',
+      mathematics: 'Mathematics · Yi Wang',
+      marginalia: 'Marginalia · Yi Wang'
     };
 
     function getHash() {
