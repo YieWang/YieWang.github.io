@@ -153,10 +153,10 @@ const currentYear = new Date().getFullYear();
 
           <!-- Right Column: 50% ratio (6 cols) - 纯净放大的算术调和波（无方框、无公式、纯粹经纬测地线） -->
           <div class="md:col-span-6 lg:col-span-6 flex justify-center md:justify-end w-full">
-            <div class="w-full max-w-[380px] sm:max-w-[440px] lg:max-w-[480px] xl:max-w-[520px] h-[min(580px,68vh)] flex flex-col justify-between items-center relative select-none">
+            <div class="w-full max-w-[380px] sm:max-w-[440px] lg:max-w-[480px] xl:max-w-[520px] h-[min(580px,68vh)] min-h-[350px] flex flex-col justify-between items-center relative select-none">
               
               <!-- Top Anchor: REGENSBURG (雷根斯堡) -->
-              <div class="w-full text-center space-y-1.5 relative z-10">
+              <div class="w-full text-center space-y-1.5 relative z-10 flex-shrink-0">
                 <div class="text-[0.6875rem] sm:text-[0.75rem] font-mono text-[#737373] tracking-[0.16rem]">
                   49°00′06″ N · 12°05′47″ E
                 </div>
@@ -169,12 +169,12 @@ const currentYear = new Date().getFullYear();
               </div>
 
               <!-- Middle Animated Harmonic Wave Stage (大幅面纯粹无框画幅) -->
-              <div class="relative flex-1 w-full my-2 flex items-center justify-center overflow-hidden">
-                <canvas id="geodetic-canvas" class="w-full h-full block"></canvas>
+              <div class="relative flex-1 min-h-[220px] w-full my-2 flex items-center justify-center overflow-hidden">
+                <canvas id="geodetic-canvas" class="w-full h-full block" style="touch-action: none;"></canvas>
               </div>
 
               <!-- Bottom Anchor: HANGZHOU (杭州) -->
-              <div class="w-full text-center space-y-1.5 relative z-10">
+              <div class="w-full text-center space-y-1.5 relative z-10 flex-shrink-0">
                 <h3
                   class="text-[0.8125rem] sm:text-[0.875rem] font-medium tracking-[0.28rem] text-[#111111] uppercase"
                   style="font-family: 'Montserrat', sans-serif;"
@@ -439,6 +439,9 @@ const currentYear = new Date().getFullYear();
         });
         targetSec.classList.remove('hidden', 'inactive');
         targetSec.classList.add('block', 'active-section');
+        if (targetId === 'home') {
+          window.dispatchEvent(new Event('resize'));
+        }
         return;
       }
 
@@ -463,6 +466,9 @@ const currentYear = new Date().getFullYear();
           requestAnimationFrame(() => {
             targetSec.classList.remove('inactive');
             targetSec.classList.add('active-section');
+            if (targetId === 'home') {
+              window.dispatchEvent(new Event('resize'));
+            }
             setTimeout(() => {
               isTransitioning = false;
             }, 350);
@@ -510,13 +516,17 @@ const currentYear = new Date().getFullYear();
 
       const ro = new ResizeObserver(() => resize());
       if (canvas.parentElement) ro.observe(canvas.parentElement);
+      window.addEventListener('resize', resize);
       resize();
 
       // Main Render Loop: 纯粹调和波 (无公式、无多余图元、大幅面起伏)
       function render(now: number) {
         if (!ctx || width === 0 || height === 0) {
-          animId = requestAnimationFrame(render);
-          return;
+          resize();
+          if (!ctx || width === 0 || height === 0) {
+            animId = requestAnimationFrame(render);
+            return;
+          }
         }
 
         // Only draw when home section is visible
