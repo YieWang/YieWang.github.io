@@ -1,19 +1,22 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
   description?: string;
+  isHome?: boolean;
 }
 
 const {
   title = "Yi Wang",
-  description = "Official academic homepage of Yi Wang (王怡), Master's student in Mathematics at the University of Regensburg."
+  description = "Official website of Yi Wang (王怡), Master's student in Mathematics at the University of Regensburg.",
+  isHome = false,
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="zh-CN" class={isHome ? "is-home" : ""}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +33,79 @@ const {
       rel="stylesheet"
     />
   </head>
-  <body class="home-active bg-white text-[#474747] min-h-screen antialiased selection:bg-stone-200">
-    <slot />
+  <body class={`bg-white text-[#474747] min-h-screen antialiased selection:bg-stone-200 ${isHome ? "is-home" : ""}`}>
+    <div
+      id="site-wrapper"
+      class="min-h-screen bg-white text-[#474747] flex flex-col justify-between selection:bg-[#E5E5E5] selection:text-black w-full max-w-full"
+    >
+      <main class="w-full max-w-[72rem] mx-auto px-4 sm:px-10 md:px-16 pt-2 sm:pt-7 md:pt-8 pb-3 flex-grow flex flex-col justify-start">
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
+
+<style is:global>
+
+  /* 桌面端单屏零滚动 (Desktop Zero-Scroll Viewport on Home) */
+  @media (min-width: 768px) {
+    body.is-home {
+      overflow: hidden;
+      height: 100vh;
+    }
+    body.is-home #site-wrapper {
+      height: 100vh;
+      max-height: 100vh;
+      overflow: hidden;
+    }
+  }
+
+  /* 非首页专页 (Mathematics, Marginalia)：保证自然向下流畅滚动 */
+  body:not(.is-home) {
+    overflow-y: auto;
+    min-height: 100dvh;
+  }
+  body:not(.is-home) #site-wrapper {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  /* 移动端学术画卷流 (Mobile Academic Scroll Flow) */
+  @media (max-width: 767px) {
+    body.is-home {
+      overflow-y: auto;
+      height: auto;
+      min-height: 100dvh;
+    }
+    body.is-home #site-wrapper {
+      height: auto;
+      min-height: 100dvh;
+      overflow: visible;
+    }
+  }
+
+  /* 移动端导航栏：在 640px 以下严格居中，间距紧凑均匀，确保 4 项完整陈列且两端对称 */
+  @media (max-width: 639px) {
+    #header nav ul {
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.25rem !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    #header nav ul a {
+      font-size: 0.58rem !important;
+      letter-spacing: 0.025rem !important;
+      padding: 0.375rem 0.2rem !important;
+    }
+    #header nav ul li.separator {
+      font-size: 0.58rem !important;
+    }
+  }
+</style>

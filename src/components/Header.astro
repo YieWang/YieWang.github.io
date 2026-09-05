@@ -1,0 +1,100 @@
+---
+import { profileData } from '../data/profile';
+
+interface Props {
+  activeTab?: 'home' | 'mathematics' | 'marginalia';
+}
+
+const { activeTab = 'home' } = Astro.props;
+---
+
+<header id="header" class="w-full mb-2 sm:mb-6 flex-shrink-0">
+  <nav class="py-1">
+    <ul class="flex items-center justify-center w-full mx-auto sm:gap-6 md:gap-10 flex-nowrap" role="tablist">
+      <li>
+        <a
+          href="/"
+          id="nav-home"
+          data-target="home"
+          data-title="Home"
+          class={`nav-link uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.04em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 cursor-pointer no-underline inline-flex ${
+            activeTab === 'home'
+              ? 'active-nav text-black font-bold'
+              : 'text-[#737373] hover:text-black font-medium'
+          }`}
+          style="font-family: 'Montserrat', sans-serif;"
+        >
+          Home
+        </a>
+      </li>
+      <li class="separator text-[#D4D4D4] select-none text-[0.625rem] sm:text-[0.75rem]">·</li>
+      <li>
+        <a
+          href="/mathematics"
+          id="nav-mathematics"
+          data-target="mathematics"
+          data-title="Mathematics"
+          class={`nav-link uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.04em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 cursor-pointer no-underline inline-flex ${
+            activeTab === 'mathematics'
+              ? 'active-nav text-black font-bold'
+              : 'text-[#737373] hover:text-black font-medium'
+          }`}
+          style="font-family: 'Montserrat', sans-serif;"
+        >
+          Mathematics
+        </a>
+      </li>
+      <li class="separator text-[#D4D4D4] select-none text-[0.625rem] sm:text-[0.75rem]">·</li>
+      <li>
+        <a
+          href="/marginalia"
+          id="nav-marginalia"
+          data-target="marginalia"
+          data-title="Marginalia"
+          class={`nav-link uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.04em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 cursor-pointer no-underline inline-flex ${
+            activeTab === 'marginalia'
+              ? 'active-nav text-black font-bold'
+              : 'text-[#737373] hover:text-black font-medium'
+          }`}
+          style="font-family: 'Montserrat', sans-serif;"
+        >
+          Marginalia
+        </a>
+      </li>
+      <li class="separator text-[#D4D4D4] select-none text-[0.625rem] sm:text-[0.75rem]">·</li>
+      <li>
+        <a
+          href={profileData.socials.cvUrl || "/Yi_Wang_CV.pdf"}
+          target="_blank"
+          rel="noopener noreferrer"
+          id="nav-cv"
+          data-title="CV"
+          class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.04em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 no-underline inline-flex"
+          style="font-family: 'Montserrat', sans-serif;"
+        >
+          CV
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  /* 解决导航文字加粗时宽度撑开导致整体居中导航栏水平抖动的问题 (Zero-Shift Bold Placeholder) */
+  .nav-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .nav-link::after {
+    content: attr(data-title);
+    font-weight: 700;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+  }
+</style>

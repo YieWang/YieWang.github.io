@@ -1,0 +1,593 @@
+---
+import Header from './Header.astro';
+import { profileData } from '../data/profile';
+import { notesData, expositionData, templateData } from '../data/mathematics';
+import { marginaliaData } from '../data/marginalia';
+
+interface Props {
+  initialSection?: 'home' | 'mathematics' | 'marginalia';
+}
+
+const { initialSection = 'home' } = Astro.props;
+---
+
+<Header activeTab={initialSection} />
+
+<!-- ================================================================= -->
+<!-- SECTION 1: HOME (桌面单屏无滚动 + 移动端自适应画卷流)              -->
+<!-- ================================================================= -->
+<section
+  id="home-section"
+  class={`page-section w-full my-auto py-1 ${
+    initialSection === 'home' ? 'active-section block' : 'inactive hidden'
+  }`}
+>
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-8 lg:gap-14 xl:gap-20 items-center h-full w-full min-w-0">
+    
+    <!-- Left Column: 姓名与学术简介 -->
+    <div class="md:col-span-6 lg:col-span-6 min-w-0 space-y-4 sm:space-y-6 lg:space-y-8 md:pt-8 lg:pt-16 flex flex-col justify-center">
+      
+      <!-- Scholar Name (Yi Wang: Josefin Sans 700 Bold) -->
+      <h1
+        class="text-3xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-bold uppercase tracking-[0.35rem] sm:tracking-[0.5rem] lg:tracking-[0.65rem] text-[#474747] leading-[1.15]"
+        style="font-family: 'Josefin Sans', sans-serif;"
+      >
+        {profileData.name}
+      </h1>
+
+      <!-- Bio text (身份与核心方向) -->
+      <div
+        class="space-y-2 sm:space-y-3 text-[0.875rem] sm:text-[1rem] lg:text-[1.0625rem] text-[#474747] leading-[1.7] sm:leading-[1.85] tracking-[0.02rem] sm:tracking-[0.025rem] text-left"
+        style="font-family: 'Montserrat', sans-serif; font-weight: 300;"
+      >
+        <p>
+          I am {profileData.name} ({profileData.chineseName}), a Master's student in Mathematics at the {profileData.institution}.
+        </p>
+        <p>
+          My research interests lie in Arithmetic Geometry, Algebraic Geometry, and Algebraic Number Theory.
+        </p>
+      </div>
+
+      <!-- Single Email Icon (加大触摸热区) -->
+      <div class="pt-1 sm:pt-2 flex items-center">
+        <a
+          href={profileData.socials.email}
+          aria-label="Email"
+          class="text-[#636363] hover:text-[#0F0F0F] transition-colors duration-200 inline-block p-1 -m-1"
+          title="Email"
+        >
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 40 40">
+            <path d="M37.5,12.6l-17.5,11.9L2.5,12.6c-.2-.1-.3-.2-.5-.2v-2.7c0-.8.6-1.4,1.4-1.4h33.1c.8,0,1.4.6,1.4,1.4v2.7c-.2,0-.4,0-.5.2ZM19.5,26.3c.2.1.3.2.5.2s.4,0,.5-.2l17.5-11.9v16.9c0,.8-.6,1.4-1.4,1.4H3.4c-.8,0-1.4-.6-1.4-1.4V14.4l17.5,11.9Z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column / 下方展区: 算术调和波 -->
+    <div class="md:col-span-6 lg:col-span-6 min-w-0 flex justify-center md:justify-end w-full">
+      <div
+        id="wave-container-vertical"
+        class="w-full max-w-full sm:max-w-[440px] lg:max-w-[480px] xl:max-w-[520px] md:h-[min(580px,68vh)] md:min-h-[350px] flex flex-col justify-between items-center relative select-none"
+      >
+        <!-- Top Anchor: REGENSBURG -->
+        <div class="w-full text-center space-y-0.5 sm:space-y-1.5 relative z-10 flex-shrink-0">
+          <div class="text-[0.625rem] sm:text-[0.75rem] font-mono text-[#737373] tracking-[0.14rem] sm:tracking-[0.16rem]">
+            49°00′06″ N · 12°05′47″ E
+          </div>
+          <h3
+            class="text-[0.75rem] sm:text-[0.875rem] font-medium tracking-[0.22rem] sm:tracking-[0.28rem] text-[#111111] uppercase"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            REGENSBURG
+          </h3>
+        </div>
+
+        <!-- Middle Vertical Canvas -->
+        <div class="relative flex-1 min-h-[100px] sm:min-h-[180px] md:min-h-[220px] w-full my-1 sm:my-2 flex items-center justify-center overflow-hidden">
+          <canvas id="geodetic-canvas-vertical" class="w-full h-full block" style="touch-action: none;"></canvas>
+        </div>
+
+        <!-- Bottom Anchor: HANGZHOU -->
+        <div class="w-full text-center space-y-0.5 sm:space-y-1.5 relative z-10 flex-shrink-0">
+          <h3
+            class="text-[0.75rem] sm:text-[0.875rem] font-medium tracking-[0.22rem] sm:tracking-[0.28rem] text-[#111111] uppercase"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            HANGZHOU
+          </h3>
+          <div class="text-[0.625rem] sm:text-[0.75rem] font-mono text-[#737373] tracking-[0.14rem] sm:tracking-[0.16rem]">
+            30°18′55″ N · 120°21′52″ E
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 2: MATHEMATICS (NOTES · EXPOSITION · TEMPLATE)            -->
+<!-- ================================================================= -->
+<section
+  id="mathematics-section"
+  class={`page-section max-w-2xl mx-auto w-full space-y-8 sm:space-y-12 py-5 sm:py-8 ${
+    initialSection === 'mathematics' ? 'active-section block' : 'inactive hidden'
+  }`}
+>
+  <div class="text-center space-y-2">
+    <h2
+      class="text-[1.125rem] sm:text-[1.25rem] font-bold uppercase tracking-[0.2rem] text-[#474747]"
+      style="font-family: 'Montserrat', sans-serif;"
+    >
+      MATHEMATICS
+    </h2>
+  </div>
+
+  <!-- 1. NOTES -->
+  <div class="space-y-4 sm:space-y-6 pt-1 sm:pt-2">
+    <div class="space-y-1">
+      <h3
+        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        NOTES
+      </h3>
+    </div>
+    <div class="space-y-4 sm:space-y-5 text-left">
+      {notesData.map((item) => (
+        <article class="space-y-1">
+          <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              {item.title}
+            </a>
+          </h4>
+          <p
+            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            {item.type} · {item.period}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <!-- 2. EXPOSITION -->
+  <div class="space-y-4 sm:space-y-6 pt-3 sm:pt-4">
+    <div class="space-y-1">
+      <h3
+        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        EXPOSITION
+      </h3>
+    </div>
+    <div class="space-y-4 sm:space-y-5 text-left">
+      {expositionData.map((item) => (
+        <article class="space-y-1">
+          <h4
+            class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5] font-bold text-[#333333]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            {item.title}
+          </h4>
+          <p
+            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            {item.type} · {item.year}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <!-- 3. TEMPLATE -->
+  <div class="space-y-4 sm:space-y-6 pt-3 sm:pt-4">
+    <div class="space-y-1">
+      <h3
+        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        TEMPLATE
+      </h3>
+    </div>
+    <div class="space-y-4 sm:space-y-5 text-left">
+      {templateData.map((item) => (
+        <article class="space-y-1">
+          <h4
+            class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5] font-bold text-[#333333]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            {item.title}
+          </h4>
+          <p
+            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem] flex items-center gap-2 flex-wrap"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            <span>{item.type}</span>
+            <span class="text-[#D1D1D1]">·</span>
+            <a
+              href={item.previewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200 py-1"
+            >
+              Preview
+            </a>
+            <span class="text-[#D1D1D1]">·</span>
+            <a
+              href={item.sourceUrl}
+              download
+              class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200 py-1"
+            >
+              Source
+            </a>
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 3: MARGINALIA (PROJECT & INTERESTS)                       -->
+<!-- ================================================================= -->
+<section
+  id="marginalia-section"
+  class={`page-section max-w-2xl mx-auto w-full space-y-8 sm:space-y-12 py-5 sm:py-8 ${
+    initialSection === 'marginalia' ? 'active-section block' : 'inactive hidden'
+  }`}
+>
+  <div class="text-center space-y-2">
+    <h2
+      class="text-[1.125rem] sm:text-[1.25rem] font-bold uppercase tracking-[0.2rem] text-[#474747]"
+      style="font-family: 'Montserrat', sans-serif;"
+    >
+      MARGINALIA
+    </h2>
+  </div>
+
+  <!-- 1. PROJECT -->
+  <div class="space-y-4 sm:space-y-6 pt-1 sm:pt-2">
+    <div class="space-y-1">
+      <h3
+        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        PROJECT
+      </h3>
+    </div>
+    <div class="space-y-1 text-left">
+      <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
+        <a
+          href={marginaliaData.project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
+          style="font-family: 'Montserrat', sans-serif;"
+        >
+          {marginaliaData.project.title}
+        </a>
+      </h4>
+      <p
+        class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        {marginaliaData.project.subtitle}
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. INTERESTS -->
+  <div class="space-y-4 sm:space-y-6 pt-3 sm:pt-4">
+    <div class="space-y-1">
+      <h3
+        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        INTERESTS
+      </h3>
+    </div>
+    <div class="text-left">
+      <p
+        class="text-[0.8125rem] sm:text-[0.875rem] text-[#555555] font-light tracking-[0.03rem] sm:tracking-[0.04rem]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        {marginaliaData.interests}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- STYLES: 1:1 Julian Perilla 丝滑交错缩放淡入淡出动效                  -->
+<!-- ================================================================= -->
+<style is:global>
+  /* Julian Perilla 1:1 Silky Smooth Crossfade */
+  .page-section {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: 50% 0%;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .page-section.inactive {
+    opacity: 0;
+    transform: scale(0.96);
+    transform-origin: 50% 0%;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  .page-section.hidden {
+    display: none !important;
+  }
+</style>
+
+<!-- ================================================================= -->
+<!-- SCRIPTS: 客户端路由内核 + 纵向调和测地波渲染引擎                    -->
+<!-- ================================================================= -->
+<script>
+  const pageTitles: Record<string, string> = {
+    home: 'Yi Wang',
+    mathematics: 'Mathematics · Yi Wang',
+    marginalia: 'Marginalia · Yi Wang'
+  };
+
+  function updateScrollState(targetId: string) {
+    if (targetId === 'home') {
+      document.documentElement.classList.add('is-home');
+      document.body.classList.add('is-home', 'home-active');
+    } else {
+      document.documentElement.classList.remove('is-home');
+      document.body.classList.remove('is-home', 'home-active');
+    }
+  }
+
+  let transitionTimer: ReturnType<typeof setTimeout> | null = null;
+
+  function activateSection(targetId: string, instant = false) {
+    if (transitionTimer) {
+      clearTimeout(transitionTimer);
+      transitionTimer = null;
+    }
+
+    const targetSec = document.getElementById(targetId + '-section');
+    if (!targetSec) return;
+
+    const currentSec = document.querySelector('.page-section.active-section') as HTMLElement | null;
+
+    if (pageTitles[targetId]) {
+      document.title = pageTitles[targetId];
+    }
+
+    // 立即更新导航链接的高亮状态
+    document.querySelectorAll('.nav-link').forEach((link) => {
+      link.classList.remove('text-black', 'font-bold', 'active-nav');
+      link.classList.add('text-[#737373]', 'font-medium');
+    });
+
+    const activeLink = document.getElementById('nav-' + targetId);
+    if (activeLink) {
+      activeLink.classList.add('text-black', 'font-bold', 'active-nav');
+      activeLink.classList.remove('text-[#737373]', 'font-medium');
+    }
+
+    // 初始加载或同一 section 无需过渡
+    if (instant || !currentSec || currentSec === targetSec) {
+      document.querySelectorAll('.page-section').forEach((sec) => {
+        if (sec === targetSec) {
+          sec.classList.remove('hidden', 'inactive');
+          sec.classList.add('block', 'active-section');
+        } else {
+          sec.classList.add('hidden', 'inactive');
+          sec.classList.remove('block', 'active-section');
+        }
+      });
+      updateScrollState(targetId);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (targetId === 'home') {
+        window.dispatchEvent(new Event('resize'));
+      }
+      return;
+    }
+
+    // 离开首页时立即解除锁定，让长页面能够计算真实排版尺寸
+    if (targetId !== 'home') {
+      updateScrollState(targetId);
+    }
+
+    // 1. 缩放淡出当前页面 (Julian Perilla 1:1 特征: scale(1 -> 0.96), opacity(1 -> 0))
+    currentSec.classList.add('inactive');
+
+    transitionTimer = setTimeout(() => {
+      // 2. 隐藏当前页面
+      document.querySelectorAll('.page-section').forEach((sec) => {
+        if (sec !== targetSec) {
+          sec.classList.add('hidden', 'inactive');
+          sec.classList.remove('block', 'active-section');
+        }
+      });
+
+      // 3. 进入首页时，在旧长页面已隐藏后立即锁屏并重置滚动位置，杜绝滚动条闪烁
+      if (targetId === 'home') {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        updateScrollState('home');
+      } else {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+
+      // 4. 将目标页面置入 DOM 并准备淡入 (初始为 scale(0.96), opacity: 0)
+      targetSec.classList.remove('hidden');
+      targetSec.classList.add('block', 'inactive');
+
+      // 5. 强制同步回流重排以确保 CSS transition 生效
+      void targetSec.offsetWidth;
+
+      // 6. 优雅缩放淡入 (Julian Perilla 1:1 特征: scale(0.96 -> 1), opacity(0 -> 1))
+      targetSec.classList.remove('inactive');
+      targetSec.classList.add('active-section');
+
+      if (targetId === 'home') {
+        window.dispatchEvent(new Event('resize'));
+      }
+      transitionTimer = null;
+    }, 180);
+  }
+
+  // 监听导航点击事件：拦截内部链接，保持 1:1 丝滑交错动画并推入干净路由 (无 #)
+  document.addEventListener('click', (e) => {
+    const link = (e.target as HTMLElement).closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // 外部链接、CV 下载或邮箱不拦截
+    if (link.target === '_blank' || href.startsWith('http') || href.endsWith('.pdf') || href.startsWith('mailto:')) {
+      return;
+    }
+
+    let targetId = link.getAttribute('data-target');
+    if (!targetId) {
+      if (href === '/' || href === '/#home' || href === '#home') targetId = 'home';
+      else if (href === '/mathematics' || href === '/#mathematics' || href === '#mathematics') targetId = 'mathematics';
+      else if (href === '/marginalia' || href === '/#marginalia' || href === '#marginalia') targetId = 'marginalia';
+    }
+
+    if (targetId) {
+      e.preventDefault();
+      const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+      const targetPath = targetId === 'home' ? '/' : `/${targetId}`;
+
+      if (currentPath !== targetPath || window.location.hash) {
+        history.pushState({ section: targetId }, '', targetPath);
+      }
+      activateSection(targetId, false);
+    }
+  });
+
+  // 监听浏览器前进/后退 (popstate)
+  window.addEventListener('popstate', () => {
+    const pathname = window.location.pathname.replace(/\/$/, '') || '/';
+    let targetId = 'home';
+    if (pathname === '/mathematics') targetId = 'mathematics';
+    else if (pathname === '/marginalia') targetId = 'marginalia';
+    activateSection(targetId, false);
+  });
+
+  // 处理旧 URL 遗留的 # 锚点，并平滑升级至干净的斜杠 URL
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1).toLowerCase();
+    if (hash === 'mathematics' || hash === 'research') {
+      history.replaceState({ section: 'mathematics' }, '', '/mathematics');
+      activateSection('mathematics', true);
+    } else if (hash === 'marginalia' || hash === 'notes') {
+      history.replaceState({ section: 'marginalia' }, '', '/marginalia');
+      activateSection('marginalia', true);
+    } else {
+      history.replaceState({ section: 'home' }, '', '/');
+      activateSection('home', true);
+    }
+  }
+
+  // =========================================================================
+  // GEODETIC HARMONIC WAVE ENGINE (纵向算术调和测地波)
+  // =========================================================================
+  function initGeodeticEngine() {
+    const vCanvas = document.getElementById('geodetic-canvas-vertical') as HTMLCanvasElement | null;
+    if (!vCanvas) return;
+
+    const vCtx = vCanvas.getContext('2d');
+    if (!vCtx) return;
+
+    let vWidth = 0, vHeight = 0;
+    let animId: number | null = null;
+    const startTime = performance.now();
+
+    function resize() {
+      if (!vCanvas || !vCtx) return;
+      const dpr = window.devicePixelRatio || 1;
+      const rect = vCanvas.getBoundingClientRect();
+      vWidth = rect.width;
+      vHeight = rect.height;
+      vCanvas.width = Math.round(vWidth * dpr);
+      vCanvas.height = Math.round(vHeight * dpr);
+      vCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    const ro = new ResizeObserver(() => resize());
+    if (vCanvas.parentElement) ro.observe(vCanvas.parentElement);
+    window.addEventListener('resize', resize);
+    resize();
+
+    const fibers = [
+      { f1: 1, f2: 2, sp1: 1.1, sp2: 0.7, ph: 0, color: 'rgba(26, 26, 26, 0.88)', width: 1.6 },
+      { f1: 1.5, f2: 3, sp1: -0.8, sp2: 0.9, ph: 1.4, color: 'rgba(0, 0, 0, 0.28)', width: 1.0 },
+      { f1: 0.8, f2: 1.5, sp1: 0.5, sp2: -0.5, ph: 2.8, color: 'rgba(0, 0, 0, 0.10)', width: 0.75 }
+    ];
+
+    function render(now: number) {
+      const homeSec = document.getElementById('home-section');
+      if (!homeSec || homeSec.classList.contains('hidden')) {
+        animId = requestAnimationFrame(render);
+        return;
+      }
+
+      const t = (now - startTime) / 1000;
+      if (vCtx && vWidth > 0 && vHeight > 0) {
+        vCtx.clearRect(0, 0, vWidth, vHeight);
+
+        const padTop = 6;
+        const padBottom = vHeight - 6;
+        const lineH = Math.max(10, padBottom - padTop);
+        const midX = Math.round(vWidth / 2);
+        const ampMax = Math.min(68, vWidth * 0.28);
+
+        fibers.forEach((fib) => {
+          vCtx.beginPath();
+          vCtx.strokeStyle = fib.color;
+          vCtx.lineWidth = fib.width;
+          const steps = 90;
+          for (let i = 0; i <= steps; i++) {
+            const u = i / steps;
+            const y = padTop + u * lineH;
+            const envelope = Math.sin(u * Math.PI);
+            const w1 = Math.sin(u * Math.PI * 2 * fib.f1 + t * fib.sp1 + fib.ph);
+            const w2 = Math.sin(u * Math.PI * 2 * fib.f2 - t * fib.sp2 + fib.ph) * 0.35;
+            const x = midX + envelope * ampMax * (w1 + w2);
+            if (i === 0) vCtx.moveTo(x, y);
+            else vCtx.lineTo(x, y);
+          }
+          vCtx.stroke();
+        });
+
+        // 顶点与底点锚点
+        [padTop, padBottom].forEach((y) => {
+          vCtx.beginPath();
+          vCtx.strokeStyle = 'rgba(0, 0, 0, 0.35)';
+          vCtx.lineWidth = 1;
+          vCtx.arc(midX, y, 4, 0, Math.PI * 2);
+          vCtx.stroke();
+
+          vCtx.beginPath();
+          vCtx.fillStyle = '#111111';
+          vCtx.arc(midX, y, 1.8, 0, Math.PI * 2);
+          vCtx.fill();
+        });
+      }
+
+      animId = requestAnimationFrame(render);
+    }
+
+    animId = requestAnimationFrame(render);
+  }
+
+  // 初始化波形动画
+  initGeodeticEngine();
+</script>
