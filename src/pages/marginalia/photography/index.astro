@@ -23,7 +23,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     class="w-full h-[calc(100vh-62px)] min-h-[550px] flex items-stretch gap-2 sm:gap-4 md:gap-5 overflow-hidden select-none overscroll-none -ml-1 sm:-ml-2"
   >
     
-    <!-- LEFT: iOS 3D Cylindrical Wheel Picker (react-wheel-picker, docked further left) -->
+    <!-- LEFT: iOS 3D Cylindrical Wheel Picker (docked further left) -->
     <aside class="w-[172px] sm:w-[184px] md:w-[190px] flex-shrink-0 h-full flex flex-col relative z-20 pl-0">
       <PhotographyWheelPicker client:load initialPhotoId={firstPhoto.id} />
     </aside>

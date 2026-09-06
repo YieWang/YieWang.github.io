@@ -25,6 +25,7 @@ export interface MusicAlbum {
 }
 
 export interface MusicArtist {
+  avatarUrl: string;
   id: string;
   name: string;
   displayName: string; // 严格原名呈现
@@ -37,6 +38,7 @@ export interface MusicArtist {
 export const musicArtists: MusicArtist[] = [
   {
     id: "ryuichi-sakamoto",
+    avatarUrl: "/images/music/artists/ryuichi-sakamoto.jpg",
     name: "Ryuichi Sakamoto",
     displayName: "坂本龍一",
     country: "Japan",
@@ -46,6 +48,7 @@ export const musicArtists: MusicArtist[] = [
   },
   {
     id: "glenn-gould",
+    avatarUrl: "/images/music/artists/glenn-gould.jpg",
     name: "Glenn Gould",
     displayName: "Glenn Gould",
     country: "Canada",
@@ -55,6 +58,7 @@ export const musicArtists: MusicArtist[] = [
   },
   {
     id: "arvo-part",
+    avatarUrl: "/images/music/artists/arvo-part.jpg",
     name: "Arvo Pärt",
     displayName: "Arvo Pärt",
     country: "Estonia",
@@ -64,6 +68,7 @@ export const musicArtists: MusicArtist[] = [
   },
   {
     id: "bill-evans",
+    avatarUrl: "/images/music/artists/bill-evans.jpg",
     name: "Bill Evans",
     displayName: "Bill Evans Trio",
     country: "USA",
@@ -73,6 +78,7 @@ export const musicArtists: MusicArtist[] = [
   },
   {
     id: "radiohead",
+    avatarUrl: "/images/music/artists/radiohead.jpg",
     name: "Radiohead",
     displayName: "Radiohead",
     country: "UK",
@@ -82,6 +88,7 @@ export const musicArtists: MusicArtist[] = [
   },
   {
     id: "chet-baker",
+    avatarUrl: "/images/music/artists/chet-baker.jpg",
     name: "Chet Baker",
     displayName: "Chet Baker",
     country: "USA",
@@ -91,6 +98,7 @@ export const musicArtists: MusicArtist[] = [
   },
   {
     id: "faye-wong",
+    avatarUrl: "/images/music/artists/faye-wong.jpg",
     name: "Faye Wong",
     displayName: "王菲",
     country: "China",

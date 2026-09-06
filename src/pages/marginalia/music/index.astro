@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
+import MusicArtistNav from '../../../components/MusicArtistNav.astro';
 import { musicAlbums, musicArtists, type MusicAlbum } from '../../../data/music';
 
 // Group albums strictly by artist in the order defined in musicArtists
@@ -20,9 +21,10 @@ const artistGroups = musicArtists.map(artist => {
   fullWidth={true}
 >
   <Header activeTab="marginalia" />
+  <MusicArtistNav artists={artistGroups.map(group => group.artist)} />
 
   <!-- Main Container: Pure Breath, Zero Breadcrumbs, Grouped by Artist -->
-  <div class="max-w-[1760px] mx-auto w-full pb-28 pt-6 sm:pt-10 md:pt-12 px-4 sm:px-8 md:px-12">
+  <div class="music-page-content max-w-[1760px] mx-auto w-full pb-28 pt-6 sm:pt-10 md:pt-12 px-4 sm:px-8 md:px-12">
     
     <!-- MAIN GALLERY: Grouped by Artist -->
     <main class="space-y-16 sm:space-y-24">
@@ -110,6 +112,7 @@ const artistGroups = musicArtists.map(artist => {
       ))}
     </main>
 
+
   </div>
 
   <!-- MODAL / LIGHTBOX (100% Matching Cinema Backdrop & Exit Pattern) -->
@@ -128,6 +131,15 @@ const artistGroups = musicArtists.map(artist => {
     </div>
   </div>
 </Layout>
+
+<style>
+  :global(body) { --artist-rail-width: clamp(160px, 17vw, 230px); }
+  .music-page-content { padding-left: calc(var(--artist-rail-width) + 60px); padding-bottom: 50vh; }
+  @media (max-width: 639px) {
+    :global(body) { --artist-rail-width: 125px; }
+    .music-page-content { padding-left: 141px; }
+  }
+</style>
 
 <script>
   import type { MusicAlbum } from '../../../data/music';

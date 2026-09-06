@@ -2,10 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { marginaliaData, type InterestItem } from '../../data/marginalia';
+import games from '../../data/games.json';
+import { profileData } from '../../data/profile';
 
 export function getStaticPaths() {
   return marginaliaData.interests
-    .filter((item) => item.hasLink && item.id !== 'photography' && item.id !== 'cinema' && item.id !== 'literature' && item.id !== 'music')
+    .filter((item) => item.id !== 'photography' && item.id !== 'cinema' && item.id !== 'literature' && item.id !== 'music')
     .map((item) => ({
       params: { id: item.id },
       props: { item },
@@ -17,58 +19,51 @@ interface Props {
 }
 
 const { item } = Astro.props;
+const isGames = item.id === 'games';
+const description = isGames
+  ? 'Some of my favorite games. You are welcome to play with me.'
+  : '我从小学三年级开始打乒乓球，一直打的都是野球，右手直拍横打，欢迎和我约球。';
 ---
 
 <Layout
   title={`${item.title} · Marginalia · Yi Wang`}
-  description={item.description}
+  description={description}
   isHome={false}
 >
   <Header activeTab="marginalia" />
 
-  <div class="max-w-2xl mx-auto w-full space-y-7 sm:space-y-10 py-4 sm:py-6">
-    <!-- Breadcrumb / Back Link -->
-    <div class="text-left">
-      <a
-        href="/marginalia"
-        class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] hover:text-black inline-flex items-center gap-1.5 transition-colors duration-200"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        <span aria-hidden="true">←</span>
-        <span>Marginalia</span>
+  <section lang={isGames ? 'en' : 'zh-CN'} class:list={['interest-page mx-auto w-full pt-6 sm:pt-10 pb-16 sm:pb-24', isGames ? 'max-w-5xl' : 'max-w-2xl']} aria-labelledby="interest-title">
+    <h1 id="interest-title" class="border-b border-[#F0F0F0] pb-3 text-[1.05rem] sm:text-[1.18rem] font-bold uppercase tracking-[0.24rem] text-[#1E1E1E]" style="font-family: 'Josefin Sans', sans-serif;">
+      {item.title}
+    </h1>
+
+    {isGames ? (
+      <div class="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-9 sm:gap-y-12 mt-7 sm:mt-9">
+        {games.map((game) => (
+          <article class="min-w-0">
+            <a href={game.url} target="_blank" rel="noopener noreferrer" class="game-link group block rounded-sm">
+              <img src={game.cover} alt="" width="460" height="215" loading="lazy" class="w-full aspect-[460/215] object-cover rounded-[2px] bg-[#F0F0F0] transition-opacity duration-200 group-hover:opacity-90" />
+              <h2 class="mt-3 text-[0.82rem] sm:text-[0.88rem] leading-relaxed font-medium text-[#1E1E1E]">{game.title}</h2>
+            </a>
+            {game.note && <p class="mt-2 text-[0.8rem] sm:text-[0.84rem] leading-[1.9] text-[#737373]">{game.note}</p>}
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="mt-8 sm:mt-10 space-y-5 text-[0.9rem] sm:text-[0.95rem] leading-[2] text-[#555555]">
+        <p>我从小学三年级开始打乒乓球，一直打的都是野球，右手直拍横打，<a href={profileData.socials.email} class="invitation underline underline-offset-[5px] decoration-[#D1D1D1] hover:text-black hover:decoration-black transition-colors duration-200">欢迎和我约球。</a></p>
+      </div>
+    )}
+
+    {isGames && <p class="mt-10 sm:mt-14 text-[0.84rem] sm:text-[0.9rem] leading-[1.9] text-[#666666]">
+      <a href={profileData.socials.email} class="invitation underline underline-offset-[5px] decoration-[#D1D1D1] hover:text-black hover:decoration-black transition-colors duration-200">
+        Let’s have a game.
       </a>
-    </div>
-
-    <!-- Section Header -->
-    <div class="text-center space-y-2">
-      <h2
-        class="text-[1.125rem] sm:text-[1.25rem] font-bold uppercase tracking-[0.2rem] text-[#474747]"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        {item.title}
-      </h2>
-      <p
-        class="text-[0.8125rem] sm:text-[0.875rem] text-[#666666] font-light tracking-[0.02rem] sm:tracking-[0.03rem]"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        {item.description}
-      </p>
-      <p
-        class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        {item.meta}
-      </p>
-    </div>
-
-    <!-- Content Placeholder / Scaffold Area -->
-    <div class="border-t border-[#E5E5E5] pt-10 sm:pt-14 text-center space-y-3">
-      <p
-        class="text-[0.8125rem] sm:text-[0.875rem] text-[#888888] font-light italic tracking-[0.02rem]"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        Under curation · 整理收录中
-      </p>
-    </div>
-  </div>
+    </p>}
+  </section>
 </Layout>
+
+<style>
+  .interest-page { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; }
+  .game-link:focus-visible, .invitation:focus-visible { outline: 2px solid #474747; outline-offset: 5px; }
+</style>

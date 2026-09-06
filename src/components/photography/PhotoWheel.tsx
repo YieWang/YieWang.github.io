@@ -1,5 +1,10 @@
-import { useEffect, useRef } from 'react';
-import type { WheelPickerOption } from '@ncdai/react-wheel-picker';
+import { useEffect, useRef, type ReactNode } from 'react';
+
+export interface PhotoWheelOption {
+  value: string;
+  label: ReactNode;
+  textValue: string;
+}
 
 const itemHeight = 82;
 const itemAngle = 22.5;
@@ -7,7 +12,7 @@ const radius = itemHeight / Math.tan(itemAngle * Math.PI / 180);
 const height = Math.round(radius * 2 + itemHeight / 4);
 
 export default function PhotoWheel({ options, value, onValueChange }: {
-  options: WheelPickerOption<string>[];
+  options: PhotoWheelOption[];
   value: string;
   onValueChange: (value: string) => void;
 }) {

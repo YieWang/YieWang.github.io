@@ -1,5 +1,11 @@
 ---
 import Header from './Header.astro';
+import LiteratureBook from './LiteratureBook.astro';
+import { Image, getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import archivePrint from '../../public/images/photography/regensburg-02.jpg';
+import danubePrint from '../../public/images/photography/regensburg-04.jpg';
+import recordCover from '../../public/images/music/goldberg-1981.jpg';
 import { profileData } from '../data/profile';
 import { notesData, expositionData, templateData } from '../data/mathematics';
 import { marginaliaData } from '../data/marginalia';
@@ -9,6 +15,19 @@ interface Props {
 }
 
 const { initialSection = 'home' } = Astro.props;
+
+// Film artwork is optimized once and repeated for seamless CSS transport.
+const filmFrames = ['tokyo-story', '2001-a-space-odyssey', 'perfect-days', 'three-colors-blue', 'yi-yi', 'april-story'];
+const racketOutline = 'M80 6 C123 6 152 39 152 82 C152 116 134 141 99 150 L94 156 C91 177 93 203 97 223 Q99 229 90 229 L70 229 Q61 229 63 223 C67 203 69 177 66 156 L61 150 C26 141 8 116 8 82 C8 39 37 6 80 6 Z';
+const rubberOutline = 'M80 10 C120 10 148 41 148 82 C148 115 130 139 96 147 Q80 153 64 147 C30 139 12 115 12 82 C12 41 40 10 80 10 Z';
+const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 229 L70 229 Q61 229 63 223 C67 203 70 177 66 149 Z';
+const filmAssets = import.meta.glob<{ default: ImageMetadata }>('../../public/images/cinema/*.jpg', { eager: true });
+const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
+  src: filmAssets[`../../public/images/cinema/${frame}.jpg`].default,
+  width: 164, format: 'webp', quality: 85,
+})));
+
+
 ---
 
 <Header activeTab={initialSection} />
@@ -271,268 +290,85 @@ const { initialSection = 'home' } = Astro.props;
     <!-- Split Stage Grid: Left Titles + Right Showcase Stage -->
     <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 sm:gap-8 items-start">
       <!-- Left Column: Categories List -->
-      <div class="sm:col-span-4 space-y-4 sm:space-y-5.5 text-left">
+      <div class="stage-navigation sm:col-span-4 space-y-4 sm:space-y-5.5 text-left">
         {marginaliaData.interests.map((item, idx) => (
           <article>
             <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
-              {item.hasLink ? (
-                <a
-                  href={item.href}
-                  class={`stage-trigger font-bold transition-colors duration-200 block ${
-                    idx === 0
-                      ? 'active-stage-trigger text-black'
-                      : 'text-[#666666] hover:text-black'
-                  }`}
-                  data-stage-id={item.id}
-                  style="font-family: 'Montserrat', sans-serif;"
-                >
-                  {item.title}
-                </a>
-              ) : (
-                <span
-                  class="font-bold text-[#888888] cursor-default select-none block"
-                  style="font-family: 'Montserrat', sans-serif;"
-                >
-                  {item.title}
-                </span>
-              )}
+              <a
+                href={item.href}
+                class={`stage-trigger font-bold transition-colors duration-200 block ${
+                  idx === 0
+                    ? 'active-stage-trigger text-black'
+                    : 'text-[#666666] hover:text-black'
+                }`}
+                data-stage-id={item.id}
+                aria-controls={`stage-panel-${item.id}`}
+                aria-current={idx === 0 ? "true" : undefined}
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                {item.title}
+              </a>
             </h4>
           </article>
         ))}
       </div>
 
       <!-- Right Column: Interactive Stage (Distinct Physical Mediums, Elevated Level with Top Title) -->
-      <div class="sm:col-span-8 relative min-h-[260px] sm:min-h-[290px] flex items-start justify-center -translate-y-4 sm:-translate-y-6">
+      <div class="marginalia-stage sm:col-span-8 relative min-h-[250px] sm:min-h-[216px] flex items-start justify-center">
         
-        <!-- 1. Photography Panel: Archival Prints Inspection (Dual Layers Float & Tilt) -->
-        <div
-          id="stage-panel-photography"
-          class="stage-panel absolute inset-0 flex items-start justify-center transition-all duration-300 opacity-100 scale-100 z-10 pointer-events-auto"
-        >
-          <a
-            href="/marginalia/photography"
-            class="relative w-full h-full flex items-start justify-center pt-0 sm:pt-0 cursor-pointer select-none"
-            title="Photography"
-          >
-            <div class="photo-container relative w-[280px] sm:w-[330px] h-[210px] sm:h-[240px] flex items-center justify-center">
-              <!-- Background Secondary Print (Slides out angled) -->
-              <div class="photo-secondary absolute w-[160px] sm:w-[185px] h-[200px] sm:h-[230px] rounded-[2px] bg-white border border-[#D5D5D5] p-2 shadow-[0_4px_16px_rgba(0,0,0,0.06)] flex flex-col justify-between">
-                <div
-                  class="w-full h-full rounded-[1px] p-2 flex flex-col justify-between"
-                  style="background: linear-gradient(135deg, #ECE6DE 0%, #D8D0C5 100%);"
-                >
-                  <div class="flex justify-between items-center text-[0.5rem] sm:text-[0.56rem] font-mono text-[#666666]">
-                    <span>01 · CATHEDRAL</span>
-                    <span>KODAK 400</span>
-                  </div>
-                  <div class="text-right text-[0.44rem] sm:text-[0.5rem] font-mono text-[#777777]">35mm MONO</div>
-                </div>
-                <div class="pt-1 text-[0.44rem] sm:text-[0.5rem] font-mono text-[#999999] text-center tracking-wider">
-                  REGIONAL ARCHIVE
-                </div>
+        <!-- Photography: two archival prints. -->
+        <div id="stage-panel-photography" class="stage-panel" data-active="true" aria-hidden="false">
+          <a href="/marginalia/photography" aria-label="Explore Photography" class="stage-art-link">
+            <div class="photo-container" aria-hidden="true">
+              <div class="photo-secondary">
+                <Image src={archivePrint} alt="" width={320} format="webp" loading="lazy" />
+                <span>LIGHT &amp; ARCHITECTURE</span>
               </div>
-
-              <!-- Foreground Primary Print (Elevates & Floats with soft shadow) -->
-              <div class="photo-primary relative z-10 w-[230px] sm:w-[270px] h-[155px] sm:h-[180px] rounded-[2px] bg-white border border-[#CCCCCC] p-2.5 sm:p-3 shadow-[0_8px_24px_rgba(0,0,0,0.08)] flex flex-col justify-between">
-                <div
-                  class="w-full flex-1 rounded-[1px] p-2.5 flex flex-col justify-between text-left"
-                  style="background: linear-gradient(135deg, #242424 0%, #121212 100%);"
-                >
-                  <div class="flex items-center justify-between">
-                    <span
-                      class="text-[0.6rem] sm:text-[0.68rem] font-bold text-white tracking-wide"
-                      style="font-family: 'Montserrat', sans-serif;"
-                    >
-                      Danube · Stone Bridge
-                    </span>
-                    <span class="text-[0.48rem] sm:text-[0.54rem] font-mono text-white/60">LEICA M6</span>
-                  </div>
-                  <div class="flex items-end justify-between">
-                    <span class="text-[0.46rem] sm:text-[0.52rem] font-mono text-white/50">SUMMICRON 35/2</span>
-                    <span class="text-[0.46rem] sm:text-[0.52rem] font-mono text-white/70"># 04 / 25</span>
-                  </div>
-                </div>
-                <div class="pt-1.5 flex justify-between items-center text-[0.44rem] sm:text-[0.5rem] font-mono text-[#888888]">
-                  <span class="italic font-serif">Regensburg, 2024</span>
-                  <span>SILVER GELATIN</span>
-                </div>
+              <div class="photo-primary">
+                <Image src={danubePrint} alt="" width={500} format="webp" loading="lazy" />
+                <span>REGENSBURG · ON THE DANUBE</span>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- 2. Cinema Panel: Three.js Flow / CurveModifier 35mm S-Curved Film Strip (真实3D弯曲胶卷) -->
-        <div
-          id="stage-panel-cinema"
-          class="stage-panel absolute inset-0 flex items-start justify-center transition-all duration-300 opacity-0 scale-[0.98] z-0 pointer-events-none"
-        >
-          <a
-            href="/marginalia/cinema"
-            class="relative w-full h-full flex items-start justify-center pt-2 sm:pt-2.5 cursor-pointer select-none overflow-visible"
-            title="Cinema"
-          >
-            <div class="cinema-three-container relative w-[340px] sm:w-[400px] h-[210px] sm:h-[240px] flex items-center justify-center">
-              <!-- Warm Projector Spotlight Halo behind the curved celluloid -->
-              <div class="cinema-projector-halo absolute w-48 sm:w-56 h-48 sm:h-56 rounded-full bg-amber-500/20 blur-3xl transition-all duration-700 pointer-events-none"></div>
-              
-              <!-- Three.js Canvas where Flow / CurveModifier bends the 35mm film strip along 3D CatmullRom spline -->
-              <canvas id="cinema-canvas" class="relative z-10 w-full h-full block cursor-pointer select-none pointer-events-auto"></canvas>
+        <!-- Cinema: two identical runs of flat film make one seamless loop. -->
+        <div id="stage-panel-cinema" class="stage-panel" inert aria-hidden="true">
+          <a href="/marginalia/cinema" aria-label="Explore Cinema" class="stage-art-link">
+            <div class="cinema-scene" aria-hidden="true">
+              <div class="cinema-strip">
+                <div class="cinema-track">
+                  {[0, 1].map(() => filmCovers.map(cover => <div class="cinema-frame"><img src={cover.src} width="82" height="108" alt="" decoding="async" draggable="false" /></div>))}
+                </div>
+                <div class="cinema-glow"></div>
+              </div>
             </div>
           </a>
         </div>
 
-        <!-- 3. Literature Panel: Codrops 3D Hardcover Tome with 24mm Paper Brick & Double-Sided Flip Cover -->
-        <div
-          id="stage-panel-literature"
-          class="stage-panel absolute inset-0 flex items-start justify-center transition-all duration-300 opacity-0 scale-[0.98] z-0 pointer-events-none"
-        >
-          <a
-            href="/marginalia/literature"
-            class="relative w-full h-full flex items-start justify-center pt-2 sm:pt-3 cursor-pointer select-none"
-            title="Literature"
-          >
-            <div class="book-codrops-stage relative w-[250px] sm:w-[280px] h-[210px] sm:h-[240px] flex items-center justify-center">
-              
-              <!-- 3-Tier Desk Contact Ground Shadows (紧贴桌面的超柔和多层接触阴影) -->
-              <div class="book-desk-shadow-trough absolute bottom-1 w-[190px] sm:w-[220px] h-2 bg-black/25 rounded-full blur-[2px] pointer-events-none transition-all duration-700"></div>
-              <div class="book-desk-shadow-ambient absolute bottom-0 w-[220px] sm:w-[250px] h-4 bg-black/10 rounded-full blur-[6px] pointer-events-none transition-all duration-700"></div>
-              <div class="book-desk-shadow-diffuse absolute -bottom-1 w-[250px] sm:w-[280px] h-6 bg-black/[0.06] rounded-full blur-[12px] pointer-events-none transition-all duration-700"></div>
-
-              <!-- 3D Book Assembly (Perspectived with realistic tilt) -->
-              <div class="book-assembly relative w-[160px] sm:w-[172px] h-[195px] sm:h-[215px]">
-                
-                <!-- 1. Right Hardcover Backing Base Plate (Z=-2px) -->
-                <div class="book-hardcover-backing absolute -inset-1 rounded-r-[4px] bg-[#16120E] border border-[#3A2E22] shadow-[0_6px_18px_rgba(0,0,0,0.16)]" style="transform: translateZ(-2px);"></div>
-
-                <!-- 2. Center Spine Binding (深棕烫金书脊) -->
-                <div class="book-spine absolute left-0 top-0 bottom-0 w-[24px] origin-left [transform:rotateY(-90deg)] bg-gradient-to-r from-[#110D09] via-[#241D15] to-[#1A140F] border-l border-[#3D3123] flex items-center justify-center z-10">
-                  <span class="text-[0.38rem] font-mono font-bold text-[#D4AF37] tracking-widest uppercase rotate-90 whitespace-nowrap">GEB · HOFSTADTER</span>
-                </div>
-
-                <!-- 3. Central Gutter Crease Trough (书脊凹陷装订咬合槽) -->
-                <div class="book-gutter-trough absolute -left-1.5 top-0 bottom-0 w-3 pointer-events-none z-30" style="transform: translateZ(25px); background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.12) 48%, rgba(0,0,0,0.12) 52%, rgba(0,0,0,0.5) 100%);">
-                  <div class="absolute left-1/2 top-1 bottom-1 w-[1px] -translate-x-1/2 bg-[#2D2218]/70"></div>
-                </div>
-
-                <!-- 4. Red Silk Ribbon Bookmark (Cascading from spine head trough) -->
-                <div class="book-ribbon-silk absolute -top-3 -left-1 w-2 sm:w-2.5 h-36 bg-gradient-to-b from-[#7F1D1D] via-[#DC2626] to-[#991B1B] shadow-[1.5px_3px_8px_rgba(0,0,0,0.3)] pointer-events-none z-40" style="transform: translateZ(28px); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6px), 50% 100%, 0 calc(100% - 6px));"></div>
-
-                <!-- 5. Solid 3D Pages Block (24mm Paper Brick - 真实侧边厚纸砖) -->
-                <div class="book-pages-block absolute inset-0" style="transform-style: preserve-3d;">
-                  <!-- Right Edge (书口厚纸砖切面 - 24px thick paper pages) -->
-                  <div class="book-brick-right absolute right-0 top-[1px] bottom-[1px] w-[24px] origin-right [transform:rotateY(90deg)] border-r border-[#C4B7A4] shadow-inner" style="background: repeating-linear-gradient(0deg, #E6DDD0 0px, #D8CEBE 1px, #F5F0E6 2px, #E2D8C8 3px);"></div>
-                  
-                  <!-- Top Edge (天头厚纸砖切面) -->
-                  <div class="book-brick-top absolute left-[1px] right-[1px] top-0 h-[24px] origin-top [transform:rotateX(-90deg)] border-t border-[#C4B7A4]" style="background: repeating-linear-gradient(90deg, #E6DDD0 0px, #D8CEBE 1px, #F5F0E6 2px, #E2D8C8 3px);"></div>
-
-                  <!-- Bottom Edge (地脚厚纸砖切面) -->
-                  <div class="book-brick-bottom absolute left-[1px] right-[1px] bottom-0 h-[24px] origin-bottom [transform:rotateX(90deg)] border-b border-[#C4B7A4]" style="background: repeating-linear-gradient(90deg, #E6DDD0 0px, #D8CEBE 1px, #F5F0E6 2px, #E2D8C8 3px);"></div>
-
-                  <!-- Stacked Loose Pages (纸张堆叠体积: 两层错位底页在书口微微露出) -->
-                  <div class="absolute inset-0 rounded-r-[2px] border border-[#D5CBB9]" style="transform: translateZ(20px) rotateY(-1.2deg) translateX(3px); transform-origin: left center; background: linear-gradient(to right, #BFB49F 0%, #E9E1D1 26%, #EFE8D9 100%);"></div>
-                  <div class="absolute inset-0 rounded-r-[2px] border border-[#DED4C2]" style="transform: translateZ(22px) rotateY(-2.4deg) translateX(1.5px); transform-origin: left center; background: linear-gradient(to right, #C8BDA9 0%, #EFE9DB 26%, #F4EFE3 100%);"></div>
-
-                  <!-- Right Inside Page (Page 108 Hofstadter Quote, 从书脊自然拱起: 脊侧凹陷阴影 → 拱顶受光带) -->
-                  <div class="book-page-first absolute inset-0 rounded-r-[2px] border border-[#DDD4C4] p-3.5 sm:p-4 flex flex-col justify-between shadow-[inset_12px_0_18px_rgba(0,0,0,0.12)] overflow-hidden" style="transform: translateZ(24px) rotateY(-5.5deg); transform-origin: left center; background: linear-gradient(to right, #A89C87 0%, #C9BEA9 4%, #EFE8D9 10%, #FFFDF4 22%, #FAF8F0 72%, #E6DCCB 100%);">
-                    <!-- Cylindrical Page Arch Highlight & Gutter Arch Shadow -->
-                    <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to right, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.06) 6%, rgba(255,255,255,0.48) 16%, rgba(255,255,255,0.08) 32%, rgba(0,0,0,0.03) 100%);"></div>
-
-                    <div class="relative z-10 flex justify-between items-center text-[0.44rem] sm:text-[0.5rem] font-mono text-[#8C7D6B] border-b border-[#E8E0D2] pb-1.5 pl-1">
-                      <span>GÖDEL, ESCHER, BACH</span>
-                      <span>p. 108</span>
-                    </div>
-                    <div class="relative z-10 space-y-1.5 text-left py-1 pl-1">
-                      <div class="text-[0.56rem] sm:text-[0.64rem] font-serif italic text-[#332A1E] leading-relaxed">
-                        "Can an intelligence understand the very rules that produce its own consciousness?"
-                      </div>
-                      <div class="text-[0.44rem] sm:text-[0.5rem] font-mono text-[#7D6E5C]">
-                        — Douglas R. Hofstadter
-                      </div>
-                    </div>
-                    <div class="relative z-10 flex justify-between items-center text-[0.4rem] sm:text-[0.46rem] font-mono text-[#A89D8B] border-t border-[#E8E0D2]/80 pt-1 pl-1">
-                      <span>CANON PER AUGMENTATIONEM</span>
-                      <span>1979</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 6. 3D Hardcover Board (Dual-Faced Cover, Flips Open smoothly with Full Casing Frame!) -->
-                <div class="book-cover-board absolute inset-0 origin-left" style="transform-style: preserve-3d;">
-
-                  <!-- Hardcover Slab Thickness (封面厚纸板侧切面: 书口/天头/地脚 6mm 板厚) -->
-                  <div class="absolute top-[-4px] bottom-[-4px] right-[-4px] w-[6px] origin-right [transform:rotateY(-90deg)] bg-gradient-to-b from-[#2A2118] via-[#1C1610] to-[#120E09] border border-[#3E342B]"></div>
-                  <div class="absolute left-[-4px] right-[-4px] top-[-4px] h-[6px] origin-top [transform:rotateX(-90deg)] bg-gradient-to-b from-[#241C13] to-[#171109] border border-[#3E342B]"></div>
-                  <div class="absolute left-[-4px] right-[-4px] bottom-[-4px] h-[6px] origin-bottom [transform:rotateX(90deg)] bg-gradient-to-b from-[#171109] to-[#241C13] border border-[#3E342B]"></div>
-
-                  <!-- Outer Front Face (Visible when book is closed) -->
-                  <div class="book-cover-front absolute -inset-1 rounded-r-[4px] bg-[#1C1814] border border-[#3E342B] p-3.5 sm:p-4 flex flex-col justify-between shadow-[0_12px_24px_rgba(0,0,0,0.35)] border-l-[4px] border-[#D4AF37] [backface-visibility:hidden]" style="transform: translateZ(1px);">
-                    <div class="flex justify-between items-center text-[0.46rem] sm:text-[0.52rem] font-mono text-[#C89B67] border-b border-[#3E342B] pb-1">
-                      <span>DOUGLAS HOFSTADTER</span>
-                      <span>1979</span>
-                    </div>
-                    <div class="space-y-1 text-left py-2">
-                      <div class="text-[0.72rem] sm:text-[0.82rem] font-bold text-[#FAF6ED] leading-tight" style="font-family: 'Montserrat', sans-serif;">
-                        Gödel, Escher, Bach
-                      </div>
-                      <div class="text-[0.48rem] sm:text-[0.54rem] text-[#C89B67]">An Eternal Golden Braid</div>
-                    </div>
-                    <div class="flex justify-between items-center text-[0.42rem] sm:text-[0.48rem] font-mono text-[#A0825B]">
-                      <span>PULITZER PRIZE</span>
-                      <span>BASIC BOOKS</span>
-                    </div>
-                  </div>
-
-                  <!-- Inside Left Wing (Visible when book is OPENED - Dark Hardcover Board + Endpaper with Cylindrical Page Arch!) -->
-                  <div class="book-cover-inside-wing absolute -inset-1 rounded-l-[4px] bg-[#16120E] border border-[#3A2E22] shadow-[-4px_8px_20px_rgba(0,0,0,0.15)] p-1 [backface-visibility:hidden]" style="transform: rotateY(180deg) translateZ(1px); transform-style: preserve-3d;">
-                    <!-- Pastedown Endpaper resting neatly inside dark leather casing with Cylindrical Arch Curve -->
-                    <div class="absolute inset-0 rounded-l-[2px] border border-[#DED4C2]" style="transform: rotateY(2.5deg) translateX(-2px); transform-origin: right center; background: linear-gradient(to left, #C8BDA9 0%, #EFE9DB 30%, #F4EFE3 100%);"></div>
-                    <div class="relative w-full h-full rounded-l-[2px] border border-[#D5CBB9] p-3 sm:p-3.5 flex flex-col justify-between shadow-[inset_-12px_0_18px_rgba(0,0,0,0.12)] overflow-hidden" style="transform: rotateY(5deg); transform-origin: right center; background: linear-gradient(to left, #C2B6A0 0%, #D8CFBE 4%, #FAF7F0 16%, #FAF8F2 78%, #EAE2D4 100%);">
-                      <!-- Cylindrical Page Arch Highlight & Gutter Arch Shadow -->
-                      <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to left, rgba(0,0,0,0.22) 0%, rgba(0,0,0,0.06) 6%, rgba(255,255,255,0.48) 16%, rgba(255,255,255,0.08) 32%, rgba(0,0,0,0.03) 100%);"></div>
-
-                      <div class="relative z-10 text-[0.42rem] sm:text-[0.48rem] font-mono text-[#8C7D6B] border-b border-[#E0D7C7] pb-1 flex justify-between pr-1">
-                        <span>EX LIBRIS</span>
-                        <span>HARVARD PRESS</span>
-                      </div>
-                      <div class="relative z-10 flex flex-col items-center justify-center space-y-1 py-1">
-                        <div class="w-9 h-9 sm:w-10 sm:h-10 border border-[#C89B67] rounded-full flex items-center justify-center p-1">
-                          <div class="w-6 h-6 sm:w-7 sm:h-7 border border-[#C89B67]/50 rounded-full flex items-center justify-center font-serif text-[0.52rem] sm:text-[0.58rem] font-bold text-[#6E6353]">
-                            GEB
-                          </div>
-                        </div>
-                        <span class="text-[0.4rem] sm:text-[0.44rem] font-mono text-[#8C7D6B] tracking-wider uppercase">Metamagical Themas</span>
-                      </div>
-                      <div class="relative z-10 text-[0.38rem] font-mono text-[#A89D8B] text-center border-t border-[#E0D7C7] pt-1">
-                        FIRST EDITION ARCHIVAL BINDING
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
+        <!-- Literature: the unmodified ZineJS engine, isolated to the active preview. -->
+        <div id="stage-panel-literature" class="stage-panel" inert aria-hidden="true">
+          <a href="/marginalia/literature" class="stage-art-link" aria-label="Explore Literature — 百年孤独">
+            <LiteratureBook />
           </a>
         </div>
 
         <!-- 4. Music Panel: Classical Vinyl LP (Smooth Draw-Out & Grooved Spin) (已向左平移居中) -->
         <div
           id="stage-panel-music"
-          class="stage-panel absolute inset-0 flex items-start justify-center transition-all duration-300 opacity-0 scale-[0.98] z-0 pointer-events-none"
+          class="stage-panel" inert aria-hidden="true"
         >
           <a
             href="/marginalia/music"
             class="relative w-full h-full flex items-start justify-center pt-2 sm:pt-2.5 cursor-pointer select-none overflow-visible"
-            title="Music"
+            aria-label="Explore Music"
           >
-            <div class="music-container relative w-[280px] sm:w-[330px] h-[210px] sm:h-[240px] flex items-center justify-start pl-2 sm:pl-4 -translate-x-8 sm:-translate-x-12">
+            <div aria-hidden="true" class="music-container relative w-[280px] sm:w-[330px] h-[210px] sm:h-[240px] flex items-center justify-start pl-2 sm:pl-4 -translate-x-8 sm:-translate-x-12">
               
               <!-- Black Vinyl Record Wrap (Glides horizontally out of the sleeve) -->
               <div class="vinyl-disc-wrap absolute left-2 sm:left-4 z-0 w-[180px] sm:w-[210px] h-[180px] sm:h-[210px] flex items-center justify-center">
                 <!-- Vinyl Disc Inner (Rotates gently once drawn out) -->
                 <div class="vinyl-disc-inner w-full h-full rounded-full border-2 border-[#252525] shadow-[0_8px_28px_rgba(0,0,0,0.35)] flex items-center justify-center relative overflow-hidden" style="background: radial-gradient(circle at center, #1a1a1a 20%, #0c0c0c 100%);">
-                  <!-- Vinyl Sheen Glare Reflection -->
-                  <div class="absolute inset-0 rounded-full pointer-events-none opacity-40" style="background: conic-gradient(from 45deg, rgba(255,255,255,0.12) 0deg, transparent 40deg, transparent 140deg, rgba(255,255,255,0.12) 180deg, transparent 220deg, transparent 320deg, rgba(255,255,255,0.12) 360deg);"></div>
                   <!-- Vinyl Concentric Sound Grooves -->
                   <div class="w-[84%] h-[84%] rounded-full border border-white/5 flex items-center justify-center relative z-10">
                     <div class="w-[70%] h-[70%] rounded-full border border-white/5 flex items-center justify-center">
@@ -546,26 +382,8 @@ const { initialSection = 'home' } = Astro.props;
                 </div>
               </div>
 
-              <!-- Heavy Cardstock Vinyl Sleeve Jacket (Grounded in foreground) -->
-              <div class="vinyl-sleeve absolute left-2 sm:left-4 z-10 w-[190px] sm:w-[220px] h-[190px] sm:h-[220px] rounded-[2px] bg-[#FAF9F6] border border-[#D5D2CD] shadow-[0_8px_24px_rgba(0,0,0,0.1)] p-3.5 sm:p-4.5 flex flex-col justify-between border-l-4 border-[#333333]">
-                <div class="flex justify-between items-start border-b border-[#EAEAEA] pb-1">
-                  <span class="text-[0.48rem] sm:text-[0.54rem] font-mono tracking-widest text-[#888888] uppercase">STEREO 33⅓</span>
-                  <span class="text-[0.48rem] sm:text-[0.54rem] font-mono text-[#888888]">1981</span>
-                </div>
-                <div class="space-y-1 text-left py-1">
-                  <div
-                    class="text-[0.7rem] sm:text-[0.8rem] font-bold text-[#111111] leading-tight"
-                    style="font-family: 'Montserrat', sans-serif;"
-                  >
-                    J.S. BACH
-                  </div>
-                  <div class="text-[0.5rem] sm:text-[0.56rem] text-[#666666] leading-tight">Goldberg Variations</div>
-                  <div class="text-[0.46rem] sm:text-[0.52rem] font-mono text-[#888888]">Glenn Gould · Piano</div>
-                </div>
-                <div class="flex justify-between items-center text-[0.44rem] sm:text-[0.5rem] font-mono text-[#AAAAAA]">
-                  <span>CBS MASTERWORKS</span>
-                  <span>D37779</span>
-                </div>
+              <div class="vinyl-sleeve">
+                <Image src={recordCover} alt="" width={440} format="webp" loading="lazy" />
               </div>
             </div>
           </a>
@@ -574,14 +392,14 @@ const { initialSection = 'home' } = Astro.props;
         <!-- 5. Table Tennis Panel: Authentic Butterfly Viscaria FL Blade & Topspin Bounce (纯粹球拍与球碰撞旋转) -->
         <div
           id="stage-panel-table-tennis"
-          class="stage-panel absolute inset-0 flex items-start justify-center transition-all duration-300 opacity-0 scale-[0.98] z-0 pointer-events-none"
+          class="stage-panel" inert aria-hidden="true"
         >
           <a
             href="/marginalia/table-tennis"
             class="relative w-full h-full flex items-start justify-center pt-1 sm:pt-2 cursor-pointer select-none overflow-visible"
-            title="Table Tennis"
+            aria-label="Explore Table Tennis"
           >
-            <div class="tt-container relative w-[320px] sm:w-[380px] h-[220px] sm:h-[250px] flex items-center justify-center">
+            <div aria-hidden="true" class="tt-container relative w-[320px] sm:w-[380px] h-[220px] sm:h-[250px] flex items-center justify-center">
               
               <!-- Subtle Court Ground Shadow -->
               <div class="tt-court-shadow absolute bottom-3 w-[190px] h-[18px] bg-black/20 rounded-full blur-md pointer-events-none translate-x-2"></div>
@@ -589,138 +407,24 @@ const { initialSection = 'home' } = Astro.props;
               <!-- Authentic Butterfly Viscaria FL Table Tennis Racket (3D Layered Physical Anatomy) -->
               <div class="tt-racket-assembly relative w-[160px] sm:w-[172px] h-[230px] sm:h-[246px] select-none" style="transform-style: preserve-3d;">
                 
-                <!-- Layer 1: Back Rubber (Black 2.1mm Sheet at translateZ: -10px) -->
-                <div class="tt-layer-back-rubber absolute inset-0 pointer-events-none" style="transform: translateZ(-10px);">
-                  <svg viewBox="0 0 160 230" class="w-full h-full">
-                    <path d="M 80,4 C 124,4 156,36 156,82 C 156,122 136,146 104,152 L 104,220 C 104,226 99,228 94,228 L 66,228 C 61,228 56,226 56,220 L 56,152 C 24,146 4,122 4,82 C 4,36 36,4 80,4 Z" fill="#121212" />
-                  </svg>
-                </div>
+                <svg class="racket-layer racket-back" viewBox="0 0 160 230"><path d={racketOutline} fill="#282725" /></svg>
+                {Array.from({ length: 10 }, (_, layer) => <svg class="racket-layer racket-wood" viewBox="0 0 160 230" style={`transform: translateZ(${layer - 6}px)`}><path d={racketOutline} fill={['#a78660', '#cfb18a', '#b99870', '#dac09b', '#947655'][layer % 5]} stroke={['#a78660', '#cfb18a', '#b99870', '#dac09b', '#947655'][layer % 5]} stroke-width="0.45" stroke-linejoin="round" /></svg>)}
+                {Array.from({ length: 8 }, (_, layer) => <svg class="racket-layer" viewBox="0 0 160 230" style={`transform: translateZ(${layer + 4}px)`}><path d={handleOutline} fill={layer % 3 === 0 ? '#87603e' : '#b18a5d'} /></svg>)}
+                <svg class="racket-layer racket-rubber" viewBox="0 0 160 230">
+                  <defs><linearGradient id="racket-rubber" x2="0.8" y2="1"><stop stop-color="#c93f42" /><stop offset="1" stop-color="#9b2029" /></linearGradient></defs>
+                  <path d={rubberOutline} fill="url(#racket-rubber)" stroke="#873039" stroke-width="0.8" stroke-linejoin="round" />
+                  <path d="M15 65 C21 31 47 11 80 11 C108 11 130 27 142 52" fill="none" stroke="#efaaa0" stroke-opacity="0.25" stroke-width="0.7" stroke-linecap="round" />
+                  <path d="M34 136 Q79 159 126 134" fill="none" stroke="#ffffff18" stroke-width="0.8" />
+                </svg>
+                <svg class="racket-layer racket-handle" viewBox="0 0 160 230">
+                  <defs><linearGradient id="racket-handle" x2="1" y2="0"><stop stop-color="#9a6f43" /><stop offset="0.45" stop-color="#d8bb8c" /><stop offset="1" stop-color="#a17b4c" /></linearGradient></defs>
+                  <path d={handleOutline} fill="url(#racket-handle)" stroke="#856039" stroke-width="1" />
+                  <path d="M72 152 Q78 179 70 226 M87 152 Q81 179 90 226" fill="none" stroke="#344554" stroke-width="3" />
+                  <path d="M77 154 Q81 185 77 226 M82 154 Q79 185 83 226" fill="none" stroke="#785932" stroke-width="0.7" opacity="0.6" />
+                  <rect x="75" y="209" width="10" height="9" rx="2" fill="#293842" stroke="#bca880" stroke-width="0.7" />
+                </svg>
 
-                <!-- Layer 1b: Back Flared Handle Scale (translateZ: -20px) -->
-                <div class="absolute left-[54px] top-[148px] w-[52px] h-[80px] pointer-events-none" style="transform: translateZ(-20px) rotateY(180deg); transform-style: preserve-3d;">
-                  <svg viewBox="0 0 52 80" class="w-full h-full" style="filter: drop-shadow(0 6px 14px rgba(0,0,0,0.4));">
-                    <path d="M 12,0 C 16,3 36,3 40,0 C 42,2 43,8 42,16 C 39,28 37,46 43,74 C 43,78 40,80 36,80 L 16,80 C 12,80 9,78 9,74 C 15,46 13,28 10,16 C 9,8 10,2 12,0 Z" fill="#9C6B3A" stroke="#7D5226" stroke-width="1.2" />
-                  </svg>
-                </div>
-
-                <!-- Layer 2a: Lower Wood Ply Rim (translateZ: -7px) -->
-                <div class="tt-layer-wood-rim absolute inset-0 pointer-events-none" style="transform: translateZ(-7px);">
-                  <svg viewBox="0 0 160 230" class="w-full h-full">
-                    <path d="M 80,4 C 124,4 156,36 156,82 C 156,122 136,146 104,152 L 104,220 C 104,226 99,228 94,228 L 66,228 C 61,228 56,226 56,220 L 56,152 C 24,146 4,122 4,82 C 4,36 36,4 80,4 Z" fill="#C89B67" stroke="#3A2010" stroke-width="2" />
-                  </svg>
-                </div>
-
-                <!-- Layer 2b: 5+2 ALC Core Blade + Edge Tape (translateZ: 0px) -->
-                <div class="tt-layer-wood-blade absolute inset-0 pointer-events-none" style="transform: translateZ(0px);">
-                  <svg viewBox="0 0 160 230" class="w-full h-full">
-                    <defs>
-                      <linearGradient id="viscaria-edge-sandwich" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#E8CCA6" />
-                        <stop offset="47%" stop-color="#B88E5E" />
-                        <stop offset="50%" stop-color="#1E3A8A" />
-                        <stop offset="53%" stop-color="#B88E5E" />
-                        <stop offset="100%" stop-color="#E8CCA6" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M 80,4 C 124,4 156,36 156,82 C 156,122 136,146 104,152 L 104,220 C 104,226 99,228 94,228 L 66,228 C 61,228 56,226 56,220 L 56,152 C 24,146 4,122 4,82 C 4,36 36,4 80,4 Z"
-                      fill="url(#viscaria-edge-sandwich)"
-                      stroke="#16120E"
-                      stroke-width="3"
-                    />
-                    <!-- Black Fabric Edge Tape with Gold Accent -->
-                    <path
-                      d="M 80,5 C 122,5 154,37 154,82 C 154,120 134,144 103,150 C 98,151 94,155 94,160 L 94,219 L 66,219 L 66,160 C 66,155 62,151 57,150 C 26,144 6,120 6,82 C 6,37 38,5 80,5 Z"
-                      fill="#181818"
-                      stroke="#C89B67"
-                      stroke-width="1.6"
-                    />
-                  </svg>
-                </div>
-
-                <!-- Layer 3: Spring Sponge (Orange-Red 2.1mm at translateZ: 8px) -->
-                <div class="tt-layer-sponge absolute inset-0 pointer-events-none" style="transform: translateZ(8px);">
-                  <svg viewBox="0 0 160 230" class="w-full h-full">
-                    <path d="M 80,7 C 121,7 151,38 151,82 C 151,119 132,142 102,148 C 98,149 94,152 94,157 L 66,157 C 66,152 62,149 58,148 C 28,142 9,119 9,82 C 9,38 39,7 80,7 Z" fill="#EA580C" stroke="#C2410C" stroke-width="1" />
-                  </svg>
-                </div>
-
-                <!-- Layer 4: Red Tenergy 05 Rubber Surface (translateZ: 14px) -->
-                <div class="tt-layer-rubber-front absolute inset-0" style="transform: translateZ(14px);">
-                  <svg viewBox="0 0 160 230" class="w-full h-full">
-                    <defs>
-                      <linearGradient id="viscaria-rubber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#F43F5E" />
-                        <stop offset="30%" stop-color="#DC2626" />
-                        <stop offset="100%" stop-color="#7F1D1D" />
-                      </linearGradient>
-                      <linearGradient id="viscaria-rubber-glare" x1="20%" y1="0%" x2="80%" y2="100%">
-                        <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
-                        <stop offset="40%" stop-color="rgba(255,255,255,0.06)" />
-                        <stop offset="100%" stop-color="rgba(0,0,0,0.22)" />
-                      </linearGradient>
-                    </defs>
-
-                    <!-- Rubber Sheet -->
-                    <path
-                      d="M 80,8 C 120,8 150,39 150,82 C 150,118 131,141 102,147 C 98,148 94,151 94,155 L 66,155 C 66,151 62,148 58,147 C 29,141 10,118 10,82 C 10,39 40,8 80,8 Z"
-                      fill="url(#viscaria-rubber-grad)"
-                    />
-                    <!-- Rubber Glare -->
-                    <path
-                      d="M 80,8 C 120,8 150,39 150,82 C 150,118 131,141 102,147 C 98,148 94,151 94,155 L 66,155 C 66,151 62,148 58,147 C 29,141 10,118 10,82 C 10,39 40,8 80,8 Z"
-                      fill="url(#viscaria-rubber-glare)"
-                    />
-
-                    <!-- Sweet Spot Target Rings -->
-                    <circle cx="80" cy="78" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="3 2" />
-                    <circle cx="80" cy="78" r="3" fill="rgba(255,255,255,0.6)" />
-
-                    <!-- ITTF License Block -->
-                    <rect x="36" y="136" width="88" height="15" rx="1.5" fill="#991B1B" stroke="rgba(255,255,255,0.3)" stroke-width="0.8" />
-                    <text x="42" y="146" fill="rgba(255,255,255,0.95)" font-size="6" font-family="monospace" font-weight="bold">TENERGY 05</text>
-                    <text x="88" y="146" fill="rgba(255,255,255,0.95)" font-size="5.5" font-family="monospace">★ ITTF 14-001</text>
-                  </svg>
-                </div>
-
-                <!-- Layer 5: Top Flared Handle Scale (FL) with Arched Neck Wings & Inlay Stripes (translateZ: 24px) -->
-                <div class="absolute left-[54px] top-[148px] w-[52px] h-[80px] pointer-events-none" style="transform: translateZ(24px); transform-style: preserve-3d;">
-                  <svg viewBox="0 0 52 80" class="w-full h-full" style="filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));">
-                    <defs>
-                      <linearGradient id="fl-wood" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#8B5E34" />
-                        <stop offset="12%" stop-color="#B88350" />
-                        <stop offset="45%" stop-color="#E9C49A" />
-                        <stop offset="60%" stop-color="#F2D7B6" />
-                        <stop offset="85%" stop-color="#B88350" />
-                        <stop offset="100%" stop-color="#73451E" />
-                      </linearGradient>
-                      <linearGradient id="fl-inlay" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#1E3A8A" />
-                        <stop offset="50%" stop-color="#0F172A" />
-                        <stop offset="100%" stop-color="#1E3A8A" />
-                      </linearGradient>
-                    </defs>
-
-                    <!-- Ergonomic Flared Contour with arched collar wings -->
-                    <path
-                      d="M 12,0 C 16,3 36,3 40,0 C 42,2 43,8 42,16 C 39,28 37,46 43,74 C 43,78 40,80 36,80 L 16,80 C 12,80 9,78 9,74 C 15,46 13,28 10,16 C 9,8 10,2 12,0 Z"
-                      fill="url(#fl-wood)"
-                      stroke="#5C3615"
-                      stroke-width="1.4"
-                    />
-
-                    <!-- Viscaria Blue/Black Carbon Inlay Stripes -->
-                    <path d="M 17,2 C 20,22 19,46 16,78 L 21,78 C 24,46 25,22 22,2 Z" fill="url(#fl-inlay)" />
-                    <path d="M 30,2 C 27,22 28,46 31,78 L 36,78 C 33,46 32,22 35,2 Z" fill="url(#fl-inlay)" />
-
-                    <!-- Butterfly Hologram Metal Badge at Butt -->
-                    <rect x="19" y="65" width="14" height="9" rx="1.5" fill="#0A0F1D" stroke="#38BDF8" stroke-width="1" />
-                    <circle cx="26" cy="69.5" r="2.2" fill="#38BDF8" />
-                  </svg>
-                </div>
-
-                <!-- Sweet Spot Dynamic Projection Shadow on Rubber (translateZ: 9px) -->
+                <!-- Contact shadow -->
                 <div class="tt-rubber-ball-shadow"></div>
 
                 <!-- Sweet Spot Impact Ripple Pulse -->
@@ -729,10 +433,6 @@ const { initialSection = 'home' } = Astro.props;
                 <!-- 40+ 3-Star Poly Ball (Hovering with Clear Air Gap & Dynamic 3D Topspin Bounce) -->
                 <div class="tt-ball-rig">
                   <div class="tt-ball-sphere">
-                    <div class="tt-ball-branding-roller">
-                      <span class="text-[0.44rem] sm:text-[0.48rem] font-bold text-[#DC2626] tracking-widest leading-none">★★★</span>
-                      <span class="text-[0.32rem] sm:text-[0.36rem] font-mono font-bold text-[#222222] leading-none mt-0.5">40+ WTT</span>
-                    </div>
                   </div>
                 </div>
 
@@ -745,32 +445,42 @@ const { initialSection = 'home' } = Astro.props;
         <!-- 6. Games Panel: Classic White 1st-Gen Game Boy Handheld (情怀复古白色初代掌机) (已向左平移居中) -->
         <div
           id="stage-panel-games"
-          class="stage-panel absolute inset-0 flex items-start justify-center transition-all duration-300 opacity-0 scale-[0.98] z-0 pointer-events-none"
+          class="stage-panel" inert aria-hidden="true"
         >
           <a
             href="/marginalia/games"
             class="relative w-full h-full flex items-start justify-center pt-0 sm:pt-0 cursor-pointer select-none overflow-visible"
-            title="Games"
+            aria-label="Explore Games"
           >
-            <div class="gameboy-stage relative w-[290px] sm:w-[330px] h-[225px] sm:h-[255px] flex items-center justify-center -translate-x-8 sm:-translate-x-10">
+            <div aria-hidden="true" class="gameboy-stage relative w-[290px] sm:w-[330px] h-[225px] sm:h-[255px] flex items-center justify-center -translate-x-8 sm:-translate-x-10">
 
               
               <!-- Subtle Ground Shadow -->
               <div class="gameboy-ground-shadow absolute -bottom-2 w-[160px] sm:w-[176px] h-6 bg-black/35 rounded-full blur-md pointer-events-none"></div>
 
               <!-- Classic White Game Boy DMG-01 Handheld Chassis (3D Solid Body) -->
-              <div class="gameboy-white relative z-10 w-[170px] sm:w-[186px] h-[218px] sm:h-[238px] select-none" style="transform-style: preserve-3d;">
+              <div class="gameboy-white relative z-10 w-[170px] sm:w-[186px] h-[238px] sm:h-[258px] select-none" style="transform-style: preserve-3d;">
                 
-                <!-- 3D Right Side Extrusion Wall with Volume Dial -->
-                <div class="gameboy-side-right absolute top-0 right-0 bottom-[24px] w-[18px] origin-right [transform:rotateY(90deg)] bg-gradient-to-r from-[#D8D7CF] to-[#C0BFB6] border-r border-[#ABAAA1] shadow-[inset_0_0_5px_rgba(0,0,0,0.18)] flex items-center justify-center pointer-events-none z-0">
-                  <div class="w-1.5 h-6 bg-gradient-to-r from-[#9A9992] to-[#7E7D76] rounded-[1px] shadow-inner"></div>
-                </div>
+                <div class="gameboy-back"></div>
+                <div class="gameboy-side-right"><div class="gameboy-volume"></div></div>
+                <div class="gameboy-side-left"></div>
+                <div class="gameboy-side-top"></div>
+                <div class="gameboy-side-bottom"></div>
+                <div class="gameboy-side-corner"></div>
 
-                <!-- 3D Bottom Extrusion Wall -->
-                <div class="gameboy-side-bottom absolute left-0 right-[24px] bottom-0 h-[18px] origin-bottom [transform:rotateX(-90deg)] bg-gradient-to-b from-[#C8C7BE] to-[#B0AFA6] border-b border-[#96958C] pointer-events-none z-0"></div>
+                <svg class="gameboy-circuit" viewBox="0 0 186 258" aria-hidden="true">
+                  <rect x="12" y="15" width="162" height="226" rx="13" fill="#777d7e" />
+                  <g fill="none" stroke="#c6cdcb" stroke-width="1" opacity="0.6">
+                    <path d="M24 129H78V171H136V223 M30 134H72V180H124V236 M157 110V149H107V211H50 M163 115V156H115V202H35 M34 220H77V197H153" />
+                    <circle cx="46" cy="174" r="25" /><circle cx="141" cy="167" r="17" />
+                  </g>
+                  <rect x="83" y="144" width="18" height="23" rx="2" fill="#303536" />
+                  {[25, 160].map(x => [22, 229].map(y => <g><circle cx={x} cy={y} r="7" fill="#e3e7e7" fill-opacity="0.5" stroke="#f5f7f7" /><circle cx={x} cy={y} r="2" fill="#707777" /></g>))}
+                  <g fill="#c3c8c5">{[0, 1, 2, 3, 4].map(i => <rect x={82 + i * 4} y="176" width="2" height="8" rx="0.5" />)}</g>
+                </svg>
 
                 <!-- 3D Front Shell Face -->
-                <div class="gameboy-front absolute inset-0 rounded-t-[14px] rounded-bl-[14px] bg-[#ECECE8] border border-[#D5D4CD] shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.85),inset_-1px_-1px_2px_rgba(0,0,0,0.08)] p-3 flex flex-col justify-between" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%); transform: translateZ(18px);">
+                <div class="gameboy-front absolute inset-0 rounded-t-[14px] rounded-bl-[14px] bg-[#ECECE8] border border-[#D5D4CD] shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.85),inset_-1px_-1px_2px_rgba(0,0,0,0.08)] p-3 flex flex-col justify-between" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%); transform: translateZ(var(--gameboy-depth));">
 
                 <!-- Top Shell: Power Switch & Cartridge Slot Ridge -->
                 <div class="w-full flex justify-between items-center -mt-1 px-1">
@@ -810,58 +520,37 @@ const { initialSection = 'home' } = Astro.props;
                       <span class="text-[0.28rem] font-mono text-[#AAAAAA] tracking-tighter scale-90">BATTERY</span>
                     </div>
 
-                    <!-- Authentic Olive-Green Pea LCD Screen with 8-Bit Pixel Art (Tetris), recessed into bezel -->
-                    <div class="gameboy-lcd flex-1 h-[64px] sm:h-[70px] rounded-[2px] bg-[#8BAC0F] border border-[#304B02] shadow-[inset_0_3px_8px_rgba(0,0,0,0.6),inset_0_-1px_2px_rgba(0,0,0,0.25),0_1px_0_rgba(255,255,255,0.14)] p-1.5 flex justify-between relative overflow-hidden">
+                    <!-- Neutral monochrome LCD screen with 8-Bit Pixel Art (Tetris), recessed into bezel -->
+                    <div class="gameboy-lcd flex-1 h-[64px] sm:h-[70px] rounded-[2px] bg-[#FAFAFA] border border-[#969696] shadow-[inset_0_3px_8px_rgba(0,0,0,0.6),inset_0_-1px_2px_rgba(0,0,0,0.25),0_1px_0_rgba(255,255,255,0.14)] p-1.5 flex justify-between relative overflow-hidden">
                       
                       <!-- Screen Glare Diagonal Reflection -->
                       <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/15 to-transparent pointer-events-none z-20"></div>
 
                       <!-- Dot Matrix Grid Mesh Texture -->
-                      <div class="absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(15,56,15,0.08)_0px,rgba(15,56,15,0.08)_1px,transparent_1px,transparent_2px)] pointer-events-none z-10"></div>
+                      <div class="absolute inset-0 bg-[repeating-linear-gradient(0deg,rgba(40,48,43,0.06)_0px,rgba(40,48,43,0.06)_1px,transparent_1px,transparent_2px)] pointer-events-none z-10"></div>
 
-                      <!-- Left: Tetris Playing Well (Tetromino Blocks) -->
-                      <div class="w-[58%] h-full border-r border-[#304B02]/50 pr-1 flex flex-col justify-between z-10 text-left">
-                        <!-- Falling Tetrominoes -->
-                        <div class="flex justify-end pr-1 pt-1">
-                          <div class="grid grid-cols-2 gap-0.5 gameboy-falling-block">
-                            <div class="w-1.5 h-1.5 bg-[#0F380F] border border-[#8BAC0F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F] border border-[#8BAC0F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F] border border-[#8BAC0F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F] border border-[#8BAC0F]"></div>
-                          </div>
-                        </div>
-                        <!-- Stacked bottom blocks -->
-                        <div class="space-y-0.5">
-                          <div class="flex space-x-0.5">
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                            <div class="w-1.5 h-1.5 bg-transparent"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                          </div>
-                          <div class="flex space-x-0.5">
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                            <div class="w-1.5 h-1.5 bg-[#0F380F]"></div>
-                          </div>
-                        </div>
-                      </div>
+                      <svg class="gameboy-well" viewBox="0 0 60 80" aria-hidden="true">
+                        <g class="gameboy-stack" fill="currentColor">
+                          <path d="M2 70h7v7H2z M12 70h7v7h-7z M22 70h7v7h-7z M52 70h7v7h-7z" class="gameboy-clear-row" />
+                          <path d="M2 60h7v7H2z M12 60h7v7h-7z M22 60h7v7h-7z M52 60h7v7h-7z" class="gameboy-clear-row" />
+                          <g class="gameboy-upper-stack"><path d="M2 50h7v7H2z M12 50h7v7h-7z M52 50h7v7h-7z M2 40h7v7H2z" /></g>
+                        </g>
+                        <path class="gameboy-falling-block" fill="currentColor" d="M32 0h7v7h-7z M42 0h7v7h-7z M32 10h7v7h-7z M42 10h7v7h-7z" />
+                      </svg>
 
                       <!-- Right: Game Stats (Score, Level, Lines) -->
-                      <div class="w-[40%] h-full flex flex-col justify-between pl-1 text-[0.32rem] sm:text-[0.36rem] font-mono font-bold text-[#0F380F] z-10 leading-none">
+                      <div class="w-[40%] h-full flex flex-col justify-between pl-1 text-[0.32rem] sm:text-[0.36rem] font-mono font-bold text-[#333333] z-10 leading-none">
                         <div>
-                          <div class="text-[0.28rem] text-[#304B02]">SCORE</div>
-                          <div>024500</div>
+                          <div class="text-[0.28rem] text-[#666666]">SCORE</div>
+                          <div class="gameboy-score"><span>024500</span><span>024800</span></div>
                         </div>
                         <div>
-                          <div class="text-[0.28rem] text-[#304B02]">LEVEL</div>
+                          <div class="text-[0.28rem] text-[#666666]">LEVEL</div>
                           <div>01</div>
                         </div>
                         <div>
-                          <div class="text-[0.28rem] text-[#304B02]">LINES</div>
-                          <div>028</div>
+                          <div class="text-[0.28rem] text-[#666666]">LINES</div>
+                          <div class="gameboy-score"><span>028</span><span>030</span></div>
                         </div>
                       </div>
 
@@ -878,12 +567,12 @@ const { initialSection = 'home' } = Astro.props;
                 </div>
 
                 <!-- Lower Shell: Authentic Matte D-Pad, Diagonal Ruby A/B, Select & Start -->
-                <div class="w-full flex justify-between items-end px-1 pb-1">
+                <div class="gameboy-controls w-full flex justify-between items-start px-1 pb-1">
                   
                   <!-- Left: Classic Matte Black D-Pad (Cross with Center Depression) -->
                   <div class="relative w-11 sm:w-12 h-11 sm:h-12 flex items-center justify-center">
                     <!-- Base socket -->
-                    <div class="absolute inset-0 rounded-full bg-[#D1D0C7] shadow-inner"></div>
+                    <div class="absolute inset-0 rounded-full bg-[#acb4b499] shadow-inner"></div>
                     <!-- Cross vertical bar -->
                     <div class="absolute w-3.5 h-10 sm:h-11 bg-gradient-to-r from-[#2B2D31] via-[#1E1F22] to-[#141517] rounded-[2px] shadow-[0_4px_8px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.4),inset_1px_0_1px_rgba(255,255,255,0.25)] flex flex-col justify-between items-center py-0.5">
                       <span class="text-[0.3rem] text-[#666666] leading-none">▲</span>
@@ -899,7 +588,7 @@ const { initialSection = 'home' } = Astro.props;
                   </div>
 
                   <!-- Center Bottom: Angled Select & Start Rubber Pills -->
-                    <div class="flex space-x-2 pb-1">
+                    <div class="gameboy-system-buttons flex space-x-2">
                     <div class="flex flex-col items-center">
                       <div class="w-6 h-2 rounded-full bg-gradient-to-b from-[#8B94A0] to-[#5B636E] border border-[#4B5563] shadow-[0_2px_4px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.4)] transform -rotate-[25deg]"></div>
                       <span class="text-[0.28rem] font-mono font-bold text-[#1E293B] tracking-tighter mt-1">SELECT</span>
@@ -911,7 +600,7 @@ const { initialSection = 'home' } = Astro.props;
                   </div>
 
                   <!-- Right: Diagonal Ruby/Magenta A & B Action Buttons -->
-                  <div class="relative p-1 bg-[#DEDDD5] rounded-[20px] shadow-inner transform -rotate-[25deg] mb-1">
+                  <div class="relative p-1 bg-[#acb4b499] rounded-[20px] shadow-inner transform -rotate-[25deg] mb-1">
                     <div class="flex space-x-2 items-center">
                       <!-- B Button -->
                       <div class="flex flex-col items-center">
@@ -930,12 +619,12 @@ const { initialSection = 'home' } = Astro.props;
 
                 <!-- Bottom-Right: 6 Diagonal Speaker Grille Slots (6道斜向扬声器孔条) -->
                 <div class="absolute bottom-3 right-3 flex space-x-1 transform -rotate-[28deg] pointer-events-none">
-                  <div class="w-1 h-3.5 bg-[#B5B4AD] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-4.5 bg-[#B5B4AD] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-5.5 bg-[#B5B4AD] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-5.5 bg-[#B5B4AD] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-4.5 bg-[#B5B4AD] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-3.5 bg-[#B5B4AD] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-3.5 bg-[#646d6e] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-4.5 bg-[#646d6e] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-5.5 bg-[#646d6e] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-5.5 bg-[#646d6e] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-4.5 bg-[#646d6e] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-3.5 bg-[#646d6e] rounded-full shadow-inner"></div>
                 </div>
 
                 <!-- Bottom Edge: Phones Jack Indication -->
@@ -955,6 +644,7 @@ const { initialSection = 'home' } = Astro.props;
 
       </div>
       </div>
+      <p class="stage-touch-hint">Select an interest to preview · Tap the artwork to explore</p>
     </div>
   </div>
 </section>
@@ -981,408 +671,226 @@ const { initialSection = 'home' } = Astro.props;
     display: none !important;
   }
 
-  /* ========================================================================= */
-  /* MARGINALIA TACTILE STAGE: 4 HIGH-CONTRAST DISTINCT MEDIUM ANIMATIONS      */
-  /* ========================================================================= */
-  
-  /* 1. Photography: Double Archival Print Dramatic Spread & Elevation */
-  .photo-secondary {
-    transform: translate(0, 0) rotate(0deg);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .photo-secondary {
-    transform: translate(-72px, 16px) rotate(-13deg);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
-  }
-  .photo-primary {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .photo-primary {
-    transform: translate(16px, -14px) scale(1.06) rotate(3.5deg);
-    box-shadow: 0 28px 52px rgba(0, 0, 0, 0.22);
-  }
-
-  /* 2. Cinema: Three.js Flow / CurveModifier S-Curving 35mm Celluloid Film Strip */
-  .cinema-projector-halo {
-    opacity: 0.35;
-    transform: scale(0.9);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .cinema-projector-halo {
-    opacity: 0.95;
-    transform: scale(1.35) translateY(-4px);
-  }
-
-  /* 3. Literature: Codrops 3D Hardcover Tome with 24mm Paper Brick & 3D Opening Cover */
-  .book-codrops-stage {
-    perspective: 1400px;
-    transform-style: preserve-3d;
-  }
-  .book-assembly {
-    transform-style: preserve-3d;
-    transform: rotateX(24deg) rotateY(-22deg) rotateZ(0deg);
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .book-assembly {
-    transform: rotateX(22deg) rotateY(-10deg) rotateZ(-1deg) translateX(42px) translateY(-2px) scale(1.04);
-  }
-  .book-cover-board {
-    transform-origin: left center;
-    transform: translateZ(25px) rotateY(0deg);
-    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .book-cover-board {
-    transform: translateZ(25px) rotateY(-165deg);
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.14);
-  }
-  .book-gutter-trough {
-    opacity: 0;
-    transition: opacity 0.6s ease;
-  }
-  .is-expanded .book-gutter-trough {
-    opacity: 1;
-  }
-  .book-ribbon-silk {
-    transform-origin: top center;
-    transform: translateY(0) rotate(0deg);
-    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .book-ribbon-silk {
-    transform: translateY(14px) rotate(6deg);
-  }
-  .book-desk-shadow-trough {
-    transform: scale(1) translateX(0);
-    opacity: 0.22;
-  }
-  .is-expanded .book-desk-shadow-trough {
-    transform: scale(1.15) translateX(12px) translateY(1px);
-    opacity: 0.3;
-  }
-  .book-desk-shadow-ambient {
-    transform: scale(1) translateX(0);
-    opacity: 0.14;
-  }
-  .is-expanded .book-desk-shadow-ambient {
-    transform: scale(1.18) translateX(10px) translateY(2px);
-    opacity: 0.18;
-  }
-  .book-desk-shadow-diffuse {
-    transform: scale(1) translateX(0);
-    opacity: 0.08;
-  }
-  .is-expanded .book-desk-shadow-diffuse {
-    transform: scale(1.2) translateX(8px) translateY(2px);
-    opacity: 0.12;
-  }
-
-  /* 4. Music: Vinyl LP Full Draw-Out & High-Contrast Continuous Rotation */
-  .vinyl-disc-wrap {
-    transform: translateX(0);
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .vinyl-disc-wrap {
-    transform: translateX(112px);
-  }
-  .vinyl-disc-inner {
-    transform: rotate(0deg);
-  }
-  .is-expanded .vinyl-disc-inner {
-    animation: vinyl-spin 6s linear infinite;
-    animation-delay: 0.35s;
-  }
-  @keyframes vinyl-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  .vinyl-sleeve {
-    transform: translateX(0) rotate(0deg);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .vinyl-sleeve {
-    transform: translateX(-18px) rotate(-3deg);
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
-  }
-
-  /* 5. Table Tennis: Authentic Butterfly Viscaria ALC Blade & High-Pop Sweet-Spot Bounce */
-  .tt-container {
-    perspective: 900px;
-  }
-  .tt-racket-assembly {
-    transform-origin: 88px 180px;
-    transform-style: preserve-3d;
-    transform: rotateX(30deg) rotateY(-42deg) rotateZ(-10deg);
-    filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.26));
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .is-expanded .tt-racket-assembly {
-    animation: racket-hit-recoil 1.1s ease-in-out infinite;
-  }
-  .tt-impact-ripple {
-    position: absolute;
-    top: 81px;
-    left: 76px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.95);
-    pointer-events: none;
-    transform: translateZ(15px);
-    opacity: 0;
-  }
-  .is-expanded .tt-impact-ripple {
-    animation: ripple-pulse 1.1s ease-out infinite;
-  }
-  .tt-rubber-ball-shadow {
-    position: absolute;
-    top: 92px;
-    left: 81px;
-    width: 28px;
-    height: 16px;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.12) 55%, transparent 75%);
-    filter: blur(6px);
-    pointer-events: none;
-    transform: translateZ(15px) scale(0.6);
-    opacity: 0.28;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  }
-  .is-expanded .tt-rubber-ball-shadow {
-    animation: rubber-shadow-track 1.1s cubic-bezier(0.35, 0, 0.65, 1) infinite;
-  }
-  .tt-ball-rig {
-    position: absolute;
-    top: 96px;
-    left: 104px;
-    width: 44px;
-    height: 44px;
-    transform-style: preserve-3d;
-    transform: translateZ(70px);
-    transition: transform 0.5s ease;
-  }
-  .is-expanded .tt-ball-rig {
-    animation: ball-normal-bounce 1.1s cubic-bezier(0.35, 0, 0.65, 1) infinite;
-  }
-  .tt-ball-sphere {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 28%, #FFFFFF 0%, #F5F5F5 35%, #DCDCDC 70%, #AAAAAA 100%);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35), inset -1.5px -2px 6px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .tt-ball-branding-roller {
+  /* One bounded stage, shared by all six objects. */
+  .marginalia-stage { container-type: inline-size; }
+  .stage-panel {
     position: absolute;
     inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.98);
+    pointer-events: none;
+    transition: opacity 220ms ease, transform 400ms ease, visibility 0s 220ms;
+  }
+  .stage-panel[data-active] {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+  .stage-panel > a {
+    position: absolute;
+    left: calc(50% - 237px);
+    top: calc(50% - 135px);
+    width: 400px;
+    height: 270px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 10px;
+    transform-origin: 50% 50%;
   }
-  .is-expanded .tt-ball-branding-roller {
-    animation: topspin-roll 0.42s linear infinite;
-  }
-  .tt-court-shadow {
-    transition: transform 0.6s ease, opacity 0.6s ease;
-  }
-  .is-expanded .tt-court-shadow {
-    animation: court-shadow-pulse 1.1s ease-in-out infinite;
+  .stage-panel:not(#stage-panel-cinema) > a { left: calc(50% - 249px); }
+  .stage-panel > a > div { flex-shrink: 0; }
+  .stage-panel > a:focus-visible { outline: 2px solid #777; outline-offset: 4px; border-radius: 4px; }
+  .stage-touch-hint { display: none; font-size: 10px; color: #777; text-align: center; }
+  @container (max-width: 399px) { .stage-panel > a { transform: scale(0.94); } }
+  @container (max-width: 379px) { .stage-panel > a { transform: scale(0.86); } }
+  @container (max-width: 339px) { .stage-panel > a { transform: scale(0.78); } }
+  @container (max-width: 299px) { .stage-panel > a { transform: scale(0.69); } }
+  @media (hover: none) { .stage-touch-hint { display: block; } }
+  @media (max-width: 639px) {
+    .stage-navigation { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 10px; }
+    .stage-navigation > article { margin: 0 !important; }
+    .stage-trigger { font-size: 12px; white-space: nowrap; }
+    .marginalia-stage { margin-top: 14px; min-height: 250px; transform: none; }
   }
 
+  /* Photography: restrained spread, real prints, soft contact shadows. */
+  .photo-container { position: relative; width: 330px; height: 250px; display: flex; align-items: center; justify-content: center; }
+  .photo-primary, .photo-secondary {
+    position: absolute; padding: 8px 8px 0; background: #fff; border: 1px solid #ddd;
+    box-shadow: 0 6px 15px #00000012; border-radius: 2px;
+    transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 650ms ease;
+  }
+  .photo-primary { width: 250px; z-index: 1; }
+  .photo-secondary { width: 160px; transform: rotate(-3deg); }
+  .photo-primary img { display: block; width: 100%; height: 155px; object-fit: cover; filter: saturate(0.7); }
+  .photo-secondary img { display: block; width: 100%; height: 190px; object-fit: cover; filter: saturate(0.65); }
+  .photo-container span { display: block; padding: 9px 0; font-size: 7px; letter-spacing: 0.09em; color: #777; text-align: center; }
+  .is-expanded .photo-secondary { animation: photo-secondary-enter 850ms cubic-bezier(0.22, 0.7, 0.25, 1) 240ms both; transform: translate(-62px, 12px) rotate(-11deg); box-shadow: 0 10px 20px #00000016; }
+  .is-expanded .photo-primary { animation: photo-primary-enter 850ms cubic-bezier(0.22, 0.7, 0.25, 1) 240ms both; transform: translate(28px, -8px) rotate(4deg); box-shadow: 0 14px 25px #00000020; }
+
+  @keyframes photo-secondary-enter {
+    from { transform: translate(0, 0) rotate(-3deg); }
+    to { transform: translate(-62px, 12px) rotate(-11deg); }
+  }
+  @keyframes photo-primary-enter {
+    from { transform: translate(0, 0) rotate(0); }
+    to { transform: translate(28px, -8px) rotate(4deg); }
+  }
+
+  /* Flat film transport with a soft, slowly varying projector glow. */
+  .cinema-scene { position: relative; width: 380px; height: 250px; translate: -12px 0; display: flex; align-items: center; justify-content: center; }
+  .cinema-strip { position: relative; flex-shrink: 0; width: 400px; height: 140px; overflow: hidden; border-radius: 1px; box-shadow: 0 8px 18px #32271b18; }
+  .cinema-track { position: relative; display: flex; width: max-content; height: 140px; padding: 16px 0; background: #25231f; animation: cinema-transport 24s linear infinite paused; }
+  .cinema-track::before, .cinema-track::after { content: ''; position: absolute; left: 0; right: 0; height: 7px; background: repeating-linear-gradient(to right, transparent 0 4px, #faf9f5 4px 11px, transparent 11px 20px); }
+  .cinema-track::before { top: 4px; }
+  .cinema-track::after { bottom: 4px; }
+  .cinema-frame { flex: 0 0 100px; padding: 0 9px; }
+  .cinema-frame img { display: block; width: 82px; height: 108px; object-fit: cover; filter: saturate(0.8) sepia(0.12); }
+  .cinema-glow { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 12% 48%, #ffe0a9 0%, #f2be6caa 28%, transparent 72%), linear-gradient(105deg, transparent 25%, #fff8df88 49%, transparent 75%); mix-blend-mode: screen; opacity: 0.3; animation: cinema-lamplight 4.3s linear infinite paused; }
+  .is-expanded .cinema-track, .is-expanded .cinema-glow { animation-play-state: running; }
+  @keyframes cinema-transport { to { transform: translateX(-50%); } }
+  @keyframes cinema-lamplight { 0%, 100% { opacity: 0.28; } 19% { opacity: 0.42; } 37% { opacity: 0.24; } 58% { opacity: 0.36; } 73% { opacity: 0.27; } 89% { opacity: 0.39; } }
+  @media (max-width: 639px) { .cinema-strip { width: 350px; } }
+
+  /* Music: the label rotates beneath a stationary specular reflection. */
+  .stage-panel .music-container { width: 330px; height: 250px; transform: none; padding-left: 0; }
+  .stage-panel .vinyl-disc-wrap { width: 210px; height: 210px; left: 16px; transform: translateX(0); transition: transform 750ms cubic-bezier(0.16, 1, 0.3, 1); }
+  .is-expanded .vinyl-disc-wrap { transform: translateX(104px); }
+  .vinyl-disc-wrap::after { content: ''; position: absolute; inset: 0; border-radius: 50%; pointer-events: none; background: conic-gradient(from 30deg, transparent, #ffffff13 35deg, transparent 65deg, transparent 180deg, #ffffff13 215deg, transparent 245deg); }
+  .stage-panel .vinyl-disc-inner { box-shadow: 0 8px 18px #00000020; }
+  .is-expanded .vinyl-disc-inner { animation: vinyl-spin 9s linear 650ms infinite; }
+  @keyframes vinyl-spin { to { transform: rotate(360deg); } }
+  .vinyl-sleeve { position: absolute; left: 16px; width: 220px; height: 220px; z-index: 1; border: 1px solid #d5d2cd; background: #faf9f6; border-radius: 2px; box-shadow: 0 6px 16px #00000015; transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 650ms ease; }
+  .vinyl-sleeve img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .is-expanded .vinyl-sleeve { transform: translateX(-16px); box-shadow: 0 10px 22px #00000020; }
+
+  /* Table tennis: one contact centre; the ball counter-rotates to face the viewer. */
+  .stage-panel .tt-container { width: 330px; height: 250px; perspective: 900px; translate: 12px 0; }
+  .stage-panel .tt-racket-assembly { width: 172px; height: 246px; }
+  .racket-layer { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .racket-back { transform: translateZ(-8px); }
+  .racket-rubber { transform: translateZ(4px); }
+  .racket-handle { transform: translateZ(12px); }
+  .tt-racket-assembly { transform-origin: center; transform-style: preserve-3d; transform: rotateX(55deg) rotateY(-18deg) rotateZ(-20deg); }
+  .is-expanded .tt-racket-assembly { animation: racket-hit-recoil 1.5s linear infinite; }
+  .tt-court-shadow { opacity: 0.12; transform: translate(8px, -10px); }
+  .tt-impact-ripple, .tt-rubber-ball-shadow { position: absolute; left: 68px; top: 65px; width: 36px; height: 36px; border-radius: 50%; pointer-events: none; transform: translateZ(5px); }
+  .tt-impact-ripple { border: 1px solid #ffffff99; opacity: 0; }
+  .tt-rubber-ball-shadow { background: radial-gradient(circle, #00000060, transparent 70%); opacity: 0.18; transform: translateZ(5px) scale(1.5); }
+  .is-expanded .tt-impact-ripple { animation: ripple-pulse 1.5s ease-out infinite; }
+  .is-expanded .tt-rubber-ball-shadow { animation: rubber-shadow-track 1.5s ease-in infinite; }
+  .tt-ball-rig { position: absolute; top: 65px; left: 68px; width: 36px; height: 36px; transform-style: preserve-3d; transform: translateZ(100px); }
+  .is-expanded .tt-ball-rig { animation: ball-normal-bounce 1.5s infinite; }
+  .tt-ball-sphere { width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle at 32% 25%, #fff 0%, #fafafa 40%, #ddd 78%, #c3c3c3 100%); border: 1px solid #00000012; overflow: hidden; position: relative; transform: rotateZ(20deg) rotateY(18deg) rotateX(-55deg); }
   @keyframes racket-hit-recoil {
-    0% {
-      transform: rotateX(30deg) rotateY(-42deg) rotateZ(-10deg) translateZ(0);
-    }
-    46% {
-      transform: rotateX(29deg) rotateY(-42deg) rotateZ(-10deg) translateZ(3px);
-    }
-    50% {
-      transform: rotateX(32deg) rotateY(-42deg) rotateZ(-10deg) translateZ(-5px);
-    }
-    56% {
-      transform: rotateX(29.5deg) rotateY(-42deg) rotateZ(-10deg) translateZ(2px);
-    }
-    100% {
-      transform: rotateX(30deg) rotateY(-42deg) rotateZ(-10deg) translateZ(0);
-    }
+    0%, 46%, 65%, 100% { transform: rotateX(55deg) rotateY(-18deg) rotateZ(-20deg) translateZ(0); }
+    50% { transform: rotateX(55deg) rotateY(-18deg) rotateZ(-20deg) translateZ(-3px); }
+    56% { transform: rotateX(55deg) rotateY(-18deg) rotateZ(-20deg) translateZ(1px); }
   }
-
   @keyframes ball-normal-bounce {
-    0% {
-      transform: translateZ(70px) scale(1.0);
-      animation-timing-function: ease-in;
-    }
-    47% {
-      transform: translateZ(26px) scale(0.96, 1.05);
-    }
-    50% {
-      transform: translateZ(14px) scale(1.18, 0.82);
-      animation-timing-function: ease-out;
-    }
-    54% {
-      transform: translateZ(30px) scale(0.95, 1.08);
-    }
-    100% {
-      transform: translateZ(70px) scale(1.0);
-    }
+    0%, 100% { transform: translateZ(100px); animation-timing-function: cubic-bezier(0.55, 0, 1, 0.5); }
+    50% { transform: translateZ(23px); animation-timing-function: cubic-bezier(0, 0.5, 0.45, 1); }
   }
-
   @keyframes rubber-shadow-track {
-    0% {
-      opacity: 0.28;
-      transform: translateZ(15px) scale(0.6);
-      animation-timing-function: ease-in;
-    }
-    48% {
-      opacity: 0.75;
-      transform: translateZ(15px) scale(1.0);
-    }
-    50% {
-      opacity: 0.95;
-      transform: translateZ(15px) scale(1.25);
-      animation-timing-function: ease-out;
-    }
-    55% {
-      opacity: 0.6;
-      transform: translateZ(15px) scale(0.9);
-    }
-    100% {
-      opacity: 0.28;
-      transform: translateZ(15px) scale(0.6);
-    }
+    0%, 100% { opacity: 0.14; transform: translateZ(5px) scale(1.5); }
+    50% { opacity: 0.55; transform: translateZ(5px) scale(0.8); animation-timing-function: ease-out; }
   }
-
   @keyframes ripple-pulse {
-    0%, 48% {
-      opacity: 0;
-      transform: translateZ(15px) scale(0.3);
-    }
-    50% {
-      opacity: 0.95;
-      transform: translateZ(15px) scale(0.6);
-    }
-    64% {
-      opacity: 0;
-      transform: translateZ(15px) scale(1.6);
-    }
-    100% {
-      opacity: 0;
-      transform: translateZ(15px) scale(1.6);
-    }
+    0%, 49% { opacity: 0; transform: translateZ(5px) scale(0.6); }
+    50% { opacity: 0.45; transform: translateZ(5px) scale(0.65); }
+    65%, 100% { opacity: 0; transform: translateZ(5px) scale(1.4); }
   }
-
-  @keyframes court-shadow-pulse {
-    0%, 100% {
-      opacity: 0.22;
-      transform: translateX(10px) scale(1.0);
-    }
-    50% {
-      opacity: 0.38;
-      transform: translateX(10px) scale(1.08);
-    }
-  }
-
-  @keyframes topspin-roll {
-    0% {
-      transform: rotateX(0deg) translateY(0);
-      opacity: 1;
-    }
-    25% {
-      transform: rotateX(45deg) translateY(-4px);
-      opacity: 0.85;
-    }
-    50% {
-      transform: rotateX(90deg) translateY(-10px);
-      opacity: 0;
-    }
-    51% {
-      transform: rotateX(-90deg) translateY(10px);
-      opacity: 0;
-    }
-    75% {
-      transform: rotateX(-45deg) translateY(4px);
-      opacity: 0.85;
-    }
-    100% {
-      transform: rotateX(0deg) translateY(0);
-      opacity: 1;
-    }
-  }
-
   /* 6. Games: Classic White Game Boy DMG-01 Handheld */
+  .stage-panel .gameboy-stage { width: 330px; height: 260px; transform: none; translate: 10px 0; }
   .gameboy-stage {
     perspective: 1200px;
     transform-style: preserve-3d;
   }
   .gameboy-white {
+    --gameboy-depth: 36px;
     transform-style: preserve-3d;
-    transform: rotateY(-17deg) rotateX(9deg) rotateZ(-1deg);
-    filter: drop-shadow(0 20px 34px rgba(0, 0, 0, 0.22));
+    transform: rotateY(-25deg) rotateX(10deg) rotateZ(-2deg);
+
     transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .is-expanded .gameboy-white {
-    transform: rotateY(-19deg) rotateX(11deg) translateY(-8px) scale(1.03);
-    filter: drop-shadow(0 28px 46px rgba(0, 0, 0, 0.32));
+    transform: rotateY(-30deg) rotateX(12deg) rotateZ(-2deg) translateY(-4px);
+
   }
+  .gameboy-back { position: absolute; inset: 0; border-radius: 14px 14px 26px 14px; background: #c0c7c766; border: 1px solid #a3aeae99; box-shadow: 5px 9px 16px #00000020; }
+  .gameboy-side-right, .gameboy-side-left { position: absolute; top: 13px; bottom: 24px; width: var(--gameboy-depth); transform-origin: left; transform: rotateY(-90deg); background: linear-gradient(to right, #7f8a8abd, #d5dede77 45%, #77848499 49%, #f8ffffcc 53%, #c7d2d266); border: 1px solid #ffffffbb; }
+  .gameboy-side-right { left: 100%; }
+  .gameboy-side-left { left: 0; border-color: #91a0a0bb; background: linear-gradient(to right, #94a0a099, #edf1f1aa 42%, #9ba8a8aa 49%, #ffffffcc 55%, #c4cece88); }
+  .gameboy-side-top, .gameboy-side-bottom { position: absolute; left: 13px; right: 13px; height: var(--gameboy-depth); transform-origin: top; transform: rotateX(90deg); background: linear-gradient(to bottom, #94a0a077, #dfe6e677 48%, #7e898977 51%, #f5f9f999 55%); }
+  .gameboy-side-top { top: 0; }
+  .gameboy-side-bottom { top: 100%; right: 24px; }
+  .gameboy-side-corner { position: absolute; left: 100%; top: calc(100% - 24px); width: 33.94px; height: var(--gameboy-depth); transform-origin: top left; transform: rotateZ(135deg) rotateX(90deg); background: linear-gradient(to bottom, #8e9a9a88, #dfe6e677 48%, #7b898977 51%, #dde5e588 55%); }
+  .gameboy-volume { position: absolute; top: 45px; left: 10px; width: 12px; height: 31px; border-radius: 3px; background: repeating-linear-gradient(#333b3d 0 2px, #717b7d 2px 3px); box-shadow: 0 0 0 2px #a6afb0; }
+  .gameboy-circuit { position: absolute; inset: 0; width: 100%; height: 100%; transform: translateZ(27px); }
+  .gameboy-white .gameboy-front {
+    background: linear-gradient(120deg, #ffffffa3, #d9e0e047 42%, #f2f6f66b 70%, #aab8b847);
+    border-color: #ffffffcc;
+    box-shadow: inset 2px 0 1px #87939399, inset 4px 0 2px #ffffffdd, inset 0 2px 2px #ffffffdd, inset -2px -1px 3px #76858577;
+  }
+  .gameboy-front::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(120deg, transparent 15%, #ffffff26 16%, #ffffff09 33%, transparent 34%, transparent 75%, #ffffff20 76%, transparent 91%); }
+  .gameboy-white .gameboy-bezel { background-color: #41494c; border-color: #30393c; }
   .gameboy-ground-shadow {
     transform: translateX(12px) translateY(8px);
     transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .is-expanded .gameboy-ground-shadow {
     transform: translateX(14px) translateY(12px) scale(1.1);
-    opacity: 0.45;
+    opacity: 0.18;
   }
   .gameboy-led {
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
   }
   .is-expanded .gameboy-led {
     background-color: #EF4444;
-    box-shadow: 0 0 10px #EF4444, 0 0 18px rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 5px #ef444455;
   }
   .gameboy-lcd {
+    background: linear-gradient(145deg, #ffffff, #eeeeee);
     transition: filter 0.4s ease;
   }
   .is-expanded .gameboy-lcd {
     filter: brightness(1.08) contrast(1.05);
   }
-  .gameboy-falling-block {
-    transform: translateY(0);
-  }
-  .is-expanded .gameboy-falling-block {
-    animation: tetris-drop 2.4s steps(6, end) infinite;
-  }
-
+  .gameboy-controls { position: relative; height: 76px; }
+  .gameboy-system-buttons { position: absolute; bottom: 0; left: 30px; }
+  .gameboy-ground-shadow { opacity: 0.15; }
+  .gameboy-well { width: 58%; height: 100%; color: #333333; overflow: hidden; }
+  .gameboy-falling-block { transform: translateY(60px); }
+  .gameboy-score { position: relative; }
+  .gameboy-score span:last-child { position: absolute; left: 0; top: 0; opacity: 0; }
+  .is-expanded .gameboy-falling-block { animation: tetris-drop 4.8s linear infinite; }
+  .is-expanded .gameboy-clear-row { animation: tetris-clear 4.8s linear infinite; }
+  .is-expanded .gameboy-upper-stack { animation: tetris-settle 4.8s linear infinite; }
+  .is-expanded .gameboy-score span:first-child { animation: tetris-old-score 4.8s step-end infinite; }
+  .is-expanded .gameboy-score span:last-child { animation: tetris-new-score 4.8s step-end infinite; }
   @keyframes tetris-drop {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    82% {
-      transform: translateY(20px);
-      opacity: 1;
-    }
-    88% {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    94% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    0%, 8% { transform: translateY(0); opacity: 1; animation-timing-function: steps(6, end); }
+    58%, 68% { transform: translateY(60px); opacity: 1; }
+    71%, 75% { transform: translateY(60px); opacity: 0.15; }
+    73%, 77% { transform: translateY(60px); opacity: 1; }
+    79%, 100% { transform: translateY(60px); opacity: 0; }
+  }
+  @keyframes tetris-clear { 0%, 68%, 73%, 77% { opacity: 1; } 71%, 75% { opacity: 0.15; } 79%, 100% { opacity: 0; } }
+  @keyframes tetris-settle { 0%, 79% { transform: translateY(0); opacity: 1; } 86%, 94% { transform: translateY(20px); opacity: 1; } 100% { transform: translateY(20px); opacity: 0; } }
+  @keyframes tetris-old-score { 0%, 100% { opacity: 1; } 79% { opacity: 0; } }
+  @keyframes tetris-new-score { 0%, 100% { opacity: 0; } 79% { opacity: 1; } }
+
+  #marginalia-section.inactive .stage-panel *,
+  .marginalia-stage[data-offscreen] *,
+  .marginalia-stage[data-paused] * { animation-play-state: paused !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .page-section, .stage-panel, .stage-panel * { animation: none !important; transition: none !important; }
+    .is-expanded .tt-ball-rig { transform: translateZ(55px); }
+    .is-expanded .gameboy-falling-block { transform: translateY(60px); }
   }
 </style>
 
@@ -1390,7 +898,6 @@ const { initialSection = 'home' } = Astro.props;
 <!-- SCRIPTS: 客户端路由内核 + 纵向调和测地波渲染引擎                    -->
 <!-- ================================================================= -->
 <script>
-  import type * as THREE_NS from 'three';
 
   const pageTitles: Record<string, string> = {
     home: 'Yi Wang',
@@ -1414,9 +921,6 @@ const { initialSection = 'home' } = Astro.props;
 
     const targetSec = document.getElementById(targetId + '-section');
     if (!targetSec) return;
-
-    // 延迟加载 Three.js 胶卷：仅在首次进入 marginalia 区时才下载并初始化
-    if (targetId === 'marginalia') initCinemaThree();
 
     const currentSec = document.querySelector('.page-section.active-section') as HTMLElement | null;
 
@@ -1452,14 +956,8 @@ const { initialSection = 'home' } = Astro.props;
       if (targetId === 'home') {
         window.dispatchEvent(new Event('resize'));
       }
-      if (targetId === 'marginalia') {
-        const panels = document.querySelectorAll('.stage-panel');
-        panels.forEach((p) => p.classList.remove('is-expanded'));
-        setTimeout(() => {
-          const target = document.querySelector('.stage-panel.opacity-100') || document.getElementById('stage-panel-photography');
-          if (target) target.classList.add('is-expanded');
-        }, 200);
-      }
+      if (targetId === 'marginalia') enterMarginalia();
+
       return;
     }
 
@@ -1502,14 +1000,8 @@ const { initialSection = 'home' } = Astro.props;
       if (targetId === 'home') {
         window.dispatchEvent(new Event('resize'));
       }
-      if (targetId === 'marginalia') {
-        const panels = document.querySelectorAll('.stage-panel');
-        panels.forEach((p) => p.classList.remove('is-expanded'));
-        setTimeout(() => {
-          const target = document.querySelector('.stage-panel.opacity-100') || document.getElementById('stage-panel-photography');
-          if (target) target.classList.add('is-expanded');
-        }, 150);
-      }
+      if (targetId === 'marginalia') enterMarginalia();
+
       transitionTimer = null;
     }, 180);
   }
@@ -1569,67 +1061,68 @@ const { initialSection = 'home' } = Astro.props;
       history.replaceState({ section: 'home' }, '', '/');
       activateSection('home', true);
     }
-  } else {
-    const curPath = window.location.pathname.replace(/\/$/, '') || '/';
-    if (curPath === '/marginalia') {
-      initCinemaThree();
-      setTimeout(() => {
-        const p = document.getElementById('stage-panel-photography');
-        if (p) p.classList.add('is-expanded');
-      }, 280);
-    }
   }
 
   // =========================================================================
   // MARGINALIA INTERACTIVE STAGE CONTROLLER (Scheme B + C)
   // =========================================================================
   function setStage(stageId: string) {
-    const panels = document.querySelectorAll('.stage-panel');
-    panels.forEach((p) => {
-      if (p.id !== `stage-panel-${stageId}`) {
-        p.classList.remove('opacity-100', 'scale-100', 'z-10', 'pointer-events-auto', 'is-expanded');
-        p.classList.add('opacity-0', 'scale-[0.98]', 'z-0', 'pointer-events-none');
-      }
+    const target = document.getElementById(`stage-panel-${stageId}`);
+    if (!target || target.dataset.active === 'true') return;
+    document.querySelectorAll<HTMLElement>('.stage-panel').forEach(panel => {
+      const active = panel === target;
+      panel.inert = !active;
+      panel.setAttribute('aria-hidden', String(!active));
+      panel.toggleAttribute('data-active', active);
+      if (active) panel.dataset.active = 'true';
+      panel.classList.toggle('is-expanded', active);
     });
-
-    const targetPanel = document.getElementById(`stage-panel-${stageId}`);
-    if (targetPanel) {
-      targetPanel.classList.remove('opacity-0', 'scale-[0.98]', 'z-0', 'pointer-events-none');
-      targetPanel.classList.add('opacity-100', 'scale-100', 'z-10', 'pointer-events-auto');
-      // Smoothly trigger expansion upon hover and KEEP it expanded without merging back
-      setTimeout(() => {
-        targetPanel.classList.add('is-expanded');
-      }, 20);
-    }
-
-    const triggers = document.querySelectorAll('.stage-trigger');
-    triggers.forEach((t) => {
-      const isTarget = t.getAttribute('data-stage-id') === stageId;
-      if (isTarget) {
-        t.classList.add('active-stage-trigger', 'text-black');
-        t.classList.remove('text-[#666666]');
-      } else {
-        t.classList.remove('active-stage-trigger', 'text-black');
-        t.classList.add('text-[#666666]');
-      }
+    document.querySelectorAll('.stage-trigger').forEach(trigger => {
+      const active = trigger.getAttribute('data-stage-id') === stageId;
+      trigger.classList.toggle('active-stage-trigger', active);
+      trigger.classList.toggle('text-black', active);
+      trigger.classList.toggle('text-[#666666]', !active);
+      if (active) trigger.setAttribute('aria-current', 'true');
+      else trigger.removeAttribute('aria-current');
     });
   }
 
-  document.addEventListener('mouseover', (e) => {
-    const trigger = (e.target as HTMLElement).closest('.stage-trigger');
-    if (!trigger) return;
-    const stageId = trigger.getAttribute('data-stage-id');
-    if (!stageId) return;
-    setStage(stageId);
-  });
+  function enterMarginalia() {
+    setStage('photography');
+    const photo = document.getElementById('stage-panel-photography');
+    if (!photo) return;
+    photo.classList.remove('is-expanded');
+    // Flush animation removal so every navigation restarts the explicit stacked keyframe.
+    void photo.offsetWidth;
+    photo.classList.add('is-expanded');
+  }
 
-  document.addEventListener('focusin', (e) => {
-    const trigger = (e.target as HTMLElement).closest('.stage-trigger');
-    if (!trigger) return;
-    const stageId = trigger.getAttribute('data-stage-id');
-    if (!stageId) return;
-    setStage(stageId);
+  for (const eventName of ['pointerover', 'focusin']) {
+    document.addEventListener(eventName, event => {
+      if (event instanceof PointerEvent && event.pointerType !== 'mouse') return;
+      const trigger = (event.target as Element).closest<HTMLElement>('.stage-trigger');
+      if (trigger?.dataset.stageId) setStage(trigger.dataset.stageId);
+    });
+  }
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const trigger = (event.target as Element).closest<HTMLElement>('.stage-trigger');
+    if (trigger?.dataset.stageId && window.matchMedia('(hover: none)').matches) {
+      event.preventDefault();
+      setStage(trigger.dataset.stageId);
+    }
   });
+  const stage = document.querySelector<HTMLElement>('.marginalia-stage');
+  if (stage) {
+    new IntersectionObserver(([entry]) => {
+      stage.toggleAttribute('data-offscreen', !entry.isIntersecting);
+    }).observe(stage);
+    document.addEventListener('visibilitychange', () => {
+      stage.toggleAttribute('data-paused', document.hidden);
+    });
+  }
+
+  if (document.getElementById('marginalia-section')?.classList.contains('active-section')) enterMarginalia();
 
   // =========================================================================
   // GEODETIC HARMONIC WAVE ENGINE (纵向算术调和测地波)
@@ -1642,7 +1135,6 @@ const { initialSection = 'home' } = Astro.props;
     if (!vCtx) return;
 
     let vWidth = 0, vHeight = 0;
-    let animId: number | null = null;
     const startTime = performance.now();
 
     function resize() {
@@ -1670,7 +1162,7 @@ const { initialSection = 'home' } = Astro.props;
     function render(now: number) {
       const homeSec = document.getElementById('home-section');
       if (!homeSec || homeSec.classList.contains('hidden')) {
-        animId = requestAnimationFrame(render);
+        requestAnimationFrame(render);
         return;
       }
 
@@ -1717,379 +1209,11 @@ const { initialSection = 'home' } = Astro.props;
         });
       }
 
-      animId = requestAnimationFrame(render);
+      requestAnimationFrame(render);
     }
 
-    animId = requestAnimationFrame(render);
+    requestAnimationFrame(render);
   }
 
-  // =========================================================================
-  // =========================================================================
-  // CINEMA THREE.JS 35MM CURVED CELLULOID FILM RIBBON (参数化3D弯曲胶卷)
-  // =========================================================================
-  async function initCinemaThree() {
-    const canvas = document.getElementById('cinema-canvas') as HTMLCanvasElement | null;
-    if (!canvas) return;
-    if ((canvas as any).__cinemaInitialized) return;
-    (canvas as any).__cinemaInitialized = true;
-
-    const {
-      Scene,
-      PerspectiveCamera,
-      WebGLRenderer,
-      AmbientLight,
-      DirectionalLight,
-      PointLight,
-      CanvasTexture,
-      RepeatWrapping,
-      ClampToEdgeWrapping,
-      CatmullRomCurve3,
-      Vector3,
-      BufferGeometry,
-      Float32BufferAttribute,
-      MeshStandardMaterial,
-      Mesh,
-      DoubleSide
-    } = await import('three');
-
-    const w = canvas.clientWidth || 380;
-    const h = canvas.clientHeight || 230;
-
-    const scene = new Scene();
-    const camera = new PerspectiveCamera(55, w / h, 0.1, 100);
-    camera.position.set(0, 0.4, 10.9);
-
-    let renderer: THREE_NS.WebGLRenderer;
-    try {
-      renderer = new WebGLRenderer({
-        canvas,
-        alpha: true,
-        antialias: true
-      });
-      renderer.setSize(w, h);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    } catch (e) {
-      console.warn('WebGL context creation failed:', e);
-      return;
-    }
-
-    const ambientLight = new AmbientLight(0xffffff, 1.3);
-    scene.add(ambientLight);
-
-    const dirLight = new DirectionalLight(0xfffaed, 2.2);
-    dirLight.position.set(6, 9, 14);
-    scene.add(dirLight);
-
-    const projectorLight = new PointLight(0xffe8c2, 4.8, 32);
-    projectorLight.position.set(0.5, 3.5, 8.5);
-    scene.add(projectorLight);
-
-    const rimLight = new DirectionalLight(0x7dd3fc, 1.8);
-    rimLight.position.set(-8, 6, -4);
-    scene.add(rimLight);
-
-    // High-Resolution 35mm Celluloid Film Strip Texture (2048 x 300)
-    const texCanvas = document.createElement('canvas');
-    texCanvas.width = 2048;
-    texCanvas.height = 300;
-    const ctx = texCanvas.getContext('2d');
-    if (ctx) {
-      // Base dark celluloid border
-      ctx.fillStyle = 'rgba(16, 14, 12, 0.96)';
-      ctx.fillRect(0, 0, texCanvas.width, texCanvas.height);
-
-      // Darker sprocket margins
-      ctx.fillStyle = 'rgba(8, 7, 6, 0.99)';
-      ctx.fillRect(0, 0, texCanvas.width, 42);
-      ctx.fillRect(0, texCanvas.height - 42, texCanvas.width, 42);
-
-      // Cut out authentic see-through sprocket holes!
-      const numSprockets = 56;
-      const spW = 16, spH = 24;
-      const step = texCanvas.width / numSprockets;
-
-      for (let i = 0; i < numSprockets; i++) {
-        const x = i * step + 8;
-        ctx.clearRect(x, 9, spW, spH);
-        ctx.clearRect(x, texCanvas.height - 33, spW, spH);
-      }
-
-      // Latent Keykode Barcode along upper track
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-      for (let i = 0; i < numSprockets; i += 4) {
-        const bx = i * step + 30;
-        for (let b = 0; b < 6; b++) {
-          ctx.fillRect(bx + b * 2.2, 14, 1.2, 14);
-        }
-      }
-
-      // Edge typography
-      ctx.fillStyle = 'rgba(245, 158, 11, 0.92)';
-      ctx.font = 'bold 11px monospace';
-      ctx.fillText('EASTMAN 5219  ▶ 23A  SAFETY FILM', 60, 26);
-      ctx.fillText('KODAK VISION3  ▶ 24A  35MM 24FPS', 580, 26);
-      ctx.fillText('CINÉ-ARCHIVE   ▶ 25A  SCENE 108', 1100, 26);
-      ctx.fillText('TECHNICOLOR    ▶ 26A  NITRATE BASE', 1600, 26);
-
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.55)';
-      ctx.font = '10px monospace';
-      ctx.fillText('24 FPS · 2.39:1 ANAMORPHIC', 70, texCanvas.height - 14);
-      ctx.fillText('LATENT IMAGE KEYCODE · 1979', 590, texCanvas.height - 14);
-      ctx.fillText('DIRECTOR CUT MASTER · 1993', 1110, texCanvas.height - 14);
-      ctx.fillText('ACADEMY APERTURE · 1953', 1610, texCanvas.height - 14);
-
-      // Film Frames
-      const fW = 440, fH = 196, fY = 52;
-
-      // Frame 1: Tokyo Story (Silver Gelatin Tatami Axis)
-      const f1X = 60;
-      ctx.fillStyle = '#1C1917';
-      ctx.fillRect(f1X, fY, fW, fH);
-      ctx.strokeStyle = 'rgba(255,255,255,0.25)';
-      ctx.lineWidth = 2;
-      ctx.strokeRect(f1X, fY, fW, fH);
-      const g1 = ctx.createLinearGradient(f1X, fY, f1X + fW, fY + fH);
-      g1.addColorStop(0, '#2D2824');
-      g1.addColorStop(1, '#181412');
-      ctx.fillStyle = g1;
-      ctx.fillRect(f1X + 16, fY + 16, fW - 32, fH - 32);
-      ctx.fillStyle = '#FAF5EB';
-      ctx.font = 'bold 26px sans-serif';
-      ctx.fillText('Tokyo Story', f1X + 32, fY + 74);
-      ctx.fillStyle = 'rgba(250, 245, 235, 0.7)';
-      ctx.font = '13px monospace';
-      ctx.fillText('YASUJIRO OZU · 1953', f1X + 32, fY + 104);
-      ctx.fillText('TATAMI AXIS · 35MM GELATIN', f1X + 32, fY + 132);
-
-      // Frame 2: Stalker (Luminous Golden Amber Sepia)
-      const f2X = 560;
-      ctx.fillStyle = '#261C0E';
-      ctx.fillRect(f2X, fY, fW, fH);
-      ctx.strokeStyle = 'rgba(245, 158, 11, 0.95)';
-      ctx.lineWidth = 3;
-      ctx.strokeRect(f2X, fY, fW, fH);
-      const g2 = ctx.createLinearGradient(f2X, fY, f2X + fW, fY + fH);
-      g2.addColorStop(0, '#4D3618');
-      g2.addColorStop(0.5, '#684A22');
-      g2.addColorStop(1, '#38250E');
-      ctx.fillStyle = g2;
-      ctx.fillRect(f2X + 16, fY + 16, fW - 32, fH - 32);
-      ctx.fillStyle = '#FFF8EB';
-      ctx.font = 'bold 30px sans-serif';
-      ctx.fillText('Stalker', f2X + 32, fY + 74);
-      ctx.fillStyle = 'rgba(245, 158, 11, 0.95)';
-      ctx.font = 'bold 14px monospace';
-      ctx.fillText('ANDREI TARKOVSKY · 1979', f2X + 32, fY + 106);
-      ctx.fillStyle = 'rgba(255, 248, 235, 0.85)';
-      ctx.font = '13px sans-serif';
-      ctx.fillText('The Zone · Room of Desires', f2X + 32, fY + 134);
-
-      // Frame 3: Trois Couleurs: Bleu (Deep Luminous Cobalt)
-      const f3X = 1060;
-      ctx.fillStyle = '#0F172A';
-      ctx.fillRect(f3X, fY, fW, fH);
-      ctx.strokeStyle = 'rgba(96, 165, 250, 0.85)';
-      ctx.lineWidth = 2.5;
-      ctx.strokeRect(f3X, fY, fW, fH);
-      const g3 = ctx.createLinearGradient(f3X, fY, f3X + fW, fY + fH);
-      g3.addColorStop(0, '#1E3A8A');
-      g3.addColorStop(0.5, '#172554');
-      g3.addColorStop(1, '#0F172A');
-      ctx.fillStyle = g3;
-      ctx.fillRect(f3X + 16, fY + 16, fW - 32, fH - 32);
-      ctx.fillStyle = '#EFF6FF';
-      ctx.font = 'bold 26px sans-serif';
-      ctx.fillText('Trois Couleurs: Bleu', f3X + 32, fY + 74);
-      ctx.fillStyle = 'rgba(147, 197, 253, 0.9)';
-      ctx.font = '13px monospace';
-      ctx.fillText('KRZYSZTOF KIEŚLOWSKI · 1993', f3X + 32, fY + 104);
-      ctx.fillText('LIBERTÉ · COBALT CHANDELIER', f3X + 32, fY + 132);
-
-      // Frame 4: In the Mood for Love (Rich Velvet Emerald Noir)
-      const f4X = 1560;
-      ctx.fillStyle = '#06281E';
-      ctx.fillRect(f4X, fY, fW, fH);
-      ctx.strokeStyle = 'rgba(52, 211, 153, 0.8)';
-      ctx.lineWidth = 2;
-      ctx.strokeRect(f4X, fY, fW, fH);
-      const g4 = ctx.createLinearGradient(f4X, fY, f4X + fW, fY + fH);
-      g4.addColorStop(0, '#064E3B');
-      g4.addColorStop(0.5, '#042F2E');
-      g4.addColorStop(1, '#021B16');
-      ctx.fillStyle = g4;
-      ctx.fillRect(f4X + 16, fY + 16, fW - 32, fH - 32);
-      ctx.fillStyle = '#ECFDF5';
-      ctx.font = 'bold 26px sans-serif';
-      ctx.fillText('In the Mood for Love', f4X + 32, fY + 74);
-      ctx.fillStyle = 'rgba(110, 231, 183, 0.85)';
-      ctx.font = '13px monospace';
-      ctx.fillText('WONG KAR-WAI · 2000', f4X + 32, fY + 104);
-      ctx.fillText('YUMEJI THEME · 2046 QIPAO', f4X + 32, fY + 132);
-    }
-
-    const texture = new CanvasTexture(texCanvas);
-    texture.wrapS = RepeatWrapping;
-    texture.wrapT = ClampToEdgeWrapping;
-    texture.repeat.set(1.0, 1.0);
-
-    // Dynamic 3D Curving Spline: 深 Z 轴纵深（近大远小 + 前后穿越遮挡）
-    const curve = new CatmullRomCurve3([
-      new Vector3(-8.2, 2.2, -9.5),
-      new Vector3(-4.4, -2.2, -3.6),
-      new Vector3(0.0, 0.9, 3.4),
-      new Vector3(4.6, -2.4, -2.2),
-      new Vector3(8.2, 1.9, -9.0)
-    ]);
-    curve.curveType = 'centripetal';
-
-    // Extruded 3D Solid Ribbon with Physical Edge Thickness (0.09)
-    function createSolidRibbon(spline: THREE_NS.CatmullRomCurve3, segments = 240, width = 3.8, thickness = 0.09) {
-      const points = spline.getPoints(segments);
-      const positions: number[] = [];
-      const normals: number[] = [];
-      const uvs: number[] = [];
-      const indices: number[] = [];
-
-      let prevTangent = spline.getTangent(0).normalize();
-      let prevNormal = new Vector3(0, 1, 0);
-      let binormal = new Vector3().crossVectors(prevTangent, prevNormal).normalize();
-      prevNormal.crossVectors(binormal, prevTangent).normalize();
-
-      for (let i = 0; i <= segments; i++) {
-        const u = i / segments;
-        const p = points[i];
-        const tangent = spline.getTangent(u).normalize();
-
-        const rotAxis = new Vector3().crossVectors(prevTangent, tangent);
-        if (rotAxis.lengthSq() > 1e-6) {
-          const angle = Math.asin(Math.min(1, rotAxis.length()));
-          rotAxis.normalize();
-          prevNormal.applyAxisAngle(rotAxis, angle);
-        }
-        prevTangent.copy(tangent);
-
-        // 温和的自然侧倾：胶片只随弧线轻微侧倾，保持"胶片"而非"扭曲丝带"的观感
-        const bankAngle = Math.sin(u * Math.PI * 1.6) * 0.3 + (u - 0.5) * 0.26;
-        const n = new Vector3().copy(prevNormal).applyAxisAngle(tangent, bankAngle).normalize();
-        const b = new Vector3().crossVectors(tangent, n).normalize();
-
-        const halfW = width / 2;
-        const halfT = thickness / 2;
-
-        const ft = new Vector3().copy(p).addScaledVector(n, halfW).addScaledVector(b, halfT);
-        const fb = new Vector3().copy(p).addScaledVector(n, -halfW).addScaledVector(b, halfT);
-        const bt = new Vector3().copy(p).addScaledVector(n, halfW).addScaledVector(b, -halfT);
-        const bb = new Vector3().copy(p).addScaledVector(n, -halfW).addScaledVector(b, -halfT);
-
-        positions.push(ft.x, ft.y, ft.z);
-        positions.push(fb.x, fb.y, fb.z);
-        positions.push(bt.x, bt.y, bt.z);
-        positions.push(bb.x, bb.y, bb.z);
-
-        normals.push(b.x, b.y, b.z);
-        normals.push(b.x, b.y, b.z);
-        normals.push(-b.x, -b.y, -b.z);
-        normals.push(-b.x, -b.y, -b.z);
-
-        uvs.push(u * 1.3, 1.0);
-        uvs.push(u * 1.3, 0.0);
-        uvs.push(u * 1.3, 1.0);
-        uvs.push(u * 1.3, 0.0);
-
-        if (i < segments) {
-          const idx = i * 4;
-          // Front face
-          indices.push(idx + 0, idx + 1, idx + 4);
-          indices.push(idx + 4, idx + 1, idx + 5);
-
-          // Back face
-          indices.push(idx + 6, idx + 3, idx + 2);
-          indices.push(idx + 7, idx + 3, idx + 6);
-
-          // Top edge
-          indices.push(idx + 2, idx + 0, idx + 6);
-          indices.push(idx + 6, idx + 0, idx + 4);
-
-          // Bottom edge
-          indices.push(idx + 1, idx + 3, idx + 5);
-          indices.push(idx + 5, idx + 3, idx + 7);
-        }
-      }
-
-      const geom = new BufferGeometry();
-      geom.setAttribute('position', new Float32BufferAttribute(positions, 3));
-      geom.setAttribute('normal', new Float32BufferAttribute(normals, 3));
-      geom.setAttribute('uv', new Float32BufferAttribute(uvs, 2));
-      geom.setIndex(indices);
-      return geom;
-    }
-
-    // 加厚的实体胶片：0.3 单位侧边厚度，近景段清晰可见胶片边缘
-    const geometry = createSolidRibbon(curve, 260, 3.6, 0.3);
-    const material = new MeshStandardMaterial({
-      map: texture,
-      alphaTest: 0.4,
-      roughness: 0.3,
-      metalness: 0.14,
-      emissive: 0x161008,
-      emissiveIntensity: 0.45,
-      side: DoubleSide
-    });
-
-    const mesh = new Mesh(geometry, material);
-    scene.add(mesh);
-
-    function resizeCanvas() {
-      if (!canvas) return;
-      const newW = canvas.clientWidth || 380;
-      const newH = canvas.clientHeight || 230;
-      if (newW > 0 && newH > 0) {
-        camera.aspect = newW / newH;
-        camera.updateProjectionMatrix();
-        renderer.setSize(newW, newH);
-      }
-    }
-
-    const startTime = performance.now();
-
-    function renderCinema() {
-      requestAnimationFrame(renderCinema);
-
-      const panel = document.getElementById('stage-panel-cinema');
-      if (!panel) return;
-      const isVisible = panel.classList.contains('opacity-100') || panel.classList.contains('is-expanded');
-      const isExpanded = panel.classList.contains('is-expanded');
-
-      if (!isVisible) return;
-
-      if (canvas && canvas.clientWidth > 0 && renderer.domElement.width === 0) {
-        resizeCanvas();
-      }
-
-      const elapsed = (performance.now() - startTime) * 0.001;
-
-      // Continuous film gliding through the projector gate
-      texture.offset.x += 0.0012;
-
-      // Organic 3D ribbon floating and drifting in space
-      mesh.rotation.y = Math.sin(elapsed * 0.7) * 0.06;
-      mesh.rotation.x = Math.cos(elapsed * 0.5) * 0.04;
-      mesh.rotation.z = Math.sin(elapsed * 0.4) * 0.02;
-      mesh.position.y = Math.sin(elapsed * 0.9) * 0.16;
-
-      const targetScale = isExpanded ? 1.06 : 1.0;
-      mesh.scale.lerp(new Vector3(targetScale, targetScale, targetScale), 0.08);
-
-      projectorLight.intensity = isExpanded ? 5.6 : 4.2;
-
-      renderer.render(scene, camera);
-    }
-
-    renderCinema();
-
-    window.addEventListener('resize', resizeCanvas);
-  }
-
-  // 初始化波形动画（Three.js 胶卷已延迟至进入 marginalia 区时加载）
   initGeodeticEngine();
 </script>

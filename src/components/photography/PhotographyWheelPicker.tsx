@@ -1,17 +1,14 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
-import '@ncdai/react-wheel-picker/style.css';
-import type { WheelPickerOption } from '@ncdai/react-wheel-picker';
-import PhotoWheel from './PhotoWheel';
+import '../../styles/photo-wheel.css';
+import PhotoWheel, { type PhotoWheelOption } from './PhotoWheel';
 import { allPhotos, type Photo } from '../../data/photography';
 
 interface PhotographyWheelPickerProps {
   initialPhotoId?: string;
-  onSelectPhoto?: (photo: Photo) => void;
 }
 
 export default function PhotographyWheelPicker({
   initialPhotoId = allPhotos[0]?.id,
-  onSelectPhoto,
 }: PhotographyWheelPickerProps) {
   // Track active photo ID (PHOTO is the genuine continuous 3D snap point)
   const [activePhotoId, setActivePhotoId] = useState<string>(initialPhotoId);
@@ -36,16 +33,13 @@ export default function PhotographyWheelPicker({
   const prevYear = currentYearIdx > 0 ? uniqueYears[currentYearIdx - 1] : null;
   const nextYear = currentYearIdx < uniqueYears.length - 1 ? uniqueYears[currentYearIdx + 1] : null;
 
-  // Notify parent & dispatch custom DOM events
+  // Update selection and notify the gallery
   const notifyPhotoChange = useCallback((photo: Photo) => {
     setActivePhotoId(photo.id);
-    if (onSelectPhoto) {
-      onSelectPhoto(photo);
-    }
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('photography:photo-selected', { detail: photo }));
     }
-  }, [onSelectPhoto]);
+  }, []);
 
   // Handle wheel value change
   const handlePhotoChange = (newPhotoId: string) => {
@@ -77,7 +71,7 @@ export default function PhotographyWheelPicker({
   // Format all photos as unified 3D wheel items:
   // Every photo has its own thumbnail item.
   // The first photo of each city carries the City Header Marker above it with generous vertical breathing room!
-  const photoOptions: WheelPickerOption<string>[] = useMemo(() => {
+  const photoOptions: PhotoWheelOption[] = useMemo(() => {
     return allPhotos.map((photo, index) => {
       const isFirstInCity = index === 0 || allPhotos[index - 1].cityId !== photo.cityId;
       return {

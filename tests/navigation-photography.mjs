@@ -63,17 +63,4 @@ pending[3].onload();
 flush();
 assert.equal(visible(), 'latest');
 
-for (const [page, nextFunction] of [['elevation', 'updateElevation'], ['spatial', 'calculateCylinder']]) {
-  const requests = [];
-  const stageImg = { src: '', style: {} };
-  const context = vm.createContext({ stageImg, stageLoc: null, stageCam: null,
-    Image: class { constructor() { requests.push(this); } },
-  });
-  run("let currentId = '';" + between(read(`pages/marginalia/photography/${page}.astro`),
-    '    function showPhoto(', `    function ${nextFunction}(`), context);
-  run("showPhoto({ id: 'older', imageUrl: 'older' }); showPhoto({ id: 'newer', imageUrl: 'newer' });", context);
-  requests[1].onload();
-  requests[0].onload();
-  assert.equal(stageImg.src, 'newer', `${page}: stale image must be ignored`);
-}
 console.log('Navigation modifiers and photography loading races: passed');

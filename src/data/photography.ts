@@ -1090,5 +1090,4 @@ export const allCityAlbums: CityAlbum[] = photographyYearGroups.flatMap(group =>
     photos: album.photos.map(p => ({ ...p, cityId: album.id }))
   }))
 );
-export const photographyChapters = allCityAlbums;
 export const allPhotos: Photo[] = allCityAlbums.flatMap(album => album.photos);

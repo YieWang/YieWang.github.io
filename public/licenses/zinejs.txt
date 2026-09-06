@@ -1,0 +1,8 @@
+ZineJS (@zinejs/core 0.9.0), developed by Awecode.
+Source: https://github.com/awecode/zinejs
+
+Licensed under PolyForm Noncommercial License 1.0.0:
+https://polyformproject.org/licenses/noncommercial/1.0.0
+
+Licensing information: https://zinejs.com/license
+Used without modifications for this personal website's literature preview.
