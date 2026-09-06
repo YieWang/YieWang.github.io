@@ -40,7 +40,7 @@ export const profileData: ProfileData = {
   socials: {
     email: "mailto:Yi.Wang@stud.uni-regensburg.de",
     altEmail: "mailto:kasaaa0412@gmail.com",
-    cvUrl: "/Yi_Wang_CV.pdf",
+    cvUrl: "/CV_full_academic_no_photo.pdf",
     mathTranslations: "https://mathtranslations.org",
     github: "https://github.com/YieWang",
   }

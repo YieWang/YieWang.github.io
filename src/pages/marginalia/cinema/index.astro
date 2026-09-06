@@ -1,0 +1,606 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import { cinemaFilms, cinemaSeries, type MediaItem } from '../../../data/cinema';
+
+// Sort works with personal reviews to the very front of each section
+const sortedFilms = [...cinemaFilms].sort((a, b) => (b.review ? 1 : 0) - (a.review ? 1 : 0));
+const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.review ? 1 : 0));
+---
+
+<Layout
+  title="Cinema · Marginalia · Yi Wang"
+  description="Curated archive of auteur films, television series, and personal critical essays."
+  isHome={false}
+  fullWidth={true}
+>
+  <Header activeTab="marginalia" />
+
+  <!-- Main Container (Expanded to enlarge posters while keeping 6-per-row) -->
+  <div class="max-w-[1760px] mx-auto w-full pb-24 pt-6 sm:pt-10 md:pt-12 px-4 sm:px-8 md:px-12">
+
+    <!-- MAIN GALLERY CONTENT -->
+    <main class="space-y-24 sm:space-y-32">
+      
+      <!-- 1. FEATURE FILMS SECTION -->
+      <section id="section-films" class="space-y-7">
+        <!-- Section Header -->
+        <div class="flex items-baseline justify-between border-b border-[#F0F0F0] pb-3 select-none">
+          <h2
+            class="text-[1.05rem] sm:text-[1.15rem] font-bold uppercase tracking-[0.24rem] text-[#1E1E1E]"
+            style="font-family: 'Josefin Sans', sans-serif;"
+          >
+            FILMS
+          </h2>
+
+          <!-- Pure Number Counter (No 'TITLES' word) -->
+          <span class="font-mono text-[0.78rem] sm:text-[0.84rem] text-[#888888] tracking-wider">
+            {cinemaFilms.length}
+          </span>
+        </div>
+
+        <!-- Enlarged Poster Grid: 6-per-row layout on desktop -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-9 sm:gap-y-11 md:gap-y-12">
+          {sortedFilms.map((film) => (
+            <article
+              class="cinema-card group cursor-pointer flex flex-col justify-between select-none"
+              data-item-id={film.id}
+              data-type="film"
+              data-has-review={film.review ? 'true' : 'false'}
+              data-item-json={JSON.stringify(film)}
+            >
+              <!-- Top Portion: Pure Artwork Poster + Pure English Titles (Preserving clean English-only layout) -->
+              <div class="space-y-2.5 text-left">
+                <!-- 100% Clean 2:3 Poster Frame (Zero Overlays) -->
+                <div class="relative w-full aspect-[2/3] bg-[#EFEFEF] overflow-hidden rounded-[2px] transition-transform duration-300 ease-out group-hover:scale-[1.018]">
+                  <img
+                    src={film.posterUrl}
+                    alt={film.title}
+                    loading="lazy"
+                    class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
+                  />
+                </div>
+
+                <!-- Pure English Title & Director on Homepage (Defensive line-clamp and truncate) -->
+                <div class="space-y-0.5 pt-0.5">
+                  <h3
+                    class="text-[0.82rem] sm:text-[0.88rem] font-medium leading-[1.3] text-[#1E1E1E] group-hover:text-black transition-colors line-clamp-2 break-words"
+                    style="font-family: 'Montserrat', sans-serif;"
+                    title={film.title}
+                  >
+                    {film.title}
+                  </h3>
+                  <p
+                    class="text-[0.72rem] sm:text-[0.76rem] text-[#666666] font-light leading-[1.35] truncate pt-0.5"
+                    style="font-family: 'Montserrat', sans-serif;"
+                    title={film.director}
+                  >
+                    {film.director}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Whitespace-nowrap prevents wrapping) -->
+              <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
+                <span class="whitespace-nowrap shrink-0">{film.year}</span>
+                {film.review && (
+                  <span
+                    class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"
+                    title="Includes personal critical review"
+                  >
+                    <!-- Lucide: pen-line (https://lucide.dev/icons/pen-line) -->
+                    <svg class="w-3.5 h-3.5 text-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M13 21h8" />
+                      <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                    </svg>
+                  </span>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- 2. TELEVISION & SERIES SECTION -->
+      <section id="section-series" class="space-y-7 pt-4 sm:pt-6">
+        <!-- Section Header -->
+        <div class="flex items-baseline justify-between border-b border-[#F0F0F0] pb-3 select-none">
+          <h2
+            class="text-[1.05rem] sm:text-[1.15rem] font-bold uppercase tracking-[0.24rem] text-[#1E1E1E]"
+            style="font-family: 'Josefin Sans', sans-serif;"
+          >
+            SERIES
+          </h2>
+          <!-- Pure Number Counter (No 'TITLES' word) -->
+          <span class="font-mono text-[0.78rem] sm:text-[0.84rem] text-[#888888] tracking-wider">
+            {cinemaSeries.length}
+          </span>
+        </div>
+
+        <!-- Enlarged Poster Grid: 6-per-row layout on desktop -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-9 sm:gap-y-11 md:gap-y-12">
+          {sortedSeries.map((series) => (
+            <article
+              class="cinema-card group cursor-pointer flex flex-col justify-between select-none"
+              data-item-id={series.id}
+              data-type="series"
+              data-has-review={series.review ? 'true' : 'false'}
+              data-item-json={JSON.stringify(series)}
+            >
+              <!-- Top Portion: Pure Artwork Poster + Pure English Titles -->
+              <div class="space-y-2.5 text-left">
+                <!-- 100% Clean 2:3 Poster Frame (Zero Overlays) -->
+                <div class="relative w-full aspect-[2/3] bg-[#EFEFEF] overflow-hidden rounded-[2px] transition-transform duration-300 ease-out group-hover:scale-[1.018]">
+                  <img
+                    src={series.posterUrl}
+                    alt={series.title}
+                    loading="lazy"
+                    class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
+                  />
+                </div>
+
+                <!-- Pure English Title & Director on Homepage (Defensive line-clamp and truncate) -->
+                <div class="space-y-0.5 pt-0.5">
+                  <h3
+                    class="text-[0.82rem] sm:text-[0.88rem] font-medium leading-[1.3] text-[#1E1E1E] group-hover:text-black transition-colors line-clamp-2 break-words"
+                    style="font-family: 'Montserrat', sans-serif;"
+                    title={series.title}
+                  >
+                    {series.title}
+                  </h3>
+                  <p
+                    class="text-[0.72rem] sm:text-[0.76rem] text-[#666666] font-light leading-[1.35] truncate pt-0.5"
+                    style="font-family: 'Montserrat', sans-serif;"
+                    title={series.director}
+                  >
+                    {series.director}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Whitespace-nowrap prevents wrapping) -->
+              <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
+                <span class="whitespace-nowrap shrink-0">{series.year}</span>
+                {series.review && (
+                  <span
+                    class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"
+                    title="Includes personal critical review"
+                  >
+                    <!-- Lucide: pen-line (https://lucide.dev/icons/pen-line) -->
+                    <svg class="w-3.5 h-3.5 text-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M13 21h8" />
+                      <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                    </svg>
+                  </span>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- SCHEME A MODAL / LIGHTBOX (Pure White, Two-Column Curatorial Studio) -->
+  <div
+    id="cinema-modal-backdrop"
+    class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
+    style="will-change: opacity;"
+  >
+    <div
+      id="cinema-modal-container"
+      class="bg-white max-w-xl sm:max-w-3xl w-full h-[580px] sm:h-[620px] max-h-[88vh] rounded-[3px] shadow-2xl p-5 sm:p-7 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
+    >
+      <!-- Modal Dynamic Body Content injected by JS -->
+      <div id="modal-content-slot" class="w-full h-full flex flex-col min-h-0"></div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import type { MediaItem } from '../../../data/cinema';
+
+  const cinemaCards = document.querySelectorAll<HTMLElement>('.cinema-card');
+  const modalBackdrop = document.getElementById('cinema-modal-backdrop');
+  const modalContainer = document.getElementById('cinema-modal-container');
+  const modalContentSlot = document.getElementById('modal-content-slot');
+
+  let isModalOpen = false;
+  let lockedScrollTop = 0;
+  let isMouseDownOnBackdrop = false;
+  let closeTimer: ReturnType<typeof setTimeout> | null = null;
+  let touchStartY = 0;
+
+  function openModal(item: MediaItem) {
+    if (!modalContentSlot || !modalBackdrop || !modalContainer) return;
+    if (closeTimer) {
+      clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+
+    const hasReview = !!item.review;
+    const rating = item.rating || item.review?.rating;
+
+    // Origin, Year & Runtime inline specs (e.g. "JAPAN · 1998 · 67 MIN" or "USA · 2015–2022 · 6 SEASONS")
+    const countryUpper = item.country ? item.country.toUpperCase() : '';
+    const runtimeUpper = item.runtime ? item.runtime.toUpperCase() : '';
+    const yearDisplay = item.span || item.year;
+    const specsParts = [countryUpper, yearDisplay, runtimeUpper].filter(Boolean);
+    const specsLine = specsParts.join(' · ');
+
+    // Smart Paragraph Splitting with Authentic Chinese 2-Character Indentation
+    let isLongReview = false;
+    let previewHtml = '';
+    let remainingHtml = '';
+
+    if (hasReview && item.review) {
+      const fullText = item.review.content.trim();
+      const paragraphs = fullText.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
+
+      if (paragraphs.length > 1 || fullText.length > 220) {
+        isLongReview = true;
+        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${paragraphs[0]}</p>`;
+        remainingHtml = paragraphs
+          .slice(1)
+          .map(p => `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line pt-3.5" style="text-indent: 2em;">${p}</p>`)
+          .join('');
+      } else {
+        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${fullText}</p>`;
+      }
+    }
+
+    modalContentSlot.innerHTML = `
+      <!-- 1. TOP BAR (Fixed Header, Never Scrolls) -->
+      <div class="border-b border-[#F0F0F0] pb-3 mb-4 shrink-0 flex items-baseline justify-between gap-3">
+        <h2
+          class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words flex items-baseline gap-2.5 flex-wrap"
+          style="font-family: 'Josefin Sans', sans-serif;"
+        >
+          <span>${item.title}</span>
+          ${item.originalTitle ? `<span class="text-[0.88rem] font-normal text-[#888888]">${item.originalTitle}</span>` : ''}
+        </h2>
+      </div>
+
+      <!-- 2. TWO-COLUMN MAIN BODY (Left Pinned, Right Scrollable) -->
+      <div class="flex flex-col sm:flex-row items-stretch gap-6 sm:gap-7 flex-1 min-h-0 overflow-hidden">
+        
+        <!-- LEFT COLUMN: Poster, Rating & IMDb Link (100% Pinned, Never Scrolls) -->
+        <div class="w-full sm:w-[175px] md:w-[185px] shrink-0 flex flex-row sm:flex-col items-center sm:items-stretch justify-between h-auto sm:h-full gap-4 sm:gap-0">
+          <div class="flex sm:flex-col items-center sm:items-stretch gap-3 sm:space-y-3">
+            <!-- 2:3 Poster Frame -->
+            <div class="w-[85px] sm:w-full aspect-[2/3] bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0">
+              <img src="${item.posterUrl}" alt="${item.title}" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Personal Rating (Applies to all works, with or without full essay) -->
+            ${
+              rating
+                ? `
+              <div class="pt-0 sm:pt-1 text-center font-mono space-y-0.5">
+                <div class="text-[1.05rem] sm:text-[1.12rem] font-bold text-black tracking-tight">${rating}</div>
+                <div class="text-[0.54rem] sm:text-[0.56rem] text-[#888888] tracking-widest uppercase font-mono">PERSONAL RATING</div>
+              </div>
+            `
+                : ''
+            }
+          </div>
+
+          <!-- IMDb Link Pinned at Bottom of Left Column (Minimal text link without card box or divider line) -->
+          <div class="pt-2 sm:pt-4 sm:mt-auto w-auto sm:w-full text-center">
+            <a
+              href="${item.externalLink.url}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center text-[0.66rem] sm:text-[0.70rem] font-medium text-[#777777] hover:text-black tracking-[0.14rem] uppercase transition-colors whitespace-nowrap"
+            >
+              <span>VIEW ON IMDB</span>
+              <span class="ml-1" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Metadata & Scrollable Review / Details (ONLY the text area scrolls) -->
+        <div class="flex-1 min-w-0 flex flex-col h-full overflow-hidden">
+          
+          <!-- Top Fixed Metadata: DIRECTED BY, RELEASE YEAR, FIRST WATCHED, REWATCHED (2x2 Clean Grid) -->
+          <div class="grid grid-cols-2 gap-x-6 gap-y-3 pb-3.5 border-b border-[#F0F0F0] shrink-0">
+            <div class="space-y-0.5 min-w-0">
+              <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">
+                ${item.type === 'series' ? 'CREATOR' : 'DIRECTED BY'}
+              </div>
+              <div class="text-black font-medium text-[0.82rem] sm:text-[0.85rem] break-words">
+                <span>${item.director}</span>
+                ${item.originalDirector && item.originalDirector !== item.director ? `<span class="text-[#777777] font-normal text-[0.78rem] ml-1.5 font-sans">(${item.originalDirector})</span>` : ''}
+              </div>
+            </div>
+            <div class="space-y-0.5 min-w-0">
+              <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">
+                RELEASE & SPECS
+              </div>
+              <div class="text-black font-mono text-[0.80rem] sm:text-[0.84rem] leading-snug break-words">
+                ${specsLine}
+              </div>
+            </div>
+            ${
+              item.firstWatched
+                ? `
+            <div class="space-y-0.5 min-w-0">
+              <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">
+                FIRST WATCHED
+              </div>
+              <div class="text-black font-mono text-[0.82rem] sm:text-[0.85rem] leading-snug">
+                ${item.firstWatched}
+              </div>
+            </div>
+            `
+                : ''
+            }
+            ${
+              item.rewatched
+                ? `
+            <div class="space-y-0.5 min-w-0">
+              <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">
+                REWATCHED
+              </div>
+              <div class="text-black font-mono text-[0.82rem] sm:text-[0.85rem] leading-snug">
+                ${item.rewatched}
+              </div>
+            </div>
+            `
+                : ''
+            }
+          </div>
+
+          <!-- Scrollable Text Area (ONLY this section scrolls when content expands) -->
+          <div
+            id="modal-right-scroll-pane"
+            class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2.5 pt-3 space-y-3.5"
+            style="scrollbar-gutter: stable;"
+          >
+            ${
+              hasReview
+                ? `
+              <!-- Quote (if available) -->
+              ${
+                item.review?.quote
+                  ? `
+                <blockquote class="italic text-[0.82rem] sm:text-[0.86rem] text-[#333333] font-light pl-3 border-l-2 border-black/80 my-2">
+                  ${item.review.quote}
+                </blockquote>
+              `
+                  : ''
+              }
+
+              <!-- Review Body -->
+              <div class="space-y-2">
+                ${
+                  item.review?.date
+                    ? `
+                  <div class="text-[0.62rem] font-mono uppercase tracking-[0.14rem] text-[#888888]">
+                    ${item.review.date}
+                  </div>
+                `
+                    : ''
+                }
+
+                <!-- Indented Preview Paragraph (Chinese 2-Character Indent) -->
+                <div>
+                  ${previewHtml}
+                </div>
+
+                <!-- Expandable Remaining Body (Indented paragraphs) -->
+                ${
+                  isLongReview
+                    ? `
+                  <div id="review-remaining-container" class="hidden">
+                    ${remainingHtml}
+                  </div>
+
+                  <button
+                    id="toggle-essay-btn"
+                    type="button"
+                    class="cursor-pointer text-[#888888] hover:text-black transition-colors duration-200 inline-flex items-center justify-center select-none text-[1.2rem] leading-none pt-2.5 pb-1"
+                    aria-label="Expand full essay"
+                    title="Expand full essay"
+                  >
+                    ↓
+                  </button>
+                `
+                    : ''
+                }
+              </div>
+            `
+                : ''
+            }
+          </div>
+
+        </div>
+      </div>
+    `;
+
+    // Bind In-Place Essay Expansion Toggle
+    const toggleBtn = document.getElementById('toggle-essay-btn');
+    const remainingContainer = document.getElementById('review-remaining-container');
+
+    toggleBtn?.addEventListener('click', () => {
+      if (!remainingContainer) return;
+      const isHidden = remainingContainer.classList.contains('hidden');
+      if (isHidden) {
+        remainingContainer.classList.remove('hidden');
+        toggleBtn.textContent = '↑';
+        toggleBtn.setAttribute('title', 'Collapse essay');
+        toggleBtn.setAttribute('aria-label', 'Collapse essay');
+      } else {
+        remainingContainer.classList.add('hidden');
+        toggleBtn.textContent = '↓';
+        toggleBtn.setAttribute('title', 'Expand full essay');
+        toggleBtn.setAttribute('aria-label', 'Expand full essay');
+        const scrollPane = document.getElementById('modal-right-scroll-pane');
+        if (scrollPane) scrollPane.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    // Reset right scroll pane to top
+    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    if (scrollPane) scrollPane.scrollTop = 0;
+
+    // Lock window scroll position without altering DOM/scrollbar
+    lockedScrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+    isModalOpen = true;
+
+    // Reveal Modal with Crossfade & GPU Scale
+    modalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+    modalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+
+    requestAnimationFrame(() => {
+      modalContainer.classList.remove('scale-[0.97]', 'opacity-0');
+      modalContainer.classList.add('scale-100', 'opacity-100');
+    });
+  }
+
+  function closeModal() {
+    if (!modalBackdrop || !modalContainer || !isModalOpen) return;
+    isModalOpen = false;
+
+    // Animate out smoothly
+    modalBackdrop.classList.remove('opacity-100');
+    modalBackdrop.classList.add('opacity-0');
+
+    modalContainer.classList.remove('scale-100', 'opacity-100');
+    modalContainer.classList.add('scale-[0.97]', 'opacity-0');
+
+    // Keep pointer-events active on backdrop until 250ms animation finishes
+    if (closeTimer) clearTimeout(closeTimer);
+    closeTimer = setTimeout(() => {
+      modalBackdrop.classList.remove('pointer-events-auto');
+      modalBackdrop.classList.add('pointer-events-none');
+      if (modalContentSlot) modalContentSlot.innerHTML = '';
+    }, 250);
+  }
+
+  // Click outside modal container (mousedown and click must both be on backdrop)
+  modalBackdrop?.addEventListener('mousedown', (e) => {
+    isMouseDownOnBackdrop = (e.target === modalBackdrop);
+  });
+
+  modalBackdrop?.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop && isMouseDownOnBackdrop) {
+      closeModal();
+    }
+  });
+
+  // Press Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (!isModalOpen) return;
+
+    if (e.key === 'Escape') {
+      closeModal();
+      return;
+    }
+
+    // Intercept scroll keys to target the right scroll pane
+    const scrollKeys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '];
+    if (scrollKeys.includes(e.key)) {
+      const activeTag = (document.activeElement?.tagName || '').toUpperCase();
+      if (activeTag !== 'INPUT' && activeTag !== 'TEXTAREA') {
+        e.preventDefault();
+        const scrollPane = document.getElementById('modal-right-scroll-pane');
+        if (scrollPane && scrollPane.scrollHeight > scrollPane.clientHeight) {
+          const step = (e.key === ' ' || e.key === 'PageDown') ? 220 :
+                       (e.key === 'PageUp') ? -220 :
+                       (e.key === 'ArrowDown') ? 50 :
+                       (e.key === 'ArrowUp') ? -50 :
+                       (e.key === 'Home') ? -scrollPane.scrollHeight :
+                       (e.key === 'End') ? scrollPane.scrollHeight : 0;
+          scrollPane.scrollBy({ top: step, behavior: 'smooth' });
+        }
+      }
+    }
+  });
+
+  // Strict Event-level Scroll Freezing: Only the right scroll pane scrolls when needed
+  window.addEventListener('wheel', (e) => {
+    if (!isModalOpen) return;
+
+    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    if (scrollPane && scrollPane.contains(e.target as Node)) {
+      const { scrollTop, scrollHeight, clientHeight } = scrollPane;
+      const isScrollable = scrollHeight > clientHeight;
+
+      if (!isScrollable) {
+        e.preventDefault();
+        return;
+      }
+
+      // Boundary checks to stop scroll chaining to underlying page
+      if (e.deltaY < 0 && scrollTop <= 0) {
+        e.preventDefault();
+        return;
+      }
+      if (e.deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
+        e.preventDefault();
+        return;
+      }
+      return;
+    }
+
+    // Wheel anywhere else -> prevent default
+    e.preventDefault();
+  }, { passive: false });
+
+  window.addEventListener('touchstart', (e) => {
+    if (!isModalOpen) return;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!isModalOpen) return;
+
+    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    if (scrollPane && scrollPane.contains(e.target as Node)) {
+      const { scrollTop, scrollHeight, clientHeight } = scrollPane;
+      const isScrollable = scrollHeight > clientHeight;
+
+      if (!isScrollable) {
+        e.preventDefault();
+        return;
+      }
+
+      const deltaY = touchStartY - e.touches[0].clientY;
+      if (deltaY < 0 && scrollTop <= 0) {
+        e.preventDefault();
+        return;
+      }
+      if (deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
+        e.preventDefault();
+        return;
+      }
+      return;
+    }
+
+    e.preventDefault();
+  }, { passive: false });
+
+  // Absolute fallback scroll lock: clamp window.scrollY without altering DOM/scrollbar
+  window.addEventListener('scroll', () => {
+    if (isModalOpen && window.scrollY !== lockedScrollTop) {
+      window.scrollTo({ top: lockedScrollTop, behavior: 'instant' });
+    }
+  }, { passive: true });
+
+  // Bind Card Clicks
+  cinemaCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const jsonStr = card.dataset.itemJson;
+      if (!jsonStr) return;
+      try {
+        const item: MediaItem = JSON.parse(jsonStr);
+        openModal(item);
+      } catch (e) {
+        console.error('Failed to parse cinema item:', e);
+      }
+    });
+  });
+</script>

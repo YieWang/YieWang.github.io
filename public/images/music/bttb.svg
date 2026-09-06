@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <rect width="600" height="600" fill="#FAF9F6" />
+  <rect x="30" y="30" width="540" height="540" fill="none" stroke="#E0DDD7" stroke-width="1" />
+  <!-- Minimalist Pure Geometry: Back to the Basics -->
+  <text x="60" y="90" font-family="'Josefin Sans', sans-serif" font-size="13" font-weight="700" letter-spacing="4" fill="#555555">WARNER MUSIC JAPAN</text>
+  <text x="540" y="90" font-family="monospace" font-size="11" letter-spacing="2" fill="#888888" text-anchor="end">WPJR-10041 · 33⅓</text>
+  <!-- Piano Key Geometry -->
+  <g transform="translate(60, 180)">
+    <rect x="0" y="0" width="480" height="4" fill="#1A1A1A" />
+    <text x="0" y="80" font-family="'Josefin Sans', sans-serif" font-size="52" font-weight="700" letter-spacing="10" fill="#1A1A1A">BTTB</text>
+    <text x="0" y="125" font-family="'Montserrat', sans-serif" font-size="16" font-weight="300" letter-spacing="4" fill="#666666">BACK TO THE BASICS</text>
+    <text x="0" y="165" font-family="'Montserrat', sans-serif" font-size="18" font-weight="400" letter-spacing="3" fill="#1A1A1A">RYUICHI SAKAMOTO</text>
+    <rect x="0" y="205" width="480" height="1" fill="#D0CCC4" />
+  </g>
+  <text x="60" y="470" font-family="monospace" font-size="11" letter-spacing="2" fill="#555555">ENERGY FLOW · OPUS · SONATA · AQUA · LORENZ</text>
+  <text x="60" y="535" font-family="monospace" font-size="11" letter-spacing="2" fill="#888888">SOLO PIANO WORKS · 1998 / 2018 REISSUE</text>
+</svg>

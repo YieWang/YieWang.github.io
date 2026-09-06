@@ -1,0 +1,579 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import { literatureBooks, literatureEssays, type BookItem, type EssayItem } from '../../../data/literature';
+
+// Sort books with reviews to the front
+const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.review ? 1 : 0));
+---
+
+<Layout
+  title="Literature · Marginalia · Yi Wang"
+  description="Curated archive of books read, critical reviews, and personal essays."
+  isHome={false}
+  fullWidth={true}
+>
+  <Header activeTab="marginalia" />
+
+  <div class="max-w-[1760px] mx-auto w-full pb-28 pt-2 sm:pt-4 px-4 sm:px-8 md:px-12">
+    <!-- Top Pure Navigation: BOOKS  ESSAYS (No breadcrumbs, no lines, no middle dot) -->
+    <div class="pt-2 sm:pt-4 pb-8 sm:pb-12 flex items-center justify-center gap-8 sm:gap-14 select-none">
+      <button
+        id="tab-btn-books"
+        type="button"
+        class="tab-btn active-tab uppercase text-[0.75rem] sm:text-[0.82rem] tracking-[0.25rem] font-bold text-black transition-all cursor-pointer"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        BOOKS
+      </button>
+
+      <button
+        id="tab-btn-essays"
+        type="button"
+        class="tab-btn uppercase text-[0.75rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-all cursor-pointer"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        ESSAYS
+      </button>
+    </div>
+
+    <!-- VIEW 1: BOOKS GALLERY (Homepage: Only Original Title) -->
+    <main id="view-books" class="transition-opacity duration-300">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-10 sm:gap-y-14">
+        {sortedBooks.map((book) => (
+          <article
+            class="book-card group cursor-pointer flex flex-col justify-between select-none"
+            data-book-json={JSON.stringify(book)}
+          >
+            <!-- Top: 1:1.414 Book Cover Frame + Original Title & Author -->
+            <div class="space-y-3 text-left">
+              <!-- Book Cover Frame with Subtle Paper Spine Ridge -->
+              <div class="relative w-full aspect-[1/1.414] bg-[#F2EFE9] overflow-hidden rounded-[2px] shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out group-hover:scale-[1.02] group-hover:shadow-[0_8px_22px_rgba(0,0,0,0.12)]">
+                <!-- Spine shadow ridge -->
+                <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
+                <img
+                  src={book.coverUrl}
+                  alt={book.title}
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
+                />
+              </div>
+
+              <!-- Title & Author on Homepage matching this edition -->
+              <div class="space-y-0.5 pt-0.5">
+                <h3
+                  class="text-[0.82rem] sm:text-[0.88rem] font-medium leading-[1.3] text-[#1E1E1E] group-hover:text-black transition-colors line-clamp-2 break-words"
+                  style="font-family: 'Montserrat', sans-serif;"
+                  title={book.title}
+                >
+                  {book.title}
+                </h3>
+                <p
+                  class="text-[0.72rem] sm:text-[0.76rem] text-[#666666] font-light leading-[1.35] truncate pt-0.5"
+                  style="font-family: 'Montserrat', sans-serif;"
+                  title={book.author}
+                >
+                  {book.author}
+                </p>
+              </div>
+            </div>
+
+            <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Zero ratings) -->
+            <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
+              <span class="whitespace-nowrap shrink-0">{book.year}</span>
+              {book.review && (
+                <span
+                  class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"
+                  title="Includes personal critical review"
+                >
+                  <!-- Lucide: pen-line -->
+                  <svg class="w-3.5 h-3.5 text-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 21h8" />
+                    <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                  </svg>
+                </span>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </main>
+
+    <!-- VIEW 2: ESSAYS LIST (Title, Location & Date) -->
+    <main id="view-essays" class="hidden max-w-2xl mx-auto w-full transition-opacity duration-300 pt-1 pb-14">
+      <div id="essays-container" class="divide-y divide-[#F0F0F0]">
+        {literatureEssays.map((essay) => (
+          <article
+            class="essay-item py-4.5 sm:py-5 cursor-pointer flex items-baseline justify-between gap-6 group select-none transition-all duration-300"
+            data-essay-json={JSON.stringify(essay)}
+          >
+            <h3
+              class="essay-title text-[0.92rem] sm:text-[1rem] font-medium text-[#333333] transition-all duration-300 leading-snug"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              {essay.title}
+            </h3>
+            <div class="essay-meta flex items-center gap-2.5 font-mono text-[0.74rem] sm:text-[0.78rem] text-[#888888] tracking-wider whitespace-nowrap shrink-0 transition-all duration-300">
+              <span>{essay.location}</span>
+              <span class="text-[#D4D4D4]">·</span>
+              <span>{essay.date}</span>
+              <span class="essay-arrow text-[0.85rem] text-black font-sans ml-1 inline-block transition-all duration-300">→</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </main>
+  </div>
+
+  <!-- BOOK LIGHTBOX MODAL (Pure White Two-Column Curatorial Studio, Identical to Cinema) -->
+  <div
+    id="book-modal-backdrop"
+    class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
+    style="will-change: opacity;"
+  >
+    <div
+      id="book-modal-container"
+      class="bg-white max-w-xl sm:max-w-3xl w-full h-[460px] sm:h-[490px] max-h-[86vh] rounded-[3px] shadow-2xl p-5 sm:p-6 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
+    >
+      <div id="book-modal-slot" class="w-full h-full flex flex-col min-h-0"></div>
+    </div>
+  </div>
+
+  <!-- ESSAY LIGHTBOX MODAL (Pure Editorial Studio: Title, Author, Year, Location, Body) -->
+  <div
+    id="essay-modal-backdrop"
+    class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
+    style="will-change: opacity;"
+  >
+    <div
+      id="essay-modal-container"
+      class="bg-white max-w-xl sm:max-w-2xl w-full h-[580px] sm:h-[620px] max-h-[88vh] rounded-[3px] shadow-2xl p-6 sm:p-8 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
+    >
+      <div id="essay-modal-slot" class="w-full h-full flex flex-col min-h-0"></div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import type { BookItem, EssayItem } from '../../../data/literature';
+
+  // 1. Tab Switching (Books vs Essays)
+  const tabBtnBooks = document.getElementById('tab-btn-books');
+  const tabBtnEssays = document.getElementById('tab-btn-essays');
+  const viewBooks = document.getElementById('view-books');
+  const viewEssays = document.getElementById('view-essays');
+
+  function switchTab(tab: 'books' | 'essays') {
+    if (!tabBtnBooks || !tabBtnEssays || !viewBooks || !viewEssays) return;
+    if (tab === 'books') {
+      tabBtnBooks.classList.add('text-black', 'font-bold');
+      tabBtnBooks.classList.remove('text-[#737373]', 'font-medium');
+      tabBtnEssays.classList.remove('text-black', 'font-bold');
+      tabBtnEssays.classList.add('text-[#737373]', 'font-medium');
+
+      viewBooks.classList.remove('hidden');
+      viewEssays.classList.add('hidden');
+    } else {
+      tabBtnEssays.classList.add('text-black', 'font-bold');
+      tabBtnEssays.classList.remove('text-[#737373]', 'font-medium');
+      tabBtnBooks.classList.remove('text-black', 'font-bold');
+      tabBtnBooks.classList.add('text-[#737373]', 'font-medium');
+
+      viewEssays.classList.remove('hidden');
+      viewBooks.classList.add('hidden');
+    }
+  }
+
+  tabBtnBooks?.addEventListener('click', () => switchTab('books'));
+  tabBtnEssays?.addEventListener('click', () => switchTab('essays'));
+
+  // 2. Book Modal Lightbox
+  const bookCards = document.querySelectorAll<HTMLElement>('.book-card');
+  const bookModalBackdrop = document.getElementById('book-modal-backdrop');
+  const bookModalContainer = document.getElementById('book-modal-container');
+  const bookModalSlot = document.getElementById('book-modal-slot');
+
+  let isBookModalOpen = false;
+  let isEssayModalOpen = false;
+  let lockedScrollTop = 0;
+  let isMouseDownOnBookBackdrop = false;
+  let isMouseDownOnEssayBackdrop = false;
+  let bookCloseTimer: ReturnType<typeof setTimeout> | null = null;
+  let essayCloseTimer: ReturnType<typeof setTimeout> | null = null;
+
+  function openBookModal(book: BookItem) {
+    if (!bookModalSlot || !bookModalBackdrop || !bookModalContainer) return;
+    if (bookCloseTimer) {
+      clearTimeout(bookCloseTimer);
+      bookCloseTimer = null;
+    }
+
+    const hasReview = !!book.review;
+
+    // Smart Paragraph Splitting with Cinema-Style In-Place Folding
+    let isLongReview = false;
+    let previewHtml = '';
+    let remainingHtml = '';
+
+    if (hasReview && book.review) {
+      const fullText = book.review.content.trim();
+      const paragraphs = fullText.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
+
+      if (paragraphs.length > 1 || fullText.length > 200) {
+        isLongReview = true;
+        previewHtml = `<p class="leading-[1.92] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${paragraphs[0]}</p>`;
+        remainingHtml = paragraphs
+          .slice(1)
+          .map(p => `<p class="leading-[1.92] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line pt-3" style="text-indent: 2em;">${p}</p>`)
+          .join('');
+      } else {
+        previewHtml = `<p class="leading-[1.92] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${fullText}</p>`;
+      }
+    }
+
+    bookModalSlot.innerHTML = `
+      <!-- Fixed Header: 仿照 Cinema 页面 (主书名 + 灰色原名) -->
+      <div class="border-b border-[#F0F0F0] pb-2.5 mb-3 shrink-0 flex items-baseline justify-between gap-3">
+        <h2
+          class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words flex items-baseline gap-2.5 flex-wrap"
+          style="font-family: 'Josefin Sans', sans-serif;"
+        >
+          <span>${book.title}</span>
+          ${book.originalTitle && book.originalTitle !== book.title ? `<span class="text-[0.88rem] font-normal text-[#888888] font-sans">${book.originalTitle}</span>` : ''}
+        </h2>
+      </div>
+
+      <!-- Two-Column Body (Left Pinned, Right Scrollable, Identical to Cinema) -->
+      <div class="flex flex-col sm:flex-row items-stretch gap-5 sm:gap-6 flex-1 min-h-0 overflow-hidden">
+        <!-- Left Column: Pure 1:1.414 Book Artwork (100% Pinned, Never Scrolls) -->
+        <div class="w-full sm:w-[170px] md:w-[180px] shrink-0 flex flex-col items-center sm:items-stretch justify-start h-auto sm:h-full">
+          <div class="w-[95px] sm:w-full aspect-[1/1.414] bg-[#F2EFE9] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
+            <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
+            <img src="${book.coverUrl}" alt="${book.title}" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Right Column: Concise Metadata & Scrollable Review (ONLY the review area scrolls) -->
+        <div class="flex-1 min-w-0 flex flex-col h-full overflow-hidden">
+          <!-- Fixed Concise Metadata Grid -->
+          <div class="grid grid-cols-2 gap-x-6 gap-y-2.5 pb-2.5 border-b border-[#F0F0F0] shrink-0">
+            <!-- Author -->
+            <div class="space-y-0.5 min-w-0">
+              <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">AUTHOR</div>
+              <div class="text-black font-medium text-[0.82rem] sm:text-[0.85rem] break-words">
+                <span>${book.author}</span>
+                ${book.originalAuthor && book.originalAuthor !== book.author ? `<span class="text-[#777777] font-normal text-[0.78rem] ml-1.5 font-sans">(${book.originalAuthor})</span>` : ''}
+              </div>
+            </div>
+
+            <!-- Translator (Only rendered if translator exists, completely separate) -->
+            ${
+              book.translator
+                ? `
+              <div class="space-y-0.5 min-w-0">
+                <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">TRANSLATOR</div>
+                <div class="text-black font-medium text-[0.82rem] sm:text-[0.85rem] break-words">
+                  ${book.translator}
+                </div>
+              </div>
+            `
+                : ''
+            }
+
+            <!-- Combined Publisher & Edition -->
+            <div class="space-y-0.5 min-w-0">
+              <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">EDITION</div>
+              <div class="text-black font-mono text-[0.78rem] sm:text-[0.82rem] leading-snug break-words">
+                ${book.edition}
+              </div>
+            </div>
+
+            <!-- First Read Date -->
+            ${
+              book.firstRead
+                ? `
+              <div class="space-y-0.5 min-w-0">
+                <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">FIRST READ</div>
+                <div class="text-black font-mono text-[0.80rem] sm:text-[0.84rem] leading-snug">
+                  ${book.firstRead}
+                </div>
+              </div>
+            `
+                : ''
+            }
+
+            <!-- Reread Dates -->
+            ${
+              book.reread
+                ? `
+              <div class="space-y-0.5 min-w-0">
+                <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">REREAD</div>
+                <div class="text-black font-mono text-[0.80rem] sm:text-[0.84rem] leading-snug">
+                  ${book.reread}
+                </div>
+              </div>
+            `
+                : ''
+            }
+          </div>
+
+          <!-- Scrollable Review Area (ONLY this section scrolls when content expands) -->
+          <div
+            id="book-modal-scroll-pane"
+            class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2 pt-2.5 space-y-3"
+            style="scrollbar-gutter: stable;"
+          >
+            ${
+              hasReview && book.review
+                ? `
+              <div class="space-y-2">
+                <div class="text-[0.62rem] font-mono uppercase tracking-[0.14rem] text-[#888888]">
+                  ${book.review.date}
+                </div>
+                
+                <!-- Indented First Paragraph -->
+                <div>
+                  ${previewHtml}
+                </div>
+
+                <!-- Folded Remaining Paragraphs (Cinema style) -->
+                ${
+                  isLongReview
+                    ? `
+                  <div id="review-remaining-container" class="hidden">
+                    ${remainingHtml}
+                  </div>
+
+                  <button
+                    id="toggle-essay-btn"
+                    type="button"
+                    class="cursor-pointer text-[#888888] hover:text-black transition-colors duration-200 inline-flex items-center justify-center select-none text-[1.15rem] leading-none pt-2 pb-1"
+                    aria-label="Expand full essay"
+                    title="Expand full essay"
+                  >
+                    ↓
+                  </button>
+                `
+                    : ''
+                }
+              </div>
+            `
+                : ''
+            }
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Bind In-Place Essay Expansion Toggle
+    const toggleBtn = document.getElementById('toggle-essay-btn');
+    const remainingContainer = document.getElementById('review-remaining-container');
+
+    toggleBtn?.addEventListener('click', () => {
+      if (!remainingContainer) return;
+      const isHidden = remainingContainer.classList.contains('hidden');
+      if (isHidden) {
+        remainingContainer.classList.remove('hidden');
+        toggleBtn.textContent = '↑';
+        toggleBtn.setAttribute('title', 'Collapse essay');
+        toggleBtn.setAttribute('aria-label', 'Collapse essay');
+      } else {
+        remainingContainer.classList.add('hidden');
+        toggleBtn.textContent = '↓';
+        toggleBtn.setAttribute('title', 'Expand full essay');
+        toggleBtn.setAttribute('aria-label', 'Expand full essay');
+        const scrollPane = document.getElementById('book-modal-scroll-pane');
+        if (scrollPane) scrollPane.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    lockedScrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+    isBookModalOpen = true;
+
+    bookModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+    bookModalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+
+    requestAnimationFrame(() => {
+      bookModalContainer.classList.remove('scale-[0.97]', 'opacity-0');
+      bookModalContainer.classList.add('scale-100', 'opacity-100');
+    });
+  }
+
+  function closeBookModal() {
+    if (!bookModalBackdrop || !bookModalContainer || !isBookModalOpen) return;
+    isBookModalOpen = false;
+
+    bookModalBackdrop.classList.remove('opacity-100');
+    bookModalBackdrop.classList.add('opacity-0');
+
+    bookModalContainer.classList.remove('scale-100', 'opacity-100');
+    bookModalContainer.classList.add('scale-[0.97]', 'opacity-0');
+
+    if (bookCloseTimer) clearTimeout(bookCloseTimer);
+    bookCloseTimer = setTimeout(() => {
+      bookModalBackdrop.classList.remove('pointer-events-auto');
+      bookModalBackdrop.classList.add('pointer-events-none');
+      if (bookModalSlot) bookModalSlot.innerHTML = '';
+    }, 250);
+  }
+
+  // 3. Essay Lightbox Modal (Only: 题目, 作者, 年份, 地点, 文章)
+  const essayItems = document.querySelectorAll<HTMLElement>('.essay-item');
+  const essayModalBackdrop = document.getElementById('essay-modal-backdrop');
+  const essayModalContainer = document.getElementById('essay-modal-container');
+  const essayModalSlot = document.getElementById('essay-modal-slot');
+
+  function openEssayModal(essay: EssayItem) {
+    if (!essayModalSlot || !essayModalBackdrop || !essayModalContainer) return;
+    if (essayCloseTimer) {
+      clearTimeout(essayCloseTimer);
+      essayCloseTimer = null;
+    }
+
+    const paragraphs = essay.content.trim().split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
+    const contentHtml = paragraphs
+      .map(p => `<p class="leading-[2.0] text-[0.88rem] sm:text-[0.94rem] text-[#2F2F2F] font-normal tracking-wide whitespace-pre-line pt-3.5" style="text-indent: 2em;">${p}</p>`)
+      .join('');
+
+    essayModalSlot.innerHTML = `
+      <!-- Fixed Header: 仅题目 -->
+      <div class="border-b border-[#F0F0F0] pb-3 mb-2.5 shrink-0">
+        <h2
+          class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#1E1E1E] tracking-[0.02rem] leading-tight break-words"
+          style="font-family: 'Josefin Sans', sans-serif;"
+        >
+          ${essay.title}
+        </h2>
+      </div>
+
+      <!-- Scrollable Essay Text Area: 文章正文与文末落款 (取消滑动栏，纯净纸质阅读) -->
+      <div id="essay-modal-scroll-pane" class="flex-1 min-h-0 overflow-y-auto overscroll-contain pt-1">
+        ${contentHtml}
+        
+        <!-- 文末落款：紧贴正文末尾，一行王怡，换行再 日期, 地点 -->
+        <div class="pt-2 pb-1 text-right select-none space-y-0.5">
+          <div class="text-[0.82rem] sm:text-[0.86rem] text-[#222222] font-medium leading-tight" style="font-family: 'Montserrat', sans-serif;">
+            王怡
+          </div>
+          <div class="font-mono text-[0.70rem] sm:text-[0.74rem] text-[#888888] tracking-wide leading-tight">
+            ${essay.date}, ${essay.location}
+          </div>
+        </div>
+      </div>
+    `;
+
+    lockedScrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+    isEssayModalOpen = true;
+
+    essayModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+    essayModalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+
+    requestAnimationFrame(() => {
+      essayModalContainer.classList.remove('scale-[0.97]', 'opacity-0');
+      essayModalContainer.classList.add('scale-100', 'opacity-100');
+    });
+  }
+
+  function closeEssayModal() {
+    if (!essayModalBackdrop || !essayModalContainer || !isEssayModalOpen) return;
+    isEssayModalOpen = false;
+
+    essayModalBackdrop.classList.remove('opacity-100');
+    essayModalBackdrop.classList.add('opacity-0');
+
+    essayModalContainer.classList.remove('scale-100', 'opacity-100');
+    essayModalContainer.classList.add('scale-[0.97]', 'opacity-0');
+
+    if (essayCloseTimer) clearTimeout(essayCloseTimer);
+    essayCloseTimer = setTimeout(() => {
+      essayModalBackdrop.classList.remove('pointer-events-auto');
+      essayModalBackdrop.classList.add('pointer-events-none');
+      if (essayModalSlot) essayModalSlot.innerHTML = '';
+    }, 250);
+  }
+
+  // Backdrop clicks
+  bookModalBackdrop?.addEventListener('mousedown', (e) => {
+    isMouseDownOnBookBackdrop = (e.target === bookModalBackdrop);
+  });
+  bookModalBackdrop?.addEventListener('click', (e) => {
+    if (e.target === bookModalBackdrop && isMouseDownOnBookBackdrop) closeBookModal();
+  });
+
+  essayModalBackdrop?.addEventListener('mousedown', (e) => {
+    isMouseDownOnEssayBackdrop = (e.target === essayModalBackdrop);
+  });
+  essayModalBackdrop?.addEventListener('click', (e) => {
+    if (e.target === essayModalBackdrop && isMouseDownOnEssayBackdrop) closeEssayModal();
+  });
+
+  // ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (isBookModalOpen) closeBookModal();
+      if (isEssayModalOpen) closeEssayModal();
+    }
+  });
+
+  // Card & Item clicks
+  bookCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const json = card.dataset.bookJson;
+      if (json) {
+        try {
+          openBookModal(JSON.parse(json));
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    });
+  });
+
+  essayItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const json = item.dataset.essayJson;
+      if (json) {
+        try {
+          openEssayModal(JSON.parse(json));
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    });
+  });
+
+</script>
+
+<style is:global>
+  /* ======================================================== */
+  /* ESSAY HOVER EFFECT: 方案 A (微距平移与隐逸箭头)             */
+  /* ======================================================== */
+  #essays-container .essay-item:hover .essay-title {
+    color: #000000;
+    transform: translateX(6px);
+  }
+  #essays-container .essay-item:hover .essay-meta {
+    color: #222222;
+  }
+  #essays-container .essay-arrow {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  #essays-container .essay-item:hover .essay-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ======================================================== */
+  /* ESSAY MODAL: 取消滑动栏 (Hide Scrollbar for Pure Reading) */
+  /* ======================================================== */
+  #essay-modal-scroll-pane {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  #essay-modal-scroll-pane::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+</style>

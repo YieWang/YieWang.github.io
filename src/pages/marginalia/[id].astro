@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { marginaliaData, type InterestItem } from '../../data/marginalia';
+
+export function getStaticPaths() {
+  return marginaliaData.interests
+    .filter((item) => item.hasLink && item.id !== 'photography' && item.id !== 'cinema' && item.id !== 'literature' && item.id !== 'music')
+    .map((item) => ({
+      params: { id: item.id },
+      props: { item },
+    }));
+}
+
+interface Props {
+  item: InterestItem;
+}
+
+const { item } = Astro.props;
+---
+
+<Layout
+  title={`${item.title} · Marginalia · Yi Wang`}
+  description={item.description}
+  isHome={false}
+>
+  <Header activeTab="marginalia" />
+
+  <div class="max-w-2xl mx-auto w-full space-y-7 sm:space-y-10 py-4 sm:py-6">
+    <!-- Breadcrumb / Back Link -->
+    <div class="text-left">
+      <a
+        href="/marginalia"
+        class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] hover:text-black inline-flex items-center gap-1.5 transition-colors duration-200"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        <span aria-hidden="true">←</span>
+        <span>Marginalia</span>
+      </a>
+    </div>
+
+    <!-- Section Header -->
+    <div class="text-center space-y-2">
+      <h2
+        class="text-[1.125rem] sm:text-[1.25rem] font-bold uppercase tracking-[0.2rem] text-[#474747]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        {item.title}
+      </h2>
+      <p
+        class="text-[0.8125rem] sm:text-[0.875rem] text-[#666666] font-light tracking-[0.02rem] sm:tracking-[0.03rem]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        {item.description}
+      </p>
+      <p
+        class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        {item.meta}
+      </p>
+    </div>
+
+    <!-- Content Placeholder / Scaffold Area -->
+    <div class="border-t border-[#E5E5E5] pt-10 sm:pt-14 text-center space-y-3">
+      <p
+        class="text-[0.8125rem] sm:text-[0.875rem] text-[#888888] font-light italic tracking-[0.02rem]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        Under curation · 整理收录中
+      </p>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,67 @@
+---
+interface Props {
+  activeScheme: 'lounge' | 'crate' | 'archive';
+}
+
+const { activeScheme = 'lounge' } = Astro.props;
+---
+
+<div class="w-full pt-1 pb-6 sm:pb-8 select-none flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 border-b border-[#F2F2F2]">
+  <!-- Left: Back to Marginalia -->
+  <div>
+    <a
+      href="/marginalia"
+      class="text-[0.7rem] sm:text-[0.76rem] font-medium tracking-[0.16rem] uppercase text-[#777777] hover:text-black transition-colors duration-200 inline-flex items-center gap-1.5"
+      style="font-family: 'Montserrat', sans-serif;"
+    >
+      <span aria-hidden="true">←</span>
+      <span>MARGINALIA</span>
+    </a>
+  </div>
+
+  <!-- Right: Scheme Switcher -->
+  <nav class="flex items-center gap-3 sm:gap-4 flex-wrap">
+    <span class="text-[0.62rem] sm:text-[0.68rem] uppercase font-mono tracking-widest text-[#AAAAAA] mr-1">
+      SCHEMES:
+    </span>
+
+    <a
+      href="/marginalia/music"
+      class={`text-[0.66rem] sm:text-[0.72rem] tracking-[0.14rem] uppercase transition-colors duration-200 ${
+        activeScheme === 'lounge'
+          ? 'text-black font-bold'
+          : 'text-[#888888] hover:text-black font-medium'
+      }`}
+      style="font-family: 'Montserrat', sans-serif;"
+      title="方案 A：黑胶听音室与折页衬纸 (The Vinyl Lounge)"
+    >
+      A · Lounge
+    </a>
+
+    <a
+      href="/marginalia/music/crate"
+      class={`text-[0.66rem] sm:text-[0.72rem] tracking-[0.14rem] uppercase transition-colors duration-200 ${
+        activeScheme === 'crate'
+          ? 'text-black font-bold'
+          : 'text-[#888888] hover:text-black font-medium'
+      }`}
+      style="font-family: 'Montserrat', sans-serif;"
+      title="方案 B：唱片行淘碟台与分屏试听 (The Crate Digger)"
+    >
+      B · Crate Digger
+    </a>
+
+    <a
+      href="/marginalia/music/archive"
+      class={`text-[0.66rem] sm:text-[0.72rem] tracking-[0.14rem] uppercase transition-colors duration-200 ${
+        activeScheme === 'archive'
+          ? 'text-black font-bold'
+          : 'text-[#888888] hover:text-black font-medium'
+      }`}
+      style="font-family: 'Montserrat', sans-serif;"
+      title="方案 C：ECM 极简声音档案与编年史 (The Acoustic Archive)"
+    >
+      C · Acoustic Archive
+    </a>
+  </nav>
+</div>

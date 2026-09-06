@@ -1,0 +1,266 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import LiteratureSchemeNav from '../../../components/LiteratureSchemeNav.astro';
+import { literatureBooks, literatureEssays, type BookItem, type EssayItem } from '../../../data/literature';
+
+interface ChronoEntry {
+  id: string;
+  type: 'book' | 'critique' | 'essay';
+  year: string;
+  dateDisplay: string;
+  title: string;
+  subtitle?: string;
+  authorOrMeta: string;
+  rating?: string;
+  quote?: string;
+  excerpt: string;
+  fullContent?: string;
+  coverUrl?: string;
+  worldcatUrl?: string;
+}
+
+const entries: ChronoEntry[] = [];
+
+literatureBooks.forEach((b) => {
+  if (b.review) {
+    entries.push({
+      id: `critique-${b.id}`,
+      type: 'critique',
+      year: b.review.date.slice(0, 4) || String(b.readYear || b.year),
+      dateDisplay: b.review.date || String(b.readYear || b.year),
+      title: `${b.title} · ${b.review.title || 'Critical Review'}`,
+      subtitle: `On ${b.author}'s ${b.title} (${b.publisher}, ${b.edition})`,
+      authorOrMeta: `${b.author} · ${b.publisher}`,
+      rating: b.rating,
+      quote: b.review.quote || b.quote,
+      excerpt: b.summary,
+      fullContent: b.review.content,
+      coverUrl: b.coverUrl,
+      worldcatUrl: b.worldcatUrl,
+    });
+  } else {
+    entries.push({
+      id: `book-${b.id}`,
+      type: 'book',
+      year: String(b.readYear || b.year),
+      dateDisplay: String(b.readYear || b.year),
+      title: b.title,
+      subtitle: b.originalTitle && b.originalTitle !== b.title ? b.originalTitle : undefined,
+      authorOrMeta: `${b.author} · ${b.publisher}`,
+      rating: b.rating,
+      quote: b.quote,
+      excerpt: b.summary,
+      coverUrl: b.coverUrl,
+      worldcatUrl: b.worldcatUrl,
+    });
+  }
+});
+
+literatureEssays.forEach((e) => {
+  entries.push({
+    id: `essay-${e.id}`,
+    type: 'essay',
+    year: e.date.slice(0, 4),
+    dateDisplay: e.date,
+    title: e.title,
+    subtitle: e.subtitle,
+    authorOrMeta: 'ESSAY',
+    excerpt: e.content.slice(0, 100) + '...',
+    fullContent: e.content,
+  });
+});
+
+entries.sort((a, b) => b.dateDisplay.localeCompare(a.dateDisplay));
+const years = Array.from(new Set(entries.map((e) => e.year))).sort((a, b) => b.localeCompare(a));
+---
+
+<Layout
+  title="Chronology · Literature · Marginalia · Yi Wang"
+  description="Unified chronological reading and writing stream: books, reviews, and essays."
+  isHome={false}
+  fullWidth={true}
+>
+  <Header activeTab="marginalia" />
+
+  <div class="max-w-4xl mx-auto w-full pb-28 pt-4 sm:pt-6 px-4 sm:px-6">
+    <LiteratureSchemeNav activeScheme="chronology" />
+
+    <div class="pt-6 sm:pt-8 pb-8 flex items-center justify-between border-b border-[#F0F0F0] select-none text-[0.68rem] sm:text-[0.74rem] font-mono uppercase tracking-widest text-[#888888]">
+      <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
+        <button type="button" class="chrono-filter-btn active-filter text-black font-bold cursor-pointer" data-filter="all">
+          ALL ({entries.length})
+        </button>
+        <span>·</span>
+        <button type="button" class="chrono-filter-btn hover:text-black transition-colors cursor-pointer" data-filter="critique">
+          CRITIQUES ({entries.filter(e => e.type === 'critique').length})
+        </button>
+        <span>·</span>
+        <button type="button" class="chrono-filter-btn hover:text-black transition-colors cursor-pointer" data-filter="book">
+          BOOKS ({entries.filter(e => e.type === 'book').length})
+        </button>
+        <span>·</span>
+        <button type="button" class="chrono-filter-btn hover:text-black transition-colors cursor-pointer" data-filter="essay">
+          ESSAYS ({entries.filter(e => e.type === 'essay').length})
+        </button>
+      </div>
+
+      <span class="hidden sm:inline text-[#AAAAAA]">TIMELINE ARCHIVE</span>
+    </div>
+
+    <main class="space-y-16 pt-8">
+      {years.map((year) => {
+        const yearEntries = entries.filter((e) => e.year === year);
+        return (
+          <section class="year-section space-y-8" data-year={year}>
+            <div class="flex items-baseline gap-4 border-b border-[#F2F2F2] pb-2">
+              <span class="text-xl sm:text-2xl font-bold font-mono tracking-widest text-black">
+                {year}
+              </span>
+              <span class="text-[0.7rem] font-mono text-[#AAAAAA] uppercase tracking-wider">
+                {yearEntries.length} {yearEntries.length === 1 ? 'ENTRY' : 'ENTRIES'}
+              </span>
+            </div>
+
+            <div class="space-y-10 pl-1 sm:pl-3">
+              {yearEntries.map((entry) => (
+                <article class="chrono-entry space-y-3 select-text group" data-type={entry.type}>
+                  <div class="flex items-center justify-between font-mono text-[0.65rem] sm:text-[0.7rem] tracking-wider text-[#888888] uppercase">
+                    <div class="flex items-center gap-2 sm:gap-3">
+                      <span class={`font-bold tracking-widest ${
+                        entry.type === 'critique' ? 'text-black' :
+                        entry.type === 'essay' ? 'text-[#333333]' : 'text-[#888888]'
+                      }`}>
+                        [{entry.type.toUpperCase()}]
+                      </span>
+                      <span>{entry.dateDisplay}</span>
+                      <span>·</span>
+                      <span class="text-[#555555]">{entry.authorOrMeta}</span>
+                    </div>
+
+                    {entry.rating && <span class="font-bold text-black">{entry.rating}</span>}
+                  </div>
+
+                  <div class="space-y-1">
+                    <h3 class="text-[1.1rem] sm:text-[1.25rem] font-bold text-[#1E1E1E] group-hover:text-black transition-colors leading-snug cursor-pointer entry-title-trigger" style="font-family: 'Josefin Sans', sans-serif;">
+                      {entry.title}
+                    </h3>
+                    {entry.subtitle && (
+                      <p class="text-[0.82rem] sm:text-[0.88rem] text-[#666666] font-light italic" style="font-family: 'Montserrat', sans-serif;">
+                        {entry.subtitle}
+                      </p>
+                    )}
+                  </div>
+
+                  {entry.quote && (
+                    <blockquote class="italic text-[0.82rem] sm:text-[0.86rem] text-[#444444] font-light pl-3 border-l-2 border-black/70 my-2 leading-relaxed">
+                      {entry.quote}
+                    </blockquote>
+                  )}
+
+                  <p class="text-[0.85rem] sm:text-[0.9rem] text-[#444444] font-light leading-relaxed" style="font-family: 'Montserrat', sans-serif; text-indent: 2em;">
+                    {entry.excerpt}
+                  </p>
+
+                  {entry.fullContent && (
+                    <div class="entry-expanded-body hidden pt-4 mt-3 border-t border-[#F0F0F0] space-y-4">
+                      {entry.coverUrl && (
+                        <div class="w-[120px] aspect-[1/1.414] bg-[#F2EFE9] rounded-[2px] overflow-hidden shadow-sm my-3">
+                          <img src={entry.coverUrl} alt={entry.title} class="w-full h-full object-cover" />
+                        </div>
+                      )}
+
+                      {entry.fullContent.split('\n\n').map((para) => (
+                        <p class="leading-[1.95] text-[0.88rem] sm:text-[0.92rem] text-[#2C2C2C] font-normal tracking-wide whitespace-pre-line" style="font-family: 'Montserrat', sans-serif; text-indent: 2em;">
+                          {para}
+                        </p>
+                      ))}
+
+                      {entry.worldcatUrl && (
+                        <div class="pt-2">
+                          <a href={entry.worldcatUrl} target="_blank" rel="noopener noreferrer" class="text-[0.68rem] font-mono uppercase tracking-widest text-[#777777] hover:text-black underline underline-offset-4">
+                            VIEW ON WORLDCAT ↗
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {entry.fullContent && (
+                    <div class="pt-1">
+                      <button type="button" class="chrono-toggle-btn text-[0.7rem] sm:text-[0.74rem] font-bold uppercase tracking-[0.16rem] text-[#888888] hover:text-black transition-colors inline-flex items-center gap-1.5 cursor-pointer" style="font-family: 'Montserrat', sans-serif;">
+                        <span class="btn-text">UNROLL ESSAY</span>
+                        <span class="btn-icon font-mono">↓</span>
+                      </button>
+                    </div>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </main>
+  </div>
+</Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.chrono-filter-btn');
+  const entries = document.querySelectorAll<HTMLElement>('.chrono-entry');
+  const yearSections = document.querySelectorAll<HTMLElement>('.year-section');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      filterBtns.forEach((b) => {
+        b.classList.remove('text-black', 'font-bold');
+        b.classList.add('hover:text-black');
+      });
+      btn.classList.add('text-black', 'font-bold');
+      btn.classList.remove('hover:text-black');
+
+      entries.forEach((entry) => {
+        const type = entry.dataset.type;
+        if (filter === 'all' || type === filter) {
+          entry.classList.remove('hidden');
+        } else {
+          entry.classList.add('hidden');
+        }
+      });
+
+      yearSections.forEach((sec) => {
+        const visibleEntries = sec.querySelectorAll('.chrono-entry:not(.hidden)');
+        if (visibleEntries.length === 0) {
+          sec.classList.add('hidden');
+        } else {
+          sec.classList.remove('hidden');
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll<HTMLElement>('.chrono-entry').forEach((entry) => {
+    const toggleBtn = entry.querySelector<HTMLButtonElement>('.chrono-toggle-btn');
+    const titleTrigger = entry.querySelector<HTMLElement>('.entry-title-trigger');
+    const body = entry.querySelector<HTMLElement>('.entry-expanded-body');
+    const btnText = toggleBtn?.querySelector('.btn-text');
+    const btnIcon = toggleBtn?.querySelector('.btn-icon');
+
+    function toggle() {
+      if (!body) return;
+      const isHidden = body.classList.contains('hidden');
+      if (isHidden) {
+        body.classList.remove('hidden');
+        if (btnText) btnText.textContent = 'FOLD ESSAY';
+        if (btnIcon) btnIcon.textContent = '↑';
+      } else {
+        body.classList.add('hidden');
+        if (btnText) btnText.textContent = 'UNROLL ESSAY';
+        if (btnIcon) btnIcon.textContent = '↓';
+      }
+    }
+
+    toggleBtn?.addEventListener('click', toggle);
+    titleTrigger?.addEventListener('click', toggle);
+  });
+</script>

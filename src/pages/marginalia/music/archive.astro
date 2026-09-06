@@ -1,0 +1,426 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import MusicSchemeNav from '../../../components/MusicSchemeNav.astro';
+import { musicAlbums, musicArtists, type MusicAlbum } from '../../../data/music';
+
+// Chronicle log sorted by listenedDate descending
+const chronicleLogs = [
+  {
+    date: "2024.04",
+    albumId: "fable",
+    albumTitle: "Fable (寓言)",
+    artist: "Faye Wong · 张亚东",
+    note: "深夜重听《寓言》前五首概念套曲。张亚东引入英国爱乐乐团的庞大编制，在 Trip-Hop 的碎拍里撕扯出冷艳苍茫的宿命感。王菲的神性与林夕的佛理在世纪之交达到巅峰。"
+  },
+  {
+    date: "2024.03",
+    albumId: "in-rainbows",
+    albumTitle: "In Rainbows",
+    artist: "Radiohead",
+    note: "《Reckoner》的鼓点与弦乐升起时，那种脆弱的肉体心跳穿透了所有的数字毛刺。电台司令在解构了一切之后，用温暖的模拟黑胶声音向世界轻声告白。"
+  },
+  {
+    date: "2024.02",
+    albumId: "tabula-rasa",
+    albumTitle: "Tabula Rasa",
+    artist: "Arvo Pärt",
+    note: "立春寒夜。佩尔特用三和弦的钟鸣作曲法（Tintinnabuli）雕塑着寂静本身。声音不是打破寂静，而是让寂静变得神圣可感。"
+  },
+  {
+    date: "2024.01",
+    albumId: "async",
+    albumTitle: "Async",
+    artist: "Ryuichi Sakamoto",
+    note: "大雪初歇。戴上监听耳机重听《Andata》，下行的管风琴如同步入极深海渊。教授将海啸钢琴的失真泛音保留下来，生命的衰朽在此化作了纯澈的声学透镜。"
+  },
+  {
+    date: "2023.12",
+    albumId: "waltz-for-debby",
+    albumTitle: "Waltz for Debby",
+    artist: "Bill Evans Trio",
+    note: "先锋村地下室杯盘交错的背景杂音，构成了二十世纪爵士史上最动人的临场诗意。斯科特·拉法罗在录音十天后车祸辞世，每一个切分音符都像是青春不可挽回的叹息。"
+  },
+  {
+    date: "2023.11",
+    albumId: "goldberg-1981",
+    albumTitle: "Bach: The Goldberg Variations (1981)",
+    artist: "Glenn Gould",
+    note: "重温古尔德临终前一年的第二次哥德堡录音。Aria 的速度极慢，左手低音如宏伟的石柱，录音中他无意识的哼鸣声，是人类精神触碰神性巴赫时的肉身回响。"
+  }
+];
+---
+
+<Layout
+  title="The Acoustic Archive · Music · Yi Wang"
+  description="Minimalist ECM-inspired sound archive, critical monographs, musician portraits, and chronological listening journals."
+  isHome={false}
+  fullWidth={true}
+>
+  <Header activeTab="marginalia" />
+
+  <div class="max-w-[1760px] mx-auto w-full pb-28 pt-2 sm:pt-4 px-4 sm:px-8 md:px-12">
+    <!-- Top Scheme Navigation -->
+    <MusicSchemeNav activeScheme="archive" />
+
+    <!-- Pure Typographic Navigation (DISCOGRAPHY · MUSICIANS · CHRONICLE) -->
+    <div class="pt-6 sm:pt-8 pb-10 sm:pb-12 flex items-center justify-center gap-8 sm:gap-14 select-none">
+      <button
+        id="archive-tab-discography"
+        type="button"
+        class="archive-nav-btn active-tab uppercase text-[0.76rem] sm:text-[0.82rem] tracking-[0.25rem] font-bold text-black transition-all cursor-pointer"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        DISCOGRAPHY
+        <span class="ml-1 font-mono text-[0.7rem] text-[#888888] font-normal">
+          ({musicAlbums.length})
+        </span>
+      </button>
+
+      <button
+        id="archive-tab-musicians"
+        type="button"
+        class="archive-nav-btn uppercase text-[0.76rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-all cursor-pointer"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        MUSICIANS
+        <span class="ml-1 font-mono text-[0.7rem] text-[#888888] font-normal">
+          ({musicArtists.length})
+        </span>
+      </button>
+
+      <button
+        id="archive-tab-chronicle"
+        type="button"
+        class="archive-nav-btn uppercase text-[0.76rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-all cursor-pointer"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        CHRONICLE
+        <span class="ml-1 font-mono text-[0.7rem] text-[#888888] font-normal">
+          ({chronicleLogs.length})
+        </span>
+      </button>
+    </div>
+
+    <!-- VIEW 1: DISCOGRAPHY (ECM-Inspired Catalog Grid) -->
+    <main id="archive-view-discography" class="transition-opacity duration-300">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-14">
+        {musicAlbums.map((album, idx) => (
+          <article
+            class="archive-card group cursor-pointer flex flex-col justify-between select-none"
+            data-album-json={JSON.stringify(album)}
+          >
+            <div class="space-y-4">
+              <!-- Square Artwork Container with Subtle Thin Stroke -->
+              <div class="relative w-full aspect-square bg-[#FAFAFA] overflow-hidden rounded-[1px] border border-[#EEEEEE] transition-all duration-300 group-hover:border-[#222222]">
+                <img
+                  src={album.coverUrl}
+                  alt={album.title}
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-90"
+                />
+                <!-- Pure Catalog Tag in bottom right -->
+                <div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-white/90 backdrop-blur-[2px] font-mono text-[0.62rem] text-[#333333] tracking-widest uppercase">
+                  {album.catalogNo || `CAT. 00${idx + 1}`}
+                </div>
+              </div>
+
+              <!-- Metadata Block -->
+              <div class="space-y-1">
+                <div class="flex items-baseline justify-between font-mono text-[0.68rem] text-[#888888] uppercase tracking-wider">
+                  <span>{album.label}</span>
+                  <span>{album.year} · {album.format}</span>
+                </div>
+
+                <h3
+                  class="text-[0.92rem] font-medium leading-[1.3] text-[#1E1E1E] group-hover:text-black transition-colors"
+                  style="font-family: 'Montserrat', sans-serif;"
+                >
+                  {album.title}
+                </h3>
+
+                <p class="text-[0.78rem] text-[#666666] font-light">
+                  {album.artistName}
+                </p>
+              </div>
+
+              <!-- Essay Excerpt Teaser -->
+              {album.review && (
+                <p class="text-[0.78rem] text-[#555555] font-light leading-[1.6] line-clamp-2 pt-1 border-t border-[#F4F4F4]">
+                  "{album.review.quote || album.review.excerpt}"
+                </p>
+              )}
+            </div>
+
+            <!-- Bottom Action Indicator -->
+            <div class="pt-3 flex items-center justify-between font-mono text-[0.68rem] text-[#888888] border-t border-transparent group-hover:border-[#EAEAEA] transition-colors">
+              <span class="tracking-widest uppercase">{album.genre}</span>
+              <span class="group-hover:text-black transition-colors">READ ARCHIVE →</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </main>
+
+    <!-- VIEW 2: MUSICIANS (Academic Monograph & Portraits) -->
+    <main id="archive-view-musicians" class="hidden transition-opacity duration-300">
+      <div class="max-w-4xl mx-auto space-y-16">
+        {musicArtists.map((artist) => {
+          const artistAlbums = musicAlbums.filter(a => artist.albumIds.includes(a.id));
+          return (
+            <section class="border-b border-[#EAEAEA] pb-14 space-y-6">
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                <div>
+                  <h2
+                    class="text-[1.4rem] sm:text-[1.6rem] font-bold text-black tracking-wide"
+                    style="font-family: 'Josefin Sans', sans-serif;"
+                  >
+                    {artist.name}
+                  </h2>
+                  <p class="text-[0.85rem] text-[#777777] font-light">
+                    {artist.originalName} · <span class="font-mono text-[0.78rem]">{artist.yearsActive}</span> · <span class="font-mono text-[0.78rem] uppercase">{artist.country}</span>
+                  </p>
+                </div>
+                <span class="font-mono text-[0.75rem] text-[#888888] tracking-widest uppercase">
+                  {artist.genre}
+                </span>
+              </div>
+
+              {artist.reflection && (
+                <div class="space-y-4 pt-1">
+                  <blockquote class="border-l-2 border-black pl-4 italic text-[0.92rem] text-[#333333] font-light leading-relaxed">
+                    "{artist.reflection.quote}"
+                  </blockquote>
+                  <div class="text-[0.88rem] leading-[2.0] text-[#333333] text-justify whitespace-pre-line" style="text-indent: 2em;">
+                    {artist.reflection.content}
+                  </div>
+                </div>
+              )}
+
+              <!-- Associated Records Shelf -->
+              <div class="pt-4">
+                <div class="font-mono text-[0.7rem] uppercase tracking-widest text-[#888888] mb-3">
+                  HOLDINGS IN VAULT ({artistAlbums.length})
+                </div>
+                <div class="flex items-center gap-4 flex-wrap">
+                  {artistAlbums.map(alb => (
+                    <div class="flex items-center gap-3 p-2 bg-[#FAFAFA] rounded-[2px] pr-4 border border-[#F0F0F0]">
+                      <div class="w-12 h-12 rounded-[1px] overflow-hidden bg-[#EEEEEE] shrink-0">
+                        <img src={alb.coverUrl} alt={alb.title} class="w-full h-full object-cover" />
+                      </div>
+                      <div class="text-left">
+                        <div class="text-[0.8rem] font-medium text-black">{alb.title}</div>
+                        <div class="font-mono text-[0.68rem] text-[#888888]">{alb.year} · {alb.format}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    </main>
+
+    <!-- VIEW 3: CHRONICLE (Time-Stream Acoustic Journal) -->
+    <main id="archive-view-chronicle" class="hidden transition-opacity duration-300">
+      <div class="max-w-3xl mx-auto py-4 space-y-12">
+        <div class="border-b border-[#EAEAEA] pb-4 select-none">
+          <h2 class="text-[1.1rem] font-bold tracking-[0.2rem] uppercase text-black" style="font-family: 'Josefin Sans', sans-serif;">
+            ACOUSTIC CHRONICLE & LISTENING MEMOIR
+          </h2>
+          <p class="font-mono text-[0.75rem] text-[#888888] tracking-wider pt-1">
+            MOMENTS, SEASONS, AND SOLITARY SESSIONS
+          </p>
+        </div>
+
+        <div class="space-y-10">
+          {chronicleLogs.map((log) => (
+            <article class="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 select-text">
+              <div class="font-mono text-[0.82rem] font-bold text-black tracking-wider sm:w-24 shrink-0 sm:pt-1">
+                {log.date}
+              </div>
+              <div class="space-y-2 border-l border-[#EAEAEA] pl-4 sm:pl-6">
+                <div class="flex items-baseline gap-3 flex-wrap">
+                  <span class="text-[0.92rem] font-semibold text-black" style="font-family: 'Montserrat', sans-serif;">
+                    {log.albumTitle}
+                  </span>
+                  <span class="text-[0.8rem] text-[#777777] font-light">
+                    {log.artist}
+                  </span>
+                </div>
+                <p class="text-[0.86rem] text-[#444444] leading-[1.9] text-justify font-normal" style="text-indent: 2em;">
+                  {log.note}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ARCHIVE MODAL FOR ALBUM MONOGRAPHS -->
+  <div
+    id="archive-modal-backdrop"
+    class="fixed inset-0 z-50 bg-black/50 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
+  >
+    <div
+      id="archive-modal-container"
+      class="bg-white max-w-3xl w-full h-[640px] max-h-[90vh] rounded-[2px] shadow-2xl transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+    >
+      <div id="archive-modal-content" class="w-full h-full flex flex-col min-h-0"></div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import type { MusicAlbum } from '../../../data/music';
+
+  // Navigation Switcher
+  const btnDisco = document.getElementById('archive-tab-discography');
+  const btnMusicians = document.getElementById('archive-tab-musicians');
+  const btnChronicle = document.getElementById('archive-tab-chronicle');
+
+  const viewDisco = document.getElementById('archive-view-discography');
+  const viewMusicians = document.getElementById('archive-view-musicians');
+  const viewChronicle = document.getElementById('archive-view-chronicle');
+
+  const navBtns = [
+    { btn: btnDisco, view: viewDisco },
+    { btn: btnMusicians, view: viewMusicians },
+    { btn: btnChronicle, view: viewChronicle },
+  ];
+
+  navBtns.forEach(({ btn, view }) => {
+    btn?.addEventListener('click', () => {
+      navBtns.forEach(item => {
+        item.btn?.classList.remove('active-tab', 'font-bold', 'text-black');
+        item.btn?.classList.add('font-medium', 'text-[#737373]');
+        item.view?.classList.add('hidden');
+      });
+
+      btn.classList.add('active-tab', 'font-bold', 'text-black');
+      btn.classList.remove('font-medium', 'text-[#737373]');
+      view?.classList.remove('hidden');
+    });
+  });
+
+  // Modal for Album Monograph
+  const cards = document.querySelectorAll<HTMLElement>('.archive-card');
+  const backdrop = document.getElementById('archive-modal-backdrop');
+  const container = document.getElementById('archive-modal-container');
+  const slot = document.getElementById('archive-modal-content');
+
+  let isModalOpen = false;
+
+  function openArchiveModal(album: MusicAlbum) {
+    if (!backdrop || !container || !slot) return;
+
+    const tracksHtml = album.tracks.map((t) => `
+      <div class="py-1.5 flex items-center justify-between text-[0.78rem] border-b border-[#F4F4F4]">
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-[0.7rem] text-[#888888]">${String(t.trackNo).padStart(2, '0')}</span>
+          <span class="text-[#222222] font-medium">${t.title}</span>
+          ${t.isFavorite ? '<span class="text-[0.62rem] text-[#888888]">★</span>' : ''}
+        </div>
+        <span class="font-mono text-[0.72rem] text-[#888888]">${t.duration}</span>
+      </div>
+    `).join('');
+
+    slot.innerHTML = `
+      <div class="px-6 py-4 border-b border-[#EAEAEA] flex items-center justify-between select-none font-mono text-[0.72rem] text-[#888888]">
+        <span class="tracking-widest uppercase">CATALOG SPECIMEN · ${album.label} ${album.catalogNo ? `[${album.catalogNo}]` : ''}</span>
+        <button id="archive-modal-close" class="hover:text-black tracking-widest cursor-pointer px-2 py-1">
+          CLOSE [ESC]
+        </button>
+      </div>
+
+      <div class="flex-1 p-6 sm:p-8 overflow-y-auto space-y-6">
+        <div class="flex items-start gap-6 pb-6 border-b border-[#EAEAEA]">
+          <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-[1px] overflow-hidden bg-[#FAFAFA] border border-[#EAEAEA] shrink-0">
+            <img src="${album.coverUrl}" alt="${album.title}" class="w-full h-full object-cover" />
+          </div>
+          <div class="space-y-1.5">
+            <h2 class="text-[1.3rem] font-bold text-black" style="font-family: 'Josefin Sans', sans-serif;">
+              ${album.title}
+            </h2>
+            <p class="text-[0.88rem] text-[#555555] font-light">
+              ${album.artistName}
+            </p>
+            <p class="font-mono text-[0.72rem] text-[#888888] uppercase tracking-wider">
+              ${album.year} · ${album.genre} · ${album.format}
+            </p>
+          </div>
+        </div>
+
+        ${album.review ? `
+          <div class="space-y-4">
+            <div class="font-mono text-[0.72rem] uppercase tracking-widest text-[#888888]">CRITICAL LINER NOTES</div>
+            ${album.review.quote ? `
+              <blockquote class="border-l-2 border-black pl-3.5 italic text-[0.9rem] text-[#333333] font-light">
+                "${album.review.quote}"
+              </blockquote>
+            ` : ''}
+            <div class="text-[0.88rem] text-[#333333] leading-[2.0] text-justify whitespace-pre-line" style="text-indent: 2em;">
+              ${album.review.content}
+            </div>
+          </div>
+        ` : ''}
+
+        <div class="pt-4 border-t border-[#EAEAEA] space-y-3">
+          <div class="font-mono text-[0.72rem] uppercase tracking-widest text-[#888888]">TRACKLIST</div>
+          <div class="space-y-0.5">
+            ${tracksHtml}
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('archive-modal-close')?.addEventListener('click', closeArchiveModal);
+    displayModal();
+  }
+
+  function displayModal() {
+    if (!backdrop || !container) return;
+    isModalOpen = true;
+    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop.classList.add('opacity-100');
+    container.classList.remove('opacity-0', 'scale-[0.97]');
+    container.classList.add('opacity-100', 'scale-100');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeArchiveModal() {
+    if (!backdrop || !container) return;
+    isModalOpen = false;
+    backdrop.classList.add('opacity-0', 'pointer-events-none');
+    backdrop.classList.remove('opacity-100');
+    container.classList.add('opacity-0', 'scale-[0.97]');
+    container.classList.remove('opacity-100', 'scale-100');
+    document.body.style.overflow = '';
+  }
+
+  backdrop?.addEventListener('click', (e) => {
+    if (e.target === backdrop) closeArchiveModal();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isModalOpen) closeArchiveModal();
+  });
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const json = card.dataset.albumJson;
+      if (json) {
+        try {
+          const album = JSON.parse(json) as MusicAlbum;
+          openArchiveModal(album);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    });
+  });
+</script>

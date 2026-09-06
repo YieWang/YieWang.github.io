@@ -1,0 +1,267 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import PhotographyWheelPicker from '../../../components/photography/PhotographyWheelPicker';
+import { allPhotos, allCityAlbums } from '../../../data/photography';
+
+const firstCity = allCityAlbums[0];
+const firstPhoto = firstCity?.photos[0] || allPhotos[0];
+---
+
+<Layout
+  title="Photography · Yi Wang"
+  description="Photographic archive arranged by year and location."
+  isHome={false}
+  fullWidth={true}
+  zeroScroll={true}
+>
+  <Header activeTab="marginalia" />
+
+  <!-- Single-Screen Zero-Scroll Gallery Viewport (Desktop 100vh) -->
+  <div
+    id="gallery-viewport-root"
+    class="w-full h-[calc(100vh-62px)] min-h-[550px] flex items-stretch gap-2 sm:gap-4 md:gap-5 overflow-hidden select-none overscroll-none -ml-1 sm:-ml-2"
+  >
+    
+    <!-- LEFT: iOS 3D Cylindrical Wheel Picker (react-wheel-picker, docked further left) -->
+    <aside class="w-[172px] sm:w-[184px] md:w-[190px] flex-shrink-0 h-full flex flex-col relative z-20 pl-0">
+      <PhotographyWheelPicker client:load initialPhotoId={firstPhoto.id} />
+    </aside>
+
+    <!-- RIGHT: Vast Showcase Stage (Dual-Layer Optical Crossfade Top, Maximized Display Canvas) -->
+    <main
+      id="right-showcase-stage"
+      class="flex-1 h-full flex flex-col justify-between overflow-hidden pr-2 sm:pr-4 md:pr-6 pb-2.5 sm:pb-3.5 md:pb-4"
+    >
+      
+      <!-- TOP: Dual-Layer Optical Morphing Canvas (Clean full-bleed, Zero floating arrows) -->
+      <div class="flex-1 min-h-0 w-full flex items-center justify-center p-0.5 sm:p-1 overflow-hidden relative">
+        <!-- Layer A -->
+        <img
+          id="stage-layer-a"
+          src={firstPhoto.imageUrl}
+          alt={firstPhoto.title}
+          class="stage-layer-img absolute max-w-full max-h-full w-auto h-auto object-contain rounded-[2px] opacity-100"
+          style="will-change: opacity;"
+        />
+        <!-- Layer B (Dual buffer) -->
+        <img
+          id="stage-layer-b"
+          src=""
+          alt=""
+          class="stage-layer-img absolute max-w-full max-h-full w-auto h-auto object-contain rounded-[2px] opacity-0 pointer-events-none"
+          style="will-change: opacity;"
+        />
+      </div>
+
+      <!-- BOTTOM: Dedicated Typography Space (Fixed-Height Envelope to Prevent Stage Layout Shift) -->
+      <footer
+        id="bottom-meta-footer"
+        class="w-full flex-shrink-0 h-[64px] sm:h-[68px] pt-2.5 sm:pt-3 pb-0.5 px-1 flex items-center justify-between gap-3 sm:gap-4 transition-opacity duration-300 overflow-hidden"
+      >
+        <!-- LEFT COLUMN: Curatorial Narrative (Title + Location, followed by Story) -->
+        <div class="flex-1 min-w-0 flex flex-col justify-center gap-1">
+          <!-- Row 1: Title & Location -->
+          <div class="flex items-baseline gap-2 min-w-0 truncate">
+            <h2
+              id="meta-title"
+              class="text-[0.98rem] sm:text-[1.12rem] font-bold text-[#2A2A2A] tracking-[0.05rem] shrink-0"
+              style="font-family: 'Josefin Sans', sans-serif;"
+            >
+              {firstPhoto.title}
+            </h2>
+            <span class="text-[#D0D0D0] select-none text-[0.75rem] shrink-0">·</span>
+            <span
+              id="meta-location"
+              class="text-[0.72rem] sm:text-[0.76rem] text-[#666666] tracking-[0.08rem] uppercase truncate"
+              style="font-family: 'Montserrat', sans-serif;"
+            >
+              {firstPhoto.year} · {firstPhoto.locationEn} ({firstPhoto.location})
+            </span>
+          </div>
+
+          <!-- Row 2: Curatorial Story Notes -->
+          <p
+            id="meta-story"
+            class="text-[0.76rem] sm:text-[0.8rem] text-[#666666] font-light tracking-wide truncate italic"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            "{firstPhoto.story}"
+          </p>
+        </div>
+
+        <!-- RIGHT COLUMN: Optical Craft Archive (Aligned right, 2 dedicated rows) -->
+        <div class="shrink-0 flex flex-col justify-center items-end text-right gap-1 font-mono">
+          <!-- Row 1: Camera & Film -->
+          <div class="text-[0.68rem] sm:text-[0.72rem] text-[#777777] flex items-center gap-1.5 justify-end">
+            <span id="exif-camera" class="text-[#2A2A2A] font-medium">{firstPhoto.camera}</span>
+            <span id="exif-film-dot" class="text-[#C5C5C5]">·</span>
+            <span id="exif-film" class="text-black font-semibold">{firstPhoto.film || ''}</span>
+          </div>
+
+          <!-- Row 2: Lens & Exposure Optics -->
+          <div id="meta-exif" class="text-[0.64rem] sm:text-[0.68rem] text-[#888888] tracking-wider flex items-center gap-1.5 justify-end">
+            <span id="exif-lens">{firstPhoto.lens || firstPhoto.exif.focalLength}</span>
+            <span class="text-[#D8D8D8]">·</span>
+            <span id="exif-optics">{firstPhoto.exif.aperture} · {firstPhoto.exif.shutter} · ISO {firstPhoto.exif.iso}</span>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+</Layout>
+
+<style>
+  /* Defer depth mask to photo-wheel-viewport for pixel-accurate hairline docking */
+  [data-rwp] {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  /* Dual Buffer Master Stage Layer Transition: Snappy 0.26s optical dissolve */
+  .stage-layer-img {
+    transition: opacity 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Prevent browser rubber-banding or window scroll */
+  :global(html.is-home),
+  :global(body.is-home),
+  #gallery-viewport-root {
+    overscroll-behavior: none !important;
+  }
+</style>
+
+<script>
+  import { allPhotos, allCityAlbums, type Photo } from '../../../data/photography';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Dual buffer layers for flicker-free optical dissolve
+    const layerA = document.getElementById('stage-layer-a') as HTMLImageElement;
+    const layerB = document.getElementById('stage-layer-b') as HTMLImageElement;
+    let activeLayer: 'A' | 'B' = 'A';
+    let imageRequest = 0;
+
+    const metaTitle = document.getElementById('meta-title');
+    const metaLocation = document.getElementById('meta-location');
+    const metaStory = document.getElementById('meta-story');
+
+    const exifCam = document.getElementById('exif-camera');
+    const exifLens = document.getElementById('exif-lens');
+    const exifFilm = document.getElementById('exif-film');
+    const exifFilmDot = document.getElementById('exif-film-dot');
+    const exifOptics = document.getElementById('exif-optics');
+
+    let currentPhotoIndex = 0;
+    const imageCache = new Set<string>();
+
+    function preloadPhoto(url: string) {
+      if (!url || imageCache.has(url)) return;
+      const img = new Image();
+      img.src = url;
+      img.onload = () => imageCache.add(url);
+    }
+
+    // Preload first batch of photos immediately
+    allPhotos.slice(0, 6).forEach(p => preloadPhoto(p.imageUrl));
+
+    // Seamless Optical Morphing Image Switcher
+    function morphToImage(imageUrl: string, title: string) {
+      const request = ++imageRequest;
+      if (!layerA || !layerB) return;
+
+      const performSwap = () => {
+        requestAnimationFrame(() => {
+          if (request !== imageRequest) return;
+          const incomingLayer = activeLayer === 'A' ? layerB : layerA;
+          const outgoingLayer = activeLayer === 'A' ? layerA : layerB;
+          incomingLayer.src = imageUrl;
+          incomingLayer.alt = title;
+          incomingLayer.style.opacity = '1';
+          outgoingLayer.style.opacity = '0';
+          activeLayer = activeLayer === 'A' ? 'B' : 'A';
+        });
+      };
+
+      const preloader = new Image();
+      preloader.onload = performSwap;
+      preloader.src = imageUrl;
+    }
+
+    function activatePhotoByIndex(index: number, options: { fromWheel?: boolean } = {}) {
+      if (index < 0 || index >= allPhotos.length) return;
+      currentPhotoIndex = index;
+      const photo = allPhotos[index];
+      if (!photo) return;
+
+      // 1. Morph master showcase image
+      morphToImage(photo.imageUrl, photo.title);
+
+      // 2. Immediate crisp typography update (Zero lag, Zero blink)
+      if (metaTitle) metaTitle.textContent = photo.title;
+      if (metaLocation) {
+        metaLocation.textContent = `${photo.year} · ${photo.locationEn} (${photo.location})${photo.subtitle ? ` · ${photo.subtitle}` : ''}`;
+      }
+      if (metaStory) metaStory.textContent = photo.story ? `"${photo.story}"` : '';
+
+      if (exifCam) exifCam.textContent = photo.camera;
+      if (exifLens) exifLens.textContent = photo.lens || photo.exif.focalLength;
+      if (exifFilm) {
+        exifFilm.textContent = photo.film || '';
+        if (exifFilmDot) exifFilmDot.style.display = photo.film ? 'inline' : 'none';
+      }
+      if (exifOptics) {
+        exifOptics.textContent = `${photo.exif.aperture} · ${photo.exif.shutter} · ISO ${photo.exif.iso}`;
+      }
+
+      // 3. Preload adjacent photos (3 behind and 4 ahead) for instantaneous response
+      for (let offset = -3; offset <= 4; offset++) {
+        const target = index + offset;
+        if (offset !== 0 && target >= 0 && target < allPhotos.length) {
+          preloadPhoto(allPhotos[target].imageUrl);
+        }
+      }
+
+      // 4. If not triggered by wheel, notify 3D wheel to snap to the selected photo
+      if (!options.fromWheel) {
+        window.dispatchEvent(new CustomEvent('photography:external-photo-selected', { detail: photo }));
+      }
+    }
+
+    // Listen for custom event from PhotographyWheelPicker (wheel selection)
+    window.addEventListener('photography:photo-selected', ((e: CustomEvent<Photo>) => {
+      if (e.detail) {
+        const idx = allPhotos.findIndex(p => p.id === e.detail.id);
+        if (idx !== -1) {
+          activatePhotoByIndex(idx, { fromWheel: true });
+        }
+      }
+    }) as EventListener);
+
+    // Step photo direct function
+    function stepPhoto(delta: number): boolean {
+      const targetIdx = currentPhotoIndex + delta;
+      if (targetIdx >= 0 && targetIdx < allPhotos.length) {
+        activatePhotoByIndex(targetIdx);
+        return true;
+      }
+      return false;
+    }
+
+    // Global keyboard navigation
+    window.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.defaultPrevented) return;
+      if (['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement)?.tagName)) return;
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        stepPhoto(1);
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        stepPhoto(-1);
+      }
+    });
+
+
+  });
+</script>

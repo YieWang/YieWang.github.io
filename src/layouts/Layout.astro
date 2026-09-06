@@ -6,17 +6,21 @@ interface Props {
   title?: string;
   description?: string;
   isHome?: boolean;
+  fullWidth?: boolean;
+  zeroScroll?: boolean;
 }
 
 const {
   title = "Yi Wang",
   description = "Official website of Yi Wang (王怡), Master's student in Mathematics at the University of Regensburg.",
   isHome = false,
+  fullWidth = false,
+  zeroScroll = false,
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="zh-CN" class={isHome ? "is-home" : ""}>
+<html lang="zh-CN" class={isHome || zeroScroll ? "is-home" : ""}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,35 +37,41 @@ const {
       rel="stylesheet"
     />
   </head>
-  <body class={`bg-white text-[#474747] min-h-screen antialiased selection:bg-stone-200 ${isHome ? "is-home" : ""}`}>
+  <body class={`bg-white text-[#474747] min-h-screen antialiased selection:bg-stone-200 ${isHome || zeroScroll ? "is-home" : ""}`}>
     <div
       id="site-wrapper"
       class="min-h-screen bg-white text-[#474747] flex flex-col justify-between selection:bg-[#E5E5E5] selection:text-black w-full max-w-full"
     >
-      <main class="w-full max-w-[72rem] mx-auto px-4 sm:px-10 md:px-16 pt-2 sm:pt-7 md:pt-8 pb-3 flex-grow flex flex-col justify-start">
+      <main class={`w-full mx-auto pb-1 flex-grow flex flex-col justify-start ${
+        fullWidth
+          ? 'max-w-[100vw] px-2 sm:px-4 md:px-6 pt-1 sm:pt-2'
+          : 'max-w-[72rem] px-4 sm:px-10 md:px-16 pt-2 sm:pt-7 md:pt-8'
+      }`}>
         <slot />
       </main>
-      <Footer />
+      {!zeroScroll && <Footer />}
     </div>
   </body>
 </html>
 
 <style is:global>
 
-  /* 桌面端单屏零滚动 (Desktop Zero-Scroll Viewport on Home) */
+  /* 桌面端单屏零滚动：首页、两个主栏目及单屏画廊 */
   @media (min-width: 768px) {
     body.is-home {
       overflow: hidden;
       height: 100vh;
+      overscroll-behavior: none;
     }
     body.is-home #site-wrapper {
       height: 100vh;
       max-height: 100vh;
       overflow: hidden;
+      overscroll-behavior: none;
     }
   }
 
-  /* 非首页专页 (Mathematics, Marginalia)：保证自然向下流畅滚动 */
+  /* 其他独立内容页保留自然滚动 */
   body:not(.is-home) {
     overflow-y: auto;
     min-height: 100dvh;
@@ -86,7 +96,7 @@ const {
     }
   }
 
-  /* 移动端导航栏：在 640px 以下严格居中，间距紧凑均匀，确保 4 项完整陈列且两端对称 */
+  /* 移动端导航栏：在 640px 以下严格居中，纯净空白间距，确保 4 项完整陈列且两端对称 */
   @media (max-width: 639px) {
     #header nav ul {
       width: 100% !important;
@@ -95,17 +105,14 @@ const {
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      gap: 0.25rem !important;
+      gap: 1.15rem !important;
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
     #header nav ul a {
-      font-size: 0.58rem !important;
-      letter-spacing: 0.025rem !important;
+      font-size: 0.62rem !important;
+      letter-spacing: 0.06rem !important;
       padding: 0.375rem 0.2rem !important;
-    }
-    #header nav ul li.separator {
-      font-size: 0.58rem !important;
     }
   }
 </style>

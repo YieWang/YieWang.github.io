@@ -1,0 +1,220 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import { photographyChapters, allPhotos } from '../../../data/photography';
+
+const firstPhoto = allPhotos[0];
+---
+
+<Layout
+  title="Photography · Yi Wang"
+  description="Photographic archive with tactile floating card elevation."
+  isHome={false}
+  fullWidth={true}
+>
+  <Header activeTab="marginalia" />
+
+  <!-- Fullscreen Elevation Canvas (Zero Breadcrumbs, Zero Selectors) -->
+  <div class="w-full h-[calc(100vh-80px)] min-h-[580px] flex items-stretch gap-2 sm:gap-6 overflow-hidden select-none">
+    
+    <!-- LEFT: Tactile Paper Card Stream (Ultra-compact, ~135px, Docked to left edge) -->
+    <aside class="w-[105px] sm:w-[125px] md:w-[140px] flex-shrink-0 h-full flex flex-col relative z-20 pl-1 sm:pl-2">
+      <div
+        id="elevation-stream"
+        class="w-full h-full overflow-y-auto space-y-6 py-10 pr-2 elevation-scroll-container"
+        style="perspective: 1000px;"
+      >
+        {photographyChapters.map((chapter) => (
+          <div class="space-y-4">
+            <!-- Micro Year / Location Header -->
+            <div class="sticky top-0 z-30 bg-white/95 backdrop-blur-xs py-1 border-b border-[#EAEAEA] text-left">
+              <span class="text-[0.78rem] font-bold text-[#2A2A2A] font-mono tracking-wider">
+                {chapter.year}
+              </span>
+              <span class="block text-[0.56rem] text-[#888888] uppercase tracking-[0.16rem] truncate">
+                {chapter.locationEn}
+              </span>
+            </div>
+
+            <!-- Elevated Matte Paper Photo Cards -->
+            <div class="space-y-4 py-1">
+              {chapter.photos.map((photo) => (
+                <div
+                  id={`elev-${photo.id}`}
+                  class="elevation-card group relative cursor-pointer bg-white p-1 rounded-[2px] transition-all duration-300 ease-out"
+                  data-photo-json={JSON.stringify(photo)}
+                  data-photo-id={photo.id}
+                  style="will-change: transform, box-shadow;"
+                >
+                  <div class="relative w-full aspect-[3/2] bg-[#F0F0F0] overflow-hidden rounded-[1px]">
+                    <img
+                      src={photo.thumbnailUrl}
+                      alt=""
+                      loading="lazy"
+                      class="w-full h-full object-cover pointer-events-none"
+                    />
+
+                    <!-- Pure Minimalist Corner Number -->
+                    <span class="absolute top-1 left-1 text-[0.52rem] font-mono font-bold text-white/90 bg-black/40 px-1 py-0.2 rounded-[1px]">
+                      {String(allPhotos.findIndex(item => item.id === photo.id) + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+        <div class="h-20"></div>
+      </div>
+    </aside>
+
+    <!-- RIGHT: Vast Full-Bleed Showcase Canvas -->
+    <main class="flex-1 h-full flex flex-col items-center justify-center relative p-2 sm:p-4 overflow-hidden">
+      <div class="relative w-full h-full flex items-center justify-center">
+        <img
+          id="elev-stage-img"
+          src={firstPhoto.imageUrl}
+          alt={firstPhoto.title}
+          class="max-w-full max-h-[86vh] w-auto h-auto object-contain transition-all duration-350 ease-out shadow-[0_12px_45px_rgba(0,0,0,0.08)] rounded-[2px]"
+        />
+      </div>
+
+      <!-- Micro Exif Footnote -->
+      <div class="absolute bottom-2 right-4 flex items-center gap-2.5 text-[0.68rem] font-mono text-[#777777] bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-[1px] select-none">
+        <span id="elev-stage-loc" class="font-medium text-[#222222] uppercase">
+          {firstPhoto.locationEn} · {firstPhoto.year}
+        </span>
+        <span class="text-[#D0D0D0]">·</span>
+        <span id="elev-stage-cam">{firstPhoto.camera}</span>
+      </div>
+    </main>
+
+  </div>
+</Layout>
+
+<style>
+  .elevation-scroll-container::-webkit-scrollbar {
+    width: 2px;
+  }
+  .elevation-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .elevation-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 1px;
+  }
+
+  /* Inactive: Flush against the wall with soft flat shadow */
+  .elevation-card {
+    opacity: 0.45;
+    transform: scale(0.94);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Active: Floats off the wall with deep physical elevation shadow */
+  .elevation-card.active-elevated {
+    opacity: 1 !important;
+    transform: scale(1.08) translateY(-3px) !important;
+    box-shadow: 0 24px 44px -8px rgba(0, 0, 0, 0.3), 0 8px 16px -4px rgba(0, 0, 0, 0.12) !important;
+    z-index: 30;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('elevation-stream');
+    const cards = Array.from(document.querySelectorAll('.elevation-card')) as HTMLElement[];
+    const stageImg = document.getElementById('elev-stage-img') as HTMLImageElement;
+    const stageLoc = document.getElementById('elev-stage-loc');
+    const stageCam = document.getElementById('elev-stage-cam');
+
+    let currentId = '';
+
+    function showPhoto(photo: any) {
+      if (!photo || photo.id === currentId) return;
+      currentId = photo.id;
+
+      if (stageImg) {
+        stageImg.style.opacity = '0.35';
+        stageImg.style.transform = 'scale(0.99)';
+
+        const pre = new Image();
+        pre.src = photo.imageUrl;
+        pre.onload = () => {
+          if (photo.id !== currentId) return;
+          stageImg.src = photo.imageUrl;
+          stageImg.style.opacity = '1';
+          stageImg.style.transform = 'scale(1)';
+
+          if (stageLoc) stageLoc.textContent = `${photo.locationEn} · ${photo.year}`;
+          if (stageCam) stageCam.textContent = `${photo.camera} · ${photo.film || ''}`;
+        };
+      }
+    }
+
+    function updateElevation() {
+      if (!container) return;
+      const cRect = container.getBoundingClientRect();
+      const centerY = cRect.top + cRect.height / 2;
+
+      let closest: HTMLElement | null = null;
+      let minDiff = Infinity;
+
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const cardY = rect.top + rect.height / 2;
+        const diff = Math.abs(cardY - centerY);
+
+        if (diff < minDiff) {
+          minDiff = diff;
+          closest = card;
+        }
+
+        if (diff > 60) {
+          card.classList.remove('active-elevated');
+          const op = Math.max(0.35, 1 - diff / (cRect.height * 0.7));
+          card.style.opacity = `${op}`;
+        }
+      });
+
+      if (closest && minDiff <= 80) {
+        const target = closest as HTMLElement;
+        cards.forEach(c => {
+          if (c !== target) c.classList.remove('active-elevated');
+        });
+        target.classList.add('active-elevated');
+        target.style.opacity = '1';
+
+        const pJson = target.getAttribute('data-photo-json');
+        if (pJson) showPhoto(JSON.parse(pJson));
+      }
+    }
+
+    if (cards.length > 0) {
+      cards[0].classList.add('active-elevated');
+      const fJson = cards[0].getAttribute('data-photo-json');
+      if (fJson) showPhoto(JSON.parse(fJson));
+    }
+
+    let ticking = false;
+    container?.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateElevation();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const pJson = card.getAttribute('data-photo-json');
+        if (pJson) showPhoto(JSON.parse(pJson));
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+
+    updateElevation();
+  });
+</script>

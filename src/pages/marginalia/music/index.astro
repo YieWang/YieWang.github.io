@@ -1,0 +1,431 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import { musicAlbums, musicArtists, type MusicAlbum } from '../../../data/music';
+
+// Group albums strictly by artist in the order defined in musicArtists
+const artistGroups = musicArtists.map(artist => {
+  const albums = musicAlbums.filter(album => album.artistId === artist.id);
+  return {
+    artist,
+    albums
+  };
+}).filter(group => group.albums.length > 0);
+---
+
+<Layout
+  title="Music · Marginalia · Yi Wang"
+  description="Personal listening room, curated vinyl archive, and selected tracks with impressions."
+  isHome={false}
+  fullWidth={true}
+>
+  <Header activeTab="marginalia" />
+
+  <!-- Main Container: Pure Breath, Zero Breadcrumbs, Grouped by Artist -->
+  <div class="max-w-[1760px] mx-auto w-full pb-28 pt-6 sm:pt-10 md:pt-12 px-4 sm:px-8 md:px-12">
+    
+    <!-- MAIN GALLERY: Grouped by Artist -->
+    <main class="space-y-16 sm:space-y-24">
+      {artistGroups.map((group) => (
+        <section id={`section-${group.artist.id}`} class="space-y-6 select-none">
+          
+          <!-- Section Header: Only Native Artist Name on left, NO number on right -->
+          <div class="border-b border-[#F0F0F0] pb-3">
+            <h2
+              class="text-[1.05rem] sm:text-[1.18rem] font-bold tracking-[0.18rem] uppercase text-[#1E1E1E]"
+              style="font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;"
+            >
+              {group.artist.displayName}
+            </h2>
+          </div>
+
+          <!-- Enlarged Vinyl Grid: Generous gap-x to guarantee vinyl peek never overlaps adjacent album -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-6 sm:gap-x-7 md:gap-x-8 gap-y-9 sm:gap-y-11">
+            {group.albums.map((album) => (
+              <article
+                class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index]"
+                data-album-id={album.id}
+                data-album-json={JSON.stringify(album)}
+              >
+                <!-- Top Portion: Pure 1:1 Sleeve with Balanced Vinyl Disc Slide & Micro-Rotation -->
+                <div class="space-y-2.5 text-left">
+                  <!-- Vinyl Container: Sleeve glides slightly left while Vinyl glides right into the gap -->
+                  <div class="relative w-full aspect-square flex items-center select-none">
+                    
+                    <!-- Sliding Vinyl Disc: NO shadow, rotates 40deg, glides into the gap safely -->
+                    <div class="vinyl-disc absolute right-0 top-0 bottom-0 aspect-square rounded-full bg-[#111112] shadow-none z-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu translate-x-0 rotate-0 group-hover:translate-x-[22%] group-hover:rotate-[40deg] pointer-events-none flex items-center justify-center">
+                      <!-- Concentric Vinyl Grooves -->
+                      <div class="w-[90%] h-[90%] rounded-full border border-white/[0.08] flex items-center justify-center">
+                        <div class="w-[78%] h-[78%] rounded-full border border-white/[0.06] flex items-center justify-center">
+                          <div class="w-[64%] h-[64%] rounded-full border border-white/[0.05] flex items-center justify-center">
+                            <!-- Center Vinyl Label -->
+                            <div class="w-[38%] h-[38%] rounded-full bg-[#202022] border border-black/40 overflow-hidden relative flex items-center justify-center">
+                              <img src={album.coverUrl} alt="" class="w-full h-full object-cover scale-150 blur-[0.4px] opacity-85" />
+                              <!-- Center Spindle Hole -->
+                              <div class="w-2 h-2 rounded-full bg-[#0E0E10] border border-white/20 absolute z-10"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Real High-Res Album Sleeve (Top layer, shifts slightly left on hover to reveal vinyl) -->
+                    <div class="relative z-10 w-full h-full bg-[#EAEAEA] rounded-[2px] shadow-[0_2px_10px_rgba(0,0,0,0.06)] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu group-hover:-translate-x-2 group-hover:shadow-[0_6px_20px_rgba(0,0,0,0.10)]">
+                      <!-- Left Spine Ridge Shadow -->
+                      <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-20 pointer-events-none"></div>
+                      <!-- Right Opening Shadow -->
+                      <div class="absolute right-0 top-0 bottom-0 w-[3px] bg-gradient-to-l from-black/15 to-transparent z-20 pointer-events-none"></div>
+
+                      <img
+                        src={album.coverUrl}
+                        alt={album.title}
+                        loading="lazy"
+                        class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
+                      />
+                    </div>
+
+                  </div>
+
+                  <!-- Pure Album Title in Authentic Native Name (No artist name underneath) -->
+                  <div class="pt-0.5 select-none">
+                    <h3
+                      class="text-[0.82rem] sm:text-[0.88rem] font-medium leading-[1.35] text-[#1E1E1E] group-hover:text-black transition-colors line-clamp-2 break-words"
+                      style="font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;"
+                      title={album.title}
+                    >
+                      {album.title}
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- Fixed Baseline Row: Only Year on left, NO icon on right -->
+                <div class="pt-2 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent select-none">
+                  <span class="whitespace-nowrap shrink-0">{album.year}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+        </section>
+      ))}
+    </main>
+
+  </div>
+
+  <!-- MODAL / LIGHTBOX (100% Matching Cinema Backdrop & Exit Pattern) -->
+  <div
+    id="music-modal-backdrop"
+    class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
+    style="will-change: opacity;"
+  >
+    <div
+      id="music-modal-container"
+      class="bg-white max-w-xl sm:max-w-3xl w-full h-[540px] sm:h-[580px] max-h-[88vh] rounded-[3px] shadow-2xl p-5 sm:p-7 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
+    >
+      <!-- Injected by Modal Script -->
+      <div id="music-modal-content" class="w-full h-full flex flex-col min-h-0"></div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import type { MusicAlbum } from '../../../data/music';
+
+  const musicCards = document.querySelectorAll<HTMLElement>('.music-card');
+  const modalBackdrop = document.getElementById('music-modal-backdrop');
+  const modalContainer = document.getElementById('music-modal-container');
+  const modalContentSlot = document.getElementById('music-modal-content');
+
+  let isModalOpen = false;
+  let lockedScrollTop = 0;
+  let isMouseDownOnBackdrop = false;
+  let closeTimer: ReturnType<typeof setTimeout> | null = null;
+  let touchStartY = 0;
+
+  function openModal(album: MusicAlbum) {
+    if (!modalContentSlot || !modalBackdrop || !modalContainer) return;
+    if (closeTimer) {
+      clearTimeout(closeTimer);
+      closeTimer = null;
+    }
+
+    // Filter favorite tracks
+    const favTracks = album.tracks.filter(t => t.isFavorite || t.note);
+    const displayTracks = favTracks.length > 0 ? favTracks : album.tracks;
+
+    // Track rows with clean SVG Chevron toggle, COLLAPSED by default
+    const favoriteTracksHtml = displayTracks.map((t, idx) => {
+      const hasNote = Boolean(t.note);
+      return `
+        <div class="track-row py-2.5 border-b border-[#F4F4F4] last:border-b-0 space-y-1.5 transition-colors">
+          <div
+            class="track-header-row flex items-baseline justify-between gap-3 text-[0.84rem] sm:text-[0.88rem] ${hasNote ? 'cursor-pointer group hover:text-black select-none' : ''}"
+            data-track-index="${idx}"
+          >
+            <div class="flex items-baseline gap-2.5 min-w-0">
+              <span class="font-mono text-[0.70rem] text-[#888888] w-4 shrink-0">${String(t.trackNo).padStart(2, '0')}</span>
+              <span class="font-semibold text-[#1E1E1E] tracking-wide truncate group-hover:text-black">${t.title}</span>
+            </div>
+            
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="font-mono text-[0.70rem] sm:text-[0.74rem] text-[#888888]">${t.duration}</span>
+              ${hasNote ? `
+                <button
+                  type="button"
+                  class="toggle-track-note-btn text-[#888888] group-hover:text-black transition-colors p-0.5"
+                  title="Toggle track impression"
+                  aria-label="Toggle track impression"
+                  data-track-index="${idx}"
+                >
+                  <svg class="chevron-icon w-3.5 h-3.5 transition-transform duration-200 transform rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              ` : ''}
+            </div>
+          </div>
+
+          ${hasNote ? `
+            <div
+              id="track-note-${idx}"
+              class="track-note-container hidden pt-1.5 pb-1 pl-6 pr-2 text-[0.82rem] sm:text-[0.85rem] text-[#444444] leading-[1.85] text-justify font-normal"
+              style="text-indent: 1.5em;"
+            >
+              ${t.note}
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }).join('');
+
+    modalContentSlot.innerHTML = `
+      <!-- 1. TOP BAR (Fixed Header, Authentic Title Only, No Duplicate Names) -->
+      <div class="border-b border-[#F0F0F0] pb-3 mb-4 shrink-0 flex items-baseline justify-between gap-3 select-none">
+        <h2
+          class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words"
+          style="font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;"
+        >
+          ${album.title}
+        </h2>
+      </div>
+
+      <!-- 2. TWO-COLUMN MAIN BODY: Left Pinned Artwork & Specs, Right Favorite Tracks -->
+      <div class="flex flex-col sm:flex-row items-stretch gap-6 sm:gap-7 flex-1 min-h-0 overflow-hidden">
+        
+        <!-- LEFT COLUMN: 1:1 Cover Artwork & Minimal Info (100% Pinned, Never Scrolls) -->
+        <div class="w-full sm:w-[170px] md:w-[185px] shrink-0 flex flex-row sm:flex-col items-center sm:items-stretch justify-start h-auto sm:h-full gap-4 sm:gap-0">
+          <div class="flex sm:flex-col items-center sm:items-stretch gap-3 sm:space-y-4 w-full">
+            
+            <!-- 1:1 Real Cover Frame -->
+            <div class="w-[85px] sm:w-full aspect-square bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
+              <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
+              <img src="${album.coverUrl}" alt="${album.title}" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Clean Key Metadata: Artist & Year Only -->
+            <div class="space-y-2.5 pt-0 sm:pt-1 text-left sm:text-left">
+              <div class="space-y-0.5 min-w-0">
+                <div class="text-[#999999] uppercase text-[0.60rem] tracking-wider font-mono">ARTIST</div>
+                <div class="text-black font-medium text-[0.82rem] sm:text-[0.86rem] truncate">
+                  ${album.artistDisplayName}
+                </div>
+              </div>
+
+              <div class="space-y-0.5 min-w-0">
+                <div class="text-[#999999] uppercase text-[0.60rem] tracking-wider font-mono">RELEASED</div>
+                <div class="text-black font-mono text-[0.80rem] sm:text-[0.84rem]">
+                  ${album.year}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Favorite Tracks & Personal Impressions (Zero redundant headers) -->
+        <div class="flex-1 min-w-0 flex flex-col h-full overflow-hidden">
+          
+          <!-- Scrollable Tracks Area (No 'tracks' or 'favorite tracks' labels) -->
+          <div
+            id="modal-right-scroll-pane"
+            class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2 pt-0.5"
+            style="scrollbar-gutter: stable;"
+          >
+            <div class="space-y-0.5">
+              ${favoriteTracksHtml}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    `;
+
+    // Bind click-to-expand track impressions with rotating SVG chevron
+    const headerRows = modalContentSlot.querySelectorAll<HTMLElement>('.track-header-row');
+    headerRows.forEach((row) => {
+      row.addEventListener('click', () => {
+        const idx = row.dataset.trackIndex;
+        if (!idx) return;
+        const noteContainer = document.getElementById(`track-note-${idx}`);
+        const chevron = row.querySelector<SVGElement>('.chevron-icon');
+        if (!noteContainer) return;
+
+        const isHidden = noteContainer.classList.contains('hidden');
+        if (isHidden) {
+          noteContainer.classList.remove('hidden');
+          if (chevron) {
+            chevron.classList.remove('rotate-0');
+            chevron.classList.add('rotate-180');
+          }
+        } else {
+          noteContainer.classList.add('hidden');
+          if (chevron) {
+            chevron.classList.remove('rotate-180');
+            chevron.classList.add('rotate-0');
+          }
+        }
+      });
+    });
+
+    // Reset right scroll pane to top
+    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    if (scrollPane) scrollPane.scrollTop = 0;
+
+    // Lock window scroll position (Cinema exact pattern)
+    lockedScrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+    isModalOpen = true;
+
+    // Reveal Modal with Crossfade & GPU Scale (Cinema identical)
+    modalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+    modalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+
+    requestAnimationFrame(() => {
+      modalContainer.classList.remove('scale-[0.97]', 'opacity-0');
+      modalContainer.classList.add('scale-100', 'opacity-100');
+    });
+  }
+
+  function closeModal() {
+    if (!modalBackdrop || !modalContainer || !isModalOpen) return;
+    isModalOpen = false;
+
+    // Animate out smoothly (Cinema identical)
+    modalBackdrop.classList.remove('opacity-100');
+    modalBackdrop.classList.add('opacity-0');
+
+    modalContainer.classList.remove('scale-100', 'opacity-100');
+    modalContainer.classList.add('scale-[0.97]', 'opacity-0');
+
+    if (closeTimer) clearTimeout(closeTimer);
+    closeTimer = setTimeout(() => {
+      modalBackdrop.classList.remove('pointer-events-auto');
+      modalBackdrop.classList.add('pointer-events-none');
+      if (modalContentSlot) modalContentSlot.innerHTML = '';
+      closeTimer = null;
+    }, 250);
+  }
+
+  // Click card to open modal
+  musicCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const json = card.dataset.albumJson;
+      if (json) {
+        try {
+          const album = JSON.parse(json) as MusicAlbum;
+          openModal(album);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    });
+  });
+
+  // Click outside modal container on backdrop to close (Cinema exact pattern)
+  modalBackdrop?.addEventListener('mousedown', (e) => {
+    isMouseDownOnBackdrop = (e.target === modalBackdrop);
+  });
+
+  modalBackdrop?.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop && isMouseDownOnBackdrop) {
+      closeModal();
+    }
+    isMouseDownOnBackdrop = false;
+  });
+
+  // ESC key listener (Cinema exact pattern)
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isModalOpen) {
+      closeModal();
+    }
+  });
+
+  // Wheel lock during modal open (Cinema exact pattern)
+  window.addEventListener('wheel', (e) => {
+    if (!isModalOpen) return;
+
+    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    if (scrollPane && scrollPane.contains(e.target as Node)) {
+      const { scrollTop, scrollHeight, clientHeight } = scrollPane;
+      const isScrollable = scrollHeight > clientHeight;
+
+      if (!isScrollable) {
+        e.preventDefault();
+        return;
+      }
+
+      if (e.deltaY < 0 && scrollTop <= 0) {
+        e.preventDefault();
+        return;
+      }
+      if (e.deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
+        e.preventDefault();
+        return;
+      }
+      return;
+    }
+
+    e.preventDefault();
+  }, { passive: false });
+
+  // Scroll position clamp
+  window.addEventListener('scroll', () => {
+    if (isModalOpen && window.scrollY !== lockedScrollTop) {
+      window.scrollTo({ top: lockedScrollTop, behavior: 'instant' });
+    }
+  }, { passive: true });
+
+  // Touch handlers for mobile
+  window.addEventListener('touchstart', (e) => {
+    if (!isModalOpen) return;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!isModalOpen) return;
+
+    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    if (scrollPane && scrollPane.contains(e.target as Node)) {
+      const { scrollTop, scrollHeight, clientHeight } = scrollPane;
+      const isScrollable = scrollHeight > clientHeight;
+
+      if (!isScrollable) {
+        e.preventDefault();
+        return;
+      }
+
+      const deltaY = touchStartY - e.touches[0].clientY;
+      if (deltaY < 0 && scrollTop <= 0) {
+        e.preventDefault();
+        return;
+      }
+      if (deltaY > 0 && scrollTop + clientHeight >= scrollHeight - 1) {
+        e.preventDefault();
+        return;
+      }
+      return;
+    }
+
+    e.preventDefault();
+  }, { passive: false });
+</script>
