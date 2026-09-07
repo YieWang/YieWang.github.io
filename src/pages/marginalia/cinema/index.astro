@@ -1,12 +1,12 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
-import { cinemaFilms, cinemaSeries, cinemaAnimation, groupFilmCollections } from '../../../data/cinema';
+import { cinemaFilms, cinemaSeries, cinemaAnimation, groupFilmCollections, withSeasonDetails } from '../../../data/cinema';
 
 const categories = [
   { id: 'films', label: 'Films', items: groupFilmCollections(cinemaFilms) },
-  { id: 'series', label: 'Series', items: [...cinemaSeries].sort((a, b) => Number(!!b.review) - Number(!!a.review)) },
-  { id: 'animation', label: 'Animation', items: groupFilmCollections(cinemaAnimation) },
+  { id: 'series', label: 'Series', items: cinemaSeries.map(withSeasonDetails).sort((a, b) => Number(!!b.review) - Number(!!a.review)) },
+  { id: 'animation', label: 'Animation', items: groupFilmCollections(cinemaAnimation).map(withSeasonDetails) },
 ];
 ---
 
@@ -291,7 +291,7 @@ const categories = [
             style="scrollbar-gutter: stable;"
           >
             ${selection.installments ? `
-              <div class="space-y-2" aria-label="Films in this collection">
+              <div class="space-y-2" aria-label="${selection.type === 'series' ? 'Seasons in this series' : 'Films in this collection'}">
                 ${selection.installments.map((film, index) => `
                   <button type="button" data-installment="${index}" aria-pressed="${index === installmentIndex}"
                     class="watched-entry block w-full text-left border-b border-[#F0F0F0] pb-2 cursor-pointer text-[#777777] hover:text-black aria-pressed:text-black aria-pressed:font-semibold focus-visible:outline focus-visible:outline-1">
@@ -300,8 +300,8 @@ const categories = [
                   </button>`).join('')}
               </div>` : ''}
             ${item.summary ? `<p class="text-sm leading-relaxed whitespace-pre-line">${escapeHtml(item.summary)}</p>` : ''}
-            ${item.type === 'series' ? (item.watchedEntries || []).map(entry => `
-              <div class="watched-entry border-b border-[#F0F0F0] pb-3 space-y-1">
+            ${item.type === 'series' && (item.watchedEntries?.length || 0) > 1 ? (item.watchedEntries || []).map(entry => `
+              <div class="season-watch-record border-b border-[#F0F0F0] pb-3 space-y-1">
                 <div class="text-[0.84rem] font-medium">${escapeHtml(entry.title)}</div>
                 <div class="text-[0.7rem] font-mono text-[#888888]">${escapeHtml(entry.firstWatched)}${entry.rating ? ` · ${escapeHtml(entry.rating)}` : ''}</div>
                 ${entry.comment ? `<p class="text-[0.84rem] leading-relaxed whitespace-pre-line">${escapeHtml(entry.comment)}</p>` : ''}

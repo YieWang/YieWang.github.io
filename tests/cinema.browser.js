@@ -26,7 +26,10 @@ async page => {
   const office = page.locator('.cinema-card[data-item-id="tv-2316"]');
   await office.click();
   await page.waitForFunction(() => getComputedStyle(document.getElementById('cinema-modal-container')).opacity === '1' && getComputedStyle(document.getElementById('cinema-modal-backdrop')).opacity === '1');
-  if (await page.locator('.watched-entry').count() !== 9) throw Error('Office seasons must share one poster and retain nine watched entries');
+  if (await page.locator('[data-installment]').count() !== 9) throw Error('Office must have nine selectable seasons');
+  const firstPoster = await page.locator('#modal-content-slot img').getAttribute('src');
+  await page.locator('[data-installment="1"]').click();
+  if (await page.locator('#modal-content-slot img').getAttribute('src') === firstPoster) throw Error('Season poster did not switch');
   const dates = await page.locator('.watched-entry').allTextContents();
   if (!dates.every(s => s.includes('2026-09-07'))) throw Error('Watched dates changed');
   await page.waitForFunction(() => [...document.querySelectorAll('#modal-content-slot img')].every(i => i.complete && i.naturalWidth));
@@ -39,5 +42,5 @@ async page => {
   if (await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)) throw Error('Horizontal overflow');
   await page.screenshot({ path: 'output/playwright/cinema-series-mobile.png' });
   await page.keyboard.press('Escape');
-  return { films: 336, series: 51, officeWatchedEntries: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
+  return { series: 51, officeSeasons: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
 }

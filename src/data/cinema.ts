@@ -2,7 +2,8 @@ import importedCinema from './cinema-import.json';
 import { cinemaGroups } from './media-curation.json';
 
 export interface MediaItem {
-  installments?: MediaItem[];   // Visible films sharing one collection card
+  installments?: MediaItem[];   // Films or seasons sharing one collection card
+  seasons?: (Partial<MediaItem> & { id: string; title: string; year: number | string; posterUrl: string; releaseDate?: string })[];
   hidden?: boolean;
   id: string;
   title: string;                 // English display title
@@ -24,7 +25,7 @@ export interface MediaItem {
   firstWatched?: string;         // First watch date e.g. "2019.04"
   rewatched?: string;            // Rewatch dates e.g. "2021.04, 2024.04"
   externalLink?: {
-    platform: 'IMDb' | 'Douban';
+    platform: 'IMDb' | 'Douban' | 'TMDb';
     url: string;
   };
   tmdbId?: number;
@@ -96,4 +97,16 @@ export function groupFilmCollections(items: MediaItem[]): MediaItem[] {
     return [{ ...first, title: collectionTitles[cinemaGroups[group][0]] || first.title,
       director: [...new Set(installments.map(film => film.director))].join(', '), installments }];
   });
+}
+
+// Seasons reuse the same detail switcher as film collections.
+export function withSeasonDetails(item: MediaItem): MediaItem {
+  if (!item.seasons?.length) return item;
+  const { seasons, ...series } = item;
+  const installments = [...seasons].sort((a, b) => String(a.releaseDate || a.year).localeCompare(String(b.releaseDate || b.year))).map(season => ({
+    ...series, ...season, span: undefined, summary: season.summary || '', review: season.review,
+    rating: season.rating || '', firstWatched: season.firstWatched || '', rewatched: season.rewatched || '',
+    watchedEntries: season.watchedEntries || [],
+  }));
+  return { ...series, year: installments[0].year, posterUrl: installments[0].posterUrl, installments };
 }

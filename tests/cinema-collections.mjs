@@ -28,3 +28,20 @@ assert.deepEqual(Array.from(killBill.installments, x => x.id), ['film-1291580', 
 assert.equal(groupFilmCollections([killBill.installments[1]])[0], killBill.installments[1], 'A single retained film stays a normal card');
 assert.equal(groupFilmCollections(cinemaSeries).length, cinemaSeries.length, 'Do not combine different TV shows');
 console.log('Collection membership, hidden films, release order, single films and TV preservation passed');
+
+const { allCinemaItems, withSeasonDetails } = context.exports;
+const vinland = withSeasonDetails(allCinemaItems.find(x => x.id === 'tv-88803'));
+assert.deepEqual(Array.from(vinland.installments, x => x.year), [2019, 2023]);
+assert.notEqual(vinland.installments[0].posterUrl, vinland.installments[1].posterUrl);
+for (const series of allCinemaItems.filter(x => x.seasons?.length)) {
+  const card = withSeasonDetails(series);
+  assert.equal(card.posterUrl, card.installments[0].posterUrl);
+  assert.equal(card.year, card.installments[0].year);
+  assert.deepEqual(Array.from(card.installments.flatMap(x => x.watchedEntries), x => JSON.stringify(x)).sort(), Array.from(series.watchedEntries, x => JSON.stringify(x)).sort());
+  for (const season of card.installments) {
+    assert.ok(!season.seasons && !season.installments, 'Season payloads must not recursively carry the whole series');
+    assert.ok(!season.review && !season.summary, 'Do not restore deleted reviews');
+    if (!season.watchedEntries.length) assert.ok(!season.rating && !season.firstWatched, 'Unrecorded seasons must not inherit personal ratings or dates');
+  }
+}
+console.log('Season details, first covers, original watch records and missing ratings passed');

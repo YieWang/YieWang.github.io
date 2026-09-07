@@ -9,7 +9,7 @@
     "country": "US",
     "genre": "Comedy",
     "runtime": "9 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-2316-1a8e2f760d06.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/abbc06dd5205aa6d-ecc053be7a62.webp",
     "summary": "",
     "firstWatched": "2026-09-07",
     "externalLink": {
@@ -83,7 +83,243 @@
     ],
     "tmdbId": 2316,
     "span": "2005–2013",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "seasons": [
+      {
+        "id": "tv-2316-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2005,
+        "releaseDate": "2005-03-24",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/abbc06dd5205aa6d-ecc053be7a62.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "10529476",
+            "title": "办公室 第一季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/10529476/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/d71JQWhX75ZE2D383DlIsHVH1In.jpg"
+      },
+      {
+        "id": "tv-2316-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2005,
+        "releaseDate": "2005-09-20",
+        "runtime": "22 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/93b5cf69ee940dd1-c29686990774.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "2159568",
+            "title": "办公室 第二季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/2159568/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sAd3RhOjhTuaIBpyiI1QmB0YUq8.jpg"
+      },
+      {
+        "id": "tv-2316-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "第 3 季",
+        "year": 2006,
+        "releaseDate": "2006-09-21",
+        "runtime": "23 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/96c98edcbe078679-4b1ef5885fa6.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "2163588",
+            "title": "办公室 第三季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/2163588/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1SR5ZR0KNHTRvAzFayaKbhKAFSu.jpg"
+      },
+      {
+        "id": "tv-2316-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4",
+        "originalTitle": "第 4 季",
+        "year": 2007,
+        "releaseDate": "2007-09-27",
+        "runtime": "14 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1d0c7578a31f309a-ff2038cd3a9f.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "2171019",
+            "title": "办公室 第四季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/2171019/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zunFI6wdYJQRHnfXnziArUTs2e2.jpg"
+      },
+      {
+        "id": "tv-2316-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5",
+        "originalTitle": "第 5 季",
+        "year": 2008,
+        "releaseDate": "2008-09-25",
+        "runtime": "26 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/fb128a8bb9a64366-8548f63af724.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "3100868",
+            "title": "办公室 第五季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/3100868/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hwlQxOPGIybqBz5TYYIe6XtOfi4.jpg"
+      },
+      {
+        "id": "tv-2316-season-6",
+        "seasonNumber": 6,
+        "title": "Season 6",
+        "originalTitle": "第 6 季",
+        "year": 2009,
+        "releaseDate": "2009-09-17",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/6c2511dc5f746041-fff08fb8e251.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "4040275",
+            "title": "办公室 第六季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/4040275/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hk3a9U26J726oV8nHTdeMTtH91B.jpg"
+      },
+      {
+        "id": "tv-2316-season-7",
+        "seasonNumber": 7,
+        "title": "Season 7",
+        "originalTitle": "第 7 季",
+        "year": 2010,
+        "releaseDate": "2010-09-23",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/8028cf966e619592-b70bfdb60337.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "5279668",
+            "title": "办公室 第七季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/5279668/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uR3y9BwPA8gnk2nmB6ncQejEe8k.jpg"
+      },
+      {
+        "id": "tv-2316-season-8",
+        "seasonNumber": 8,
+        "title": "Season 8",
+        "originalTitle": "第 8 季",
+        "year": 2011,
+        "releaseDate": "2011-09-22",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/46009b9c67e9e79b-d9114325dbb3.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "6810257",
+            "title": "办公室 第八季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/6810257/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sQLtAEBbQNIXGZyTUt3IK9gX4VE.jpg"
+      },
+      {
+        "id": "tv-2316-season-9",
+        "seasonNumber": 9,
+        "title": "Season 9",
+        "originalTitle": "第 9 季",
+        "year": 2012,
+        "releaseDate": "2012-09-20",
+        "runtime": "23 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/4e5b288202b40eac-48b26c614f75.webp",
+        "firstWatched": "2026-09-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "11232690",
+            "title": "办公室 第九季",
+            "firstWatched": "2026-09-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/11232690/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ncR9y2RApOTSjfggJHjvoIlAqDG.jpg"
+      }
+    ]
   },
   {
     "id": "film-1787291",
@@ -358,7 +594,7 @@
     "country": "DE",
     "genre": "Crime, Drama, Sci-Fi & Fantasy, Mystery",
     "runtime": "3 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-70523-07db6eab9b5b.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/5f3d4fcbf6975e70-e7224822f16d.webp",
     "summary": "",
     "firstWatched": "2026-05-16",
     "externalLink": {
@@ -390,7 +626,87 @@
     ],
     "tmdbId": 70523,
     "span": "2017–2020",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "seasons": [
+      {
+        "id": "tv-70523-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2017,
+        "releaseDate": "2017-12-01",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/5f3d4fcbf6975e70-e7224822f16d.webp",
+        "firstWatched": "2026-05-16",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26992330",
+            "title": "暗黑 第一季",
+            "firstWatched": "2026-05-16",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26992330/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/spN6icwSwuAuOcuZLC9bKjK6N2i.jpg"
+      },
+      {
+        "id": "tv-70523-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2019,
+        "releaseDate": "2019-06-21",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ddf09d34b4e24268-90234a4c0d73.webp",
+        "firstWatched": "2026-05-16",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "27611018",
+            "title": "暗黑 第二季",
+            "firstWatched": "2026-05-16",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/27611018/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/c8Aq3By7Z5JBIiue9WeDP0N3Zlu.jpg"
+      },
+      {
+        "id": "tv-70523-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "第 3 季",
+        "year": 2020,
+        "releaseDate": "2020-06-27",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/9f6687ccf4c2d5c4-ed33425730a9.webp",
+        "firstWatched": "2026-05-16",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "34442364",
+            "title": "暗黑 第三季",
+            "firstWatched": "2026-05-16",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/34442364/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5Dk9V5K7IlFQTTHbuc6KvKWLD55.jpg"
+      }
+    ]
   },
   {
     "id": "film-1291546",
@@ -605,7 +921,61 @@
     "tmdbId": 95479,
     "span": "2020–2026",
     "rating": "4 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-95479-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2020,
+        "releaseDate": "2020-10-02",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-95479-e0d2f97fa59a.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "4 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "34895145",
+            "title": "咒术回战 第一季",
+            "firstWatched": "2026-02-17",
+            "rating": "4 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/34895145/"
+        },
+        "posterSourceUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-95479-e0d2f97fa59a.webp"
+      },
+      {
+        "id": "tv-95479-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2023,
+        "releaseDate": "2023-07-06",
+        "runtime": "23 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/beba8998cc91ca99-09a7da67d73a.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "4 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "35765350",
+            "title": "咒术回战 第二季",
+            "firstWatched": "2026-02-17",
+            "rating": "4 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/35765350/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fHQ2XHRdRix0rkDCShmGQ8c6d03.jpg"
+      }
+    ]
   },
   {
     "id": "tv-117933",
@@ -647,7 +1017,7 @@
     "country": "JP",
     "genre": "Animation, Drama, Mystery, Sci-Fi & Fantasy",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-83097-23f04d986ff7.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ac678bf7a81490ee-06a2f1c49202.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -666,7 +1036,53 @@
     "tmdbId": 83097,
     "span": "2019–2021",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-83097-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2019,
+        "releaseDate": "2019-01-10",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ac678bf7a81490ee-06a2f1c49202.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "30206430",
+            "title": "约定的梦幻岛",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30206430/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/x2JKm34FgSvZ8nt5KhoeD0Zt9U.jpg"
+      },
+      {
+        "id": "tv-83097-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2021,
+        "releaseDate": "2021-01-08",
+        "runtime": "11 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/119d2d20b3045161-5b95a450c7f6.webp",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/83097/season/2"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3yaPUl2tPg7ADi8a0u8MuSVim83.jpg"
+      }
+    ]
   },
   {
     "id": "tv-61663",
@@ -709,7 +1125,7 @@
     "country": "JP",
     "genre": "Animation, Comedy, Drama",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-82739-11d948327cb5.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/4e14dc4a6a03f62a-e99a9ac63f02.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -728,7 +1144,53 @@
     "tmdbId": 82739,
     "span": "2018–2025",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-82739-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1 · Rascal Does Not Dream of Bunny Girl Senpai",
+        "originalTitle": "第 1 季",
+        "year": 2018,
+        "releaseDate": "2018-10-03",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/4e14dc4a6a03f62a-e99a9ac63f02.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "30166978",
+            "title": "青春猪头少年不会梦到兔女郎学姐",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30166978/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bZ7ih7sC7VJ7Lmm6177lqwXt5PI.jpg"
+      },
+      {
+        "id": "tv-82739-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2 · Rascal Does Not Dream of Santa Claus",
+        "originalTitle": "第 2 季",
+        "year": 2025,
+        "releaseDate": "2025-07-05",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b854bde57ca77d49-a88af1aff527.webp",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/82739/season/2"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/igZkNBmB6aEBgtA1QCfQjvZM3ft.jpg"
+      }
+    ]
   },
   {
     "id": "tv-105248",
@@ -830,7 +1292,7 @@
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure, Drama",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-31724-835d5f239b83.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/9b49cedd2d01d135-9209caea35bc.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -856,7 +1318,61 @@
     "tmdbId": 31724,
     "span": "2006–2008",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL STORY"
+    "creditRole": "ORIGINAL STORY",
+    "seasons": [
+      {
+        "id": "tv-31724-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2006,
+        "releaseDate": "2006-10-05",
+        "runtime": "25 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/9b49cedd2d01d135-9209caea35bc.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "2043155",
+            "title": "反叛的鲁路修",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/2043155/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/jSk1zsthAJ16F4i8e3LDXPwlrk2.jpg"
+      },
+      {
+        "id": "tv-31724-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2008,
+        "releaseDate": "2008-04-06",
+        "runtime": "25 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/d59e40465517469b-a7924427d911.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "3004532",
+            "title": "反叛的鲁路修R2",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/3004532/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wtDXWzKIsQ0ZNrtAqlJH8hCqJDH.jpg"
+      }
+    ]
   },
   {
     "id": "tv-43125",
@@ -899,7 +1415,7 @@
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure",
     "runtime": "4 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-45782-225b1206dfc1.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ef916f4e3ef47997-5e08452b3942.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -939,7 +1455,113 @@
     "tmdbId": 45782,
     "span": "2012–2020",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-45782-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1 · Sword Art Online",
+        "originalTitle": "第 1 季",
+        "year": 2012,
+        "releaseDate": "2012-07-07",
+        "runtime": "25 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ef916f4e3ef47997-5e08452b3942.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "6869376",
+            "title": "刀剑神域",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/6869376/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/is3J0fmMgmqVt3Shm6J5KtULTyq.jpg"
+      },
+      {
+        "id": "tv-45782-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2 · Sword Art Online II",
+        "originalTitle": "第 2 季",
+        "year": 2014,
+        "releaseDate": "2014-07-05",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/3c84b0bc08434865-c8f2a2f94564.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "25804168",
+            "title": "刀剑神域2",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/25804168/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/eikzrWCrgaEuvNu8hcQHFeC3onR.jpg"
+      },
+      {
+        "id": "tv-45782-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3 · Sword Art Online Alicization",
+        "originalTitle": "第 3 季",
+        "year": 2018,
+        "releaseDate": "2018-10-06",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/f725c366f7901d75-629c3a96092f.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "27144972",
+            "title": "刀剑神域 爱丽丝篇",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/27144972/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/vHYPL0ki5tevokmjOa2pofgpRxW.jpg"
+      },
+      {
+        "id": "tv-45782-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4 · Sword Art Online Alicization: War of Underworld",
+        "originalTitle": "第 4 季",
+        "year": 2019,
+        "releaseDate": "2019-10-12",
+        "runtime": "23 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/f7e50c19dbb1bb78-95036f1a7695.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "33218388",
+            "title": "刀剑神域 爱丽丝篇 异界战争",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/33218388/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zhOJXbvnJGs1eY91ezQaUrEjxtn.jpg"
+      }
+    ]
   },
   {
     "id": "tv-61415",
@@ -951,7 +1573,7 @@
     "country": "JP",
     "genre": "Action & Adventure, Animation, Drama, Sci-Fi & Fantasy",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-61415-7d7be8a503bf.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/037d2547b8b44fcc-a1995457b8bb.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -977,7 +1599,61 @@
     "tmdbId": 61415,
     "span": "2014–2015",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-61415-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2014,
+        "releaseDate": "2014-10-04",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/037d2547b8b44fcc-a1995457b8bb.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "24857860",
+            "title": "命运之夜 无限剑制",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/24857860/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ituw0pLNRC41C2BjZMgDgDvBfbd.jpg"
+      },
+      {
+        "id": "tv-61415-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2015,
+        "releaseDate": "2015-04-04",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/bf542d2daafbcca6-b3d370e705e0.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "25937990",
+            "title": "命运之夜 无限剑制 第二季",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/25937990/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uhcg2xL85y32NUdpVA4kkBO4Zh.jpg"
+      }
+    ]
   },
   {
     "id": "tv-45845",
@@ -989,7 +1665,7 @@
     "country": "JP",
     "genre": "Action & Adventure, Animation, Sci-Fi & Fantasy",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-45845-c9c8e637a591.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ff63d43db26adda1-e1351b752a38.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -1014,7 +1690,61 @@
     ],
     "tmdbId": 45845,
     "span": "2011–2012",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "seasons": [
+      {
+        "id": "tv-45845-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2011,
+        "releaseDate": "2011-10-01",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ff63d43db26adda1-e1351b752a38.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "5416070",
+            "title": "命运之夜前传 第一季",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/5416070/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/qRN0Gow4Ht0ScQMTfGXjqjS5HiF.jpg"
+      },
+      {
+        "id": "tv-45845-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2012,
+        "releaseDate": "2012-04-07",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/601f8ebd9046978f-c1c42791a3cd.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "6874729",
+            "title": "命运之夜前传 第二季",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/6874729/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5AM2U3a84GpXLv2ENTyQDTYEgpZ.jpg"
+      }
+    ]
   },
   {
     "id": "tv-139130",
@@ -1087,7 +1817,7 @@
     "country": "JP",
     "genre": "Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy",
     "runtime": "3 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-63926-4c6b8794bb7f.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ac238932d5ac438a-8f5edccf2c97.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -1113,7 +1843,79 @@
     "tmdbId": 63926,
     "span": "2015–2025",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-63926-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2015,
+        "releaseDate": "2015-10-04",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ac238932d5ac438a-8f5edccf2c97.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26339248",
+            "title": "一拳超人",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26339248/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ocv8PzwfQUsFHSSdUvK7wZI85Dx.jpg"
+      },
+      {
+        "id": "tv-63926-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2019,
+        "releaseDate": "2019-04-02",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/fd24c7296577a85b-16ce10f20612.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26882339",
+            "title": "一拳超人 第二季",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26882339/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kjTzqlxR3bFtdgMuGtytj8MMtv7.jpg"
+      },
+      {
+        "id": "tv-63926-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "第 3 季",
+        "year": 2025,
+        "releaseDate": "2025-10-12",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/9704373b53ff9018-9184fe303b76.webp",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/63926/season/3"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/y9M6bjEc1oI7B8RISowo5L8oq19.jpg"
+      }
+    ]
   },
   {
     "id": "tv-127714",
@@ -1156,7 +1958,7 @@
     "country": "JP",
     "genre": "Animation, War & Politics, Action & Adventure, Drama",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-88803-005aa73ff647.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b20a82044f3943a6-03207bee10a8.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -1182,7 +1984,61 @@
     "tmdbId": 88803,
     "span": "2019–2023",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-88803-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2019,
+        "releaseDate": "2019-07-07",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b20a82044f3943a6-03207bee10a8.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "30174419",
+            "title": "冰海战记",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30174419/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/vhasC3HdTY2pN94ww3r8RKdOGlr.jpg"
+      },
+      {
+        "id": "tv-88803-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2023,
+        "releaseDate": "2023-01-09",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/aaf8a8eab9193176-66f48cfc2760.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "35518839",
+            "title": "冰海战记 第二季",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/35518839/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kHEaMqz3aHNoALObMTOJcOe8eK8.jpg"
+      }
+    ]
   },
   {
     "id": "tv-74091",
@@ -1223,7 +2079,7 @@
     "country": "JP",
     "genre": "Animation, Comedy, Sci-Fi & Fantasy",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-67676-e9e4c12fdf82.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/cd8efe3b00ffc7fc-ac12fb02c073.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -1256,7 +2112,87 @@
     "tmdbId": 67676,
     "span": "2016–2018",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-67676-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2016,
+        "releaseDate": "2016-07-11",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/cd8efe3b00ffc7fc-ac12fb02c073.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26801048",
+            "title": "齐木楠雄的灾难",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26801048/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/tpym31HVeQgenaubvCxkMF3kFHy.jpg"
+      },
+      {
+        "id": "tv-67676-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2018,
+        "releaseDate": "2018-01-16",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/71a5d666f4c093e9-251e1ed3cb85.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26946411",
+            "title": "齐木楠雄的灾难 第二季",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26946411/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wZ4NtrkOapW0scpTcqUslVPzPkU.jpg"
+      },
+      {
+        "id": "tv-67676-special-30258226",
+        "seasonNumber": 0,
+        "title": "Conclusion Special",
+        "originalTitle": "齐木楠雄的灾难 完结篇",
+        "year": 2018,
+        "releaseDate": "2018-12-28",
+        "runtime": "Special",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-67676-e9e4c12fdf82.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "30258226",
+            "title": "齐木楠雄的灾难 完结篇",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30258226/"
+        },
+        "posterSourceUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-67676-e9e4c12fdf82.webp"
+      }
+    ]
   },
   {
     "id": "tv-60863",
@@ -1268,7 +2204,7 @@
     "country": "JP",
     "genre": "Animation, Comedy, Drama",
     "runtime": "4 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-60863-795cbdf685a0.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/40463621720a0e41-018c169fdf58.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -1314,7 +2250,120 @@
     ],
     "tmdbId": 60863,
     "span": "2014–2020",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-60863-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2014,
+        "releaseDate": "2014-04-06",
+        "runtime": "25 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/40463621720a0e41-018c169fdf58.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "25732103",
+            "title": "排球少年",
+            "firstWatched": "2026-02-17",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/25732103/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1Rfa9o5H6ZlXzbDVNlw4jULdXpi.jpg"
+      },
+      {
+        "id": "tv-60863-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2015,
+        "releaseDate": "2015-10-03",
+        "runtime": "25 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/617796e18bcc3543-3876c73cff73.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "26285156",
+            "title": "排球少年 第二季",
+            "firstWatched": "2026-02-17",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26285156/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3TUUTiiuvjKg8BcnrGbuuj2Ov5L.jpg"
+      },
+      {
+        "id": "tv-60863-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3 · Karasuno High School vs Shiratorizawa Academy",
+        "originalTitle": "第 3 季",
+        "year": 2016,
+        "releaseDate": "2016-10-07",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/a69d0fbffa602d20-a2377f4b63fe.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26752075",
+            "title": "排球少年 第三季",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26752075/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/deFGQIm9cKYGr2xt136RUnA9sb5.jpg"
+      },
+      {
+        "id": "tv-60863-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4 · TO THE TOP",
+        "originalTitle": "第 4 季",
+        "year": 2020,
+        "releaseDate": "2020-01-10",
+        "runtime": "25 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/58ea1d7e1f7495a6-fd8cc87e03a2.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "30411330",
+            "title": "排球少年 第四季",
+            "firstWatched": "2026-02-17",
+            "rating": "",
+            "comment": ""
+          },
+          {
+            "doubanId": "35131275",
+            "title": "排球少年 第四季 Part.2",
+            "firstWatched": "2026-02-17",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30411330/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/M8dtn2nAserbnlAXCISjVL86Hj.jpg"
+      }
+    ]
   },
   {
     "id": "tv-46671",
@@ -1419,7 +2468,7 @@
     "country": "JP",
     "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
     "runtime": "6 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-45790-450f3a0a76b6.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/45100cb0723c07ae-dc023a33a731.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -1487,7 +2536,178 @@
     "tmdbId": 45790,
     "span": "2012–2026",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-45790-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1 · Phantom Blood & Battle Tendency",
+        "originalTitle": "第 1 季",
+        "year": 2012,
+        "releaseDate": "2012-10-05",
+        "runtime": "26 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/45100cb0723c07ae-dc023a33a731.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "11498785",
+            "title": "JOJO的奇妙冒险",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/11498785/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/co0K9FS9rQPxPoKADs4nuGckk3A.jpg"
+      },
+      {
+        "id": "tv-45790-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2 · Stardust Crusaders",
+        "originalTitle": "第 2 季",
+        "year": 2014,
+        "releaseDate": "2014-04-04",
+        "runtime": "48 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b826f8b2566efb7e-7198a9fee296.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "23774708",
+            "title": "JOJO的奇妙冒险 星尘斗士",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          },
+          {
+            "doubanId": "25984031",
+            "title": "JOJO的奇妙冒险 星尘斗士 埃及篇",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/23774708/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kX9noqY0YpOPKwXpRXYg1hEIqmM.jpg"
+      },
+      {
+        "id": "tv-45790-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3 · Diamond Is Unbreakable",
+        "originalTitle": "第 3 季",
+        "year": 2016,
+        "releaseDate": "2016-04-01",
+        "runtime": "39 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/8633f519d76e9a86-6cf4ccc88066.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26650051",
+            "title": "JOJO的奇妙冒险 不灭钻石",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26650051/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/xUvSh7cszFcRUAknt1yJAjU9LlA.jpg"
+      },
+      {
+        "id": "tv-45790-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4 · Golden Wind",
+        "originalTitle": "第 4 季",
+        "year": 2018,
+        "releaseDate": "2018-10-06",
+        "runtime": "39 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/8dbde7f5907b2b79-3214e8560bdd.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "27666505",
+            "title": "JOJO的奇妙冒险 黄金之风",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/27666505/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/cMFg7X0gSJjWajuj9DNL4UaUmcP.jpg"
+      },
+      {
+        "id": "tv-45790-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5 · STONE OCEAN",
+        "originalTitle": "第 5 季",
+        "year": 2021,
+        "releaseDate": "2021-12-01",
+        "runtime": "38 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b7b5ce9f961df591-776865e7f658.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "34605404",
+            "title": "JOJO的奇妙冒险 石之海",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          },
+          {
+            "doubanId": "35819151",
+            "title": "JOJO的奇妙冒险 石之海 Part.2",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          },
+          {
+            "doubanId": "36056267",
+            "title": "JOJO的奇妙冒险 石之海 Part.3",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/34605404/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/pgfHO4mnozfDLYKjhgtaOZDq9Kc.jpg"
+      },
+      {
+        "id": "tv-45790-season-6",
+        "seasonNumber": 6,
+        "title": "Season 6 · STEEL BALL RUN",
+        "originalTitle": "第 6 季",
+        "year": 2026,
+        "releaseDate": "2026-03-19",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/c00cbf6fcf29f0eb-7e196690597c.webp",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/45790/season/6"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/yB2cUOuT3OMGtU3CTLQjuFUL8Ox.jpg"
+      }
+    ]
   },
   {
     "id": "tv-119100",
@@ -1529,7 +2749,7 @@
     "country": "JP",
     "genre": "Animation, Drama, Action & Adventure, Sci-Fi & Fantasy",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-72636-81072855c39f.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/79ea80b3e0bbfc5a-bcbb9241aa60.webp",
     "summary": "",
     "firstWatched": "2026-02-17",
     "externalLink": {
@@ -1555,7 +2775,61 @@
     "tmdbId": 72636,
     "span": "2017–2022",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-72636-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2017,
+        "releaseDate": "2017-07-07",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/79ea80b3e0bbfc5a-bcbb9241aa60.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26940008",
+            "title": "来自深渊",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26940008/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uVK3H8CgtrVgySFpdImvNXkN7RK.jpg"
+      },
+      {
+        "id": "tv-72636-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2 · The Golden City of the Scorching Sun",
+        "originalTitle": "第 2 季",
+        "year": 2022,
+        "releaseDate": "2022-07-06",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/68aa8bcdbc582a22-6a68182de11e.webp",
+        "firstWatched": "2026-02-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "30475135",
+            "title": "来自深渊：烈日的黄金乡",
+            "firstWatched": "2026-02-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30475135/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/clC2erfUqIezhET67Gz9fcKD1L2.jpg"
+      }
+    ]
   },
   {
     "id": "tv-124396",
@@ -4667,7 +5941,7 @@
     "country": "JP",
     "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
     "runtime": "5 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-85937-679a08b62482.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1aceb58af63aac9d-7ca334c69547.webp",
     "summary": "",
     "firstWatched": "2025-11-15",
     "externalLink": {
@@ -4713,7 +5987,139 @@
     ],
     "tmdbId": 85937,
     "span": "2019–2024",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-85937-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1 · Unwavering Resolve Arc",
+        "originalTitle": "第 1 季",
+        "year": 2019,
+        "releaseDate": "2019-04-06",
+        "runtime": "26 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1aceb58af63aac9d-7ca334c69547.webp",
+        "firstWatched": "2025-11-15",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "30210221",
+            "title": "鬼灭之刃",
+            "firstWatched": "2025-11-15",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30210221/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bV0ZCL0IqrTQKClu6EtXlZaJevD.jpg"
+      },
+      {
+        "id": "tv-85937-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2 · Mugen Train Arc",
+        "originalTitle": "第 2 季",
+        "year": 2021,
+        "releaseDate": "2021-10-10",
+        "runtime": "7 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1a6181e0f73bbd37-8ec1f54ef443.webp",
+        "firstWatched": "2025-11-15",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "35620761",
+            "title": "鬼灭之刃：无限列车篇",
+            "firstWatched": "2025-11-15",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/35620761/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/pLGjaDyg2LeA2d9KZxBZCiiqC2B.jpg"
+      },
+      {
+        "id": "tv-85937-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3 · Entertainment District Arc",
+        "originalTitle": "第 3 季",
+        "year": 2021,
+        "releaseDate": "2021-12-05",
+        "runtime": "11 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/dd8d94738440cbe4-1e898efe76c1.webp",
+        "firstWatched": "2025-11-15",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "34813210",
+            "title": "鬼灭之刃：游郭篇",
+            "firstWatched": "2025-11-15",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/34813210/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gbmhcOtre5SeBgwR9gvTpUra5kZ.jpg"
+      },
+      {
+        "id": "tv-85937-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4 · Swordsmith Village Arc",
+        "originalTitle": "第 4 季",
+        "year": 2023,
+        "releaseDate": "2023-04-09",
+        "runtime": "11 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/e7e5a27c12b56da3-4e7810f48288.webp",
+        "firstWatched": "2025-11-15",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "35769236",
+            "title": "鬼灭之刃：锻刀村篇",
+            "firstWatched": "2025-11-15",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/35769236/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/6gD7G8HQay1X8mHiFVttWJ3czYb.jpg"
+      },
+      {
+        "id": "tv-85937-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5 · Hashira Training Arc",
+        "originalTitle": "第 5 季",
+        "year": 2024,
+        "releaseDate": "2024-05-12",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/bac78af6be2ecce4-00be7832b791.webp",
+        "firstWatched": "2025-11-15",
+        "rating": "",
+        "watchedEntries": [
+          {
+            "doubanId": "36449810",
+            "title": "鬼灭之刃：柱训练篇",
+            "firstWatched": "2025-11-15",
+            "rating": "",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/36449810/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/axI3BUZgTYz36IYtUtRhivtspUo.jpg"
+      }
+    ]
   },
   {
     "id": "film-36524559",
@@ -5252,7 +6658,7 @@
     "country": "US",
     "genre": "Crime, Drama",
     "runtime": "6 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-60059-409894ed2e39.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/7ad901c89c795919-6da10d9aaf0e.webp",
     "summary": "",
     "firstWatched": "2025-06-07",
     "externalLink": {
@@ -5305,7 +6711,165 @@
     ],
     "tmdbId": 60059,
     "span": "2015–2022",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "seasons": [
+      {
+        "id": "tv-60059-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2015,
+        "releaseDate": "2015-02-08",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/7ad901c89c795919-6da10d9aaf0e.webp",
+        "firstWatched": "2025-06-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "25726259",
+            "title": "风骚律师 第一季",
+            "firstWatched": "2025-06-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/25726259/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bAbZBZmz25Lqk8A8mwMWzAkvlAj.jpg"
+      },
+      {
+        "id": "tv-60059-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2016,
+        "releaseDate": "2016-02-15",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/525aaec37ad112db-8ae7d23bbb99.webp",
+        "firstWatched": "2025-06-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "25976733",
+            "title": "风骚律师 第二季",
+            "firstWatched": "2025-06-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/25976733/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/4NDwAQjFD8bTOsMKxYdl8IK10R9.jpg"
+      },
+      {
+        "id": "tv-60059-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "第 3 季",
+        "year": 2017,
+        "releaseDate": "2017-04-10",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/73d2faca95ef8786-8f501c7f4472.webp",
+        "firstWatched": "2025-06-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "26748847",
+            "title": "风骚律师 第三季",
+            "firstWatched": "2025-06-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/26748847/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dHIMW3CkL21jYWtsHiAdwkCjAej.jpg"
+      },
+      {
+        "id": "tv-60059-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4",
+        "originalTitle": "第 4 季",
+        "year": 2018,
+        "releaseDate": "2018-08-06",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/926cb142dcb5e1b0-6931823f906f.webp",
+        "firstWatched": "2025-06-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "27077785",
+            "title": "风骚律师 第四季",
+            "firstWatched": "2025-06-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/27077785/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/8zvIqLFOrBymKKI3L2W1AH8YZQI.jpg"
+      },
+      {
+        "id": "tv-60059-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5",
+        "originalTitle": "第 5 季",
+        "year": 2020,
+        "releaseDate": "2020-02-23",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/7b9bfc546bc297bd-32ebc539e0ea.webp",
+        "firstWatched": "2025-06-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "30285826",
+            "title": "风骚律师 第五季",
+            "firstWatched": "2025-06-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/30285826/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dZHa2vUtYNQ81KV38eHGjn0P4JE.jpg"
+      },
+      {
+        "id": "tv-60059-season-6",
+        "seasonNumber": 6,
+        "title": "Season 6",
+        "originalTitle": "第 6 季",
+        "year": 2022,
+        "releaseDate": "2022-04-18",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/51347449e35a5980-cb2286c6f4d5.webp",
+        "firstWatched": "2025-06-17",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "34951007",
+            "title": "风骚律师 第六季",
+            "firstWatched": "2025-06-17",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/34951007/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wKTzWgDaHxjdMhZ3zsVEF5eXVvX.jpg"
+      }
+    ]
   },
   {
     "id": "tv-1396",
@@ -5317,7 +6881,7 @@
     "country": "US",
     "genre": "Drama, Crime",
     "runtime": "5 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-1396-e25f54f12ae7.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/f948c388494f0108-0baf63196adf.webp",
     "summary": "",
     "firstWatched": "2025-06-07",
     "externalLink": {
@@ -5363,7 +6927,139 @@
     ],
     "tmdbId": 1396,
     "span": "2008–2013",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "seasons": [
+      {
+        "id": "tv-1396-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2008,
+        "releaseDate": "2008-01-20",
+        "runtime": "7 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/f948c388494f0108-0baf63196adf.webp",
+        "firstWatched": "2025-06-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "2373195",
+            "title": "绝命毒师 第一季",
+            "firstWatched": "2025-06-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/2373195/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg"
+      },
+      {
+        "id": "tv-1396-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2009,
+        "releaseDate": "2009-03-08",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b732cb81c7f23504-7687a78d6b5c.webp",
+        "firstWatched": "2025-06-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "3586996",
+            "title": "绝命毒师 第二季",
+            "firstWatched": "2025-06-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/3586996/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/e3oGYpoTUhOFK0BJfloru5ZmGV.jpg"
+      },
+      {
+        "id": "tv-1396-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "第 3 季",
+        "year": 2010,
+        "releaseDate": "2010-03-21",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ca6b1f9833485460-8e1e3c9dc5a7.webp",
+        "firstWatched": "2025-06-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "4256328",
+            "title": "绝命毒师 第三季",
+            "firstWatched": "2025-06-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/4256328/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ffP8Q8ew048YofHRnFVM18B2fPG.jpg"
+      },
+      {
+        "id": "tv-1396-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4",
+        "originalTitle": "第 4 季",
+        "year": 2011,
+        "releaseDate": "2011-07-17",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/139549ceeec2b6aa-769cd3d30322.webp",
+        "firstWatched": "2025-06-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "4927382",
+            "title": "绝命毒师 第四季",
+            "firstWatched": "2025-06-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/4927382/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5ewrnKp4TboU4hTLT5cWO350mHj.jpg"
+      },
+      {
+        "id": "tv-1396-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5",
+        "originalTitle": "第 5 季",
+        "year": 2012,
+        "releaseDate": "2012-07-15",
+        "runtime": "16 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/a989bdf64aaeca9d-d912c8601bf7.webp",
+        "firstWatched": "2025-06-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "6952149",
+            "title": "绝命毒师 第五季",
+            "firstWatched": "2025-06-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/6952149/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/r3z70vunihrAkjILQKWHX0G2xzO.jpg"
+      }
+    ]
   },
   {
     "id": "film-21937438",
@@ -5814,7 +7510,7 @@
     "country": "JP",
     "genre": "Comedy, Drama",
     "runtime": "2 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-46234-2840faf6638a.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/a21ba188fecf452f-6d3866154462.webp",
     "summary": "",
     "firstWatched": "2025-05-14",
     "externalLink": {
@@ -5840,7 +7536,61 @@
     "tmdbId": 46234,
     "span": "2012–2013",
     "rating": "5 / 5",
-    "creditRole": "SCREENPLAY"
+    "creditRole": "SCREENPLAY",
+    "seasons": [
+      {
+        "id": "tv-46234-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2012,
+        "releaseDate": "2012-04-17",
+        "runtime": "11 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/a21ba188fecf452f-6d3866154462.webp",
+        "firstWatched": "2025-05-14",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "10491666",
+            "title": "胜者即是正义",
+            "firstWatched": "2025-05-14",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/10491666/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/co9yfvcRuH2ZAVDkrMzymTierxM.jpg"
+      },
+      {
+        "id": "tv-46234-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2013,
+        "releaseDate": "2013-10-09",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/a04828245a8115d8-76284dc87c56.webp",
+        "firstWatched": "2025-05-14",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "23997724",
+            "title": "胜者即是正义2",
+            "firstWatched": "2025-05-14",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/23997724/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/88UQjx8igo1SQCM4cj5XB77jQ7z.jpg"
+      }
+    ]
   },
   {
     "id": "tv-215197",
@@ -6260,7 +8010,7 @@
     "country": "CN",
     "genre": "Drama, Mystery, Sci-Fi & Fantasy",
     "runtime": "1 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-155441-ac28f180154b.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/3581a0fabbb50136-c42db10ff146.webp",
     "summary": "",
     "firstWatched": "2025-03-30",
     "externalLink": {
@@ -9559,7 +11309,7 @@
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure",
     "runtime": "4 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-1429-0fdf167b8c6f.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b3eaf83b554c5acb-3f0be08cc946.webp",
     "summary": "",
     "firstWatched": "2023-03-07",
     "externalLink": {
@@ -9578,7 +11328,89 @@
     "tmdbId": 1429,
     "span": "2013–2022",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "seasons": [
+      {
+        "id": "tv-1429-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "第 1 季",
+        "year": 2013,
+        "releaseDate": "2013-04-07",
+        "runtime": "25 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b3eaf83b554c5acb-3f0be08cc946.webp",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1429/season/1"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gC78bsXhdU2PwT3FkLcn8R5YcHb.jpg"
+      },
+      {
+        "id": "tv-1429-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "第 2 季",
+        "year": 2017,
+        "releaseDate": "2017-04-01",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/2733a6e82f1b4d6b-9058d1513cb0.webp",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1429/season/2"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/2fhK0wbFixskgRyuq6YvaMn75et.jpg"
+      },
+      {
+        "id": "tv-1429-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "第 3 季",
+        "year": 2018,
+        "releaseDate": "2018-07-23",
+        "runtime": "22 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/bc419a275a6480bc-0e9084d8e150.webp",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1429/season/3"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ynow2o9v0G341PLv1chCRDufCgc.jpg"
+      },
+      {
+        "id": "tv-1429-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4 · The Final Season",
+        "originalTitle": "第 4 季",
+        "year": 2020,
+        "releaseDate": "2020-12-07",
+        "runtime": "28 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/08517813ad0f6b96-8aa0e6550da2.webp",
+        "firstWatched": "2023-03-07",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "35853587",
+            "title": "进击的巨人 最终季 完结篇 前篇",
+            "firstWatched": "2023-03-07",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/35853587/"
+        },
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sfbSjGlLHsvFQrMUSNR9RrwZgV1.jpg"
+      }
+    ]
   },
   {
     "id": "film-1292371",

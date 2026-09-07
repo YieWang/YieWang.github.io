@@ -25,7 +25,10 @@ export const documents = {
     runtime: text('时长／季数'), format: text('规格'), stillUrl: image('剧照'),
     summary: area('简介'), firstWatched: text('首次观看日期'), rewatched: text('重看日期'),
     review: object('长评', { rating, date: text('日期'), quote: area('引文'), excerpt: area('摘要'), content: { ...area('正文（空行分段）'), required: true } }),
-    watchedEntries: array('分季／观看记录', { title, firstWatched: text('观看日期'), rating, comment: area('短评') }),
+    seasons: { ...array('分季详情', { title, originalTitle: text('季标题原名'), year, releaseDate: text('首播日期'), posterUrl: image('本季海报'), runtime: text('集数／时长'), firstWatched: text('观看日期'), rating, summary: area('简介'), review,
+      externalLink: object('外部链接', { platform: text('平台', { options: ['IMDb', 'Douban', 'TMDb'] }), url: url('地址') }),
+    }), required: false },
+    watchedEntries: array('原始观看记录', { title, firstWatched: text('观看日期'), rating, comment: area('短评') }),
     externalLink: object('外部链接', { platform: text('平台', { options: ['IMDb', 'Douban'] }), url: url('地址') }), hidden,
   }) },
   music: { file: 'music-import.json', label: '音乐', schema: object('音乐', {
