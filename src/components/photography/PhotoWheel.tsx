@@ -21,6 +21,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
   const highlight = useRef<HTMLUListElement>(null);
   const selected = useRef(value);
   const keyboardTarget = useRef<number | null>(null);
+  const cancelKeyboard = useRef(() => {});
   const initialIndex = useRef(Math.max(0, options.findIndex(option => option.value === value))).current;
   const notify = useRef(onValueChange);
   notify.current = onValueChange;
@@ -37,6 +38,19 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     let settleTimer: ReturnType<typeof setTimeout>;
     let wheelTimer: ReturnType<typeof setTimeout>;
     let wheeling = false;
+    let heldKey = '';
+    let keyFrame = 0;
+    let keyTime = 0;
+    let keyPosition = 0;
+    let keyVelocity = 0;
+    const stopKeyboard = () => {
+      heldKey = '';
+      cancelAnimationFrame(keyFrame);
+      keyFrame = 0;
+      keyVelocity = 0;
+      keyboardTarget.current = null;
+    };
+    cancelKeyboard.current = stopKeyboard;
     const draw = () => {
       const position = element.scrollTop / itemHeight;
       wheel.current!.style.transform = `translateZ(${-radius}px) rotateX(${position * itemAngle}deg)`;
@@ -46,7 +60,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       });
     };
     const settle = () => {
-      if (drag.current || wheeling) return;
+      if (drag.current || wheeling || keyFrame) return;
       const index = Math.max(0, Math.min(options.length - 1, Math.round(element.scrollTop / itemHeight)));
       if (Math.abs(element.scrollTop - index * itemHeight) > 0.5) return;
       if (keyboardTarget.current !== null && index !== keyboardTarget.current) return;
@@ -69,24 +83,73 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       element.scrollTo({ top: Math.max(0, Math.min(options.length - 1, Math.round(top / itemHeight))) * itemHeight, behavior: 'smooth' });
       settleTimer = setTimeout(settle, 160);
     };
+    const steps: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1 };
+    const advanceKeyboard = (now: number) => {
+      if (keyboardTarget.current === null) return;
+      const target = keyboardTarget.current * itemHeight;
+      // A critically damped spring preserves velocity when the target changes.
+      const dt = Math.min(now - keyTime, 32) / 1000;
+      const offset = keyPosition - target;
+      const impulse = (keyVelocity + 24 * offset) * dt;
+      const decay = Math.exp(-24 * dt);
+      keyPosition = Math.max(0, Math.min((options.length - 1) * itemHeight, target + (offset + impulse) * decay));
+      keyVelocity = (keyVelocity - 24 * impulse) * decay;
+      keyTime = now;
+      element.scrollTop = keyPosition;
+      if (Math.abs(keyPosition - target) < 0.5 && Math.abs(keyVelocity) < 4) {
+        element.scrollTop = target;
+        keyFrame = 0;
+        keyVelocity = 0;
+        settle();
+        return;
+      }
+      keyFrame = requestAnimationFrame(advanceKeyboard);
+    };
+    const releaseKeyboard = () => {
+      if (!keyFrame) return;
+      stopKeyboard();
+      stopAt(element.scrollTop);
+    };
+    const onKeyUp = (event: KeyboardEvent) => {
+      // Release keeps the existing velocity and decelerates to the bounded target.
+      if (event.key === heldKey) heldKey = '';
+    };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.defaultPrevented || (event.target as HTMLElement)?.closest('input, textarea, select, [contenteditable="true"]')) return;
-      const steps: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1 };
       const endpoint = event.key === 'Home' || event.key === 'End';
       if (!(event.key in steps) && !(endpoint && element.contains(event.target as Node))) return;
       event.preventDefault();
-      const index = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1
-        : (keyboardTarget.current ?? Math.round(element.scrollTop / itemHeight)) + steps[event.key];
+      if (drag.current) return;
+      clearTimeout(wheelTimer);
+      wheeling = false;
+      if (endpoint) {
+        stopKeyboard();
+        keyboardTarget.current = event.key === 'Home' ? 0 : options.length - 1;
+        element.style.scrollSnapType = 'none';
+        stopAt(keyboardTarget.current * itemHeight);
+        return;
+      }
+      const direction = steps[event.key];
+      const position = element.scrollTop / itemHeight;
+      const reversing = keyboardTarget.current !== null && (keyboardTarget.current - position) * direction < 0;
+      let index = (reversing ? Math.round(position) : keyboardTarget.current ?? Math.round(position)) + direction;
+      // Bound auto-repeat lead so release cannot replay a long backlog of keys.
+      if (event.repeat) index = direction > 0 ? Math.min(index, Math.floor(position) + 3) : Math.max(index, Math.ceil(position) - 3);
       keyboardTarget.current = Math.max(0, Math.min(options.length - 1, index));
       element.style.scrollSnapType = 'none';
-      // Key repeat must not keep restarting the smooth scroll before it can advance.
-      element.scrollTo({ top: keyboardTarget.current * itemHeight, behavior: event.repeat ? 'instant' : 'smooth' });
-      if (event.repeat) settle();
+      heldKey = event.key;
+      if (!keyFrame) {
+        keyPosition = element.scrollTop;
+        element.scrollTo({ top: keyPosition, behavior: 'instant' });
+        keyTime = performance.now();
+        keyFrame = requestAnimationFrame(advanceKeyboard);
+      }
     };
     // Both sides feed the same scroll position; trackpad momentum is already in deltaY.
     const onWheel = (event: WheelEvent) => {
       if (event.ctrlKey || !event.deltaY) return;
       event.preventDefault();
+      stopKeyboard();
       wheeling = true;
       keyboardTarget.current = null;
       element.style.scrollSnapType = 'none';
@@ -99,6 +162,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       if (event.button !== 0 || (event.target as Element).closest('a, button')) return;
       const surface = (event.target as Element).closest('.photo-wheel-scroll, #right-showcase-stage') as HTMLElement | null;
       if (!surface) return;
+      stopKeyboard();
       keyboardTarget.current = null;
       event.preventDefault();
       if (surface === element) element.focus({ preventScroll: true });
@@ -133,6 +197,8 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     element.addEventListener('scroll', scroll, { passive: true });
     element.addEventListener('scrollend', settle);
     window.addEventListener('keydown', onKeyDown);
+    window.addEventListener('keyup', onKeyUp);
+    window.addEventListener('blur', releaseKeyboard);
     gallery.addEventListener('wheel', onWheel, { passive: false });
     gallery.addEventListener('pointerdown', onPointerDown);
     gallery.addEventListener('pointermove', onPointerMove);
@@ -142,6 +208,9 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       element.removeEventListener('scroll', scroll);
       element.removeEventListener('scrollend', settle);
       window.removeEventListener('keydown', onKeyDown);
+      window.removeEventListener('keyup', onKeyUp);
+      window.removeEventListener('blur', releaseKeyboard);
+      stopKeyboard();
       cancelAnimationFrame(frame);
       clearTimeout(settleTimer);
       clearTimeout(wheelTimer);
@@ -156,6 +225,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
 
   useEffect(() => {
     if (value === selected.current) return;
+    cancelKeyboard.current();
     keyboardTarget.current = null;
     selected.current = value;
     scroller.current?.scrollTo({ top: Math.max(0, options.findIndex(option => option.value === value)) * itemHeight, behavior: 'smooth' });
@@ -180,6 +250,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
         aria-activedescendant={`photo-option-${value}`}
         onClick={event => {
           if (ignoreClick.current) return;
+          cancelKeyboard.current();
           keyboardTarget.current = null;
           const offset = event.clientY - event.currentTarget.getBoundingClientRect().top - height / 2;
           event.currentTarget.scrollTo({ top: Math.round((event.currentTarget.scrollTop + offset) / itemHeight) * itemHeight, behavior: 'smooth' });
