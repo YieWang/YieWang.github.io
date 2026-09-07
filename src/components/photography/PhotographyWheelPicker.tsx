@@ -193,13 +193,18 @@ export default function PhotographyWheelPicker({
         /* 3D Photo Wheel Items: ZERO conflicting transform transitions for 60/120fps smoothness */
         .photo-wheel-option {
           opacity: 0.32;
-          filter: blur(0.4px);
-          transition: opacity 0.18s ease-out, filter 0.18s ease-out;
+          transition: opacity 0.18s ease-out;
           cursor: pointer;
           will-change: transform, opacity;
         }
         .photo-wheel-option:hover {
           opacity: 0.8;
+        }
+        .photo-wheel-option .photo-paper-card {
+          filter: blur(0.4px);
+          transition: filter 0.18s ease-out;
+        }
+        .photo-wheel-option:hover .photo-paper-card {
           filter: blur(0px);
         }
         .photo-wheel-highlight-wrapper {
@@ -211,7 +216,6 @@ export default function PhotographyWheelPicker({
         }
         .photo-wheel-highlight-item {
           opacity: 1 !important;
-          filter: blur(0px) !important;
           z-index: 35;
         }
         .photo-wheel-highlight-item .photo-paper-card {
