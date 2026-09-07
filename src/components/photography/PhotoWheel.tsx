@@ -20,6 +20,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
   const wheel = useRef<HTMLUListElement>(null);
   const highlight = useRef<HTMLUListElement>(null);
   const selected = useRef(value);
+  const keyboardTarget = useRef<number | null>(null);
   const initialIndex = useRef(Math.max(0, options.findIndex(option => option.value === value))).current;
   const notify = useRef(onValueChange);
   notify.current = onValueChange;
@@ -48,6 +49,8 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       if (drag.current || wheeling) return;
       const index = Math.max(0, Math.min(options.length - 1, Math.round(element.scrollTop / itemHeight)));
       if (Math.abs(element.scrollTop - index * itemHeight) > 0.5) return;
+      if (keyboardTarget.current !== null && index !== keyboardTarget.current) return;
+      keyboardTarget.current = null;
       element.style.scrollSnapType = '';
       const next = options[index]?.value;
       if (next && next !== selected.current) {
@@ -71,6 +74,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       if (event.ctrlKey || !event.deltaY) return;
       event.preventDefault();
       wheeling = true;
+      keyboardTarget.current = null;
       element.style.scrollSnapType = 'none';
       clearTimeout(wheelTimer);
       const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? element.clientHeight : 1;
@@ -81,6 +85,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       if (event.button !== 0 || (event.target as Element).closest('a, button')) return;
       const surface = (event.target as Element).closest('.photo-wheel-scroll, #right-showcase-stage') as HTMLElement | null;
       if (!surface) return;
+      keyboardTarget.current = null;
       event.preventDefault();
       if (surface === element) element.focus({ preventScroll: true });
       ignoreClick.current = false;
@@ -135,6 +140,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
 
   useEffect(() => {
     if (value === selected.current) return;
+    keyboardTarget.current = null;
     selected.current = value;
     scroller.current?.scrollTo({ top: Math.max(0, options.findIndex(option => option.value === value)) * itemHeight, behavior: 'smooth' });
   }, [value, options]);
@@ -161,11 +167,13 @@ export default function PhotoWheel({ options, value, onValueChange }: {
           if (!(event.key in steps) && event.key !== 'Home' && event.key !== 'End') return;
           event.preventDefault();
           const index = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1
-            : Math.round(event.currentTarget.scrollTop / itemHeight) + steps[event.key];
-          event.currentTarget.scrollTo({ top: index * itemHeight, behavior: 'smooth' });
+            : (keyboardTarget.current ?? Math.round(event.currentTarget.scrollTop / itemHeight)) + steps[event.key];
+          keyboardTarget.current = Math.max(0, Math.min(options.length - 1, index));
+          event.currentTarget.scrollTo({ top: keyboardTarget.current * itemHeight, behavior: 'smooth' });
         }}
         onClick={event => {
           if (ignoreClick.current) return;
+          keyboardTarget.current = null;
           const offset = event.clientY - event.currentTarget.getBoundingClientRect().top - height / 2;
           event.currentTarget.scrollTo({ top: Math.round((event.currentTarget.scrollTop + offset) / itemHeight) * itemHeight, behavior: 'smooth' });
         }}
