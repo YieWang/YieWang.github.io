@@ -42,8 +42,8 @@ const artistGroups = musicArtists.map(artist => {
             </h2>
           </div>
 
-          <!-- Preserve the original cover sizes; cap the vinyl slide to fit the existing gaps. -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-6 sm:gap-x-7 md:gap-x-8 gap-y-9 sm:gap-y-11">
+          <!-- Reclaim outer whitespace to preserve cover sizes with slightly wider gaps. -->
+          <div class="music-album-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-y-9 sm:gap-y-11">
             {group.albums.map((album) => (
               <article
                 class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index]"
@@ -56,7 +56,7 @@ const artistGroups = musicArtists.map(artist => {
                   <div class="relative w-full aspect-square flex items-center select-none">
                     
                     <!-- Sliding Vinyl Disc: NO shadow, rotates 40deg, glides into the gap safely -->
-                    <div class="vinyl-disc absolute right-0 top-0 bottom-0 aspect-square rounded-full bg-[#111112] shadow-none z-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu translate-x-0 rotate-0 group-hover:translate-x-[min(22%,0.5rem)] sm:group-hover:translate-x-[min(22%,0.75rem)] md:group-hover:translate-x-[min(22%,1rem)] group-hover:rotate-[40deg] pointer-events-none flex items-center justify-center">
+                    <div class="vinyl-disc absolute right-0 top-0 bottom-0 aspect-square rounded-full bg-[#111112] shadow-none z-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu translate-x-0 rotate-0 group-hover:translate-x-[22%] group-hover:rotate-[40deg] pointer-events-none flex items-center justify-center">
                       <!-- Concentric Vinyl Grooves -->
                       <div class="w-[90%] h-[90%] rounded-full border border-white/[0.08] flex items-center justify-center">
                         <div class="w-[78%] h-[78%] rounded-full border border-white/[0.06] flex items-center justify-center">
@@ -135,10 +135,21 @@ const artistGroups = musicArtists.map(artist => {
 
 <style>
   :global(body) { --artist-rail-width: clamp(160px, 17vw, 230px); }
-  .music-page-content { padding-left: calc(var(--artist-rail-width) + 60px); padding-bottom: 50vh; }
+  .music-page-content { --album-gap: 32px; padding-left: calc(var(--artist-rail-width) + 52px); padding-bottom: 50vh; }
+  .music-album-grid { column-gap: var(--album-gap); }
+  .music-card { --vinyl-room: calc(var(--album-gap) - 8px); transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1); }
+  .music-card:hover { transform: translateX(min(0px, calc(var(--vinyl-room) - 22%))); }
+  @media (min-width: 768px) {
+    .music-page-content { --album-gap: 36px; padding-left: calc(var(--artist-rail-width) + 48px); }
+  }
+  @media (min-width: 1024px) {
+    .music-page-content { padding-left: calc(var(--artist-rail-width) + 40px); }
+  }
   @media (max-width: 639px) {
-    :global(body) { --artist-rail-width: 125px; }
-    .music-page-content { padding-left: 141px; }
+    /* Original mobile cover width is (100vw - 197px) / 2; allow its full 22% slide. */
+    :global(body) { --artist-rail-width: calc(125px - max(0px, calc(11vw - 37.67px))); }
+    .music-page-content { --album-gap: max(24px, calc(11vw - 13.67px)); padding-left: calc(var(--artist-rail-width) + 16px); }
+    .music-card:nth-child(2n) { --vinyl-room: 16px; }
   }
 </style>
 
