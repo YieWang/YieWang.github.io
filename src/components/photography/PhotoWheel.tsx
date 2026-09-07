@@ -43,6 +43,9 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     let keyTime = 0;
     let keyPosition = 0;
     let keyVelocity = 0;
+    let keyRepeatAt = 0;
+    let keyHolding = false;
+    let keyTapTarget = 0;
     const stopKeyboard = () => {
       heldKey = '';
       cancelAnimationFrame(keyFrame);
@@ -86,6 +89,16 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     const steps: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1 };
     const advanceKeyboard = (now: number) => {
       if (keyboardTarget.current === null) return;
+      // Own the hold cadence: OS auto-repeat starts too late to join the first step.
+      if (heldKey && now >= keyRepeatAt) {
+        const direction = steps[heldKey];
+        const position = keyPosition / itemHeight;
+        const next = keyHolding ? keyboardTarget.current + direction : keyTapTarget;
+        const bounded = direction > 0 ? Math.min(next, Math.floor(position) + 3) : Math.max(next, Math.ceil(position) - 3);
+        keyboardTarget.current = Math.max(0, Math.min(options.length - 1, bounded));
+        keyHolding = true;
+        keyRepeatAt = now + 60;
+      }
       const target = keyboardTarget.current * itemHeight;
       // A critically damped spring preserves velocity when the target changes.
       const dt = Math.min(now - keyTime, 32) / 1000;
@@ -96,7 +109,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       keyVelocity = (keyVelocity - 24 * impulse) * decay;
       keyTime = now;
       element.scrollTop = keyPosition;
-      if (Math.abs(keyPosition - target) < 0.5 && Math.abs(keyVelocity) < 4) {
+      if (!heldKey && Math.abs(keyPosition - target) < 0.5 && Math.abs(keyVelocity) < 4) {
         element.scrollTop = target;
         keyFrame = 0;
         keyVelocity = 0;
@@ -111,8 +124,10 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       stopAt(element.scrollTop);
     };
     const onKeyUp = (event: KeyboardEvent) => {
-      // Release keeps the existing velocity and decelerates to the bounded target.
-      if (event.key === heldKey) heldKey = '';
+      if (event.key !== heldKey) return;
+      // Only release confirms a tap; a hold never commits an initial single-step selection.
+      if (!keyHolding) keyboardTarget.current = keyTapTarget;
+      heldKey = '';
     };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.defaultPrevented || (event.target as HTMLElement)?.closest('input, textarea, select, [contenteditable="true"]')) return;
@@ -120,6 +135,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       if (!(event.key in steps) && !(endpoint && element.contains(event.target as Node))) return;
       event.preventDefault();
       if (drag.current) return;
+      if (event.repeat) return;
       clearTimeout(wheelTimer);
       wheeling = false;
       if (endpoint) {
@@ -132,14 +148,17 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       const direction = steps[event.key];
       const position = element.scrollTop / itemHeight;
       const reversing = keyboardTarget.current !== null && (keyboardTarget.current - position) * direction < 0;
-      let index = (reversing ? Math.round(position) : keyboardTarget.current ?? Math.round(position)) + direction;
-      // Bound auto-repeat lead so release cannot replay a long backlog of keys.
-      if (event.repeat) index = direction > 0 ? Math.min(index, Math.floor(position) + 3) : Math.max(index, Math.ceil(position) - 3);
-      keyboardTarget.current = Math.max(0, Math.min(options.length - 1, index));
+      const index = (reversing ? Math.round(position) : keyboardTarget.current ?? Math.round(position)) + direction;
+      keyTapTarget = Math.max(0, Math.min(options.length - 1, index));
       element.style.scrollSnapType = 'none';
+      const continuingHold = !!heldKey && keyHolding;
+      if (continuingHold) keyboardTarget.current = keyTapTarget;
       heldKey = event.key;
+      keyHolding = continuingHold;
+      keyRepeatAt = performance.now() + (continuingHold ? 60 : 140);
       if (!keyFrame) {
         keyPosition = element.scrollTop;
+        keyboardTarget.current = keyPosition / itemHeight;
         element.scrollTo({ top: keyPosition, behavior: 'instant' });
         keyTime = performance.now();
         keyFrame = requestAnimationFrame(advanceKeyboard);
