@@ -27,6 +27,10 @@ const killBill = groupFilmCollections(cinemaFilms).find(x => x.title === 'Kill B
 assert.deepEqual(Array.from(killBill.installments, x => x.id), ['film-1291580', 'film-1291584']);
 assert.equal(groupFilmCollections([killBill.installments[1]])[0], killBill.installments[1], 'A single retained film stays a normal card');
 assert.equal(groupFilmCollections(cinemaSeries).length, cinemaSeries.length, 'Do not combine different TV shows');
+const harryPotter = groupFilmCollections(cinemaFilms).find(x => x.title === 'Harry Potter');
+assert.equal(harryPotter.installments.length, 8);
+assert.ok(harryPotter.installments.every(x => x.title.startsWith('Harry Potter and ')));
+assert.ok(groupFilmCollections(cinemaFilms).some(x => x.id === 'film-25726614' && !x.installments), 'Fantastic Beasts stays separate from Harry Potter');
 console.log('Collection membership, hidden films, release order, single films and TV preservation passed');
 
 const { allCinemaItems, withSeasonDetails } = context.exports;

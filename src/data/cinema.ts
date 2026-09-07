@@ -74,7 +74,7 @@ const collectionTitles: Record<string, string> = {
   'film-6532822': 'Resident Evil', 'film-1418189': 'Spider-Man',
   'film-25728006': 'Fast & Furious', 'film-11624706': 'Despicable Me',
   'film-27074316': "A Dog’s Purpose", 'film-25887288': 'Frozen',
-  'film-25726614': 'Wizarding World', 'film-10574622': 'Lost on Journey',
+  'film-1433330': 'Harry Potter', 'film-10574622': 'Lost on Journey',
   'film-26311973': 'Detective Chinatown', 'film-26817136': 'Zootopia',
   'film-26282448': 'Naruto', 'film-1305053': 'Hannibal Lecter',
   'film-36680624': 'Demon Slayer', 'film-1291584': 'Kill Bill',
