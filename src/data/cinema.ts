@@ -69,9 +69,10 @@ export const allCinemaItems: MediaItem[] = importedItems;
 
 // Explicit franchise groups only; sharing a director does not make a collection.
 const collectionTitles: Record<string, string> = {
-  'film-37311135': 'Pegasus', 'film-25808075': 'Planet of the Apes',
+  'film-37311135': 'Pegasus', 'film-25808075': 'Rise of the Planet of the Apes',
   'film-1474189': 'Saw', 'film-30209818': 'Happy Death Day',
   'film-6532822': 'Resident Evil', 'film-1418189': 'Spider-Man',
+  'film-26933210': 'Spider-Man (MCU)', 'film-2129132': 'The Amazing Spider-Man',
   'film-25728006': 'Fast & Furious', 'film-11624706': 'Despicable Me',
   'film-27074316': "A Dog’s Purpose", 'film-25887288': 'Frozen',
   'film-1433330': 'Harry Potter', 'film-10574622': 'Lost on Journey',
