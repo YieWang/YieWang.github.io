@@ -56,6 +56,7 @@ for (const artist of music.artists) {
 assert.ok(!music.artists.some(a => ['Soundtracks', 'Compilations', '纯音乐', '艾薇儿', 'Abel Tesfaye'].includes(a.name)));
 assert.deepEqual(music.albums.filter(a => a.artistName === 'Adele').map(a => a.title).sort(), ['19', '21', '25', '30']);
 assert.ok(music.albums.some(a => a.artistName === 'Queen' && a.title === 'Made In Heaven'));
+assert.equal(music.albums.find(a => a.artistName === 'Beyond' && a.title === '命运派对').year, 1990);
 assert.ok(tracks.some(t => t.id === 'local-FB841F0CFE0C61D1' && t.title === '妥协'));
 assert.ok(music.albums.some(a => a.title === 'JORDI' && a.tracks.some(t => t.title === 'Memories' && t.isrc === 'USUM71913350')));
 assert.ok(!tracks.some(t => /Nipsey Hussle/.test(t.title)));
