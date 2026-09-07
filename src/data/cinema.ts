@@ -35,10 +35,8 @@ export interface MediaItem {
   tmdbId?: number;
   watchedEntries?: { doubanId: string; title: string; firstWatched: string; rating: string; comment: string }[];
   review?: {
-    rating: string;              // e.g. "5.0 / 5.0"
     date?: string;               // e.g. "2026.02"
     quote?: string;              // Iconic quote in English
-    excerpt?: string;            // Short teaser excerpt
     content: string;             // Full review in English
   };
 }

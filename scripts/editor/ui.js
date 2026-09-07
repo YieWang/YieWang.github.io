@@ -66,9 +66,9 @@ function discard() {
   location.reload();
 }
 dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+dialog.addEventListener('keydown', event => event.stopPropagation());
 window.addEventListener('beforeunload', event => { if (dirty || busy) { event.preventDefault(); event.returnValue = ''; } });
 document.addEventListener('keydown', event => {
-  if (dialog.open) event.stopImmediatePropagation();
   if ((event.metaKey || event.ctrlKey) && event.key === 's' && docName) {
     event.preventDefault(); save().catch(showError);
   }
@@ -111,21 +111,50 @@ function manage(selected = currentList) {
   select.onchange = () => manage(collections[Number(select.value)]);
   const search = el('input', null, { type: 'search', placeholder: '搜索标题，也能找到隐藏条目', ariaLabel: '搜索内容' });
   const rows = el('div', null, { className: 'le-list' });
+  let dragIndex = null;
+  const move = (from, to) => {
+    if (from === to || to < 0 || to >= currentList.items.length) return;
+    currentList.items.splice(to, 0, currentList.items.splice(from, 1)[0]);
+    changed(); render();
+  };
   const render = () => {
     rows.replaceChildren();
     currentList.items.forEach((item, index) => {
       if (!labelOf(item).toLowerCase().includes(search.value.toLowerCase())) return;
       const row = el('div', null, { className: 'le-row' });
       row.append(button(labelOf(item) + (item.hidden ? ' · 已隐藏' : ''), () => editRecord([...currentList.path, index], currentList.schema)));
-      const move = delta => {
-        const target = index + delta;
-        if (target < 0 || target >= currentList.items.length) return;
-        [currentList.items[index], currentList.items[target]] = [currentList.items[target], currentList.items[index]];
-        changed(); render();
-      };
-      const up = button('↑', () => move(-1)); up.ariaLabel = '上移 ' + labelOf(item); up.disabled = index === 0;
-      const down = button('↓', () => move(1)); down.ariaLabel = '下移 ' + labelOf(item); down.disabled = index === currentList.items.length - 1;
-      row.append(up, down); rows.append(row);
+      if (currentList.schema.reorder !== false) {
+        const handle = el('button', '⠿', { type: 'button', draggable: true, className: 'le-drag', ariaLabel: '排序 ' + labelOf(item), title: '拖动排序，也可聚焦后按上下方向键' });
+        handle.addEventListener('dragstart', event => {
+          dragIndex = index;
+          event.dataTransfer.effectAllowed = 'move';
+          event.dataTransfer.setData('text/plain', String(index));
+        });
+        const clearDrop = () => rows.querySelectorAll('[data-drop]').forEach(node => node.removeAttribute('data-drop'));
+        handle.addEventListener('dragend', () => { dragIndex = null; clearDrop(); });
+        row.addEventListener('dragover', event => {
+          if (dragIndex === null) return;
+          event.preventDefault(); clearDrop();
+          row.dataset.drop = event.clientY < row.getBoundingClientRect().top + row.offsetHeight / 2 ? 'before' : 'after';
+        });
+        row.addEventListener('drop', event => {
+          if (dragIndex === null) return;
+          event.preventDefault();
+          const slot = index + (row.dataset.drop === 'after' ? 1 : 0);
+          const from = dragIndex; dragIndex = null; clearDrop();
+          move(from, slot - (from < slot ? 1 : 0));
+        });
+        handle.addEventListener('keydown', event => {
+          if (!['ArrowUp', 'ArrowDown'].includes(event.key)) return;
+          event.preventDefault();
+          const to = index + (event.key === 'ArrowUp' ? -1 : 1);
+          move(index, to);
+          rows.querySelector(`[data-index="${Math.max(0, Math.min(currentList.items.length - 1, to))}"] .le-drag`)?.focus({ preventScroll: true });
+        });
+        row.dataset.index = String(index);
+        row.append(handle);
+      }
+      rows.append(row);
     });
     if (!rows.childElementCount) rows.append(el('p', '暂无条目。点击“新增”开始。'));
   };
@@ -165,6 +194,11 @@ function editRecord(path, schema, focusKey) {
 }
 function renderFields(parent, item, schema, path, optional = false) {
   for (const [key, field] of Object.entries(schema.fields)) {
+    if (field.advanced) {
+      const details = el('details'); details.append(el('summary', field.label));
+      renderFields(details, item, { fields: { [key]: { ...field, advanced: false } } }, path, optional);
+      parent.append(details); continue;
+    }
     if (field.type === 'array') {
       parent.append(button(`${field.label}（${item[key]?.length || 0}）· 管理`, () => {
         item[key] ||= [];
@@ -242,8 +276,7 @@ async function save() {
     await api('data/' + docName, { revision: state.revision, data });
     const tab = document.querySelector('[data-cinema-tab][aria-pressed="true"]')?.dataset.cinemaTab;
     const essays = document.getElementById('view-essays') && !document.getElementById('view-essays').classList.contains('hidden');
-    sessionStorage.setItem('homepage-preview', JSON.stringify({ path: location.pathname, scroll: window.scrollY, tab, essays }));
-    sessionStorage.setItem('homepage-editing', '0');
+    sessionStorage.setItem('homepage-preview', JSON.stringify({ path: location.pathname, tab, essays }));
     dirty = false; busy = false; location.reload();
   } catch (error) { showError(error); }
   finally { busy = false; dialog.inert = false; toolbar.inert = false; }
@@ -313,6 +346,5 @@ try {
     sessionStorage.removeItem('homepage-preview'); status.textContent = '已保存到本机 · 尚未发布';
     if (saved.tab) document.querySelector(`[data-cinema-tab="${saved.tab}"]`)?.click();
     if (saved.essays) document.getElementById('tab-btn-essays')?.click();
-    requestAnimationFrame(() => window.scrollTo(0, saved.scroll));
   }
 } catch (error) { showError(error); }

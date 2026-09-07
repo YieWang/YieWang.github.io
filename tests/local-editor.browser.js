@@ -12,6 +12,9 @@ async page => {
   const save = async () => {
     await page.locator('#local-editor-panel footer').getByRole('button', { name: '保存并预览', exact: true }).click();
     await page.waitForFunction(() => !document.getElementById('local-editor-panel').open && document.querySelector('#local-editor-toolbar [role=status]').textContent.includes('已保存'));
+    if (!await page.getByRole('button', { name: '退出编辑', exact: true }).count()) throw Error('Saving exited edit mode');
+    // This check next exercises the public preview; exit editing explicitly.
+    await page.getByRole('button', { name: '退出编辑', exact: true }).click();
   };
   try {
     await page.goto(origin + '/marginalia/literature');

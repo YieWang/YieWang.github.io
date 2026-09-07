@@ -85,7 +85,6 @@ for (const [title, ids] of [
   ['Rise of the Planet of the Apes', ['film-3274505', 'film-7046723', 'film-25808075']],
   ['Spider-Man', ['film-1306612', 'film-1308570', 'film-1418189']],
   ['The Amazing Spider-Man', ['film-2129132', 'film-6082518']],
-  ['Spider-Man (MCU)', ['film-24753477', 'film-26931786', 'film-26933210']],
   ['Lost on Journey', ['film-4237879', 'film-10574622']],
 ]) {
   const card = filmCards.find(x => x.title === title);
@@ -114,4 +113,9 @@ for (const collection of [true, false]) {
 }
 assert.equal(leadDirector(filmCards.find(x => x.title === 'Harry Potter')), 'Chris Columbus');
 assert.equal(leadDirector(filmCards.find(x => x.title === 'King of Comedy')), 'Stephen Chow');
+for (const id of ['film-1474189', 'film-1309045', 'film-1417598',
+  'film-24753477', 'film-26931786', 'film-26933210',
+  'film-3231742', 'film-3066739', 'film-1432146']) {
+  assert.ok(!allCinemaItems.some(x => x.id === id), `Deleted series must stay hidden: ${id}`);
+}
 console.log('Films: series first, adjacent lead directors, chronological groups and intact membership passed');

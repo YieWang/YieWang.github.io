@@ -3175,7 +3175,8 @@
     "rating": "5 / 5",
     "chineseTitle": "电锯惊魂3",
     "originalDirector": "Darren Lynn Bousman",
-    "chineseDirector": "达伦·林恩·鲍斯曼"
+    "chineseDirector": "达伦·林恩·鲍斯曼",
+    "hidden": true
   },
   {
     "id": "film-24843198",
@@ -3673,7 +3674,8 @@
     "rating": "5 / 5",
     "chineseTitle": "电锯惊魂2",
     "originalDirector": "Darren Lynn Bousman",
-    "chineseDirector": "达伦·林恩·鲍斯曼"
+    "chineseDirector": "达伦·林恩·鲍斯曼",
+    "hidden": true
   },
   {
     "id": "film-1291936",
@@ -5657,7 +5659,8 @@
     "tmdbId": 634649,
     "chineseTitle": "蜘蛛侠：英雄无归",
     "originalDirector": "Jon Watts",
-    "chineseDirector": "乔恩·沃茨"
+    "chineseDirector": "乔恩·沃茨",
+    "hidden": true
   },
   {
     "id": "film-26264454",
@@ -6658,7 +6661,7 @@
     "country": "DE · US",
     "genre": "Drama, Thriller, War",
     "runtime": "153 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-16869-e0d6d369efbf.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/8287241fceee13e31f64.webp",
     "summary": "",
     "firstWatched": "2025-09-18",
     "externalLink": {
@@ -6722,7 +6725,7 @@
     "country": "US",
     "genre": "Drama, Western",
     "runtime": "165 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-68718-cec497063c14.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/bd60cfb6000b5683d030.webp",
     "summary": "",
     "firstWatched": "2025-08-20",
     "externalLink": {
@@ -8704,7 +8707,7 @@
     "country": "US",
     "genre": "Science Fiction, Adventure, Drama, Action",
     "runtime": "112 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-871-7ac6d01d954c.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/3f8ac2ea75cf6eb90407.webp",
     "summary": "",
     "firstWatched": "2024-12-27",
     "externalLink": {
@@ -9930,7 +9933,7 @@
     "country": "CN",
     "genre": "Drama, Family",
     "runtime": "106 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-1324509-a701c4c889f1.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/33495a6482ab150600ce.webp",
     "summary": "",
     "firstWatched": "2024-12-01",
     "externalLink": {
@@ -10152,7 +10155,7 @@
     "country": "US",
     "genre": "Comedy, Romance, Drama",
     "runtime": "96 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-639-a7513b2004a9.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/3aa5f24b584ea88bdf99.webp",
     "summary": "",
     "firstWatched": "2024-07-03",
     "externalLink": {
@@ -10443,7 +10446,7 @@
     "country": "HK · FR",
     "genre": "Drama, Romance",
     "runtime": "99 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-843-45d220440814.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/5b2bdf27ed7b9b40ab0f.webp",
     "summary": "",
     "firstWatched": "2024-04-11",
     "externalLink": {
@@ -10970,7 +10973,8 @@
     "rating": "3 / 5",
     "chineseTitle": "穿普拉达的女王",
     "originalDirector": "David Frankel",
-    "chineseDirector": "大卫·弗兰克尔"
+    "chineseDirector": "大卫·弗兰克尔",
+    "hidden": true
   },
   {
     "id": "film-4914468",
@@ -11336,7 +11340,8 @@
     "tmdbId": 429617,
     "chineseTitle": "蜘蛛侠：英雄远征",
     "originalDirector": "Jon Watts",
-    "chineseDirector": "乔恩·沃茨"
+    "chineseDirector": "乔恩·沃茨",
+    "hidden": true
   },
   {
     "id": "film-24773958",
@@ -11396,7 +11401,8 @@
     "tmdbId": 315635,
     "chineseTitle": "蜘蛛侠：英雄归来",
     "originalDirector": "Jon Watts",
-    "chineseDirector": "乔恩·沃茨"
+    "chineseDirector": "乔恩·沃茨",
+    "hidden": true
   },
   {
     "id": "film-3231742",
@@ -11427,7 +11433,8 @@
     "tmdbId": 68721,
     "chineseTitle": "钢铁侠3",
     "originalDirector": "Shane Black",
-    "chineseDirector": "肖恩·布莱克"
+    "chineseDirector": "肖恩·布莱克",
+    "hidden": true
   },
   {
     "id": "film-1866479",
@@ -11487,7 +11494,8 @@
     "tmdbId": 10138,
     "chineseTitle": "钢铁侠2",
     "originalDirector": "Jon Favreau",
-    "chineseDirector": "乔恩·费儒"
+    "chineseDirector": "乔恩·费儒",
+    "hidden": true
   },
   {
     "id": "film-1432146",
@@ -11519,7 +11527,8 @@
     "rating": "4 / 5",
     "chineseTitle": "钢铁侠",
     "originalDirector": "Jon Favreau",
-    "chineseDirector": "乔恩·费儒"
+    "chineseDirector": "乔恩·费儒",
+    "hidden": true
   },
   {
     "id": "film-4286017",
@@ -11644,7 +11653,8 @@
     "rating": "3 / 5",
     "chineseTitle": "河边的错误",
     "originalDirector": "魏书钧",
-    "chineseDirector": "魏书钧"
+    "chineseDirector": "魏书钧",
+    "hidden": true
   },
   {
     "id": "film-35267224",
@@ -12296,7 +12306,7 @@
     "country": "JP",
     "genre": "Romance, Drama",
     "runtime": "67 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-72933-aeb4900d71cd.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/9b920992a5a83628a252.webp",
     "summary": "",
     "firstWatched": "2023-03-07",
     "externalLink": {
@@ -12316,7 +12326,12 @@
     "rating": "5 / 5",
     "chineseTitle": "四月物语",
     "originalDirector": "岩井俊二",
-    "chineseDirector": "岩井俊二"
+    "chineseDirector": "岩井俊二",
+    "review": {
+      "date": "2025.8.5",
+      "content": "四月的东京，樱花飘下如雨，新娘出嫁需要数人用伞以撑。少女在刚刚租下行李都还未运来的房间，缓缓躺下蜷缩着，嘴里低声呢喃着“武藏野、武藏野”。\n\t搬家的人来了，想要做些什么，但又差点帮了倒忙，却又开心的笑了起来，或许是因为第一次自己独立做了些什么。最后拿了一把小椅子，在春天里轻轻抖落卫衣，里面的樱花也随之落下。\n\t第一次没有父母的陪伴来到新学校，同学间开始互相介绍自己，被同学们问为什么来这所大学，慌张的不敢说出真正的原因——去武藏野堂“偶遇”他，这个理由显得又天真又浪漫得可笑。在这穿毛衣的她显得格格不入——因为北海道这个时节还是要穿的，她只能脱下毛衣系到腰间。\n\t刚认识的大学同学试着发起邀约，少女却轻轻摇摇头，说着星期天还要忙搬家的事情，下次再约。出门听到强烈的摇滚和温柔的歌声，凑过去看，原来这就是大学的样子。\n\t星期天到了，买了辆自行车，看着刚放学的小学生们想着自己待会儿要做的事又微微笑了起来。试着向街边的店主询问那一家魂牵梦萦的书店：“请问武藏野堂在哪？”“左边一直走到底的转角就是了。”但到店里却发现好像想遇见的那个人不在这，随手买了本书想悄悄地问店员店内是否还有另一位店员呢，话到嘴边却又变成了另一句话。\n\t喜欢钓鱼的同学拉你进了钓鱼社团，因为推荐新人会送钓鱼线——当社长这么和你说的时候，你偷偷的看了眼那个同学，同学也有点心虚的转过头去。\n\t这天又来到了武藏野堂，在看着书的时候，他突然来到了身边，说是要找本书，无处可躲，像只受到惊吓的小鹿，偷偷的用余光看着。\n\t结账的时候你暗暗祈祷着——又或许没有，他会不会认出你呢？但好像奇迹并没有发生。\n\t晚上邀请了楼下的邻居一起吃咖喱，被拒绝了，自己回屋就着昏暗的灯光吃着饭，好像东京有点孤独啊，你这么想着的时候门突然响了起来，原来是楼下的邻居，她说刚才拒绝真不好意思，如果还有的话可以再一起吃。于是这个昏暗的灯光变成了温馨的。\n\t又是钓鱼社团活动，在空中练习着钓鱼杆的时候，同学突然问：之前有交过的男朋友吗？你摇摇头，又笑了一下，说有单恋过。她又问：是怎样的人呢？你笑得更开心了，眼睛里发着光，回忆着、缓缓地说着：很杰出的人、头脑很好……\n\t“去年的春天，学长考上了东京的大学，让我感到悲痛欲绝。\n\t 东京的武藏野大学，朋友小野田夏子说是很有名的大学。但是，武藏野这个词，总让我想起学长。武藏野、武藏野。我看过国木田独步写的《武藏野》，内容很难看不太懂。但武藏野这个词，对我来说却是最重要的关键字。武藏野、武藏野。\n\t 在辽阔原野弹着吉他的学长，那副像是壁画般的影像深深的印在了我的脑海。\n\t 埋首于准备考试的夏季末，去东京玩的学妹真圣回来了。包在《武藏野》上的茶色书套，印有“武藏野堂”书局的名字。\n\t 徘徊在武藏野的原野，我终于找到学长出现的地方。武藏野的武藏野堂。我将剩下半年的高中生活献给了武藏野。”\n\t\n\t“武藏野、武藏野”少女不断呢喃着好像是秘密的咒语，将思念与心都倾注在这份话语中，念出来便会实现。而咒语成真是在学长认出少女之后——“你是北高的学生吧？”因此再大的雨淋在身上也难以掩饰少女的喜悦。就算是破破烂烂的伞、衣服上的水滴也变得这么可爱。\n\t这便是，四月物语。",
+      "quote": "“武藏野、武藏野”少女不断呢喃着好像是秘密的咒语，将思念与心都倾注在这份话语中，念出来便会实现。"
+    }
   },
   {
     "id": "film-2129132",
@@ -13050,7 +13065,8 @@
     "rating": "5 / 5",
     "chineseTitle": "电锯惊魂",
     "originalDirector": "James Wan",
-    "chineseDirector": "温子仁"
+    "chineseDirector": "温子仁",
+    "hidden": true
   },
   {
     "id": "film-1309055",
@@ -13752,7 +13768,12 @@
     "rating": "5 / 5",
     "chineseTitle": "情书",
     "originalDirector": "岩井俊二",
-    "chineseDirector": "岩井俊二"
+    "chineseDirector": "岩井俊二",
+    "review": {
+      "content": "\t此刻，我正在听着丽美的Small Happiness（即情书的经典配乐），尽量让自己沉浸在刚才的电影里不要出来，眼前是那座山与日出，在这样一种氛围里写着这一段文字。刚看完三十周年的情书重映，觉得自己好像的确想说点什么。看情书似乎是很久之前的事情了，这次观影除了一些经典场面以外就像看一部全新的电影一般。我看到了许多记忆里从未出现过的。例如：开头有个男人对博子说道：“不要嫁给一个爬山的人。”\n\t而在谈论之前我想说，这绝不是一部所谓“纯爱”的电影。如果只是想简单说明纯爱的话那导演为什么要安排博子和秋叶在一起呢？甚至只需要安排秋叶单恋博子，博子拒不接受即可。从这你便可看出岩井俊二的小偷摸劲，他会把一些沉重复杂的东西藏在看似轻松写意的留白下。这也是我为什么这么喜欢他的原因。\n\t开头是非常经典的岩井俊二式开幕，一片雪、主角缄默、只有音乐缓缓流淌，奠定着故事基调。博子躺在雪地上，屏着呼吸，想象着男树在山上遇难而死的场景。死后两年，甚至连至亲都好像怀着别的心情参加着追悼仪式，博子赌气的想着。难道只有自己不曾走出吗？\n\t就当博子翻着毕业纪念册找到“藤井树”地址的时候，配乐响起，犹如命运的钟声此刻被敲醒。怀着“给天国寄出的一封信”这样的心情，我们的故事正式开始了。\n\t在那些记忆中，我逐渐意识到了以前没有看出的事情——或许连女树自己都未注意到的事情。她对男树事实上是有别样的情感的。这份感情或许她没有意识到，或许意识到也装作没有意识到。女树是如此愚木，甚至只有在看到借书卡的背面后才敢于意识到这份情感，在手忙脚乱的慌张中承认着。\n\t在记忆之后，我们来面对死亡。片中死亡的有两个人：一个是男树，一个是女树的爸爸。女树在初中三年级的时候就直面了死亡，并且埋下了心理阴影，这也直接导致了她在得重感冒的时候不去医院。而在得知男树死讯的那一夜，她发了重烧。这里很巧妙的是，岩井俊二不但将男树与父亲的死串合到一起，也将女树的发烧与父亲的肺炎联系了起来。并且贡献了本片令人动容的画面：爷爷与妈妈的对手戏，爷爷这么多年没有一天忘掉那个晚上，他一直在后悔，她一直在暗暗埋怨。\n\t以上，都是被称之为“纯爱”的部分，单看男树与女树的部分的确是标准的纯爱电影。但是当我们把视角转到博子，就大为不同了。\n\t许多人暗自咂舌，这个渣男把博子当替身，还这么多人在那吹纯爱纯爱，什么垃圾电影？自然如此。片中说道，男树对博子说自己是一见钟情。观众自然知道是瞎扯，一见钟情是见到了外貌，而外貌相似自然是作为替身。但我要说，认识的契机是错的不代表过程与结果就都是错的。最好的佐证恰恰是令博子再一次心碎的观星台求婚。倘若男树心底把博子全然当成了替身，又为何会犹豫呢？如果这是童话，那么我愿意相信男树从头到尾爱着女树，并且对博子有着特殊的关注，却不会有一些僭越。但这是现实，男树因为这份原因去追求博子，而在过程中与博子的记忆逐渐变多，最终几乎都是博子的记忆，这难道不是更现实的童话吗？而关于临死前唱的那一首歌“我的爱已随那南风远去”，我理解为——或者说我更愿意相信是临死前对过往所有回忆的追忆。而不是始终对女树念念不忘，这样不是对博子太残忍了吗？其实在这里或许也可以看出为什么要给博子安排秋叶——因为有秋叶还爱着她，所以显得没那么残忍。\n\t而得知所有真相与隐情后的博子，面对着日出与那座山，向着天国的男树喊道“你好吗？我很好。”此刻她终于放下所有过去的顾虑与痛苦，大声痛哭着迈向未来。与此同时的是女树在医院醒来，呢喃着“我很好。”这份情感以一种命运般的玩笑传递给了女树，在看到那份肖像画后，开始回忆男树的人从博子变成了女树。",
+      "quote": "倘若每载时光都是一瀑水帘，这份情感隔着数十重水帘之后又剩下了什么？",
+      "date": "2025.5.20"
+    }
   },
   {
     "id": "film-1485260",

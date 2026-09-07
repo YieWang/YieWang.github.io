@@ -8020,7 +8020,8 @@
       "source": "apple-music",
       "releaseType": "single",
       "catalogAlbumId": "1511562938",
-      "catalogUrl": "https://music.apple.com/cn/album/stuck-with-u-single/1511562938"
+      "catalogUrl": "https://music.apple.com/cn/album/stuck-with-u-single/1511562938",
+      "rating": ""
     },
     {
       "id": "apple-album-5f49b2056863139a",
@@ -11398,7 +11399,8 @@
           "isrc": "USRC11100014"
         }
       ],
-      "source": "apple-music"
+      "source": "apple-music",
+      "summary": ""
     },
     {
       "id": "apple-standard-268993318",

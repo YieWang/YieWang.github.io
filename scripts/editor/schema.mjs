@@ -12,7 +12,7 @@ const year = text('年份');
 const url = label => text(label, { type: 'url' });
 const review = object('长评', { date: text('日期'), content: { ...area('正文（空行分段）'), required: true } });
 const photo = {
-  title, subtitle: text('中文副标题'), imageUrl: { ...image('照片'), required: true }, thumbnailUrl: { ...image('缩略图（上传照片时自动生成）'), required: true },
+  title, subtitle: text('中文副标题'), imageUrl: { ...image('照片'), required: true }, thumbnailUrl: { ...image('缩略图（上传照片时自动生成）'), required: true, advanced: true },
   location: text('地点（中文）'), locationEn: text('地点（英文）', { required: true }), year: number('年份', { required: true, min: 1 }),
   date: text('拍摄日期'), story: area('照片说明'), camera: text('相机'), lens: text('镜头'), film: text('胶片'),
   exif: object('拍摄参数', { focalLength: text('焦距'), aperture: text('光圈'), shutter: text('快门'), iso: text('ISO') }), hidden,
@@ -22,24 +22,24 @@ export const documents = {
     title, rating, posterUrl: image('海报'), originalTitle: text('原名'), chineseTitle: text('中文译名'), type: text('类型', { required: true, options: [['film', '电影'], ['series', '剧集']] }),
     director: text('导演／创作者'), originalDirector: text('创作者原名'), chineseDirector: text('创作者中文名'), creditRole: text('署名角色'), year,
     span: text('年份范围'), country: text('国家／地区'), genre: text('类型标签（动画请含 Animation，以英文逗号和空格分隔）', { required: true }),
-    studio: text('动画制作公司（系列按首部）'), runtime: text('时长／季数'), format: text('规格'), stillUrl: image('剧照'),
+    studio: text('动画制作公司（系列按首部）'), runtime: text('时长／季数'),
     summary: area('简介'), firstWatched: text('首次观看日期'), rewatched: text('重看日期'),
-    review: object('长评', { rating, date: text('日期'), quote: area('引文'), excerpt: area('摘要'), content: { ...area('正文（空行分段）'), required: true } }),
+    review: object('长评', { date: text('日期'), quote: area('引文'), content: { ...area('正文（空行分段）'), required: true } }),
     seasons: { ...array('分季详情', { title, originalTitle: text('作品原名'), chineseTitle: text('中文译名'), partLabel: text('分季标记'), year, releaseDate: text('首播日期'), posterUrl: image('本季海报'), runtime: text('集数／时长'), firstWatched: text('观看日期'), rating, summary: area('简介'), review,
       externalLink: object('外部链接', { platform: text('平台', { options: ['IMDb', 'Douban', 'TMDb'] }), url: url('地址') }),
-    }), required: false },
-    watchedEntries: array('原始观看记录', { title, firstWatched: text('观看日期'), rating, comment: area('短评') }),
+    }), required: false, reorder: false },
+    watchedEntries: { ...array('导入观看记录', { title, firstWatched: text('观看日期'), rating, comment: area('短评') }), advanced: true, reorder: false },
     externalLink: object('外部链接', { platform: text('平台', { options: ['IMDb', 'Douban'] }), url: url('地址') }), hidden,
   }) },
   music: { file: 'music-import.json', label: '音乐', schema: object('音乐', {
     albums: array('专辑', {
-      title, rating, coverUrl: image('封面'), artistId: text('所属音乐人', { relation: 'artists' }), artistName: text('原始艺术家署名'), artistDisplayName: text('展示署名'),
+      title, rating, coverUrl: image('封面'), artistId: text('所属音乐人', { relation: 'artists' }), artistDisplayName: text('展示署名'),
       year, listenedDate: text('聆听日期'), summary: area('专辑随笔'),
-      tracks: array('曲目', { trackNo: number('曲序', { min: 0 }), discNo: number('碟号', { min: 0 }), title,
-        artistName: text('艺术家署名'), duration: text('时长'), note: area('单曲随笔'), isFavorite: { label: '喜欢', type: 'checkbox' } }), hidden,
+      tracks: array('曲目', { trackNo: number('曲序', { min: 0 }), title,
+        artistName: text('艺术家署名'), duration: text('时长'), note: area('单曲随笔') }), hidden,
     }),
     artists: array('音乐人', { name: text('名称', { required: true }), displayName: text('展示名称', { required: true }),
-      avatarUrl: image('头像'), country: text('国家／地区'), yearsActive: text('活跃年份'), hidden }),
+      avatarUrl: image('头像'), hidden }),
   }) },
   literature: { file: 'literature.json', label: '文学', schema: object('文学', {
     books: array('书籍', { title, originalTitle: text('原名'), author: text('作者'), originalAuthor: text('作者原名'),
@@ -57,6 +57,12 @@ export const documents = {
     tableTennis: area('乒乓球介绍'), tableTennisInvitation: text('约球邀请文字'), gamesInvitation: text('游戏邀请文字'),
   }) },
 };
+
+// These lists follow the site's grouping and sorting rules instead of array order.
+documents.cinema.schema.reorder = false;
+documents.music.schema.fields.albums.reorder = false;
+documents.music.schema.fields.artists.reorder = false;
+documents.literature.schema.fields.books.reorder = false;
 
 export function fresh(schema) {
   const value = {};

@@ -5,7 +5,7 @@
     "playtimeMinutes": 30984,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/730.jpg",
     "url": "https://store.steampowered.com/app/730/?l=english",
-    "note": ""
+    "note": "打枪"
   },
   {
     "appid": null,
@@ -13,7 +13,7 @@
     "playtimeMinutes": null,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/league-of-legends.jpg",
     "url": "https://www.leagueoflegends.com/en-us/",
-    "note": ""
+    "note": "嗯。十年老兵，难热冷血。"
   },
   {
     "appid": 250900,
@@ -21,7 +21,7 @@
     "playtimeMinutes": 16794,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/250900.jpg",
     "url": "https://store.steampowered.com/app/250900/?l=english",
-    "note": ""
+    "note": "肉鸽唯一真神。"
   },
   {
     "appid": null,
@@ -29,6 +29,22 @@
     "playtimeMinutes": null,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/zelda-breath-of-the-wild-en.jpg",
     "url": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-breath-of-the-wild-switch/",
+    "note": "塞尔达是天，真的。求你玩。"
+  },
+  {
+    "appid": null,
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "playtimeMinutes": null,
+    "cover": "https://homepage-assets.mathtranslations.org/images/games/zelda-tears-of-the-kingdom-en.jpg",
+    "url": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/",
+    "note": ""
+  },
+  {
+    "appid": null,
+    "title": "Super Smash Bros. Ultimate",
+    "playtimeMinutes": null,
+    "cover": "https://homepage-assets.mathtranslations.org/images/games/super-smash-bros-ultimate-en.jpg",
+    "url": "https://www.smashbros.com/en_US/index.html",
     "note": ""
   },
   {
@@ -37,7 +53,7 @@
     "playtimeMinutes": 1482,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/1057090.jpg",
     "url": "https://store.steampowered.com/app/1057090/?l=english",
-    "note": ""
+    "note": "非常唯美的音乐和画面，游戏真的是第九大艺术。"
   },
   {
     "appid": 1623730,
@@ -45,7 +61,7 @@
     "playtimeMinutes": 7236,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/1623730.jpg",
     "url": "https://store.steampowered.com/app/1623730/?l=english",
-    "note": ""
+    "note": "你就玩吧，一玩一个不吱声"
   },
   {
     "appid": 1568590,
@@ -53,7 +69,15 @@
     "playtimeMinutes": 5454,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/1568590.jpg",
     "url": "https://store.steampowered.com/app/1568590/?l=english",
-    "note": ""
+    "note": "朋友是游戏的最高配置。"
+  },
+  {
+    "appid": 1426210,
+    "title": "It Takes Two",
+    "playtimeMinutes": 456,
+    "cover": "https://homepage-assets.mathtranslations.org/images/games/1426210.jpg",
+    "url": "https://store.steampowered.com/app/1426210/?l=english",
+    "note": "朋友是游戏的最高配置x2。"
   },
   {
     "appid": 646570,
@@ -61,15 +85,7 @@
     "playtimeMinutes": 1962,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/646570.jpg",
     "url": "https://store.steampowered.com/app/646570/?l=english",
-    "note": ""
-  },
-  {
-    "appid": 289070,
-    "title": "Sid Meier’s Civilization® VI",
-    "playtimeMinutes": 846,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/289070.jpg",
-    "url": "https://store.steampowered.com/app/289070/?l=english",
-    "note": ""
+    "note": "少话。打牌。"
   },
   {
     "appid": 105600,
@@ -96,20 +112,12 @@
     "note": ""
   },
   {
-    "appid": 1426210,
-    "title": "It Takes Two",
-    "playtimeMinutes": 456,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/1426210.jpg",
-    "url": "https://store.steampowered.com/app/1426210/?l=english",
-    "note": ""
-  },
-  {
     "appid": 2379780,
     "title": "Balatro",
     "playtimeMinutes": 450,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/2379780.jpg",
     "url": "https://store.steampowered.com/app/2379780/?l=english",
-    "note": ""
+    "note": "少话。打牌x2。"
   },
   {
     "appid": 1145360,
@@ -200,27 +208,11 @@
     "note": ""
   },
   {
-    "appid": 271590,
-    "title": "Grand Theft Auto V Legacy",
-    "playtimeMinutes": 150,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/271590.jpg",
-    "url": "https://store.steampowered.com/app/271590/?l=english",
-    "note": ""
-  },
-  {
     "appid": 1483870,
     "title": "Draw & Guess",
     "playtimeMinutes": 144,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/1483870.jpg",
     "url": "https://store.steampowered.com/app/1483870/?l=english",
-    "note": ""
-  },
-  {
-    "appid": 1238840,
-    "title": "Battlefield™ 1",
-    "playtimeMinutes": 138,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/1238840.jpg",
-    "url": "https://store.steampowered.com/app/1238840/?l=english",
     "note": ""
   },
   {
@@ -232,44 +224,12 @@
     "note": ""
   },
   {
-    "appid": 1238810,
-    "title": "Battlefield™ V",
-    "playtimeMinutes": 126,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/1238810.jpg",
-    "url": "https://store.steampowered.com/app/1238810/?l=english",
-    "note": ""
-  },
-  {
-    "appid": 477160,
-    "title": "Human Fall Flat",
-    "playtimeMinutes": 111,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/477160.jpg",
-    "url": "https://store.steampowered.com/app/477160/?l=english",
-    "note": ""
-  },
-  {
-    "appid": 292030,
-    "title": "The Witcher 3: Wild Hunt - Complete Edition",
-    "playtimeMinutes": 84,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/292030.jpg",
-    "url": "https://store.steampowered.com/app/292030/?l=english",
-    "note": ""
-  },
-  {
     "appid": 753640,
     "title": "Outer Wilds",
     "playtimeMinutes": 83,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/753640.jpg",
     "url": "https://store.steampowered.com/app/753640/?l=english",
-    "note": ""
-  },
-  {
-    "appid": 973810,
-    "title": "Journey To The Savage Planet",
-    "playtimeMinutes": 64,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/973810.jpg",
-    "url": "https://store.steampowered.com/app/973810/?l=english",
-    "note": ""
+    "note": "求知欲真的是人类最大的宝藏。"
   },
   {
     "appid": 632470,
@@ -285,22 +245,6 @@
     "playtimeMinutes": 51,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/736260.jpg",
     "url": "https://store.steampowered.com/app/736260/?l=english",
-    "note": ""
-  },
-  {
-    "appid": null,
-    "title": "The Legend of Zelda: Tears of the Kingdom",
-    "playtimeMinutes": null,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/zelda-tears-of-the-kingdom-en.jpg",
-    "url": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/",
-    "note": ""
-  },
-  {
-    "appid": null,
-    "title": "Super Smash Bros. Ultimate",
-    "playtimeMinutes": null,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/super-smash-bros-ultimate-en.jpg",
-    "url": "https://www.smashbros.com/en_US/index.html",
     "note": ""
   }
 ]

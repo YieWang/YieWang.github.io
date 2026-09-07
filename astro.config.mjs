@@ -15,6 +15,7 @@ export default defineConfig({
     react(),
   ],
   vite: {
+    ...(editing ? { cacheDir: 'node_modules/.vite-editor' } : {}),
     plugins: editing ? [localEditor()] : [],
     server: {
       allowedHosts: editing ? ['localhost'] : true,

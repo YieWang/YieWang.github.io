@@ -162,7 +162,7 @@ const categories = [
     const nativeDirector = secondaryNames(directors,
       ...directors.flatMap((_, index) => [originalDirectors[index], chineseDirectors[index]]));
     const hasReview = !!item.review;
-    const rating = item.rating || item.review?.rating;
+    const rating = item.rating;
 
     // Origin, Year & Runtime inline specs (e.g. "JAPAN · 1998 · 67 MIN" or "USA · 2015–2022 · 6 SEASONS")
     const countryUpper = item.country ? item.country.toUpperCase() : '';
@@ -171,25 +171,20 @@ const categories = [
     const specsParts = [countryUpper, yearDisplay, runtimeUpper].filter(Boolean);
     const specsLine = specsParts.join(' · ');
 
-    // Smart Paragraph Splitting with Authentic Chinese 2-Character Indentation
+    // Limit the preview independently of paragraph length.
     let isLongReview = false;
     let previewHtml = '';
     let remainingHtml = '';
 
     if (hasReview && item.review) {
       const fullText = item.review.content.trim();
-      const paragraphs = fullText.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
-
-      if (paragraphs.length > 1) {
-        isLongReview = true;
-        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${escapeHtml(paragraphs[0])}</p>`;
-        remainingHtml = paragraphs
-          .slice(1)
-          .map(p => `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line pt-3.5" style="text-indent: 2em;">${escapeHtml(p)}</p>`)
-          .join('');
-      } else {
-        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${escapeHtml(fullText)}</p>`;
-      }
+      const characters = Array.from(fullText);
+      isLongReview = characters.length > 200;
+      const renderParagraphs = (text: string) => text.split(/\n\s*\n/)
+        .map(p => p.trim()).filter(Boolean)
+        .map(p => `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${escapeHtml(p)}</p>`).join('');
+      previewHtml = renderParagraphs(isLongReview ? characters.slice(0, 200).join('') + '…' : fullText);
+      remainingHtml = isLongReview ? renderParagraphs(fullText) : '';
     }
 
     modalContentSlot.innerHTML = `
@@ -342,7 +337,7 @@ const categories = [
                 }
 
                 <!-- Indented Preview Paragraph (Chinese 2-Character Indent) -->
-                <div>
+                <div id="review-preview-container" class="space-y-3.5">
                   ${previewHtml}
                 </div>
 
@@ -350,7 +345,7 @@ const categories = [
                 ${
                   isLongReview
                     ? `
-                  <div id="review-remaining-container" class="hidden">
+                  <div id="review-remaining-container" class="hidden space-y-3.5">
                     ${remainingHtml}
                   </div>
 
@@ -359,6 +354,8 @@ const categories = [
                     type="button"
                     class="cursor-pointer text-[#888888] hover:text-black transition-colors duration-200 inline-flex items-center justify-center select-none text-[1.2rem] leading-none pt-2.5 pb-1"
                     aria-label="Expand full essay"
+                    aria-expanded="false"
+                    aria-controls="review-remaining-container"
                     title="Expand full essay"
                   >
                     ↓
@@ -392,6 +389,8 @@ const categories = [
     toggleBtn?.addEventListener('click', () => {
       if (!remainingContainer) return;
       const isHidden = remainingContainer.classList.contains('hidden');
+      document.getElementById('review-preview-container')?.classList.toggle('hidden', isHidden);
+      toggleBtn.setAttribute('aria-expanded', String(isHidden));
       if (isHidden) {
         remainingContainer.classList.remove('hidden');
         toggleBtn.textContent = '↑';

@@ -173,6 +173,7 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
 
   function switchTab(tab: 'books' | 'essays') {
     if (!tabBtnBooks || !tabBtnEssays || !viewBooks || !viewEssays) return;
+    history.replaceState({ ...history.state, literatureTab: tab }, '');
     if (tab === 'books') {
       tabBtnBooks.classList.add('text-black', 'font-bold');
       tabBtnBooks.classList.remove('text-[#737373]', 'font-medium');
@@ -194,6 +195,7 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
 
   tabBtnBooks?.addEventListener('click', () => switchTab('books'));
   tabBtnEssays?.addEventListener('click', () => switchTab('essays'));
+  if (history.state?.literatureTab === 'essays') switchTab('essays');
 
   // 2. Book Modal Lightbox
   const bookCards = document.querySelectorAll<HTMLElement>('.book-card');

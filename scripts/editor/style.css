@@ -23,6 +23,9 @@
 #local-editor-panel .le-image { max-width: 100%; max-height: 180px; object-fit: contain; margin: 8px 0; border-radius: 4px; }
 #local-editor-panel .le-row { display: flex; gap: 5px; margin: 5px 0; }
 #local-editor-panel .le-row button:first-child { flex: 1; min-width: 0; text-align: left; overflow-wrap: anywhere; }
+#local-editor-panel .le-drag { cursor: grab; font-size: 20px; }
+#local-editor-panel .le-row[data-drop=before] { box-shadow: 0 -2px #75846a; }
+#local-editor-panel .le-row[data-drop=after] { box-shadow: 0 2px #75846a; }
 #local-editor-panel .le-error { margin: 0; padding: 0 18px; color: #a32626; white-space: pre-wrap; }
 #local-editor-panel .le-error:not(:empty) { padding: 12px 18px; background: #fff2ee; }
 .local-editing :is(.cinema-card, .music-card, .book-card, .essay-item, #right-showcase-stage, .interest-page article):hover { outline: 1px dashed #75846a; outline-offset: 5px; cursor: text; }
