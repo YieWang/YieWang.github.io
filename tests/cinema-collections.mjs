@@ -78,3 +78,29 @@ for (const tier of [0,1,2,3]) {
 const groupKey = x => `${order(x)}:${x.studio || x.id}`;
 assert.deepEqual([...new Set(animationCards.map(groupKey))],[...new Set(beforeStudios.map(groupKey))],'Keep groups at their first existing position');
 assert.ok(animationCards.some(x => x.id === 'tv-37854'), 'One Piece remains visible');
+
+const filmCards = Array.from(context.exports.cinemaFilmCards);
+assert.deepEqual(filmCards.map(x => x.id).sort(), Array.from(groupFilmCollections(cinemaFilms), x => x.id).sort(), 'Sorting preserves every existing film card');
+const tiers = filmCards.map(x => Number(!x.installments));
+assert.deepEqual(tiers, [...tiers].sort(), 'All film collections precede standalone films');
+const leadDirector = x => (x.installments?.[0] || x).director.split(',')[0].trim();
+for (const collection of [true, false]) {
+  const cards = filmCards.filter(x => !!x.installments === collection);
+  const groups = new Map();
+  cards.forEach((card, index) => {
+    const director = leadDirector(card);
+    const group = groups.get(director) || [];
+    group.push({ card, index }); groups.set(director, group);
+  });
+  const firstYears = [];
+  for (const group of groups.values()) {
+    assert.equal(group.at(-1).index - group[0].index + 1, group.length, 'Same lead director stays adjacent within a tier');
+    const years = group.map(x => Number(x.card.year));
+    assert.deepEqual(years, [...years].sort((a,b) => a-b));
+    firstYears.push(years[0]);
+  }
+  assert.deepEqual(firstYears, [...firstYears].sort((a,b) => a-b), 'Director groups follow their earliest release');
+}
+assert.equal(leadDirector(filmCards.find(x => x.title === 'Harry Potter')), 'Chris Columbus');
+assert.equal(leadDirector(filmCards.find(x => x.title === 'King of Comedy')), 'Stephen Chow');
+console.log('Films: series first, adjacent lead directors, chronological groups and intact membership passed');

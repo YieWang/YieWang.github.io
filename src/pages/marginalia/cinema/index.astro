@@ -1,10 +1,10 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
-import { cinemaFilms, cinemaSeries, cinemaAnimationCards, groupFilmCollections, withSeasonDetails } from '../../../data/cinema';
+import { cinemaFilmCards, cinemaSeries, cinemaAnimationCards, withSeasonDetails } from '../../../data/cinema';
 
 const categories = [
-  { id: 'films', label: 'Films', items: groupFilmCollections(cinemaFilms) },
+  { id: 'films', label: 'Films', items: cinemaFilmCards },
   { id: 'series', label: 'Series', items: cinemaSeries.map(withSeasonDetails).sort((a, b) => Number(!!b.review) - Number(!!a.review)) },
   { id: 'animation', label: 'Animation', items: cinemaAnimationCards },
 ];

@@ -103,6 +103,21 @@ export function groupFilmCollections(items: MediaItem[]): MediaItem[] {
   });
 }
 
+// Series first; keep each lead director's cards together within each tier.
+const filmDirectorGroups = new Map<string, MediaItem[]>();
+for (const item of groupFilmCollections(cinemaFilms)) {
+  const director = (item.installments?.[0] || item).director.split(',')[0].trim();
+  const key = `${!!item.installments}:${director || item.id}`;
+  const group = filmDirectorGroups.get(key) || [];
+  group.push(item);
+  filmDirectorGroups.set(key, group);
+}
+export const cinemaFilmCards = [...filmDirectorGroups.values()]
+  .map(group => group.sort((a, b) => Number(a.year) - Number(b.year)))
+  .sort((a, b) => Number(!!b[0].installments) - Number(!!a[0].installments)
+    || Number(a[0].year) - Number(b[0].year))
+  .flat();
+
 // Seasons reuse the same detail switcher as film collections.
 export function withSeasonDetails(item: MediaItem): MediaItem {
   if (!item.seasons?.length) return item;
