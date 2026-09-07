@@ -7,6 +7,7 @@ export interface MusicTrack {
   trackNo: number;
   title: string;
   duration: string;
+  artistName?: string;
   isFavorite?: boolean;
   note?: string; // 针对单曲的心情随笔 / 听歌时刻 / 歌词摘录
 }

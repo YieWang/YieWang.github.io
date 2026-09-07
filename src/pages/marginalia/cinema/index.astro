@@ -1,11 +1,13 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
-import { cinemaFilms, cinemaSeries, type MediaItem } from '../../../data/cinema';
+import { cinemaFilms, cinemaSeries, cinemaAnimation } from '../../../data/cinema';
 
-// Sort works with personal reviews to the very front of each section
-const sortedFilms = [...cinemaFilms].sort((a, b) => (b.review ? 1 : 0) - (a.review ? 1 : 0));
-const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.review ? 1 : 0));
+const categories = [
+  { id: 'films', label: 'Films', items: cinemaFilms },
+  { id: 'series', label: 'Series', items: cinemaSeries },
+  { id: 'animation', label: 'Animation', items: cinemaAnimation },
+].map(category => ({ ...category, items: [...category.items].sort((a, b) => Number(!!b.review) - Number(!!a.review)) }));
 ---
 
 <Layout
@@ -17,35 +19,25 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
   <Header activeTab="marginalia" />
 
   <!-- Main Container (Expanded to enlarge posters while keeping 6-per-row) -->
-  <div class="max-w-[1760px] mx-auto w-full pb-24 pt-6 sm:pt-10 md:pt-12 px-4 sm:px-8 md:px-12">
+  <div class="max-w-[1760px] mx-auto w-full pb-28 pt-2 sm:pt-4 px-4 sm:px-8 md:px-12">
 
-    <!-- MAIN GALLERY CONTENT -->
-    <main class="space-y-24 sm:space-y-32">
-      
-      <!-- 1. FEATURE FILMS SECTION -->
-      <section id="section-films" class="space-y-7">
-        <!-- Section Header -->
-        <div class="flex items-baseline justify-between border-b border-[#F0F0F0] pb-3 select-none">
-          <h2
-            class="text-[1.05rem] sm:text-[1.15rem] font-bold uppercase tracking-[0.24rem] text-[#1E1E1E]"
-            style="font-family: 'Josefin Sans', sans-serif;"
-          >
-            FILMS
-          </h2>
-
-          <!-- Pure Number Counter (No 'TITLES' word) -->
-          <span class="font-mono text-[0.78rem] sm:text-[0.84rem] text-[#888888] tracking-wider">
-            {cinemaFilms.length}
-          </span>
-        </div>
-
+    <nav aria-label="Cinema categories" class="pt-2 sm:pt-4 pb-8 sm:pb-12 flex items-center justify-center gap-6 sm:gap-14 select-none">
+      {categories.map((category, index) => (
+        <button type="button" data-cinema-tab={category.id} aria-controls={`section-${category.id}`} aria-pressed={index === 0}
+          class="cinema-tab uppercase text-[0.75rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-colors cursor-pointer aria-pressed:font-bold aria-pressed:text-black"
+          style="font-family: 'Montserrat', sans-serif;">{category.label}</button>
+      ))}
+    </nav>
+    <main>
+      {categories.map((category, index) => (
+        <section id={`section-${category.id}`} aria-label={category.label} hidden={index !== 0}>
         <!-- Enlarged Poster Grid: 6-per-row layout on desktop -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-9 sm:gap-y-11 md:gap-y-12">
-          {sortedFilms.map((film) => (
+          {category.items.map((film) => (
             <article
               class="cinema-card group cursor-pointer flex flex-col justify-between select-none"
               data-item-id={film.id}
-              data-type="film"
+              data-type={film.type}
               data-has-review={film.review ? 'true' : 'false'}
               data-item-json={JSON.stringify(film)}
             >
@@ -99,86 +91,8 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
             </article>
           ))}
         </div>
-      </section>
-
-      <!-- 2. TELEVISION & SERIES SECTION -->
-      <section id="section-series" class="space-y-7 pt-4 sm:pt-6">
-        <!-- Section Header -->
-        <div class="flex items-baseline justify-between border-b border-[#F0F0F0] pb-3 select-none">
-          <h2
-            class="text-[1.05rem] sm:text-[1.15rem] font-bold uppercase tracking-[0.24rem] text-[#1E1E1E]"
-            style="font-family: 'Josefin Sans', sans-serif;"
-          >
-            SERIES
-          </h2>
-          <!-- Pure Number Counter (No 'TITLES' word) -->
-          <span class="font-mono text-[0.78rem] sm:text-[0.84rem] text-[#888888] tracking-wider">
-            {cinemaSeries.length}
-          </span>
-        </div>
-
-        <!-- Enlarged Poster Grid: 6-per-row layout on desktop -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-9 sm:gap-y-11 md:gap-y-12">
-          {sortedSeries.map((series) => (
-            <article
-              class="cinema-card group cursor-pointer flex flex-col justify-between select-none"
-              data-item-id={series.id}
-              data-type="series"
-              data-has-review={series.review ? 'true' : 'false'}
-              data-item-json={JSON.stringify(series)}
-            >
-              <!-- Top Portion: Pure Artwork Poster + Pure English Titles -->
-              <div class="space-y-2.5 text-left">
-                <!-- 100% Clean 2:3 Poster Frame (Zero Overlays) -->
-                <div class="relative w-full aspect-[2/3] bg-[#EFEFEF] overflow-hidden rounded-[2px] transition-transform duration-300 ease-out group-hover:scale-[1.018]">
-                  <img
-                    src={series.posterUrl}
-                    alt={series.title}
-                    loading="lazy"
-                    class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
-                  />
-                </div>
-
-                <!-- Pure English Title & Director on Homepage (Defensive line-clamp and truncate) -->
-                <div class="space-y-0.5 pt-0.5">
-                  <h3
-                    class="text-[0.82rem] sm:text-[0.88rem] font-medium leading-[1.3] text-[#1E1E1E] group-hover:text-black transition-colors line-clamp-2 break-words"
-                    style="font-family: 'Montserrat', sans-serif;"
-                    title={series.title}
-                  >
-                    {series.title}
-                  </h3>
-                  <p
-                    class="text-[0.72rem] sm:text-[0.76rem] text-[#666666] font-light leading-[1.35] truncate pt-0.5"
-                    style="font-family: 'Montserrat', sans-serif;"
-                    title={series.director}
-                  >
-                    {series.director}
-                  </p>
-                </div>
-              </div>
-
-              <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Whitespace-nowrap prevents wrapping) -->
-              <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
-                <span class="whitespace-nowrap shrink-0">{series.year}</span>
-                {series.review && (
-                  <span
-                    class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"
-                    title="Includes personal critical review"
-                  >
-                    <!-- Lucide: pen-line (https://lucide.dev/icons/pen-line) -->
-                    <svg class="w-3.5 h-3.5 text-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M13 21h8" />
-                      <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
-                    </svg>
-                  </span>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
+        </section>
+      ))}
     </main>
     <aside aria-label="Credits" class="mt-16 text-[0.65rem] leading-relaxed text-[#888888]">
       <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">
@@ -208,6 +122,16 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
 <script>
   import type { MediaItem } from '../../../data/cinema';
   import { escapeHtml } from '../../../lib/html';
+
+  const categoryButtons = document.querySelectorAll<HTMLButtonElement>('[data-cinema-tab]');
+  categoryButtons.forEach(button => button.addEventListener('click', () => {
+    categoryButtons.forEach(tab => {
+      const selected = tab === button;
+      tab.setAttribute('aria-pressed', String(selected));
+      const section = document.getElementById(tab.getAttribute('aria-controls')!);
+      if (section) section.hidden = !selected;
+    });
+  }));
 
   const cinemaCards = document.querySelectorAll<HTMLElement>('.cinema-card');
   const modalBackdrop = document.getElementById('cinema-modal-backdrop');
@@ -315,7 +239,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
           <div class="grid grid-cols-2 gap-x-6 gap-y-3 pb-3.5 border-b border-[#F0F0F0] shrink-0">
             <div class="space-y-0.5 min-w-0">
               <div class="text-[#999999] uppercase text-[0.62rem] tracking-wider font-mono">
-                ${item.type === 'series' ? 'CREATOR' : 'DIRECTED BY'}
+                ${escapeHtml(item.creditRole || (item.type === 'series' ? 'CREATOR' : 'DIRECTED BY'))}
               </div>
               <div class="text-black font-medium text-[0.82rem] sm:text-[0.85rem] break-words">
                 <span>${escapeHtml(item.director)}</span>

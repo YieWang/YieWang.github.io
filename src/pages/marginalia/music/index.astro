@@ -178,7 +178,7 @@ const artistGroups = musicArtists.map(artist => {
           >
             <div class="flex items-baseline gap-2.5 min-w-0">
               <span class="font-mono text-[0.70rem] text-[#888888] w-4 shrink-0">${t.trackNo ? String(t.trackNo).padStart(2, '0') : '—'}</span>
-              <span class="font-semibold text-[#1E1E1E] tracking-wide truncate group-hover:text-black">${escapeHtml(t.title)}</span>
+              <span class="font-semibold text-[#1E1E1E] tracking-wide truncate group-hover:text-black">${escapeHtml(t.title)}${t.artistName ? `<span class="block text-[0.68rem] text-[#888888] font-normal mt-0.5">${escapeHtml(t.artistName)}</span>` : ''}</span>
             </div>
             
             <div class="flex items-center gap-3 shrink-0">

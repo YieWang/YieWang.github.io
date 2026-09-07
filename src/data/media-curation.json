@@ -1,0 +1,1268 @@
+{
+  "excludedCinemaIds": [
+    "film-27599401",
+    "film-26771100"
+  ],
+  "excludedTracks": [
+    {
+      "id": "i.aJGY7YdS3PO0ROz",
+      "title": "飞机场的10:30 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.06QNk50t05DPqDW",
+      "title": "二十二 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.7PJNVZEf0bqNMq7",
+      "title": "讨厌红楼梦 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.06QNMKNf05DPqDW",
+      "title": "寂寞的季节 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.EYVbBvXFm2V1pVg",
+      "title": "普通朋友 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.9oJNX43sPezL6z2",
+      "title": "Melody (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.NJv0eRkfl8xp6xo",
+      "title": "月亮代表谁的心 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.06QNd8Vt05DPqDW",
+      "title": "天天 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.xrXvkElfMDkW6k2",
+      "title": "找自己 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.aJGYNzYH3PO0ROz",
+      "title": "爱,很简单 (Live)",
+      "album": "Soul Power (现场原音专辑)",
+      "artist": "陶喆",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.NJv0bZzFl8xp6xo",
+      "title": "人质",
+      "album": "星光同学会 (超级星光大道10强纪念合辑)",
+      "artist": "杨宗纬",
+      "reason": "Variety-show release"
+    },
+    {
+      "id": "i.7PJNQBmt0bqNMq7",
+      "title": "我爱的人",
+      "album": "星光同学会 (超级星光大道10强纪念合辑)",
+      "artist": "林宥嘉",
+      "reason": "Variety-show release"
+    },
+    {
+      "id": "i.xrXvPOLtMDkW6k2",
+      "title": "背叛",
+      "album": "星光同学会 (超级星光大道10强纪念合辑)",
+      "artist": "杨宗纬",
+      "reason": "Variety-show release"
+    },
+    {
+      "id": "i.9oJNXABHPezL6z2",
+      "title": "被动 (feat. 伍佰) [Live]",
+      "album": "徐佳莹是日救星演唱会 (Live)",
+      "artist": "徐佳莹",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.rXzZMAQFMLve9vd",
+      "title": "出现又离开 (Live)",
+      "album": "我是唱作人 第2期 (Live)",
+      "artist": "梁博",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.xrXvk8LFMDkW6k2",
+      "title": "出现又离开(Live)",
+      "album": "尖叫之夜 - Single",
+      "artist": "梁博",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.7PJNVg2U0bqNMq7",
+      "title": "踮起脚尖爱",
+      "album": "超级偶像 Super! I Do!",
+      "artist": "洪佩瑜",
+      "reason": "Variety-show release"
+    },
+    {
+      "id": "i.xrXvpGYTMDkW6k2",
+      "title": "海阔天空 (Introduced by Beyond) [Live]",
+      "album": "Words & Music Final Live Gold",
+      "artist": "Beyond",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.7PJNQRXT0bqNMq7",
+      "title": "野子 (Live)",
+      "album": "第二季中国好歌曲十大金曲",
+      "artist": "苏运莹",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.EYVb03oum2V1pVg",
+      "title": "记·念 (Live)",
+      "album": "第二季中国好歌曲十大金曲",
+      "artist": "Yuxin Lei",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.9oJNz3NcPezL6z2",
+      "title": "你比从前快乐 (Live)",
+      "album": "范特西 (Live) - Single",
+      "artist": "周杰伦",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.NJv0b9XFl8xp6xo",
+      "title": "世界末日 (Live)",
+      "album": "范特西 (Live) - Single",
+      "artist": "周杰伦",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.vMX1d34Sgrzp2zq",
+      "title": "你怎么连话都说不清楚 (Live)",
+      "album": "The One 周杰伦演唱会",
+      "artist": "周杰伦",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.dlvqqBqTzq2782E",
+      "title": "谁 (Live版)",
+      "album": "这个人创作LIVE现场辑 - EP",
+      "artist": "廖俊涛",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.xrXv4AqSMDkW6k2",
+      "title": "思念 (live 典藏)",
+      "album": "歌手2024 第3期",
+      "artist": "YELLOW黄宣",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.rXzZBKqUMLve9vd",
+      "title": "瓦解 (Live)",
+      "album": "2004 无与伦比演唱会 (Live)",
+      "artist": "周杰伦",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.B0VNEoxFxM6316R",
+      "title": "我的歌声里 (中国好声音)",
+      "album": "中国好声音: 第一期",
+      "artist": "李代沫",
+      "reason": "Variety-show release"
+    },
+    {
+      "id": "i.9oJNM55UPezL6z2",
+      "title": "夜夜夜夜",
+      "album": "超级星光PK宝典, Vol. 2",
+      "artist": "梁静茹",
+      "reason": "Variety-show release"
+    },
+    {
+      "id": "i.EYVblBGCm2V1pVg",
+      "title": "夜夜夜夜 (中国好声音)",
+      "album": "中国好声音: 第四期",
+      "artist": "金池",
+      "reason": "Variety-show release"
+    },
+    {
+      "id": "i.rXzZM14SMLve9vd",
+      "title": "Don't Waste My Time (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "Status Quo",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.B0VNmxQUxM6316R",
+      "title": "You're the Best Thing (Live at Live Aid, Wembley Stadium, 13th July 1983)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "The Style Council",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.rXzZGJ4FMLve9vd",
+      "title": "I Don't Like Mondays (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "The Boomtown Rats",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.dlvqJZBUzq2782E",
+      "title": "Only When You Leave (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "Spandau Ballet",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.xrXvoLvUMDkW6k2",
+      "title": "All You Need Is Love (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "埃尔文斯・科斯特洛",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.vMX1D5qTgrzp2zq",
+      "title": "Bohemian Rhapsody / Radio Gaga (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "Queen",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.9oJNE52UPezL6z2",
+      "title": "Crazy Little Thing Called Love (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "Queen",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.NJv0kggtl8xp6xo",
+      "title": "We Will Rock You (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "Queen",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.aJGYqKPU3PO0ROz",
+      "title": "We Are the Champions (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "Queen",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.06QNzmXS05DPqDW",
+      "title": "Tvc15 (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "David Bowie",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.EYVbNrptm2V1pVg",
+      "title": "Let It Be (Live at Live Aid, Wembley Stadium, 13th July 1985)",
+      "album": "Live Aid (Live, 13th July 1985)",
+      "artist": "Paul McCartney",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.EYVbA9oTm2V1pVg",
+      "title": "Love of My Life (Live At Rock In Rio)",
+      "album": "Bohemian Rhapsody (The Original Soundtrack)",
+      "artist": "Queen",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.B0VNmGbSxM6316R",
+      "title": "Radio Ga Ga (Live Aid)",
+      "album": "Bohemian Rhapsody (The Original Soundtrack)",
+      "artist": "Queen",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.7PJNzbXS0bqNMq7",
+      "title": "Careless Whisper (Live In Japan, 1985)",
+      "album": "君之千言万语 - 英语2",
+      "artist": "邓丽君",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.vMX12d4ugrzp2zq",
+      "title": "Do You Know? (Live)",
+      "album": "Simply Blue (Live)",
+      "artist": "AKIKO",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.06QNGZmU05DPqDW",
+      "title": "Don't Break My Heart (Live)",
+      "album": "歌手2026 (第1期 Live)",
+      "artist": "窦靖童",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.EYVbqKpCm2V1pVg",
+      "title": "冻结 (现场版)",
+      "album": "林俊杰2003年-2010年作品精选集",
+      "artist": "林俊杰",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.B0VNMBLUxM6316R",
+      "title": "G小调奏鸣曲\"魔鬼的颤音\"",
+      "album": "高参小提琴实况录音辑",
+      "artist": "高参",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.rXzZkYGHMLve9vd",
+      "title": "It Is Well (Live)",
+      "album": "You Make Me Brave (Live)",
+      "artist": "Bethel Music & Kristene DiMarco",
+      "reason": "Live recording"
+    },
+    {
+      "id": "i.EYVbbvMIm2V1pVg",
+      "title": "越来越不懂 (Live)",
+      "album": "My Space 演唱会纪念盘 (Live)",
+      "artist": "蔡健雅",
+      "reason": "Live recording"
+    }
+  ],
+  "musicGroups": [
+    {
+      "title": "滚石三十青春音乐记事簿: 纸条传情",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "星光同学会 (超级星光大道10强纪念合辑)",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "幸存者的负罪感",
+      "albumArtist": "王以太 & 艾热AIR",
+      "group": "王以太"
+    },
+    {
+      "title": "不能说的秘密 (Original Soundtrack)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "我是唱作人 第2期 (Live)",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "超级偶像 Super! I Do!",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "《大丈夫》电视剧原声带",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "飞云之下 - Single",
+      "albumArtist": "韩红 & 林俊杰",
+      "group": "韩红"
+    },
+    {
+      "title": "终极一班 (电视原声带)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "第二季中国好歌曲十大金曲",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "四月は君の嘘 ORIGINAL SONG & SOUNDTRACK",
+      "albumArtist": "横山克",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "仙剑奇侠传 (电视原声带)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "电视剧《想见你》原声带",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "明天会更好 - Single",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "滚石三十青春音乐记事簿: 风雨操场",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "红星一号 (许巍/郑钧经典作品翻唱集) - EP",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "中国好声音: 第一期",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "喜欢你 (电影原声带)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "传奇再续",
+      "albumArtist": "Beyond, 邓丽君 & 张国荣",
+      "group": "邓丽君"
+    },
+    {
+      "title": "超级星光PK宝典, Vol. 2",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "中国好声音: 第四期",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "花样年华 第一弹",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "Live Aid (Live, 13th July 1985)",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "TVアニメ「進撃の巨人」Season 2 オリジナルサウンドトラック",
+      "albumArtist": "泽野弘之",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Bohemian Rhapsody (The Original Soundtrack)",
+      "albumArtist": "Queen",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Death Stranding (Songs from the Video Game)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "To the Moon (Original Soundtrack)",
+      "albumArtist": "Kan Gao & Laura Shigihara",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "albumArtist": "Lin-Manuel Miranda, Leslie Odom, Jr., Phillipa Soo, Daveed Diggs & Christopher Jackson",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "古典任意门7: 贝多芬沉思中",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "「進撃の巨人」Season3 オリジナルサウンドトラック",
+      "albumArtist": "泽野弘之",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "La La Land (Original Motion Picture Soundtrack)",
+      "albumArtist": "贾斯汀 · 赫尔维茨, Benj Pasek, Justin Noble Paul, 艾玛·斯通 & Ryan Gosling",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Vivaldi: Four Seasons",
+      "albumArtist": "吉顿・克莱默, Leslie Pearson, 伦敦交响乐团 & 克劳迪奥・阿巴多",
+      "group": "吉顿・克莱默"
+    },
+    {
+      "title": "Long Vacation Original Soundtrack",
+      "albumArtist": "Cagnet",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "歌手2026 (第1期 Live)",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "Don't Go - Single",
+      "albumArtist": "Skrillex, Justin Bieber & Don Toliver",
+      "group": "Skrillex"
+    },
+    {
+      "title": "《必娶女人》电视原声带",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Drive You Home - Single",
+      "albumArtist": "Jackson Wang & Internet Money",
+      "group": "Jackson Wang"
+    },
+    {
+      "title": "Les Misérables (The Motion Picture Soundtrack) [Deluxe Edition]",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "España",
+      "albumArtist": "阿托乌洛 · 阿尔金塔 & 伦敦交响乐团",
+      "group": "伦敦交响乐团"
+    },
+    {
+      "title": "Aquaman (Original Motion Picture Soundtrack) [Deluxe Edition]",
+      "albumArtist": "Rupert Gregson-Williams",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "TVアニメ「進撃の巨人」オリジナルサウンドトラック",
+      "albumArtist": "泽野弘之",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "「世界から猫が消えたなら」オリジナルサウンドトラック",
+      "albumArtist": "小林武史 & HARUHI",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "最美大提琴",
+      "albumArtist": "翟慧莉 & 金文彬",
+      "group": "翟慧莉"
+    },
+    {
+      "title": "TVアニメ「メイドインアビス」オリジナルサウンドトラック",
+      "albumArtist": "Kevin Penkin",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Harry Potter and the Sorcerer's Stone (Original Motion Picture Soundtrack)",
+      "albumArtist": "约翰・威廉姆斯",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Here We Are Again - Long Vacation Original Soundtrack III",
+      "albumArtist": "Cagnet",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "钢琴恋曲101",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "The Bodyguard (Original Soundtrack Album)",
+      "albumArtist": "Whitney Houston",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Cyberpunk 2077: Radio, Vol. 2 (Original Soundtrack)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "A Star Is Born Soundtrack",
+      "albumArtist": "Lady Gaga & 布莱德利・古柏",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "The Crew 乐酷概念合辑",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "Janine Jansen",
+      "albumArtist": "巴里 · 沃兹沃斯, 珍妮・扬森 & 皇家爱乐管弦乐队",
+      "group": "珍妮・扬森"
+    },
+    {
+      "title": "铃芽之旅",
+      "albumArtist": "RADWIMPS & Kazuma Jinnouchi",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "An Evening With Silk Sonic",
+      "albumArtist": "Silk Sonic, Bruno Mars & Anderson .Paak",
+      "group": "Silk Sonic"
+    },
+    {
+      "title": "Legends Never Die - Single",
+      "albumArtist": "League of Legends Music & Against The Current",
+      "group": "Against The Current"
+    },
+    {
+      "title": "My Favourite Kreisler",
+      "albumArtist": "伊扎克・帕尔曼 & 萨缪尔 · 桑德斯",
+      "group": "伊扎克・帕尔曼"
+    },
+    {
+      "title": "Lonely - Single",
+      "albumArtist": "Justin Bieber & benny blanco",
+      "group": "Justin Bieber"
+    },
+    {
+      "title": "Tarifa Groove Collections 11",
+      "albumArtist": "Deerhunter, Four Tet, Bajofondo, HP. Höger, Bebo Best, viba sound & Riticox",
+      "group": "Compilations"
+    },
+    {
+      "title": "Mr. Enjoy Da Money",
+      "albumArtist": "KnowKnow & Higher Brothers",
+      "group": "KnowKnow"
+    },
+    {
+      "title": "Parasyte -the maxiim- (Original Soundtrack)",
+      "albumArtist": "Ken Arai",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "TVアニメ「メイドインアビス 烈日の黄金郷」オリジナルサウンドトラック",
+      "albumArtist": "Kevin Penkin",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Eternal Sunshine of the Spotless Mind (Soundtrack from the Motion Picture)",
+      "albumArtist": "Eternal Sunshine of the Spotless Mind & Jon Brion",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Beethoven for Three: Symphony No. 4 and Op. 97 \"Archduke\"",
+      "albumArtist": "马友友, 列奥尼达斯・卡瓦科斯 & 伊曼纽尔・艾克斯",
+      "group": "马友友"
+    },
+    {
+      "title": "Coco (Original Motion Picture Soundtrack) [Asia Special Edition]",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Titanic: The Ultimate Collection",
+      "albumArtist": "群星",
+      "group": "Compilations"
+    },
+    {
+      "title": "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
+      "albumArtist": "Metro Boomin",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Mozart: The Great Serenades (Including \"Eine Kleine Nachtmusik\")",
+      "albumArtist": "圣马丁室内乐团 & 内维尔・马里纳爵士",
+      "group": "圣马丁室内乐团"
+    },
+    {
+      "title": "NIKI Acoustic Sessions: Head in the Clouds II - Single",
+      "albumArtist": "NIKI & 88rising",
+      "group": "NIKI"
+    },
+    {
+      "title": "The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Type-3 - EP",
+      "albumArtist": "Higher Brothers & HARIKIRI",
+      "group": "Higher Brothers"
+    },
+    {
+      "title": "The Legend of 1900 (Original Motion Picture Soundtrack)",
+      "albumArtist": "埃尼奥・莫里康内",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Stokowski Edition, Vol. 9",
+      "albumArtist": "列奥波德・斯托科夫斯基, 英国爱乐乐团 & Hugh Bean",
+      "group": "英国爱乐乐团"
+    },
+    {
+      "title": "Vivaldi: Die vier Jahreszeiten",
+      "albumArtist": "赫伯特・冯・卡拉扬, 维也纳爱乐 & 安娜-苏菲・穆特",
+      "group": "安娜-苏菲・穆特"
+    },
+    {
+      "title": "Vivaldi: The Four Seasons",
+      "albumArtist": "安娜-苏菲・穆特, 赫伯特・冯・卡拉扬 & 维也纳爱乐",
+      "group": "安娜-苏菲・穆特"
+    },
+    {
+      "title": "Kikujiro (Original Motion Picture Soundtrack)",
+      "albumArtist": "久石让",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "The Sun Also Rises (Original Motion Picture Soundtrack)",
+      "albumArtist": "久石让",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Kill Bill Vol. 1 Original Soundtrack (PA Version)",
+      "albumArtist": "伯纳德 ・ 赫尔曼",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Beethoven: Complete Sonatas for Piano & Violin",
+      "albumArtist": "伊莎贝拉・浮士德 & 亚历山大・曼尼柯夫",
+      "group": "伊莎贝拉・浮士德"
+    },
+    {
+      "title": "Dreamland",
+      "albumArtist": "亚历克西斯 · 弗伦奇, 皇家利物浦爱乐乐团 & James Morgan",
+      "group": "亚历克西斯 · 弗伦奇"
+    },
+    {
+      "title": "The Great Gatsby (Music From Baz Luhrmann's Film)",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Yumeji's Theme (Original Motion Picture Soundtrack) - Single",
+      "albumArtist": "梅林茂",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "Silence On Joue - Take 2",
+      "albumArtist": "安吉拉 · 迪博 & La Pietà",
+      "group": "安吉拉 · 迪博"
+    },
+    {
+      "title": "轩辕剑",
+      "albumArtist": "群星",
+      "group": "Soundtracks"
+    },
+    {
+      "title": "ギルティクラウン オリジナルサウンドトラック",
+      "albumArtist": "泽野弘之",
+      "group": "Soundtracks"
+    }
+  ],
+  "cinemaMetadata": {
+    "tv-43167": {
+      "director": "Reki Kawahara",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.sunrise-world.net/titles/titles.php?id=324"
+      ]
+    },
+    "tv-92602": {
+      "director": "Ei Aoki",
+      "creditRole": "DIRECTED BY",
+      "sources": [
+        "https://id-invaded-anime.com/cast_staff/"
+      ]
+    },
+    "tv-95479": {
+      "director": "Gege Akutami",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://jujutsukaisen.jp/staffcast/"
+      ]
+    },
+    "tv-117933": {
+      "director": "Yasuki Tanaka",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://summertime-anime.com/staffcast/"
+      ]
+    },
+    "tv-83097": {
+      "director": "Kaiu Shirai, Posuka Demizu",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://neverland-anime.com/1st/staffcast/"
+      ]
+    },
+    "tv-61663": {
+      "director": "Naoshi Arakawa",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.kimiuso.jp/sp/special/05_09.html"
+      ]
+    },
+    "tv-82739": {
+      "director": "Hajime Kamoshida",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://ao-buta.com/odekake/special_odekake/taidan/"
+      ]
+    },
+    "tv-42942": {
+      "director": "Jun Maeda",
+      "creditRole": "ORIGINAL STORY / SCREENPLAY",
+      "sources": [
+        "https://www.angelbeats.jp/staff/"
+      ]
+    },
+    "tv-82766": {
+      "director": "Shion Miura",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.production-ig.co.jp/works/kazetsuyo/staff-cast.html"
+      ]
+    },
+    "tv-31724": {
+      "director": "Ichiro Okouchi, Goro Taniguchi",
+      "creditRole": "ORIGINAL STORY",
+      "sources": [
+        "https://geass.jp/first/staff.html"
+      ]
+    },
+    "tv-43125": {
+      "director": "Tetsuro Araki",
+      "creditRole": "DIRECTED BY",
+      "sources": [
+        "https://www.production-ig.co.jp/works/guiltycrown/staff-cast.html"
+      ]
+    },
+    "tv-45782": {
+      "director": "Reki Kawahara",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.swordart-online.net/aincrad/"
+      ]
+    },
+    "tv-61415": {
+      "director": "Kinoko Nasu / TYPE-MOON",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.fate-sn.com/ubw/staff/"
+      ]
+    },
+    "tv-139130": {
+      "director": "Misaki Takamatsu",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://skip-and-loafer.com/1st/index.html"
+      ]
+    },
+    "tv-134182": {
+      "director": "Wang Wei",
+      "creditRole": "DIRECTED BY",
+      "sources": [
+        "https://bangumi.tv/subject/136249",
+        "https://www.tvmao.com/drama/KyodMWo="
+      ],
+      "country": "CN"
+    },
+    "tv-63926": {
+      "director": "ONE, Yusuke Murata",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://onepunchman-anime.net/staff/"
+      ]
+    },
+    "tv-127714": {
+      "director": "Hotondo Shindeiru",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://isekaiojisan.com/staffcast/"
+      ]
+    },
+    "tv-88803": {
+      "director": "Makoto Yukimura",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://vinlandsaga.jp/staffcast/"
+      ]
+    },
+    "tv-67676": {
+      "director": "Shuichi Aso",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.saikikusuo.com/season1/sp/staff/"
+      ]
+    },
+    "tv-60863": {
+      "director": "Haruichi Furudate",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://haikyu.jp/season2/"
+      ]
+    },
+    "tv-46671": {
+      "director": "Sakae Esuno",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://future-diary.tv/staffcast/"
+      ]
+    },
+    "tv-240411": {
+      "director": "Yukinobu Tatsu",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://anime-dandadan.com/staffcast/"
+      ]
+    },
+    "tv-112613": {
+      "director": "Sosuke Toka",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://osama-ranking.com/staff/"
+      ]
+    },
+    "tv-45790": {
+      "director": "Hirohiko Araki",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://jojo-animation.com/fb_bt/staff/"
+      ]
+    },
+    "tv-119100": {
+      "director": "Aki Hamazi",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://bocchi.rocks/"
+      ]
+    },
+    "tv-72636": {
+      "director": "Akihito Tsukushi",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://miabyss.com/staff.html"
+      ]
+    },
+    "tv-124396": {
+      "director": "Shingo Natsume",
+      "creditRole": "DIRECTOR / SCREENWRITER",
+      "sources": [
+        "https://madhouse.co.jp/works/tv_sonny-boy/"
+      ]
+    },
+    "tv-85937": {
+      "director": "Koyoharu Gotouge",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://kimetsu.com/anime/special/?page=novel"
+      ]
+    },
+    "tv-209867": {
+      "director": "Kanehito Yamada, Tsukasa Abe",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://frieren-anime.jp/staffcast/"
+      ]
+    },
+    "tv-16069": {
+      "director": "Fumi Saimon",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.fujitv.co.jp/b_hp/tokyolovestory_r/index.html"
+      ]
+    },
+    "tv-46234": {
+      "director": "Ryota Kosawa",
+      "creditRole": "SCREENPLAY",
+      "sources": [
+        "https://www.fujitv.co.jp/b_hp/legal-high/"
+      ]
+    },
+    "tv-155441": {
+      "director": "Qidao Jun",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://www.chinawriter.com.cn/n1/2022/0130/c405057-32343641.html"
+      ]
+    },
+    "tv-4319": {
+      "director": "Taeko Asano, Masaya Ozaki",
+      "creditRole": "SCREENPLAY",
+      "sources": [
+        "https://eshop.fujitv.co.jp/c/c_dvdbd/24151"
+      ]
+    },
+    "tv-210955": {
+      "director": "Yuri Kanchiku",
+      "creditRole": "DIRECTOR / SCREENWRITER",
+      "sources": [
+        "https://about.netflix.com/zh_cn/news/first-love-enters-global-top-10-and-gives-exclusive-look-behind-the-scenes"
+      ]
+    },
+    "tv-1429": {
+      "director": "Hajime Isayama",
+      "creditRole": "ORIGINAL WORK",
+      "sources": [
+        "https://shingeki.tv/season1/"
+      ]
+    },
+    "film-24735062": {
+      "country": "CN",
+      "sources": [
+        "https://www.1905.com/mdb/film/2220274/"
+      ]
+    }
+  },
+  "musicCovers": [
+    {
+      "title": "和自己对话 (实验专辑)",
+      "albumArtist": "林俊杰",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-61b0136199e7dd07.webp",
+      "source": "https://music.apple.com/tw/album/%E5%92%8C%E8%87%AA%E5%B7%B1%E5%B0%8D%E8%A9%B1/1871400633?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "晚安,琦 - Single",
+      "albumArtist": "刘瑞琦",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-03a3302cb795f436.webp",
+      "source": "https://music.apple.com/tw/album/%E6%99%9A%E5%AE%89-%E7%90%A6-single/1883896082?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Lucky Number",
+      "albumArtist": "JOLIN蔡依林",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-a6603609b72264b7.webp",
+      "source": "https://music.apple.com/tw/album/lucky-number/1847592042?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "松原みき ベスト・コレクション",
+      "albumArtist": "Miki Matsubara",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-120ec12229469359.webp",
+      "source": "https://music.apple.com/tw/album/miki-matsubara-best-collection/1858846278?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "A Night at the Opera (Deluxe Edition)",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-ad5e1ff8b26faedd.webp",
+      "source": "https://music.apple.com/us/album/a-night-at-the-opera-deluxe-edition/1440650816?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Bohemian Rhapsody (The Original Soundtrack)",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-a5ab0a1844c87d0a.webp",
+      "source": "https://music.apple.com/us/album/bohemian-rhapsody-the-original-soundtrack/1434899831?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "The Platinum Collection",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-cdc4a54e4f733a86.webp",
+      "source": "https://music.apple.com/us/album/greatest-hits-i-ii-iii-the-platinum-collection/1440650428?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "BOSSA NOVA",
+      "albumArtist": "落日飞车",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-1cd19c7d9a39c4c7.webp",
+      "source": "https://music.apple.com/tw/album/bossa-nova/1753221921?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "The Game (Deluxe Edition with Bonus Videos) [2011 Remaster]",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-c0cde4d14a4cefcd.webp",
+      "source": "https://music.apple.com/us/album/the-game-deluxe-edition/1440774168?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Jazz (Deluxe Edition)",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-a999e0672c3da8fe.webp",
+      "source": "https://music.apple.com/us/album/jazz-deluxe-edition/1440806883?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Blue Neighbourhood",
+      "albumArtist": "Troye Sivan",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-e3e8e379f96a1ddf.webp",
+      "source": "https://music.apple.com/tw/album/blue-neighbourhood/1876132053?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "旅程",
+      "albumArtist": "张惠妹",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-92dbf3fa9ba3942c.webp",
+      "source": "https://music.apple.com/tw/album/lu-cheng/1854822541?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "The Works (Deluxe Edition)",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-a5bc84408fd53e33.webp",
+      "source": "https://music.apple.com/us/album/the-works-deluxe-edition/1440810585?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Made In Heaven",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-fca2e17654666782.webp",
+      "source": "https://music.apple.com/us/album/made-in-heaven-deluxe-edition/1440742381?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Sheer Heart Attack (Deluxe Edition with Bonus Videos)",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-7e63101fb3b840a9.webp",
+      "source": "https://music.apple.com/us/album/sheer-heart-attack-deluxe-edition-2011-remaster/1440647872?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Like I Do - Single",
+      "albumArtist": "J.Tajor",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-6b85577b48f909c5.webp",
+      "source": "https://music.apple.com/tw/album/like-i-do-single/1724134790?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "ATTUNE",
+      "albumArtist": "兰卡",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-fc8ea27494972aba.webp",
+      "source": "https://music.apple.com/tw/album/attune/1787046401?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "A Day at the Races (Deluxe Edition)",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-495ccc55f1a4811a.webp",
+      "source": "https://music.apple.com/us/album/a-day-at-the-races-deluxe-edition/1440743381?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "News of the World",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-eeb1ec046ed1ea1b.webp",
+      "source": "https://music.apple.com/us/album/news-of-the-world/1440646541?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Pianoboy",
+      "albumArtist": "Pianoboy高至豪",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-abb5f89bfae68266.webp",
+      "source": "https://music.apple.com/tw/album/pianoboy/1863892844?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Too Good at Goodbyes - Single",
+      "albumArtist": "Madilyn",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-784959a4c0a748bf.webp",
+      "source": "https://music.apple.com/tw/album/too-good-at-goodbyes-single/1337775837?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Trouble I'm In - Single",
+      "albumArtist": "Twinbed",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-3867de20441a1c13.webp",
+      "source": "https://music.apple.com/tw/album/trouble-im-in-single/875487706?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Hot Space (Deluxe Edition)",
+      "albumArtist": "Queen",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-b8c96410a1c53f0c.webp",
+      "source": "https://music.apple.com/us/album/hot-space-deluxe-edition/1440805941?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "Funeral",
+      "albumArtist": "Arcade Fire",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-87a5f853d2d1b990.webp",
+      "source": "https://music.apple.com/tw/album/funeral/1249417623?uo=4",
+      "note": "Official Apple artwork for the same album; regional/deluxe cover editions may differ."
+    },
+    {
+      "title": "I wanted you - Single",
+      "albumArtist": "Ina",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-ee75f58a1ad8b99d.webp",
+      "source": "https://open.spotify.com/album/6LpCapjWandrs4q2TlRedH",
+      "note": "Matching official streaming release; Apple artwork unavailable."
+    },
+    {
+      "title": "Refresh - Single",
+      "albumArtist": "Masiwei",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-6ccd816291873aa6.webp",
+      "source": "https://open.spotify.com/album/0hLK08KJkhdgMHlEfkYso1",
+      "note": "Matching official streaming release; Apple artwork unavailable."
+    },
+    {
+      "title": "Platinum & Gold Collection: The Alan Parsons Project",
+      "albumArtist": "The Alan Parsons Project",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-a2ce9e896f3eb083.webp",
+      "source": "https://open.spotify.com/track/4bc0sU6uwOEZuP9LnTNl4o",
+      "note": "Matching album artwork from the label or official streaming release."
+    },
+    {
+      "title": "勇气 - Single",
+      "albumArtist": "棉子",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-15e22f3b21f15744.webp",
+      "source": "https://open.spotify.com/track/5rY7xc2h5Imj6iFn97h8Qj",
+      "note": "Matching album artwork from the label or official streaming release."
+    },
+    {
+      "title": "Kill Bill Vol. 1 Original Soundtrack (PA Version)",
+      "albumArtist": "伯纳德 ・ 赫尔曼",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-6a816bca974b5e56.webp",
+      "source": "https://open.spotify.com/album/1FpzNqDbugk77xUj0qOrtQ",
+      "note": "Matching album artwork from the label or official streaming release."
+    },
+    {
+      "title": "Fly Out - EP",
+      "albumArtist": "兄弟本色",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-e26ed60693f610c7.webp",
+      "source": "https://shop.rockmall.com.tw/product_view.php?id=54398",
+      "note": "Matching album artwork from the label or official streaming release."
+    },
+    {
+      "title": "Vivaldi: The Four Seasons",
+      "albumArtist": "安娜-苏菲・穆特, 赫伯特・冯・卡拉扬 & 维也纳爱乐",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-06afcef3c0eaa154.webp",
+      "source": "https://www.warnerclassics.com/release/vivaldi-four-seasons",
+      "note": "Matching album artwork from the label or official streaming release."
+    },
+    {
+      "title": "荷里活的动物园",
+      "albumArtist": "曹格",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-99a467474867ff99.webp",
+      "source": "https://open.spotify.com/album/7gIVOLfShWXTTkuRiGNlWu",
+      "note": "Matching album artwork from the label or official streaming release."
+    },
+    {
+      "title": "BAD BOY (2018 Remastering)",
+      "albumArtist": "张惠妹",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-b8fb149ba7a4b0ad.webp",
+      "source": "https://music.apple.com/us/album/bad-boy/1854824111?uo=4",
+      "note": "Official Apple artwork for the same album; current regional reissue artwork."
+    },
+    {
+      "title": "The Sun Also Rises (Original Motion Picture Soundtrack)",
+      "albumArtist": "久石让",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/web-5f41ea1b906a3f8b.webp",
+      "source": "https://music.apple.com/us/album/the-sun-also-rises-original-soundtrack-album/1522752863?uo=4",
+      "note": "Official Apple artwork for the same album; current regional reissue artwork."
+    }
+  ]
+}

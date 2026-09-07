@@ -6,6 +6,7 @@ export interface MediaItem {
   originalTitle?: string;        // Original native title (e.g. "東京物語")
   type: 'film' | 'series';       // 'film' or 'series'
   director: string;              // Director or Showrunner
+  creditRole?: string;          // Actual role of the displayed credit
   originalDirector?: string;     // Native director name (e.g. "岩井俊二", "小津安二郎")
   year: number | string;         // Start year (e.g. 1953, 2015)
   span?: string;                 // Year span for series (e.g. "2015–2022")
@@ -35,6 +36,8 @@ export interface MediaItem {
 }
 
 const importedItems = importedCinema as MediaItem[];
-export const cinemaFilms = importedItems.filter(item => item.type === 'film');
-export const cinemaSeries = importedItems.filter(item => item.type === 'series');
-export const allCinemaItems: MediaItem[] = [...cinemaFilms, ...cinemaSeries];
+const isAnimation = (item: MediaItem) => item.genre.split(', ').includes('Animation');
+export const cinemaAnimation = importedItems.filter(isAnimation);
+export const cinemaFilms = importedItems.filter(item => item.type === 'film' && !isAnimation(item));
+export const cinemaSeries = importedItems.filter(item => item.type === 'series' && !isAnimation(item));
+export const allCinemaItems: MediaItem[] = importedItems;

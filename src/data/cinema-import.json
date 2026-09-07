@@ -536,7 +536,7 @@
     "title": "Accel World",
     "originalTitle": "アクセル・ワールド",
     "type": "series",
-    "director": "",
+    "director": "Reki Kawahara",
     "year": 2012,
     "country": "JP · US",
     "genre": "Animation, Action & Adventure, Drama, Sci-Fi & Fantasy",
@@ -558,14 +558,15 @@
       }
     ],
     "tmdbId": 43167,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-92602",
     "title": "ID: INVADED",
     "originalTitle": "ID：INVADED イド：インヴェイデッド",
     "type": "series",
-    "director": "",
+    "director": "Ei Aoki",
     "year": 2020,
     "country": "JP · US",
     "genre": "Animation, Drama, Mystery, Action & Adventure, Sci-Fi & Fantasy",
@@ -587,14 +588,15 @@
       }
     ],
     "tmdbId": 92602,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "DIRECTED BY"
   },
   {
     "id": "tv-95479",
     "title": "JUJUTSU KAISEN",
     "originalTitle": "呪術廻戦",
     "type": "series",
-    "director": "",
+    "director": "Gege Akutami",
     "year": 2020,
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure",
@@ -624,14 +626,15 @@
     ],
     "tmdbId": 95479,
     "span": "2020–2026",
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-117933",
     "title": "Summer Time Rendering",
     "originalTitle": "サマータイムレンダ",
     "type": "series",
-    "director": "",
+    "director": "Yasuki Tanaka",
     "year": 2022,
     "country": "JP",
     "genre": "Animation, Drama, Mystery",
@@ -653,14 +656,15 @@
       }
     ],
     "tmdbId": 117933,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-83097",
     "title": "The Promised Neverland",
     "originalTitle": "約束のネバーランド",
     "type": "series",
-    "director": "",
+    "director": "Kaiu Shirai, Posuka Demizu",
     "year": 2019,
     "country": "JP",
     "genre": "Animation, Drama, Mystery, Sci-Fi & Fantasy",
@@ -683,14 +687,15 @@
     ],
     "tmdbId": 83097,
     "span": "2019–2021",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-61663",
     "title": "Your Lie in April",
     "originalTitle": "四月は君の嘘",
     "type": "series",
-    "director": "",
+    "director": "Naoshi Arakawa",
     "year": 2014,
     "country": "JP",
     "genre": "Animation, Comedy, Drama",
@@ -713,14 +718,15 @@
     ],
     "tmdbId": 61663,
     "span": "2014–2015",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-82739",
     "title": "Rascal Does Not Dream of Bunny Girl Senpai",
     "originalTitle": "青春ブタ野郎はバニーガール先輩の夢を見ない",
     "type": "series",
-    "director": "",
+    "director": "Hajime Kamoshida",
     "year": 2018,
     "country": "JP",
     "genre": "Animation, Comedy, Drama",
@@ -743,7 +749,8 @@
     ],
     "tmdbId": 82739,
     "span": "2018–2025",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-105248",
@@ -779,7 +786,7 @@
     "title": "Angel Beats!",
     "originalTitle": "天使的心跳！",
     "type": "series",
-    "director": "",
+    "director": "Jun Maeda",
     "year": 2010,
     "country": "JP",
     "genre": "Animation, Comedy, Drama, Sci-Fi & Fantasy, Action & Adventure",
@@ -801,14 +808,15 @@
       }
     ],
     "tmdbId": 42942,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL STORY / SCREENPLAY"
   },
   {
     "id": "tv-82766",
     "title": "Run with the Wind",
     "originalTitle": "風が強く吹いている",
     "type": "series",
-    "director": "",
+    "director": "Shion Miura",
     "year": 2018,
     "country": "JP",
     "genre": "Animation, Drama",
@@ -831,14 +839,15 @@
     ],
     "tmdbId": 82766,
     "span": "2018–2019",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-31724",
     "title": "Code Geass: Lelouch of the Rebellion",
     "originalTitle": "コードギアス 反逆のルルーシュ",
     "type": "series",
-    "director": "",
+    "director": "Ichiro Okouchi, Goro Taniguchi",
     "year": 2006,
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure, Drama",
@@ -868,14 +877,15 @@
     ],
     "tmdbId": 31724,
     "span": "2006–2008",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL STORY"
   },
   {
     "id": "tv-43125",
     "title": "Guilty Crown",
     "originalTitle": "ギルティクラウン",
     "type": "series",
-    "director": "",
+    "director": "Tetsuro Araki",
     "year": 2011,
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure",
@@ -898,14 +908,15 @@
     ],
     "tmdbId": 43125,
     "span": "2011–2012",
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "creditRole": "DIRECTED BY"
   },
   {
     "id": "tv-45782",
     "title": "Sword Art Online",
     "originalTitle": "ソードアート・オンライン",
     "type": "series",
-    "director": "",
+    "director": "Reki Kawahara",
     "year": 2012,
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure",
@@ -949,14 +960,15 @@
     ],
     "tmdbId": 45782,
     "span": "2012–2020",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-61415",
     "title": "Fate/stay night [Unlimited Blade Works]",
     "originalTitle": "命运之夜 无限剑制",
     "type": "series",
-    "director": "",
+    "director": "Kinoko Nasu / TYPE-MOON",
     "year": 2014,
     "country": "JP",
     "genre": "Action & Adventure, Animation, Drama, Sci-Fi & Fantasy",
@@ -986,7 +998,8 @@
     ],
     "tmdbId": 61415,
     "span": "2014–2015",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-45845",
@@ -1030,7 +1043,7 @@
     "title": "Skip and Loafer",
     "originalTitle": "スキップとローファー",
     "type": "series",
-    "director": "",
+    "director": "Misaki Takamatsu",
     "year": 2023,
     "country": "JP",
     "genre": "Animation, Drama, Comedy",
@@ -1052,16 +1065,17 @@
       }
     ],
     "tmdbId": 139130,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-134182",
     "title": "RoboWarriors",
     "originalTitle": "洛洛历险记",
     "type": "series",
-    "director": "",
+    "director": "Wang Wei",
     "year": 2008,
-    "country": "",
+    "country": "CN",
     "genre": "Animation, Kids, Sci-Fi & Fantasy",
     "runtime": "1 Seasons",
     "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-134182-a2049edfb113.webp",
@@ -1082,14 +1096,15 @@
     ],
     "tmdbId": 134182,
     "span": "2008–2009",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "DIRECTED BY"
   },
   {
     "id": "tv-63926",
     "title": "One-Punch Man",
     "originalTitle": "ワンパンマン",
     "type": "series",
-    "director": "",
+    "director": "ONE, Yusuke Murata",
     "year": 2015,
     "country": "JP",
     "genre": "Animation, Comedy, Action & Adventure, Sci-Fi & Fantasy",
@@ -1119,14 +1134,15 @@
     ],
     "tmdbId": 63926,
     "span": "2015–2025",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-127714",
     "title": "Uncle from Another World",
     "originalTitle": "異世界おじさん",
     "type": "series",
-    "director": "",
+    "director": "Hotondo Shindeiru",
     "year": 2022,
     "country": "JP",
     "genre": "Animation, Comedy, Sci-Fi & Fantasy",
@@ -1149,14 +1165,15 @@
     ],
     "tmdbId": 127714,
     "span": "2022–2023",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-88803",
     "title": "Vinland Saga",
     "originalTitle": "ヴィンランド・サガ",
     "type": "series",
-    "director": "",
+    "director": "Makoto Yukimura",
     "year": 2019,
     "country": "JP",
     "genre": "Animation, War & Politics, Action & Adventure, Drama",
@@ -1186,7 +1203,8 @@
     ],
     "tmdbId": 88803,
     "span": "2019–2023",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-74091",
@@ -1222,7 +1240,7 @@
     "title": "The Disastrous Life of Saiki K.",
     "originalTitle": "斉木楠雄のΨ難",
     "type": "series",
-    "director": "",
+    "director": "Shuichi Aso",
     "year": 2016,
     "country": "JP",
     "genre": "Animation, Comedy, Sci-Fi & Fantasy",
@@ -1259,14 +1277,15 @@
     ],
     "tmdbId": 67676,
     "span": "2016–2018",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-60863",
     "title": "Haikyu!!",
     "originalTitle": "ハイキュー!!",
     "type": "series",
-    "director": "",
+    "director": "Haruichi Furudate",
     "year": 2014,
     "country": "JP",
     "genre": "Animation, Comedy, Drama",
@@ -1316,14 +1335,15 @@
       }
     ],
     "tmdbId": 60863,
-    "span": "2014–2020"
+    "span": "2014–2020",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-46671",
     "title": "The Future Diary",
     "originalTitle": "未来日記",
     "type": "series",
-    "director": "",
+    "director": "Sakae Esuno",
     "year": 2011,
     "country": "JP",
     "genre": "Action & Adventure, Animation, Drama, Mystery",
@@ -1346,14 +1366,15 @@
     ],
     "tmdbId": 46671,
     "span": "2011–2012",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-240411",
     "title": "Dan Da Dan",
     "originalTitle": "ダンダダン",
     "type": "series",
-    "director": "",
+    "director": "Yukinobu Tatsu",
     "year": 2024,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy",
@@ -1376,14 +1397,15 @@
     ],
     "tmdbId": 240411,
     "span": "2024–2025",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-112613",
     "title": "Ranking of Kings",
     "originalTitle": "王様ランキング",
     "type": "series",
-    "director": "",
+    "director": "Sosuke Toka",
     "year": 2021,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
@@ -1406,14 +1428,15 @@
     ],
     "tmdbId": 112613,
     "span": "2021–2022",
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-45790",
     "title": "JoJo's Bizarre Adventure",
     "originalTitle": "ジョジョの奇妙な冒険",
     "type": "series",
-    "director": "",
+    "director": "Hirohiko Araki",
     "year": 2012,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
@@ -1485,14 +1508,15 @@
     ],
     "tmdbId": 45790,
     "span": "2012–2026",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-119100",
     "title": "BOCCHI THE ROCK!",
     "originalTitle": "ぼっち・ざ・ろっく！",
     "type": "series",
-    "director": "",
+    "director": "Aki Hamazi",
     "year": 2022,
     "country": "JP",
     "genre": "Animation, Comedy",
@@ -1514,14 +1538,15 @@
       }
     ],
     "tmdbId": 119100,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-72636",
     "title": "Made in Abyss",
     "originalTitle": "メイドインアビス",
     "type": "series",
-    "director": "",
+    "director": "Akihito Tsukushi",
     "year": 2017,
     "country": "JP",
     "genre": "Animation, Drama, Action & Adventure, Sci-Fi & Fantasy",
@@ -1551,14 +1576,15 @@
     ],
     "tmdbId": 72636,
     "span": "2017–2022",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-124396",
     "title": "Sonny Boy",
     "originalTitle": "漂流少年",
     "type": "series",
-    "director": "",
+    "director": "Shingo Natsume",
     "year": 2021,
     "country": "JP",
     "genre": "Animation, Drama, Mystery, Sci-Fi & Fantasy",
@@ -1580,7 +1606,8 @@
       }
     ],
     "tmdbId": 124396,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "DIRECTOR / SCREENWRITER"
   },
   {
     "id": "film-26290367",
@@ -1734,7 +1761,7 @@
     "type": "film",
     "director": "Liu Jie",
     "year": 2013,
-    "country": "",
+    "country": "CN",
     "genre": "Comedy, Romance, Drama",
     "runtime": "91 min",
     "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-412555-c29b8c83f007.webp",
@@ -4423,62 +4450,6 @@
     "tmdbId": 504253
   },
   {
-    "id": "film-27599401",
-    "title": "Rainbow Sea Movie 2",
-    "originalTitle": "星游记之风暴法米拉2",
-    "type": "film",
-    "director": "Yibo Hu",
-    "year": 2020,
-    "country": "CN",
-    "genre": "Animation, Fantasy",
-    "runtime": "88 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-687642-4f2caba4b0fe.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "Douban",
-      "url": "https://movie.douban.com/subject/27599401/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "27599401",
-        "title": "星游记之风暴法米拉2",
-        "firstWatched": "2026-02-11",
-        "rating": "",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 687642
-  },
-  {
-    "id": "film-26771100",
-    "title": "Rainbow Sea 2nd Season",
-    "originalTitle": "星游记之风暴法米拉",
-    "type": "film",
-    "director": "Yibo Hu",
-    "year": 2017,
-    "country": "CN",
-    "genre": "Animation, Fantasy, Adventure, Action",
-    "runtime": "",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-766476-4702feee0191.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "Douban",
-      "url": "https://movie.douban.com/subject/26771100/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26771100",
-        "title": "星游记之风暴法米拉",
-        "firstWatched": "2026-02-11",
-        "rating": "",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 766476
-  },
-  {
     "id": "film-26282448",
     "title": "Boruto: Naruto the Movie",
     "originalTitle": "BORUTO -NARUTO THE MOVIE-",
@@ -5058,7 +5029,7 @@
     "title": "Demon Slayer: Kimetsu no Yaiba",
     "originalTitle": "鬼滅の刃",
     "type": "series",
-    "director": "",
+    "director": "Koyoharu Gotouge",
     "year": 2019,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
@@ -5108,7 +5079,8 @@
       }
     ],
     "tmdbId": 85937,
-    "span": "2019–2024"
+    "span": "2019–2024",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "film-36524559",
@@ -5454,7 +5426,7 @@
     "title": "Frieren: Beyond Journey's End",
     "originalTitle": "葬送のフリーレン",
     "type": "series",
-    "director": "",
+    "director": "Kanehito Yamada, Tsukasa Abe",
     "year": 2023,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Drama, Sci-Fi & Fantasy",
@@ -5477,7 +5449,8 @@
     ],
     "tmdbId": 209867,
     "span": "2023–2026",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "film-25895276",
@@ -6241,7 +6214,7 @@
     "title": "Tokyo Love Story",
     "originalTitle": "東京ラブストーリー",
     "type": "series",
-    "director": "",
+    "director": "Fumi Saimon",
     "year": 1991,
     "country": "JP",
     "genre": "Drama",
@@ -6263,7 +6236,8 @@
       }
     ],
     "tmdbId": 16069,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-83119",
@@ -6299,7 +6273,7 @@
     "title": "Legal High",
     "originalTitle": "リーガル・ハイ",
     "type": "series",
-    "director": "",
+    "director": "Ryota Kosawa",
     "year": 2012,
     "country": "JP",
     "genre": "Comedy, Drama",
@@ -6329,7 +6303,8 @@
     ],
     "tmdbId": 46234,
     "span": "2012–2013",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "SCREENPLAY"
   },
   {
     "id": "tv-215197",
@@ -6753,7 +6728,7 @@
     "title": "Reset",
     "originalTitle": "开端",
     "type": "series",
-    "director": "",
+    "director": "Qidao Jun",
     "year": 2022,
     "country": "CN",
     "genre": "Drama, Mystery, Sci-Fi & Fantasy",
@@ -6775,7 +6750,8 @@
       }
     ],
     "tmdbId": 155441,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "tv-33823",
@@ -8349,7 +8325,7 @@
     "title": "Love Generation",
     "originalTitle": "ラブジェネレーション",
     "type": "series",
-    "director": "",
+    "director": "Taeko Asano, Masaya Ozaki",
     "year": 1997,
     "country": "JP",
     "genre": "Drama",
@@ -8371,7 +8347,8 @@
       }
     ],
     "tmdbId": 4319,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "SCREENPLAY"
   },
   {
     "id": "film-26930504",
@@ -8407,7 +8384,7 @@
     "title": "First Love",
     "originalTitle": "First Love 初恋",
     "type": "series",
-    "director": "",
+    "director": "Yuri Kanchiku",
     "year": 2022,
     "country": "JP",
     "genre": "Drama",
@@ -8429,7 +8406,8 @@
       }
     ],
     "tmdbId": 210955,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "DIRECTOR / SCREENWRITER"
   },
   {
     "id": "film-25958717",
@@ -10225,7 +10203,7 @@
     "title": "Attack on Titan",
     "originalTitle": "進撃の巨人",
     "type": "series",
-    "director": "",
+    "director": "Hajime Isayama",
     "year": 2013,
     "country": "JP",
     "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure",
@@ -10248,7 +10226,8 @@
     ],
     "tmdbId": 1429,
     "span": "2013–2022",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "creditRole": "ORIGINAL WORK"
   },
   {
     "id": "film-1292371",
