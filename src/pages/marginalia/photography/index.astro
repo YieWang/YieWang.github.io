@@ -158,7 +158,6 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     const exifFilmDot = document.getElementById('exif-film-dot');
     const exifOptics = document.getElementById('exif-optics');
 
-    let currentPhotoIndex = 0;
     const imageCache = new Set<string>();
 
     function preloadPhoto(url: string) {
@@ -196,7 +195,6 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
 
     function activatePhotoByIndex(index: number, options: { fromWheel?: boolean } = {}) {
       if (index < 0 || index >= allPhotos.length) return;
-      currentPhotoIndex = index;
       const photo = allPhotos[index];
       if (!photo) return;
 
@@ -244,30 +242,6 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
         }
       }
     }) as EventListener);
-
-    // Step photo direct function
-    function stepPhoto(delta: number): boolean {
-      const targetIdx = currentPhotoIndex + delta;
-      if (targetIdx >= 0 && targetIdx < allPhotos.length) {
-        activatePhotoByIndex(targetIdx);
-        return true;
-      }
-      return false;
-    }
-
-    // Global keyboard navigation
-    window.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.defaultPrevented) return;
-      if (['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement)?.tagName)) return;
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-        e.preventDefault();
-        stepPhoto(1);
-      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-        e.preventDefault();
-        stepPhoto(-1);
-      }
-    });
-
 
   });
 </script>

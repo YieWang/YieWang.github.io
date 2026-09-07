@@ -69,6 +69,20 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       element.scrollTo({ top: Math.max(0, Math.min(options.length - 1, Math.round(top / itemHeight))) * itemHeight, behavior: 'smooth' });
       settleTimer = setTimeout(settle, 160);
     };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.defaultPrevented || (event.target as HTMLElement)?.closest('input, textarea, select, [contenteditable="true"]')) return;
+      const steps: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1 };
+      const endpoint = event.key === 'Home' || event.key === 'End';
+      if (!(event.key in steps) && !(endpoint && element.contains(event.target as Node))) return;
+      event.preventDefault();
+      const index = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1
+        : (keyboardTarget.current ?? Math.round(element.scrollTop / itemHeight)) + steps[event.key];
+      keyboardTarget.current = Math.max(0, Math.min(options.length - 1, index));
+      element.style.scrollSnapType = 'none';
+      // Key repeat must not keep restarting the smooth scroll before it can advance.
+      element.scrollTo({ top: keyboardTarget.current * itemHeight, behavior: event.repeat ? 'instant' : 'smooth' });
+      if (event.repeat) settle();
+    };
     // Both sides feed the same scroll position; trackpad momentum is already in deltaY.
     const onWheel = (event: WheelEvent) => {
       if (event.ctrlKey || !event.deltaY) return;
@@ -118,6 +132,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     draw();
     element.addEventListener('scroll', scroll, { passive: true });
     element.addEventListener('scrollend', settle);
+    window.addEventListener('keydown', onKeyDown);
     gallery.addEventListener('wheel', onWheel, { passive: false });
     gallery.addEventListener('pointerdown', onPointerDown);
     gallery.addEventListener('pointermove', onPointerMove);
@@ -126,6 +141,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     return () => {
       element.removeEventListener('scroll', scroll);
       element.removeEventListener('scrollend', settle);
+      window.removeEventListener('keydown', onKeyDown);
       cancelAnimationFrame(frame);
       clearTimeout(settleTimer);
       clearTimeout(wheelTimer);
@@ -162,15 +178,6 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       </div>
       <div ref={scroller} className="photo-wheel-scroll" tabIndex={0} role="listbox" aria-label="Photographs"
         aria-activedescendant={`photo-option-${value}`}
-        onKeyDown={event => {
-          const steps: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1 };
-          if (!(event.key in steps) && event.key !== 'Home' && event.key !== 'End') return;
-          event.preventDefault();
-          const index = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1
-            : (keyboardTarget.current ?? Math.round(event.currentTarget.scrollTop / itemHeight)) + steps[event.key];
-          keyboardTarget.current = Math.max(0, Math.min(options.length - 1, index));
-          event.currentTarget.scrollTo({ top: keyboardTarget.current * itemHeight, behavior: 'smooth' });
-        }}
         onClick={event => {
           if (ignoreClick.current) return;
           keyboardTarget.current = null;
