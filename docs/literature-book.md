@@ -15,8 +15,9 @@ The novel passage was supplied by the site owner; page breaks preserve its text.
 Songti SC Regular. Regenerate with `python scripts/render-book-pages.py`; another
 Song font may be supplied with `--font` and `--font-index`.
 
-The preview iframe loads only while Literature is visible. Unloading calls
-`destroy()` and releases the document, timers and GPU context.
+The preview iframe warms on entry to Marginalia and stays loaded when switching
+interests. Playback pauses when inactive; page unload calls `destroy()`.
+Startup waits for the cover and first spread, with later pages prefetched by ZineJS.
 Reduced-motion users see an open, static spread without automatic turns.
 
 The front cover (`public/images/literature/book/0.webp`) is the Chinese illustrated
@@ -26,5 +27,5 @@ preserves this downloaded cover when regenerating the interior artwork.
 Publisher: https://www.readinglife.com/books.html?langType=zh
 Original source: https://www.readinglife.com/product_image/upload/imageRealUrl/cover/2023-05-05/1000107490.jpg
 
-The initial pause is 700 ms, each turn takes 1100 ms, and the pause between
+The initial pause is 150 ms, each turn takes 1100 ms, and the pause between
 the cover opening and the next turn is 1300 ms.

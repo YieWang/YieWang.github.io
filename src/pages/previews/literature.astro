@@ -48,11 +48,11 @@ const pageImages = Array.from({ length: pages.length + 2 }, (_, i) => `https://h
           zine.flipTo(0);
           return;
         }
-        if (zine.getPage() < 3) timer = setTimeout(() => zine.flipNext(), zine.getPage() === 0 ? 700 : 1300);
+        if (zine.getPage() < 3) timer = setTimeout(() => zine.flipNext(), zine.getPage() === 0 ? 150 : 1300);
       };
       zine.on('flipEnd', syncPlayback);
-      // Zine.ready can resolve after a source error; keep the cover until the preview pages decode.
-      Promise.all([zine.ready, ...[0, 1, 2, 3, 4].map(page => source.get(page))]).then(() => {
+      // Validate the cover and first spread; later spreads are prefetched by ZineJS.
+      Promise.all([zine.ready, ...[0, 1, 2].map(page => source.get(page))]).then(() => {
         ready = true;
         document.querySelector('.poster')?.remove();
         book.dataset.renderer = book.querySelector('canvas') ? 'webgl2' : 'css';

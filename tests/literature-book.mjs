@@ -9,7 +9,7 @@ let selected = false, activeSection = true, offscreen = false;
 let callback, loads = 0, unloads = 0;
 const panel = { hasAttribute: () => selected };
 const frame = {
-  dataset: { src: '/previews/literature' },
+  dataset: { src: source.match(/data-src="([^"]+)"/)[1] },
   closest: () => panel,
   hasAttribute: () => frame.url !== undefined,
   set src(value) { this.url = value; loads++; },
@@ -25,12 +25,13 @@ vm.runInNewContext(ts.transpile(source.match(/<script>([\s\S]*?)<\/script>/)[1])
   document, MutationObserver: class { constructor(fn) { callback = fn; } observe() {} },
 });
 assert.equal(loads, 1, 'entering Marginalia warms the preview before selection');
+assert.equal(frame.url, '/previews/literature/', 'use the canonical URL without a redirect');
 assert.equal(frame.dataset.active, 'false');
 selected = true; callback(); callback();
 assert.equal(loads, 1, 'duplicate hover/focus must keep the current document');
 assert.equal(frame.dataset.active, 'true');
 selected = false; callback();
-assert.equal(frame.url, '/previews/literature', 'switching away must retain decoded pages');
+assert.equal(frame.url, '/previews/literature/', 'switching away must retain decoded pages');
 assert.equal(frame.dataset.active, 'false');
 selected = true; callback();
 assert.equal(loads, 1);
@@ -49,4 +50,41 @@ assert.equal(pages.join('').length, 796);
 assert.equal(pages.join('').match(/多年以后/g).length, 1);
 assert.equal(pages.length % 2, 0, 'inner pages must form complete spreads');
 assert.ok(preview.includes('https://homepage-assets.mathtranslations.org/images/literature/book/'));
+// Later pages must not block the first turn; the engine stages them on demand.
+const requested = [], scheduled = [];
+let coverRemoved = false, flips = 0;
+const book = { dataset: { pages: '[]' }, querySelector: () => ({}) };
+vm.runInNewContext(ts.transpile(preview.match(/<script>([\s\S]*?)<\/script>/)[1]
+  .replace(/import .* from '@zinejs\/core';/, '')), {
+  ImageSource: class {
+    get(page) {
+      requested.push(page);
+      return page < 3 ? Promise.resolve({}) : new Promise(() => {});
+    }
+  },
+  Zine: class {
+    ready = Promise.resolve();
+    on() {}
+    getPage() { return 0; }
+    flipNext() { flips++; }
+  },
+  document: {
+    hidden: false,
+    getElementById: () => book,
+    querySelector: () => ({ remove: () => { coverRemoved = true; } }),
+    addEventListener() {},
+  },
+  window: { frameElement: null, addEventListener() {} },
+  matchMedia: () => ({ matches: false, addEventListener() {} }),
+  clearTimeout() {},
+  setTimeout: (callback, delay) => scheduled.push({ callback, delay }),
+  console,
+});
+await new Promise(resolve => setImmediate(resolve));
+assert.deepEqual(requested, [0, 1, 2]);
+assert.equal(coverRemoved, true);
+assert.equal(scheduled.length, 1);
+assert.equal(scheduled[0].delay, 150);
+scheduled[0].callback();
+assert.equal(flips, 1);
 console.log('Literature preview lifecycle, repeated selection and supplied passage: passed');
