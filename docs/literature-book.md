@@ -20,12 +20,11 @@ interests. Playback pauses when inactive; page unload calls `destroy()`.
 Startup waits for the cover and first spread, with later pages prefetched by ZineJS.
 Reduced-motion users see an open, static spread without automatic turns.
 
-The front cover (`public/images/literature/book/0.webp`) is the Chinese illustrated
-edition translated by Fan Ye, supplied by New Classics. Source JPEG: 1050 × 1500 pixels;
-encoded as WebP at its original resolution, without upscaling. The page renderer
-preserves this downloaded cover when regenerating the interior artwork.
-Publisher: https://www.readinglife.com/books.html?langType=zh
-Original source: https://www.readinglife.com/product_image/upload/imageRealUrl/cover/2023-05-05/1000107490.jpg
+The front cover (`public/images/literature/cover.webp`) contains only the title
+百年孤独 on a plain warm paper background. Both the poster and the engine use
+this small same-origin asset; the old publisher cover is no longer requested.
+The adjacent `cover.svg` is its editable source, rasterized at 468 × 672 pixels
+with Sharp WebP quality 90 for compatibility with the engine's bitmap decoder.
 
 The initial pause is 150 ms, each turn takes 1100 ms, and the pause between
 the cover opening and the next turn is 1300 ms.

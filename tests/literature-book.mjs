@@ -50,6 +50,9 @@ assert.equal(pages.join('').length, 796);
 assert.equal(pages.join('').match(/多年以后/g).length, 1);
 assert.equal(pages.length % 2, 0, 'inner pages must form complete spreads');
 assert.ok(preview.includes('https://homepage-assets.mathtranslations.org/images/literature/book/'));
+const pageImages = vm.runInNewContext(preview.split('---')[1] + '\npageImages');
+assert.equal(pageImages[0], '/images/literature/cover.webp');
+assert.equal(pageImages.length, pages.length + 2);
 // Later pages must not block the first turn; the engine stages them on demand.
 const requested = [], scheduled = [];
 let coverRemoved = false, flips = 0;
