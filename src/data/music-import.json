@@ -161,7 +161,6 @@
       "displayName": "张震岳",
       "avatarUrl": "https://homepage-assets.mathtranslations.org/images/music/artists/apple-369289818.webp",
       "albumIds": [
-        "apple-album-12a3c084b47ed066",
         "apple-album-8a74c226886e2239",
         "apple-album-27bb1f3def8800d8",
         "apple-album-ce23a764b884a1b0"
@@ -330,7 +329,6 @@
       "avatarUrl": "https://homepage-assets.mathtranslations.org/images/music/artists/apple-18756224.webp",
       "albumIds": [
         "apple-album-2893c3a93b05ccb8",
-        "apple-album-0e4e625bf8547520",
         "apple-album-2fbd296fce76f9f0",
         "apple-album-f6112a7d01d2a2e2",
         "apple-album-66dc1f27c7aebf6e",
@@ -448,7 +446,6 @@
         "apple-album-c39e9d242230420a",
         "apple-album-e1921b42ad780685",
         "apple-album-ca33e54d76b32ad4",
-        "apple-album-368cdc745052f460",
         "apple-album-9218102ad961709d",
         "apple-album-c1b72f9431302cd4",
         "apple-album-865dae4b64e7e46d"
@@ -604,7 +601,6 @@
         "apple-album-bb5b54cb39016260",
         "apple-album-1bfbea1048cd4660",
         "apple-album-8b07ba34acf1b6d3",
-        "apple-album-8962e7bed5c86cff",
         "apple-album-6868ab7180ccf02f",
         "apple-album-e8db75ddfbc44b22",
         "apple-album-3c328791539eb424"
@@ -1202,8 +1198,7 @@
         "apple-album-bb8852fbe1a83081",
         "apple-album-87338559e59eb7e4",
         "apple-album-8e40d8d0de134885",
-        "apple-album-1d54a1e82720542f",
-        "apple-album-a812918818d787c8"
+        "apple-album-1d54a1e82720542f"
       ]
     },
     {
@@ -1963,7 +1958,6 @@
       "avatarUrl": "https://homepage-assets.mathtranslations.org/images/music/artists/apple-156488786.webp",
       "albumIds": [
         "apple-album-bd98084230fdc44b",
-        "apple-album-01685033b1ec3bd8",
         "apple-album-8c0debd89b499dac"
       ]
     },
@@ -2240,7 +2234,6 @@
       "displayName": "窦靖童",
       "avatarUrl": "https://homepage-assets.mathtranslations.org/images/music/artists/apple-1065407712.webp",
       "albumIds": [
-        "apple-album-de9ac3255aa31d77",
         "apple-album-2feca6c165fce0b0"
       ]
     },
@@ -2998,7 +2991,6 @@
       "displayName": "Compilations",
       "avatarUrl": "",
       "albumIds": [
-        "apple-album-639e954146890297",
         "apple-album-12fa7869d3e95912",
         "apple-album-42ed566c56066faf",
         "apple-album-4936ae4a1bd69f08",
@@ -3453,27 +3445,6 @@
       "source": "apple-music"
     },
     {
-      "id": "apple-album-639e954146890297",
-      "title": "滚石三十青春音乐记事簿: 纸条传情",
-      "artistId": "group-ac8f676466c02cb8",
-      "artistName": "群星",
-      "artistDisplayName": "群星",
-      "year": 2003,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-c2b13489563b3b4d.webp",
-      "tracks": [
-        {
-          "id": "i.dlvqE0dTzq2782E",
-          "title": "爱你不是两三天",
-          "trackNo": 2,
-          "discNo": 1,
-          "duration": "5:00",
-          "source": "apple-music",
-          "artistName": "梁静茹"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
       "id": "apple-album-f72580d6c8c08cfe",
       "title": "勇氣",
       "artistId": "apple-531134701",
@@ -3637,27 +3608,6 @@
           "duration": "4:24",
           "source": "apple-music",
           "artistName": "陈奕迅"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
-      "id": "apple-album-12a3c084b47ed066",
-      "title": "滚石香港黄金十年 - 张震嶽精选",
-      "artistId": "apple-369289818",
-      "artistName": "张震岳",
-      "artistDisplayName": "张震岳",
-      "year": 1998,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-85c5932eebc9bb8a.webp",
-      "tracks": [
-        {
-          "id": "i.rXzZe9PTMLve9vd",
-          "title": "爱我别走",
-          "trackNo": 4,
-          "discNo": 1,
-          "duration": "4:45",
-          "source": "apple-music",
-          "artistName": "张震岳"
         }
       ],
       "source": "apple-music"
@@ -4562,27 +4512,6 @@
           "trackNo": 3,
           "discNo": 1,
           "duration": "4:41",
-          "source": "apple-music",
-          "artistName": "Utada"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
-      "id": "apple-album-0e4e625bf8547520",
-      "title": "初恋 (2022 Remastering) - Single",
-      "artistId": "apple-18756224",
-      "artistName": "Utada",
-      "artistDisplayName": "Utada",
-      "year": 2022,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-59425140d98c1463.webp",
-      "tracks": [
-        {
-          "id": "i.xrXv5QQUMDkW6k2",
-          "title": "初恋 (2022 Remastering)",
-          "trackNo": 1,
-          "discNo": 1,
-          "duration": "4:42",
           "source": "apple-music",
           "artistName": "Utada"
         }
@@ -8205,27 +8134,6 @@
       "source": "apple-music"
     },
     {
-      "id": "apple-album-8962e7bed5c86cff",
-      "title": "陈绮贞精选",
-      "artistId": "apple-462564117",
-      "artistName": "陈绮贞",
-      "artistDisplayName": "陈绮贞",
-      "year": 2002,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-b419afff17c2d748.webp",
-      "tracks": [
-        {
-          "id": "i.7PJN0Bgf0bqNMq7",
-          "title": "太聪明",
-          "trackNo": 9,
-          "discNo": 1,
-          "duration": "4:22",
-          "source": "apple-music",
-          "artistName": "陈绮贞"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
       "id": "apple-album-6868ab7180ccf02f",
       "title": "吉他手",
       "artistId": "apple-462564117",
@@ -10223,24 +10131,6 @@
       "year": 2022,
       "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-3b5b1d31e3ecf4f6.webp",
       "tracks": [
-        {
-          "id": "i.B0VNqdNSxM6316R",
-          "title": "Anti-Hero",
-          "trackNo": 3,
-          "discNo": 1,
-          "duration": "3:21",
-          "source": "apple-music",
-          "artistName": "Taylor Swift"
-        },
-        {
-          "id": "i.dlvqYKJHzq2782E",
-          "title": "Snow On The Beach (feat. Lana Del Rey)",
-          "trackNo": 4,
-          "discNo": 1,
-          "duration": "4:16",
-          "source": "apple-music",
-          "artistName": "Taylor Swift"
-        },
         {
           "id": "i.NJv0e1zUl8xp6xo",
           "title": "You're On Your Own, Kid",
@@ -12393,15 +12283,6 @@
           "artistName": "林俊杰"
         },
         {
-          "id": "i.aJGYbdlU3PO0ROz",
-          "title": "一千年以后",
-          "trackNo": 2,
-          "discNo": 1,
-          "duration": "3:48",
-          "source": "apple-music",
-          "artistName": "林俊杰"
-        },
-        {
           "id": "i.9oJNzB6uPezL6z2",
           "title": "小酒窝",
           "trackNo": 4,
@@ -13525,27 +13406,6 @@
           "duration": "3:27",
           "source": "apple-music",
           "artistName": "88rising & Rich Brian"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
-      "id": "apple-album-368cdc745052f460",
-      "title": "Holy (feat. Chance the Rapper) - Single",
-      "artistId": "apple-320569549",
-      "artistName": "Justin Bieber",
-      "artistDisplayName": "Justin Bieber",
-      "year": 2020,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-b72403887aa9fd7b.webp",
-      "tracks": [
-        {
-          "id": "i.xrXvRJPTMDkW6k2",
-          "title": "Holy (feat. Chance the Rapper)",
-          "trackNo": 1,
-          "discNo": 1,
-          "duration": "3:32",
-          "source": "apple-music",
-          "artistName": "Justin Bieber"
         }
       ],
       "source": "apple-music"
@@ -15360,27 +15220,6 @@
       "source": "apple-music"
     },
     {
-      "id": "apple-album-de9ac3255aa31d77",
-      "title": "Monday (feat. Lionman) - Single",
-      "artistId": "apple-1065407712",
-      "artistName": "窦靖童",
-      "artistDisplayName": "窦靖童",
-      "year": 2023,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-ac59e6cef11c50b4.webp",
-      "tracks": [
-        {
-          "id": "i.rXzZa2EtMLve9vd",
-          "title": "Monday (feat. Lionman)",
-          "trackNo": 1,
-          "discNo": 1,
-          "duration": "4:26",
-          "source": "apple-music",
-          "artistName": "窦靖童"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
       "id": "apple-album-2feca6c165fce0b0",
       "title": "春游",
       "artistId": "apple-1065407712",
@@ -16138,15 +15977,6 @@
           "duration": "3:18",
           "source": "apple-music",
           "artistName": "Justin Bieber"
-        },
-        {
-          "id": "i.NJv0pEmSl8xp6xo",
-          "title": "Peaches (feat. Daniel Caesar & GIVĒON)",
-          "trackNo": 12,
-          "discNo": 1,
-          "duration": "3:18",
-          "source": "apple-music",
-          "artistName": "Justin Bieber"
         }
       ],
       "source": "apple-music"
@@ -16217,15 +16047,6 @@
           "trackNo": 6,
           "discNo": 1,
           "duration": "4:19",
-          "source": "apple-music",
-          "artistName": "Ed Sheeran"
-        },
-        {
-          "id": "i.xrXvN9PtMDkW6k2",
-          "title": "Thinking Out Loud",
-          "trackNo": 11,
-          "discNo": 1,
-          "duration": "4:42",
           "source": "apple-music",
           "artistName": "Ed Sheeran"
         }
@@ -17931,27 +17752,6 @@
       "source": "apple-music"
     },
     {
-      "id": "apple-album-01685033b1ec3bd8",
-      "title": "The Thrill of It All (Special Edition)",
-      "artistId": "apple-156488786",
-      "artistName": "Sam Smith",
-      "artistDisplayName": "Sam Smith",
-      "year": 2017,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-3197f71573abd600.webp",
-      "tracks": [
-        {
-          "id": "i.xrXvPXoFMDkW6k2",
-          "title": "Too Good at Goodbyes",
-          "trackNo": 1,
-          "discNo": 1,
-          "duration": "3:21",
-          "source": "apple-music",
-          "artistName": "Sam Smith"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
       "id": "apple-album-8c0debd89b499dac",
       "title": "The Thrill of It All",
       "artistId": "apple-156488786",
@@ -18118,15 +17918,6 @@
       "tracks": [
         {
           "id": "i.06QNXrYH05DPqDW",
-          "title": "Unchained Melody",
-          "trackNo": 3,
-          "discNo": 1,
-          "duration": "3:38",
-          "source": "apple-music",
-          "artistName": "The Righteous Brothers"
-        },
-        {
-          "id": "i.9oJNq46cPezL6z2",
           "title": "Unchained Melody",
           "trackNo": 3,
           "discNo": 1,
@@ -18763,27 +18554,6 @@
           "duration": "3:33",
           "source": "apple-music",
           "artistName": "James Blunt"
-        }
-      ],
-      "source": "apple-music"
-    },
-    {
-      "id": "apple-album-a812918818d787c8",
-      "title": "Midnights (3am Edition / Video Deluxe)",
-      "artistId": "apple-159260351",
-      "artistName": "Taylor Swift",
-      "artistDisplayName": "Taylor Swift",
-      "year": 2022,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/images/music/albums/apple-48c4a0342bf04afd.webp",
-      "tracks": [
-        {
-          "id": "i.vMX11bEUgrzp2zq",
-          "title": "You're On Your Own, Kid",
-          "trackNo": 5,
-          "discNo": 1,
-          "duration": "3:14",
-          "source": "apple-music",
-          "artistName": "Taylor Swift"
         }
       ],
       "source": "apple-music"

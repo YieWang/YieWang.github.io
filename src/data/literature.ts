@@ -1,4 +1,7 @@
+import literature from './literature.json';
+
 export interface BookItem {
+  hidden?: boolean;
   id: string;
   title: string;                // Display title matching this specific copy (e.g. "局外人", "看不见的城市", "Gödel, Escher, Bach")
   originalTitle: string;        // Original title in original language (e.g. "L'Étranger", "Le città invisibili")
@@ -17,6 +20,7 @@ export interface BookItem {
 }
 
 export interface EssayItem {
+  hidden?: boolean;
   id: string;
   title: string;                // Essay title
   author: string;               // Author e.g. "王怡"
@@ -26,5 +30,5 @@ export interface EssayItem {
   content: string;              // Full formatted prose text
 }
 
-export const literatureBooks: BookItem[] = [];
-export const literatureEssays: EssayItem[] = [];
+export const literatureBooks: BookItem[] = (literature.books as BookItem[]).filter(book => !book.hidden);
+export const literatureEssays: EssayItem[] = (literature.essays as EssayItem[]).filter(essay => !essay.hidden);

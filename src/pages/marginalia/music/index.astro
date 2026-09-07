@@ -42,8 +42,8 @@ const artistGroups = musicArtists.map(artist => {
             </h2>
           </div>
 
-          <!-- Enlarged Vinyl Grid: Generous gap-x to guarantee vinyl peek never overlaps adjacent album -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-6 sm:gap-x-7 md:gap-x-8 gap-y-9 sm:gap-y-11">
+          <!-- Reclaim outer whitespace to preserve cover sizes with slightly wider gaps. -->
+          <div class="music-album-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-y-9 sm:gap-y-11">
             {group.albums.map((album) => (
               <article
                 class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index]"
@@ -135,10 +135,21 @@ const artistGroups = musicArtists.map(artist => {
 
 <style>
   :global(body) { --artist-rail-width: clamp(160px, 17vw, 230px); }
-  .music-page-content { padding-left: calc(var(--artist-rail-width) + 60px); padding-bottom: 50vh; }
+  .music-page-content { --album-gap: 32px; padding-left: calc(var(--artist-rail-width) + 52px); padding-bottom: 50vh; }
+  .music-album-grid { column-gap: var(--album-gap); }
+  .music-card { --vinyl-room: calc(var(--album-gap) - 8px); transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1); }
+  .music-card:hover { transform: translateX(min(0px, calc(var(--vinyl-room) - 22%))); }
+  @media (min-width: 768px) {
+    .music-page-content { --album-gap: 36px; padding-left: calc(var(--artist-rail-width) + 48px); }
+  }
+  @media (min-width: 1024px) {
+    .music-page-content { padding-left: calc(var(--artist-rail-width) + 40px); }
+  }
   @media (max-width: 639px) {
-    :global(body) { --artist-rail-width: 125px; }
-    .music-page-content { padding-left: 141px; }
+    /* Original mobile cover width is (100vw - 197px) / 2; allow its full 22% slide. */
+    :global(body) { --artist-rail-width: calc(125px - max(0px, calc(11vw - 37.67px))); }
+    .music-page-content { --album-gap: max(24px, calc(11vw - 13.67px)); padding-left: calc(var(--artist-rail-width) + 16px); }
+    .music-card:nth-child(2n) { --vinyl-room: 16px; }
   }
 </style>
 
@@ -267,6 +278,9 @@ const artistGroups = musicArtists.map(artist => {
             style="scrollbar-gutter: stable;"
           >
             <div class="space-y-0.5">
+              ${album.rating ? `<p class="text-sm mb-3">${escapeHtml(album.rating)}</p>` : ''}
+              ${album.listenedDate ? `<p class="text-xs text-[#888888] mb-3">${escapeHtml(album.listenedDate)}</p>` : ''}
+              ${album.summary ? `<p class="text-sm leading-relaxed whitespace-pre-line mb-4">${escapeHtml(album.summary)}</p>` : ''}
               ${favoriteTracksHtml}
             </div>
           </div>

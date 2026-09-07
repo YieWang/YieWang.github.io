@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>筛选影视</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#faf9f6;color:#242424;font:15px/1.5 system-ui,sans-serif}header{position:sticky;top:0;z-index:1;background:#faf9f6f5;border-bottom:1px solid #ddd;padding:20px max(20px,calc((100vw - 1200px)/2))}h1{font-size:24px;margin:0 0 6px}p{margin:6px 0;color:#666}.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}input,select,button{font:inherit;padding:9px 12px;border:1px solid #ccc;background:white;border-radius:6px}input{flex:1;min-width:160px}button{cursor:pointer}button:disabled{cursor:wait;opacity:.5}:focus-visible{outline:3px solid #507a65;outline-offset:2px}main{max-width:1240px;margin:auto;padding:24px 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:28px 20px}article{min-width:0}img{width:100%;aspect-ratio:2/3;object-fit:cover;background:#e7e5e0;border-radius:4px}h2{font-size:15px;line-height:1.4;margin:8px 0 3px}small{display:block;color:#777;min-height:21px}.actions{display:flex;gap:8px;margin-top:10px}.actions button{flex:1}.keep[aria-pressed=true]{background:#e5eee7;border-color:#75957c;color:#244c30}.remove[aria-pressed=true]{background:#f7e4e0;border-color:#b9867d;color:#8b3329}article.deleted img{opacity:.45}#error{color:#9d3027}#empty{grid-column:1/-1}a{color:inherit}@media(max-width:450px){main{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}.actions button{padding:8px}header{padding:16px}}
+.music img{aspect-ratio:1}nav{margin-bottom:8px}nav a{padding:4px 8px;text-decoration:none}nav a[aria-current=page]{font-weight:700;background:#e5eee7;border-radius:4px}
+</style>
+<header>
+<nav aria-label="筛选栏目"><a href="?section=cinema">影视</a> · <a href="?section=music">音乐</a> · <a href="?section=literature">书籍</a></nav>
+<h1>筛选影视</h1>
+<p>点一下就保存。删除后从网站隐藏，可随时在“已删除”中恢复。</p>
+<div class="controls">
+<input id="search" type="search" placeholder="搜索片名、导演" aria-label="搜索片名、导演">
+<select id="category" aria-label="作品类型"><option value="all">全部类型</option><option value="film">电影</option><option value="series">电视剧</option><option value="animation">动漫</option></select>
+<select id="filter" aria-label="保留状态"><option value="all">全部作品</option><option value="kept">已保留</option><option value="deleted">已删除</option></select>
+</div>
+<p id="status" role="status">正在加载…</p><p id="error" role="alert"></p>
+<small>仅保存到本机，发布后才会更新网站。 <a href="/marginalia/cinema/" target="_blank" rel="noopener">预览 Cinema ↗</a></small>
+</header>
+<main aria-label="影视作品"></main>
+<script type="module">
+const main = document.querySelector('main'), status = document.querySelector('#status'), error = document.querySelector('#error');
+const search = document.querySelector('#search'), category = document.querySelector('#category'), filter = document.querySelector('#filter');
+const section = new URLSearchParams(location.search).get('section');
+const kind = ['music','literature'].includes(section) ? section : 'cinema';
+const label = {cinema:'影视',music:'音乐',literature:'书籍'}[kind];
+const records = data => kind === 'cinema' ? data : data[kind === 'music' ? 'albums' : 'books'];
+document.title = document.querySelector('h1').textContent = '筛选' + label;
+main.setAttribute('aria-label', label + '作品');
+category.hidden = kind !== 'cinema';
+search.placeholder = kind === 'music' ? '搜索专辑、音乐人' : kind === 'literature' ? '搜索书名、作者' : '搜索片名、导演';
+search.setAttribute('aria-label', search.placeholder);
+const preview = document.querySelector('small a'); preview.href = '/marginalia/' + kind + '/'; preview.textContent = '预览' + label + ' ↗';
+document.querySelector(`nav a[href="?section=${kind}"]`).setAttribute('aria-current','page');
+if (kind === 'music') document.body.classList.add('music');
+let state, busy = false;
+const node = (tag, text) => { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; return n; };
+async function api(data) {
+  const response = await fetch('/__editor/data/' + kind, data ? {method:'POST',headers:{'Content-Type':'application/json','X-Homepage-Editor':'1'},body:JSON.stringify(data)} : {cache:'no-store'});
+  const result = await response.json();
+  if (!response.ok) throw Error(result.error || '保存失败，请刷新后重试');
+  return result;
+}
+function render() {
+  const focus = document.activeElement;
+  const focusId = focus?.closest('article')?.dataset.id, focusClass = focus?.className;
+  main.replaceChildren();
+  const query = search.value.trim().toLocaleLowerCase();
+  const all = records(state.data);
+  const items = all.filter(item => {
+    const type = (item.genre || '').split(', ').includes('Animation') ? 'animation' : item.type;
+    return (category.value === 'all' || category.value === type)
+      && (filter.value === 'all' || (filter.value === 'deleted') === !!item.hidden)
+      && [item.title,item.originalTitle,item.director,item.originalDirector,item.author,item.originalAuthor,item.artistName,item.artistDisplayName,...(item.watchedEntries || []).map(entry => entry.title)].some(text => String(text || '').toLocaleLowerCase().includes(query));
+  });
+  for (const item of items) {
+    const card = node('article'); card.dataset.id = item.id; card.classList.toggle('deleted', !!item.hidden);
+    const title = kind === 'cinema' ? item.originalTitle || item.title : item.title;
+    const img = node('img'); img.src = item.posterUrl || item.coverUrl; img.alt = title; img.loading = 'lazy';
+    const actions = node('div'); actions.className = 'actions';
+    for (const [label, hidden, cls] of [['保留',false,'keep'],['删除',true,'remove']]) {
+      const button = node('button',label); button.type = 'button'; button.className = cls; button.disabled = busy;
+      button.setAttribute('aria-label', `${label}《${title}》`); button.setAttribute('aria-pressed',String(!!item.hidden === hidden));
+      button.addEventListener('click', () => save(item.id, hidden)); actions.append(button);
+    }
+    card.append(img,node('h2',title),node('small',`${item.year || ''} · ${kind === 'music' ? item.artistDisplayName || item.artistName : kind === 'literature' ? item.author : item.originalDirector || item.director}`),actions); main.append(card);
+  }
+  const hidden = all.filter(item => item.hidden).length;
+  status.textContent = `保留 ${all.length-hidden} 项 · 已删除 ${hidden} 项 · 当前显示 ${items.length} 项${busy ? ' · 保存中…' : ''}`;
+  if (!items.length) { const empty = node('p','没有符合条件的作品'); empty.id = 'empty'; main.append(empty); }
+  if (focusId) [...main.querySelectorAll('article')].find(card => card.dataset.id === focusId)?.querySelector(`button.${focusClass}`)?.focus({preventScroll:true});
+}
+async function save(id, hidden) {
+  if (busy) return;
+  if (!!records(state.data).find(item => item.id === id).hidden === hidden) { status.textContent = '已保存：' + (hidden ? '删除' : '保留'); return; }
+  busy = true; error.textContent = ''; main.querySelectorAll('button').forEach(b => b.disabled = true); status.textContent = '保存中…';
+  const data = structuredClone(state.data); records(data).find(item => item.id === id).hidden = hidden;
+  try { const result = await api({data,revision:state.revision}); state = {data,revision:result.revision}; }
+  catch (e) { error.textContent = e.message; }
+  finally { busy = false; render(); }
+}
+window.addEventListener('beforeunload', event => { if (busy) { event.preventDefault(); event.returnValue = ''; } });
+for (const input of [search,category,filter]) input.addEventListener('input', () => { if (state) render(); });
+try { state = await api(); render(); } catch (e) { status.textContent = '加载失败'; error.textContent = e.message; }
+</script>
+</html>

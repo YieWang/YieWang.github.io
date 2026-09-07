@@ -14,6 +14,7 @@ export interface MusicTrack {
 }
 
 export interface MusicAlbum {
+  hidden?: boolean;
   id: string;
   title: string;
   artistId: string;
@@ -34,6 +35,7 @@ export interface MusicAlbum {
 }
 
 export interface MusicArtist {
+  hidden?: boolean;
   avatarUrl: string;
   id: string;
   name: string;
@@ -48,5 +50,6 @@ export interface MusicArtist {
 const artistOrder = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
 const artistSortName = (artist: MusicArtist) => (sortNames as Record<string, string>)[artist.name] || artist.name;
 export const musicArtists = [...importedMusic.artists as MusicArtist[]]
+  .filter(artist => !artist.hidden)
   .sort((a, b) => artistOrder.compare(artistSortName(a), artistSortName(b)) || artistOrder.compare(a.name, b.name));
-export const musicAlbums = importedMusic.albums as MusicAlbum[];
+export const musicAlbums = (importedMusic.albums as MusicAlbum[]).filter(album => !album.hidden);

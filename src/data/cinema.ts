@@ -2,6 +2,8 @@ import importedCinema from './cinema-import.json';
 import { cinemaGroups } from './media-curation.json';
 
 export interface MediaItem {
+  installments?: MediaItem[];   // Visible films sharing one collection card
+  hidden?: boolean;
   id: string;
   title: string;                 // English display title
   originalTitle?: string;        // Original native title (e.g. "東京物語")
@@ -21,7 +23,7 @@ export interface MediaItem {
   rating?: string;               // Personal rating e.g. "5.0 / 5.0" (available with or without full essay)
   firstWatched?: string;         // First watch date e.g. "2019.04"
   rewatched?: string;            // Rewatch dates e.g. "2021.04, 2024.04"
-  externalLink: {
+  externalLink?: {
     platform: 'IMDb' | 'Douban';
     url: string;
   };
@@ -36,7 +38,7 @@ export interface MediaItem {
   };
 }
 
-const importedItems = importedCinema as MediaItem[];
+const importedItems = (importedCinema as MediaItem[]).filter(item => !item.hidden);
 const isAnimation = (item: MediaItem) => item.genre.split(', ').includes('Animation');
 const seriesById = new Map(cinemaGroups.flatMap((ids, group) => ids.map(id => [id, group] as const)));
 
@@ -59,3 +61,40 @@ export const cinemaAnimation = relatedOrder(importedItems.filter(isAnimation));
 export const cinemaFilms = relatedOrder(importedItems.filter(item => item.type === 'film' && !isAnimation(item)));
 export const cinemaSeries = importedItems.filter(item => item.type === 'series' && !isAnimation(item));
 export const allCinemaItems: MediaItem[] = importedItems;
+
+// Explicit franchise groups only; sharing a director does not make a collection.
+const collectionTitles: Record<string, string> = {
+  'film-37311135': 'Pegasus', 'film-25808075': 'Planet of the Apes',
+  'film-1474189': 'Saw', 'film-30209818': 'Happy Death Day',
+  'film-6532822': 'Resident Evil', 'film-1418189': 'Spider-Man',
+  'film-25728006': 'Fast & Furious', 'film-11624706': 'Despicable Me',
+  'film-27074316': "A Dog’s Purpose", 'film-25887288': 'Frozen',
+  'film-25726614': 'Wizarding World', 'film-10574622': 'Lost on Journey',
+  'film-26311973': 'Detective Chinatown', 'film-26817136': 'Zootopia',
+  'film-26282448': 'Naruto', 'film-1305053': 'Hannibal Lecter',
+  'film-36680624': 'Demon Slayer', 'film-1291584': 'Kill Bill',
+  'film-10467125': 'One Piece', 'film-26715496': 'Kung Fu Panda',
+  'film-36090457': 'Inside Out', 'film-34780991': 'Ne Zha',
+  'film-10808442': 'Before Trilogy', 'film-26588308': 'Deadpool',
+  'film-20438964': 'Wreck-It Ralph', 'film-4914468': 'Ice Age',
+  'film-3789848': 'Monsters, Inc.', 'film-3642835': 'Men in Black',
+  'film-24773958': 'The Avengers', 'film-3231742': 'Iron Man',
+  'film-26374197': 'Spider-Verse', 'film-1299398': 'A Chinese Odyssey',
+};
+
+export function groupFilmCollections(items: MediaItem[]): MediaItem[] {
+  const emitted = new Set<number>();
+  return items.flatMap(item => {
+    const group = seriesById.get(item.id);
+    if (item.type !== 'film' || group === undefined) return [item];
+    if (emitted.has(group)) return [];
+    emitted.add(group);
+    const installments = items.filter(film => film.type === 'film' && seriesById.get(film.id) === group)
+      .sort((a, b) => Number(a.year) - Number(b.year) || cinemaGroups[group].indexOf(a.id) - cinemaGroups[group].indexOf(b.id));
+    if (installments.length < 2) return installments;
+    const first = installments[0];
+    return [{ ...first, title: collectionTitles[cinemaGroups[group][0]] || first.title,
+      year: first.year === installments.at(-1)!.year ? first.year : `${first.year}–${installments.at(-1)!.year}`,
+      director: [...new Set(installments.map(film => film.director))].join(', '), installments }];
+  });
+}

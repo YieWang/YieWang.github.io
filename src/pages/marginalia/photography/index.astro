@@ -17,6 +17,8 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
 >
   <Header activeTab="marginalia" />
 
+  {!firstPhoto && <p class="text-sm text-[#888888] text-center py-16">No photos yet.</p>}
+  {firstPhoto && <>
   <!-- Single-Screen Zero-Scroll Gallery Viewport (Desktop 100vh) -->
   <div
     id="gallery-viewport-root"
@@ -112,6 +114,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     </main>
 
   </div>
+  </>}
 </Layout>
 
 <style>

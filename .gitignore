@@ -27,3 +27,7 @@ pnpm-debug.log*
 # Local browser verification artifacts
 /.playwright-cli/
 /output/playwright/
+
+# Local editor backups and original uploads
+/.local-editor/
+/编辑主页.command

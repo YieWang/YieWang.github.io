@@ -224,16 +224,12 @@
         "title": "抓特务",
         "firstWatched": "2026-07-04",
         "rating": "3 / 5",
-        "comment": "略显拖沓，故事陈旧"
+        "comment": ""
       }
     ],
     "tmdbId": 1305672,
     "rating": "3 / 5",
-    "review": {
-      "rating": "3 / 5",
-      "date": "2026-07-04",
-      "content": "略显拖沓，故事陈旧"
-    }
+    "hidden": true
   },
   {
     "id": "film-1309016",
@@ -287,16 +283,11 @@
         "title": "横道世之介",
         "firstWatched": "2026-06-18",
         "rating": "5 / 5",
-        "comment": "不可多得的好片，平静却不平淡，恰如多数人的人生。"
+        "comment": ""
       }
     ],
     "tmdbId": 200145,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-06-18",
-      "content": "不可多得的好片，平静却不平淡，恰如多数人的人生。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-36965301",
@@ -321,16 +312,12 @@
         "title": "消失的人",
         "firstWatched": "2026-06-16",
         "rating": "4 / 5",
-        "comment": "多线叙事+叙事诡计，还可以，就是既视感有点重"
+        "comment": ""
       }
     ],
     "tmdbId": 1658653,
     "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2026-06-16",
-      "content": "多线叙事+叙事诡计，还可以，就是既视感有点重"
-    }
+    "hidden": true
   },
   {
     "id": "film-37116446",
@@ -355,16 +342,11 @@
         "title": "给阿嬷的情书",
         "firstWatched": "2026-05-21",
         "rating": "5 / 5",
-        "comment": "南枝是近几年华语荧幕塑造的最好的人物。 (1 有用)"
+        "comment": ""
       }
     ],
     "tmdbId": 1671548,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-05-21",
-      "content": "南枝是近几年华语荧幕塑造的最好的人物。 (1 有用)"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "tv-70523",
@@ -491,16 +473,11 @@
         "title": "小岛惊魂",
         "firstWatched": "2026-04-16",
         "rating": "5 / 5",
-        "comment": "五星剧本"
+        "comment": ""
       }
     ],
     "tmdbId": 1933,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-04-16",
-      "content": "五星剧本"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-37311135",
@@ -529,7 +506,8 @@
       }
     ],
     "tmdbId": 1462229,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "tv-43167",
@@ -1191,7 +1169,7 @@
         "title": "冰海战记 第二季",
         "firstWatched": "2026-02-17",
         "rating": "5 / 5",
-        "comment": "仁者无敌。"
+        "comment": ""
       },
       {
         "doubanId": "30174419",
@@ -1361,7 +1339,7 @@
         "title": "未来日记",
         "firstWatched": "2026-02-17",
         "rating": "5 / 5",
-        "comment": "没想到最后是纯爱。。"
+        "comment": ""
       }
     ],
     "tmdbId": 46671,
@@ -1610,35 +1588,6 @@
     "creditRole": "DIRECTOR / SCREENWRITER"
   },
   {
-    "id": "film-26290367",
-    "title": "Yesterday Once More",
-    "originalTitle": "谁的青春不迷茫",
-    "type": "film",
-    "director": "Yao Tingting",
-    "year": 2016,
-    "country": "CN",
-    "genre": "Drama, Romance",
-    "runtime": "108 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-399460-2529c2b6a429.webp",
-    "summary": "",
-    "firstWatched": "2026-02-12",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt5769516/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26290367",
-        "title": "谁的青春不迷茫",
-        "firstWatched": "2026-02-12",
-        "rating": "5 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 399460,
-    "rating": "5 / 5"
-  },
-  {
     "id": "film-25808075",
     "title": "War for the Planet of the Apes",
     "originalTitle": "猩球崛起3：终极之战",
@@ -1697,35 +1646,6 @@
     "rating": "5 / 5"
   },
   {
-    "id": "film-26274910",
-    "title": "Running Man",
-    "originalTitle": "奔跑吧！兄弟",
-    "type": "film",
-    "director": "Cen Jun Yi, Hu Jia",
-    "year": 2015,
-    "country": "CN",
-    "genre": "Comedy",
-    "runtime": "88 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-321815-243e8addc253.webp",
-    "summary": "",
-    "firstWatched": "2026-02-12",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt4412218/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26274910",
-        "title": "奔跑吧！兄弟",
-        "firstWatched": "2026-02-12",
-        "rating": "3 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 321815,
-    "rating": "3 / 5"
-  },
-  {
     "id": "film-24843198",
     "title": "My Old Classmate",
     "originalTitle": "同桌的你",
@@ -1752,7 +1672,8 @@
       }
     ],
     "tmdbId": 290217,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": false
   },
   {
     "id": "film-24735062",
@@ -1839,7 +1760,8 @@
       }
     ],
     "tmdbId": 449306,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-30209818",
@@ -1868,7 +1790,8 @@
       }
     ],
     "tmdbId": 512196,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-27027913",
@@ -1897,7 +1820,8 @@
       }
     ],
     "tmdbId": 440021,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-6973376",
@@ -1926,7 +1850,8 @@
       }
     ],
     "tmdbId": 191421,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-1433990",
@@ -1955,7 +1880,8 @@
       }
     ],
     "tmdbId": 80219,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-4924142",
@@ -1984,7 +1910,8 @@
       }
     ],
     "tmdbId": 49530,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-6532822",
@@ -2094,16 +2021,11 @@
         "title": "暖暖内含光",
         "firstWatched": "2026-02-12",
         "rating": "5 / 5",
-        "comment": "Clementine，我想我很快会忘了你，明早起来我不会记起一丝你的面庞。记忆一点点消失，爱意一丝丝增长。直到现在我才明白我对那些刺骨的话有多么后悔。但事实是，我又怎么可能会忘了你？"
+        "comment": ""
       }
     ],
     "tmdbId": 38,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-02-12",
-      "content": "Clementine，我想我很快会忘了你，明早起来我不会记起一丝你的面庞。记忆一点点消失，爱意一丝丝增长。直到现在我才明白我对那些刺骨的话有多么后悔。但事实是，我又怎么可能会忘了你？"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1292286",
@@ -2128,16 +2050,11 @@
         "title": "我的野蛮女友",
         "firstWatched": "2026-02-12",
         "rating": "5 / 5",
-        "comment": "最嫩的全智贤。。"
+        "comment": ""
       }
     ],
     "tmdbId": 11178,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-02-12",
-      "content": "最嫩的全智贤。。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-35875180",
@@ -2166,36 +2083,8 @@
       }
     ],
     "tmdbId": 1155257,
-    "rating": "3 / 5"
-  },
-  {
-    "id": "film-26320029",
-    "title": "Surprise",
-    "originalTitle": "万万没想到",
-    "type": "film",
-    "director": "Joshua",
-    "year": 2015,
-    "country": "CN",
-    "genre": "Adventure, Comedy, Fantasy",
-    "runtime": "96 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-372836-453260bbe5f6.webp",
-    "summary": "",
-    "firstWatched": "2026-02-12",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt5266678/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26320029",
-        "title": "万万没想到",
-        "firstWatched": "2026-02-12",
-        "rating": "5 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 372836,
-    "rating": "5 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-1309045",
@@ -2311,7 +2200,8 @@
       }
     ],
     "tmdbId": 265712,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-35208467",
@@ -2340,7 +2230,8 @@
       }
     ],
     "tmdbId": 804725,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-21349345",
@@ -2369,7 +2260,8 @@
       }
     ],
     "tmdbId": 198663,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-1329562",
@@ -2510,103 +2402,11 @@
         "title": "心花路放",
         "firstWatched": "2026-02-11",
         "rating": "5 / 5",
-        "comment": "我很喜欢这种结构骗局的设计，这才是最别出心裁的。"
+        "comment": ""
       }
     ],
     "tmdbId": 284298,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-02-11",
-      "content": "我很喜欢这种结构骗局的设计，这才是最别出心裁的。"
-    }
-  },
-  {
-    "id": "film-26290365",
-    "title": "Devil And Angel",
-    "originalTitle": "恶棍天使",
-    "type": "film",
-    "director": "Yu Baimei, Deng Chao",
-    "year": 2015,
-    "country": "CN",
-    "genre": "Comedy, Romance",
-    "runtime": "125 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-373196-9cb199f047fc.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt5297654/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26290365",
-        "title": "恶棍天使",
-        "firstWatched": "2026-02-11",
-        "rating": "2 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 373196,
-    "rating": "2 / 5"
-  },
-  {
-    "id": "film-25745752",
-    "title": "The Left Ear",
-    "originalTitle": "左耳",
-    "type": "film",
-    "director": "Alec Su You-peng",
-    "year": 2015,
-    "country": "CN",
-    "genre": "Drama, Romance",
-    "runtime": "120 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-334973-4cbdb5502ba0.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt4545806/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "25745752",
-        "title": "左耳",
-        "firstWatched": "2026-02-11",
-        "rating": "4 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 334973,
-    "rating": "4 / 5"
-  },
-  {
-    "id": "film-24852545",
-    "title": "iPartment",
-    "originalTitle": "爱情公寓",
-    "type": "film",
-    "director": "Frank Wei",
-    "year": 2018,
-    "country": "CN",
-    "genre": "Comedy, Fantasy, Adventure",
-    "runtime": "117 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-541781-451178e4a2e2.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt8893870/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "24852545",
-        "title": "爱情公寓",
-        "firstWatched": "2026-02-11",
-        "rating": "1 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 541781,
-    "rating": "1 / 5"
+    "rating": "5 / 5"
   },
   {
     "id": "film-3269068",
@@ -2664,7 +2464,8 @@
       }
     ],
     "tmdbId": 518764,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-27024903",
@@ -2783,35 +2584,6 @@
     "rating": "5 / 5"
   },
   {
-    "id": "film-27102569",
-    "title": "Cry Me a Sad River",
-    "originalTitle": "悲伤逆流成河",
-    "type": "film",
-    "director": "Luo Luo",
-    "year": 2018,
-    "country": "CN",
-    "genre": "Drama",
-    "runtime": "104 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-552345-e53e11615f91.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt9036926/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "27102569",
-        "title": "悲伤逆流成河",
-        "firstWatched": "2026-02-11",
-        "rating": "3 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 552345,
-    "rating": "3 / 5"
-  },
-  {
     "id": "film-25907124",
     "title": "Jiang Ziya",
     "originalTitle": "姜子牙",
@@ -2838,7 +2610,8 @@
       }
     ],
     "tmdbId": 635389,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-25728006",
@@ -2866,7 +2639,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 385128
+    "tmdbId": 385128,
+    "hidden": true
   },
   {
     "id": "film-26260853",
@@ -2894,7 +2668,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 337339
+    "tmdbId": 337339,
+    "hidden": true
   },
   {
     "id": "film-6537500",
@@ -2922,7 +2697,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 82992
+    "tmdbId": 82992,
+    "hidden": true
   },
   {
     "id": "film-2132930",
@@ -2950,7 +2726,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 13804
+    "tmdbId": 13804,
+    "hidden": true
   },
   {
     "id": "film-1652618",
@@ -2978,7 +2755,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 9615
+    "tmdbId": 9615,
+    "hidden": true
   },
   {
     "id": "film-1307442",
@@ -3006,7 +2784,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 584
+    "tmdbId": 584,
+    "hidden": true
   },
   {
     "id": "film-1304899",
@@ -3034,7 +2813,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 9799
+    "tmdbId": 9799,
+    "hidden": true
   },
   {
     "id": "film-23761370",
@@ -3063,7 +2843,8 @@
       }
     ],
     "tmdbId": 168259,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-36907263",
@@ -3095,35 +2876,6 @@
     "rating": "5 / 5"
   },
   {
-    "id": "film-21359690",
-    "title": "Boonie Bears: Homeward Journey",
-    "originalTitle": "熊出没之过年",
-    "type": "film",
-    "director": "Fuyuan Liu",
-    "year": 2013,
-    "country": "CN",
-    "genre": "Comedy, Animation, Adventure, Family",
-    "runtime": "68 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-304941-dcfb5fe15f3d.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt2943974/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "21359690",
-        "title": "熊出没之过年",
-        "firstWatched": "2026-02-11",
-        "rating": "3 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 304941,
-    "rating": "3 / 5"
-  },
-  {
     "id": "film-25870084",
     "title": "20 Once Again",
     "originalTitle": "重返20岁",
@@ -3150,7 +2902,8 @@
       }
     ],
     "tmdbId": 301274,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-11624706",
@@ -3178,7 +2931,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 211672
+    "tmdbId": 211672,
+    "hidden": true
   },
   {
     "id": "film-30170847",
@@ -3206,7 +2960,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 519182
+    "tmdbId": 519182,
+    "hidden": true
   },
   {
     "id": "film-4915857",
@@ -3234,7 +2989,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 93456
+    "tmdbId": 93456,
+    "hidden": true
   },
   {
     "id": "film-25812712",
@@ -3263,7 +3019,8 @@
       }
     ],
     "tmdbId": 324852,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-30282387",
@@ -3292,7 +3049,8 @@
       }
     ],
     "tmdbId": 603765,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": false
   },
   {
     "id": "film-24404677",
@@ -3321,36 +3079,8 @@
       }
     ],
     "tmdbId": 240832,
-    "rating": "5 / 5"
-  },
-  {
-    "id": "film-24879858",
-    "title": "The Breakup Guru",
-    "originalTitle": "分手大师",
-    "type": "film",
-    "director": "Deng Chao, Yu Baimei",
-    "year": 2014,
-    "country": "CN",
-    "genre": "Romance, Comedy",
-    "runtime": "114 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-270724-d9711791948b.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt3667798/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "24879858",
-        "title": "分手大师",
-        "firstWatched": "2026-02-11",
-        "rating": "4 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 270724,
-    "rating": "4 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-26277313",
@@ -3553,7 +3283,8 @@
       }
     ],
     "tmdbId": 335983,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-25726614",
@@ -3611,36 +3342,8 @@
       }
     ],
     "tmdbId": 535170,
-    "rating": "5 / 5"
-  },
-  {
-    "id": "film-26575103",
-    "title": "Monster Hunt 2",
-    "originalTitle": "捉妖记2",
-    "type": "film",
-    "director": "Raman Hui Shing-Ngai",
-    "year": 2018,
-    "country": "CN · HK",
-    "genre": "Adventure, Comedy, Fantasy",
-    "runtime": "110 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-497984-4144de695970.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt6170484/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26575103",
-        "title": "捉妖记2",
-        "firstWatched": "2026-02-11",
-        "rating": "3 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 497984,
-    "rating": "3 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-35096844",
@@ -3669,36 +3372,8 @@
       }
     ],
     "tmdbId": 716815,
-    "rating": "4 / 5"
-  },
-  {
-    "id": "film-25710912",
-    "title": "Lost in Hong Kong",
-    "originalTitle": "港囧",
-    "type": "film",
-    "director": "Xu Zheng",
-    "year": 2015,
-    "country": "CN",
-    "genre": "Action, Adventure, Crime, Comedy, Romance",
-    "runtime": "114 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-361613-078f1cbbe7ba.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt4242158/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "25710912",
-        "title": "港囧",
-        "firstWatched": "2026-02-11",
-        "rating": "4 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 361613,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-10574622",
@@ -3814,7 +3489,8 @@
       }
     ],
     "tmdbId": 334298,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-1961963",
@@ -3843,7 +3519,8 @@
       }
     ],
     "tmdbId": 13688,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-5308265",
@@ -3872,7 +3549,8 @@
       }
     ],
     "tmdbId": 170657,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": false
   },
   {
     "id": "film-19944106",
@@ -3901,65 +3579,8 @@
       }
     ],
     "tmdbId": 381890,
-    "rating": "5 / 5"
-  },
-  {
-    "id": "film-35660795",
-    "title": "Lost in the Stars",
-    "originalTitle": "消失的她",
-    "type": "film",
-    "director": "Cui Rui, Liu Xiang",
-    "year": 2023,
-    "country": "CN",
-    "genre": "Mystery, Crime, Thriller",
-    "runtime": "122 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-1108211-7ec5b7c7c8b4.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt17507018/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "35660795",
-        "title": "消失的她",
-        "firstWatched": "2026-02-11",
-        "rating": "1 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 1108211,
-    "rating": "1 / 5"
-  },
-  {
-    "id": "film-27619748",
-    "title": "Detective Chinatown 3",
-    "originalTitle": "唐人街探案3",
-    "type": "film",
-    "director": "Chen Sicheng",
-    "year": 2021,
-    "country": "CN",
-    "genre": "Action, Comedy, Mystery",
-    "runtime": "136 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-602666-6b438d9619de.webp",
-    "summary": "",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt10370822/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "27619748",
-        "title": "唐人街探案3",
-        "firstWatched": "2026-02-11",
-        "rating": "3 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 602666,
-    "rating": "3 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-26311973",
@@ -3988,7 +3609,8 @@
       }
     ],
     "tmdbId": 373200,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-33414470",
@@ -4017,7 +3639,8 @@
       }
     ],
     "tmdbId": 1241924,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-26611801",
@@ -4046,7 +3669,8 @@
       }
     ],
     "tmdbId": 380948,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-35183042",
@@ -4075,7 +3699,8 @@
       }
     ],
     "tmdbId": 801803,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-36653918",
@@ -4104,7 +3729,8 @@
       }
     ],
     "tmdbId": 1299537,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-25964071",
@@ -4133,7 +3759,8 @@
       }
     ],
     "tmdbId": 362682,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-26817136",
@@ -4220,7 +3847,8 @@
       }
     ],
     "tmdbId": 297761,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-20470074",
@@ -4475,7 +4103,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 347201
+    "tmdbId": 347201,
+    "hidden": true
   },
   {
     "id": "film-2051813",
@@ -4503,7 +4132,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 20982
+    "tmdbId": 20982,
+    "hidden": true
   },
   {
     "id": "film-25938113",
@@ -4531,7 +4161,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 317442
+    "tmdbId": 317442,
+    "hidden": true
   },
   {
     "id": "film-7152908",
@@ -4559,7 +4190,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 118406
+    "tmdbId": 118406,
+    "hidden": true
   },
   {
     "id": "film-27591193",
@@ -4587,7 +4219,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 573730
+    "tmdbId": 573730,
+    "hidden": true
   },
   {
     "id": "film-26837952",
@@ -4615,7 +4248,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 445030
+    "tmdbId": 445030,
+    "hidden": true
   },
   {
     "id": "film-30329902",
@@ -4643,7 +4277,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 572154
+    "tmdbId": 572154,
+    "hidden": true
   },
   {
     "id": "film-25864085",
@@ -4668,16 +4303,11 @@
         "title": "火星救援",
         "firstWatched": "2026-02-11",
         "rating": "5 / 5",
-        "comment": "非常纯粹的科幻片"
+        "comment": ""
       }
     ],
     "tmdbId": 286217,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-02-11",
-      "content": "非常纯粹的科幻片"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1305053",
@@ -4760,16 +4390,11 @@
         "title": "教父",
         "firstWatched": "2026-02-06",
         "rating": "5 / 5",
-        "comment": "还真是男人必看"
+        "comment": ""
       }
     ],
     "tmdbId": 238,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2026-02-06",
-      "content": "还真是男人必看"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-34961898",
@@ -4826,7 +4451,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 1216221
+    "tmdbId": 1216221,
+    "hidden": true
   },
   {
     "id": "film-34845781",
@@ -4854,7 +4480,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 635302
+    "tmdbId": 635302,
+    "hidden": true
   },
   {
     "id": "film-36188879",
@@ -4882,7 +4509,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 1067282
+    "tmdbId": 1067282,
+    "hidden": true
   },
   {
     "id": "film-33393167",
@@ -4910,7 +4538,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 820232
+    "tmdbId": 820232,
+    "hidden": true
   },
   {
     "id": "film-35327724",
@@ -4938,7 +4567,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 811948
+    "tmdbId": 811948,
+    "hidden": true
   },
   {
     "id": "film-35231832",
@@ -4966,7 +4596,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 802401
+    "tmdbId": 802401,
+    "hidden": true
   },
   {
     "id": "film-35651911",
@@ -4994,7 +4625,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 895006
+    "tmdbId": 895006,
+    "hidden": true
   },
   {
     "id": "film-35691909",
@@ -5022,7 +4654,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 895003
+    "tmdbId": 895003,
+    "hidden": true
   },
   {
     "id": "tv-85937",
@@ -5105,16 +4738,12 @@
         "title": "鬼灭之刃：无限城篇 第一章 猗窝座再袭",
         "firstWatched": "2025-11-15",
         "rating": "4 / 5",
-        "comment": "少的一星是因为回忆太拖沓，我觉得制作组在制作电影的时候就该想好电影节奏问题，而不是全面模仿漫画，毕竟是不同的载体。"
+        "comment": ""
       }
     ],
     "tmdbId": 1311031,
     "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2025-11-15",
-      "content": "少的一星是因为回忆太拖沓，我觉得制作组在制作电影的时候就该想好电影节奏问题，而不是全面模仿漫画，毕竟是不同的载体。"
-    }
+    "hidden": true
   },
   {
     "id": "film-1292335",
@@ -5213,7 +4842,7 @@
     "country": "US",
     "genre": "Action, Crime, Thriller",
     "runtime": "136 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-393-2b0c5ff6c232.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/kill-bill-vol-2-307d464e56e4.webp",
     "summary": "",
     "firstWatched": "2025-08-20",
     "externalLink": {
@@ -5255,16 +4884,11 @@
         "title": "被解救的姜戈",
         "firstWatched": "2025-08-20",
         "rating": "5 / 5",
-        "comment": "爽就完事了"
+        "comment": ""
       }
     ],
     "tmdbId": 68718,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2025-08-20",
-      "content": "爽就完事了"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-25787888",
@@ -5351,7 +4975,8 @@
       }
     ],
     "tmdbId": 196325,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-1299603",
@@ -5376,16 +5001,11 @@
         "title": "落水狗",
         "firstWatched": "2025-08-17",
         "rating": "4 / 5",
-        "comment": "青涩"
+        "comment": ""
       }
     ],
     "tmdbId": 500,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2025-08-17",
-      "content": "青涩"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-1307853",
@@ -5410,16 +5030,11 @@
         "title": "8英里",
         "firstWatched": "2025-08-17",
         "rating": "5 / 5",
-        "comment": "四星电影，一星歌"
+        "comment": ""
       }
     ],
     "tmdbId": 65,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2025-08-17",
-      "content": "四星电影，一星歌"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "tv-209867",
@@ -5451,35 +5066,6 @@
     "span": "2023–2026",
     "rating": "5 / 5",
     "creditRole": "ORIGINAL WORK"
-  },
-  {
-    "id": "film-25895276",
-    "title": "Jian Bing Man",
-    "originalTitle": "煎饼侠",
-    "type": "film",
-    "director": "Dong Chengpeng",
-    "year": 2015,
-    "country": "CN",
-    "genre": "Action, Comedy, Drama",
-    "runtime": "113 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-348595-ed6ad9e0a059.webp",
-    "summary": "",
-    "firstWatched": "2025-08-12",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt4818250/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "25895276",
-        "title": "煎饼侠",
-        "firstWatched": "2025-08-12",
-        "rating": "2 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 348595,
-    "rating": "2 / 5"
   },
   {
     "id": "film-1307793",
@@ -5533,16 +5119,11 @@
         "title": "还有明天",
         "firstWatched": "2025-08-09",
         "rating": "5 / 5",
-        "comment": "技法和画面上都远超出走的决心，但我始终觉得现实主义的困境应当用现实主义的手法去解决。出走的决心给出了一个答案。但还有明天是用了浪漫主义的手法，我认为这有点幼稚了。还是好评，但我会更喜欢出走的决心。"
+        "comment": ""
       }
     ],
     "tmdbId": 1026227,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2025-08-09",
-      "content": "技法和画面上都远超出走的决心，但我始终觉得现实主义的困境应当用现实主义的手法去解决。出走的决心给出了一个答案。但还有明天是用了浪漫主义的手法，我认为这有点幼稚了。还是好评，但我会更喜欢出走的决心。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-36185502",
@@ -5567,16 +5148,12 @@
         "title": "长安的荔枝",
         "firstWatched": "2025-07-31",
         "rating": "3 / 5",
-        "comment": "大鹏的片我之前看过煎饼侠和年会不能停，后者不是他导演的，但是他主演的。一路看过来对大鹏的印象也是慢慢变好。这部长安的荔枝作为cn近年商业片是远在合格线以上的，缺点当然有，包含但不限于：1.主演对比优秀演员依旧有点油腻的演技2.略带浮夸的剧情3.试图说教的直白强硬插入4.狗尾续貂的结尾。 但这些是瑕不掩瑜的，我在豆瓣上目前也点亮了两百多部电影，这部电影的这个画面在这些观影记录里也是相当精彩的：大唐禁军城下，夜灯如昼，沿着一列列驻军，一头白发骑着骏马一骑绝尘，背后火红的木棉花铺洒如焰。"
+        "comment": ""
       }
     ],
     "tmdbId": 1356587,
     "rating": "3 / 5",
-    "review": {
-      "rating": "3 / 5",
-      "date": "2025-07-31",
-      "content": "大鹏的片我之前看过煎饼侠和年会不能停，后者不是他导演的，但是他主演的。一路看过来对大鹏的印象也是慢慢变好。这部长安的荔枝作为cn近年商业片是远在合格线以上的，缺点当然有，包含但不限于：1.主演对比优秀演员依旧有点油腻的演技2.略带浮夸的剧情3.试图说教的直白强硬插入4.狗尾续貂的结尾。 但这些是瑕不掩瑜的，我在豆瓣上目前也点亮了两百多部电影，这部电影的这个画面在这些观影记录里也是相当精彩的：大唐禁军城下，夜灯如昼，沿着一列列驻军，一头白发骑着骏马一骑绝尘，背后火红的木棉花铺洒如焰。"
-    }
+    "hidden": true
   },
   {
     "id": "film-3072086",
@@ -5601,16 +5178,11 @@
         "title": "和莎莫的500天",
         "firstWatched": "2025-06-29",
         "rating": "5 / 5",
-        "comment": "还是要把自己变成更好的自己。"
+        "comment": ""
       }
     ],
     "tmdbId": 19913,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2025-06-29",
-      "content": "还是要把自己变成更好的自己。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1308574",
@@ -5664,16 +5236,11 @@
         "title": "只是爱着你",
         "firstWatched": "2025-06-18",
         "rating": "3 / 5",
-        "comment": "剧情老套，拍的也没类似韩国片好看。叙事方式和画面还可以"
+        "comment": ""
       }
     ],
     "tmdbId": 40243,
-    "rating": "3 / 5",
-    "review": {
-      "rating": "3 / 5",
-      "date": "2025-06-18",
-      "content": "剧情老套，拍的也没类似韩国片好看。叙事方式和画面还可以"
-    }
+    "rating": "3 / 5"
   },
   {
     "id": "tv-60059",
@@ -5763,7 +5330,7 @@
         "title": "绝命毒师 第五季",
         "firstWatched": "2025-06-07",
         "rating": "5 / 5",
-        "comment": "my baby blue"
+        "comment": ""
       },
       {
         "doubanId": "4927382",
@@ -5857,35 +5424,6 @@
     "rating": "4 / 5"
   },
   {
-    "id": "film-25911694",
-    "title": "See You Tomorrow",
-    "originalTitle": "摆渡人",
-    "type": "film",
-    "director": "Zhang Jiajia",
-    "year": 2016,
-    "country": "CN · HK",
-    "genre": "Comedy, Drama, Romance",
-    "runtime": "128 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-345674-94b7bea7a8ed.webp",
-    "summary": "",
-    "firstWatched": "2025-05-15",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt3824950/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "25911694",
-        "title": "摆渡人",
-        "firstWatched": "2025-05-15",
-        "rating": "4 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 345674,
-    "rating": "4 / 5"
-  },
-  {
     "id": "film-1299889",
     "title": "Secret Love in Peach Blossom Land",
     "originalTitle": "暗戀桃花源",
@@ -5908,16 +5446,11 @@
         "title": "暗恋桃花源",
         "firstWatched": "2025-05-15",
         "rating": "4 / 5",
-        "comment": "看不懂"
+        "comment": ""
       }
     ],
     "tmdbId": 202516,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2025-05-15",
-      "content": "看不懂"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-2997076",
@@ -5975,7 +5508,8 @@
       }
     ],
     "tmdbId": 176983,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-3915458",
@@ -6004,7 +5538,8 @@
       }
     ],
     "tmdbId": 41498,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-3878007",
@@ -6033,7 +5568,8 @@
       }
     ],
     "tmdbId": 297802,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-26715496",
@@ -6232,7 +5768,7 @@
         "title": "东京爱情故事",
         "firstWatched": "2025-05-14",
         "rating": "5 / 5",
-        "comment": "最美的莉香。"
+        "comment": ""
       }
     ],
     "tmdbId": 16069,
@@ -6358,7 +5894,7 @@
         "title": "白色巨塔",
         "firstWatched": "2025-05-14",
         "rating": "5 / 5",
-        "comment": "关于生死最好的日剧。 (3 有用)"
+        "comment": ""
       }
     ],
     "tmdbId": 38242,
@@ -6504,16 +6040,11 @@
         "title": "龙猫",
         "firstWatched": "2025-05-06",
         "rating": "5 / 5",
-        "comment": "看完这部才真正明白宫崎骏的魅力。"
+        "comment": ""
       }
     ],
     "tmdbId": 8392,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2025-05-06",
-      "content": "看完这部才真正明白宫崎骏的魅力。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-25846858",
@@ -6596,16 +6127,11 @@
         "title": "机器人之梦",
         "firstWatched": "2025-03-30",
         "rating": "5 / 5",
-        "comment": "所有离别的，我祝你幸福。"
+        "comment": ""
       }
     ],
     "tmdbId": 838240,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2025-03-30",
-      "content": "所有离别的，我祝你幸福。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-30402296",
@@ -6692,7 +6218,8 @@
       }
     ],
     "tmdbId": 575219,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-36712987",
@@ -6954,7 +6481,8 @@
       }
     ],
     "tmdbId": 2048,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-36765646",
@@ -7012,7 +6540,8 @@
       }
     ],
     "tmdbId": 272875,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-26366465",
@@ -7041,7 +6570,8 @@
       }
     ],
     "tmdbId": 354072,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-32659890",
@@ -7070,7 +6600,8 @@
       }
     ],
     "tmdbId": 612845,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-26266893",
@@ -7099,36 +6630,8 @@
       }
     ],
     "tmdbId": 535167,
-    "rating": "4 / 5"
-  },
-  {
-    "id": "film-30166972",
-    "title": "Better Days",
-    "originalTitle": "少年的你",
-    "type": "film",
-    "director": "Derek Tsang Kwok-Cheung",
-    "year": 2019,
-    "country": "CN · HK · GB",
-    "genre": "Drama, Crime, Romance",
-    "runtime": "135 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-575813-7dfca4020ef3.webp",
-    "summary": "",
-    "firstWatched": "2024-12-27",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt9586294/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "30166972",
-        "title": "少年的你",
-        "firstWatched": "2024-12-27",
-        "rating": "2 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 575813,
-    "rating": "2 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-30128916",
@@ -7157,7 +6660,8 @@
       }
     ],
     "tmdbId": 638032,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-35422807",
@@ -7186,7 +6690,8 @@
       }
     ],
     "tmdbId": 895435,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-34841067",
@@ -7215,7 +6720,8 @@
       }
     ],
     "tmdbId": 758891,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-35208463",
@@ -7331,7 +6837,8 @@
       }
     ],
     "tmdbId": 1062807,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-36208094",
@@ -7360,7 +6867,8 @@
       }
     ],
     "tmdbId": 1147596,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-36369452",
@@ -7389,7 +6897,8 @@
       }
     ],
     "tmdbId": 1228891,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-36060209",
@@ -7418,7 +6927,8 @@
       }
     ],
     "tmdbId": 1012201,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "hidden": true
   },
   {
     "id": "film-36151692",
@@ -7791,16 +7301,11 @@
         "title": "搏击俱乐部",
         "firstWatched": "2024-12-27",
         "rating": "5 / 5",
-        "comment": "顺从这个世界的活生生的一坨屎"
+        "comment": ""
       }
     ],
     "tmdbId": 550,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2024-12-27",
-      "content": "顺从这个世界的活生生的一坨屎"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-21937445",
@@ -7970,16 +7475,11 @@
         "title": "她",
         "firstWatched": "2024-12-27",
         "rating": "4 / 5",
-        "comment": "亲密关系的本质是何"
+        "comment": ""
       }
     ],
     "tmdbId": 152601,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2024-12-27",
-      "content": "亲密关系的本质是何"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-36587974",
@@ -8033,16 +7533,12 @@
         "title": "好东西",
         "firstWatched": "2024-11-30",
         "rating": "4 / 5",
-        "comment": "三星给妈妈的家务，一星鼓励新导演"
+        "comment": ""
       }
     ],
     "tmdbId": 1260951,
     "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2024-11-30",
-      "content": "三星给妈妈的家务，一星鼓励新导演"
-    }
+    "hidden": true
   },
   {
     "id": "film-10808442",
@@ -8183,16 +7679,11 @@
         "title": "因果报应",
         "firstWatched": "2024-09-03",
         "rating": "3 / 5",
-        "comment": "剧情略狗血，但叙述技法不错，然而印度导演拍感实在不佳。"
+        "comment": ""
       }
     ],
     "tmdbId": 1118224,
-    "rating": "3 / 5",
-    "review": {
-      "rating": "3 / 5",
-      "date": "2024-09-03",
-      "content": "剧情略狗血，但叙述技法不错，然而印度导演拍感实在不佳。"
-    }
+    "rating": "3 / 5"
   },
   {
     "id": "film-1291842",
@@ -8217,16 +7708,11 @@
         "title": "当哈利遇到莎莉",
         "firstWatched": "2024-07-03",
         "rating": "5 / 5",
-        "comment": "满分的恋爱喜剧。"
+        "comment": ""
       }
     ],
     "tmdbId": 639,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2024-07-03",
-      "content": "满分的恋爱喜剧。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-35772573",
@@ -8251,16 +7737,11 @@
         "title": "今夜，就算这份爱恋从世界上消失",
         "firstWatched": "2024-06-30",
         "rating": "3 / 5",
-        "comment": "真奇怪啊，明明记忆里没有你的画面，但是身体却止不住的思念。"
+        "comment": ""
       }
     ],
     "tmdbId": 977871,
-    "rating": "3 / 5",
-    "review": {
-      "rating": "3 / 5",
-      "date": "2024-06-30",
-      "content": "真奇怪啊，明明记忆里没有你的画面，但是身体却止不住的思念。"
-    }
+    "rating": "3 / 5"
   },
   {
     "id": "film-1292679",
@@ -8343,7 +7824,7 @@
         "title": "恋爱世纪",
         "firstWatched": "2024-04-21",
         "rating": "5 / 5",
-        "comment": "最年轻的松隆子，最年轻的木村拓哉。"
+        "comment": ""
       }
     ],
     "tmdbId": 4319,
@@ -8402,7 +7883,7 @@
         "title": "初恋",
         "firstWatched": "2024-04-15",
         "rating": "5 / 5",
-        "comment": "永远的，你。"
+        "comment": ""
       }
     ],
     "tmdbId": 210955,
@@ -8519,16 +8000,11 @@
         "title": "坠落的审判",
         "firstWatched": "2024-03-29",
         "rating": "4 / 5",
-        "comment": "坠落的审判，拍的挺好的，但不适合我，话太多了，是话疗片。中间那段夫妻争吵的戏拍的太好了，感觉导演是为了这段拍的整部电影。妻子说的其实没错，或者说最可怕的就是因为她全说对了。但其实，夫妻之间不能这么理性。我或许能稍微感受到丈夫所表达的感受，他的意思是妻子将自己从这个婚姻中抽离，虽然的确确保了她所应有的责任，但并没有让他感受到他们是一个couple在一起承担。妻子表现出的就像是儿子说的“怪兽、心肠太硬”，这是错吗？只是不符合世俗的婚姻观念。相比之下庭审阶段很明显的让我感受到了来自局外人的审判情节——人们为默尔索判罪是因为他没有在母亲的葬礼上流泪。检方律师也是同样荒谬的将书里的情节套用在妻子身上不断的阴阳怪气讽刺，更是可笑。 总而言之是一部优秀的作品，但真不符合我审美（dbq"
+        "comment": ""
       }
     ],
     "tmdbId": 915935,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2024-03-29",
-      "content": "坠落的审判，拍的挺好的，但不适合我，话太多了，是话疗片。中间那段夫妻争吵的戏拍的太好了，感觉导演是为了这段拍的整部电影。妻子说的其实没错，或者说最可怕的就是因为她全说对了。但其实，夫妻之间不能这么理性。我或许能稍微感受到丈夫所表达的感受，他的意思是妻子将自己从这个婚姻中抽离，虽然的确确保了她所应有的责任，但并没有让他感受到他们是一个couple在一起承担。妻子表现出的就像是儿子说的“怪兽、心肠太硬”，这是错吗？只是不符合世俗的婚姻观念。相比之下庭审阶段很明显的让我感受到了来自局外人的审判情节——人们为默尔索判罪是因为他没有在母亲的葬礼上流泪。检方律师也是同样荒谬的将书里的情节套用在妻子身上不断的阴阳怪气讽刺，更是可笑。 总而言之是一部优秀的作品，但真不符合我审美（dbq"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-1308820",
@@ -8553,16 +8029,11 @@
         "title": "花与爱丽丝",
         "firstWatched": "2024-03-27",
         "rating": "5 / 5",
-        "comment": "本来四星，半星给女孩们美丽的生命另外半星给男主最后说“我说过的”那段剧情。hana演的太好了，剧情也很泪。"
+        "comment": ""
       }
     ],
     "tmdbId": 27799,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2024-03-27",
-      "content": "本来四星，半星给女孩们美丽的生命另外半星给男主最后说“我说过的”那段剧情。hana演的太好了，剧情也很泪。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-2133323",
@@ -8587,16 +8058,11 @@
         "title": "白日梦想家",
         "firstWatched": "2024-03-24",
         "rating": "5 / 5",
-        "comment": "stay gold，pony boy.永远不要放弃去追寻的勇气，以及最重要的，self- confidence."
+        "comment": ""
       }
     ],
     "tmdbId": 116745,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2024-03-24",
-      "content": "stay gold，pony boy.永远不要放弃去追寻的勇气，以及最重要的，self- confidence."
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-26698897",
@@ -8625,7 +8091,8 @@
       }
     ],
     "tmdbId": 505513,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-27605698",
@@ -8650,16 +8117,12 @@
         "title": "西虹市首富",
         "firstWatched": "2024-03-14",
         "rating": "5 / 5",
-        "comment": "纯粹的喜剧片，纯粹的出圈"
+        "comment": ""
       }
     ],
     "tmdbId": 538331,
     "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2024-03-14",
-      "content": "纯粹的喜剧片，纯粹的出圈"
-    }
+    "hidden": false
   },
   {
     "id": "film-24875534",
@@ -8684,16 +8147,12 @@
         "title": "十二公民",
         "firstWatched": "2024-02-11",
         "rating": "3 / 5",
-        "comment": "对大师拙劣的模仿，本来就给一星半。另外半星是小卖部这个人设的加入是创新和本土化挺好的。还有一星给何冰和韩童生两位老师封神的演技。"
+        "comment": ""
       }
     ],
     "tmdbId": 299117,
     "rating": "3 / 5",
-    "review": {
-      "rating": "3 / 5",
-      "date": "2024-02-11",
-      "content": "对大师拙劣的模仿，本来就给一星半。另外半星是小卖部这个人设的加入是创新和本土化挺好的。还有一星给何冰和韩童生两位老师封神的演技。"
-    }
+    "hidden": true
   },
   {
     "id": "film-25761178",
@@ -8718,16 +8177,11 @@
         "title": "百元之恋",
         "firstWatched": "2024-02-11",
         "rating": "4 / 5",
-        "comment": "百元之恋。猥琐男的强奸，我更愿意看做是电影的某种暗示和象征，而不是情节需要，因为可以看到电影从配乐以及镜头上都是对这个恶行的淡化以及喜剧化（当然这样在现实里肯定不行）。首先这显然是个明喻——生活对我们的强奸。某种角度看，猥琐男越恶心，女主越是逆来顺受，越是代表女主此时是如何看待以及对待生活的（不是在叙述当时的情况是否合理，只是从电影来看，女主当时并未做出任何反击，只是逃跑与消极的拒绝）。然后从报警开始，女主真正吹响了反击的号角。拳击在全片很明显是一种象征，象征着打破僵局，不求胜利，只求勇气的一种态度。不管女主是否打败最终的对手，但她已经可以击倒那个店长了。此外那个拿便当的婆婆和女主的成长也是同步的，从一开始偷偷摸摸拿，到最后直接光明正大抢劫便利店，无疑是某种对生活的反抗（当然不是支持抢劫了）"
+        "comment": ""
       }
     ],
     "tmdbId": 314606,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2024-02-11",
-      "content": "百元之恋。猥琐男的强奸，我更愿意看做是电影的某种暗示和象征，而不是情节需要，因为可以看到电影从配乐以及镜头上都是对这个恶行的淡化以及喜剧化（当然这样在现实里肯定不行）。首先这显然是个明喻——生活对我们的强奸。某种角度看，猥琐男越恶心，女主越是逆来顺受，越是代表女主此时是如何看待以及对待生活的（不是在叙述当时的情况是否合理，只是从电影来看，女主当时并未做出任何反击，只是逃跑与消极的拒绝）。然后从报警开始，女主真正吹响了反击的号角。拳击在全片很明显是一种象征，象征着打破僵局，不求胜利，只求勇气的一种态度。不管女主是否打败最终的对手，但她已经可以击倒那个店长了。此外那个拿便当的婆婆和女主的成长也是同步的，从一开始偷偷摸摸拿，到最后直接光明正大抢劫便利店，无疑是某种对生活的反抗（当然不是支持抢劫了）"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-1292219",
@@ -8752,16 +8206,11 @@
         "title": "关于莉莉周的一切",
         "firstWatched": "2024-02-10",
         "rating": "4 / 5",
-        "comment": "岩井俊二式的音乐和画面。剩下一星是因为太恐怖了，不敢看第二次。"
+        "comment": ""
       }
     ],
     "tmdbId": 16664,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2024-02-10",
-      "content": "岩井俊二式的音乐和画面。剩下一星是因为太恐怖了，不敢看第二次。"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-1291548",
@@ -8786,16 +8235,11 @@
         "title": "死亡诗社",
         "firstWatched": "2024-01-13",
         "rating": "5 / 5",
-        "comment": "每个人的人生中都会有一位Captain。"
+        "comment": ""
       }
     ],
     "tmdbId": 207,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2024-01-13",
-      "content": "每个人的人生中都会有一位Captain。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-26588308",
@@ -8824,7 +8268,8 @@
       }
     ],
     "tmdbId": 567604,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-7046723",
@@ -8882,7 +8327,8 @@
       }
     ],
     "tmdbId": 293660,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-20438964",
@@ -9026,7 +8472,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 57800
+    "tmdbId": 57800,
+    "hidden": true
   },
   {
     "id": "film-1437342",
@@ -9054,7 +8501,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 950
+    "tmdbId": 950,
+    "hidden": true
   },
   {
     "id": "film-2357162",
@@ -9083,7 +8531,8 @@
       }
     ],
     "tmdbId": 8355,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-3789848",
@@ -9198,7 +8647,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 41154
+    "tmdbId": 41154,
+    "hidden": true
   },
   {
     "id": "film-1295280",
@@ -9226,7 +8676,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 608
+    "tmdbId": 608,
+    "hidden": true
   },
   {
     "id": "film-19971676",
@@ -9254,7 +8705,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 479455
+    "tmdbId": 479455,
+    "hidden": true
   },
   {
     "id": "film-1301445",
@@ -9283,7 +8735,8 @@
       }
     ],
     "tmdbId": 607,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-1291580",
@@ -9368,7 +8821,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 299536
+    "tmdbId": 299536,
+    "hidden": true
   },
   {
     "id": "film-24753477",
@@ -9452,7 +8906,8 @@
         "comment": ""
       }
     ],
-    "tmdbId": 24428
+    "tmdbId": 24428,
+    "hidden": true
   },
   {
     "id": "film-3066739",
@@ -9538,7 +8993,8 @@
       }
     ],
     "tmdbId": 51497,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-26100958",
@@ -9567,7 +9023,8 @@
       }
     ],
     "tmdbId": 299534,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-4202982",
@@ -9628,35 +9085,6 @@
     "rating": "3 / 5"
   },
   {
-    "id": "film-26263437",
-    "title": "An Inspector Calls",
-    "originalTitle": "浮華宴",
-    "type": "film",
-    "director": "Raymond Wong, Herman Yau",
-    "year": 2015,
-    "country": "HK",
-    "genre": "Comedy, Action",
-    "runtime": "97 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-334281-60d1bf735ae6.webp",
-    "summary": "",
-    "firstWatched": "2023-08-31",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt4296186/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26263437",
-        "title": "神探驾到",
-        "firstWatched": "2023-08-31",
-        "rating": "3 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 334281,
-    "rating": "3 / 5"
-  },
-  {
     "id": "film-35267224",
     "title": "No More Bets",
     "originalTitle": "孤注一掷",
@@ -9683,7 +9111,8 @@
       }
     ],
     "tmdbId": 1121612,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-1292401",
@@ -9708,16 +9137,11 @@
         "title": "真爱至上",
         "firstWatched": "2023-08-03",
         "rating": "5 / 5",
-        "comment": "圣诞节和对象看"
+        "comment": ""
       }
     ],
     "tmdbId": 508,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2023-08-03",
-      "content": "圣诞节和对象看"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-27060077",
@@ -9945,16 +9369,11 @@
         "title": "蜘蛛侠：纵横宇宙",
         "firstWatched": "2023-06-19",
         "rating": "5 / 5",
-        "comment": "四星给剧情最后一星给画风"
+        "comment": ""
       }
     ],
     "tmdbId": 569094,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2023-06-19",
-      "content": "四星给剧情最后一星给画风"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-26259677",
@@ -9979,16 +9398,11 @@
         "title": "垫底辣妹",
         "firstWatched": "2023-04-06",
         "rating": "5 / 5",
-        "comment": "每一个中国高考生都会看哭的片子。"
+        "comment": ""
       }
     ],
     "tmdbId": 349498,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2023-04-06",
-      "content": "每一个中国高考生都会看哭的片子。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-30314848",
@@ -10136,69 +9550,6 @@
     "rating": "5 / 5"
   },
   {
-    "id": "film-35766491",
-    "title": "Full River Red",
-    "originalTitle": "满江红",
-    "type": "film",
-    "director": "Zhang Yimou",
-    "year": 2023,
-    "country": "CN · HK",
-    "genre": "Mystery, Comedy, Thriller, History",
-    "runtime": "157 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-1066298-ae749d037933.webp",
-    "summary": "",
-    "firstWatched": "2023-03-07",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt21148018/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "35766491",
-        "title": "满江红",
-        "firstWatched": "2023-03-07",
-        "rating": "2 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 1066298,
-    "rating": "2 / 5"
-  },
-  {
-    "id": "film-35267208",
-    "title": "The Wandering Earth II",
-    "originalTitle": "流浪地球2",
-    "type": "film",
-    "director": "Frant Gwo",
-    "year": 2023,
-    "country": "CN",
-    "genre": "Science Fiction, Action, Adventure",
-    "runtime": "174 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-842675-c73c28d3a6cd.webp",
-    "summary": "",
-    "firstWatched": "2023-03-07",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt13539646/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "35267208",
-        "title": "流浪地球2",
-        "firstWatched": "2023-03-07",
-        "rating": "2 / 5",
-        "comment": "叙事能力太差"
-      }
-    ],
-    "tmdbId": 842675,
-    "rating": "2 / 5",
-    "review": {
-      "rating": "2 / 5",
-      "date": "2023-03-07",
-      "content": "叙事能力太差"
-    }
-  },
-  {
     "id": "tv-1429",
     "title": "Attack on Titan",
     "originalTitle": "進撃の巨人",
@@ -10343,7 +9694,8 @@
       }
     ],
     "tmdbId": 588228,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-30337388",
@@ -10372,7 +9724,8 @@
       }
     ],
     "tmdbId": 550988,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-10741643",
@@ -10484,16 +9837,11 @@
         "title": "生化危机2：启示录",
         "firstWatched": "2022-02-02",
         "rating": "4 / 5",
-        "comment": "爱丽丝"
+        "comment": ""
       }
     ],
     "tmdbId": 1577,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2022-02-02",
-      "content": "爱丽丝"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-1306809",
@@ -10518,16 +9866,11 @@
         "title": "生化危机",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "经典的开端"
+        "comment": ""
       }
     ],
     "tmdbId": 1576,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "经典的开端"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-25934014",
@@ -10552,16 +9895,11 @@
         "title": "爱乐之城",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "最后那段真的哭死"
+        "comment": ""
       }
     ],
     "tmdbId": 313369,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "最后那段真的哭死"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1937946",
@@ -10702,16 +10040,11 @@
         "title": "初恋这件小事",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "爱情，初恋，蜕变，等待，时间……"
+        "comment": ""
       }
     ],
     "tmdbId": 57627,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "爱情，初恋，蜕变，等待，时间……"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1292226",
@@ -10769,7 +10102,8 @@
       }
     ],
     "tmdbId": 425,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-6534248",
@@ -10939,16 +10273,11 @@
         "title": "电锯惊魂",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "惊喜"
+        "comment": ""
       }
     ],
     "tmdbId": 176,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "惊喜"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1309055",
@@ -11093,7 +10422,8 @@
       }
     ],
     "tmdbId": 20352,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "hidden": true
   },
   {
     "id": "film-1291545",
@@ -11176,16 +10506,11 @@
         "title": "时空恋旅人",
         "firstWatched": "2022-02-02",
         "rating": "4 / 5",
-        "comment": "忘不了那场雨中婚礼"
+        "comment": ""
       }
     ],
     "tmdbId": 122906,
-    "rating": "4 / 5",
-    "review": {
-      "rating": "4 / 5",
-      "date": "2022-02-02",
-      "content": "忘不了那场雨中婚礼"
-    }
+    "rating": "4 / 5"
   },
   {
     "id": "film-2353023",
@@ -11243,7 +10568,8 @@
       }
     ],
     "tmdbId": 177572,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "hidden": true
   },
   {
     "id": "film-1296996",
@@ -11355,16 +10681,11 @@
         "title": "哈利·波特与阿兹卡班的囚徒",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "看过的人永远都会记得那句呼神护卫吧"
+        "comment": ""
       }
     ],
     "tmdbId": 673,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "看过的人永远都会记得那句呼神护卫吧"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1291543",
@@ -11418,16 +10739,11 @@
         "title": "喜剧之王",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "人人都笑里面的跑龙套，但又有几个人能做到跟他一样不放弃呢"
+        "comment": ""
       }
     ],
     "tmdbId": 53168,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "人人都笑里面的跑龙套，但又有几个人能做到跟他一样不放弃呢"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1292223",
@@ -11510,16 +10826,11 @@
         "title": "哈利·波特与死亡圣器(下)",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "赫敏依旧独自美丽～"
+        "comment": ""
       }
     ],
     "tmdbId": 12445,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "赫敏依旧独自美丽～"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-26580232",
@@ -11544,16 +10855,11 @@
         "title": "看不见的客人",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "一幕幕的反转"
+        "comment": ""
       }
     ],
     "tmdbId": 411088,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "一幕幕的反转"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1292402",
@@ -11607,16 +10913,11 @@
         "title": "情书",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "给我爱的人和爱我的人写的一封最美丽的情书。"
+        "comment": ""
       }
     ],
     "tmdbId": 47002,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "给我爱的人和爱我的人写的一封最美丽的情书。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1485260",
@@ -11641,16 +10942,11 @@
         "title": "本杰明·巴顿奇事",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "时光匆匆。"
+        "comment": ""
       }
     ],
     "tmdbId": 4922,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "时光匆匆。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1306029",
@@ -11675,16 +10971,11 @@
         "title": "美丽心灵",
         "firstWatched": "2022-02-02",
         "rating": "3 / 5",
-        "comment": "说实话一般般"
+        "comment": ""
       }
     ],
     "tmdbId": 453,
-    "rating": "3 / 5",
-    "review": {
-      "rating": "3 / 5",
-      "date": "2022-02-02",
-      "content": "说实话一般般"
-    }
+    "rating": "3 / 5"
   },
   {
     "id": "film-1291843",
@@ -11709,16 +11000,11 @@
         "title": "黑客帝国",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "对命运的抗争。"
+        "comment": ""
       }
     ],
     "tmdbId": 603,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "对命运的抗争。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1305487",
@@ -11772,16 +11058,11 @@
         "title": "大话西游之月光宝盒",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "所谓爱情。"
+        "comment": ""
       }
     ],
     "tmdbId": 13345,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "所谓爱情。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1293182",
@@ -11806,16 +11087,11 @@
         "title": "十二怒汉",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "为所谓的民主做出了宣言。"
+        "comment": ""
       }
     ],
     "tmdbId": 389,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "为所谓的民主做出了宣言。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-26752088",
@@ -11840,16 +11116,11 @@
         "title": "我不是药神",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "世界上只有一种病，穷病。"
+        "comment": ""
       }
     ],
     "tmdbId": 532753,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "世界上只有一种病，穷病。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-26387939",
@@ -11903,16 +11174,11 @@
         "title": "乱世佳人",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "after all，tomorrow is another day！"
+        "comment": ""
       }
     ],
     "tmdbId": 770,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "after all，tomorrow is another day！"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1295038",
@@ -11937,16 +11203,11 @@
         "title": "哈利·波特与魔法石",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "一个世界的开端。"
+        "comment": ""
       }
     ],
     "tmdbId": 671,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "一个世界的开端。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-20495023",
@@ -11971,16 +11232,11 @@
         "title": "寻梦环游记",
         "firstWatched": "2022-02-02",
         "rating": "5 / 5",
-        "comment": "死亡不是终结，遗忘才是。"
+        "comment": ""
       }
     ],
     "tmdbId": 354912,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2022-02-02",
-      "content": "死亡不是终结，遗忘才是。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1293172",
@@ -12063,16 +11319,11 @@
         "title": "土拨鼠之日",
         "firstWatched": "2021-06-14",
         "rating": "5 / 5",
-        "comment": "不是明天才有价值让你有勇气去活着，今天就足矣。"
+        "comment": ""
       }
     ],
     "tmdbId": 137,
-    "rating": "5 / 5",
-    "review": {
-      "rating": "5 / 5",
-      "date": "2021-06-14",
-      "content": "不是明天才有价值让你有勇气去活着，今天就足矣。"
-    }
+    "rating": "5 / 5"
   },
   {
     "id": "film-1851857",

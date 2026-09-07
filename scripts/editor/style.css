@@ -1,0 +1,31 @@
+#local-editor-toolbar, #local-editor-panel { font: 14px/1.6 -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; color: #242424; text-transform: none; letter-spacing: 0; }
+#local-editor-toolbar { position: fixed; z-index: 10000; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; align-items: center; padding: 9px 12px; background: #fffffff5; border: 1px solid #deded8; border-radius: 12px; box-shadow: 0 4px 22px #0001; white-space: nowrap; }
+#local-editor-toolbar span { font-size: 12px; color: #73736d; }
+#local-editor-toolbar button, #local-editor-panel button, #local-editor-toolbar select { padding: 6px 10px; background: #f4f4ef; border: 1px solid #deded8; border-radius: 6px; cursor: pointer; }
+#local-editor-toolbar [hidden], #local-editor-panel [hidden] { display: none !important; }
+#local-editor-toolbar button:disabled, #local-editor-panel button:disabled { opacity: .4; cursor: default; }
+#local-editor-toolbar button[aria-pressed=true], #local-editor-panel footer button:last-child { background: #272922; color: white; }
+#local-editor-panel { position: fixed; inset: 12px 12px 12px auto; margin: 0; padding: 0; width: 490px; max-width: calc(100vw - 24px); height: calc(100dvh - 24px); max-height: none; border: 1px solid #deded8; border-radius: 12px; background: #fff; box-shadow: 0 12px 60px #0002; }
+#local-editor-panel[open] { display: flex; flex-direction: column; }
+#local-editor-panel::backdrop { background: #00000018; }
+#local-editor-panel header, #local-editor-panel footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #eee; flex-shrink: 0; }
+#local-editor-panel footer { border: 0; border-top: 1px solid #eee; }
+#local-editor-panel .le-content { padding: 16px 18px; overflow: auto; overscroll-behavior: contain; flex: 1; min-height: 0; }
+#local-editor-panel .le-content > * { margin-bottom: 12px; }
+#local-editor-panel .le-field { display: block; margin: 0 0 16px; }
+#local-editor-panel .le-field > span { display: block; margin-bottom: 5px; font-size: 13px; color: #606057; }
+#local-editor-panel input:not([type=checkbox]), #local-editor-panel textarea, #local-editor-panel select { width: 100%; border: 1px solid #d8d8cf; border-radius: 6px; padding: 8px; background: #fff; color: #222; box-sizing: border-box; font: inherit; }
+#local-editor-panel textarea { resize: vertical; min-height: 100px; }
+#local-editor-panel input[type=checkbox] { appearance: auto; width: 18px; height: 18px; }
+#local-editor-panel summary { padding: 8px 0; cursor: pointer; font-weight: 600; }
+#local-editor-panel details { margin: 12px 0; border-top: 1px solid #eee; }
+#local-editor-panel .le-nested { padding: 10px 0 0 12px; }
+#local-editor-panel .le-image { max-width: 100%; max-height: 180px; object-fit: contain; margin: 8px 0; border-radius: 4px; }
+#local-editor-panel .le-row { display: flex; gap: 5px; margin: 5px 0; }
+#local-editor-panel .le-row button:first-child { flex: 1; min-width: 0; text-align: left; overflow-wrap: anywhere; }
+#local-editor-panel .le-error { margin: 0; padding: 0 18px; color: #a32626; white-space: pre-wrap; }
+#local-editor-panel .le-error:not(:empty) { padding: 12px 18px; background: #fff2ee; }
+.local-editing :is(.cinema-card, .music-card, .book-card, .essay-item, #right-showcase-stage, .interest-page article):hover { outline: 1px dashed #75846a; outline-offset: 5px; cursor: text; }
+.local-editing [contenteditable] { outline: 2px solid #75846a; outline-offset: 4px; background: #f5faed; white-space: pre-wrap; user-select: text !important; cursor: text; }
+#local-editor-toolbar :focus-visible, #local-editor-panel :focus-visible { outline: 2px solid #75846a; outline-offset: 2px; }
+@media (max-width: 700px) { #local-editor-toolbar { max-width: calc(100vw - 16px); flex-wrap: wrap; justify-content: center; white-space: normal; } }

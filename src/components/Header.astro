@@ -1,6 +1,4 @@
 ---
-import { profileData } from '../data/profile';
-
 interface Props {
   activeTab?: 'home' | 'mathematics' | 'marginalia';
 }
@@ -60,17 +58,16 @@ const { activeTab = 'home' } = Astro.props;
         </a>
       </li>
       <li>
-        <a
-          href={profileData.socials.cvUrl || "https://homepage-assets.mathtranslations.org/CV_full_academic_no_photo.pdf"}
-          target="_blank"
-          rel="noopener noreferrer"
+        <!-- CV 暂停开放；恢复时改回链接，使用 profileData.socials.cvUrl。 -->
+        <span
+          aria-disabled="true"
           id="nav-cv"
           data-title="CV"
-          class="nav-link text-[#737373] hover:text-black font-medium uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.08em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 no-underline inline-flex"
+          class="nav-link text-[#737373] cursor-default font-medium uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.08em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 no-underline inline-flex"
           style="font-family: 'Montserrat', sans-serif;"
         >
           CV
-        </a>
+        </span>
       </li>
     </ul>
   </nav>

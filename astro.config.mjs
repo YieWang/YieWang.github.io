@@ -1,9 +1,13 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
+import { localEditor } from './scripts/editor/server.mjs';
+
+const editing = process.env.HOMEPAGE_EDITOR === '1';
 
 // https://astro.build/config
 export default defineConfig({
+  devToolbar: { enabled: !editing },
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -11,8 +15,10 @@ export default defineConfig({
     react(),
   ],
   vite: {
+    plugins: editing ? [localEditor()] : [],
     server: {
-      allowedHosts: true,
+      allowedHosts: editing ? ['localhost'] : true,
+      ...(editing ? { host: '127.0.0.1', strictPort: true, hmr: false } : {}),
     },
   },
   // 适合 GitHub Pages 的相对基路径支持

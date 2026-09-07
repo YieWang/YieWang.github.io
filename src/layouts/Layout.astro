@@ -51,6 +51,9 @@ const {
       </main>
       {!zeroScroll && <Footer />}
     </div>
+    {import.meta.env.DEV && process.env.HOMEPAGE_EDITOR === '1' && (
+      <script is:inline type="module" src="/__editor/ui.js"></script>
+    )}
   </body>
 </html>
 

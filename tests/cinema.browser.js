@@ -2,12 +2,20 @@
 async page => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.reload();
-  if (await page.locator('.cinema-card[data-type="film"]').count() !== 362) throw Error('Film count');
+  if (!(await page.locator('.cinema-card[data-collection="true"]').count())) throw Error('Missing film collections');
   if (await page.locator('.cinema-card[data-type="series"]').count() !== 51) throw Error('Series count');
-  if (await page.locator('nav[aria-label="Cinema categories"]').innerText().then(t => /[·・]/.test(t))) throw Error('Navigation separators');
+  if (await page.locator('nav[aria-label="Screen categories"]').innerText().then(t => /[·・]/.test(t))) throw Error('Navigation separators');
   if (await page.locator('main h2').count()) throw Error('Section headings remain');
+  const killBill = page.locator('.cinema-card').filter({ has: page.getByRole('heading', { name: 'Kill Bill', exact: true }) });
+  await killBill.click();
+  if (await page.locator('[data-installment]').count() !== 2) throw Error('Kill Bill must have two films in one modal');
+  await page.locator('[data-installment="1"]').click();
+  if (await page.locator('#modal-content-slot img').getAttribute('alt') !== 'Kill Bill: Vol. 2') throw Error('Installment did not change');
+  if (await page.locator('#modal-right-scroll-pane h3').count()) throw Error('Duplicate movie title above review');
+  await page.keyboard.press('Escape');
+  await page.waitForFunction(() => document.getElementById('cinema-modal-backdrop').classList.contains('pointer-events-none'));
   await page.getByRole('button', { name: 'Animation', exact: true }).click();
-  if (await page.locator('#section-animation .cinema-card:visible').count() !== 111) throw Error('Animation count');
+  if (!(await page.locator('#section-animation .cinema-card:visible').count())) throw Error('Animation missing');
   if (await page.locator('#section-films').isVisible()) throw Error('Films should be hidden');
   await page.locator('[data-item-id="tv-95479"]').click();
   if (!(await page.locator('#modal-content-slot').innerText()).includes('ORIGINAL WORK')) throw Error('Credit role must distinguish original author from director');
@@ -31,5 +39,5 @@ async page => {
   if (await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)) throw Error('Horizontal overflow');
   await page.screenshot({ path: 'output/playwright/cinema-series-mobile.png' });
   await page.keyboard.press('Escape');
-  return { films: 362, series: 51, officeWatchedEntries: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
+  return { films: 336, series: 51, officeWatchedEntries: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
 }

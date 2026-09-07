@@ -23,8 +23,12 @@ for (const album of music.albums) {
   assert.ok(album.tracks.length > 0);
 }
 assert.ok(tracks.every(t => !excludedTracks.has(t.id)));
+for (const exclusion of curation.excludedTracks.filter(t => t.duplicateOf)) {
+  assert.ok(tracks.some(t => t.id === exclusion.duplicateOf), `Missing retained recording for ${exclusion.id}`);
+  assert.match(exclusion.isrc, /^[A-Z]{2}[A-Z0-9]{3}\d{7}$/);
+}
 assert.ok(cinema.every(x => !curation.excludedCinemaIds.includes(x.id)));
-assert.equal(cinema.filter(x => x.genre.split(', ').includes('Animation')).length, 111);
+assert.equal(cinema.filter(x => x.genre.split(', ').includes('Animation')).length, 110);
 assert.ok(cinema.every(x => x.director && x.country));
 assert.equal(cinema.find(x => x.id === 'tv-134182').country, 'CN');
 assert.equal(cinema.find(x => x.id === 'film-24735062').country, 'CN');
@@ -41,11 +45,12 @@ for (const rule of curation.musicGroups) {
     assert.equal(album.artistDisplayName, rule.albumArtist);
   }
 }
-assert.equal(cinema.filter(x => x.type === 'film').length, 362);
+assert.equal(cinema.filter(x => x.type === 'film').length, 343);
 assert.equal(cinema.filter(x => x.type === 'series').length, 51);
+assert.ok(cinema.every(x => !x.review && x.watchedEntries.every(entry => !entry.comment)));
 const watched = cinema.flatMap(x => x.watchedEntries);
-assert.equal(watched.length, 460);
-assert.equal(new Set(watched.map(x => x.doubanId)).size, 460);
+assert.equal(watched.length, 441);
+assert.equal(new Set(watched.map(x => x.doubanId)).size, 441);
 assert.equal(new Set(cinema.filter(x => x.type === 'series').map(x => x.tmdbId)).size, 51);
 assert.equal(cinema.find(x => x.id === 'tv-2316').watchedEntries.length, 9);
 assert.ok(cinema.find(x => x.id === 'tv-1429').watchedEntries.some(x => x.doubanId === '35853587'));
@@ -60,7 +65,7 @@ if (existsSync(new URL(`../${root}cinema-records.json`, import.meta.url))) {
     if (excludedCinema.has(x.subjectId)) continue;
     const imported = watched.find(m => m.doubanId === x.subjectId);
     assert.equal(imported?.firstWatched, x.markedAt);
-    assert.equal(imported?.comment, x.comment || '');
+    assert.equal(imported?.comment, '');
     assert.equal(imported?.rating, x.stars ? `${x.stars} / 5` : '');
   }
   const posters = json(root + 'cinema-upload-manifest.json');
@@ -70,6 +75,12 @@ if (existsSync(new URL(`../${root}cinema-records.json`, import.meta.url))) {
   }
   const originalSongs = json(root + 'apple-library-songs.json');
   for (const song of originalSongs) assert.equal(tracks.some(t => t.id === song.id), !excludedTracks.has(song.id));
+  const catalogSongs = json(root + 'apple-catalog-songs.json');
+  const recording = id => catalogSongs.find(song => song.id === originalSongs.find(song => song.id === id)?.attributes.playParams?.catalogId)?.attributes.isrc;
+  for (const exclusion of curation.excludedTracks.filter(t => t.duplicateOf)) {
+    assert.equal(recording(exclusion.id), exclusion.isrc);
+    assert.equal(recording(exclusion.duplicateOf), exclusion.isrc);
+  }
 }
 const context = { exports: {} };
 vm.runInNewContext(ts.transpile(read('src/lib/html.ts'), { module: ts.ModuleKind.CommonJS }), context);
@@ -98,6 +109,12 @@ const cinemaContext = { exports: {}, require: name => {
   return { ...data, default: data };
 } };
 vm.runInNewContext(ts.transpile(read('src/data/cinema.ts'), { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 }), cinemaContext);
+assert.equal(cinemaContext.exports.allCinemaItems.length, 296);
+assert.equal(cinema.filter(item => item.hidden).length, 98);
+for (const id of ['film-26930504', 'film-25796222', 'tv-85937', 'film-1306809', 'film-27074316', 'film-4237879']) {
+  assert.ok(cinemaContext.exports.allCinemaItems.some(item => item.id === id), `Must retain ${id}`);
+}
+assert.ok(cinemaContext.exports.allCinemaItems.every(item => !item.hidden));
 const groupedIds = curation.cinemaGroups.flat();
 assert.equal(new Set(groupedIds).size, groupedIds.length);
 assert.ok(groupedIds.every(id => cinema.some(item => item.id === id)));
@@ -106,7 +123,7 @@ for (const [name, predicate] of [
   ['cinemaFilms', item => item.type === 'film' && !item.genre.split(', ').includes('Animation')],
 ]) {
   const items = Array.from(cinemaContext.exports[name]);
-  assert.deepEqual(items.map(item => item.id).sort(), cinema.filter(predicate).map(item => item.id).sort());
+  assert.deepEqual(items.map(item => item.id).sort(), cinema.filter(item => !item.hidden && predicate(item)).map(item => item.id).sort());
   const key = item => {
     const group = curation.cinemaGroups.findIndex(ids => ids.includes(item.id));
     return group < 0 ? `director:${item.director}` : `series:${group}`;

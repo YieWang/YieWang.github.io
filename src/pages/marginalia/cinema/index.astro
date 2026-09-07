@@ -1,17 +1,17 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
-import { cinemaFilms, cinemaSeries, cinemaAnimation } from '../../../data/cinema';
+import { cinemaFilms, cinemaSeries, cinemaAnimation, groupFilmCollections } from '../../../data/cinema';
 
 const categories = [
-  { id: 'films', label: 'Films', items: cinemaFilms },
+  { id: 'films', label: 'Films', items: groupFilmCollections(cinemaFilms) },
   { id: 'series', label: 'Series', items: [...cinemaSeries].sort((a, b) => Number(!!b.review) - Number(!!a.review)) },
-  { id: 'animation', label: 'Animation', items: cinemaAnimation },
+  { id: 'animation', label: 'Animation', items: groupFilmCollections(cinemaAnimation) },
 ];
 ---
 
 <Layout
-  title="Cinema · Marginalia · Yi Wang"
+  title="Screen · Marginalia · Yi Wang"
   description="Curated archive of auteur films, television series, and personal critical essays."
   isHome={false}
   fullWidth={true}
@@ -21,7 +21,7 @@ const categories = [
   <!-- Main Container (Expanded to enlarge posters while keeping 6-per-row) -->
   <div class="max-w-[1760px] mx-auto w-full pb-28 pt-2 sm:pt-4 px-4 sm:px-8 md:px-12">
 
-    <nav aria-label="Cinema categories" class="pt-2 sm:pt-4 pb-8 sm:pb-12 flex items-center justify-center gap-6 sm:gap-14 select-none">
+    <nav aria-label="Screen categories" class="pt-2 sm:pt-4 flex items-center justify-center gap-6 sm:gap-14 select-none">
       {categories.map((category, index) => (
         <button type="button" data-cinema-tab={category.id} aria-controls={`section-${category.id}`} aria-pressed={index === 0}
           class="cinema-tab uppercase text-[0.75rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-colors cursor-pointer aria-pressed:font-bold aria-pressed:text-black"
@@ -30,7 +30,10 @@ const categories = [
     </nav>
     <main>
       {categories.map((category, index) => (
-        <section id={`section-${category.id}`} aria-label={category.label} hidden={index !== 0}>
+        <section id={`section-${category.id}`} aria-label={category.label} hidden={index !== 0} class="space-y-7">
+        <header class="flex items-baseline justify-end border-b border-[#F0F0F0] pb-3 select-none">
+          <span class="font-bold text-[1.02rem] sm:text-[1.14rem] text-[#111111] tracking-[0.14rem] leading-none" style="font-family: 'Josefin Sans', sans-serif;">{category.items.length}</span>
+        </header>
         <!-- Enlarged Poster Grid: 6-per-row layout on desktop -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-9 sm:gap-y-11 md:gap-y-12">
           {category.items.map((film) => (
@@ -38,7 +41,8 @@ const categories = [
               class="cinema-card group cursor-pointer flex flex-col justify-between select-none"
               data-item-id={film.id}
               data-type={film.type}
-              data-has-review={film.review ? 'true' : 'false'}
+              data-collection={film.installments ? 'true' : undefined}
+              data-has-review={film.review || film.installments?.some(item => item.review) ? 'true' : 'false'}
               data-item-json={JSON.stringify(film)}
             >
               <!-- Top Portion: Pure Artwork Poster + Pure English Titles (Preserving clean English-only layout) -->
@@ -75,7 +79,8 @@ const categories = [
               <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Whitespace-nowrap prevents wrapping) -->
               <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
                 <span class="whitespace-nowrap shrink-0">{film.year}</span>
-                {film.review && (
+                {film.installments && <span>{film.installments.length} films</span>}
+                {(film.review || film.installments?.some(item => item.review)) && (
                   <span
                     class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"
                     title="Includes personal critical review"
@@ -94,11 +99,6 @@ const categories = [
         </section>
       ))}
     </main>
-    <aside aria-label="Credits" class="mt-16 text-[0.65rem] leading-relaxed text-[#888888]">
-      <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.themoviedb.org/assets/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB" width="80" height="11" loading="lazy" class="mb-2" />
-      </a>
-    </aside>
   </div>
 
   <!-- SCHEME A MODAL / LIGHTBOX (Pure White, Two-Column Curatorial Studio) -->
@@ -143,13 +143,14 @@ const categories = [
   let closeTimer: ReturnType<typeof setTimeout> | null = null;
   let touchStartY = 0;
 
-  function openModal(item: MediaItem) {
+  function openModal(selection: MediaItem, installmentIndex = 0) {
     if (!modalContentSlot || !modalBackdrop || !modalContainer) return;
     if (closeTimer) {
       clearTimeout(closeTimer);
       closeTimer = null;
     }
 
+    const item = selection.installments?.[installmentIndex] || selection;
     const hasReview = !!item.review;
     const rating = item.rating || item.review?.rating;
 
@@ -188,7 +189,7 @@ const categories = [
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words flex items-baseline gap-2.5 flex-wrap"
           style="font-family: 'Josefin Sans', sans-serif;"
         >
-          <span>${escapeHtml(item.title)}</span>
+          <span>${escapeHtml(selection.installments ? selection.title : item.title)}</span>
           ${item.originalTitle ? `<span class="text-[0.88rem] font-normal text-[#888888]">${escapeHtml(item.originalTitle)}</span>` : ''}
         </h2>
       </div>
@@ -218,6 +219,7 @@ const categories = [
           </div>
 
           <!-- IMDb Link Pinned at Bottom of Left Column (Minimal text link without card box or divider line) -->
+          ${item.externalLink?.url ? `
           <div class="pt-2 sm:pt-4 sm:mt-auto w-auto sm:w-full text-center">
             <a
               href="${escapeHtml(item.externalLink.url)}"
@@ -228,7 +230,7 @@ const categories = [
               <span>VIEW ON ${escapeHtml(item.externalLink.platform)}</span>
               <span class="ml-1" aria-hidden="true">↗</span>
             </a>
-          </div>
+          </div>` : ''}
         </div>
 
         <!-- RIGHT COLUMN: Metadata & Scrollable Review / Details (ONLY the text area scrolls) -->
@@ -289,6 +291,16 @@ const categories = [
             class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2.5 pt-3 space-y-3.5"
             style="scrollbar-gutter: stable;"
           >
+            ${selection.installments ? `
+              <div class="space-y-2" aria-label="Films in this collection">
+                ${selection.installments.map((film, index) => `
+                  <button type="button" data-installment="${index}" aria-pressed="${index === installmentIndex}"
+                    class="watched-entry block w-full text-left border-b border-[#F0F0F0] pb-2 cursor-pointer text-[#777777] hover:text-black aria-pressed:text-black aria-pressed:font-semibold focus-visible:outline focus-visible:outline-1">
+                    <span class="block text-[0.84rem]">${escapeHtml(film.title)}</span>
+                    <span class="block text-[0.7rem] font-mono text-[#888888]">${escapeHtml(film.year)}${film.firstWatched ? ` · ${escapeHtml(film.firstWatched)}` : ''}${film.rating ? ` · ${escapeHtml(film.rating)}` : ''}</span>
+                  </button>`).join('')}
+              </div>` : ''}
+            ${item.summary ? `<p class="text-sm leading-relaxed whitespace-pre-line">${escapeHtml(item.summary)}</p>` : ''}
             ${item.type === 'series' ? (item.watchedEntries || []).map(entry => `
               <div class="watched-entry border-b border-[#F0F0F0] pb-3 space-y-1">
                 <div class="text-[0.84rem] font-medium">${escapeHtml(entry.title)}</div>
@@ -355,6 +367,14 @@ const categories = [
         </div>
       </div>
     `;
+
+    modalContentSlot.querySelectorAll<HTMLButtonElement>('[data-installment]').forEach(button => {
+      button.addEventListener('click', () => {
+        const index = Number(button.dataset.installment);
+        openModal(selection, index);
+        modalContentSlot.querySelector<HTMLButtonElement>(`[data-installment="${index}"]`)?.focus({ preventScroll: true });
+      });
+    });
 
     // Bind In-Place Essay Expansion Toggle
     const toggleBtn = document.getElementById('toggle-essay-btn');
@@ -440,7 +460,7 @@ const categories = [
     const scrollKeys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '];
     if (scrollKeys.includes(e.key)) {
       const activeTag = (document.activeElement?.tagName || '').toUpperCase();
-      if (activeTag !== 'INPUT' && activeTag !== 'TEXTAREA') {
+      if (!['INPUT', 'TEXTAREA', 'BUTTON', 'SELECT', 'A'].includes(activeTag)) {
         e.preventDefault();
         const scrollPane = document.getElementById('modal-right-scroll-pane');
         if (scrollPane && scrollPane.scrollHeight > scrollPane.clientHeight) {

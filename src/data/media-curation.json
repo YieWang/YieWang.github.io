@@ -1,7 +1,26 @@
 {
   "excludedCinemaIds": [
     "film-27599401",
-    "film-26771100"
+    "film-26771100",
+    "film-21359690",
+    "film-24852545",
+    "film-24879858",
+    "film-25710912",
+    "film-25745752",
+    "film-25895276",
+    "film-25911694",
+    "film-26263437",
+    "film-26274910",
+    "film-26290365",
+    "film-26290367",
+    "film-26320029",
+    "film-26575103",
+    "film-27102569",
+    "film-27619748",
+    "film-30166972",
+    "film-35267208",
+    "film-35660795",
+    "film-35766491"
   ],
   "excludedTracks": [
     {
@@ -346,6 +365,132 @@
       "album": "My Space 演唱会纪念盘 (Live)",
       "artist": "蔡健雅",
       "reason": "Live recording"
+    },
+    {
+      "id": "i.dlvqE0dTzq2782E",
+      "title": "爱你不是两三天",
+      "album": "滚石三十青春音乐记事簿: 纸条传情",
+      "artist": "梁静茹",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.06QNkDYT05DPqDW",
+      "isrc": "TWA450065306"
+    },
+    {
+      "id": "i.rXzZe9PTMLve9vd",
+      "title": "爱我别走",
+      "album": "滚石香港黄金十年 - 张震嶽精选",
+      "artist": "张震岳",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.aJGYNXXT3PO0ROz",
+      "isrc": "TWB879804807"
+    },
+    {
+      "id": "i.xrXv5QQUMDkW6k2",
+      "title": "初恋 (2022 Remastering)",
+      "album": "初恋 (2022 Remastering) - Single",
+      "artist": "Utada",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.06QNdAVS05DPqDW",
+      "isrc": "JPU901801090"
+    },
+    {
+      "id": "i.xrXvRJPTMDkW6k2",
+      "title": "Holy (feat. Chance the Rapper)",
+      "album": "Holy (feat. Chance the Rapper) - Single",
+      "artist": "Justin Bieber",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.NJv0p5XTl8xp6xo",
+      "isrc": "USUM72017013"
+    },
+    {
+      "id": "i.7PJN0Bgf0bqNMq7",
+      "title": "太聪明",
+      "album": "陈绮贞精选",
+      "artist": "陈绮贞",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.9oJNZgYuPezL6z2",
+      "isrc": "TWB870211302"
+    },
+    {
+      "id": "i.B0VNqdNSxM6316R",
+      "title": "Anti-Hero",
+      "album": "Midnights (The Til Dawn Edition)",
+      "artist": "Taylor Swift",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.9oJNNYmHPezL6z2",
+      "isrc": "USUG12205736"
+    },
+    {
+      "id": "i.dlvqYKJHzq2782E",
+      "title": "Snow On The Beach (feat. Lana Del Rey)",
+      "album": "Midnights (The Til Dawn Edition)",
+      "artist": "Taylor Swift",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.rXzZZkqUMLve9vd",
+      "isrc": "USUG12205737"
+    },
+    {
+      "id": "i.vMX11bEUgrzp2zq",
+      "title": "You're On Your Own, Kid",
+      "album": "Midnights (3am Edition / Video Deluxe)",
+      "artist": "Taylor Swift",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.NJv0e1zUl8xp6xo",
+      "isrc": "USUG12205711"
+    },
+    {
+      "id": "i.aJGYbdlU3PO0ROz",
+      "title": "一千年以后",
+      "album": "林俊杰2003年-2010年作品精选集",
+      "artist": "林俊杰",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.9oJNe1gcPezL6z2",
+      "isrc": "TWB670501212"
+    },
+    {
+      "id": "i.rXzZa2EtMLve9vd",
+      "title": "Monday (feat. Lionman)",
+      "album": "Monday (feat. Lionman) - Single",
+      "artist": "窦靖童",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.9oJNVzgIPezL6z2",
+      "isrc": "HKD982301011"
+    },
+    {
+      "id": "i.NJv0pEmSl8xp6xo",
+      "title": "Peaches (feat. Daniel Caesar & GIVĒON)",
+      "album": "Justice (Triple Chucks Deluxe)",
+      "artist": "Justin Bieber",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.rXzZbqZFMLve9vd",
+      "isrc": "USUM72102647"
+    },
+    {
+      "id": "i.xrXvN9PtMDkW6k2",
+      "title": "Thinking Out Loud",
+      "album": "x (Deluxe Edition)",
+      "artist": "Ed Sheeran",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.9oJNZV6IPezL6z2",
+      "isrc": "GBAHS1400099"
+    },
+    {
+      "id": "i.xrXvPXoFMDkW6k2",
+      "title": "Too Good at Goodbyes",
+      "album": "The Thrill of It All (Special Edition)",
+      "artist": "Sam Smith",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.NJv0pDktl8xp6xo",
+      "isrc": "GBUM71704089"
+    },
+    {
+      "id": "i.9oJNq46cPezL6z2",
+      "title": "Unchained Melody",
+      "album": "Just Once In My Life",
+      "artist": "The Righteous Brothers",
+      "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
+      "duplicateOf": "i.06QNXrYH05DPqDW",
+      "isrc": "USPG19090023"
     }
   ],
   "musicGroups": [
@@ -1358,16 +1503,10 @@
       "film-1295038"
     ],
     [
-      "film-26575103",
-      "film-25723907"
-    ],
-    [
-      "film-25710912",
       "film-10574622",
       "film-4237879"
     ],
     [
-      "film-27619748",
       "film-26311973",
       "film-26698897"
     ],
@@ -1418,10 +1557,6 @@
     [
       "film-34780991",
       "film-26794435"
-    ],
-    [
-      "film-26266893",
-      "film-35267208"
     ],
     [
       "film-10808442",

@@ -5,7 +5,7 @@ import vm from 'node:vm';
 import ts from 'typescript';
 
 const source = readFileSync(new URL('../src/data/photography.ts', import.meta.url), 'utf8');
-const context = vm.createContext({ exports: {} });
+const context = vm.createContext({ exports: {}, require: () => ({ default: JSON.parse(readFileSync(new URL('../src/data/photography.json', import.meta.url), 'utf8')) }) });
 vm.runInContext(ts.transpile(source, { module: ts.ModuleKind.CommonJS }), context);
 const { allPhotos, allCityAlbums, photoOptics, photoLocation } = context.exports;
 assert.equal(allPhotos.length, 66);
