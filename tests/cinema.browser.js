@@ -30,8 +30,9 @@ async page => {
   const firstPoster = await page.locator('#modal-content-slot img').getAttribute('src');
   await page.locator('[data-installment="1"]').click();
   if (await page.locator('#modal-content-slot img').getAttribute('src') === firstPoster) throw Error('Season poster did not switch');
-  const dates = await page.locator('.watched-entry').allTextContents();
-  if (!dates.every(s => s.includes('2026-09-07'))) throw Error('Watched dates changed');
+  const names = await page.locator('[data-installment]').allTextContents();
+  if (!names.every((s, i) => s.trim() === `Season ${i + 1}`)) throw Error('Season switcher must show names only');
+  if (!(await page.locator('#modal-content-slot').innerText()).includes('2026-09-07')) throw Error('Selected season watch date must remain in details');
   await page.waitForFunction(() => [...document.querySelectorAll('#modal-content-slot img')].every(i => i.complete && i.naturalWidth));
   await page.screenshot({ path: 'output/playwright/cinema-series-desktop.png' });
   await page.keyboard.press('Escape');
