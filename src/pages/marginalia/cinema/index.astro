@@ -21,7 +21,7 @@ const categories = [
   <!-- Main Container (Expanded to enlarge posters while keeping 6-per-row) -->
   <div class="max-w-[1760px] mx-auto w-full pb-28 pt-2 sm:pt-4 px-4 sm:px-8 md:px-12">
 
-    <nav aria-label="Cinema categories" class="pt-2 sm:pt-4 pb-8 sm:pb-12 flex items-center justify-center gap-6 sm:gap-14 select-none">
+    <nav aria-label="Cinema categories" class="pt-2 sm:pt-4 flex items-center justify-center gap-6 sm:gap-14 select-none">
       {categories.map((category, index) => (
         <button type="button" data-cinema-tab={category.id} aria-controls={`section-${category.id}`} aria-pressed={index === 0}
           class="cinema-tab uppercase text-[0.75rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-colors cursor-pointer aria-pressed:font-bold aria-pressed:text-black"
@@ -30,7 +30,10 @@ const categories = [
     </nav>
     <main>
       {categories.map((category, index) => (
-        <section id={`section-${category.id}`} aria-label={category.label} hidden={index !== 0}>
+        <section id={`section-${category.id}`} aria-label={category.label} hidden={index !== 0} class="space-y-7">
+        <header class="flex items-baseline justify-end border-b border-[#F0F0F0] pb-3 select-none">
+          <span class="font-bold text-[1.02rem] sm:text-[1.14rem] text-[#111111] tracking-[0.14rem] leading-none" style="font-family: 'Josefin Sans', sans-serif;">{category.items.length}</span>
+        </header>
         <!-- Enlarged Poster Grid: 6-per-row layout on desktop -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-9 sm:gap-y-11 md:gap-y-12">
           {category.items.map((film) => (
