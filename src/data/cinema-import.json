@@ -1948,7 +1948,8 @@
     "creditRole": "DIRECTED BY",
     "chineseTitle": "洛洛历险记",
     "originalDirector": "王巍",
-    "chineseDirector": "王巍"
+    "chineseDirector": "王巍",
+    "hidden": true
   },
   {
     "id": "tv-63926",
@@ -4684,7 +4685,8 @@
     "rating": "5 / 5",
     "chineseTitle": "西游记之大圣归来",
     "originalDirector": "田晓鹏",
-    "chineseDirector": "田晓鹏"
+    "chineseDirector": "田晓鹏",
+    "hidden": true
   },
   {
     "id": "film-4920528",
@@ -4844,7 +4846,8 @@
     "rating": "4 / 5",
     "chineseTitle": "冰雪奇缘2",
     "originalDirector": "Jennifer Lee, Chris Buck",
-    "chineseDirector": "詹妮弗·李, 克里斯·巴克"
+    "chineseDirector": "詹妮弗·李, 克里斯·巴克",
+    "studio": "Disney"
   },
   {
     "id": "film-3168101",
@@ -5397,7 +5400,8 @@
     "rating": "4 / 5",
     "chineseTitle": "疯狂动物城2",
     "originalDirector": "Jared Bush, Byron Howard",
-    "chineseDirector": "贾里德·布什, 拜恩·霍华德"
+    "chineseDirector": "贾里德·布什, 拜恩·霍华德",
+    "studio": "Disney"
   },
   {
     "id": "film-35689244",
@@ -8256,7 +8260,8 @@
     "rating": "3 / 5",
     "chineseTitle": "头脑特工队2",
     "originalDirector": "Kelsey Mann",
-    "chineseDirector": "凯尔西·曼恩"
+    "chineseDirector": "凯尔西·曼恩",
+    "studio": "Pixar"
   },
   {
     "id": "film-35376457",
@@ -9767,7 +9772,8 @@
     "rating": "5 / 5",
     "chineseTitle": "飞屋环游记",
     "originalDirector": "Pete Docter",
-    "chineseDirector": "皮特·多克特"
+    "chineseDirector": "皮特·多克特",
+    "studio": "Pixar"
   },
   {
     "id": "film-1295124",
@@ -10816,7 +10822,8 @@
     "rating": "4 / 5",
     "chineseTitle": "无敌破坏王2：大闹互联网",
     "originalDirector": "Rich Moore, Phil Johnston",
-    "chineseDirector": "里奇·摩尔, 菲尔·约翰斯顿"
+    "chineseDirector": "里奇·摩尔, 菲尔·约翰斯顿",
+    "studio": "Disney"
   },
   {
     "id": "film-1291577",
@@ -10848,7 +10855,8 @@
     "rating": "3 / 5",
     "chineseTitle": "超人总动员",
     "originalDirector": "Brad Bird",
-    "chineseDirector": "布拉德·伯德"
+    "chineseDirector": "布拉德·伯德",
+    "hidden": true
   },
   {
     "id": "film-3274505",
@@ -11032,7 +11040,8 @@
     "rating": "4 / 5",
     "chineseTitle": "怪兽大学",
     "originalDirector": "Dan Scanlon",
-    "chineseDirector": "丹·斯坎伦"
+    "chineseDirector": "丹·斯坎伦",
+    "studio": "Pixar"
   },
   {
     "id": "film-1293088",
@@ -11096,7 +11105,8 @@
     "rating": "5 / 5",
     "chineseTitle": "美食总动员",
     "originalDirector": "Brad Bird",
-    "chineseDirector": "布拉德·伯德"
+    "chineseDirector": "布拉德·伯德",
+    "studio": "Pixar"
   },
   {
     "id": "film-3642835",
@@ -11551,7 +11561,8 @@
     "rating": "4 / 5",
     "chineseTitle": "冰雪奇缘",
     "originalDirector": "Chris Buck, Jennifer Lee",
-    "chineseDirector": "克里斯·巴克, 詹妮弗·李"
+    "chineseDirector": "克里斯·巴克, 詹妮弗·李",
+    "studio": "Disney"
   },
   {
     "id": "film-35256092",
@@ -12819,7 +12830,8 @@
     "rating": "5 / 5",
     "chineseTitle": "无敌破坏王",
     "originalDirector": "Rich Moore",
-    "chineseDirector": "里奇·摩尔"
+    "chineseDirector": "里奇·摩尔",
+    "studio": "Disney"
   },
   {
     "id": "film-2209573",
@@ -12947,7 +12959,8 @@
     "rating": "5 / 5",
     "chineseTitle": "头脑特工队",
     "originalDirector": "Pete Docter",
-    "chineseDirector": "皮特·多克特"
+    "chineseDirector": "皮特·多克特",
+    "studio": "Pixar"
   },
   {
     "id": "film-1417598",
@@ -13201,7 +13214,8 @@
     "rating": "5 / 5",
     "chineseTitle": "怪兽电力公司",
     "originalDirector": "Pete Docter",
-    "chineseDirector": "皮特·多克特"
+    "chineseDirector": "皮特·多克特",
+    "studio": "Pixar"
   },
   {
     "id": "film-10577869",
@@ -14031,7 +14045,8 @@
     "rating": "5 / 5",
     "chineseTitle": "寻梦环游记",
     "originalDirector": "Lee Unkrich",
-    "chineseDirector": "李·昂克里奇"
+    "chineseDirector": "李·昂克里奇",
+    "studio": "Pixar"
   },
   {
     "id": "film-1293172",
@@ -14255,7 +14270,8 @@
     "rating": "5 / 5",
     "chineseTitle": "疯狂动物城",
     "originalDirector": "Byron Howard, Rich Moore",
-    "chineseDirector": "拜恩·霍华德, 里奇·摩尔"
+    "chineseDirector": "拜恩·霍华德, 里奇·摩尔",
+    "studio": "Disney"
   },
   {
     "id": "film-1292213",
@@ -14319,7 +14335,8 @@
     "rating": "5 / 5",
     "chineseTitle": "机器人总动员",
     "originalDirector": "Andrew Stanton",
-    "chineseDirector": "安德鲁·斯坦顿"
+    "chineseDirector": "安德鲁·斯坦顿",
+    "studio": "Pixar"
   },
   {
     "id": "film-3793023",

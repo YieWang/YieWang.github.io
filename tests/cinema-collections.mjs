@@ -60,3 +60,11 @@ console.log('Animation category order and four new franchise cards passed');
 
 assert.deepEqual(Array.from(animationCards.find(x => x.id === 'tv-46260').installments, x => x.runtime), ['220 Episodes', '500 Episodes']);
 assert.deepEqual(Array.from(animationCards.find(x => x.id === 'tv-46261').installments, x => x.runtime), ['328 Episodes', '25 Episodes']);
+
+const beforeStudios = Array.from(groupFilmCollections(cinemaAnimation), withSeasonDetails).sort((a,b) => order(a)-order(b));
+assert.deepEqual(animationCards.filter(x => !x.studio).map(x => x.id), beforeStudios.filter(x => !x.studio).map(x => x.id), 'Keep all other cards in their relative order');
+for (const tier of [2,3]) {
+  const positions = animationCards.map((x,index) => x.studio && order(x) === tier ? index : -1).filter(index => index >= 0);
+  if (positions.length) assert.equal(positions.at(-1)-positions[0]+1,positions.length,'Disney/Pixar must be adjacent in each film tier');
+}
+assert.ok(animationCards.some(x => x.id === 'tv-37854'), 'One Piece remains visible');

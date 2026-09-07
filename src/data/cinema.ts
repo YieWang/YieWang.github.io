@@ -19,6 +19,7 @@ export interface MediaItem {
   span?: string;                 // Year span for series (e.g. "2015–2022")
   country: string;               // Country
   genre: string;                 // Genre
+  studio?: 'Pixar' | 'Disney';
   runtime?: string;              // Runtime or seasons (e.g. "136 min", "6 Seasons")
   format?: string;               // Technical format (e.g. "35mm · B&W · 1.37:1")
   posterUrl: string;             // 2:3 vertical poster
@@ -114,6 +115,16 @@ export function withSeasonDetails(item: MediaItem): MediaItem {
   return { ...series, year: installments[0].year, posterUrl: installments[0].posterUrl, installments };
 }
 
-export const cinemaAnimationCards = groupFilmCollections(cinemaAnimation).map(withSeasonDetails)
+const animationCards = groupFilmCollections(cinemaAnimation).map(withSeasonDetails)
   .sort((a, b) => Number(b.type === 'series') - Number(a.type === 'series')
     || Number((b.installments?.length || 0) > 1) - Number((a.installments?.length || 0) > 1));
+
+// Gather Disney/Pixar at their first position within each existing sorting tier.
+const studioGroups = new Map<string, MediaItem[]>();
+for (const item of animationCards) {
+  const key = item.type === 'film' && item.studio ? `disney-pixar:${(item.installments?.length || 0) > 1}` : item.id;
+  const group = studioGroups.get(key) || [];
+  group.push(item);
+  studioGroups.set(key, group);
+}
+export const cinemaAnimationCards = [...studioGroups.values()].flat();

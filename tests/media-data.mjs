@@ -116,8 +116,8 @@ const cinemaContext = { exports: {}, require: name => {
   return { ...data, default: data };
 } };
 vm.runInNewContext(ts.transpile(read('src/data/cinema.ts'), { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 }), cinemaContext);
-assert.equal(cinemaContext.exports.allCinemaItems.length, 298);
-assert.equal(cinema.filter(item => item.hidden).length, 100);
+assert.equal(cinemaContext.exports.allCinemaItems.length, 295);
+assert.equal(cinema.filter(item => item.hidden).length, 103);
 for (const id of ['film-26930504', 'film-25796222', 'tv-85937', 'film-1306809', 'film-27074316', 'film-4237879']) {
   assert.ok(cinemaContext.exports.allCinemaItems.some(item => item.id === id), `Must retain ${id}`);
 }
@@ -164,3 +164,5 @@ console.log('Cinema related groups, release ordering and review priority: passed
 
 for (const [native, chinese] of Object.entries(json('src/data/screen-name-variants.json'))) assert.equal(context.exports.secondaryNames([], native, chinese), chinese);
 for (const id of ['film-24843198', 'film-24735062']) assert.ok(!cinemaContext.exports.allCinemaItems.some(item => item.id === id));
+
+for (const id of ['tv-134182', 'film-26277313', 'film-1291577']) assert.ok(!cinemaContext.exports.allCinemaItems.some(item => item.id === id));

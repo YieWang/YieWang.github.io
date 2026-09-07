@@ -307,7 +307,7 @@ const categories = [
                   </button>`).join('')}
               </div>` : ''}
             ${item.summary ? `<p class="text-sm leading-relaxed whitespace-pre-line">${escapeHtml(item.summary)}</p>` : ''}
-            ${item.type === 'series' && (item.watchedEntries?.length || 0) > 1 ? (item.watchedEntries || []).map(entry => `
+            ${item.type === 'series' ? (item.watchedEntries || []).filter(entry => entry.comment?.trim()).map(entry => `
               <div class="season-watch-record border-b border-[#F0F0F0] pb-3 space-y-1">
                 <div class="text-[0.84rem] font-medium">${escapeHtml(entry.title)}</div>
                 ${entry.comment ? `<p class="text-[0.84rem] leading-relaxed whitespace-pre-line">${escapeHtml(entry.comment)}</p>` : ''}
