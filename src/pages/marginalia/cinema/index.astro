@@ -142,7 +142,7 @@ const categories = [
   let closeTimer: ReturnType<typeof setTimeout> | null = null;
   let touchStartY = 0;
 
-  function openModal(selection: MediaItem, installmentIndex = 0) {
+  function openModal(selection: MediaItem, installmentIndex = 0, listScrollTop = 0) {
     if (!modalContentSlot || !modalBackdrop || !modalContainer) return;
     if (closeTimer) {
       clearTimeout(closeTimer);
@@ -368,7 +368,8 @@ const categories = [
     modalContentSlot.querySelectorAll<HTMLButtonElement>('[data-installment]').forEach(button => {
       button.addEventListener('click', () => {
         const index = Number(button.dataset.installment);
-        openModal(selection, index);
+        const listScrollTop = document.getElementById('modal-right-scroll-pane')?.scrollTop || 0;
+        openModal(selection, index, listScrollTop);
         modalContentSlot.querySelector<HTMLButtonElement>(`[data-installment="${index}"]`)?.focus({ preventScroll: true });
       });
     });
@@ -395,9 +396,9 @@ const categories = [
       }
     });
 
-    // Reset right scroll pane to top
+    // Preserve list position when switching parts; new detail views start at the top.
     const scrollPane = document.getElementById('modal-right-scroll-pane');
-    if (scrollPane) scrollPane.scrollTop = 0;
+    if (scrollPane) scrollPane.scrollTop = listScrollTop;
 
     // Lock window scroll position without altering DOM/scrollbar
     lockedScrollTop = window.scrollY || document.documentElement.scrollTop || 0;
