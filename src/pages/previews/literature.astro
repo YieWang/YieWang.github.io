@@ -8,6 +8,8 @@ const pages = [
   '他的妻子乌尔苏拉•伊瓜兰本指望着靠这些牲口扩展微薄的家业，却没能拦住他。“很快我们的金子就会多到能铺地了。”她丈夫回答。此后的几个月他费尽心力想要证实自己的猜想。他拖着两块铁锭，口中念着梅尔基亚德斯的咒语，勘测那片地区的每一寸土地，连河床底也不曾放过。',
   '唯一的挖掘成果是一副十五世纪锈迹斑斑的盔甲，敲击之下发出空洞的回声，好像塞满石块的大葫芦。何塞•阿尔卡蒂奥•布恩迪亚和一起探险的四个男人将盔甲成功拆卸之后，发现里面有一具已经钙化的骷髅，骷髅的颈子上挂着铜质的圣物盒，盒里有一缕女人的头发。',
 ];
+// A new cache key avoids cover responses cached before anonymous CORS loading.
+const pageImages = Array.from({ length: pages.length + 2 }, (_, i) => `https://homepage-assets.mathtranslations.org/images/literature/book/${i}.webp?v=2`);
 ---
 <!doctype html>
 <html lang="zh-CN">
@@ -19,15 +21,16 @@ const pages = [
     <title>百年孤独 · 翻书预览</title>
   </head>
   <body>
-    <img class="poster" src="https://homepage-assets.mathtranslations.org/images/literature/book/0.webp" width="156" height="224" alt="百年孤独，加西亚·马尔克斯" />
-    <div id="book" data-pages={JSON.stringify(Array.from({ length: pages.length + 2 }, (_, i) => `https://homepage-assets.mathtranslations.org/images/literature/book/${i}.webp`))}></div>
+    <img class="poster" crossorigin="anonymous" src={pageImages[0]} width="156" height="224" alt="百年孤独，加西亚·马尔克斯" />
+    <div id="book" data-pages={JSON.stringify(pageImages)}></div>
     <template id="book-transcript">{pages.map(text => <p>{text}</p>)}</template>
     <script>
       import { Zine, ImageSource } from '@zinejs/core';
       const book = document.getElementById('book')!;
       const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      const source = new ImageSource(JSON.parse(book.dataset.pages!));
       const zine = new Zine(book, {
-        source: new ImageSource(JSON.parse(book.dataset.pages!)),
+        source,
         renderer: 'auto', curl: 'cone', spreadMode: 'book', responsiveSpread: false,
         width: 336, height: 240, flipDuration: 1100,
         startPage: reducedMotion.matches ? 1 : 0,
@@ -35,17 +38,31 @@ const pages = [
         loading: false, deepLink: false, clickToFlip: 'off', zoom: { enabled: false },
       });
       let timer: ReturnType<typeof setTimeout>;
-      zine.on('flipEnd', ({ page }) => {
-        if (page === 1 && !reducedMotion.matches) timer = setTimeout(() => zine.flipNext(), 1300);
-      });
-      zine.ready.then(() => {
+      let ready = false;
+      const frame = window.frameElement as HTMLElement | null;
+      const syncPlayback = () => {
+        clearTimeout(timer);
+        if (!ready || reducedMotion.matches) return;
+        const active = !document.hidden && (!frame || frame.dataset.active === 'true');
+        if (!active) {
+          zine.flipTo(0);
+          return;
+        }
+        if (zine.getPage() < 3) timer = setTimeout(() => zine.flipNext(), zine.getPage() === 0 ? 700 : 1300);
+      };
+      zine.on('flipEnd', syncPlayback);
+      // Zine.ready can resolve after a source error; keep the cover until the preview pages decode.
+      Promise.all([zine.ready, ...[0, 1, 2, 3, 4].map(page => source.get(page))]).then(() => {
+        ready = true;
         document.querySelector('.poster')?.remove();
         book.dataset.renderer = book.querySelector('canvas') ? 'webgl2' : 'css';
-        if (!reducedMotion.matches) timer = setTimeout(() => zine.flipNext(), 700);
+        syncPlayback();
       }).catch(error => {
         book.dataset.error = 'true';
         console.error('ZineJS preview could not initialize', error);
       });
+      if (frame) new MutationObserver(syncPlayback).observe(frame, { attributes: true, attributeFilter: ['data-active'] });
+      document.addEventListener('visibilitychange', syncPlayback);
       reducedMotion.addEventListener('change', () => location.reload());
       window.addEventListener('pagehide', () => { clearTimeout(timer); zine.destroy(); });
     </script>

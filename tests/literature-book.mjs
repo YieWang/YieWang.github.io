@@ -24,20 +24,25 @@ const document = {
 vm.runInNewContext(ts.transpile(source.match(/<script>([\s\S]*?)<\/script>/)[1]), {
   document, MutationObserver: class { constructor(fn) { callback = fn; } observe() {} },
 });
-assert.equal(loads, 0);
+assert.equal(loads, 1, 'entering Marginalia warms the preview before selection');
+assert.equal(frame.dataset.active, 'false');
 selected = true; callback(); callback();
 assert.equal(loads, 1, 'duplicate hover/focus must keep the current document');
+assert.equal(frame.dataset.active, 'true');
 selected = false; callback();
-assert.equal(frame.url, undefined, 'switching away must release the renderer document');
+assert.equal(frame.url, '/previews/literature', 'switching away must retain decoded pages');
+assert.equal(frame.dataset.active, 'false');
 selected = true; callback();
-assert.equal(loads, 2);
+assert.equal(loads, 1);
 for (const reason of ['section', 'offscreen', 'hidden']) {
   activeSection = reason !== 'section'; offscreen = reason === 'offscreen'; document.hidden = reason === 'hidden';
   callback();
-  assert.equal(frame.url, undefined);
+  assert.equal(frame.dataset.active, 'false');
   activeSection = true; offscreen = false; document.hidden = false; callback();
+  assert.equal(frame.dataset.active, 'true');
 }
-assert.equal(unloads, 4);
+assert.equal(unloads, 0);
+assert.equal(loads, 1);
 const preview = readFileSync(new URL('../src/pages/previews/literature.astro', import.meta.url), 'utf8');
 const pages = vm.runInNewContext(preview.split('---')[1] + '\npages');
 assert.equal(pages.join('').length, 796);

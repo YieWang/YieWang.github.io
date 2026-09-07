@@ -14,11 +14,11 @@
   const stage = document.querySelector('.marginalia-stage');
   if (frame && panel && section && stage) {
     const syncBook = () => {
-      const visible = panel.hasAttribute('data-active') && section.classList.contains('active-section')
+      const inView = section.classList.contains('active-section')
         && !stage.hasAttribute('data-offscreen') && !document.hidden;
-      // Release the preview document and GPU resources whenever its stage is hidden.
-      if (visible && !frame.hasAttribute('src')) frame.src = frame.dataset.src!;
-      else if (!visible && frame.hasAttribute('src')) frame.removeAttribute('src');
+      frame.dataset.active = String(inView && panel.hasAttribute('data-active'));
+      // Warm once on entry; switching interests reuses the document and decoded pages.
+      if (inView && !frame.hasAttribute('src')) frame.src = frame.dataset.src!;
     };
     const observer = new MutationObserver(syncBook);
     observer.observe(panel, { attributes: true, attributeFilter: ['data-active'] });
