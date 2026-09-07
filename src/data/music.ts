@@ -3,6 +3,8 @@ import sortNames from './music-sort-names.json';
 
 export interface MusicTrack {
   id?: string;
+  catalogSongId?: string;
+  isrc?: string;
   source?: 'apple-music' | 'netease';
   discNo?: number;
   trackNo: number;
@@ -15,6 +17,9 @@ export interface MusicTrack {
 
 export interface MusicAlbum {
   hidden?: boolean;
+  releaseType?: 'studio' | 'ep' | 'single';
+  catalogAlbumId?: string;
+  catalogUrl?: string;
   id: string;
   title: string;
   artistId: string;

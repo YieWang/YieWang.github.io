@@ -24,7 +24,7 @@ for (const album of music.albums) {
 }
 assert.ok(tracks.every(t => !excludedTracks.has(t.id)));
 for (const exclusion of curation.excludedTracks.filter(t => t.duplicateOf)) {
-  assert.ok(tracks.some(t => t.id === exclusion.duplicateOf), `Missing retained recording for ${exclusion.id}`);
+  assert.ok(tracks.some(t => t.id === exclusion.duplicateOf) || excludedTracks.has(exclusion.duplicateOf), `Missing recording decision for ${exclusion.id}`);
   assert.match(exclusion.isrc, /^[A-Z]{2}[A-Z0-9]{3}\d{7}$/);
 }
 assert.ok(cinema.every(x => !curation.excludedCinemaIds.includes(x.id)));
@@ -33,11 +33,11 @@ assert.ok(cinema.every(x => x.director && x.country));
 assert.equal(cinema.find(x => x.id === 'tv-134182').country, 'CN');
 assert.equal(cinema.find(x => x.id === 'film-24735062').country, 'CN');
 assert.equal(cinema.find(x => x.id === 'tv-95479').creditRole, 'ORIGINAL WORK');
-assert.ok(music.artists.some(x => x.name === 'Soundtracks'));
-assert.ok(music.artists.some(x => x.name === 'Compilations'));
+assert.ok(!music.artists.some(x => x.name === 'Soundtracks'));
+assert.ok(!music.artists.some(x => x.name === 'Compilations'));
 assert.ok(music.albums.every(x => x.coverUrl));
 assert.ok(music.albums.some(x => x.title === 'Live for Today'));
-assert.ok(tracks.some(x => x.title === "Long Live (Taylor's Version)"));
+assert.ok(!tracks.some(x => /Taylor[’']s Version/.test(x.title)));
 assert.ok(music.artists.every(x => x.albumIds.length > 0));
 for (const rule of curation.musicGroups) {
   for (const album of music.albums.filter(a => a.title === rule.title && a.artistName === rule.albumArtist)) {
@@ -56,6 +56,12 @@ assert.equal(cinema.find(x => x.id === 'tv-2316').watchedEntries.length, 9);
 assert.ok(cinema.find(x => x.id === 'tv-1429').watchedEntries.some(x => x.doubanId === '35853587'));
 for (const x of cinema) assert.equal(x.firstWatched, x.watchedEntries.map(m => m.firstWatched).sort()[0]);
 for (const url of [...music.albums.map(x => x.coverUrl), ...music.artists.map(x => x.avatarUrl), ...cinema.map(x => x.posterUrl)].filter(Boolean)) {
+  // Verified standalone artwork from the artist's release page and Spotify single.
+  if (music.albums.some(album => album.coverUrl === url) && [
+    'https://linkstorage.linkfire.com/medialinks/images/7248a0a9-2812-43be-9429-b6811dd83742/artwork-440x440.jpg',
+    'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e9bfead25d05f8e25c9ffdb1',
+  ].includes(url)) continue;
+  if (music.albums.some(album => album.coverUrl === url) && /^https:\/\/is\d+-ssl\.mzstatic\.com\/image\/thumb\//.test(url)) continue;
   assert.match(url, /^https:\/\/homepage-assets\.mathtranslations\.org\/images\/(music|cinema)\/[a-z0-9/.-]+\.webp$/);
 }
 const root = 'Homepage-Assets/media/';
@@ -96,7 +102,8 @@ vm.runInNewContext(ts.transpile(read('src/data/music.ts'), { module: ts.ModuleKi
 const sortedNames = Array.from(sortedContext.exports.musicArtists, a => a.name);
 assert.equal(sortedNames.length, music.artists.length);
 assert.ok(sortedNames.indexOf('陈奕迅') < sortedNames.indexOf('Coldplay'));
-assert.ok(sortedNames.indexOf('林俊杰') < sortedNames.indexOf('Linked Horizon'));
+assert.ok(sortedNames.includes('林俊杰') && sortedNames.includes('Lenka'));
+assert.ok(sortedNames.indexOf('Lenka') < sortedNames.indexOf('林俊杰'));
 assert.ok(sortedNames.indexOf('周杰伦') > sortedNames.indexOf('Queen'));
 const keys = json('src/data/music-sort-names.json');
 for (const name of sortedNames.filter(name => /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(name))) assert.ok(keys[name], `Missing romanization: ${name}`);

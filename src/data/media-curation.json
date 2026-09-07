@@ -491,6 +491,2647 @@
       "reason": "Duplicate recording; prefer album over single, compilation or expanded edition",
       "duplicateOf": "i.06QNXrYH05DPqDW",
       "isrc": "USPG19090023"
+    },
+    {
+      "id": "i.NJv0NJkTl8xp6xo",
+      "title": "愛にできることはまだあるかい",
+      "artist": "RADWIMPS",
+      "album": "天気の子",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNNK0U05DPqDW",
+      "title": "グランドエスケープ (feat. 三浦透子)",
+      "artist": "RADWIMPS",
+      "album": "天気の子",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYY2lt3PO0ROz",
+      "title": "愛にできることはまだあるかい",
+      "artist": "RADWIMPS",
+      "album": "天気の子",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNxR1T05DPqDW",
+      "title": "被动",
+      "artist": "伍佰",
+      "album": "爱你伍佰年: 3",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYNmqf3PO0ROz",
+      "title": "必杀技",
+      "artist": "古巨基",
+      "album": "劲歌. 金曲新曲 + 精选",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNvv2cPezL6z2",
+      "title": "変わらないもの",
+      "artist": "奥 華子",
+      "album": "奥華子BEST ~My Letters~",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX1bD9ugrzp2zq",
+      "title": "不浪漫罪名",
+      "artist": "王杰",
+      "album": "王杰万岁2001 (新曲 + 精选)",
+      "reason": "New song on compilation 萬歲2001; no verified standalone edition selected",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbARbtm2V1pVg",
+      "title": "路小雨",
+      "artist": "周杰伦 & Terdsak Janpan",
+      "album": "不能说的秘密 (Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYbXqT3PO0ROz",
+      "title": "不能说的秘密",
+      "artist": "周杰伦",
+      "album": "不能说的秘密 (Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNY7bFxM6316R",
+      "title": "Lonely Christmas",
+      "artist": "陈奕迅",
+      "album": "2013 陈奕迅 Music Life 精选",
+      "reason": "New song on compilation 4 a Change & Hits; no verified standalone edition selected",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNz1mTxM6316R",
+      "title": "恶作剧",
+      "artist": "林依晨",
+      "album": "幸福遇见 (夏日幸福纪念盘)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0X1gUl8xp6xo",
+      "title": "房间",
+      "artist": "刘瑞琦",
+      "album": "《大丈夫》电视剧原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv00Qmtl8xp6xo",
+      "title": "敢爱敢做",
+      "artist": "林子祥",
+      "album": "最爱 40 - Beloved 40",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbAkQum2V1pVg",
+      "title": "孤单心事",
+      "artist": "蓝又时",
+      "album": "终极一班 (电视原声带)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNXb5HPezL6z2",
+      "title": "河流",
+      "artist": "蛙池",
+      "album": "蛙池 2020-2021",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvZ3QHMDkW6k2",
+      "title": "私の嘘～PianoSolo",
+      "artist": "横山克",
+      "album": "四月は君の嘘 ORIGINAL SONG & SOUNDTRACK",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNq1KfxM6316R",
+      "title": "君は春の中にいる",
+      "artist": "横山克",
+      "album": "四月は君の嘘 ORIGINAL SONG & SOUNDTRACK",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX10lZsgrzp2zq",
+      "title": "アゲイン",
+      "artist": "横山克",
+      "album": "四月は君の嘘 ORIGINAL SONG & SOUNDTRACK",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvqYGPUzq2782E",
+      "title": "四月のある日",
+      "artist": "横山克",
+      "album": "四月は君の嘘 ORIGINAL SONG & SOUNDTRACK",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0eOXUl8xp6xo",
+      "title": "私の嘘",
+      "artist": "横山克",
+      "album": "四月は君の嘘 ORIGINAL SONG & SOUNDTRACK",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbBaoUm2V1pVg",
+      "title": "流沙 (Reimagined)",
+      "artist": "陶喆",
+      "album": "流沙 (Reimagined) - Single",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNMp2cPezL6z2",
+      "title": "杀破狼",
+      "artist": "JS",
+      "album": "仙剑奇侠传 (电视原声带)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNdgYS05DPqDW",
+      "title": "一直很安静",
+      "artist": "阿桑",
+      "album": "仙剑奇侠传 (电视原声带)",
+      "reason": "Artist has fewer than two distinct eligible songs",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNqeqCPezL6z2",
+      "title": "六月的雨",
+      "artist": "胡歌",
+      "album": "仙剑奇侠传 (电视原声带)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0No4Tl8xp6xo",
+      "title": "路小雨 (《不能说的秘密》)",
+      "artist": "Lazypianist",
+      "album": "路小雨 (《不能说的秘密》) - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvqqE9Uzq2782E",
+      "title": "夢灯籠",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNzLYt05DPqDW",
+      "title": "前前前世 (movie ver.)",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJNNMmT0bqNMq7",
+      "title": "三葉のテーマ",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNEZqsPezL6z2",
+      "title": "かたわれ時",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbblZtm2V1pVg",
+      "title": "スパークル (movie ver.)",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYqoYS3PO0ROz",
+      "title": "デート2",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNNMbSxM6316R",
+      "title": "なんでもないや (movie ver.)",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYYW4F3PO0ROz",
+      "title": "Someday or One Day (電視劇《想見你》片頭曲)",
+      "artist": "孙盛希",
+      "album": "电视剧《想见你》原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNNDmS05DPqDW",
+      "title": "真的吗 (电视剧《想见你》插曲)",
+      "artist": "莫文蔚",
+      "album": "电视剧《想见你》原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYYWPS3PO0ROz",
+      "title": "逃 (电视剧《想见你》插曲)",
+      "artist": "孙盛希",
+      "album": "电视剧《想见你》原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNN82SPezL6z2",
+      "title": "秘密 (电视剧《想见你》插曲)",
+      "artist": "张震岳",
+      "album": "电视剧《想见你》原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNNDXU05DPqDW",
+      "title": "一天 (电视剧《想见你》插曲)",
+      "artist": "YELLOW黄宣",
+      "album": "电视剧《想见你》原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvvEvTMDkW6k2",
+      "title": "明天 (电视剧《想见你》插曲)",
+      "artist": "杨乃文",
+      "album": "电视剧《想见你》原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNMQ4t05DPqDW",
+      "title": "明天会更好",
+      "artist": "蔡琴, 余天, 苏芮, 潘越云, 甄妮, 李建复, 林慧萍, 王芷蕾, 黄莺莺, 洪荣宏, 陈淑桦, 娃娃, 王梦麟, 李珮菁, 费玉清, 齐豫, 郑怡, 江蕙 & 杨林",
+      "album": "明天会更好 - Single",
+      "reason": "Album candidate found, but primary artist attribution needs review",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGY9k9S3PO0ROz",
+      "title": "那就这样吧",
+      "artist": "动力火车",
+      "album": "百万全纪录",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNZYYF05DPqDW",
+      "title": "岁月神偷",
+      "artist": "金玟岐",
+      "album": "完美世界",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZGAZFMLve9vd",
+      "title": "我喜欢",
+      "artist": "陶喆",
+      "album": "乐之路",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZBE9UMLve9vd",
+      "title": "天天 (2003 Version)",
+      "artist": "陶喆",
+      "album": "乐之路",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGY7aAU3PO0ROz",
+      "title": "我喜欢 (Ballad Version)",
+      "artist": "陶喆",
+      "album": "乐之路",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVblOZhm2V1pVg",
+      "title": "同桌的你 (95年红星版)",
+      "artist": "老狼",
+      "album": "红星一号 (许巍/郑钧经典作品翻唱集) - EP",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGY96Yf3PO0ROz",
+      "title": "忘记时间",
+      "artist": "胡歌",
+      "album": "蓝光 新歌 (精选辑)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGY6xdF3PO0ROz",
+      "title": "我的爱没前奏",
+      "artist": "罗森涛",
+      "album": "我的爱没前奏 - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX1DO9fgrzp2zq",
+      "title": "我喜欢上你时的内心活动",
+      "artist": "陈绮贞",
+      "album": "喜欢你 (电影原声带)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNLZ1S05DPqDW",
+      "title": "我想牵着你的手",
+      "artist": "许嵩",
+      "album": "许嵩精选合辑",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYVKlf3PO0ROz",
+      "title": "我只在乎你",
+      "artist": "邓丽君",
+      "album": "传奇再续",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvq6xzFzq2782E",
+      "title": "屋顶",
+      "artist": "周杰伦",
+      "album": "男女情歌对唱冠军全记录",
+      "reason": "Original album is 温岚 有点野; only one qualifying 温岚 song in the library, so below artist minimum",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN5rXU0bqNMq7",
+      "title": "小さな恋のうた",
+      "artist": "MONGOL800",
+      "album": "800 Best - Simple Is the Best!!",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXv5bPSMDkW6k2",
+      "title": "遗失的心跳",
+      "artist": "萧亚轩",
+      "album": "我爱我 (心跳100影音庆功版)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv00qxHl8xp6xo",
+      "title": "拥抱",
+      "artist": "五月天",
+      "album": "步步自选作品辑 1999-2013",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVblM4Sm2V1pVg",
+      "title": "勇气",
+      "artist": "棉子",
+      "album": "勇气 - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv023Qfl8xp6xo",
+      "title": "雨天",
+      "artist": "孙燕姿",
+      "album": "My Story (2006 新歌+精选)",
+      "reason": "New song on compilation My Story, Your Song; not on a standard studio album",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNeGESPezL6z2",
+      "title": "真夜中のドア/Stay With Me",
+      "artist": "Miki Matsubara",
+      "album": "松原みき ベスト・コレクション",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNkYEt05DPqDW",
+      "title": "April (2000 Remastered Version)",
+      "artist": "Deep Purple",
+      "album": "Deep Purple (Bonus Tracks Version)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbqLLFm2V1pVg",
+      "title": "爱如潮水",
+      "artist": "张信哲",
+      "album": "永恒金曲 (典藏精选)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv08LYUl8xp6xo",
+      "title": "Akatsuki no Requiem",
+      "artist": "Linked Horizon",
+      "album": "Rakuen e no Shingeki - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbBBQTm2V1pVg",
+      "title": "All Too Well (10 Minute Version) [Taylor's Version] [From The Vault]",
+      "artist": "Taylor Swift",
+      "album": "Red (Taylor’s Version) [+ A Message From Taylor]",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJN4l2uPezL6z2",
+      "title": "Amazing Grace",
+      "artist": "Hayley Westenra",
+      "album": "River of Dreams - The Very Best of Hayley Westenra",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN5OET0bqNMq7",
+      "title": "Baby Blue",
+      "artist": "Badfinger",
+      "album": "Straight Up (Remastered)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXv5DlTMDkW6k2",
+      "title": "Barricades",
+      "artist": "泽野弘之",
+      "album": "TVアニメ「進撃の巨人」Season 2 オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNrdmH05DPqDW",
+      "title": "YouSeeBIGGIRL/T:T",
+      "artist": "泽野弘之",
+      "album": "TVアニメ「進撃の巨人」Season 2 オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNeELSxM6316R",
+      "title": "Call of Silence",
+      "artist": "泽野弘之",
+      "album": "TVアニメ「進撃の巨人」Season 2 オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvvgxHMDkW6k2",
+      "title": "Bennie and the Jets",
+      "artist": "Elton John",
+      "album": "Goodbye Yellow Brick Road (40th Anniversary Celebration / Super Deluxe Edition) [2014 Remaster]",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN09oU0bqNMq7",
+      "title": "I Want to Break Free",
+      "artist": "Queen",
+      "album": "Bohemian Rhapsody (The Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbRDoim2V1pVg",
+      "title": "For River (Piano) [Sarah & Tommy's Version]",
+      "artist": "Kan Gao",
+      "album": "To the Moon (Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VN1ZKTxM6316R",
+      "title": "Born a Stranger",
+      "artist": "Kan Gao",
+      "album": "To the Moon (Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvqGRPtzq2782E",
+      "title": "Everything's Alright",
+      "artist": "Laura Shigihara",
+      "album": "To the Moon (Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNVQEIPezL6z2",
+      "title": "The Story of Tonight",
+      "artist": "Lin-Manuel Miranda, Anthony Ramos, Okieriete Onaodowan, Daveed Diggs & Original Broadway Cast of \"Hamilton\"",
+      "album": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYVRXH3PO0ROz",
+      "title": "You'll Be Back",
+      "artist": "Jonathan Groff & Original Broadway Cast of \"Hamilton\"",
+      "album": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvqX59fzq2782E",
+      "title": "Helpless",
+      "artist": "Phillipa Soo & Original Broadway Cast of \"Hamilton\"",
+      "album": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX1YNVIgrzp2zq",
+      "title": "Satisfied",
+      "artist": "Original Broadway Cast of \"Hamilton\" & Renée Elise Goldsberry",
+      "album": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvbz9TMDkW6k2",
+      "title": "Dear Theodosia",
+      "artist": "Leslie Odom, Jr. & Lin-Manuel Miranda",
+      "album": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNGm0T05DPqDW",
+      "title": "Say No To This",
+      "artist": "Jasmine Cephas Jones, Leslie Odom, Jr., Lin-Manuel Miranda, Sydney James Harcourt & Original Broadway Cast of \"Hamilton\"",
+      "album": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvbLLHMDkW6k2",
+      "title": "Burn",
+      "artist": "Phillipa Soo",
+      "album": "Hamilton: An American Musical (Original Broadway Cast Recording)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX19Y6Cgrzp2zq",
+      "title": "C小调第八号奏鸣曲,作品Op.13《悲怆》第二乐章:如歌的慢板",
+      "artist": "Alessandro Cesaro",
+      "album": "古典任意门7: 贝多芬沉思中",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNz7LUxM6316R",
+      "title": "Call your name <Gv>",
+      "artist": "泽野弘之",
+      "album": "「進撃の巨人」Season3 オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbRz4Im2V1pVg",
+      "title": "Can't Complain",
+      "artist": "Relient K",
+      "album": "Collapsible Lung (Bonus Track Version)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXv41QFMDkW6k2",
+      "title": "Can't Take My Eyes Off You",
+      "artist": "Frankie Valli",
+      "album": "The Very Best of Frankie Valli and the Four Seasons",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZaNGHMLve9vd",
+      "title": "Careless Whisper",
+      "artist": "GEORGE MICHAEL",
+      "album": "Ladies & Gentlemen",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNee6UPezL6z2",
+      "title": "Ceremony",
+      "artist": "New Order",
+      "album": "Singles",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNXb2H05DPqDW",
+      "title": "When To Say When",
+      "artist": "Drake",
+      "album": "Dark Lane Demo Tapes",
+      "reason": "Dark Lane Demo Tapes is a mixtape, outside studio album/EP/single scope",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvPNxtMDkW6k2",
+      "title": "Chicago Freestyle",
+      "artist": "Drake & GIVĒON",
+      "album": "Dark Lane Demo Tapes",
+      "reason": "Dark Lane Demo Tapes is a mixtape, outside studio album/EP/single scope",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGY5KAf3PO0ROz",
+      "title": "Mia & Sebastian's Theme",
+      "artist": "贾斯汀 · 赫尔维茨",
+      "album": "La La Land (Original Motion Picture Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VN9YaFxM6316R",
+      "title": "City of Stars",
+      "artist": "Ryan Gosling & 艾玛·斯通",
+      "album": "La La Land (Original Motion Picture Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNeLxHxM6316R",
+      "title": "Start a Fire",
+      "artist": "John Legend",
+      "album": "La La Land (Original Motion Picture Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN1QgU0bqNMq7",
+      "title": "Deeper and Deeper",
+      "artist": "Cagnet",
+      "album": "Long Vacation Original Soundtrack",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvkPvtMDkW6k2",
+      "title": "Don't Forget About Us (Radio Edit)",
+      "artist": "Mariah Carey",
+      "album": "The Emancipation Of Mimi (Ultra Platinum Edition)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZBxdfMLve9vd",
+      "title": "Don't Stop Me Now (With Long-Lost Guitars)",
+      "artist": "Queen",
+      "album": "Jazz (Deluxe Edition)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VN40GfxM6316R",
+      "title": "兜圈",
+      "artist": "林宥嘉",
+      "album": "《必娶女人》电视原声带",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN5xNS0bqNMq7",
+      "title": "Epilogue",
+      "artist": "悲惨世界阵容",
+      "album": "Les Misérables (The Motion Picture Soundtrack) [Deluxe Edition]",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZVPdfMLve9vd",
+      "title": "Everything I Need (Film Version)",
+      "artist": "Skylar Grey",
+      "album": "Aquaman (Original Motion Picture Soundtrack) [Deluxe Edition]",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZb06TMLve9vd",
+      "title": "ətˈæk 0N tάɪtn",
+      "artist": "泽野弘之",
+      "album": "TVアニメ「進撃の巨人」オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNZ2gcPezL6z2",
+      "title": "First Love (2022 Mix)",
+      "artist": "Utada",
+      "album": "First Love (2022 Mix) - Single",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJNz5of0bqNMq7",
+      "title": "Flag",
+      "artist": "小林武史",
+      "album": "「世界から猫が消えたなら」オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJNM3NF0bqNMq7",
+      "title": "Free Loop",
+      "artist": "Daniel Powter",
+      "album": "Best of Me",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvqE7pUzq2782E",
+      "title": "Friend (Instrumental)",
+      "artist": "纯音乐",
+      "album": "玉置浩二 作品钢琴集",
+      "reason": "Primary performer not verified",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNvEmhPezL6z2",
+      "title": "G弦上的咏叹调",
+      "artist": "翟慧莉 & 金文彬",
+      "album": "最美大提琴",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYNeYT3PO0ROz",
+      "title": "Good Morning Freedom",
+      "artist": "Blue Mink",
+      "album": "Melting Pot - The Best of Blue Mink",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYNddS3PO0ROz",
+      "title": "Good Times Bad Times",
+      "artist": "Led Zeppelin",
+      "album": "Led Zeppelin (Remastered)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX1d1Lsgrzp2zq",
+      "title": "Hanezeve Caradhina (feat. Takeshi Saito)",
+      "artist": "Kevin Penkin",
+      "album": "TVアニメ「メイドインアビス」オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0bexUl8xp6xo",
+      "title": "Heartbreak Hotel",
+      "artist": "Elvis Presley",
+      "album": "Elvis' Golden Records",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZVlQtMLve9vd",
+      "title": "Hedwig's Theme",
+      "artist": "约翰・威廉姆斯",
+      "album": "Harry Potter and the Sorcerer's Stone (Original Motion Picture Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYN9PU3PO0ROz",
+      "title": "Missing Each Other",
+      "artist": "Cagnet",
+      "album": "Here We Are Again - Long Vacation Original Soundtrack III",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNkPzT05DPqDW",
+      "title": "Here We Are Again",
+      "artist": "Cagnet",
+      "album": "Here We Are Again - Long Vacation Original Soundtrack III",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNra3fPezL6z2",
+      "title": "Minami",
+      "artist": "Cagnet & Toshifumi Hinata",
+      "album": "Here We Are Again - Long Vacation Original Soundtrack III",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNqNXF05DPqDW",
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "album": "The Beatles 1967-1970 (The Blue Album)",
+      "reason": "Non-album single confirmed; original single edition and matching recording/cover not selected, excluded from this display",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNvEBiPezL6z2",
+      "title": "Midsummer Madness",
+      "artist": "88rising, Joji, Rich Brian & AUGUST 08",
+      "album": "Head in the Clouds",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX1vvqhgrzp2zq",
+      "title": "History",
+      "artist": "88rising & Rich Brian",
+      "album": "Head in the Clouds",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZ3dqTMLve9vd",
+      "title": "灰姑娘 (Instrumental)",
+      "artist": "梁咏琪",
+      "album": "钢琴恋曲101",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZBMGfMLve9vd",
+      "title": "I Have Nothing",
+      "artist": "Whitney Houston",
+      "album": "The Bodyguard (Original Soundtrack Album)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbbNXim2V1pVg",
+      "title": "I Really Want to Stay At Your House",
+      "artist": "Rosa Walton & Hallie Coggins",
+      "album": "Cyberpunk 2077: Radio, Vol. 2 (Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZMOPUMLve9vd",
+      "title": "I wanted you",
+      "artist": "Ina",
+      "album": "I wanted you - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGY3a9F3PO0ROz",
+      "title": "I'll Never Love Again (Film Version)",
+      "artist": "Lady Gaga & 布莱德利・古柏",
+      "album": "A Star Is Born Soundtrack",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNN06UPezL6z2",
+      "title": "I'm Just a Kid",
+      "artist": "Simple Plan",
+      "album": "No Pads, No Helmets...Just Balls (15th Anniversary Tour Edition)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvkKYFMDkW6k2",
+      "title": "I'm Ok",
+      "artist": "杨瑞代 & 浪花兄弟",
+      "album": "The Crew 乐酷概念合辑",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJN46qTPezL6z2",
+      "title": "If You Leave Me Now",
+      "artist": "Chicago",
+      "album": "The Very Best of Chicago: Only the Beginning",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNLmVU05DPqDW",
+      "title": "IT'S THE RIGHT TIME",
+      "artist": "三浦大知",
+      "album": "ふれあうだけで ~Always with you~ / IT'S THE RIGHT TIME - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VN4BbFxM6316R",
+      "title": "Just Give Me a Reason (feat. Nate Ruess)",
+      "artist": "P!nk",
+      "album": "The Truth About Love (Deluxe Version)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VN12NFxM6316R",
+      "title": "Just the Two of Us (feat. Bill Withers)",
+      "artist": "Grover Washington, Jr.",
+      "album": "Anthology",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN05Et0bqNMq7",
+      "title": "Kanata Haluka",
+      "artist": "RADWIMPS",
+      "album": "铃芽之旅",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvqVOPSzq2782E",
+      "title": "Tears of Suzume",
+      "artist": "RADWIMPS",
+      "album": "铃芽之旅",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNe4YtPezL6z2",
+      "title": "Let It Snow (feat. Brian McKnight) [Remastered 2024]",
+      "artist": "Boyz II Men",
+      "album": "Christmas Interpretations (Remastered 2024)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvZ1oHMDkW6k2",
+      "title": "Like I Do",
+      "artist": "J.Tajor",
+      "album": "Like I Do - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNrXBiPezL6z2",
+      "title": "Long Live (Taylor's Version)",
+      "artist": "Taylor Swift",
+      "album": "Speak Now (Taylor's Version)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbqWXcm2V1pVg",
+      "title": "Love Never Felt So Good (Original Version)",
+      "artist": "Michael Jackson",
+      "album": "XSCAPE (Deluxe)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXv52PUMDkW6k2",
+      "title": "Love Rain - Koino Ame",
+      "artist": "久保田利伸",
+      "album": "THE BADDEST - Hit Parade",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJNVVWf0bqNMq7",
+      "title": "Love Story (Taylor’s Version)",
+      "artist": "Taylor Swift",
+      "album": "Fearless (Taylor's Version)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VN99GTxM6316R",
+      "title": "Lover Boy 88 (Phum Viphurit & Higher Brothers Version)",
+      "artist": "Higher Brothers",
+      "album": "Lover Boy 88 (Phum Viphurit & Higher Brothers Version) - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNMRVf05DPqDW",
+      "title": "Lovin' You",
+      "artist": "Minnie Riperton",
+      "album": "Capitol Gold: The Best of Minnie Riperton",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN0LmF0bqNMq7",
+      "title": "Loving Strangers",
+      "artist": "Russian Red",
+      "album": "Tarifa Groove Collections 11",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJNQ8WF0bqNMq7",
+      "title": "Merry Christmas Mr. Lawrence",
+      "artist": "坂本龙一",
+      "album": "1996 (Re-Mastered)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJN9bqTPezL6z2",
+      "title": "My Heart Will Go On (Love Theme from \"Titanic\")",
+      "artist": "Céline Dion",
+      "album": "My Love - Essential Collection",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0pQQTl8xp6xo",
+      "title": "Need You Now",
+      "artist": "Lady A",
+      "album": "Need You Now - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX123DUgrzp2zq",
+      "title": "NEXT TO YOU",
+      "artist": "Ken Arai",
+      "album": "Parasyte -the maxiim- (Original Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNGd4U05DPqDW",
+      "title": "Physical (Remastered 2021)",
+      "artist": "Olivia Newton-John",
+      "album": "Physical (Deluxe Edition) [Remastered 2021]",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXv5voSMDkW6k2",
+      "title": "Old Stories",
+      "artist": "Kevin Penkin",
+      "album": "TVアニメ「メイドインアビス 烈日の黄金郷」オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX1YllCgrzp2zq",
+      "title": "Phone Call",
+      "artist": "Jon Brion",
+      "album": "Eternal Sunshine of the Spotless Mind (Soundtrack from the Motion Picture)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0AWxfl8xp6xo",
+      "title": "Teardrops On My Guitar",
+      "artist": "Taylor Swift",
+      "album": "Taylor Swift (Deluxe Edition)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0bJ0Tl8xp6xo",
+      "title": "Playing Love",
+      "artist": "埃尼奥・莫里康内 & Gilda Buttà",
+      "album": "The Legend of 1900",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNxz1T05DPqDW",
+      "title": "Polonaise No. 6 in A-Flat, Op. 53 -\"Heroic\"",
+      "artist": "弗拉基米尔・阿什肯纳齐",
+      "album": "Chopin: Polonaises",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv00YkHl8xp6xo",
+      "title": "Por una Cabeza",
+      "artist": "Carlos Gardel",
+      "album": "The Very Best",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNGE1T05DPqDW",
+      "title": "Purple Rain",
+      "artist": "Prince & The Revolution",
+      "album": "Purple Rain",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNE4BfxM6316R",
+      "title": "Refresh",
+      "artist": "Masiwei",
+      "album": "Refresh - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbQeLfm2V1pVg",
+      "title": "Remember Me",
+      "artist": "Iñigo Pascual",
+      "album": "Coco (Original Motion Picture Soundtrack) [Asia Special Edition]",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJN5oXf0bqNMq7",
+      "title": "Rose's Theme (My Heart Will Go On) [Solo Piano Version]",
+      "artist": "詹姆斯・霍纳 & Randy Miller",
+      "album": "Titanic: The Ultimate Collection",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZem4SMLve9vd",
+      "title": "Self Love (Spider-Man: Across the Spider-Verse)",
+      "artist": "Metro Boomin & Coi Leray",
+      "album": "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.B0VNm4xFxM6316R",
+      "title": "September",
+      "artist": "Earth, Wind & Fire",
+      "album": "Greatest Hits",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNEDmsPezL6z2",
+      "title": "Serenade in G, K. 525 \"Eine Kleine Nachtmusik\": I. Allegro",
+      "artist": "圣马丁室内乐团 & 内维尔・马里纳爵士",
+      "album": "Mozart: The Great Serenades (Including \"Eine Kleine Nachtmusik\")",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYqeKt3PO0ROz",
+      "title": "Serenade in G, K. 525 \"Eine Kleine Nachtmusik\": II. Romance (Andante)",
+      "artist": "圣马丁室内乐团 & 内维尔・马里纳爵士",
+      "album": "Mozart: The Great Serenades (Including \"Eine Kleine Nachtmusik\")",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNza2S05DPqDW",
+      "title": "Serenade in G, K. 525 \"Eine Kleine Nachtmusik\": III. Menuetto (Allegretto)",
+      "artist": "圣马丁室内乐团 & 内维尔・马里纳爵士",
+      "album": "Mozart: The Great Serenades (Including \"Eine Kleine Nachtmusik\")",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvoaxUMDkW6k2",
+      "title": "Serenade in G, K. 525 \"Eine Kleine Nachtmusik\": IV. Rondo (Allegro)",
+      "artist": "圣马丁室内乐团 & 内维尔・马里纳爵士",
+      "album": "Mozart: The Great Serenades (Including \"Eine Kleine Nachtmusik\")",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYYdKT3PO0ROz",
+      "title": "Sirius",
+      "artist": "The Alan Parsons Project",
+      "album": "Platinum & Gold Collection: The Alan Parsons Project",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGYN7AH3PO0ROz",
+      "title": "Skinny Love",
+      "artist": "Birdy",
+      "album": "Birdy (Deluxe Version)",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXv43lFMDkW6k2",
+      "title": "SMALL HAPPINESS",
+      "artist": "REMEDIOS",
+      "album": "Love Letter ORIGINAL SOUND TRACK",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNrBYt05DPqDW",
+      "title": "Someone Like You",
+      "artist": "Richard Clayderman, Deyan Pavlov & Bulgarian Symphony Orchestra",
+      "album": "Romantique",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.vMX102VTgrzp2zq",
+      "title": "Space Oddity (2015 Remaster)",
+      "artist": "David Bowie",
+      "album": "David Bowie (aka Space Oddity) [2015 Remaster]",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZG1ZFMLve9vd",
+      "title": "Stay Alive",
+      "artist": "José González",
+      "album": "The Secret Life of Walter Mitty (Music From and Inspired By the Motion Picture)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNb85SPezL6z2",
+      "title": "Take a Bow",
+      "artist": "Rihanna",
+      "album": "Good Girl Gone Bad: Reloaded",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.aJGY22PT3PO0ROz",
+      "title": "The Crave",
+      "artist": "埃尼奥・莫里康内 & Amedeo Tommasi",
+      "album": "The Legend of 1900 (Original Motion Picture Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZG4PTMLve9vd",
+      "title": "The Four Seasons, Violin Concerto in G Minor, Op. 8 No. 2, RV 315 \"Summer\": I. Allegro non molto",
+      "artist": "列奥波德・斯托科夫斯基, 英国爱乐乐团 & Hugh Bean",
+      "album": "Stokowski Edition, Vol. 9",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.7PJNOZgT0bqNMq7",
+      "title": "The Four Seasons, Violin Concerto in G Minor, Op. 8 No. 2, RV 315 \"Summer\": II. Adagio",
+      "artist": "列奥波德・斯托科夫斯基, 英国爱乐乐团 & Hugh Bean",
+      "album": "Stokowski Edition, Vol. 9",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNGEXT05DPqDW",
+      "title": "The Four Seasons: Violin Concerto No. 1 in E Major, RV 269, Op. 8 No. 1 \"La primavera\": I. Allegro",
+      "artist": "安娜-苏菲・穆特, 赫伯特・冯・卡拉扬 & 维也纳爱乐",
+      "album": "Vivaldi: The Four Seasons",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZeeEtMLve9vd",
+      "title": "The Rain",
+      "artist": "久石让",
+      "album": "Kikujiro (Original Motion Picture Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvq289Fzq2782E",
+      "title": "The Sun Also Rises",
+      "artist": "久石让",
+      "album": "The Sun Also Rises (Original Motion Picture Soundtrack)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNKQEF05DPqDW",
+      "title": "The truth that you leave",
+      "artist": "Pianoboy高至豪",
+      "album": "Pianoboy",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvq2YJSzq2782E",
+      "title": "This Will Be Our Year",
+      "artist": "The Zombies",
+      "album": "The Original Studio Recordings, Vol. 1",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVb8l4sm2V1pVg",
+      "title": "Too Good at Goodbyes",
+      "artist": "Madilyn",
+      "album": "Too Good at Goodbyes - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNKz2F05DPqDW",
+      "title": "Trouble I'm In",
+      "artist": "Twinbed",
+      "album": "Trouble I'm In - Single",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.EYVbQ0bSm2V1pVg",
+      "title": "Twisted Nerve",
+      "artist": "伯纳德 ・ 赫尔曼",
+      "album": "Kill Bill Vol. 1 Original Soundtrack (PA Version)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZevqUMLve9vd",
+      "title": "UNDER THE TREE",
+      "artist": "SiM",
+      "album": "UNDER THE TREE - Single",
+      "reason": "Library contains the short single; standard PLAYDEAD contains the full-length version; no substitution of recordings",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvZbYTMDkW6k2",
+      "title": "Wake Up",
+      "artist": "Arcade Fire",
+      "album": "Funeral",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.9oJNv0NUPezL6z2",
+      "title": "What We Talkin’ Bout (feat. Marteen)",
+      "artist": "NCT 127",
+      "album": "Up Next Session: NCT 127",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZMKZtMLve9vd",
+      "title": "Where Is My Mind?",
+      "artist": "Pixies",
+      "album": "Wave of Mutilation: Best of Pixies",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNKR2t05DPqDW",
+      "title": "Young and Beautiful",
+      "artist": "Lana Del Rey",
+      "album": "The Great Gatsby (Music From Baz Luhrmann's Film)",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNMemt05DPqDW",
+      "title": "Yumeji's Theme (Theme from \"In the Mood for Love\")",
+      "artist": "梅林茂",
+      "album": "Yumeji's Theme (Original Motion Picture Soundtrack) - Single",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNxbVT05DPqDW",
+      "title": "Yumeji’s Theme (From \"In the Mood for Love\")",
+      "artist": "安吉拉 · 迪博 & La Pietà",
+      "album": "Silence On Joue - Take 2",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.06QNLBXH05DPqDW",
+      "title": "指纹",
+      "artist": "胡歌",
+      "album": "轩辕剑",
+      "reason": "Album candidate found, but primary artist attribution needs review",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.xrXvO5QtMDkW6k2",
+      "title": "βios (feat. Mika Kobayashi)",
+      "artist": "泽野弘之",
+      "album": "ギルティクラウン オリジナルサウンドトラック",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.NJv0k9xUl8xp6xo",
+      "title": "サンキュー!!",
+      "artist": "HOME MADE 家族",
+      "album": "LAST FOREVER 16 HITS",
+      "reason": "Outside scope: soundtrack, compilation, live or alternate recording; no verified standard-album destination",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.rXzZbbPTMLve9vd",
+      "title": "ラブ・ストーリーは突然に",
+      "artist": "小田和正",
+      "album": "Anohi Anotoki",
+      "reason": "No verified standard release/recording match",
+      "standardEditionStatus": "not-collected"
+    },
+    {
+      "id": "i.dlvq6apfzq2782E",
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "album": "A Night at the Opera (Deluxe Edition)",
+      "reason": "Recording already retained; studio album preferred",
+      "standardEditionStatus": "duplicate"
+    },
+    {
+      "id": "i.dlvqVgdSzq2782E",
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "album": "The Platinum Collection",
+      "reason": "Recording already retained; studio album preferred",
+      "standardEditionStatus": "duplicate"
+    },
+    {
+      "id": "i.vMX1QA1hgrzp2zq",
+      "title": "Somebody To Love",
+      "artist": "Queen",
+      "album": "A Day at the Races (Deluxe Edition)",
+      "reason": "Recording already retained; studio album preferred",
+      "standardEditionStatus": "duplicate"
+    },
+    {
+      "id": "i.xrXvZO3TMDkW6k2",
+      "title": "Don't Look Back in Anger",
+      "artist": "Oasis",
+      "album": "Time Flies...1994-2009",
+      "reason": "Recording already retained; studio album preferred",
+      "standardEditionStatus": "duplicate"
+    },
+    {
+      "id": "i.NJv0b6Yfl8xp6xo",
+      "title": "Yellow",
+      "artist": "Coldplay",
+      "album": "Parachutes",
+      "reason": "Recording already retained; studio album preferred",
+      "standardEditionStatus": "duplicate"
+    },
+    {
+      "id": "i.aJGY73vT3PO0ROz",
+      "title": "迷途羔羊",
+      "artist": "兄弟本色",
+      "album": "天兵",
+      "reason": "Recording already retained; studio album preferred",
+      "standardEditionStatus": "duplicate"
+    },
+    {
+      "id": "i.aJGYov4T3PO0ROz",
+      "title": "First Love",
+      "artist": "Utada",
+      "album": "First Love - EP",
+      "reason": "Recording already retained; studio album preferred",
+      "standardEditionStatus": "duplicate"
+    },
+    {
+      "id": "i.7PJNRXoT0bqNMq7",
+      "title": "Blowin' In the Wind",
+      "artist": "Bob Dylan",
+      "album": "The Freewheelin' Bob Dylan",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNXrYH05DPqDW",
+      "title": "Unchained Melody",
+      "artist": "The Righteous Brothers",
+      "album": "Just Once In My Life",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYoVvT3PO0ROz",
+      "title": "Take Me Home, Country Roads (Original Version)",
+      "artist": "JOHN DENVER",
+      "album": "Poems, Prayers & Promises",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNOBOT0bqNMq7",
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "album": "Second Helping",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY7Y4U3PO0ROz",
+      "title": "Nocturne No. 2 in E-Flat, Op. 9 No. 2",
+      "artist": "克劳迪奥・阿劳",
+      "album": "Chopin: The Nocturnes",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZZ8PUMLve9vd",
+      "title": "Concerto for Violin and Strings in E Major, Op. 8 No. 1, RV 269 \"La Primavera\": I. Allegro",
+      "artist": "吉顿・克莱默, Leslie Pearson, 伦敦交响乐团 & 克劳迪奥・阿巴多",
+      "album": "Vivaldi: Four Seasons",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNvmEF0bqNMq7",
+      "title": "雾之恋",
+      "artist": "谭咏麟",
+      "album": "雾之恋",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1QELcgrzp2zq",
+      "title": "12 Études, Op. 25: No. 11 in A Minor \"Winter Wind\"",
+      "artist": "毛里奇奥・波利尼",
+      "album": "Chopin: Études",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VNmXQSxM6316R",
+      "title": "The Four Seasons: Violin Concerto in F Minor, Op. 8 No. 4, RV 297 \"Winter\": III. Allegro",
+      "artist": "赫伯特・冯・卡拉扬, 维也纳爱乐 & 安娜-苏菲・穆特",
+      "album": "Vivaldi: Die vier Jahreszeiten",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX12O6Sgrzp2zq",
+      "title": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "album": "Appetite For Destruction (Super Deluxe)",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZG9qTMLve9vd",
+      "title": "Superwoman",
+      "artist": "Karyn White",
+      "album": "Karyn White",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VN4DxSxM6316R",
+      "title": "爱",
+      "artist": "小虎队",
+      "album": "爱",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvZ4YTMDkW6k2",
+      "title": "Sonata No. 12 in A Major for Piano, K. 331/300i: III. (Rondo) alla Turca. Allegretto",
+      "artist": "默里・佩拉西亚",
+      "album": "Mozart: Sonatas for Piano K.310, 331 & 533/494",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJN02NH0bqNMq7",
+      "title": "What's Up?",
+      "artist": "4 Non Blondes",
+      "album": "Bigger, Better, Faster, More!",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYVb4H3PO0ROz",
+      "title": "Don't Break My Heart",
+      "artist": "黑豹乐队",
+      "album": "黑豹",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv0eaYFl8xp6xo",
+      "title": "Don't Look Back in Anger (Remastered)",
+      "artist": "Oasis",
+      "album": "(What's the Story) Morning Glory? [Deluxe Edition] [Remastered]",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVbJ5NUm2V1pVg",
+      "title": "Merry Christmas Mr. Lawrence (Version for Piano Trio)",
+      "artist": "坂本龙一, Jaques Morelenbaum & Everton Nelson",
+      "album": "1996",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNvB3sPezL6z2",
+      "title": "One More Time,One More Chance",
+      "artist": "Masayoshi Yamazaki",
+      "album": "One More Time,One More Chance - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvvxxHMDkW6k2",
+      "title": "Ladies and gentlemen we are floating in space",
+      "artist": "Spiritualized",
+      "album": "Ladies and gentlemen we are floating in space",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNLX4U05DPqDW",
+      "title": "Big Big World",
+      "artist": "Emilia",
+      "album": "Big Big World",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvpoxSMDkW6k2",
+      "title": "Iris",
+      "artist": "The Goo Goo Dolls",
+      "album": "Dizzy Up the Girl",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1D9lsgrzp2zq",
+      "title": "Chante's Got a Man",
+      "artist": "Chanté Moore",
+      "album": "This Moment Is Mine",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VN1dLtxM6316R",
+      "title": "I Want It That Way",
+      "artist": "Backstreet Boys",
+      "album": "Millennium",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv0bg9Ul8xp6xo",
+      "title": "比我幸福",
+      "artist": "陈晓东",
+      "album": "比我幸福",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1YxZSgrzp2zq",
+      "title": "Only Time",
+      "artist": "Enya",
+      "album": "A Day Without Rain",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNXNguPezL6z2",
+      "title": "Piano Sonata No. 14 in C-Sharp Minor, Op. 27, No. 2 - \"Moonlight\": I. Adagio sostenuto",
+      "artist": "玛莉亚・琼・皮耶丝",
+      "album": "Beethoven: Piano Sonatas Opp. 27 & 109",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNMeEf05DPqDW",
+      "title": "Dear Friend",
+      "artist": "顺子",
+      "album": "Dear Shunza",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNzDYfPezL6z2",
+      "title": "One Summer's Day",
+      "artist": "久石让",
+      "album": "ENCORE",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNM4Yt05DPqDW",
+      "title": "他一定很爱你",
+      "artist": "阿杜",
+      "album": "天黑",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VN1mmTxM6316R",
+      "title": "我是真的爱上你 (国)",
+      "artist": "王杰",
+      "album": "爱与梦",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNEoYtPezL6z2",
+      "title": "Introduction et Rondo Capriccioso, Op. 28",
+      "artist": "巴里 · 沃兹沃斯, 皇家爱乐管弦乐队 & 珍妮・扬森",
+      "album": "Janine Jansen",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNNBYtPezL6z2",
+      "title": "Nuvole Bianche",
+      "artist": "鲁多维科・艾奥迪",
+      "album": "Una Mattina",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYQKvU3PO0ROz",
+      "title": "Officially Missing You",
+      "artist": "Tamia",
+      "album": "Officially Missing You - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv0OO4Hl8xp6xo",
+      "title": "Stones",
+      "artist": "Sonic Youth",
+      "album": "Sonic Nurse",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VNYgGUxM6316R",
+      "title": "I Miss You",
+      "artist": "AKIKO",
+      "album": "Mood Indigo",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqJ7dSzq2782E",
+      "title": "Come Here",
+      "artist": "Kath Bloom",
+      "album": "Finally",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvbmxHMDkW6k2",
+      "title": "Never Know",
+      "artist": "Jack Johnson",
+      "album": "In Between Dreams (Bonus Track Version)",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYqX4f3PO0ROz",
+      "title": "Life is Like a Boat",
+      "artist": "Rie fu",
+      "album": "Rie fu",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJN11gf0bqNMq7",
+      "title": "Boston",
+      "artist": "Augustana",
+      "album": "All the Stars and Boulevards",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY5VqF3PO0ROz",
+      "title": "Like a Star",
+      "artist": "Corinne Bailey Rae",
+      "album": "Corinne Bailey Rae",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNkazf05DPqDW",
+      "title": "One by One",
+      "artist": "The Black Seeds",
+      "album": "Into the Dojo",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqEVZHzq2782E",
+      "title": "梁山伯与朱丽叶",
+      "artist": "卓文萱 & 曹格",
+      "album": "习惯",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNvagf0bqNMq7",
+      "title": "Almost Lover",
+      "artist": "A Fine Frenzy",
+      "album": "One Cell In the Sea",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1Gg6Sgrzp2zq",
+      "title": "Because of You",
+      "artist": "Ne-Yo",
+      "album": "Because of You",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1YbLTgrzp2zq",
+      "title": "喜欢",
+      "artist": "张悬",
+      "album": "亲爱的...我还不知道",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNXr0f05DPqDW",
+      "title": "洋葱",
+      "artist": "杨宗纬",
+      "album": "鸽子",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZMBEfMLve9vd",
+      "title": "Ichibanboshi",
+      "artist": "田井中彩智",
+      "album": "Love is...",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVbReNtm2V1pVg",
+      "title": "下一个天亮",
+      "artist": "郭静",
+      "album": "下一个天亮",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY2kdT3PO0ROz",
+      "title": "此生不换",
+      "artist": "青鸟飞鱼",
+      "album": "一匹",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvO7PtMDkW6k2",
+      "title": "Fly Me To The Moon",
+      "artist": "小野丽莎",
+      "album": "Cheek To Cheek -Jazz Standards from RIO-",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNLBmT05DPqDW",
+      "title": "偏爱",
+      "artist": "张芸京",
+      "album": "破天荒",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNz62S05DPqDW",
+      "title": "Violin Sonata No. 9 in A Major, Op. 47 \"Kreutzer\": I. Adagio sostenuto (Presto)",
+      "artist": "伊莎贝拉・浮士德 & 亚历山大・曼尼柯夫",
+      "album": "Beethoven: Complete Sonatas for Piano & Violin",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv0Xp0Hl8xp6xo",
+      "title": "One Day",
+      "artist": "Matisyahu",
+      "album": "Light",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNV56CPezL6z2",
+      "title": "失眠",
+      "artist": "Suki刘舒妤",
+      "album": "Ladies Night",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNv8EFPezL6z2",
+      "title": "Price Tag (feat. B.o.B)",
+      "artist": "Jessie J",
+      "album": "Who You Are (Platinum Edition)",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNeO5HPezL6z2",
+      "title": "Fuerteventura",
+      "artist": "Russian Red",
+      "album": "Fuerteventura",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY6OXS3PO0ROz",
+      "title": "贝加尔湖畔",
+      "artist": "李健",
+      "album": "依然",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNkLXH05DPqDW",
+      "title": "You Won't Let Me",
+      "artist": "Karise Eden",
+      "album": "My Journey",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNrKmsPezL6z2",
+      "title": "España, Rhapsody for Orchestra",
+      "artist": "伦敦交响乐团 & 阿托乌洛 · 阿尔金塔",
+      "album": "España",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv0OEYSl8xp6xo",
+      "title": "I'm Fine",
+      "artist": "Emily Hearn",
+      "album": "Red Balloon",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqGLpSzq2782E",
+      "title": "We Are Young (feat. Janelle Monáe)",
+      "artist": "Fun.",
+      "album": "We Are Young (feat. Janelle Monáe) - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNe73uPezL6z2",
+      "title": "Departures 〜あなたにおくるアイの歌〜",
+      "artist": "EGOIST",
+      "album": "Extra terrestrial Biological Entities",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNEr2H0bqNMq7",
+      "title": "Komm, Susser Tod",
+      "artist": "Division One",
+      "album": "Shoutotsu to Kaihou",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZZomSMLve9vd",
+      "title": "变成陌生人",
+      "artist": "王心凌",
+      "album": "爱。不爱",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv02L0Sl8xp6xo",
+      "title": "老伴",
+      "artist": "李荣浩",
+      "album": "模特",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VNZ6LfxM6316R",
+      "title": "The Monster (feat. Rihanna)",
+      "artist": "Eminem",
+      "album": "The Marshall Mathers LP2 (Deluxe)",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYYBqH3PO0ROz",
+      "title": "Say Something",
+      "artist": "A Great Big World & Christina Aguilera",
+      "album": "Is There Anybody Out There?",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJN992F0bqNMq7",
+      "title": "Chandelier",
+      "artist": "Sia Furler",
+      "album": "1000 Forms of Fear",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNdNNt05DPqDW",
+      "title": "unravel",
+      "artist": "TK from Ling tosite sigure",
+      "album": "Fantastic Magic",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNOGNU0bqNMq7",
+      "title": "クロノスタシス",
+      "artist": "蘑菇帝国",
+      "album": "フェイクワールドワンダーランド",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZxz4SMLve9vd",
+      "title": "The Night Is Still Young",
+      "artist": "Nicki Minaj",
+      "album": "The Pinkprint (Deluxe Edition)",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv0bXYHl8xp6xo",
+      "title": "Uptown Funk (feat. Bruno Mars)",
+      "artist": "Mark Ronson",
+      "album": "Uptown Special",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNLdNU05DPqDW",
+      "title": "迷途羔羊",
+      "artist": "兄弟本色",
+      "album": "Fly Out - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvkRvtMDkW6k2",
+      "title": "双双",
+      "artist": "李幸倪",
+      "album": "beGin",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv0NWQSl8xp6xo",
+      "title": "カタオモイ",
+      "artist": "Aimer",
+      "album": "daydream",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNN4aH0bqNMq7",
+      "title": "Suisei",
+      "artist": "Lovely Summer Chan",
+      "album": "LSC",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvbr3fMDkW6k2",
+      "title": "Die For You",
+      "artist": "Abel Tesfaye",
+      "album": "Starboy",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYq9XT3PO0ROz",
+      "title": "IF YOU",
+      "artist": "BIGBANG",
+      "album": "D - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZNqqTMLve9vd",
+      "title": "We Good",
+      "artist": "The JuJu Exchange",
+      "album": "Exchange",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX11D6Cgrzp2zq",
+      "title": "Catch the Moment",
+      "artist": "LiSA",
+      "album": "LiTTLE DEViL PARADE",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1vQDfgrzp2zq",
+      "title": "Everybody Dies In Their Nightmares",
+      "artist": "XXXTENTACION",
+      "album": "17",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVbB4pim2V1pVg",
+      "title": "Pure Imagination (feat. J'san)",
+      "artist": "Rook1e",
+      "album": "Love Letters",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNKe0F05DPqDW",
+      "title": "Chaperone",
+      "artist": "Hurts",
+      "album": "Desire",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VNGemFxM6316R",
+      "title": "Life's a struggle",
+      "artist": "VAVA",
+      "album": "21",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVb8BNHm2V1pVg",
+      "title": "Fresh Eyes",
+      "artist": "Andy Grammer",
+      "album": "The Good Parts",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY5DvS3PO0ROz",
+      "title": "Uchiagehanabi",
+      "artist": "DAOKO×米津玄師",
+      "album": "Uchiagehanabi - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1G9DCgrzp2zq",
+      "title": "Fireworks",
+      "artist": "First Aid Kit",
+      "album": "Ruins",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNMV1f05DPqDW",
+      "title": "Suite bergamasque, L. 75: III. Clair de lune",
+      "artist": "梅纳海姆 · 普雷斯勒",
+      "album": "Clair de lune",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVbN3NFm2V1pVg",
+      "title": "ただ君に晴れ",
+      "artist": "Yorushika",
+      "album": "負け犬にアンコールはいらない",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY12At3PO0ROz",
+      "title": "Babe (feat. Taylor Swift)",
+      "artist": "Sugarland",
+      "album": "Bigger",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNqqEU05DPqDW",
+      "title": "SICKO MODE",
+      "artist": "Travis Scott",
+      "album": "ASTROWORLD",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJN4ZgtPezL6z2",
+      "title": "50 Feet",
+      "artist": "SoMo",
+      "album": "A Beautiful November",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYQrPT3PO0ROz",
+      "title": "Prefer",
+      "artist": "Drax Project",
+      "album": "Noon - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqElBfzq2782E",
+      "title": "Lose You To Love Me",
+      "artist": "Selena Gomez",
+      "album": "Lose You to Love Me - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNMZYsPezL6z2",
+      "title": "Loving You",
+      "artist": "Seafret",
+      "album": "Most of Us Are Strangers",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNX4Vf05DPqDW",
+      "title": "Written in the Stars",
+      "artist": "亚历克西斯 · 弗伦奇",
+      "album": "Dreamland",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZZq4SMLve9vd",
+      "title": "唯一 (三立/台视戏剧《恋爱是科学》插曲)",
+      "artist": "告五人",
+      "album": "运气来得若有似无",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNNYNH05DPqDW",
+      "title": "Cat Cafe",
+      "artist": "Shoffy",
+      "album": "Marathon",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqNkxFzq2782E",
+      "title": "别怕变老",
+      "artist": "王以太 & 艾热AIR",
+      "album": "幸存者的负罪感",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY2xlS3PO0ROz",
+      "title": "Leave The Door Open",
+      "artist": "Bruno Mars, Anderson .Paak & Silk Sonic",
+      "album": "An Evening With Silk Sonic",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNN7NIPezL6z2",
+      "title": "我的美丽",
+      "artist": "小霞",
+      "album": "小霞 2.0",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYVEYS3PO0ROz",
+      "title": "德国下雪了 (Acoustic) [feat. 徐研培]",
+      "artist": "许哲珮",
+      "album": "In My Place (feat. 徐研培)",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNZgEcPezL6z2",
+      "title": "Skin and Bones",
+      "artist": "070 Shake",
+      "album": "You Can’t Kill Me",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1D4Digrzp2zq",
+      "title": "Like A Star",
+      "artist": "YOUNGSO",
+      "album": "UTOPIA",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYolXT3PO0ROz",
+      "title": "Bad Habit",
+      "artist": "Steve Lacy",
+      "album": "Gemini Rights",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZ37GHMLve9vd",
+      "title": "catch me",
+      "artist": "JVKE",
+      "album": "this is what ____ feels like (Vol. 1-4)",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXv4NYtMDkW6k2",
+      "title": "Snooze",
+      "artist": "SZA",
+      "album": "SOS",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZr1qTMLve9vd",
+      "title": "Don't Go",
+      "artist": "Skrillex, Justin Bieber & Don Toliver",
+      "album": "Don't Go - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNVzgIPezL6z2",
+      "title": "Monday (feat. Lionman)",
+      "artist": "窦靖童",
+      "album": "春游",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv02bxSl8xp6xo",
+      "title": "My Love Mine All Mine",
+      "artist": "Mitski",
+      "album": "The Land Is Inhospitable and So Are We",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNzdzS05DPqDW",
+      "title": "odoriko",
+      "artist": "Vaundy",
+      "album": "odoriko - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNODEt0bqNMq7",
+      "title": "3 Alt-Wiener Tanzweisen: No. 2, Liebesleid (Arr. Rachmaninoff for Piano)",
+      "artist": "Aurélien Pontier",
+      "album": "Vienna: Joyful Apocalypse",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVbNPbcm2V1pVg",
+      "title": "Piano Sonata No. 8 in C Minor, Op. 13 \"Pathétique\": II. Adagio cantabile",
+      "artist": "莫里茨・温克尔曼",
+      "album": "Beethoven: Piano Sonatas, Opp. 10, 13, 27, 53, 79 & 101",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYVoAT3PO0ROz",
+      "title": "如果每天都可以 happy happy 谁想要sad:))",
+      "artist": "陈娴静",
+      "album": "如果每天都可以 happy happy 谁想要sad:)) - 一起去度假",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNee5TPezL6z2",
+      "title": "Deadman",
+      "artist": "蔡徐坤",
+      "album": "Deadman - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGY95lS3PO0ROz",
+      "title": "天后",
+      "artist": "陈势安",
+      "album": "天后 - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvvpLHMDkW6k2",
+      "title": "Naimononedari",
+      "artist": "KANA-BOON",
+      "album": "Boku Ga CD Wo Dashitara - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1oV4Sgrzp2zq",
+      "title": "Christmas Song",
+      "artist": "back number",
+      "album": "Christmas Song - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VNG9aSxM6316R",
+      "title": "Mercury",
+      "artist": "Yates",
+      "album": "Mercury - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXv79YSMDkW6k2",
+      "title": "Grooving Smoothly",
+      "artist": "Riley Richard",
+      "album": "Evolving - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VN1PLHxM6316R",
+      "title": "Love",
+      "artist": "Finding Hope",
+      "album": "Our Love - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX116Lhgrzp2zq",
+      "title": "comethru",
+      "artist": "Jeremy Zucker",
+      "album": "summer, - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYN7KF3PO0ROz",
+      "title": "Name of Love",
+      "artist": "cinema staff",
+      "album": "Name of Love - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNv0WU0bqNMq7",
+      "title": "Little Bird",
+      "artist": "Jasmine Cephas Jones",
+      "album": "Blue Bird - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VNzvbSxM6316R",
+      "title": "门德尔松 无词歌 Op.62 No.6 春之歌",
+      "artist": "Linna Lee",
+      "album": "门德尔松 无词歌 Op.62 古典钢琴纯音乐 世界名曲轻音乐 无损独奏钢琴曲 - EP",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqa9pUzq2782E",
+      "title": "Last Christmas (Single Version)",
+      "artist": "Wham!",
+      "album": "Last Christmas - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXv4XqFMDkW6k2",
+      "title": "We Are the World",
+      "artist": "U.S.A. for Africa",
+      "album": "We Are the World - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqX4xfzq2782E",
+      "title": "17",
+      "artist": "椎名林檎",
+      "album": "Tsumi To Batsu - Crime and Punishment - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNrXmhPezL6z2",
+      "title": "素颜 (with 何曼婷)",
+      "artist": "许嵩",
+      "album": "素颜 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNXQNf05DPqDW",
+      "title": "Autumn",
+      "artist": "July",
+      "album": "Autumn - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNM9Nf05DPqDW",
+      "title": "Cry For Me (feat. Ami)",
+      "artist": "Michita",
+      "album": "Cry For Me (feat. Ami) - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVbRNbHm2V1pVg",
+      "title": "I Love You So",
+      "artist": "The Walters",
+      "album": "I Love You So - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNX95CPezL6z2",
+      "title": "Because You Are Who You Are",
+      "artist": "K.S. Rhoads",
+      "album": "Because You Are Who You Are - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvq9oBfzq2782E",
+      "title": "来不及",
+      "artist": "刘瑞琦",
+      "album": "晚安,琦 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYbZqU3PO0ROz",
+      "title": "不用去猜 (Jazz Version)",
+      "artist": "Jony J",
+      "album": "不用去猜 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvq9LqFzq2782E",
+      "title": "Legends Never Die",
+      "artist": "League of Legends Music & Against The Current",
+      "album": "Legends Never Die - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZrREfMLve9vd",
+      "title": "飞云之下",
+      "artist": "韩红 & 林俊杰",
+      "album": "飞云之下 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJNV6oS0bqNMq7",
+      "title": "全是爱",
+      "artist": "萧敬腾",
+      "album": "全是爱 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqNAzfzq2782E",
+      "title": "九月底",
+      "artist": "余佳运",
+      "album": "九月底 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNxQVT05DPqDW",
+      "title": "Shouldn't Couldn't Wouldn't (Acoustic Version)",
+      "artist": "NIKI & 88rising",
+      "album": "NIKI Acoustic Sessions: Head in the Clouds II - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.NJv02lmTl8xp6xo",
+      "title": "你和我都没有错",
+      "artist": "都智文",
+      "album": "你和我都没有错 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNN8gFPezL6z2",
+      "title": "想见你想见你想见你 (电视剧《想见你》片尾曲)",
+      "artist": "八三夭",
+      "album": "想见你想见你想见你 (电视剧《想见你》片尾曲) - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1vEETgrzp2zq",
+      "title": "everything i wanted",
+      "artist": "Billie Eilish",
+      "album": "everything i wanted - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvb7vHMDkW6k2",
+      "title": "看见妳的声音(电视剧《想见你》插曲)",
+      "artist": "陈零九",
+      "album": "看见妳的声音(电视剧《想见你》插曲) - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.aJGYY7YU3PO0ROz",
+      "title": "Mystery of Love",
+      "artist": "Luke Pickman",
+      "album": "Mystery of Love - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.dlvqV5pFzq2782E",
+      "title": "衝撃",
+      "artist": "安藤裕子",
+      "album": "衝撃 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvvZ9TMDkW6k2",
+      "title": "SWEET MEMORIES",
+      "artist": "Lilas Ikuta",
+      "album": "SWEET MEMORIES - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNrJzt05DPqDW",
+      "title": "少年少女",
+      "artist": "GING NANG BOYZ",
+      "album": "少年少女 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJN1OOS0bqNMq7",
+      "title": "Drive You Home",
+      "artist": "Jackson Wang & Internet Money",
+      "album": "Drive You Home - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.7PJN0AXf0bqNMq7",
+      "title": "悪魔の子",
+      "artist": "ヒグチアイ",
+      "album": "悪魔の子 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNZNYtPezL6z2",
+      "title": "2 O' CLOCK",
+      "artist": "dori",
+      "album": "2 O' CLOCK - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.EYVbA24Cm2V1pVg",
+      "title": "The Rumbling",
+      "artist": "SiM",
+      "album": "The Rumbling - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.xrXvZNPHMDkW6k2",
+      "title": "Shitsurensongtakusankiitenaitebakarinowatashihamou.",
+      "artist": "りりあ。",
+      "album": "Shitsurensongtakusankiitenaitebakarinowatashihamou. - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.vMX1036fgrzp2zq",
+      "title": "Christmas List",
+      "artist": "Anson Seabra",
+      "album": "Christmas List - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.06QNdJ4S05DPqDW",
+      "title": "眼泪记得你 (电影《想见你》主题曲)",
+      "artist": "孙盛希",
+      "album": "眼泪记得你 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNX1YFPezL6z2",
+      "title": "楼上的房东",
+      "artist": "MC HOTDOG",
+      "album": "楼上的房东 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.9oJNVWqsPezL6z2",
+      "title": "CANDYRELLA",
+      "artist": "Paul Partohap",
+      "album": "CANDYRELLA - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.rXzZGY9SMLve9vd",
+      "title": "清洗",
+      "artist": "Cacien",
+      "album": "清洗 - Single",
+      "reason": "Artist has fewer than two distinct eligible songs"
+    },
+    {
+      "id": "i.B0VNZMNfxM6316R",
+      "title": "Girls Like You (feat. Cardi B)",
+      "artist": "Maroon 5",
+      "album": "Girls Like You (feat. Cardi B) - Single",
+      "reason": "Song represented on a standard studio album; standalone alternate version omitted"
     }
   ],
   "musicGroups": [
@@ -651,8 +3292,8 @@
     },
     {
       "title": "Vivaldi: Four Seasons",
-      "albumArtist": "吉顿・克莱默, Leslie Pearson, 伦敦交响乐团 & 克劳迪奥・阿巴多",
-      "group": "吉顿・克莱默"
+      "albumArtist": "Gidon Kremer, Leslie Pearson, London Symphony Orchestra & Claudio Abbado",
+      "group": "Gidon Kremer"
     },
     {
       "title": "Long Vacation Original Soundtrack",
@@ -686,8 +3327,8 @@
     },
     {
       "title": "España",
-      "albumArtist": "阿托乌洛 · 阿尔金塔 & 伦敦交响乐团",
-      "group": "伦敦交响乐团"
+      "albumArtist": "阿托乌洛 · 阿尔金塔 & London Symphony Orchestra",
+      "group": "London Symphony Orchestra"
     },
     {
       "title": "Aquaman (Original Motion Picture Soundtrack) [Deluxe Edition]",
@@ -751,8 +3392,8 @@
     },
     {
       "title": "Janine Jansen",
-      "albumArtist": "巴里 · 沃兹沃斯, 珍妮・扬森 & 皇家爱乐管弦乐队",
-      "group": "珍妮・扬森"
+      "albumArtist": "Barry Wordsworth, Janine Jansen & Royal Philharmonic Orchestra",
+      "group": "Janine Jansen"
     },
     {
       "title": "铃芽之旅",
@@ -771,8 +3412,8 @@
     },
     {
       "title": "My Favourite Kreisler",
-      "albumArtist": "伊扎克・帕尔曼 & 萨缪尔 · 桑德斯",
-      "group": "伊扎克・帕尔曼"
+      "albumArtist": "Itzhak Perlman & Samuel Sanders",
+      "group": "Itzhak Perlman"
     },
     {
       "title": "Lonely - Single",
@@ -806,7 +3447,7 @@
     },
     {
       "title": "Beethoven for Three: Symphony No. 4 and Op. 97 \"Archduke\"",
-      "albumArtist": "马友友, 列奥尼达斯・卡瓦科斯 & 伊曼纽尔・艾克斯",
+      "albumArtist": "Yo-Yo Ma, Leonidas Kavakos & Emanuel Ax",
       "group": "马友友"
     },
     {
@@ -856,13 +3497,13 @@
     },
     {
       "title": "Vivaldi: Die vier Jahreszeiten",
-      "albumArtist": "赫伯特・冯・卡拉扬, 维也纳爱乐 & 安娜-苏菲・穆特",
-      "group": "安娜-苏菲・穆特"
+      "albumArtist": "Herbert von Karajan, Vienna Philharmonic & Anne-Sophie Mutter",
+      "group": "Anne-Sophie Mutter"
     },
     {
       "title": "Vivaldi: The Four Seasons",
       "albumArtist": "安娜-苏菲・穆特, 赫伯特・冯・卡拉扬 & 维也纳爱乐",
-      "group": "安娜-苏菲・穆特"
+      "group": "Anne-Sophie Mutter"
     },
     {
       "title": "Kikujiro (Original Motion Picture Soundtrack)",
@@ -881,13 +3522,13 @@
     },
     {
       "title": "Beethoven: Complete Sonatas for Piano & Violin",
-      "albumArtist": "伊莎贝拉・浮士德 & 亚历山大・曼尼柯夫",
-      "group": "伊莎贝拉・浮士德"
+      "albumArtist": "Isabelle Faust & Alexander Melnikov",
+      "group": "Isabelle Faust"
     },
     {
       "title": "Dreamland",
-      "albumArtist": "亚历克西斯 · 弗伦奇, 皇家利物浦爱乐乐团 & James Morgan",
-      "group": "亚历克西斯 · 弗伦奇"
+      "albumArtist": "Alexis Ffrench, Royal Liverpool Philharmonic Orchestra & James Morgan",
+      "group": "Alexis Ffrench"
     },
     {
       "title": "The Great Gatsby (Music From Baz Luhrmann's Film)",
@@ -1605,5 +4246,19 @@
       "film-1299398",
       "film-1292213"
     ]
-  ]
+  ],
+  "musicPolicy": {
+    "allowedReleaseTypes": [
+      "studio",
+      "ep",
+      "single"
+    ],
+    "edition": "Original standard studio edition; no deluxe, expanded, compilations, soundtracks or live albums",
+    "standalone": "Omit songs represented by a standard studio album; deduplicate recordings across releases",
+    "taylorSwift": "Original recordings only; re-recordings held separately as explicitly requested",
+    "unverified": "Do not display; preserve source records and reasons in the audit",
+    "audit": "reports/music-standard-editions-audit.json",
+    "minimumDistinctSongsPerArtist": 2,
+    "remaster": "Original album tracklists govern display; a remaster of the same performance is not a new album."
+  }
 }
