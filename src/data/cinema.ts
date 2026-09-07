@@ -1,4 +1,5 @@
 import importedCinema from './cinema-import.json';
+import { cinemaGroups } from './media-curation.json';
 
 export interface MediaItem {
   id: string;
@@ -37,7 +38,24 @@ export interface MediaItem {
 
 const importedItems = importedCinema as MediaItem[];
 const isAnimation = (item: MediaItem) => item.genre.split(', ').includes('Animation');
-export const cinemaAnimation = importedItems.filter(isAnimation);
-export const cinemaFilms = importedItems.filter(item => item.type === 'film' && !isAnimation(item));
+const seriesById = new Map(cinemaGroups.flatMap((ids, group) => ids.map(id => [id, group] as const)));
+
+function relatedOrder(items: MediaItem[]): MediaItem[] {
+  const groups = new Map<string, MediaItem[]>();
+  for (const item of items) {
+    const series = seriesById.get(item.id);
+    const key = series === undefined ? `director:${item.director}` : `series:${series}`;
+    const group = groups.get(key) ?? [];
+    group.push(item);
+    groups.set(key, group);
+  }
+  return [...groups.values()]
+    .sort((a, b) => Number(b.some(item => item.review)) - Number(a.some(item => item.review)))
+    .flatMap(group => group.sort((a, b) => Number(a.year) - Number(b.year)
+      || Number(b.type === 'series') - Number(a.type === 'series')));
+}
+
+export const cinemaAnimation = relatedOrder(importedItems.filter(isAnimation));
+export const cinemaFilms = relatedOrder(importedItems.filter(item => item.type === 'film' && !isAnimation(item)));
 export const cinemaSeries = importedItems.filter(item => item.type === 'series' && !isAnimation(item));
 export const allCinemaItems: MediaItem[] = importedItems;

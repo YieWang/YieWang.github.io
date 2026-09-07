@@ -5,9 +5,9 @@ import { cinemaFilms, cinemaSeries, cinemaAnimation } from '../../../data/cinema
 
 const categories = [
   { id: 'films', label: 'Films', items: cinemaFilms },
-  { id: 'series', label: 'Series', items: cinemaSeries },
+  { id: 'series', label: 'Series', items: [...cinemaSeries].sort((a, b) => Number(!!b.review) - Number(!!a.review)) },
   { id: 'animation', label: 'Animation', items: cinemaAnimation },
-].map(category => ({ ...category, items: [...category.items].sort((a, b) => Number(!!b.review) - Number(!!a.review)) }));
+];
 ---
 
 <Layout
@@ -94,11 +94,6 @@ const categories = [
         </section>
       ))}
     </main>
-    <aside aria-label="Credits" class="mt-16 text-[0.65rem] leading-relaxed text-[#888888]">
-      <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">
-        <img src="https://www.themoviedb.org/assets/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB" width="80" height="11" loading="lazy" class="mb-2" />
-      </a>
-    </aside>
   </div>
 
   <!-- SCHEME A MODAL / LIGHTBOX (Pure White, Two-Column Curatorial Studio) -->
