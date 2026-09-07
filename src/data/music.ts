@@ -57,4 +57,6 @@ const artistSortName = (artist: MusicArtist) => (sortNames as Record<string, str
 export const musicArtists = [...importedMusic.artists as MusicArtist[]]
   .filter(artist => !artist.hidden)
   .sort((a, b) => artistOrder.compare(artistSortName(a), artistSortName(b)) || artistOrder.compare(a.name, b.name));
-export const musicAlbums = (importedMusic.albums as MusicAlbum[]).filter(album => !album.hidden);
+export const musicAlbums = (importedMusic.albums as MusicAlbum[])
+  .filter(album => !album.hidden)
+  .sort((a, b) => Number(a.year) - Number(b.year));
