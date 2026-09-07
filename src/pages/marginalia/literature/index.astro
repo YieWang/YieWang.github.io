@@ -229,7 +229,7 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
 
     if (review) {
       const fullText = review.content.trim();
-      const paragraphs = fullText.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
+      const paragraphs = fullText.split(/\r?\n+/).map(p => p.trim()).filter(p => p.length > 0);
 
       if (paragraphs.length > 1) {
         isLongReview = true;
@@ -461,7 +461,7 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
       essayCloseTimer = null;
     }
 
-    const paragraphs = essay.content.trim().split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
+    const paragraphs = essay.content.trim().split(/\r?\n+/).map(p => p.trim()).filter(p => p.length > 0);
     const contentHtml = paragraphs
       .map(p => `<p class="leading-[2.0] text-[0.88rem] sm:text-[0.94rem] text-[#2F2F2F] font-normal tracking-wide whitespace-pre-line pt-3.5" style="text-indent: 2em;">${escapeHtml(p)}</p>`)
       .join('');

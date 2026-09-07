@@ -1,6 +1,10 @@
 #local-editor-toolbar, #local-editor-panel { font: 14px/1.6 -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; color: #242424; text-transform: none; letter-spacing: 0; }
 #local-editor-toolbar { position: fixed; z-index: 10000; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; align-items: center; padding: 9px 12px; background: #fffffff5; border: 1px solid #deded8; border-radius: 12px; box-shadow: 0 4px 22px #0001; white-space: nowrap; }
 #local-editor-toolbar span { font-size: 12px; color: #73736d; }
+#local-editor-toolbar [role=status]:empty { display: none; }
+.le-search-target { outline: 2px solid #75846a; outline-offset: 5px; }
+#local-editor-toolbar form { margin: 0; min-width: 0; }
+#local-editor-toolbar input[type=search] { width: 190px; max-width: 100%; padding: 6px 9px; border: 1px solid #deded8; border-radius: 6px; background: white; color: inherit; font: inherit; }
 #local-editor-toolbar button, #local-editor-panel button, #local-editor-toolbar select { padding: 6px 10px; background: #f4f4ef; border: 1px solid #deded8; border-radius: 6px; cursor: pointer; }
 #local-editor-toolbar [hidden], #local-editor-panel [hidden] { display: none !important; }
 #local-editor-toolbar button:disabled, #local-editor-panel button:disabled { opacity: .4; cursor: default; }

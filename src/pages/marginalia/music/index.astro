@@ -278,8 +278,6 @@ const artistGroups = musicArtists.map(artist => {
             style="scrollbar-gutter: stable;"
           >
             <div class="space-y-0.5">
-              ${album.rating ? `<p class="text-sm mb-3">${escapeHtml(album.rating)}</p>` : ''}
-              ${album.listenedDate ? `<p class="text-xs text-[#888888] mb-3">${escapeHtml(album.listenedDate)}</p>` : ''}
               ${album.summary ? `<p class="text-sm leading-relaxed whitespace-pre-line mb-4">${escapeHtml(album.summary)}</p>` : ''}
               ${favoriteTracksHtml}
             </div>

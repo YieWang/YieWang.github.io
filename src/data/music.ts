@@ -34,8 +34,6 @@ export interface MusicAlbum {
   format?: 'Vinyl' | 'CD' | 'Digital' | 'Cassette' | 'Live';
   coverUrl: string;
   tracks: MusicTrack[];
-  rating?: string;
-  listenedDate?: string;
   summary?: string;
 }
 

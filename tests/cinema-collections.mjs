@@ -81,14 +81,9 @@ assert.ok(animationCards.some(x => x.id === 'tv-37854'), 'One Piece remains visi
 
 const filmCards = Array.from(context.exports.cinemaFilmCards);
 assert.ok(filmCards.some(x => x.id === 'film-1296697' && !x.installments), 'Original Planet of the Apes stays standalone');
-for (const [title, ids] of [
-  ['Rise of the Planet of the Apes', ['film-3274505', 'film-7046723', 'film-25808075']],
-  ['Spider-Man', ['film-1306612', 'film-1308570', 'film-1418189']],
-  ['The Amazing Spider-Man', ['film-2129132', 'film-6082518']],
-  ['Lost on Journey', ['film-4237879', 'film-10574622']],
-]) {
-  const card = filmCards.find(x => x.title === title);
-  assert.deepEqual(Array.from(card?.installments || [], x => x.id), ids, `${title}: preserve confirmed continuity and exceptions`);
+const excludedIds = JSON.parse(readFileSync(new URL('media-curation.json', root), 'utf8')).excludedCinemaIds;
+for (const id of excludedIds) {
+  assert.ok(!allCinemaItems.some(x => x.id === id), `Deleted films must stay removed: ${id}`);
 }
 assert.deepEqual(filmCards.map(x => x.id).sort(), Array.from(groupFilmCollections(cinemaFilms), x => x.id).sort(), 'Sorting preserves every existing film card');
 const tiers = filmCards.map(x => Number(!x.installments));

@@ -10,7 +10,7 @@ async page => {
     if (await on.count()) await on.click();
   };
   const save = async () => {
-    await page.locator('#local-editor-panel footer').getByRole('button', { name: '保存并预览', exact: true }).click();
+    await page.locator('#local-editor-panel footer').getByRole('button', { name: '保存', exact: true }).click();
     await page.waitForFunction(() => !document.getElementById('local-editor-panel').open && document.querySelector('#local-editor-toolbar [role=status]').textContent.includes('已保存'));
     if (!await page.getByRole('button', { name: '退出编辑', exact: true }).count()) throw Error('Saving exited edit mode');
     // This check next exercises the public preview; exit editing explicitly.
@@ -22,6 +22,7 @@ async page => {
     await editMode();
     await page.getByRole('button', { name: '新增 / 管理', exact: true }).click();
     await page.getByRole('button', { name: '+ 新增书籍', exact: true }).click();
+    await page.locator('#local-editor-panel form > details > summary').filter({ hasText: /^其他信息$/ }).click();
     await page.getByLabel('标题 *', { exact: true }).fill(testTitle);
     await page.getByLabel('作者', { exact: true }).fill('本机测试');
     await page.getByLabel('年份', { exact: true }).fill('2026');
@@ -30,8 +31,8 @@ async page => {
     await page.waitForFunction(() => !document.getElementById('local-editor-panel').inert && document.querySelector('input[name$=".coverUrl"]').value.startsWith('/local-uploads/'));
     uploaded = { url: await page.locator('input[name$=".coverUrl"]').inputValue() };
     if (!uploaded.url) throw Error('Image upload failed: ' + JSON.stringify(uploaded));
-    await page.locator('#local-editor-panel summary').filter({ hasText: /^长评$/ }).click();
-    await page.getByLabel('正文（空行分段） *', { exact: true }).fill('第一段 <em>应原样显示</em>。\n\n第二段：保存后仍然存在。');
+    if (!await page.getByLabel('正文（换行分段） *', { exact: true }).isVisible()) throw Error('Long review should open automatically');
+    await page.getByLabel('正文（换行分段） *', { exact: true }).fill('第一段 <em>应原样显示</em>。\n\n第二段：保存后仍然存在。');
     await page.screenshot({ path: 'output/playwright/local-editor-form.png' });
     await save();
     const saved = await read();
@@ -49,11 +50,12 @@ async page => {
     await title.click();
     await page.locator('[contenteditable]').fill(testTitle + ' · 改名');
     await page.keyboard.press('Enter');
-    await page.locator('#local-editor-toolbar').getByRole('button', { name: '保存并预览' }).click();
+    await page.locator('#local-editor-toolbar').getByRole('button', { name: '保存' }).click();
     await page.waitForFunction(() => document.querySelector('#local-editor-toolbar [role=status]').textContent.includes('已保存'));
     if (!(await read()).data.books.find(b => b.id === createdId).title.endsWith('改名')) throw Error('Inline title did not persist');
     await editMode();
     await page.locator('.book-card img').first().click();
+    await page.locator('#local-editor-panel form > details > summary').filter({ hasText: /^其他信息$/ }).click();
     await page.getByLabel('隐藏此条目（保留内容）', { exact: true }).check();
     await save();
     if (!(await read()).data.books.find(b => b.id === createdId).hidden) throw Error('Hide did not persist');

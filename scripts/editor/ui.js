@@ -1,4 +1,4 @@
-import { fresh } from '/__editor/schema.js';
+import { fresh, matchesSearch } from '/__editor/schema.js';
 
 const section = location.pathname.split('/')[2];
 const docName = section === 'table-tennis' ? 'interest-text' : ['cinema', 'music', 'literature', 'photography', 'games'].includes(section) ? section : null;
@@ -29,14 +29,18 @@ const toolbar = el('div', null, { id: 'local-editor-toolbar' });
 toolbar.setAttribute('aria-label', '本地主页编辑器');
 const modeButton = button('编辑模式', () => setMode(!editing));
 const manageButton = button('新增 / 管理', () => manage());
-const saveButton = button('保存并预览', save);
-const status = el('span', '仅本机', { role: 'status' });
+const saveButton = button('保存', save);
+const status = el('span', '', { role: 'status' });
 const navigation = el('select', null, { ariaLabel: '选择兴趣栏目' });
 for (const [value, name] of [['', '选择栏目'], ['photography', '摄影'], ['cinema', '影视'], ['music', '音乐'], ['literature', '文学'], ['games', '游戏'], ['table-tennis', '乒乓球']]) {
   navigation.append(el('option', name, { value, selected: value === section }));
 }
 navigation.addEventListener('change', () => { if (navigation.value) location.href = '/marginalia/' + navigation.value; });
-toolbar.append(navigation, modeButton, manageButton, saveButton, status);
+const searchForm = el('form', null, { role: 'search' });
+const quickSearch = el('input', null, { type: 'search', placeholder: '搜索当前栏目，按回车', ariaLabel: '搜索当前栏目', disabled: true });
+searchForm.append(quickSearch);
+searchForm.onsubmit = event => { event.preventDefault(); if (state && quickSearch.value.trim()) searchContent(); };
+toolbar.append(navigation, searchForm, modeButton, manageButton, saveButton, status);
 document.body.append(toolbar);
 const dialog = el('dialog', null, { id: 'local-editor-panel', ariaLabel: '编辑内容' });
 const header = el('header');
@@ -45,7 +49,7 @@ header.append(heading, button('关闭', close));
 const content = el('div', null, { className: 'le-content' });
 const errorBox = el('p', '', { className: 'le-error', role: 'alert' });
 const footer = el('footer');
-footer.append(button('放弃本次修改', discard), button('保存并预览', save));
+footer.append(button('放弃本次修改', discard), button('保存', save));
 dialog.append(header, errorBox, content, footer); document.body.append(dialog);
 function showError(error) {
   errorBox.textContent = error.message || String(error);
@@ -66,6 +70,16 @@ function discard() {
   location.reload();
 }
 dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+const outsidePanel = event => {
+  const rect = dialog.getBoundingClientRect();
+  return event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
+};
+let pressedOutside = false;
+dialog.addEventListener('pointerdown', event => { pressedOutside = outsidePanel(event); });
+dialog.addEventListener('click', event => {
+  if (pressedOutside && outsidePanel(event)) close();
+  pressedOutside = false;
+});
 dialog.addEventListener('keydown', event => event.stopPropagation());
 window.addEventListener('beforeunload', event => { if (dirty || busy) { event.preventDefault(); event.returnValue = ''; } });
 document.addEventListener('keydown', event => {
@@ -97,6 +111,74 @@ function lists(value = data, schema = state.schema, path = [], trail = '') {
     }
   }
   return found;
+}
+
+function searchContent() {
+  currentRecord = null; errorBox.textContent = '';
+  heading.textContent = '搜索 · ' + state.label;
+  const input = el('input', null, { type: 'search', value: quickSearch.value, ariaLabel: '搜索栏目内容', placeholder: '标题、作者、正文…' });
+  const count = el('p', '', { role: 'status' });
+  const rows = el('div', null, { className: 'le-list' });
+  const collections = lists().filter(list => !list.schema.advanced);
+  const records = collections.flatMap(list => list.items.map((item, index) => ({ item, schema: list.schema, path: [...list.path, index], list })));
+  if (!collections.length) records.push({ item: data, schema: state.schema, path: [], list: null });
+  const render = () => {
+    quickSearch.value = input.value;
+    rows.replaceChildren();
+    const found = records.filter(record => matchesSearch(record.item, record.schema, input.value, record.list?.label || state.label));
+    count.textContent = !input.value.trim() ? '输入要查找的文字' : found.length ? `找到 ${found.length} 项` : '没有找到匹配内容';
+    for (const record of found) {
+      const row = el('div', null, { className: 'le-row' });
+      row.append(button((record.list ? labelOf(record.item) : state.label) + (record.item.hidden ? ' · 已隐藏' : '') + (record.list ? ' · ' + record.list.label : ''), () => locateRecord(record)));
+      rows.append(row);
+    }
+  };
+  input.oninput = render;
+  content.replaceChildren(input, count, rows);
+  render(); open(); input.focus();
+}
+
+function locateRecord(record) {
+  const ancestors = record.path.map((_, index) => get(record.path.slice(0, index + 1))).filter(value => value && !Array.isArray(value) && typeof value === 'object');
+  if (ancestors.some(item => item.hidden)) {
+    errorBox.textContent = '此条目或所属内容已隐藏，请在“新增 / 管理”中取消隐藏后再定位。';
+    return;
+  }
+  const ids = new Set(ancestors.map(item => item.id).filter(Boolean));
+  const includesId = item => ids.has(item.id) || item.installments?.some(includesId);
+  let target;
+  if (docName === 'cinema' || docName === 'literature' || docName === 'music') {
+    target = [...document.querySelectorAll('.cinema-card, .book-card, .essay-item, .music-card')].find(card =>
+      includesId(JSON.parse(card.dataset.itemJson || card.dataset.bookJson || card.dataset.essayJson || card.dataset.albumJson)));
+    if (docName === 'music' && record.path[0] === 'artists') target = document.getElementById('section-' + record.item.id);
+  } else if (docName === 'games') {
+    target = [...document.querySelectorAll('.interest-page article')].find(card => card.querySelector('a')?.getAttribute('href') === record.item.url);
+  } else if (docName === 'interest-text') target = document.querySelector('.interest-page');
+  else if (docName === 'photography') {
+    const photos = record.item.imageUrl ? [record.item] : (record.item.photos || record.item.cities?.filter(city => !city.hidden).flatMap(city => city.photos) || []);
+    const photo = photos.find(item => !item.hidden && document.getElementById('photo-option-' + item.id));
+    if (photo) {
+      window.dispatchEvent(new CustomEvent('photography:photo-selected', { detail: photo }));
+      window.dispatchEvent(new CustomEvent('photography:external-photo-selected', { detail: photo }));
+      target = document.getElementById('right-showcase-stage');
+    }
+  }
+  if (!target) {
+    errorBox.textContent = '当前页面没有这个条目的可见位置；新增或修改的内容请先保存后再定位。';
+    return;
+  }
+  const category = target.closest('section[id^="section-"]');
+  if (docName === 'cinema' && category) document.querySelector(`[data-cinema-tab="${category.id.slice(8)}"]`)?.click();
+  if (docName === 'literature') document.getElementById(target.classList.contains('essay-item') ? 'tab-btn-essays' : 'tab-btn-books')?.click();
+  close();
+  target.scrollIntoView({ block: 'center', behavior: 'instant' });
+  const oldTabIndex = target.getAttribute('tabindex');
+  target.tabIndex = -1; target.focus({ preventScroll: true });
+  target.classList.add('le-search-target');
+  target.addEventListener('blur', () => {
+    if (oldTabIndex === null) target.removeAttribute('tabindex'); else target.setAttribute('tabindex', oldTabIndex);
+  }, { once: true });
+  setTimeout(() => target.classList.remove('le-search-target'), 1800);
 }
 function manage(selected = currentList) {
   if (!docName) return;
@@ -180,24 +262,36 @@ function editRecord(path, schema, focusKey) {
   heading.textContent = '编辑 · ' + labelOf(item);
   content.replaceChildren();
   const form = el('form'); form.onsubmit = event => { event.preventDefault(); save().catch(showError); };
+  form.addEventListener('invalid', event => revealField(event.target), true);
   renderFields(form, item, schema, path);
   content.append(form);
   if (typeof path.at(-1) === 'number') {
-    content.append(button('删除此条目', () => {
+    const actions = el('details'); actions.append(el('summary', '更多操作'));
+    actions.append(button('删除此条目', () => {
       if (!confirm(`删除“${labelOf(item)}”？${Object.values(item).some(v => Array.isArray(v) && v.length) ? '其中的子条目也会一并删除。' : ''}保存后生效。`)) return;
       get(path.slice(0, -1)).splice(path.at(-1), 1); changed(); manage();
     }));
+    content.append(actions);
   }
   content.append(button('返回内容列表', () => manage()));
   open();
-  if (focusKey) form.querySelector(`[name="${focusKey}"]`)?.focus();
+  if (focusKey) {
+    const input = form.querySelector(`[name="${focusKey}"]`);
+    const focus = input?.closest('.le-field')?.querySelector('input[type=file]') || input;
+    if (focus) { revealField(focus); focus.focus(); }
+  }
+}
+function revealField(input) {
+  for (let parent = input.parentElement; parent; parent = parent.parentElement) {
+    if (parent.tagName === 'DETAILS') parent.open = true;
+  }
 }
 function renderFields(parent, item, schema, path, optional = false) {
+  const secondary = {};
   for (const [key, field] of Object.entries(schema.fields)) {
-    if (field.advanced) {
-      const details = el('details'); details.append(el('summary', field.label));
-      renderFields(details, item, { fields: { [key]: { ...field, advanced: false } } }, path, optional);
-      parent.append(details); continue;
+    if (field.advanced || (schema.primary && !schema.primary.includes(key))) {
+      secondary[key] = { ...field, advanced: false };
+      continue;
     }
     if (field.type === 'array') {
       parent.append(button(`${field.label}（${item[key]?.length || 0}）· 管理`, () => {
@@ -208,6 +302,7 @@ function renderFields(parent, item, schema, path, optional = false) {
     }
     if (field.type === 'object') {
       const details = el('details'); details.append(el('summary', field.label));
+      details.open = key === 'review';
       const nested = item[key] || {};
       const fields = el('div', null, { className: 'le-nested' });
       renderFields(fields, nested, field, [...path, key], true);
@@ -215,12 +310,13 @@ function renderFields(parent, item, schema, path, optional = false) {
         if (Object.values(nested).some(v => v !== '' && v !== undefined)) item[key] = nested;
         else delete item[key];
       });
-      details.append(fields, button('清空' + field.label, () => {
+      const actions = el('details'); actions.append(el('summary', '更多操作'));
+      actions.append(button('清空' + field.label, () => {
         for (const nestedKey of Object.keys(nested)) delete nested[nestedKey];
         delete item[key];
         fields.querySelectorAll('input, textarea, select').forEach(input => { input.value = ''; });
         changed();
-      })); parent.append(details); continue;
+      })); details.append(fields, actions); parent.append(details); continue;
     }
     const label = el('label', null, { className: 'le-field' });
     label.append(el('span', field.label + (field.required ? ' *' : '')));
@@ -242,7 +338,8 @@ function renderFields(parent, item, schema, path, optional = false) {
       if (currentRecord) heading.textContent = '编辑 · ' + labelOf(get(currentRecord.path));
       changed();
     };
-    label.append(input); parent.append(label);
+    if (field.type !== 'image') label.append(input);
+    parent.append(label);
     if (field.type === 'image') {
       const preview = el('img', null, { className: 'le-image', alt: field.label, hidden: !item[key] });
       if (item[key]) preview.src = item[key];
@@ -263,8 +360,14 @@ function renderFields(parent, item, schema, path, optional = false) {
         } catch (error) { showError(error); }
         finally { busy = false; dialog.inert = false; }
       };
-      label.append(preview, upload);
+      const address = el('details'); address.append(el('summary', '图片地址'), input);
+      label.append(preview, upload, address);
     }
+  }
+  if (Object.keys(secondary).length) {
+    const details = el('details'); details.append(el('summary', '其他信息'));
+    renderFields(details, item, { fields: secondary }, path, optional);
+    parent.append(details);
   }
 }
 async function save() {
@@ -339,6 +442,7 @@ document.addEventListener('click', event => {
 try {
   if (docName) {
     state = await api('data/' + docName); data = structuredClone(state.data);
+    quickSearch.disabled = false;
   }
   setMode(sessionStorage.getItem('homepage-editing') === '1');
   const saved = JSON.parse(sessionStorage.getItem('homepage-preview') || 'null');

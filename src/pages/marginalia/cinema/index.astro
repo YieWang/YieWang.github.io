@@ -180,7 +180,7 @@ const categories = [
       const fullText = item.review.content.trim();
       const characters = Array.from(fullText);
       isLongReview = characters.length > 200;
-      const renderParagraphs = (text: string) => text.split(/\n\s*\n/)
+      const renderParagraphs = (text: string) => text.split(/\r?\n+/)
         .map(p => p.trim()).filter(Boolean)
         .map(p => `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${escapeHtml(p)}</p>`).join('');
       previewHtml = renderParagraphs(isLongReview ? characters.slice(0, 200).join('') + '…' : fullText);
@@ -304,7 +304,6 @@ const categories = [
                     <span class="block text-[0.84rem]">${escapeHtml(film.title)}</span>
                   </button>`).join('')}
               </div>` : ''}
-            ${item.summary ? `<p class="text-sm leading-relaxed whitespace-pre-line">${escapeHtml(item.summary)}</p>` : ''}
             ${item.type === 'series' ? (item.watchedEntries || []).filter(entry => entry.comment?.trim()).map(entry => `
               <div class="season-watch-record border-b border-[#F0F0F0] pb-3 space-y-1">
                 <div class="text-[0.84rem] font-medium">${escapeHtml(entry.title)}</div>
