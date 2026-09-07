@@ -150,7 +150,8 @@ const categories = [
     }
 
     const item = selection.installments?.[installmentIndex] || selection;
-    const nativeTitle = secondaryNames([selection.installments ? selection.title : item.title], item.originalTitle,
+    const title = item.type === 'film' ? item.title : selection.title;
+    const nativeTitle = secondaryNames([title], item.originalTitle,
       item.originalTitle?.includes(item.chineseTitle || '\0') ? undefined : item.chineseTitle, item.partLabel);
     const chineseDirectors = item.chineseDirector?.split(', ') || [];
     const originalDirectors = item.originalDirector?.split(', ') || [];
@@ -195,7 +196,7 @@ const categories = [
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words flex items-baseline gap-2.5 flex-wrap"
           style="font-family: 'Josefin Sans', sans-serif;"
         >
-          <span>${escapeHtml(selection.installments ? selection.title : item.title)}</span>
+          <span>${escapeHtml(title)}</span>
           ${nativeTitle ? `<span class="text-[0.88rem] font-normal text-[#888888]">${escapeHtml(nativeTitle)}</span>` : ''}
         </h2>
       </div>

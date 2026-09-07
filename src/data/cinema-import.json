@@ -3175,7 +3175,7 @@
     ],
     "tmdbId": 290217,
     "rating": "5 / 5",
-    "hidden": false,
+    "hidden": true,
     "chineseTitle": "同桌的妳",
     "originalDirector": "郭帆",
     "chineseDirector": "郭帆"
@@ -3210,7 +3210,8 @@
     "rating": "5 / 5",
     "chineseTitle": "青春派",
     "originalDirector": "Liu Jie",
-    "chineseDirector": "刘杰"
+    "chineseDirector": "刘杰",
+    "hidden": true
   },
   {
     "id": "film-27087724",

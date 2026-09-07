@@ -11,6 +11,7 @@ async page => {
   if (await page.locator('[data-installment]').count() !== 2) throw Error('Kill Bill must have two films in one modal');
   await page.locator('[data-installment="1"]').click();
   if (await page.locator('#modal-content-slot img').getAttribute('alt') !== 'Kill Bill: Vol. 2') throw Error('Installment did not change');
+  if ((await page.locator('#modal-content-slot h2').innerText()).trim() !== 'Kill Bill: Vol. 2\n杀死比尔2') throw Error('Film heading must use the selected installment without repeating its English name');
   if (await page.locator('#modal-right-scroll-pane h3').count()) throw Error('Duplicate movie title above review');
   await page.keyboard.press('Escape');
   await page.waitForFunction(() => document.getElementById('cinema-modal-backdrop').classList.contains('pointer-events-none'));

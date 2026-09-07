@@ -88,7 +88,7 @@ if (existsSync(new URL(`../${root}cinema-records.json`, import.meta.url))) {
     assert.equal(recording(exclusion.duplicateOf), exclusion.isrc);
   }
 }
-const context = { exports: {} };
+const context = { exports: {}, require: () => ({ default: json('src/data/screen-name-variants.json') }) };
 vm.runInNewContext(ts.transpile(read('src/lib/html.ts'), { module: ts.ModuleKind.CommonJS }), context);
 assert.equal(context.exports.escapeHtml('<img src=x onerror="alert(1)">&\''), '&lt;img src=x onerror=&quot;alert(1)&quot;&gt;&amp;&#39;');
 const page = read('src/pages/marginalia/music/index.astro');
@@ -116,8 +116,8 @@ const cinemaContext = { exports: {}, require: name => {
   return { ...data, default: data };
 } };
 vm.runInNewContext(ts.transpile(read('src/data/cinema.ts'), { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 }), cinemaContext);
-assert.equal(cinemaContext.exports.allCinemaItems.length, 300);
-assert.equal(cinema.filter(item => item.hidden).length, 98);
+assert.equal(cinemaContext.exports.allCinemaItems.length, 298);
+assert.equal(cinema.filter(item => item.hidden).length, 100);
 for (const id of ['film-26930504', 'film-25796222', 'tv-85937', 'film-1306809', 'film-27074316', 'film-4237879']) {
   assert.ok(cinemaContext.exports.allCinemaItems.some(item => item.id === id), `Must retain ${id}`);
 }
@@ -161,3 +161,6 @@ assert.equal(context.exports.secondaryNames(['Reset'], '开端', '开端'), '开
 assert.equal(context.exports.secondaryNames(['Christopher Nolan'], 'Christopher Nolan', '克里斯托弗·诺兰'), '克里斯托弗·诺兰');
 assert.equal(context.exports.secondaryNames(['A', 'B'], '小林常夫', '伊達勇登', '小林常夫', '伊达勇登'), '小林常夫 · 伊達勇登 · 伊达勇登');
 console.log('Cinema related groups, release ordering and review priority: passed');
+
+for (const [native, chinese] of Object.entries(json('src/data/screen-name-variants.json'))) assert.equal(context.exports.secondaryNames([], native, chinese), chinese);
+for (const id of ['film-24843198', 'film-24735062']) assert.ok(!cinemaContext.exports.allCinemaItems.some(item => item.id === id));
