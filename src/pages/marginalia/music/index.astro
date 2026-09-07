@@ -28,6 +28,7 @@ const artistGroups = musicArtists.map(artist => {
     
     <!-- MAIN GALLERY: Grouped by Artist -->
     <main class="space-y-16 sm:space-y-24">
+      {artistGroups.length === 0 && <p class="text-sm text-[#888888] text-center">No music yet.</p>}
       {artistGroups.map((group) => (
         <section id={`section-${group.artist.id}`} class="space-y-6 select-none">
           

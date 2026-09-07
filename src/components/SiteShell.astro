@@ -1,11 +1,8 @@
 ---
 import Header from './Header.astro';
 import LiteratureBook from './LiteratureBook.astro';
-import { Image, getImage } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
-import archivePrint from '../../public/images/photography/regensburg-02.jpg';
-import danubePrint from '../../public/images/photography/regensburg-04.jpg';
-import recordCover from '../../public/images/music/goldberg-1981.jpg';
+import { allPhotos } from '../data/photography';
+
 import { profileData } from '../data/profile';
 import { notesData, expositionData, templateData } from '../data/mathematics';
 import { marginaliaData } from '../data/marginalia';
@@ -16,16 +13,13 @@ interface Props {
 
 const { initialSection = 'home' } = Astro.props;
 
-// Film artwork is optimized once and repeated for seamless CSS transport.
-const filmFrames = ['tokyo-story', '2001-a-space-odyssey', 'perfect-days', 'three-colors-blue', 'yi-yi', 'april-story'];
+const archivePrint = allPhotos.find(photo => photo.id === '202408-tokyo-10')!;
+const lakePrint = allPhotos.find(photo => photo.id === '202412-hangzhou-west-lake-01')!;
+
+
 const racketOutline = 'M80 6 C123 6 152 39 152 82 C152 116 134 141 99 150 L94 156 C91 177 93 203 97 223 Q99 229 90 229 L70 229 Q61 229 63 223 C67 203 69 177 66 156 L61 150 C26 141 8 116 8 82 C8 39 37 6 80 6 Z';
 const rubberOutline = 'M80 10 C120 10 148 41 148 82 C148 115 130 139 96 147 Q80 153 64 147 C30 139 12 115 12 82 C12 41 40 10 80 10 Z';
 const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 229 L70 229 Q61 229 63 223 C67 203 70 177 66 149 Z';
-const filmAssets = import.meta.glob<{ default: ImageMetadata }>('../../public/images/cinema/*.jpg', { eager: true });
-const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
-  src: filmAssets[`../../public/images/cinema/${frame}.jpg`].default,
-  width: 164, format: 'webp', quality: 85,
-})));
 
 
 ---
@@ -321,12 +315,12 @@ const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
           <a href="/marginalia/photography" aria-label="Explore Photography" class="stage-art-link">
             <div class="photo-container" aria-hidden="true">
               <div class="photo-secondary">
-                <Image src={archivePrint} alt="" width={320} format="webp" loading="lazy" />
-                <span>LIGHT &amp; ARCHITECTURE</span>
+                <img src={archivePrint.thumbnailUrl} alt="" width={320} loading="lazy" decoding="async" />
+                <span>TOKYO · FIREWORKS</span>
               </div>
               <div class="photo-primary">
-                <Image src={danubePrint} alt="" width={500} format="webp" loading="lazy" />
-                <span>REGENSBURG · ON THE DANUBE</span>
+                <img src={lakePrint.thumbnailUrl} alt="" width={500} loading="lazy" decoding="async" />
+                <span>WEST LAKE · GOLDEN LEAVES</span>
               </div>
             </div>
           </a>
@@ -338,7 +332,7 @@ const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
             <div class="cinema-scene" aria-hidden="true">
               <div class="cinema-strip">
                 <div class="cinema-track">
-                  {[0, 1].map(() => filmCovers.map(cover => <div class="cinema-frame"><img src={cover.src} width="82" height="108" alt="" decoding="async" draggable="false" /></div>))}
+                  {Array.from({ length: 12 }, () => <div class="cinema-frame"><span></span></div>)}
                 </div>
                 <div class="cinema-glow"></div>
               </div>
@@ -375,7 +369,7 @@ const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
                       <!-- Center Paper Label -->
                       <div class="w-[36%] h-[36%] rounded-full bg-[#C89B67] border border-white/20 flex flex-col items-center justify-center text-center shadow-inner">
                         <div class="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full bg-[#111111] border border-white/30 mb-0.5"></div>
-                        <span class="text-[0.32rem] sm:text-[0.38rem] font-mono text-[#2B1B0E] font-bold tracking-tighter">BACH / GOULD</span>
+                        <span class="text-[0.32rem] sm:text-[0.38rem] font-mono text-[#2B1B0E] font-bold tracking-tighter">MUSIC</span>
                       </div>
                     </div>
                   </div>
@@ -383,7 +377,7 @@ const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
               </div>
 
               <div class="vinyl-sleeve">
-                <Image src={recordCover} alt="" width={440} format="webp" loading="lazy" />
+                <span>MUSIC</span>
               </div>
             </div>
           </a>
@@ -749,7 +743,7 @@ const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
   .cinema-track::before { top: 4px; }
   .cinema-track::after { bottom: 4px; }
   .cinema-frame { flex: 0 0 100px; padding: 0 9px; }
-  .cinema-frame img { display: block; width: 82px; height: 108px; object-fit: cover; filter: saturate(0.8) sepia(0.12); }
+  .cinema-frame span { display: block; width: 82px; height: 108px; background: linear-gradient(135deg, #756b5e, #302d29); }
   .cinema-glow { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 12% 48%, #ffe0a9 0%, #f2be6caa 28%, transparent 72%), linear-gradient(105deg, transparent 25%, #fff8df88 49%, transparent 75%); mix-blend-mode: screen; opacity: 0.3; animation: cinema-lamplight 4.3s linear infinite paused; }
   .is-expanded .cinema-track, .is-expanded .cinema-glow { animation-play-state: running; }
   @keyframes cinema-transport { to { transform: translateX(-50%); } }
@@ -765,7 +759,7 @@ const filmCovers = await Promise.all(filmFrames.map(frame => getImage({
   .is-expanded .vinyl-disc-inner { animation: vinyl-spin 9s linear 650ms infinite; }
   @keyframes vinyl-spin { to { transform: rotate(360deg); } }
   .vinyl-sleeve { position: absolute; left: 16px; width: 220px; height: 220px; z-index: 1; border: 1px solid #d5d2cd; background: #faf9f6; border-radius: 2px; box-shadow: 0 6px 16px #00000015; transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 650ms ease; }
-  .vinyl-sleeve img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .vinyl-sleeve span { display: grid; place-items: center; width: 100%; height: 100%; color: #746c60; font-size: 15px; letter-spacing: 0.35em; }
   .is-expanded .vinyl-sleeve { transform: translateX(-16px); box-shadow: 0 10px 22px #00000020; }
 
   /* Table tennis: one contact centre; the ball counter-rotates to face the viewer. */

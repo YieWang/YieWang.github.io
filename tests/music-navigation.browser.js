@@ -5,6 +5,11 @@ async (page) => {
   const rail = page.locator('#artist-wheel');
   await rail.waitFor();
   const count = await page.locator('.music-card').count();
+  if (count === 0) {
+    if (!(await page.getByText('No music yet.', { exact: true }).isVisible())) throw new Error('Missing empty music state');
+    if (await page.locator('.artist-row').count()) throw new Error('Empty library has artist rows');
+    return;
+  }
   const check = async (id) => {
     await page.waitForFunction(id => {
       const rows = [...document.querySelectorAll('.artist-row')];

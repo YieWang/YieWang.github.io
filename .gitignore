@@ -17,3 +17,9 @@ pnpm-debug.log*
 
 # macOS
 .DS_Store
+
+# Local photography assets and preparation records
+/Homepage-Photography/
+
+# Local assets staged for R2
+/Homepage-Assets/

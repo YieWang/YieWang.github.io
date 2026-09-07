@@ -39,6 +39,7 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
 
     <!-- VIEW 1: BOOKS GALLERY (Homepage: Only Original Title) -->
     <main id="view-books" class="transition-opacity duration-300">
+      {literatureBooks.length === 0 && <p class="text-sm text-[#888888] text-center">No books yet.</p>}
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-10 sm:gap-y-14">
         {sortedBooks.map((book) => (
           <article
@@ -101,6 +102,7 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
 
     <!-- VIEW 2: ESSAYS LIST (Title, Location & Date) -->
     <main id="view-essays" class="hidden max-w-2xl mx-auto w-full transition-opacity duration-300 pt-1 pb-14">
+      {literatureEssays.length === 0 && <p class="text-sm text-[#888888] text-center">No essays yet.</p>}
       <div id="essays-container" class="divide-y divide-[#F0F0F0]">
         {literatureEssays.map((essay) => (
           <article

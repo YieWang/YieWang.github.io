@@ -46,7 +46,7 @@ const { artists } = Astro.props;
   const motion = () => matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
 
   function highlight(index: number, center = true) {
-    if (index === selected) return;
+    if (!rows[index] || index === selected) return;
     selected = index;
     rows.forEach((row, i) => i === index ? row.setAttribute('aria-current', 'true') : row.removeAttribute('aria-current'));
     if (center) rail.scrollTo({ top: rows[index].offsetTop - rows[0].offsetTop, behavior: motion() });
@@ -67,6 +67,7 @@ const { artists } = Astro.props;
   }
 
   function jump(index: number) {
+    if (!sections[index]) return;
     driver = 'jump';
     clearTimeout(railTimer);
     highlight(index);

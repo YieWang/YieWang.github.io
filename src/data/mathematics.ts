@@ -24,7 +24,7 @@ export const notesData: NoteItem[] = [
     title: "Abstract Algebra",
     type: "Notes",
     period: "2024–2025",
-    url: "/notes/Abstract_Algebra_Notes.pdf",
+    url: "https://homepage-assets.mathtranslations.org/notes/Abstract_Algebra_Notes.pdf",
   },
 ];
 
@@ -40,19 +40,19 @@ export const templateData: TemplateItem[] = [
   {
     title: "Chinese Template",
     type: "LaTeX template",
-    previewUrl: "/templates/Chinese_Template_Preview.pdf?v=2",
-    sourceUrl: "/templates/Chinese_Template.zip?v=2",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template_Preview.pdf?v=2",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template.zip?v=2",
   },
   {
     title: "English Template",
     type: "LaTeX template",
-    previewUrl: "/templates/English_Template_Preview.pdf?v=2",
-    sourceUrl: "/templates/English_Template.zip?v=2",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/English_Template_Preview.pdf?v=2",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English_Template.zip?v=2",
   },
   {
     title: "Seminar Template",
     type: "LaTeX template",
-    previewUrl: "/templates/Seminar_Template_Preview.pdf?v=3",
-    sourceUrl: "/templates/Seminar_Template.zip?v=3",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar_Template_Preview.pdf?v=3",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar_Template.zip?v=3",
   },
 ];

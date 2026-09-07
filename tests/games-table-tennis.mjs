@@ -1,6 +1,6 @@
 // Run after npm run build: node tests/games-table-tennis.mjs
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const games = JSON.parse(read('src/data/games.json'));
@@ -13,7 +13,8 @@ assert.equal(new Set(games.map(game => game.title)).size, games.length);
 assert.equal(games[games.findIndex(game => game.appid === 730) + 1].title, 'League of Legends');
 for (const game of games) {
   if (game.appid !== null && ![736260,632470].includes(game.appid)) assert.ok(game.playtimeMinutes > 60, `${game.title} must exceed one hour`);
-  assert.ok(existsSync(new URL(`../public${game.cover}`, import.meta.url)), game.cover);
+  assert.equal(new URL(game.cover).origin, 'https://homepage-assets.mathtranslations.org');
+  assert.ok(new URL(game.cover).pathname.startsWith('/images/games/'));
   assert.ok(gallery.includes(game.cover));
   assert.equal(game.note, '');
   assert.ok(!/\p{Script=Han}/u.test(game.title));

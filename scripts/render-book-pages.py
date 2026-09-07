@@ -15,7 +15,7 @@ root = Path(__file__).resolve().parents[1]
 source = (root / 'src/pages/previews/literature.astro').read_text()
 pages = ast.literal_eval(re.search(r'const pages = (\[[\s\S]*?\]);', source)[1])
 assert len(''.join(pages)) == 796
-output = root / 'public/images/literature/book'
+output = root / 'Homepage-Assets/upload/images/literature/book'
 output.mkdir(parents=True, exist_ok=True)
 scale = 3
 font = lambda size: ImageFont.truetype(args.font, round(size * scale), index=args.font_index)

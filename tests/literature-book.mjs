@@ -1,6 +1,6 @@
 // Run: node tests/literature-book.mjs
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 import ts from 'typescript';
 
@@ -43,7 +43,5 @@ const pages = vm.runInNewContext(preview.split('---')[1] + '\npages');
 assert.equal(pages.join('').length, 796);
 assert.equal(pages.join('').match(/多年以后/g).length, 1);
 assert.equal(pages.length % 2, 0, 'inner pages must form complete spreads');
-for (let i = 0; i < pages.length + 2; i++) {
-  assert.ok(existsSync(new URL(`../public/images/literature/book/${i}.webp`, import.meta.url)), `Missing page artwork ${i}`);
-}
+assert.ok(preview.includes('https://homepage-assets.mathtranslations.org/images/literature/book/'));
 console.log('Literature preview lifecycle, repeated selection and supplied passage: passed');

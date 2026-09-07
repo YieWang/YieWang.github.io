@@ -19,8 +19,8 @@ const pages = [
     <title>百年孤独 · 翻书预览</title>
   </head>
   <body>
-    <img class="poster" src="/images/literature/book/0.webp" width="156" height="224" alt="百年孤独，加西亚·马尔克斯" />
-    <div id="book" data-pages={JSON.stringify(Array.from({ length: pages.length + 2 }, (_, i) => `/images/literature/book/${i}.webp`))}></div>
+    <img class="poster" src="https://homepage-assets.mathtranslations.org/images/literature/book/0.webp" width="156" height="224" alt="百年孤独，加西亚·马尔克斯" />
+    <div id="book" data-pages={JSON.stringify(Array.from({ length: pages.length + 2 }, (_, i) => `https://homepage-assets.mathtranslations.org/images/literature/book/${i}.webp`))}></div>
     <template id="book-transcript">{pages.map(text => <p>{text}</p>)}</template>
     <script>
       import { Zine, ImageSource } from '@zinejs/core';

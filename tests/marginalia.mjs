@@ -1,6 +1,6 @@
 // Run: node tests/marginalia.mjs
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 import ts from 'typescript';
 
@@ -99,7 +99,6 @@ assert.equal(section.classList.contains('active-section'), true);
 assert.equal(panels[0].layouts.at(-1), false);
 assert.equal(panels[0].classList.contains('is-expanded'), true);
 
-const films = ['tokyo-story', '2001-a-space-odyssey', 'perfect-days', 'three-colors-blue', 'yi-yi', 'april-story'];
-for (const frame of films) assert.ok(existsSync(new URL(`../public/images/cinema/${frame}.jpg`, import.meta.url)));
+assert.ok(!source.includes('public/images/cinema'));
 
 console.log('Marginalia navigation, selection, touch links and photo entrance: passed');

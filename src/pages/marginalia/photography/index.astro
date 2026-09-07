@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import PhotographyWheelPicker from '../../../components/photography/PhotographyWheelPicker';
-import { allPhotos, allCityAlbums } from '../../../data/photography';
+import { allPhotos, allCityAlbums, photoOptics, photoLocation } from '../../../data/photography';
 
 const firstCity = allCityAlbums[0];
 const firstPhoto = firstCity?.photos[0] || allPhotos[0];
@@ -43,6 +43,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
           alt={firstPhoto.title}
           class="stage-layer-img absolute max-w-full max-h-full w-auto h-auto object-contain rounded-[2px] opacity-100"
           style="will-change: opacity;"
+          decoding="async"
         />
         <!-- Layer B (Dual buffer) -->
         <img
@@ -51,6 +52,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
           alt=""
           class="stage-layer-img absolute max-w-full max-h-full w-auto h-auto object-contain rounded-[2px] opacity-0 pointer-events-none"
           style="will-change: opacity;"
+          decoding="async"
         />
       </div>
 
@@ -70,13 +72,12 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
             >
               {firstPhoto.title}
             </h2>
-            <span class="text-[#D0D0D0] select-none text-[0.75rem] shrink-0">·</span>
             <span
               id="meta-location"
               class="text-[0.72rem] sm:text-[0.76rem] text-[#666666] tracking-[0.08rem] uppercase truncate"
               style="font-family: 'Montserrat', sans-serif;"
             >
-              {firstPhoto.year} · {firstPhoto.locationEn} ({firstPhoto.location})
+              {photoLocation(firstPhoto)}
             </span>
           </div>
 
@@ -86,24 +87,24 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
             class="text-[0.76rem] sm:text-[0.8rem] text-[#666666] font-light tracking-wide truncate italic"
             style="font-family: 'Montserrat', sans-serif;"
           >
-            "{firstPhoto.story}"
+            {firstPhoto.story ? `"${firstPhoto.story}"` : ''}
           </p>
         </div>
 
         <!-- RIGHT COLUMN: Optical Craft Archive (Aligned right, 2 dedicated rows) -->
-        <div class="shrink-0 flex flex-col justify-center items-end text-right gap-1 font-mono">
+        <div id="photo-camera-meta" class="shrink-0 flex flex-col justify-center items-end text-right gap-1 font-mono" style={!firstPhoto.camera && !firstPhoto.exif ? 'display: none' : undefined}>
           <!-- Row 1: Camera & Film -->
           <div class="text-[0.68rem] sm:text-[0.72rem] text-[#777777] flex items-center gap-1.5 justify-end">
             <span id="exif-camera" class="text-[#2A2A2A] font-medium">{firstPhoto.camera}</span>
-            <span id="exif-film-dot" class="text-[#C5C5C5]">·</span>
+            <span id="exif-film-dot" class="text-[#C5C5C5]" style={!firstPhoto.film ? 'display: none' : undefined}>·</span>
             <span id="exif-film" class="text-black font-semibold">{firstPhoto.film || ''}</span>
           </div>
 
           <!-- Row 2: Lens & Exposure Optics -->
           <div id="meta-exif" class="text-[0.64rem] sm:text-[0.68rem] text-[#888888] tracking-wider flex items-center gap-1.5 justify-end">
-            <span id="exif-lens">{firstPhoto.lens || firstPhoto.exif.focalLength}</span>
+            <span id="exif-lens">{firstPhoto.lens || firstPhoto.exif?.focalLength || ''}</span>
             <span class="text-[#D8D8D8]">·</span>
-            <span id="exif-optics">{firstPhoto.exif.aperture} · {firstPhoto.exif.shutter} · ISO {firstPhoto.exif.iso}</span>
+            <span id="exif-optics">{photoOptics(firstPhoto)}</span>
           </div>
         </div>
       </footer>
@@ -134,7 +135,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
 </style>
 
 <script>
-  import { allPhotos, allCityAlbums, type Photo } from '../../../data/photography';
+  import { allPhotos, photoOptics, photoLocation, type Photo } from '../../../data/photography';
 
   document.addEventListener('DOMContentLoaded', () => {
     // Dual buffer layers for flicker-free optical dissolve
@@ -147,6 +148,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     const metaLocation = document.getElementById('meta-location');
     const metaStory = document.getElementById('meta-story');
 
+    const cameraMeta = document.getElementById('photo-camera-meta');
     const exifCam = document.getElementById('exif-camera');
     const exifLens = document.getElementById('exif-lens');
     const exifFilm = document.getElementById('exif-film');
@@ -163,8 +165,8 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       img.onload = () => imageCache.add(url);
     }
 
-    // Preload first batch of photos immediately
-    allPhotos.slice(0, 6).forEach(p => preloadPhoto(p.imageUrl));
+    // Warm only the next two photos; full images load as the user explores.
+    allPhotos.slice(1, 3).forEach(p => preloadPhoto(p.imageUrl));
 
     // Seamless Optical Morphing Image Switcher
     function morphToImage(imageUrl: string, title: string) {
@@ -201,22 +203,23 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       // 2. Immediate crisp typography update (Zero lag, Zero blink)
       if (metaTitle) metaTitle.textContent = photo.title;
       if (metaLocation) {
-        metaLocation.textContent = `${photo.year} · ${photo.locationEn} (${photo.location})${photo.subtitle ? ` · ${photo.subtitle}` : ''}`;
+        metaLocation.textContent = photoLocation(photo);
       }
       if (metaStory) metaStory.textContent = photo.story ? `"${photo.story}"` : '';
 
-      if (exifCam) exifCam.textContent = photo.camera;
-      if (exifLens) exifLens.textContent = photo.lens || photo.exif.focalLength;
+      if (cameraMeta) cameraMeta.style.display = photo.camera || photo.exif ? '' : 'none';
+      if (exifCam) exifCam.textContent = photo.camera || '';
+      if (exifLens) exifLens.textContent = photo.lens || photo.exif?.focalLength || '';
       if (exifFilm) {
         exifFilm.textContent = photo.film || '';
         if (exifFilmDot) exifFilmDot.style.display = photo.film ? 'inline' : 'none';
       }
       if (exifOptics) {
-        exifOptics.textContent = `${photo.exif.aperture} · ${photo.exif.shutter} · ISO ${photo.exif.iso}`;
+        exifOptics.textContent = photoOptics(photo);
       }
 
-      // 3. Preload adjacent photos (3 behind and 4 ahead) for instantaneous response
-      for (let offset = -3; offset <= 4; offset++) {
+      // 3. Warm the nearest photos without loading the whole archive.
+      for (let offset = -1; offset <= 2; offset++) {
         const target = index + offset;
         if (offset !== 0 && target >= 0 && target < allPhotos.length) {
           preloadPhoto(allPhotos[target].imageUrl);
