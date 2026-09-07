@@ -92,3 +92,43 @@ for (const name of sortedNames.filter(name => /[\p{Script=Han}\p{Script=Hiragana
 const collator = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
 for (let i = 1; i < sortedNames.length; i++) assert.ok(collator.compare(keys[sortedNames[i-1]] || sortedNames[i-1], keys[sortedNames[i]] || sortedNames[i]) <= 0);
 console.log('Mixed pinyin and Latin artist ordering: passed');
+
+const cinemaContext = { exports: {}, require: name => {
+  const data = json('src/data/' + name.replace('./', ''));
+  return { ...data, default: data };
+} };
+vm.runInNewContext(ts.transpile(read('src/data/cinema.ts'), { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 }), cinemaContext);
+const groupedIds = curation.cinemaGroups.flat();
+assert.equal(new Set(groupedIds).size, groupedIds.length);
+assert.ok(groupedIds.every(id => cinema.some(item => item.id === id)));
+for (const [name, predicate] of [
+  ['cinemaAnimation', item => item.genre.split(', ').includes('Animation')],
+  ['cinemaFilms', item => item.type === 'film' && !item.genre.split(', ').includes('Animation')],
+]) {
+  const items = Array.from(cinemaContext.exports[name]);
+  assert.deepEqual(items.map(item => item.id).sort(), cinema.filter(predicate).map(item => item.id).sort());
+  const key = item => {
+    const group = curation.cinemaGroups.findIndex(ids => ids.includes(item.id));
+    return group < 0 ? `director:${item.director}` : `series:${group}`;
+  };
+  const groups = new Map();
+  for (const [index, item] of items.entries()) {
+    const group = groups.get(key(item)) ?? [];
+    group.push({ index, item });
+    groups.set(key(item), group);
+  }
+  let reachedUnreviewed = false;
+  for (const group of groups.values()) {
+    assert.equal(group.at(-1).index - group[0].index + 1, group.length, 'Related works must stay adjacent');
+    for (let i = 1; i < group.length; i++) assert.ok(Number(group[i - 1].item.year) <= Number(group[i].item.year));
+    const reviewed = group.some(({ item }) => item.review);
+    assert.ok(!reachedUnreviewed || !reviewed, 'Groups with reviews must come first');
+    reachedUnreviewed ||= !reviewed;
+  }
+  for (const ids of curation.cinemaGroups) {
+    const positions = ids.map(id => items.findIndex(item => item.id === id)).filter(index => index >= 0).sort((a, b) => a - b);
+    if (positions.length) assert.equal(positions.at(-1) - positions[0] + 1, positions.length);
+  }
+}
+assert.ok(!read('src/pages/marginalia/cinema/index.astro').includes('items: [...category.items].sort'));
+console.log('Cinema related groups, release ordering and review priority: passed');

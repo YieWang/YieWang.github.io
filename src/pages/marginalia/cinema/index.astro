@@ -5,9 +5,9 @@ import { cinemaFilms, cinemaSeries, cinemaAnimation } from '../../../data/cinema
 
 const categories = [
   { id: 'films', label: 'Films', items: cinemaFilms },
-  { id: 'series', label: 'Series', items: cinemaSeries },
+  { id: 'series', label: 'Series', items: [...cinemaSeries].sort((a, b) => Number(!!b.review) - Number(!!a.review)) },
   { id: 'animation', label: 'Animation', items: cinemaAnimation },
-].map(category => ({ ...category, items: [...category.items].sort((a, b) => Number(!!b.review) - Number(!!a.review)) }));
+];
 ---
 
 <Layout
