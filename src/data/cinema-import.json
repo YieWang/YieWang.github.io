@@ -432,7 +432,8 @@
     "rating": "5 / 5",
     "chineseTitle": "欢迎来龙餐馆",
     "originalDirector": "文牧野",
-    "chineseDirector": "文牧野"
+    "chineseDirector": "文牧野",
+    "hidden": true
   },
   {
     "id": "film-36808876",
@@ -1033,7 +1034,8 @@
     "chineseTitle": "咒术回战",
     "originalDirector": "芥見下々",
     "chineseDirector": "芥见下下",
-    "studio": "MAPPA"
+    "studio": "MAPPA",
+    "hidden": true
   },
   {
     "id": "tv-117933",
@@ -1066,7 +1068,8 @@
     "chineseTitle": "夏日重现",
     "originalDirector": "田中靖規",
     "chineseDirector": "田中靖规",
-    "studio": "OLM"
+    "studio": "OLM",
+    "hidden": true
   },
   {
     "id": "tv-83097",
@@ -1150,7 +1153,8 @@
     "chineseTitle": "约定的梦幻岛",
     "originalDirector": "白井カイウ, 出水ぽすか",
     "chineseDirector": "白井海芋, ",
-    "studio": "CloverWorks"
+    "studio": "CloverWorks",
+    "hidden": true
   },
   {
     "id": "tv-61663",
@@ -2601,7 +2605,8 @@
     "chineseTitle": "胆大党",
     "originalDirector": "龍幸伸",
     "chineseDirector": "龙幸伸",
-    "studio": "Science SARU"
+    "studio": "Science SARU",
+    "hidden": true
   },
   {
     "id": "tv-112613",
@@ -2635,7 +2640,8 @@
     "chineseTitle": "国王排名",
     "originalDirector": "十日草輔",
     "chineseDirector": "十日草輔",
-    "studio": "Wit Studio"
+    "studio": "Wit Studio",
+    "hidden": true
   },
   {
     "id": "tv-45790",
@@ -2934,7 +2940,8 @@
     "chineseTitle": "孤独摇滚！",
     "originalDirector": "はまじあき",
     "chineseDirector": "滨路晶",
-    "studio": "CloverWorks"
+    "studio": "CloverWorks",
+    "hidden": true
   },
   {
     "id": "tv-72636",
@@ -3922,7 +3929,8 @@
     "chineseTitle": "精灵旅社",
     "originalDirector": "Genndy Tartakovsky",
     "chineseDirector": "",
-    "studio": "Sony Pictures Animation"
+    "studio": "Sony Pictures Animation",
+    "hidden": true
   },
   {
     "id": "film-26925317",
@@ -4565,7 +4573,8 @@
     "rating": "4 / 5",
     "chineseTitle": "一条狗的使命2",
     "originalDirector": "Gail Mancuso",
-    "chineseDirector": ""
+    "chineseDirector": "",
+    "hidden": true
   },
   {
     "id": "film-6873143",
@@ -4596,7 +4605,8 @@
     "rating": "5 / 5",
     "chineseTitle": "一条狗的使命",
     "originalDirector": "Lasse Hallström",
-    "chineseDirector": "莱塞·霍尔斯道姆"
+    "chineseDirector": "莱塞·霍尔斯道姆",
+    "hidden": true
   },
   {
     "id": "film-3001114",
@@ -4690,7 +4700,8 @@
     "rating": "5 / 5",
     "chineseTitle": "神奇动物在哪里",
     "originalDirector": "David Yates",
-    "chineseDirector": "大卫·叶茨"
+    "chineseDirector": "大卫·叶茨",
+    "hidden": true
   },
   {
     "id": "film-26985127",
@@ -6607,7 +6618,7 @@
     "country": "US",
     "genre": "Comedy, Drama, Romance",
     "runtime": "95 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-19913-8285c2c2e09a.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/film-3072086-8d592a99273e.webp",
     "firstWatched": "2025-06-29",
     "externalLink": {
       "platform": "IMDb",
@@ -7511,7 +7522,7 @@
     "country": "JP",
     "genre": "Drama",
     "runtime": "1 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-16069-3817ee5ca1bf.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-16069-5ccdcd65220f.webp",
     "firstWatched": "2025-05-14",
     "externalLink": {
       "platform": "IMDb",
@@ -7735,7 +7746,7 @@
     "country": "JP",
     "genre": "Drama, Crime, Mystery",
     "runtime": "1 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-75701-884eb4a35a6c.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-75701-de7282c8053e.webp",
     "firstWatched": "2025-05-14",
     "externalLink": {
       "platform": "IMDb",
@@ -8041,7 +8052,8 @@
     "chineseTitle": "哪吒之魔童闹海",
     "originalDirector": "饺子",
     "chineseDirector": "饺子",
-    "studio": "Chengdu Coco Cartoon"
+    "studio": "Chengdu Coco Cartoon",
+    "hidden": true
   },
   {
     "id": "film-30163509",
@@ -8113,7 +8125,7 @@
     "country": "CN",
     "genre": "Drama, Mystery, Sci-Fi & Fantasy",
     "runtime": "1 Seasons",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/3581a0fabbb50136-c42db10ff146.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-155441-3784e9e1d16e.webp",
     "firstWatched": "2025-03-30",
     "externalLink": {
       "platform": "IMDb",
@@ -8614,7 +8626,8 @@
     "rating": "5 / 5",
     "chineseTitle": "三大队",
     "originalDirector": "Dai Mo",
-    "chineseDirector": "戴墨"
+    "chineseDirector": "戴墨",
+    "hidden": true
   },
   {
     "id": "film-34941536",
@@ -8626,7 +8639,7 @@
     "country": "CN",
     "genre": "Comedy, Drama, Mystery, Adventure, Science Fiction",
     "runtime": "115 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-851977-6b776db641ca.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/film-34941536-abe608bbaf97.webp",
     "firstWatched": "2024-12-27",
     "externalLink": {
       "platform": "IMDb",
@@ -8676,7 +8689,8 @@
     "rating": "4 / 5",
     "chineseTitle": "年会不能停！",
     "originalDirector": "董润年",
-    "chineseDirector": "董润年"
+    "chineseDirector": "董润年",
+    "hidden": true
   },
   {
     "id": "film-36190889",
@@ -8793,37 +8807,6 @@
     "tmdbId": 1012201,
     "rating": "5 / 5",
     "hidden": true
-  },
-  {
-    "id": "film-36151692",
-    "title": "The Pig, the Snake and the Pigeon",
-    "originalTitle": "周處除三害",
-    "type": "film",
-    "director": "Wong Ching-Po",
-    "year": 2023,
-    "country": "TW",
-    "genre": "Crime, Drama, Thriller",
-    "runtime": "134 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-1046090-3d35b963caad.webp",
-    "firstWatched": "2024-12-27",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt29319990/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "36151692",
-        "title": "周处除三害",
-        "firstWatched": "2024-12-27",
-        "rating": "5 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 1046090,
-    "rating": "5 / 5",
-    "chineseTitle": "周处除三害",
-    "originalDirector": "黃精甫",
-    "chineseDirector": "黄精甫"
   },
   {
     "id": "film-26787574",
@@ -8945,7 +8928,7 @@
     ],
     "tmdbId": 4588,
     "rating": "5 / 5",
-    "chineseTitle": "色，戒",
+    "chineseTitle": "色戒",
     "originalDirector": "李安",
     "chineseDirector": "李安"
   },
@@ -10074,7 +10057,7 @@
     ],
     "tmdbId": 538331,
     "rating": "5 / 5",
-    "hidden": false,
+    "hidden": true,
     "chineseTitle": "西虹市首富",
     "originalDirector": "Peng Damo, 闫非",
     "chineseDirector": "彭大魔, 闫非"
@@ -10415,7 +10398,8 @@
     "rating": "4 / 5",
     "chineseTitle": "小鬼当家",
     "originalDirector": "Chris Columbus",
-    "chineseDirector": "克里斯·哥伦布"
+    "chineseDirector": "克里斯·哥伦布",
+    "hidden": true
   },
   {
     "id": "film-1793491",
@@ -10933,7 +10917,8 @@
     "chineseTitle": "哪吒之魔童降世",
     "originalDirector": "饺子",
     "chineseDirector": "饺子",
-    "studio": "Chengdu Coco Cartoon"
+    "studio": "Chengdu Coco Cartoon",
+    "hidden": true
   },
   {
     "id": "film-26259677",
@@ -11691,7 +11676,7 @@
     "country": "GB · US",
     "genre": "Science Fiction, Mystery, Adventure",
     "runtime": "149 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-62-5f87862fe0da.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/film-1292226-07f54b635ca4.webp",
     "firstWatched": "2022-02-02",
     "externalLink": {
       "platform": "IMDb",
@@ -11991,7 +11976,8 @@
     "rating": "5 / 5",
     "chineseTitle": "头号玩家",
     "originalDirector": "Steven Spielberg",
-    "chineseDirector": "史蒂文·斯皮尔伯格"
+    "chineseDirector": "史蒂文·斯皮尔伯格",
+    "hidden": true
   },
   {
     "id": "film-27010768",
@@ -12208,7 +12194,8 @@
     "chineseTitle": "驯龙高手",
     "originalDirector": "Chris Sanders, Dean DeBlois",
     "chineseDirector": "克里斯·桑德斯, 迪恩·德布洛斯",
-    "studio": "DreamWorks Animation"
+    "studio": "DreamWorks Animation",
+    "hidden": true
   },
   {
     "id": "film-1296996",
@@ -12647,7 +12634,8 @@
     "rating": "3 / 5",
     "chineseTitle": "美丽心灵",
     "originalDirector": "Ron Howard",
-    "chineseDirector": "朗·霍华德"
+    "chineseDirector": "朗·霍华德",
+    "hidden": true
   },
   {
     "id": "film-1291843",
@@ -12752,7 +12740,7 @@
     "country": "US",
     "genre": "Drama",
     "runtime": "97 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-389-bd4b837b11e5.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/film-1293182-c840c55e9034.webp",
     "firstWatched": "2022-02-02",
     "externalLink": {
       "platform": "IMDb",
@@ -12772,37 +12760,6 @@
     "chineseTitle": "十二怒汉",
     "originalDirector": "Sidney Lumet",
     "chineseDirector": "西德尼·吕美特"
-  },
-  {
-    "id": "film-26752088",
-    "title": "Dying to Survive",
-    "originalTitle": "我不是药神",
-    "type": "film",
-    "director": "Wen Muye",
-    "year": 2018,
-    "country": "CN",
-    "genre": "Drama, Comedy",
-    "runtime": "117 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-532753-cca2ffa18058.webp",
-    "firstWatched": "2022-02-02",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt7362036/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "26752088",
-        "title": "我不是药神",
-        "firstWatched": "2022-02-02",
-        "rating": "5 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 532753,
-    "rating": "5 / 5",
-    "chineseTitle": "我不是药神",
-    "originalDirector": "文牧野",
-    "chineseDirector": "文牧野"
   },
   {
     "id": "film-26387939",
@@ -13788,5 +13745,26 @@
     "chineseTitle": "死神",
     "chineseDirector": "久保带人",
     "studio": "Pierrot"
+  },
+  {
+    "id": "tv-14037",
+    "title": "Operation Love",
+    "originalTitle": "プロポーズ大作戦",
+    "chineseTitle": "求婚大作战",
+    "type": "series",
+    "director": "Gaku Narita",
+    "originalDirector": "成田岳",
+    "chineseDirector": "成田岳",
+    "year": 2007,
+    "country": "JP",
+    "genre": "Comedy, Sci-Fi & Fantasy",
+    "runtime": "11 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-14037-644f027862f1.webp",
+    "externalLink": {
+      "platform": "IMDb",
+      "url": "https://www.imdb.com/title/tt0978140/"
+    },
+    "tmdbId": 14037,
+    "watchedEntries": []
   }
 ]

@@ -88,6 +88,10 @@ export function localEditor(root = process.cwd()) {
             res.writeHead(200, { 'Content-Type': `${type}; charset=utf-8`, 'Cache-Control': 'no-store' });
             return res.end(readFileSync(new URL(file, import.meta.url)));
           }
+          if (req.method === 'GET' && path === '/__editor/cinema-groups') {
+            const { cinemaGroups, cinemaCollectionTitles } = JSON.parse(readFileSync(resolve(root, 'src/data/media-curation.json')));
+            return reply(res, 200, { groups: cinemaGroups, titles: cinemaCollectionTitles });
+          }
           if (req.method === 'GET' && path === '/__editor/status') return reply(res, 200, { editor: true });
           if (req.method === 'POST' && path === '/__editor/image') {
             const bytes = await body(req, 20 * 1024 * 1024);

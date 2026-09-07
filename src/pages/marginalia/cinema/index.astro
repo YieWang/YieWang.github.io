@@ -1,13 +1,14 @@
 ---
+import { reviewFirst } from '../../../lib/review-order';
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import { cinemaFilmCards, cinemaSeries, cinemaAnimationCards, withSeasonDetails } from '../../../data/cinema';
 
 const categories = [
   { id: 'films', label: 'Films', items: cinemaFilmCards },
-  { id: 'series', label: 'Series', items: cinemaSeries.map(withSeasonDetails).sort((a, b) => Number(!!b.review) - Number(!!a.review)) },
+  { id: 'series', label: 'Series', items: cinemaSeries.map(withSeasonDetails) },
   { id: 'animation', label: 'Animation', items: cinemaAnimationCards },
-];
+].map(category => ({ ...category, items: [...category.items].sort(reviewFirst) }));
 ---
 
 <Layout

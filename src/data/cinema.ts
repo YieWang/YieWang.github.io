@@ -1,5 +1,5 @@
 import importedCinema from './cinema-import.json';
-import { cinemaGroups } from './media-curation.json';
+import { cinemaGroups, cinemaCollectionTitles } from './media-curation.json';
 
 export interface MediaItem {
   installments?: MediaItem[];   // Films or seasons sharing one collection card
@@ -65,23 +65,7 @@ export const cinemaSeries = importedItems.filter(item => item.type === 'series' 
 export const allCinemaItems: MediaItem[] = importedItems;
 
 // Explicit franchise groups only; sharing a director does not make a collection.
-const collectionTitles: Record<string, string> = {
-  'film-37311135': 'Pegasus',
-  'film-1474189': 'Saw', 'film-30209818': 'Happy Death Day',
-  'film-6532822': 'Resident Evil',
-  'film-25728006': 'Fast & Furious', 'film-11624706': 'Despicable Me',
-  'film-27074316': "A Dog’s Purpose", 'film-25887288': 'Frozen',
-  'film-1433330': 'Harry Potter',
-  'film-26311973': 'Detective Chinatown', 'film-26817136': 'Zootopia',
-  'film-26282448': 'Naruto', 'film-1305053': 'Hannibal Lecter',
-  'film-36680624': 'Demon Slayer', 'film-1291584': 'Kill Bill',
-  'film-10467125': 'One Piece', 'film-26715496': 'Kung Fu Panda',
-  'film-36090457': 'Inside Out', 'film-34780991': 'Ne Zha',
-  'film-10808442': 'Before Trilogy',
-  'film-20438964': 'Wreck-It Ralph', 'film-4914468': 'Ice Age',
-  'film-3789848': 'Monsters, Inc.', 'film-3642835': 'Men in Black',
-  'film-1299398': 'A Chinese Odyssey',
-};
+const collectionTitles: Record<string, string> = cinemaCollectionTitles;
 
 export function groupFilmCollections(items: MediaItem[]): MediaItem[] {
   const emitted = new Set<number>();

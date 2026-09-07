@@ -30,7 +30,7 @@ assert.equal(groupFilmCollections(cinemaSeries).length, cinemaSeries.length, 'Do
 const harryPotter = groupFilmCollections(cinemaFilms).find(x => x.title === 'Harry Potter');
 assert.equal(harryPotter.installments.length, 8);
 assert.ok(harryPotter.installments.every(x => x.title.startsWith('Harry Potter and ')));
-assert.ok(groupFilmCollections(cinemaFilms).some(x => x.id === 'film-25726614' && !x.installments), 'Fantastic Beasts stays separate from Harry Potter');
+assert.ok(!harryPotter.installments.some(x => x.id === 'film-25726614'), 'Fantastic Beasts stays separate from Harry Potter, whether kept or hidden');
 console.log('Collection membership, hidden films, release order, single films and TV preservation passed');
 
 const { allCinemaItems, withSeasonDetails } = context.exports;

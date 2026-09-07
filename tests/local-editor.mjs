@@ -14,6 +14,7 @@ for (const doc of Object.values(documents)) {
   validate(JSON.parse(bytes), doc.schema);
   writeFileSync(join(root, 'src/data', doc.file), bytes);
 }
+writeFileSync(join(root, 'src/data/media-curation.json'), readFileSync(new URL('../src/data/media-curation.json', import.meta.url)));
 let middleware;
 localEditor(root).configureServer({ middlewares: { use(fn) { middleware = fn; } }, moduleGraph: { invalidateAll() {} } });
 const server = createServer((req, res) => middleware(req, res, () => { res.statusCode = 404; res.end(); }));
@@ -24,6 +25,9 @@ const post = (path, data, headers = {}) => fetch(origin + '/__editor/' + path, {
   method: 'POST', headers: { Origin: origin, 'X-Homepage-Editor': '1', 'Content-Type': 'application/json', ...headers }, body: JSON.stringify(data),
 });
 try {
+  const grouping = await (await fetch(origin + '/__editor/cinema-groups')).json();
+  assert.ok(grouping.groups.some(ids => ids.includes('film-1295038')));
+  assert.equal(grouping.titles['film-1433330'], 'Harry Potter');
   const curator = await fetch(origin + '/__editor/cinema');
   assert.equal(curator.status, 200);
   assert.ok((await curator.text()).includes('筛选影视'));

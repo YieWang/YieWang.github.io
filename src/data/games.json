@@ -232,19 +232,19 @@
     "note": "求知欲真的是人类最大的宝藏。"
   },
   {
-    "appid": 632470,
-    "title": "Disco Elysium - The Final Cut",
-    "playtimeMinutes": 59,
-    "cover": "https://homepage-assets.mathtranslations.org/images/games/632470.jpg",
-    "url": "https://store.steampowered.com/app/632470/?l=english",
-    "note": ""
-  },
-  {
     "appid": 736260,
     "title": "Baba Is You",
     "playtimeMinutes": 51,
     "cover": "https://homepage-assets.mathtranslations.org/images/games/736260.jpg",
     "url": "https://store.steampowered.com/app/736260/?l=english",
+    "note": ""
+  },
+  {
+    "appid": 632470,
+    "title": "Disco Elysium - The Final Cut",
+    "playtimeMinutes": 59,
+    "cover": "https://homepage-assets.mathtranslations.org/images/games/632470.jpg",
+    "url": "https://store.steampowered.com/app/632470/?l=english",
     "note": ""
   }
 ]

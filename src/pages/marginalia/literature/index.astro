@@ -1,4 +1,5 @@
 ---
+import { reviewFirst } from '../../../lib/review-order';
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import { literatureBookCards, literatureEssays } from '../../../data/literature';
@@ -38,7 +39,7 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
     <main id="view-books" class="transition-opacity duration-300">
       {literatureBookCards.length === 0 && <p class="text-sm text-[#888888] text-center">No books yet.</p>}
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-10 sm:gap-y-14">
-        {literatureBookCards.map((book) => (
+        {[...literatureBookCards].sort(reviewFirst).map((book) => (
           <article
             class="book-card group cursor-pointer flex flex-col justify-between select-none"
             data-book-json={JSON.stringify(book)}
@@ -348,7 +349,7 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
                 ? `
               <div class="space-y-2">
                 <div class="text-[0.62rem] font-mono uppercase tracking-[0.14rem] text-[#888888]">
-                  ${!book.review && selection.collectionReview ? `${escapeHtml(selection.title)} · ` : ''}${escapeHtml(review.date)}
+                  ${escapeHtml(review.date)}
                 </div>
                 
                 <!-- Indented First Paragraph -->

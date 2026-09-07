@@ -14,7 +14,7 @@
 <div class="controls">
 <input id="search" type="search" placeholder="搜索片名、导演" aria-label="搜索片名、导演">
 <select id="category" aria-label="作品类型"><option value="all">全部类型</option><option value="film">电影</option><option value="series">电视剧</option><option value="animation">动漫</option></select>
-<select id="filter" aria-label="保留状态"><option value="all">全部作品</option><option value="kept">已保留</option><option value="deleted">已删除</option></select>
+<select id="filter" aria-label="保留状态"><option value="all">全部作品</option><option value="kept" selected>已保留</option><option value="deleted">已删除</option></select>
 </div>
 <p id="status" role="status">正在加载…</p><p id="error" role="alert"></p>
 <small>仅保存到本机，发布后才会更新网站。 <a href="/marginalia/cinema/" target="_blank" rel="noopener">预览 Cinema ↗</a></small>
@@ -35,7 +35,37 @@ search.setAttribute('aria-label', search.placeholder);
 const preview = document.querySelector('small a'); preview.href = '/marginalia/' + kind + '/'; preview.textContent = '预览' + label + ' ↗';
 document.querySelector(`nav a[href="?section=${kind}"]`).setAttribute('aria-current','page');
 if (kind === 'music') document.body.classList.add('music');
-let state, busy = false;
+let state, busy = false, grouping = { groups: [], titles: {} };
+function collectionItems(items, { groups, titles }, compare = (a,b) => Number(a.year)-Number(b.year)) {
+  const byId = new Map(items.map(item => [item.id, item]));
+  const membership = new Map(groups.flatMap(ids => ids.map(id => [id, ids])));
+  const seen = new Set();
+  return items.flatMap(item => {
+    const ids = membership.get(item.id) || [item.id];
+    if (seen.has(ids[0])) return [];
+    seen.add(ids[0]);
+    const parts = ids.map(id => byId.get(id)).filter(Boolean).sort(compare);
+    const first = parts[0];
+    return [{ ...first, title: parts.length > 1 ? (titles[ids[0]] || first.title) : first.title,
+      originalTitle: parts.length > 1 ? (titles[ids[0]] || first.originalTitle || first.title) : first.originalTitle,
+      parts, hidden: parts.every(part => part.hidden), partial: parts.some(part => part.hidden) && parts.some(part => !part.hidden) }];
+  });
+}
+function bookCollectionItems(items) {
+  const collections = new Map();
+  for (const item of items) {
+    if (!item.collection) continue;
+    const ids = collections.get(item.collection) || [];
+    ids.push(item.id); collections.set(item.collection, ids);
+  }
+  return collectionItems(items, {
+    groups: [...collections.values()],
+    titles: Object.fromEntries([...collections].map(([title, ids]) => [ids[0], title])),
+  }, (a,b) => (a.partOrder || 0)-(b.partOrder || 0));
+}
+function setHidden(data, ids, hidden) {
+  for (const item of records(data)) if (ids.includes(item.id)) item.hidden = hidden;
+}
 const node = (tag, text) => { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; return n; };
 async function api(data) {
   const response = await fetch('/__editor/data/' + kind, data ? {method:'POST',headers:{'Content-Type':'application/json','X-Homepage-Editor':'1'},body:JSON.stringify(data)} : {cache:'no-store'});
@@ -48,12 +78,13 @@ function render() {
   const focusId = focus?.closest('article')?.dataset.id, focusClass = focus?.className;
   main.replaceChildren();
   const query = search.value.trim().toLocaleLowerCase();
-  const all = records(state.data);
+  const all = kind === 'cinema' ? collectionItems(records(state.data), grouping)
+    : kind === 'literature' ? bookCollectionItems(records(state.data)) : records(state.data);
   const items = all.filter(item => {
     const type = (item.genre || '').split(', ').includes('Animation') ? 'animation' : item.type;
     return (category.value === 'all' || category.value === type)
-      && (filter.value === 'all' || (filter.value === 'deleted') === !!item.hidden)
-      && [item.title,item.originalTitle,item.director,item.originalDirector,item.author,item.originalAuthor,item.artistName,item.artistDisplayName,...(item.watchedEntries || []).map(entry => entry.title)].some(text => String(text || '').toLocaleLowerCase().includes(query));
+      && (filter.value === 'all' || (filter.value === 'deleted' ? item.hidden || item.partial : !item.hidden))
+      && [item.title,...(item.parts || [item]).flatMap(part => [part.title,part.originalTitle,part.chineseTitle,part.director,part.originalDirector,part.author,part.originalAuthor,part.artistName,part.artistDisplayName,...(part.watchedEntries || []).map(entry => entry.title)])].some(text => String(text || '').toLocaleLowerCase().includes(query));
   });
   for (const item of items) {
     const card = node('article'); card.dataset.id = item.id; card.classList.toggle('deleted', !!item.hidden);
@@ -62,27 +93,40 @@ function render() {
     const actions = node('div'); actions.className = 'actions';
     for (const [label, hidden, cls] of [['保留',false,'keep'],['删除',true,'remove']]) {
       const button = node('button',label); button.type = 'button'; button.className = cls; button.disabled = busy;
-      button.setAttribute('aria-label', `${label}《${title}》`); button.setAttribute('aria-pressed',String(!!item.hidden === hidden));
-      button.addEventListener('click', () => save(item.id, hidden)); actions.append(button);
+      button.setAttribute('aria-label', `${label}《${title}》`); button.setAttribute('aria-pressed',String(!item.partial && !!item.hidden === hidden));
+      button.addEventListener('click', () => save((item.parts || [item]).map(part => part.id), hidden)); actions.append(button);
     }
-    card.append(img,node('h2',title),node('small',`${item.year || ''} · ${kind === 'music' ? item.artistDisplayName || item.artistName : kind === 'literature' ? item.author : item.originalDirector || item.director}`),actions); main.append(card);
+    card.append(img,node('h2',title),node('small',`${item.year || ''} · ${kind === 'music' ? item.artistDisplayName || item.artistName : kind === 'literature' ? item.author : item.originalDirector || item.director}`),actions);
+    if (item.parts?.length > 1) {
+      const details = node('details'); details.append(node('summary', '系列作品' + (item.partial ? '（部分已删除）' : '')));
+      for (const part of item.parts) details.append(node('p', `${part.originalTitle || part.title} · ${part.year || ''}${part.hidden ? '（已删除）' : ''}`));
+      card.append(details);
+    }
+    main.append(card);
   }
   const hidden = all.filter(item => item.hidden).length;
   status.textContent = `保留 ${all.length-hidden} 项 · 已删除 ${hidden} 项 · 当前显示 ${items.length} 项${busy ? ' · 保存中…' : ''}`;
   if (!items.length) { const empty = node('p','没有符合条件的作品'); empty.id = 'empty'; main.append(empty); }
   if (focusId) [...main.querySelectorAll('article')].find(card => card.dataset.id === focusId)?.querySelector(`button.${focusClass}`)?.focus({preventScroll:true});
 }
-async function save(id, hidden) {
+async function save(ids, hidden) {
   if (busy) return;
-  if (!!records(state.data).find(item => item.id === id).hidden === hidden) { status.textContent = '已保存：' + (hidden ? '删除' : '保留'); return; }
+  if (records(state.data).filter(item => ids.includes(item.id)).every(item => !!item.hidden === hidden)) { status.textContent = '已保存：' + (hidden ? '删除' : '保留'); return; }
   busy = true; error.textContent = ''; main.querySelectorAll('button').forEach(b => b.disabled = true); status.textContent = '保存中…';
-  const data = structuredClone(state.data); records(data).find(item => item.id === id).hidden = hidden;
+  const data = structuredClone(state.data); setHidden(data, ids, hidden);
   try { const result = await api({data,revision:state.revision}); state = {data,revision:result.revision}; }
   catch (e) { error.textContent = e.message; }
   finally { busy = false; render(); }
 }
 window.addEventListener('beforeunload', event => { if (busy) { event.preventDefault(); event.returnValue = ''; } });
 for (const input of [search,category,filter]) input.addEventListener('input', () => { if (state) render(); });
-try { state = await api(); render(); } catch (e) { status.textContent = '加载失败'; error.textContent = e.message; }
+try {
+  if (kind === 'cinema') {
+    const response = await fetch('/__editor/cinema-groups', {cache:'no-store'});
+    if (!response.ok) throw Error('系列信息加载失败，请刷新重试');
+    grouping = await response.json();
+  }
+  state = await api(); render();
+} catch (e) { status.textContent = '加载失败'; error.textContent = e.message; }
 </script>
 </html>
