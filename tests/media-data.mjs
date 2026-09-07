@@ -155,4 +155,9 @@ for (const [name, predicate] of [
   }
 }
 assert.ok(!read('src/pages/marginalia/cinema/index.astro').includes('items: [...category.items].sort'));
+assert.equal(context.exports.secondaryNames(['Parasite'], '기생충', '寄生虫'), '기생충 · 寄生虫');
+assert.equal(context.exports.secondaryNames(['Bleach'], 'BLEACH', '死神', '第 2 季'), '死神 · 第 2 季');
+assert.equal(context.exports.secondaryNames(['Reset'], '开端', '开端'), '开端');
+assert.equal(context.exports.secondaryNames(['Christopher Nolan'], 'Christopher Nolan', '克里斯托弗·诺兰'), '克里斯托弗·诺兰');
+assert.equal(context.exports.secondaryNames(['A', 'B'], '小林常夫', '伊達勇登', '小林常夫', '伊达勇登'), '小林常夫 · 伊達勇登 · 伊达勇登');
 console.log('Cinema related groups, release ordering and review priority: passed');

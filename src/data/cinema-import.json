@@ -2,7 +2,7 @@
   {
     "id": "tv-2316",
     "title": "The Office",
-    "originalTitle": "办公室",
+    "originalTitle": "The Office",
     "type": "series",
     "director": "Greg Daniels",
     "year": 2005,
@@ -89,7 +89,7 @@
         "id": "tv-2316-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "The Office",
         "year": 2005,
         "releaseDate": "2005-03-24",
         "runtime": "6 Episodes",
@@ -109,13 +109,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/10529476/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/d71JQWhX75ZE2D383DlIsHVH1In.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/d71JQWhX75ZE2D383DlIsHVH1In.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-2316-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "The Office",
         "year": 2005,
         "releaseDate": "2005-09-20",
         "runtime": "22 Episodes",
@@ -135,13 +137,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/2159568/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sAd3RhOjhTuaIBpyiI1QmB0YUq8.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sAd3RhOjhTuaIBpyiI1QmB0YUq8.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-2316-season-3",
         "seasonNumber": 3,
         "title": "Season 3",
-        "originalTitle": "第 3 季",
+        "originalTitle": "The Office",
         "year": 2006,
         "releaseDate": "2006-09-21",
         "runtime": "23 Episodes",
@@ -161,13 +165,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/2163588/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1SR5ZR0KNHTRvAzFayaKbhKAFSu.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1SR5ZR0KNHTRvAzFayaKbhKAFSu.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-2316-season-4",
         "seasonNumber": 4,
         "title": "Season 4",
-        "originalTitle": "第 4 季",
+        "originalTitle": "The Office",
         "year": 2007,
         "releaseDate": "2007-09-27",
         "runtime": "14 Episodes",
@@ -187,13 +193,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/2171019/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zunFI6wdYJQRHnfXnziArUTs2e2.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zunFI6wdYJQRHnfXnziArUTs2e2.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-2316-season-5",
         "seasonNumber": 5,
         "title": "Season 5",
-        "originalTitle": "第 5 季",
+        "originalTitle": "The Office",
         "year": 2008,
         "releaseDate": "2008-09-25",
         "runtime": "26 Episodes",
@@ -213,13 +221,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/3100868/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hwlQxOPGIybqBz5TYYIe6XtOfi4.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hwlQxOPGIybqBz5TYYIe6XtOfi4.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 5 季"
       },
       {
         "id": "tv-2316-season-6",
         "seasonNumber": 6,
         "title": "Season 6",
-        "originalTitle": "第 6 季",
+        "originalTitle": "The Office",
         "year": 2009,
         "releaseDate": "2009-09-17",
         "runtime": "24 Episodes",
@@ -239,13 +249,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/4040275/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hk3a9U26J726oV8nHTdeMTtH91B.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hk3a9U26J726oV8nHTdeMTtH91B.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 6 季"
       },
       {
         "id": "tv-2316-season-7",
         "seasonNumber": 7,
         "title": "Season 7",
-        "originalTitle": "第 7 季",
+        "originalTitle": "The Office",
         "year": 2010,
         "releaseDate": "2010-09-23",
         "runtime": "24 Episodes",
@@ -265,13 +277,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/5279668/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uR3y9BwPA8gnk2nmB6ncQejEe8k.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uR3y9BwPA8gnk2nmB6ncQejEe8k.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 7 季"
       },
       {
         "id": "tv-2316-season-8",
         "seasonNumber": 8,
         "title": "Season 8",
-        "originalTitle": "第 8 季",
+        "originalTitle": "The Office",
         "year": 2011,
         "releaseDate": "2011-09-22",
         "runtime": "24 Episodes",
@@ -291,13 +305,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/6810257/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sQLtAEBbQNIXGZyTUt3IK9gX4VE.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sQLtAEBbQNIXGZyTUt3IK9gX4VE.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 8 季"
       },
       {
         "id": "tv-2316-season-9",
         "seasonNumber": 9,
         "title": "Season 9",
-        "originalTitle": "第 9 季",
+        "originalTitle": "The Office",
         "year": 2012,
         "releaseDate": "2012-09-20",
         "runtime": "23 Episodes",
@@ -317,9 +333,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/11232690/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ncR9y2RApOTSjfggJHjvoIlAqDG.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ncR9y2RApOTSjfggJHjvoIlAqDG.jpg",
+        "chineseTitle": "办公室",
+        "partLabel": "第 9 季"
       }
-    ]
+    ],
+    "chineseTitle": "办公室",
+    "originalDirector": "Greg Daniels",
+    "chineseDirector": "克雷格·丹尼尔斯"
   },
   {
     "id": "film-1787291",
@@ -348,12 +369,15 @@
       }
     ],
     "tmdbId": 31512,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "被嫌弃的松子的一生",
+    "originalDirector": "中島哲也",
+    "chineseDirector": "中岛哲也"
   },
   {
     "id": "film-26416603",
     "title": "Sully",
-    "originalTitle": "萨利机长",
+    "originalTitle": "Sully",
     "type": "film",
     "director": "Clint Eastwood",
     "year": 2016,
@@ -377,7 +401,10 @@
       }
     ],
     "tmdbId": 363676,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "萨利机长",
+    "originalDirector": "Clint Eastwood",
+    "chineseDirector": "克林特·伊斯特伍德"
   },
   {
     "id": "film-35811064",
@@ -406,12 +433,15 @@
       }
     ],
     "tmdbId": 1391021,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "欢迎来龙餐馆",
+    "originalDirector": "文牧野",
+    "chineseDirector": "文牧野"
   },
   {
     "id": "film-36808876",
     "title": "The Odyssey",
-    "originalTitle": "奥德赛",
+    "originalTitle": "The Odyssey",
     "type": "film",
     "director": "Christopher Nolan",
     "year": 2026,
@@ -435,7 +465,10 @@
       }
     ],
     "tmdbId": 1368337,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "奥德赛",
+    "originalDirector": "Christopher Nolan",
+    "chineseDirector": "克里斯托弗·诺兰"
   },
   {
     "id": "film-36812879",
@@ -470,7 +503,7 @@
   {
     "id": "film-1309016",
     "title": "Million Dollar Baby",
-    "originalTitle": "百万美元宝贝",
+    "originalTitle": "Million Dollar Baby",
     "type": "film",
     "director": "Clint Eastwood",
     "year": 2004,
@@ -494,7 +527,10 @@
       }
     ],
     "tmdbId": 70,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "百万美元宝贝",
+    "originalDirector": "Clint Eastwood",
+    "chineseDirector": "克林特·伊斯特伍德"
   },
   {
     "id": "film-10484041",
@@ -523,7 +559,10 @@
       }
     ],
     "tmdbId": 200145,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "横道世之介",
+    "originalDirector": "沖田修一",
+    "chineseDirector": "冲田修一"
   },
   {
     "id": "film-36965301",
@@ -582,12 +621,15 @@
       }
     ],
     "tmdbId": 1671548,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "给阿嬷的情书",
+    "originalDirector": "藍鴻春",
+    "chineseDirector": "蓝鸿春"
   },
   {
     "id": "tv-70523",
     "title": "Dark",
-    "originalTitle": "暗黑",
+    "originalTitle": "Dark",
     "type": "series",
     "director": "Baran bo Odar, Jantje Friese",
     "year": 2017,
@@ -632,7 +674,7 @@
         "id": "tv-70523-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "Dark",
         "year": 2017,
         "releaseDate": "2017-12-01",
         "runtime": "10 Episodes",
@@ -652,13 +694,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26992330/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/spN6icwSwuAuOcuZLC9bKjK6N2i.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/spN6icwSwuAuOcuZLC9bKjK6N2i.jpg",
+        "chineseTitle": "暗黑",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-70523-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "Dark",
         "year": 2019,
         "releaseDate": "2019-06-21",
         "runtime": "8 Episodes",
@@ -678,13 +722,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/27611018/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/c8Aq3By7Z5JBIiue9WeDP0N3Zlu.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/c8Aq3By7Z5JBIiue9WeDP0N3Zlu.jpg",
+        "chineseTitle": "暗黑",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-70523-season-3",
         "seasonNumber": 3,
         "title": "Season 3",
-        "originalTitle": "第 3 季",
+        "originalTitle": "Dark",
         "year": 2020,
         "releaseDate": "2020-06-27",
         "runtime": "8 Episodes",
@@ -704,9 +750,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/34442364/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5Dk9V5K7IlFQTTHbuc6KvKWLD55.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5Dk9V5K7IlFQTTHbuc6KvKWLD55.jpg",
+        "chineseTitle": "暗黑",
+        "partLabel": "第 3 季"
       }
-    ]
+    ],
+    "chineseTitle": "暗黑",
+    "originalDirector": "Baran bo Odar, Jantje Friese",
+    "chineseDirector": "巴兰·博·奥达尔, 扬特耶·弗里泽"
   },
   {
     "id": "film-1291546",
@@ -735,7 +786,10 @@
       }
     ],
     "tmdbId": 10997,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "霸王别姬",
+    "originalDirector": "陈凯歌",
+    "chineseDirector": "陈凯歌"
   },
   {
     "id": "film-1301168",
@@ -764,12 +818,15 @@
       }
     ],
     "tmdbId": 146,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "卧虎藏龙",
+    "originalDirector": "李安",
+    "chineseDirector": "李安"
   },
   {
     "id": "film-1301459",
     "title": "The Others",
-    "originalTitle": "小岛惊魂",
+    "originalTitle": "The Others",
     "type": "film",
     "director": "Alejandro Amenábar",
     "year": 2001,
@@ -793,7 +850,10 @@
       }
     ],
     "tmdbId": 1933,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "小岛惊魂",
+    "originalDirector": "Alejandro Amenábar",
+    "chineseDirector": "亚历桑德罗·阿曼巴"
   },
   {
     "id": "film-37311135",
@@ -853,7 +913,10 @@
     ],
     "tmdbId": 43167,
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "加速世界",
+    "originalDirector": "川原礫",
+    "chineseDirector": "川原砾"
   },
   {
     "id": "tv-92602",
@@ -883,7 +946,10 @@
     ],
     "tmdbId": 92602,
     "rating": "5 / 5",
-    "creditRole": "DIRECTED BY"
+    "creditRole": "DIRECTED BY",
+    "chineseTitle": "异度侵入",
+    "originalDirector": "あおきえい",
+    "chineseDirector": "青木英"
   },
   {
     "id": "tv-95479",
@@ -927,7 +993,7 @@
         "id": "tv-95479-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "呪術廻戦",
         "year": 2020,
         "releaseDate": "2020-10-02",
         "runtime": "24 Episodes",
@@ -947,13 +1013,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/34895145/"
         },
-        "posterSourceUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-95479-e0d2f97fa59a.webp"
+        "posterSourceUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-95479-e0d2f97fa59a.webp",
+        "chineseTitle": "咒术回战",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-95479-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "呪術廻戦",
         "year": 2023,
         "releaseDate": "2023-07-06",
         "runtime": "23 Episodes",
@@ -973,9 +1041,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/35765350/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fHQ2XHRdRix0rkDCShmGQ8c6d03.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fHQ2XHRdRix0rkDCShmGQ8c6d03.jpg",
+        "chineseTitle": "咒术回战",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "咒术回战",
+    "originalDirector": "芥見下々",
+    "chineseDirector": "芥见下下"
   },
   {
     "id": "tv-117933",
@@ -1005,7 +1078,10 @@
     ],
     "tmdbId": 117933,
     "rating": "4 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "夏日重现",
+    "originalDirector": "田中靖規",
+    "chineseDirector": "田中靖规"
   },
   {
     "id": "tv-83097",
@@ -1042,7 +1118,7 @@
         "id": "tv-83097-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "約束のネバーランド",
         "year": 2019,
         "releaseDate": "2019-01-10",
         "runtime": "12 Episodes",
@@ -1062,13 +1138,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30206430/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/x2JKm34FgSvZ8nt5KhoeD0Zt9U.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/x2JKm34FgSvZ8nt5KhoeD0Zt9U.jpg",
+        "chineseTitle": "约定的梦幻岛",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-83097-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "約束のネバーランド",
         "year": 2021,
         "releaseDate": "2021-01-08",
         "runtime": "11 Episodes",
@@ -1080,9 +1158,14 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/83097/season/2"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3yaPUl2tPg7ADi8a0u8MuSVim83.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3yaPUl2tPg7ADi8a0u8MuSVim83.jpg",
+        "chineseTitle": "约定的梦幻岛",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "约定的梦幻岛",
+    "originalDirector": "白井カイウ, 出水ぽすか",
+    "chineseDirector": "白井海芋, "
   },
   {
     "id": "tv-61663",
@@ -1113,7 +1196,10 @@
     "tmdbId": 61663,
     "span": "2014–2015",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "四月是你的谎言",
+    "originalDirector": "新川直司",
+    "chineseDirector": "新川直司"
   },
   {
     "id": "tv-82739",
@@ -1150,7 +1236,7 @@
         "id": "tv-82739-season-1",
         "seasonNumber": 1,
         "title": "Season 1 · Rascal Does Not Dream of Bunny Girl Senpai",
-        "originalTitle": "第 1 季",
+        "originalTitle": "青春ブタ野郎はバニーガール先輩の夢を見ない",
         "year": 2018,
         "releaseDate": "2018-10-03",
         "runtime": "13 Episodes",
@@ -1170,13 +1256,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30166978/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bZ7ih7sC7VJ7Lmm6177lqwXt5PI.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bZ7ih7sC7VJ7Lmm6177lqwXt5PI.jpg",
+        "chineseTitle": "青春猪头少年不会梦到兔女郎学姐",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-82739-season-2",
         "seasonNumber": 2,
         "title": "Season 2 · Rascal Does Not Dream of Santa Claus",
-        "originalTitle": "第 2 季",
+        "originalTitle": "青春ブタ野郎はバニーガール先輩の夢を見ない",
         "year": 2025,
         "releaseDate": "2025-07-05",
         "runtime": "13 Episodes",
@@ -1188,9 +1276,14 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/82739/season/2"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/igZkNBmB6aEBgtA1QCfQjvZM3ft.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/igZkNBmB6aEBgtA1QCfQjvZM3ft.jpg",
+        "chineseTitle": "青春猪头少年不会梦到兔女郎学姐",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "青春猪头少年不会梦到兔女郎学姐",
+    "originalDirector": "鴨志田一",
+    "chineseDirector": "鸭志田一"
   },
   {
     "id": "tv-105248",
@@ -1219,12 +1312,15 @@
       }
     ],
     "tmdbId": 105248,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "赛博朋克：边缘行者",
+    "originalDirector": "Rafał Jaki",
+    "chineseDirector": "拉法乌·亚基"
   },
   {
     "id": "tv-42942",
     "title": "Angel Beats!",
-    "originalTitle": "天使的心跳！",
+    "originalTitle": "Angel Beats!",
     "type": "series",
     "director": "Jun Maeda",
     "year": 2010,
@@ -1249,7 +1345,10 @@
     ],
     "tmdbId": 42942,
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL STORY / SCREENPLAY"
+    "creditRole": "ORIGINAL STORY / SCREENPLAY",
+    "chineseTitle": "天使的心跳！",
+    "originalDirector": "麻枝准",
+    "chineseDirector": "麻枝准"
   },
   {
     "id": "tv-82766",
@@ -1280,7 +1379,10 @@
     "tmdbId": 82766,
     "span": "2018–2019",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "强风吹拂",
+    "originalDirector": "三浦しをん",
+    "chineseDirector": "三浦紫苑"
   },
   {
     "id": "tv-31724",
@@ -1324,7 +1426,7 @@
         "id": "tv-31724-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "コードギアス 反逆のルルーシュ",
         "year": 2006,
         "releaseDate": "2006-10-05",
         "runtime": "25 Episodes",
@@ -1344,13 +1446,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/2043155/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/jSk1zsthAJ16F4i8e3LDXPwlrk2.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/jSk1zsthAJ16F4i8e3LDXPwlrk2.jpg",
+        "chineseTitle": "反叛的鲁路修",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-31724-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "コードギアス 反逆のルルーシュ",
         "year": 2008,
         "releaseDate": "2008-04-06",
         "runtime": "25 Episodes",
@@ -1370,9 +1474,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/3004532/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wtDXWzKIsQ0ZNrtAqlJH8hCqJDH.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wtDXWzKIsQ0ZNrtAqlJH8hCqJDH.jpg",
+        "chineseTitle": "反叛的鲁路修",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "反叛的鲁路修",
+    "originalDirector": "大河内一楼, 谷口悟朗",
+    "chineseDirector": "大河内一楼, 谷口悟朗"
   },
   {
     "id": "tv-43125",
@@ -1403,7 +1512,10 @@
     "tmdbId": 43125,
     "span": "2011–2012",
     "rating": "4 / 5",
-    "creditRole": "DIRECTED BY"
+    "creditRole": "DIRECTED BY",
+    "chineseTitle": "罪恶王冠",
+    "originalDirector": "荒木哲郎",
+    "chineseDirector": "荒木哲郎"
   },
   {
     "id": "tv-45782",
@@ -1461,7 +1573,7 @@
         "id": "tv-45782-season-1",
         "seasonNumber": 1,
         "title": "Season 1 · Sword Art Online",
-        "originalTitle": "第 1 季",
+        "originalTitle": "ソードアート・オンライン",
         "year": 2012,
         "releaseDate": "2012-07-07",
         "runtime": "25 Episodes",
@@ -1481,13 +1593,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/6869376/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/is3J0fmMgmqVt3Shm6J5KtULTyq.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/is3J0fmMgmqVt3Shm6J5KtULTyq.jpg",
+        "chineseTitle": "刀剑神域",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-45782-season-2",
         "seasonNumber": 2,
         "title": "Season 2 · Sword Art Online II",
-        "originalTitle": "第 2 季",
+        "originalTitle": "ソードアート・オンライン",
         "year": 2014,
         "releaseDate": "2014-07-05",
         "runtime": "24 Episodes",
@@ -1507,13 +1621,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/25804168/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/eikzrWCrgaEuvNu8hcQHFeC3onR.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/eikzrWCrgaEuvNu8hcQHFeC3onR.jpg",
+        "chineseTitle": "刀剑神域",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-45782-season-3",
         "seasonNumber": 3,
         "title": "Season 3 · Sword Art Online Alicization",
-        "originalTitle": "第 3 季",
+        "originalTitle": "ソードアート・オンライン",
         "year": 2018,
         "releaseDate": "2018-10-06",
         "runtime": "24 Episodes",
@@ -1533,13 +1649,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/27144972/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/vHYPL0ki5tevokmjOa2pofgpRxW.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/vHYPL0ki5tevokmjOa2pofgpRxW.jpg",
+        "chineseTitle": "刀剑神域",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-45782-season-4",
         "seasonNumber": 4,
         "title": "Season 4 · Sword Art Online Alicization: War of Underworld",
-        "originalTitle": "第 4 季",
+        "originalTitle": "ソードアート・オンライン",
         "year": 2019,
         "releaseDate": "2019-10-12",
         "runtime": "23 Episodes",
@@ -1559,14 +1677,19 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/33218388/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zhOJXbvnJGs1eY91ezQaUrEjxtn.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zhOJXbvnJGs1eY91ezQaUrEjxtn.jpg",
+        "chineseTitle": "刀剑神域",
+        "partLabel": "第 4 季"
       }
-    ]
+    ],
+    "chineseTitle": "刀剑神域",
+    "originalDirector": "川原礫",
+    "chineseDirector": "川原砾"
   },
   {
     "id": "tv-61415",
     "title": "Fate/stay night [Unlimited Blade Works]",
-    "originalTitle": "命运之夜 无限剑制",
+    "originalTitle": "Fate/stay night [Unlimited Blade Works]",
     "type": "series",
     "director": "Kinoko Nasu / TYPE-MOON",
     "year": 2014,
@@ -1605,7 +1728,7 @@
         "id": "tv-61415-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "Fate/stay night [Unlimited Blade Works]",
         "year": 2014,
         "releaseDate": "2014-10-04",
         "runtime": "12 Episodes",
@@ -1625,13 +1748,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/24857860/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ituw0pLNRC41C2BjZMgDgDvBfbd.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ituw0pLNRC41C2BjZMgDgDvBfbd.jpg",
+        "chineseTitle": "命运之夜 无限剑制",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-61415-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "Fate/stay night [Unlimited Blade Works]",
         "year": 2015,
         "releaseDate": "2015-04-04",
         "runtime": "13 Episodes",
@@ -1651,14 +1776,19 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/25937990/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uhcg2xL85y32NUdpVA4kkBO4Zh.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uhcg2xL85y32NUdpVA4kkBO4Zh.jpg",
+        "chineseTitle": "命运之夜 无限剑制",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "命运之夜 无限剑制",
+    "originalDirector": "奈須きのこ, TYPE-MOON",
+    "chineseDirector": "奈须蘑菇, "
   },
   {
     "id": "tv-45845",
     "title": "Fate/Zero",
-    "originalTitle": "命运之夜 前传",
+    "originalTitle": "Fate/Zero",
     "type": "series",
     "director": "Gen Urobuchi",
     "year": 2011,
@@ -1696,7 +1826,7 @@
         "id": "tv-45845-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "Fate/Zero",
         "year": 2011,
         "releaseDate": "2011-10-01",
         "runtime": "13 Episodes",
@@ -1716,13 +1846,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/5416070/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/qRN0Gow4Ht0ScQMTfGXjqjS5HiF.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/qRN0Gow4Ht0ScQMTfGXjqjS5HiF.jpg",
+        "chineseTitle": "命运之夜 前传",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-45845-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "Fate/Zero",
         "year": 2012,
         "releaseDate": "2012-04-07",
         "runtime": "12 Episodes",
@@ -1742,9 +1874,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/6874729/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5AM2U3a84GpXLv2ENTyQDTYEgpZ.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5AM2U3a84GpXLv2ENTyQDTYEgpZ.jpg",
+        "chineseTitle": "命运之夜 前传",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "命运之夜 前传",
+    "originalDirector": "虚淵玄",
+    "chineseDirector": "虚渊玄"
   },
   {
     "id": "tv-139130",
@@ -1774,7 +1911,10 @@
     ],
     "tmdbId": 139130,
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "跃动青春",
+    "originalDirector": "高松美咲",
+    "chineseDirector": "高松美咲"
   },
   {
     "id": "tv-134182",
@@ -1805,7 +1945,10 @@
     "tmdbId": 134182,
     "span": "2008–2009",
     "rating": "5 / 5",
-    "creditRole": "DIRECTED BY"
+    "creditRole": "DIRECTED BY",
+    "chineseTitle": "洛洛历险记",
+    "originalDirector": "王巍",
+    "chineseDirector": "王巍"
   },
   {
     "id": "tv-63926",
@@ -1849,7 +1992,7 @@
         "id": "tv-63926-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "ワンパンマン",
         "year": 2015,
         "releaseDate": "2015-10-04",
         "runtime": "12 Episodes",
@@ -1869,13 +2012,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26339248/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ocv8PzwfQUsFHSSdUvK7wZI85Dx.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ocv8PzwfQUsFHSSdUvK7wZI85Dx.jpg",
+        "chineseTitle": "一拳超人",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-63926-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "ワンパンマン",
         "year": 2019,
         "releaseDate": "2019-04-02",
         "runtime": "12 Episodes",
@@ -1895,13 +2040,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26882339/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kjTzqlxR3bFtdgMuGtytj8MMtv7.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kjTzqlxR3bFtdgMuGtytj8MMtv7.jpg",
+        "chineseTitle": "一拳超人",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-63926-season-3",
         "seasonNumber": 3,
         "title": "Season 3",
-        "originalTitle": "第 3 季",
+        "originalTitle": "ワンパンマン",
         "year": 2025,
         "releaseDate": "2025-10-12",
         "runtime": "12 Episodes",
@@ -1913,9 +2060,14 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/63926/season/3"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/y9M6bjEc1oI7B8RISowo5L8oq19.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/y9M6bjEc1oI7B8RISowo5L8oq19.jpg",
+        "chineseTitle": "一拳超人",
+        "partLabel": "第 3 季"
       }
-    ]
+    ],
+    "chineseTitle": "一拳超人",
+    "originalDirector": "ONE, 村田雄介",
+    "chineseDirector": ", 村田雄介"
   },
   {
     "id": "tv-127714",
@@ -1946,7 +2098,10 @@
     "tmdbId": 127714,
     "span": "2022–2023",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "异世界归来的舅舅",
+    "originalDirector": "殆ど死んでいる",
+    "chineseDirector": ""
   },
   {
     "id": "tv-88803",
@@ -1990,7 +2145,7 @@
         "id": "tv-88803-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "ヴィンランド・サガ",
         "year": 2019,
         "releaseDate": "2019-07-07",
         "runtime": "24 Episodes",
@@ -2010,13 +2165,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30174419/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/vhasC3HdTY2pN94ww3r8RKdOGlr.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/vhasC3HdTY2pN94ww3r8RKdOGlr.jpg",
+        "chineseTitle": "冰海战记",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-88803-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "ヴィンランド・サガ",
         "year": 2023,
         "releaseDate": "2023-01-09",
         "runtime": "24 Episodes",
@@ -2036,9 +2193,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/35518839/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kHEaMqz3aHNoALObMTOJcOe8eK8.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kHEaMqz3aHNoALObMTOJcOe8eK8.jpg",
+        "chineseTitle": "冰海战记",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "冰海战记",
+    "originalDirector": "幸村誠",
+    "chineseDirector": "幸村诚"
   },
   {
     "id": "tv-74091",
@@ -2067,7 +2229,10 @@
       }
     ],
     "tmdbId": 74091,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "宝石之国",
+    "originalDirector": "京極尚彦",
+    "chineseDirector": "京极尚彦"
   },
   {
     "id": "tv-67676",
@@ -2118,7 +2283,7 @@
         "id": "tv-67676-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "斉木楠雄のΨ難",
         "year": 2016,
         "releaseDate": "2016-07-11",
         "runtime": "24 Episodes",
@@ -2138,13 +2303,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26801048/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/tpym31HVeQgenaubvCxkMF3kFHy.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/tpym31HVeQgenaubvCxkMF3kFHy.jpg",
+        "chineseTitle": "齐木楠雄的灾难",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-67676-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "斉木楠雄のΨ難",
         "year": 2018,
         "releaseDate": "2018-01-16",
         "runtime": "24 Episodes",
@@ -2164,13 +2331,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26946411/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wZ4NtrkOapW0scpTcqUslVPzPkU.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wZ4NtrkOapW0scpTcqUslVPzPkU.jpg",
+        "chineseTitle": "齐木楠雄的灾难",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-67676-special-30258226",
         "seasonNumber": 0,
         "title": "Conclusion Special",
-        "originalTitle": "齐木楠雄的灾难 完结篇",
+        "originalTitle": "斉木楠雄のΨ難",
         "year": 2018,
         "releaseDate": "2018-12-28",
         "runtime": "Special",
@@ -2190,9 +2359,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30258226/"
         },
-        "posterSourceUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-67676-e9e4c12fdf82.webp"
+        "posterSourceUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-67676-e9e4c12fdf82.webp",
+        "chineseTitle": "齐木楠雄的灾难",
+        "partLabel": "完结篇"
       }
-    ]
+    ],
+    "chineseTitle": "齐木楠雄的灾难",
+    "originalDirector": "麻生周一",
+    "chineseDirector": "麻生周一"
   },
   {
     "id": "tv-60863",
@@ -2256,7 +2430,7 @@
         "id": "tv-60863-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "ハイキュー!!",
         "year": 2014,
         "releaseDate": "2014-04-06",
         "runtime": "25 Episodes",
@@ -2276,13 +2450,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/25732103/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1Rfa9o5H6ZlXzbDVNlw4jULdXpi.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1Rfa9o5H6ZlXzbDVNlw4jULdXpi.jpg",
+        "chineseTitle": "排球少年！！",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-60863-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "ハイキュー!!",
         "year": 2015,
         "releaseDate": "2015-10-03",
         "runtime": "25 Episodes",
@@ -2302,13 +2478,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26285156/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3TUUTiiuvjKg8BcnrGbuuj2Ov5L.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3TUUTiiuvjKg8BcnrGbuuj2Ov5L.jpg",
+        "chineseTitle": "排球少年！！",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-60863-season-3",
         "seasonNumber": 3,
         "title": "Season 3 · Karasuno High School vs Shiratorizawa Academy",
-        "originalTitle": "第 3 季",
+        "originalTitle": "ハイキュー!!",
         "year": 2016,
         "releaseDate": "2016-10-07",
         "runtime": "10 Episodes",
@@ -2328,13 +2506,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26752075/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/deFGQIm9cKYGr2xt136RUnA9sb5.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/deFGQIm9cKYGr2xt136RUnA9sb5.jpg",
+        "chineseTitle": "排球少年！！",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-60863-season-4",
         "seasonNumber": 4,
         "title": "Season 4 · TO THE TOP",
-        "originalTitle": "第 4 季",
+        "originalTitle": "ハイキュー!!",
         "year": 2020,
         "releaseDate": "2020-01-10",
         "runtime": "25 Episodes",
@@ -2361,9 +2541,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30411330/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/M8dtn2nAserbnlAXCISjVL86Hj.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/M8dtn2nAserbnlAXCISjVL86Hj.jpg",
+        "chineseTitle": "排球少年！！",
+        "partLabel": "第 4 季"
       }
-    ]
+    ],
+    "chineseTitle": "排球少年！！",
+    "originalDirector": "古舘春一",
+    "chineseDirector": "古馆春一"
   },
   {
     "id": "tv-46671",
@@ -2394,7 +2579,10 @@
     "tmdbId": 46671,
     "span": "2011–2012",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "未来日记",
+    "originalDirector": "えすのサカエ",
+    "chineseDirector": ""
   },
   {
     "id": "tv-240411",
@@ -2425,7 +2613,10 @@
     "tmdbId": 240411,
     "span": "2024–2025",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "胆大党",
+    "originalDirector": "龍幸伸",
+    "chineseDirector": "龙幸伸"
   },
   {
     "id": "tv-112613",
@@ -2456,7 +2647,10 @@
     "tmdbId": 112613,
     "span": "2021–2022",
     "rating": "4 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "国王排名",
+    "originalDirector": "十日草輔",
+    "chineseDirector": "十日草輔"
   },
   {
     "id": "tv-45790",
@@ -2542,7 +2736,7 @@
         "id": "tv-45790-season-1",
         "seasonNumber": 1,
         "title": "Season 1 · Phantom Blood & Battle Tendency",
-        "originalTitle": "第 1 季",
+        "originalTitle": "ジョジョの奇妙な冒険",
         "year": 2012,
         "releaseDate": "2012-10-05",
         "runtime": "26 Episodes",
@@ -2562,13 +2756,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/11498785/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/co0K9FS9rQPxPoKADs4nuGckk3A.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/co0K9FS9rQPxPoKADs4nuGckk3A.jpg",
+        "chineseTitle": "JOJO的奇妙冒险",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-45790-season-2",
         "seasonNumber": 2,
         "title": "Season 2 · Stardust Crusaders",
-        "originalTitle": "第 2 季",
+        "originalTitle": "ジョジョの奇妙な冒険",
         "year": 2014,
         "releaseDate": "2014-04-04",
         "runtime": "48 Episodes",
@@ -2595,13 +2791,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/23774708/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kX9noqY0YpOPKwXpRXYg1hEIqmM.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kX9noqY0YpOPKwXpRXYg1hEIqmM.jpg",
+        "chineseTitle": "JOJO的奇妙冒险",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-45790-season-3",
         "seasonNumber": 3,
         "title": "Season 3 · Diamond Is Unbreakable",
-        "originalTitle": "第 3 季",
+        "originalTitle": "ジョジョの奇妙な冒険",
         "year": 2016,
         "releaseDate": "2016-04-01",
         "runtime": "39 Episodes",
@@ -2621,13 +2819,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26650051/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/xUvSh7cszFcRUAknt1yJAjU9LlA.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/xUvSh7cszFcRUAknt1yJAjU9LlA.jpg",
+        "chineseTitle": "JOJO的奇妙冒险",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-45790-season-4",
         "seasonNumber": 4,
         "title": "Season 4 · Golden Wind",
-        "originalTitle": "第 4 季",
+        "originalTitle": "ジョジョの奇妙な冒険",
         "year": 2018,
         "releaseDate": "2018-10-06",
         "runtime": "39 Episodes",
@@ -2647,13 +2847,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/27666505/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/cMFg7X0gSJjWajuj9DNL4UaUmcP.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/cMFg7X0gSJjWajuj9DNL4UaUmcP.jpg",
+        "chineseTitle": "JOJO的奇妙冒险",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-45790-season-5",
         "seasonNumber": 5,
         "title": "Season 5 · STONE OCEAN",
-        "originalTitle": "第 5 季",
+        "originalTitle": "ジョジョの奇妙な冒険",
         "year": 2021,
         "releaseDate": "2021-12-01",
         "runtime": "38 Episodes",
@@ -2687,13 +2889,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/34605404/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/pgfHO4mnozfDLYKjhgtaOZDq9Kc.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/pgfHO4mnozfDLYKjhgtaOZDq9Kc.jpg",
+        "chineseTitle": "JOJO的奇妙冒险",
+        "partLabel": "第 5 季"
       },
       {
         "id": "tv-45790-season-6",
         "seasonNumber": 6,
         "title": "Season 6 · STEEL BALL RUN",
-        "originalTitle": "第 6 季",
+        "originalTitle": "ジョジョの奇妙な冒険",
         "year": 2026,
         "releaseDate": "2026-03-19",
         "runtime": "12 Episodes",
@@ -2705,9 +2909,14 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/45790/season/6"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/yB2cUOuT3OMGtU3CTLQjuFUL8Ox.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/yB2cUOuT3OMGtU3CTLQjuFUL8Ox.jpg",
+        "chineseTitle": "JOJO的奇妙冒险",
+        "partLabel": "第 6 季"
       }
-    ]
+    ],
+    "chineseTitle": "JOJO的奇妙冒险",
+    "originalDirector": "荒木飛呂彦",
+    "chineseDirector": "荒木飞吕彦"
   },
   {
     "id": "tv-119100",
@@ -2737,7 +2946,10 @@
     ],
     "tmdbId": 119100,
     "rating": "4 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "孤独摇滚！",
+    "originalDirector": "はまじあき",
+    "chineseDirector": "滨路晶"
   },
   {
     "id": "tv-72636",
@@ -2781,7 +2993,7 @@
         "id": "tv-72636-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "メイドインアビス",
         "year": 2017,
         "releaseDate": "2017-07-07",
         "runtime": "13 Episodes",
@@ -2801,13 +3013,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26940008/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uVK3H8CgtrVgySFpdImvNXkN7RK.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/uVK3H8CgtrVgySFpdImvNXkN7RK.jpg",
+        "chineseTitle": "来自深渊",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-72636-season-2",
         "seasonNumber": 2,
         "title": "Season 2 · The Golden City of the Scorching Sun",
-        "originalTitle": "第 2 季",
+        "originalTitle": "メイドインアビス",
         "year": 2022,
         "releaseDate": "2022-07-06",
         "runtime": "12 Episodes",
@@ -2827,14 +3041,19 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30475135/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/clC2erfUqIezhET67Gz9fcKD1L2.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/clC2erfUqIezhET67Gz9fcKD1L2.jpg",
+        "chineseTitle": "来自深渊",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "来自深渊",
+    "originalDirector": "つくしあきひと",
+    "chineseDirector": "土笔章人"
   },
   {
     "id": "tv-124396",
     "title": "Sonny Boy",
-    "originalTitle": "漂流少年",
+    "originalTitle": "Sonny Boy",
     "type": "series",
     "director": "Shingo Natsume",
     "year": 2021,
@@ -2859,12 +3078,15 @@
     ],
     "tmdbId": 124396,
     "rating": "5 / 5",
-    "creditRole": "DIRECTOR / SCREENWRITER"
+    "creditRole": "DIRECTOR / SCREENWRITER",
+    "chineseTitle": "漂流少年",
+    "originalDirector": "夏目真悟",
+    "chineseDirector": "夏目真悟"
   },
   {
     "id": "film-25808075",
     "title": "War for the Planet of the Apes",
-    "originalTitle": "猩球崛起3：终极之战",
+    "originalTitle": "War for the Planet of the Apes",
     "type": "film",
     "director": "Matt Reeves",
     "year": 2017,
@@ -2888,12 +3110,15 @@
       }
     ],
     "tmdbId": 281338,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "猩球崛起3：终极之战",
+    "originalDirector": "Matt Reeves",
+    "chineseDirector": "马特·里夫斯"
   },
   {
     "id": "film-1474189",
     "title": "Saw III",
-    "originalTitle": "电锯惊魂3",
+    "originalTitle": "Saw III",
     "type": "film",
     "director": "Darren Lynn Bousman",
     "year": 2006,
@@ -2917,7 +3142,10 @@
       }
     ],
     "tmdbId": 214,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "电锯惊魂3",
+    "originalDirector": "Darren Lynn Bousman",
+    "chineseDirector": "达伦·林恩·鲍斯曼"
   },
   {
     "id": "film-24843198",
@@ -2947,7 +3175,10 @@
     ],
     "tmdbId": 290217,
     "rating": "5 / 5",
-    "hidden": false
+    "hidden": false,
+    "chineseTitle": "同桌的妳",
+    "originalDirector": "郭帆",
+    "chineseDirector": "郭帆"
   },
   {
     "id": "film-24735062",
@@ -2976,12 +3207,15 @@
       }
     ],
     "tmdbId": 412555,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "青春派",
+    "originalDirector": "Liu Jie",
+    "chineseDirector": "刘杰"
   },
   {
     "id": "film-27087724",
     "title": "Once Upon a Time... in Hollywood",
-    "originalTitle": "好莱坞往事",
+    "originalTitle": "Once Upon a Time... in Hollywood",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 2019,
@@ -3005,7 +3239,10 @@
       }
     ],
     "tmdbId": 466272,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "好莱坞往事",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-25884801",
@@ -3190,7 +3427,7 @@
   {
     "id": "film-6532822",
     "title": "Resident Evil: Retribution",
-    "originalTitle": "生化危机5：惩罚",
+    "originalTitle": "Resident Evil: Retribution",
     "type": "film",
     "director": "Paul W. S. Anderson",
     "year": 2012,
@@ -3213,12 +3450,15 @@
         "comment": ""
       }
     ],
-    "tmdbId": 71679
+    "tmdbId": 71679,
+    "chineseTitle": "生化危机5：惩罚",
+    "originalDirector": "Paul W. S. Anderson",
+    "chineseDirector": "保罗·安德森"
   },
   {
     "id": "film-3041294",
     "title": "Resident Evil: Afterlife",
-    "originalTitle": "生化危机4：战神再生",
+    "originalTitle": "Resident Evil: Afterlife",
     "type": "film",
     "director": "Paul W. S. Anderson",
     "year": 2010,
@@ -3241,12 +3481,15 @@
         "comment": ""
       }
     ],
-    "tmdbId": 35791
+    "tmdbId": 35791,
+    "chineseTitle": "生化危机4：战神再生",
+    "originalDirector": "Paul W. S. Anderson",
+    "chineseDirector": "保罗·安德森"
   },
   {
     "id": "film-20471852",
     "title": "Resident Evil: The Final Chapter",
-    "originalTitle": "生化危机：终章",
+    "originalTitle": "Resident Evil: The Final Chapter",
     "type": "film",
     "director": "Paul W. S. Anderson",
     "year": 2016,
@@ -3270,12 +3513,15 @@
       }
     ],
     "tmdbId": 173897,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "生化危机：终章",
+    "originalDirector": "Paul W. S. Anderson",
+    "chineseDirector": "保罗·安德森"
   },
   {
     "id": "film-1308777",
     "title": "Eternal Sunshine of the Spotless Mind",
-    "originalTitle": "暖暖内含光",
+    "originalTitle": "Eternal Sunshine of the Spotless Mind",
     "type": "film",
     "director": "Michel Gondry",
     "year": 2004,
@@ -3299,7 +3545,10 @@
       }
     ],
     "tmdbId": 38,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "暖暖内含光",
+    "originalDirector": "Michel Gondry",
+    "chineseDirector": "米歇尔·贡德里"
   },
   {
     "id": "film-1292286",
@@ -3328,7 +3577,10 @@
       }
     ],
     "tmdbId": 11178,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "我的野蛮女友",
+    "originalDirector": "곽재용",
+    "chineseDirector": "郭在容"
   },
   {
     "id": "film-35875180",
@@ -3363,7 +3615,7 @@
   {
     "id": "film-1309045",
     "title": "Saw II",
-    "originalTitle": "电锯惊魂2",
+    "originalTitle": "Saw II",
     "type": "film",
     "director": "Darren Lynn Bousman",
     "year": 2005,
@@ -3387,7 +3639,10 @@
       }
     ],
     "tmdbId": 215,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "电锯惊魂2",
+    "originalDirector": "Darren Lynn Bousman",
+    "chineseDirector": "达伦·林恩·鲍斯曼"
   },
   {
     "id": "film-1291936",
@@ -3416,7 +3671,10 @@
       }
     ],
     "tmdbId": 9323,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "攻壳机动队",
+    "originalDirector": "押井守",
+    "chineseDirector": "押井守"
   },
   {
     "id": "film-26611076",
@@ -3445,7 +3703,10 @@
       }
     ],
     "tmdbId": 410220,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "溺水小刀",
+    "originalDirector": "山戸結希",
+    "chineseDirector": "山户结希"
   },
   {
     "id": "film-25769362",
@@ -3564,7 +3825,10 @@
       }
     ],
     "tmdbId": 16411,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "头文字D",
+    "originalDirector": "劉偉強, 麥兆輝",
+    "chineseDirector": "刘伟强, 麦兆辉"
   },
   {
     "id": "film-2124724",
@@ -3593,12 +3857,15 @@
       }
     ],
     "tmdbId": 20342,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "不能说的秘密",
+    "originalDirector": "周杰倫",
+    "chineseDirector": "周杰伦"
   },
   {
     "id": "film-1300300",
     "title": "Final Destination",
-    "originalTitle": "死神来了",
+    "originalTitle": "Final Destination",
     "type": "film",
     "director": "James Wong",
     "year": 2000,
@@ -3622,12 +3889,15 @@
       }
     ],
     "tmdbId": 9532,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "死神来了",
+    "originalDirector": "James Wong",
+    "chineseDirector": "黄毅瑜"
   },
   {
     "id": "film-4746257",
     "title": "Edge of Tomorrow",
-    "originalTitle": "明日边缘",
+    "originalTitle": "Edge of Tomorrow",
     "type": "film",
     "director": "Doug Liman",
     "year": 2014,
@@ -3651,7 +3921,10 @@
       }
     ],
     "tmdbId": 137113,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "明日边缘",
+    "originalDirector": "Doug Liman",
+    "chineseDirector": "道格·里曼"
   },
   {
     "id": "film-25717233",
@@ -3680,12 +3953,15 @@
       }
     ],
     "tmdbId": 284298,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "心花路放",
+    "originalDirector": "宁浩",
+    "chineseDirector": "宁浩"
   },
   {
     "id": "film-3269068",
     "title": "Hotel Transylvania",
-    "originalTitle": "精灵旅社",
+    "originalTitle": "Hotel Transylvania",
     "type": "film",
     "director": "Genndy Tartakovsky",
     "year": 2012,
@@ -3709,7 +3985,10 @@
       }
     ],
     "tmdbId": 76492,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "精灵旅社",
+    "originalDirector": "Genndy Tartakovsky",
+    "chineseDirector": ""
   },
   {
     "id": "film-26925317",
@@ -3768,12 +4047,15 @@
       }
     ],
     "tmdbId": 455714,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "天才枪手",
+    "originalDirector": "นัฐวุฒิ พูนพิริยะ",
+    "chineseDirector": "纳塔吾·彭皮里亚"
   },
   {
     "id": "film-1418189",
     "title": "Spider-Man 3",
-    "originalTitle": "蜘蛛侠3",
+    "originalTitle": "Spider-Man 3",
     "type": "film",
     "director": "Sam Raimi",
     "year": 2007,
@@ -3797,12 +4079,15 @@
       }
     ],
     "tmdbId": 559,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蜘蛛侠3",
+    "originalDirector": "Sam Raimi",
+    "chineseDirector": "山姆·雷米"
   },
   {
     "id": "film-1308570",
     "title": "Spider-Man 2",
-    "originalTitle": "蜘蛛侠2",
+    "originalTitle": "Spider-Man 2",
     "type": "film",
     "director": "Sam Raimi",
     "year": 2004,
@@ -3826,12 +4111,15 @@
       }
     ],
     "tmdbId": 558,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蜘蛛侠2",
+    "originalDirector": "Sam Raimi",
+    "chineseDirector": "山姆·雷米"
   },
   {
     "id": "film-1306612",
     "title": "Spider-Man",
-    "originalTitle": "蜘蛛侠",
+    "originalTitle": "Spider-Man",
     "type": "film",
     "director": "Sam Raimi",
     "year": 2002,
@@ -3855,7 +4143,10 @@
       }
     ],
     "tmdbId": 557,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蜘蛛侠",
+    "originalDirector": "Sam Raimi",
+    "chineseDirector": "山姆·雷米"
   },
   {
     "id": "film-25907124",
@@ -4147,7 +4438,10 @@
       }
     ],
     "tmdbId": 1295026,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "百米。",
+    "originalDirector": "岩井澤健治",
+    "chineseDirector": "岩井泽健治"
   },
   {
     "id": "film-25870084",
@@ -4324,7 +4618,10 @@
     ],
     "tmdbId": 603765,
     "rating": "5 / 5",
-    "hidden": false
+    "hidden": false,
+    "chineseTitle": "银河补习班",
+    "originalDirector": "俞白眉, 邓超",
+    "chineseDirector": "俞白眉, 邓超"
   },
   {
     "id": "film-24404677",
@@ -4383,7 +4680,10 @@
       }
     ],
     "tmdbId": 351694,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "西游记之大圣归来",
+    "originalDirector": "田晓鹏",
+    "chineseDirector": "田晓鹏"
   },
   {
     "id": "film-4920528",
@@ -4412,12 +4712,15 @@
       }
     ],
     "tmdbId": 84111,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "那些年，我们一起追的女孩",
+    "originalDirector": "九把刀",
+    "chineseDirector": "九把刀"
   },
   {
     "id": "film-27074316",
     "title": "A Dog's Journey",
-    "originalTitle": "一条狗的使命2",
+    "originalTitle": "A Dog's Journey",
     "type": "film",
     "director": "Gail Mancuso",
     "year": 2019,
@@ -4441,12 +4744,15 @@
       }
     ],
     "tmdbId": 522518,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "一条狗的使命2",
+    "originalDirector": "Gail Mancuso",
+    "chineseDirector": ""
   },
   {
     "id": "film-6873143",
     "title": "A Dog's Purpose",
-    "originalTitle": "一条狗的使命",
+    "originalTitle": "A Dog's Purpose",
     "type": "film",
     "director": "Lasse Hallström",
     "year": 2017,
@@ -4470,12 +4776,15 @@
       }
     ],
     "tmdbId": 381289,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "一条狗的使命",
+    "originalDirector": "Lasse Hallström",
+    "chineseDirector": "莱塞·霍尔斯道姆"
   },
   {
     "id": "film-3001114",
     "title": "Dune",
-    "originalTitle": "沙丘",
+    "originalTitle": "Dune",
     "type": "film",
     "director": "Denis Villeneuve",
     "year": 2021,
@@ -4499,12 +4808,15 @@
       }
     ],
     "tmdbId": 438631,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "沙丘",
+    "originalDirector": "Denis Villeneuve",
+    "chineseDirector": "丹尼斯·维伦纽瓦"
   },
   {
     "id": "film-25887288",
     "title": "Frozen II",
-    "originalTitle": "冰雪奇缘2",
+    "originalTitle": "Frozen II",
     "type": "film",
     "director": "Jennifer Lee, Chris Buck",
     "year": 2019,
@@ -4528,7 +4840,10 @@
       }
     ],
     "tmdbId": 330457,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "冰雪奇缘2",
+    "originalDirector": "Jennifer Lee, Chris Buck",
+    "chineseDirector": "詹妮弗·李, 克里斯·巴克"
   },
   {
     "id": "film-3168101",
@@ -4563,7 +4878,7 @@
   {
     "id": "film-25726614",
     "title": "Fantastic Beasts and Where to Find Them",
-    "originalTitle": "神奇动物在哪里",
+    "originalTitle": "Fantastic Beasts and Where to Find Them",
     "type": "film",
     "director": "David Yates",
     "year": 2016,
@@ -4587,7 +4902,10 @@
       }
     ],
     "tmdbId": 259316,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "神奇动物在哪里",
+    "originalDirector": "David Yates",
+    "chineseDirector": "大卫·叶茨"
   },
   {
     "id": "film-26985127",
@@ -4676,7 +4994,10 @@
       }
     ],
     "tmdbId": 151743,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "人再囧途之泰囧",
+    "originalDirector": "徐峥",
+    "chineseDirector": "徐峥"
   },
   {
     "id": "film-4237879",
@@ -4705,12 +5026,15 @@
       }
     ],
     "tmdbId": 51306,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "人在囧途",
+    "originalDirector": "葉偉民",
+    "chineseDirector": "叶伟民"
   },
   {
     "id": "film-3364223",
     "title": "The Great Gatsby",
-    "originalTitle": "了不起的盖茨比",
+    "originalTitle": "The Great Gatsby",
     "type": "film",
     "director": "Baz Luhrmann",
     "year": 2013,
@@ -4734,7 +5058,10 @@
       }
     ],
     "tmdbId": 64682,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "了不起的盖茨比",
+    "originalDirector": "Baz Luhrmann",
+    "chineseDirector": "巴兹·鲁赫曼"
   },
   {
     "id": "film-25723907",
@@ -4824,7 +5151,10 @@
     ],
     "tmdbId": 170657,
     "rating": "5 / 5",
-    "hidden": false
+    "hidden": false,
+    "chineseTitle": "西游降魔篇",
+    "originalDirector": "周星馳",
+    "chineseDirector": "周星驰"
   },
   {
     "id": "film-19944106",
@@ -5039,7 +5369,7 @@
   {
     "id": "film-26817136",
     "title": "Zootopia 2",
-    "originalTitle": "疯狂动物城2",
+    "originalTitle": "Zootopia 2",
     "type": "film",
     "director": "Jared Bush, Byron Howard",
     "year": 2025,
@@ -5063,12 +5393,15 @@
       }
     ],
     "tmdbId": 1084242,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "疯狂动物城2",
+    "originalDirector": "Jared Bush, Byron Howard",
+    "chineseDirector": "贾里德·布什, 拜恩·霍华德"
   },
   {
     "id": "film-35689244",
     "title": "F1",
-    "originalTitle": "F1：狂飙飞车",
+    "originalTitle": "F1",
     "type": "film",
     "director": "Joseph Kosinski",
     "year": 2025,
@@ -5092,7 +5425,10 @@
       }
     ],
     "tmdbId": 911430,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "F1：狂飙飞车",
+    "originalDirector": "Joseph Kosinski",
+    "chineseDirector": "约瑟夫·科辛斯基"
   },
   {
     "id": "film-3569910",
@@ -5151,7 +5487,10 @@
       }
     ],
     "tmdbId": 198375,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "言叶之庭",
+    "originalDirector": "新海誠",
+    "chineseDirector": "新海诚"
   },
   {
     "id": "film-35371261",
@@ -5180,7 +5519,10 @@
       }
     ],
     "tmdbId": 916224,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "铃芽之旅",
+    "originalDirector": "新海誠",
+    "chineseDirector": "新海诚"
   },
   {
     "id": "film-2043546",
@@ -5209,7 +5551,10 @@
       }
     ],
     "tmdbId": 38142,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "秒速5厘米",
+    "originalDirector": "新海誠",
+    "chineseDirector": "新海诚"
   },
   {
     "id": "film-25796222",
@@ -5237,12 +5582,15 @@
         "comment": ""
       }
     ],
-    "tmdbId": 257475
+    "tmdbId": 257475,
+    "chineseTitle": "玉子爱情故事",
+    "originalDirector": "山田尚子",
+    "chineseDirector": "山田尚子"
   },
   {
     "id": "film-26933210",
     "title": "Spider-Man: No Way Home",
-    "originalTitle": "蜘蛛侠：英雄无归",
+    "originalTitle": "Spider-Man: No Way Home",
     "type": "film",
     "director": "Jon Watts",
     "year": 2021,
@@ -5265,7 +5613,10 @@
         "comment": ""
       }
     ],
-    "tmdbId": 634649
+    "tmdbId": 634649,
+    "chineseTitle": "蜘蛛侠：英雄无归",
+    "originalDirector": "Jon Watts",
+    "chineseDirector": "乔恩·沃茨"
   },
   {
     "id": "film-26264454",
@@ -5293,7 +5644,10 @@
         "comment": ""
       }
     ],
-    "tmdbId": 378064
+    "tmdbId": 378064,
+    "chineseTitle": "声之形",
+    "originalDirector": "山田尚子",
+    "chineseDirector": "山田尚子"
   },
   {
     "id": "film-30401194",
@@ -5321,7 +5675,10 @@
         "comment": ""
       }
     ],
-    "tmdbId": 604605
+    "tmdbId": 604605,
+    "chineseTitle": "你好世界",
+    "originalDirector": "伊藤智彦",
+    "chineseDirector": "伊藤智彦"
   },
   {
     "id": "film-27107140",
@@ -5349,7 +5706,10 @@
         "comment": ""
       }
     ],
-    "tmdbId": 504253
+    "tmdbId": 504253,
+    "chineseTitle": "我想吃掉你的胰脏",
+    "originalDirector": "牛嶋新一郎",
+    "chineseDirector": "牛岛新一郎"
   },
   {
     "id": "film-26282448",
@@ -5557,7 +5917,7 @@
   {
     "id": "film-25864085",
     "title": "The Martian",
-    "originalTitle": "火星救援",
+    "originalTitle": "The Martian",
     "type": "film",
     "director": "Ridley Scott",
     "year": 2015,
@@ -5581,12 +5941,15 @@
       }
     ],
     "tmdbId": 286217,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "火星救援",
+    "originalDirector": "Ridley Scott",
+    "chineseDirector": "雷德利·斯科特"
   },
   {
     "id": "film-1305053",
     "title": "Red Dragon",
-    "originalTitle": "红龙",
+    "originalTitle": "Red Dragon",
     "type": "film",
     "director": "Brett Ratner",
     "year": 2002,
@@ -5610,12 +5973,15 @@
       }
     ],
     "tmdbId": 9533,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "红龙",
+    "originalDirector": "Brett Ratner",
+    "chineseDirector": "布雷特·拉特纳"
   },
   {
     "id": "film-1293544",
     "title": "The Silence of the Lambs",
-    "originalTitle": "沉默的羔羊",
+    "originalTitle": "The Silence of the Lambs",
     "type": "film",
     "director": "Jonathan Demme",
     "year": 1991,
@@ -5639,12 +6005,15 @@
       }
     ],
     "tmdbId": 274,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "沉默的羔羊",
+    "originalDirector": "Jonathan Demme",
+    "chineseDirector": "乔纳森·戴米"
   },
   {
     "id": "film-1291841",
     "title": "The Godfather",
-    "originalTitle": "教父",
+    "originalTitle": "The Godfather",
     "type": "film",
     "director": "Francis Ford Coppola",
     "year": 1972,
@@ -5668,12 +6037,15 @@
       }
     ],
     "tmdbId": 238,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "教父",
+    "originalDirector": "Francis Ford Coppola",
+    "chineseDirector": "弗朗西斯·科波拉"
   },
   {
     "id": "film-34961898",
     "title": "Hamilton",
-    "originalTitle": "汉密尔顿",
+    "originalTitle": "Hamilton",
     "type": "film",
     "director": "Thomas Kail",
     "year": 2025,
@@ -5697,7 +6069,10 @@
       }
     ],
     "tmdbId": 556574,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "汉密尔顿",
+    "originalDirector": "Thomas Kail",
+    "chineseDirector": ""
   },
   {
     "id": "film-36680624",
@@ -5993,7 +6368,7 @@
         "id": "tv-85937-season-1",
         "seasonNumber": 1,
         "title": "Season 1 · Unwavering Resolve Arc",
-        "originalTitle": "第 1 季",
+        "originalTitle": "鬼滅の刃",
         "year": 2019,
         "releaseDate": "2019-04-06",
         "runtime": "26 Episodes",
@@ -6013,13 +6388,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30210221/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bV0ZCL0IqrTQKClu6EtXlZaJevD.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bV0ZCL0IqrTQKClu6EtXlZaJevD.jpg",
+        "chineseTitle": "鬼灭之刃",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-85937-season-2",
         "seasonNumber": 2,
         "title": "Season 2 · Mugen Train Arc",
-        "originalTitle": "第 2 季",
+        "originalTitle": "鬼滅の刃",
         "year": 2021,
         "releaseDate": "2021-10-10",
         "runtime": "7 Episodes",
@@ -6039,13 +6416,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/35620761/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/pLGjaDyg2LeA2d9KZxBZCiiqC2B.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/pLGjaDyg2LeA2d9KZxBZCiiqC2B.jpg",
+        "chineseTitle": "鬼灭之刃",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-85937-season-3",
         "seasonNumber": 3,
         "title": "Season 3 · Entertainment District Arc",
-        "originalTitle": "第 3 季",
+        "originalTitle": "鬼滅の刃",
         "year": 2021,
         "releaseDate": "2021-12-05",
         "runtime": "11 Episodes",
@@ -6065,13 +6444,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/34813210/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gbmhcOtre5SeBgwR9gvTpUra5kZ.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gbmhcOtre5SeBgwR9gvTpUra5kZ.jpg",
+        "chineseTitle": "鬼灭之刃",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-85937-season-4",
         "seasonNumber": 4,
         "title": "Season 4 · Swordsmith Village Arc",
-        "originalTitle": "第 4 季",
+        "originalTitle": "鬼滅の刃",
         "year": 2023,
         "releaseDate": "2023-04-09",
         "runtime": "11 Episodes",
@@ -6091,13 +6472,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/35769236/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/6gD7G8HQay1X8mHiFVttWJ3czYb.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/6gD7G8HQay1X8mHiFVttWJ3czYb.jpg",
+        "chineseTitle": "鬼灭之刃",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-85937-season-5",
         "seasonNumber": 5,
         "title": "Season 5 · Hashira Training Arc",
-        "originalTitle": "第 5 季",
+        "originalTitle": "鬼滅の刃",
         "year": 2024,
         "releaseDate": "2024-05-12",
         "runtime": "8 Episodes",
@@ -6117,9 +6500,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/36449810/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/axI3BUZgTYz36IYtUtRhivtspUo.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/axI3BUZgTYz36IYtUtRhivtspUo.jpg",
+        "chineseTitle": "鬼灭之刃",
+        "partLabel": "第 5 季"
       }
-    ]
+    ],
+    "chineseTitle": "鬼灭之刃",
+    "originalDirector": "吾峠呼世晴",
+    "chineseDirector": "吾峠呼世晴"
   },
   {
     "id": "film-36524559",
@@ -6154,7 +6542,7 @@
   {
     "id": "film-1292335",
     "title": "Jackie Brown",
-    "originalTitle": "危险关系",
+    "originalTitle": "Jackie Brown",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 1997,
@@ -6178,12 +6566,15 @@
       }
     ],
     "tmdbId": 184,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "危险关系",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-3541415",
     "title": "Inception",
-    "originalTitle": "盗梦空间",
+    "originalTitle": "Inception",
     "type": "film",
     "director": "Christopher Nolan",
     "year": 2010,
@@ -6207,12 +6598,15 @@
       }
     ],
     "tmdbId": 27205,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "盗梦空间",
+    "originalDirector": "Christopher Nolan",
+    "chineseDirector": "克里斯托弗·诺兰"
   },
   {
     "id": "film-1438652",
     "title": "Inglourious Basterds",
-    "originalTitle": "无耻混蛋",
+    "originalTitle": "Inglourious Basterds",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 2009,
@@ -6236,12 +6630,15 @@
       }
     ],
     "tmdbId": 16869,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "无耻混蛋",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-1291584",
     "title": "Kill Bill: Vol. 2",
-    "originalTitle": "杀死比尔2",
+    "originalTitle": "Kill Bill: Vol. 2",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 2004,
@@ -6265,12 +6662,15 @@
       }
     ],
     "tmdbId": 393,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "杀死比尔2",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-6307447",
     "title": "Django Unchained",
-    "originalTitle": "被解救的姜戈",
+    "originalTitle": "Django Unchained",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 2012,
@@ -6294,12 +6694,15 @@
       }
     ],
     "tmdbId": 68718,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "被解救的姜戈",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-25787888",
     "title": "The Hateful Eight",
-    "originalTitle": "八恶人",
+    "originalTitle": "The Hateful Eight",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 2015,
@@ -6323,7 +6726,10 @@
       }
     ],
     "tmdbId": 273248,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "八恶人",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-1292434",
@@ -6352,7 +6758,10 @@
       }
     ],
     "tmdbId": 25538,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "一一",
+    "originalDirector": "楊德昌",
+    "chineseDirector": "杨德昌"
   },
   {
     "id": "film-11529526",
@@ -6387,7 +6796,7 @@
   {
     "id": "film-1299603",
     "title": "Reservoir Dogs",
-    "originalTitle": "落水狗",
+    "originalTitle": "Reservoir Dogs",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 1992,
@@ -6411,12 +6820,15 @@
       }
     ],
     "tmdbId": 500,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "落水狗",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-1307853",
     "title": "8 Mile",
-    "originalTitle": "8英里",
+    "originalTitle": "8 Mile",
     "type": "film",
     "director": "Curtis Hanson",
     "year": 2002,
@@ -6440,7 +6852,10 @@
       }
     ],
     "tmdbId": 65,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "8英里",
+    "originalDirector": "Curtis Hanson",
+    "chineseDirector": "柯蒂斯·汉森"
   },
   {
     "id": "tv-209867",
@@ -6471,7 +6886,10 @@
     "tmdbId": 209867,
     "span": "2023–2026",
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "葬送的芙莉莲",
+    "originalDirector": "山田鐘人, アベツカサ",
+    "chineseDirector": "山田钟人, 阿部司"
   },
   {
     "id": "film-1307793",
@@ -6500,7 +6918,10 @@
       }
     ],
     "tmdbId": 8426,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "燕尾蝶",
+    "originalDirector": "岩井俊二",
+    "chineseDirector": "岩井俊二"
   },
   {
     "id": "film-36445098",
@@ -6529,7 +6950,10 @@
       }
     ],
     "tmdbId": 1026227,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "还有明天",
+    "originalDirector": "Paola Cortellesi",
+    "chineseDirector": "保拉·科泰莱西"
   },
   {
     "id": "film-36185502",
@@ -6564,7 +6988,7 @@
   {
     "id": "film-3072086",
     "title": "(500) Days of Summer",
-    "originalTitle": "和莎莫的500天",
+    "originalTitle": "(500) Days of Summer",
     "type": "film",
     "director": "Marc Webb",
     "year": 2009,
@@ -6588,7 +7012,10 @@
       }
     ],
     "tmdbId": 19913,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "和莎莫的500天",
+    "originalDirector": "Marc Webb",
+    "chineseDirector": "马克·韦伯"
   },
   {
     "id": "film-1308574",
@@ -6617,7 +7044,10 @@
       }
     ],
     "tmdbId": 39793,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "初恋",
+    "originalDirector": "篠原哲雄",
+    "chineseDirector": "筱原哲雄"
   },
   {
     "id": "film-1915403",
@@ -6646,12 +7076,15 @@
       }
     ],
     "tmdbId": 40243,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "只是爱着你",
+    "originalDirector": "新城毅彦",
+    "chineseDirector": "新城毅彦"
   },
   {
     "id": "tv-60059",
     "title": "Better Call Saul",
-    "originalTitle": "风骚律师",
+    "originalTitle": "Better Call Saul",
     "type": "series",
     "director": "Vince Gilligan, Peter Gould",
     "year": 2015,
@@ -6717,7 +7150,7 @@
         "id": "tv-60059-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "Better Call Saul",
         "year": 2015,
         "releaseDate": "2015-02-08",
         "runtime": "10 Episodes",
@@ -6737,13 +7170,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/25726259/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bAbZBZmz25Lqk8A8mwMWzAkvlAj.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bAbZBZmz25Lqk8A8mwMWzAkvlAj.jpg",
+        "chineseTitle": "风骚律师",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-60059-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "Better Call Saul",
         "year": 2016,
         "releaseDate": "2016-02-15",
         "runtime": "10 Episodes",
@@ -6763,13 +7198,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/25976733/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/4NDwAQjFD8bTOsMKxYdl8IK10R9.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/4NDwAQjFD8bTOsMKxYdl8IK10R9.jpg",
+        "chineseTitle": "风骚律师",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-60059-season-3",
         "seasonNumber": 3,
         "title": "Season 3",
-        "originalTitle": "第 3 季",
+        "originalTitle": "Better Call Saul",
         "year": 2017,
         "releaseDate": "2017-04-10",
         "runtime": "10 Episodes",
@@ -6789,13 +7226,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/26748847/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dHIMW3CkL21jYWtsHiAdwkCjAej.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dHIMW3CkL21jYWtsHiAdwkCjAej.jpg",
+        "chineseTitle": "风骚律师",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-60059-season-4",
         "seasonNumber": 4,
         "title": "Season 4",
-        "originalTitle": "第 4 季",
+        "originalTitle": "Better Call Saul",
         "year": 2018,
         "releaseDate": "2018-08-06",
         "runtime": "10 Episodes",
@@ -6815,13 +7254,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/27077785/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/8zvIqLFOrBymKKI3L2W1AH8YZQI.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/8zvIqLFOrBymKKI3L2W1AH8YZQI.jpg",
+        "chineseTitle": "风骚律师",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-60059-season-5",
         "seasonNumber": 5,
         "title": "Season 5",
-        "originalTitle": "第 5 季",
+        "originalTitle": "Better Call Saul",
         "year": 2020,
         "releaseDate": "2020-02-23",
         "runtime": "10 Episodes",
@@ -6841,13 +7282,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/30285826/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dZHa2vUtYNQ81KV38eHGjn0P4JE.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dZHa2vUtYNQ81KV38eHGjn0P4JE.jpg",
+        "chineseTitle": "风骚律师",
+        "partLabel": "第 5 季"
       },
       {
         "id": "tv-60059-season-6",
         "seasonNumber": 6,
         "title": "Season 6",
-        "originalTitle": "第 6 季",
+        "originalTitle": "Better Call Saul",
         "year": 2022,
         "releaseDate": "2022-04-18",
         "runtime": "13 Episodes",
@@ -6867,14 +7310,19 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/34951007/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wKTzWgDaHxjdMhZ3zsVEF5eXVvX.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wKTzWgDaHxjdMhZ3zsVEF5eXVvX.jpg",
+        "chineseTitle": "风骚律师",
+        "partLabel": "第 6 季"
       }
-    ]
+    ],
+    "chineseTitle": "风骚律师",
+    "originalDirector": "Vince Gilligan, Peter Gould",
+    "chineseDirector": "文斯·吉利根, 皮特·古尔德"
   },
   {
     "id": "tv-1396",
     "title": "Breaking Bad",
-    "originalTitle": "绝命毒师",
+    "originalTitle": "Breaking Bad",
     "type": "series",
     "director": "Vince Gilligan",
     "year": 2008,
@@ -6933,7 +7381,7 @@
         "id": "tv-1396-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "Breaking Bad",
         "year": 2008,
         "releaseDate": "2008-01-20",
         "runtime": "7 Episodes",
@@ -6953,13 +7401,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/2373195/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg",
+        "chineseTitle": "绝命毒师",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-1396-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "Breaking Bad",
         "year": 2009,
         "releaseDate": "2009-03-08",
         "runtime": "13 Episodes",
@@ -6979,13 +7429,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/3586996/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/e3oGYpoTUhOFK0BJfloru5ZmGV.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/e3oGYpoTUhOFK0BJfloru5ZmGV.jpg",
+        "chineseTitle": "绝命毒师",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-1396-season-3",
         "seasonNumber": 3,
         "title": "Season 3",
-        "originalTitle": "第 3 季",
+        "originalTitle": "Breaking Bad",
         "year": 2010,
         "releaseDate": "2010-03-21",
         "runtime": "13 Episodes",
@@ -7005,13 +7457,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/4256328/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ffP8Q8ew048YofHRnFVM18B2fPG.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ffP8Q8ew048YofHRnFVM18B2fPG.jpg",
+        "chineseTitle": "绝命毒师",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-1396-season-4",
         "seasonNumber": 4,
         "title": "Season 4",
-        "originalTitle": "第 4 季",
+        "originalTitle": "Breaking Bad",
         "year": 2011,
         "releaseDate": "2011-07-17",
         "runtime": "13 Episodes",
@@ -7031,13 +7485,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/4927382/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5ewrnKp4TboU4hTLT5cWO350mHj.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5ewrnKp4TboU4hTLT5cWO350mHj.jpg",
+        "chineseTitle": "绝命毒师",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-1396-season-5",
         "seasonNumber": 5,
         "title": "Season 5",
-        "originalTitle": "第 5 季",
+        "originalTitle": "Breaking Bad",
         "year": 2012,
         "releaseDate": "2012-07-15",
         "runtime": "16 Episodes",
@@ -7057,9 +7513,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/6952149/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/r3z70vunihrAkjILQKWHX0G2xzO.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/r3z70vunihrAkjILQKWHX0G2xzO.jpg",
+        "chineseTitle": "绝命毒师",
+        "partLabel": "第 5 季"
       }
-    ]
+    ],
+    "chineseTitle": "绝命毒师",
+    "originalDirector": "Vince Gilligan",
+    "chineseDirector": "文斯·吉利根"
   },
   {
     "id": "film-21937438",
@@ -7088,12 +7549,15 @@
       }
     ],
     "tmdbId": 195276,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蒙太奇",
+    "originalDirector": "Chung Keun-sup",
+    "chineseDirector": "郑根燮"
   },
   {
     "id": "film-1292271",
     "title": "The Graduate",
-    "originalTitle": "毕业生",
+    "originalTitle": "The Graduate",
     "type": "film",
     "director": "Mike Nichols",
     "year": 1967,
@@ -7117,7 +7581,10 @@
       }
     ],
     "tmdbId": 37247,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "毕业生",
+    "originalDirector": "Mike Nichols",
+    "chineseDirector": "迈克·尼科尔斯"
   },
   {
     "id": "film-1299889",
@@ -7146,12 +7613,15 @@
       }
     ],
     "tmdbId": 202516,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "暗恋桃花源",
+    "originalDirector": "賴聲川",
+    "chineseDirector": "赖声川"
   },
   {
     "id": "film-2997076",
     "title": "The Wolf of Wall Street",
-    "originalTitle": "华尔街之狼",
+    "originalTitle": "The Wolf of Wall Street",
     "type": "film",
     "director": "Martin Scorsese",
     "year": 2013,
@@ -7175,7 +7645,10 @@
       }
     ],
     "tmdbId": 106646,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "华尔街之狼",
+    "originalDirector": "Martin Scorsese",
+    "chineseDirector": "马丁·斯科塞斯"
   },
   {
     "id": "film-10467125",
@@ -7270,7 +7743,7 @@
   {
     "id": "film-26715496",
     "title": "Kung Fu Panda 4",
-    "originalTitle": "功夫熊猫4",
+    "originalTitle": "Kung Fu Panda 4",
     "type": "film",
     "director": "Mike Mitchell",
     "year": 2024,
@@ -7294,12 +7767,15 @@
       }
     ],
     "tmdbId": 1011985,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "功夫熊猫4",
+    "originalDirector": "Mike Mitchell",
+    "chineseDirector": "迈克·米歇尔"
   },
   {
     "id": "film-11589036",
     "title": "Kung Fu Panda 3",
-    "originalTitle": "功夫熊猫3",
+    "originalTitle": "Kung Fu Panda 3",
     "type": "film",
     "director": "Jennifer Yuh Nelson, Alessandro Carloni",
     "year": 2016,
@@ -7323,12 +7799,15 @@
       }
     ],
     "tmdbId": 140300,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "功夫熊猫3",
+    "originalDirector": "Jennifer Yuh Nelson, Alessandro Carloni",
+    "chineseDirector": "吕寅荣, "
   },
   {
     "id": "film-3233635",
     "title": "Kung Fu Panda 2",
-    "originalTitle": "功夫熊猫2",
+    "originalTitle": "Kung Fu Panda 2",
     "type": "film",
     "director": "Jennifer Yuh Nelson",
     "year": 2011,
@@ -7352,12 +7831,15 @@
       }
     ],
     "tmdbId": 49444,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "功夫熊猫2",
+    "originalDirector": "Jennifer Yuh Nelson",
+    "chineseDirector": "吕寅荣"
   },
   {
     "id": "film-1783457",
     "title": "Kung Fu Panda",
-    "originalTitle": "功夫熊猫",
+    "originalTitle": "Kung Fu Panda",
     "type": "film",
     "director": "Mark Osborne, John Stevenson",
     "year": 2008,
@@ -7381,7 +7863,10 @@
       }
     ],
     "tmdbId": 9502,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "功夫熊猫",
+    "originalDirector": "Mark Osborne, John Stevenson",
+    "chineseDirector": "马克·奥斯本, 约翰·斯蒂芬森"
   },
   {
     "id": "tv-276903",
@@ -7410,7 +7895,10 @@
       }
     ],
     "tmdbId": 276903,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "热点",
+    "originalDirector": "バカリズム",
+    "chineseDirector": "笨蛋节奏"
   },
   {
     "id": "tv-64840",
@@ -7439,7 +7927,10 @@
       }
     ],
     "tmdbId": 64840,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "信号",
+    "originalDirector": "金銀姬, 김원석",
+    "chineseDirector": "金银姬, 金元硕"
   },
   {
     "id": "tv-16069",
@@ -7469,7 +7960,10 @@
     ],
     "tmdbId": 16069,
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "东京爱情故事",
+    "originalDirector": "柴門ふみ",
+    "chineseDirector": "柴门文"
   },
   {
     "id": "tv-83119",
@@ -7498,7 +7992,10 @@
       }
     ],
     "tmdbId": 83119,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "我是大哥大",
+    "originalDirector": "Hiroyuki Nishimori",
+    "chineseDirector": "西森博之"
   },
   {
     "id": "tv-46234",
@@ -7542,7 +8039,7 @@
         "id": "tv-46234-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "リーガル・ハイ",
         "year": 2012,
         "releaseDate": "2012-04-17",
         "runtime": "11 Episodes",
@@ -7562,13 +8059,15 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/10491666/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/co9yfvcRuH2ZAVDkrMzymTierxM.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/co9yfvcRuH2ZAVDkrMzymTierxM.jpg",
+        "chineseTitle": "胜者即是正义",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-46234-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "リーガル・ハイ",
         "year": 2013,
         "releaseDate": "2013-10-09",
         "runtime": "10 Episodes",
@@ -7588,9 +8087,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/23997724/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/88UQjx8igo1SQCM4cj5XB77jQ7z.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/88UQjx8igo1SQCM4cj5XB77jQ7z.jpg",
+        "chineseTitle": "胜者即是正义",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "胜者即是正义",
+    "originalDirector": "古沢良太",
+    "chineseDirector": "古泽良太"
   },
   {
     "id": "tv-215197",
@@ -7619,7 +8123,10 @@
       }
     ],
     "tmdbId": 215197,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "重启人生",
+    "originalDirector": "バカリズム",
+    "chineseDirector": "笨蛋节奏"
   },
   {
     "id": "tv-38242",
@@ -7649,7 +8156,10 @@
     ],
     "tmdbId": 38242,
     "span": "2003–2004",
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "白色巨塔",
+    "originalDirector": "山崎豊子",
+    "chineseDirector": "山崎丰子"
   },
   {
     "id": "tv-75701",
@@ -7678,12 +8188,15 @@
       }
     ],
     "tmdbId": 75701,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "非自然死亡",
+    "originalDirector": "塚原あゆ子",
+    "chineseDirector": "冢原亚由子"
   },
   {
     "id": "film-1418834",
     "title": "Brokeback Mountain",
-    "originalTitle": "断背山",
+    "originalTitle": "Brokeback Mountain",
     "type": "film",
     "director": "Ang Lee",
     "year": 2005,
@@ -7707,12 +8220,15 @@
       }
     ],
     "tmdbId": 142,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "断背山",
+    "originalDirector": "李安",
+    "chineseDirector": "李安"
   },
   {
     "id": "film-36090457",
     "title": "Inside Out 2",
-    "originalTitle": "头脑特工队2",
+    "originalTitle": "Inside Out 2",
     "type": "film",
     "director": "Kelsey Mann",
     "year": 2024,
@@ -7736,7 +8252,10 @@
       }
     ],
     "tmdbId": 1022789,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "头脑特工队2",
+    "originalDirector": "Kelsey Mann",
+    "chineseDirector": "凯尔西·曼恩"
   },
   {
     "id": "film-35376457",
@@ -7765,7 +8284,10 @@
       }
     ],
     "tmdbId": 902478,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "爱情神话",
+    "originalDirector": "邵艺辉",
+    "chineseDirector": "邵艺辉"
   },
   {
     "id": "film-1291560",
@@ -7794,12 +8316,15 @@
       }
     ],
     "tmdbId": 8392,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "龙猫",
+    "originalDirector": "宮崎駿",
+    "chineseDirector": "宫崎骏"
   },
   {
     "id": "film-25846858",
     "title": "Demolition",
-    "originalTitle": "破碎人生",
+    "originalTitle": "Demolition",
     "type": "film",
     "director": "Jean-Marc Vallée",
     "year": 2016,
@@ -7823,7 +8348,10 @@
       }
     ],
     "tmdbId": 303991,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "破碎人生",
+    "originalDirector": "Jean-Marc Vallée",
+    "chineseDirector": "让-马克·瓦雷"
   },
   {
     "id": "film-1291818",
@@ -7852,12 +8380,15 @@
       }
     ],
     "tmdbId": 10451,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "饮食男女",
+    "originalDirector": "李安",
+    "chineseDirector": "李安"
   },
   {
     "id": "film-35426925",
     "title": "Robot Dreams",
-    "originalTitle": "机器人之梦",
+    "originalTitle": "Robot Dreams",
     "type": "film",
     "director": "Pablo Berger",
     "year": 2023,
@@ -7881,7 +8412,10 @@
       }
     ],
     "tmdbId": 838240,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "机器人之梦",
+    "originalDirector": "Pablo Berger",
+    "chineseDirector": "巴勃罗·贝尔赫"
   },
   {
     "id": "film-30402296",
@@ -7910,7 +8444,10 @@
       }
     ],
     "tmdbId": 568160,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "天气之子",
+    "originalDirector": "新海誠",
+    "chineseDirector": "新海诚"
   },
   {
     "id": "film-34780991",
@@ -7939,7 +8476,10 @@
       }
     ],
     "tmdbId": 980477,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "哪吒之魔童闹海",
+    "originalDirector": "饺子",
+    "chineseDirector": "饺子"
   },
   {
     "id": "film-30163509",
@@ -7998,7 +8538,10 @@
       }
     ],
     "tmdbId": 1226141,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "破·地狱",
+    "originalDirector": "陳茂賢",
+    "chineseDirector": "陈茂贤"
   },
   {
     "id": "tv-155441",
@@ -8028,7 +8571,10 @@
     ],
     "tmdbId": 155441,
     "rating": "5 / 5",
-    "creditRole": "ORIGINAL WORK"
+    "creditRole": "ORIGINAL WORK",
+    "chineseTitle": "开端",
+    "originalDirector": "祈祷君",
+    "chineseDirector": "祈祷君"
   },
   {
     "id": "tv-33823",
@@ -8057,12 +8603,15 @@
       }
     ],
     "tmdbId": 33823,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "仙剑奇侠传三",
+    "originalDirector": "李國立",
+    "chineseDirector": "李国立"
   },
   {
     "id": "film-1298744",
     "title": "Twelve Monkeys",
-    "originalTitle": "十二猴子",
+    "originalTitle": "Twelve Monkeys",
     "type": "film",
     "director": "Terry Gilliam",
     "year": 1995,
@@ -8086,12 +8635,15 @@
       }
     ],
     "tmdbId": 63,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "十二猴子",
+    "originalDirector": "Terry Gilliam",
+    "chineseDirector": "特里·吉列姆"
   },
   {
     "id": "film-1296697",
     "title": "Planet of the Apes",
-    "originalTitle": "人猿星球",
+    "originalTitle": "Planet of the Apes",
     "type": "film",
     "director": "Franklin J. Schaffner",
     "year": 1968,
@@ -8115,12 +8667,15 @@
       }
     ],
     "tmdbId": 871,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "人猿星球",
+    "originalDirector": "Franklin J. Schaffner",
+    "chineseDirector": ""
   },
   {
     "id": "film-21324900",
     "title": "Arrival",
-    "originalTitle": "降临",
+    "originalTitle": "Arrival",
     "type": "film",
     "director": "Denis Villeneuve",
     "year": 2016,
@@ -8144,12 +8699,15 @@
       }
     ],
     "tmdbId": 329865,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "降临",
+    "originalDirector": "Denis Villeneuve",
+    "chineseDirector": "丹尼斯·维伦纽瓦"
   },
   {
     "id": "film-2300586",
     "title": "The Man from Earth",
-    "originalTitle": "这个男人来自地球",
+    "originalTitle": "The Man from Earth",
     "type": "film",
     "director": "Richard Schenkman",
     "year": 2007,
@@ -8173,12 +8731,15 @@
       }
     ],
     "tmdbId": 13363,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "这个男人来自地球",
+    "originalDirector": "Richard Schenkman",
+    "chineseDirector": "理查德·申克曼"
   },
   {
     "id": "film-1820156",
     "title": "I Am Legend",
-    "originalTitle": "我是传奇",
+    "originalTitle": "I Am Legend",
     "type": "film",
     "director": "Francis Lawrence",
     "year": 2007,
@@ -8202,7 +8763,10 @@
       }
     ],
     "tmdbId": 6479,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "我是传奇",
+    "originalDirector": "Francis Lawrence",
+    "chineseDirector": "弗朗西斯·劳伦斯"
   },
   {
     "id": "film-1308843",
@@ -8261,7 +8825,10 @@
       }
     ],
     "tmdbId": 1244492,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蓦然回首",
+    "originalDirector": "押山清高",
+    "chineseDirector": "押山清高"
   },
   {
     "id": "film-25805741",
@@ -8500,7 +9067,10 @@
       }
     ],
     "tmdbId": 1109586,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "三大队",
+    "originalDirector": "Dai Mo",
+    "chineseDirector": "戴墨"
   },
   {
     "id": "film-34941536",
@@ -8529,7 +9099,10 @@
       }
     ],
     "tmdbId": 851977,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "宇宙探索编辑部",
+    "originalDirector": "孔大山",
+    "chineseDirector": "孔大山"
   },
   {
     "id": "film-35725869",
@@ -8558,7 +9131,10 @@
       }
     ],
     "tmdbId": 1173076,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "年会不能停！",
+    "originalDirector": "董润年",
+    "chineseDirector": "董润年"
   },
   {
     "id": "film-36190889",
@@ -8707,12 +9283,15 @@
       }
     ],
     "tmdbId": 1046090,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "周处除三害",
+    "originalDirector": "黃精甫",
+    "chineseDirector": "黄精甫"
   },
   {
     "id": "film-26787574",
     "title": "Wonder",
-    "originalTitle": "奇迹男孩",
+    "originalTitle": "Wonder",
     "type": "film",
     "director": "Stephen Chbosky",
     "year": 2017,
@@ -8736,7 +9315,10 @@
       }
     ],
     "tmdbId": 406997,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "奇迹男孩",
+    "originalDirector": "Stephen Chbosky",
+    "chineseDirector": "斯蒂芬·乔博斯基"
   },
   {
     "id": "film-27622447",
@@ -8765,12 +9347,15 @@
       }
     ],
     "tmdbId": 505192,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "小偷家族",
+    "originalDirector": "是枝裕和",
+    "chineseDirector": "是枝裕和"
   },
   {
     "id": "film-26611804",
     "title": "Three Billboards Outside Ebbing, Missouri",
-    "originalTitle": "三块广告牌",
+    "originalTitle": "Three Billboards Outside Ebbing, Missouri",
     "type": "film",
     "director": "Martin McDonagh",
     "year": 2017,
@@ -8794,7 +9379,10 @@
       }
     ],
     "tmdbId": 359940,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "三块广告牌",
+    "originalDirector": "Martin McDonagh",
+    "chineseDirector": "马丁·麦克唐纳"
   },
   {
     "id": "film-1828115",
@@ -8823,12 +9411,15 @@
       }
     ],
     "tmdbId": 4588,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "色，戒",
+    "originalDirector": "李安",
+    "chineseDirector": "李安"
   },
   {
     "id": "film-26799731",
     "title": "Call Me by Your Name",
-    "originalTitle": "请以你的名字呼唤我",
+    "originalTitle": "Call Me by Your Name",
     "type": "film",
     "director": "Luca Guadagnino",
     "year": 2017,
@@ -8852,7 +9443,10 @@
       }
     ],
     "tmdbId": 398818,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "请以你的名字呼唤我",
+    "originalDirector": "Luca Guadagnino",
+    "chineseDirector": "卢卡·瓜达尼诺"
   },
   {
     "id": "film-1291999",
@@ -8881,7 +9475,10 @@
       }
     ],
     "tmdbId": 11104,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "重庆森林",
+    "originalDirector": "王家衛",
+    "chineseDirector": "王家卫"
   },
   {
     "id": "film-1300299",
@@ -8910,12 +9507,15 @@
       }
     ],
     "tmdbId": 11423,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "杀人回忆",
+    "originalDirector": "봉준호",
+    "chineseDirector": "奉俊昊"
   },
   {
     "id": "film-5322596",
     "title": "Detachment",
-    "originalTitle": "超脱",
+    "originalTitle": "Detachment",
     "type": "film",
     "director": "Tony Kaye",
     "year": 2011,
@@ -8939,12 +9539,15 @@
       }
     ],
     "tmdbId": 74308,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "超脱",
+    "originalDirector": "Tony Kaye",
+    "chineseDirector": "托尼·凯耶"
   },
   {
     "id": "film-1292224",
     "title": "One Flew Over the Cuckoo's Nest",
-    "originalTitle": "飞越疯人院",
+    "originalTitle": "One Flew Over the Cuckoo's Nest",
     "type": "film",
     "director": "Miloš Forman",
     "year": 1975,
@@ -8968,7 +9571,10 @@
       }
     ],
     "tmdbId": 510,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "飞越疯人院",
+    "originalDirector": "Miloš Forman",
+    "chineseDirector": "米洛斯·福尔曼"
   },
   {
     "id": "film-1303021",
@@ -8997,7 +9603,10 @@
       }
     ],
     "tmdbId": 21334,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "小鞋子",
+    "originalDirector": "مجید مجیدی",
+    "chineseDirector": "马吉德·马吉迪"
   },
   {
     "id": "film-1900841",
@@ -9026,12 +9635,15 @@
       }
     ],
     "tmdbId": 582,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "窃听风暴",
+    "originalDirector": "Florian Henckel von Donnersmarck",
+    "chineseDirector": "弗洛里安·多纳斯马尔克"
   },
   {
     "id": "film-1292000",
     "title": "Fight Club",
-    "originalTitle": "搏击俱乐部",
+    "originalTitle": "Fight Club",
     "type": "film",
     "director": "David Fincher",
     "year": 1999,
@@ -9055,7 +9667,10 @@
       }
     ],
     "tmdbId": 550,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "搏击俱乐部",
+    "originalDirector": "David Fincher",
+    "chineseDirector": "大卫·芬奇"
   },
   {
     "id": "film-21937445",
@@ -9084,7 +9699,10 @@
       }
     ],
     "tmdbId": 242452,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "辩护人",
+    "originalDirector": "양우석",
+    "chineseDirector": "杨宇硕"
   },
   {
     "id": "film-3742360",
@@ -9113,12 +9731,15 @@
       }
     ],
     "tmdbId": 51533,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "让子弹飞",
+    "originalDirector": "Jiang Wen",
+    "chineseDirector": "姜文"
   },
   {
     "id": "film-2129039",
     "title": "Up",
-    "originalTitle": "飞屋环游记",
+    "originalTitle": "Up",
     "type": "film",
     "director": "Pete Docter",
     "year": 2009,
@@ -9142,12 +9763,15 @@
       }
     ],
     "tmdbId": 14160,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "飞屋环游记",
+    "originalDirector": "Pete Docter",
+    "chineseDirector": "皮特·多克特"
   },
   {
     "id": "film-1295124",
     "title": "Schindler's List",
-    "originalTitle": "辛德勒的名单",
+    "originalTitle": "Schindler's List",
     "type": "film",
     "director": "Steven Spielberg",
     "year": 1993,
@@ -9171,12 +9795,15 @@
       }
     ],
     "tmdbId": 424,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "辛德勒的名单",
+    "originalDirector": "Steven Spielberg",
+    "chineseDirector": "史蒂文·斯皮尔伯格"
   },
   {
     "id": "tv-94028",
     "title": "RIPLEY",
-    "originalTitle": "",
+    "originalTitle": "RIPLEY",
     "type": "series",
     "director": "Steven Zaillian",
     "year": 2024,
@@ -9200,12 +9827,15 @@
       }
     ],
     "tmdbId": 94028,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "雷普利",
+    "originalDirector": "Steven Zaillian",
+    "chineseDirector": "斯蒂文·泽里安"
   },
   {
     "id": "film-6722879",
     "title": "Her",
-    "originalTitle": "她",
+    "originalTitle": "Her",
     "type": "film",
     "director": "Spike Jonze",
     "year": 2013,
@@ -9229,7 +9859,10 @@
       }
     ],
     "tmdbId": 152601,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "她",
+    "originalDirector": "Spike Jonze",
+    "chineseDirector": "斯派克·琼斯"
   },
   {
     "id": "film-36587974",
@@ -9258,7 +9891,10 @@
       }
     ],
     "tmdbId": 1324509,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "出走的决心",
+    "originalDirector": "尹丽川",
+    "chineseDirector": "尹丽川"
   },
   {
     "id": "film-36154853",
@@ -9293,7 +9929,7 @@
   {
     "id": "film-10808442",
     "title": "Before Midnight",
-    "originalTitle": "爱在午夜降临前",
+    "originalTitle": "Before Midnight",
     "type": "film",
     "director": "Richard Linklater",
     "year": 2013,
@@ -9317,12 +9953,15 @@
       }
     ],
     "tmdbId": 132344,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "爱在午夜降临前",
+    "originalDirector": "Richard Linklater",
+    "chineseDirector": "理查德·林克莱特"
   },
   {
     "id": "film-1291990",
     "title": "Before Sunset",
-    "originalTitle": "爱在日落黄昏时",
+    "originalTitle": "Before Sunset",
     "type": "film",
     "director": "Richard Linklater",
     "year": 2004,
@@ -9346,12 +9985,15 @@
       }
     ],
     "tmdbId": 80,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "爱在日落黄昏时",
+    "originalDirector": "Richard Linklater",
+    "chineseDirector": "理查德·林克莱特"
   },
   {
     "id": "film-1293929",
     "title": "The Bridges of Madison County",
-    "originalTitle": "廊桥遗梦",
+    "originalTitle": "The Bridges of Madison County",
     "type": "film",
     "director": "Clint Eastwood",
     "year": 1995,
@@ -9375,12 +10017,15 @@
       }
     ],
     "tmdbId": 688,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "廊桥遗梦",
+    "originalDirector": "Clint Eastwood",
+    "chineseDirector": "克林特·伊斯特伍德"
   },
   {
     "id": "film-1296339",
     "title": "Before Sunrise",
-    "originalTitle": "爱在黎明破晓前",
+    "originalTitle": "Before Sunrise",
     "type": "film",
     "director": "Richard Linklater",
     "year": 1995,
@@ -9404,7 +10049,10 @@
       }
     ],
     "tmdbId": 76,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "爱在黎明破晓前",
+    "originalDirector": "Richard Linklater",
+    "chineseDirector": "理查德·林克莱特"
   },
   {
     "id": "film-36934908",
@@ -9433,12 +10081,15 @@
       }
     ],
     "tmdbId": 1118224,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "因果报应",
+    "originalDirector": "Nithilan Swaminathan",
+    "chineseDirector": "尼蒂兰·萨米纳坦"
   },
   {
     "id": "film-1291842",
     "title": "When Harry Met Sally...",
-    "originalTitle": "当哈利遇到莎莉",
+    "originalTitle": "When Harry Met Sally...",
     "type": "film",
     "director": "Rob Reiner",
     "year": 1989,
@@ -9462,7 +10113,10 @@
       }
     ],
     "tmdbId": 639,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "当哈利遇到莎莉",
+    "originalDirector": "Rob Reiner",
+    "chineseDirector": "罗伯·莱纳"
   },
   {
     "id": "film-35772573",
@@ -9491,7 +10145,10 @@
       }
     ],
     "tmdbId": 977871,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "今夜，就算这份爱恋从世界上消失",
+    "originalDirector": "三木孝浩",
+    "chineseDirector": "三木孝浩"
   },
   {
     "id": "film-1292679",
@@ -9520,7 +10177,10 @@
       }
     ],
     "tmdbId": 18329,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "春光乍泄",
+    "originalDirector": "王家衛",
+    "chineseDirector": "王家卫"
   },
   {
     "id": "tv-6100",
@@ -9549,7 +10209,10 @@
       }
     ],
     "tmdbId": 6100,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "悠长假期",
+    "originalDirector": "北川悦吏子",
+    "chineseDirector": "北川悦吏子"
   },
   {
     "id": "tv-4319",
@@ -9579,7 +10242,10 @@
     ],
     "tmdbId": 4319,
     "rating": "5 / 5",
-    "creditRole": "SCREENPLAY"
+    "creditRole": "SCREENPLAY",
+    "chineseTitle": "恋爱世纪",
+    "originalDirector": "浅野妙子, 尾崎将也",
+    "chineseDirector": "浅野妙子, 尾崎将也"
   },
   {
     "id": "film-26930504",
@@ -9608,7 +10274,10 @@
       }
     ],
     "tmdbId": 431819,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "烟花",
+    "originalDirector": "武内宣之, 新房昭之",
+    "chineseDirector": "武内宣之, 新房昭之"
   },
   {
     "id": "tv-210955",
@@ -9638,12 +10307,15 @@
     ],
     "tmdbId": 210955,
     "rating": "5 / 5",
-    "creditRole": "DIRECTOR / SCREENWRITER"
+    "creditRole": "DIRECTOR / SCREENWRITER",
+    "chineseTitle": "初恋",
+    "originalDirector": "寒竹ゆり",
+    "chineseDirector": "寒竹百合"
   },
   {
     "id": "film-25958717",
     "title": "Heidi",
-    "originalTitle": "海蒂和爷爷",
+    "originalTitle": "Heidi",
     "type": "film",
     "director": "Alain Gsponer",
     "year": 2015,
@@ -9667,12 +10339,15 @@
       }
     ],
     "tmdbId": 365045,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "海蒂和爷爷",
+    "originalDirector": "Alain Gsponer",
+    "chineseDirector": "阿兰·葛斯彭纳"
   },
   {
     "id": "film-1291839",
     "title": "Blade Runner",
-    "originalTitle": "银翼杀手",
+    "originalTitle": "Blade Runner",
     "type": "film",
     "director": "Ridley Scott",
     "year": 1982,
@@ -9696,7 +10371,10 @@
       }
     ],
     "tmdbId": 78,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "银翼杀手",
+    "originalDirector": "Ridley Scott",
+    "chineseDirector": "雷德利·斯科特"
   },
   {
     "id": "film-1291557",
@@ -9725,7 +10403,10 @@
       }
     ],
     "tmdbId": 843,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "花样年华",
+    "originalDirector": "王家衛",
+    "chineseDirector": "王家卫"
   },
   {
     "id": "film-35633650",
@@ -9754,7 +10435,10 @@
       }
     ],
     "tmdbId": 915935,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "坠落的审判",
+    "originalDirector": "Justine Triet",
+    "chineseDirector": "朱斯蒂娜·特里耶"
   },
   {
     "id": "film-1308820",
@@ -9783,12 +10467,15 @@
       }
     ],
     "tmdbId": 27799,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "花与爱丽丝",
+    "originalDirector": "岩井俊二",
+    "chineseDirector": "岩井俊二"
   },
   {
     "id": "film-2133323",
     "title": "The Secret Life of Walter Mitty",
-    "originalTitle": "白日梦想家",
+    "originalTitle": "The Secret Life of Walter Mitty",
     "type": "film",
     "director": "Ben Stiller",
     "year": 2013,
@@ -9812,7 +10499,10 @@
       }
     ],
     "tmdbId": 116745,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "白日梦想家",
+    "originalDirector": "Ben Stiller",
+    "chineseDirector": "本·斯蒂勒"
   },
   {
     "id": "film-26698897",
@@ -9872,7 +10562,10 @@
     ],
     "tmdbId": 538331,
     "rating": "5 / 5",
-    "hidden": false
+    "hidden": false,
+    "chineseTitle": "西虹市首富",
+    "originalDirector": "Peng Damo, 闫非",
+    "chineseDirector": "彭大魔, 闫非"
   },
   {
     "id": "film-24875534",
@@ -9931,7 +10624,10 @@
       }
     ],
     "tmdbId": 314606,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "百元之恋",
+    "originalDirector": "武正晴",
+    "chineseDirector": "武正晴"
   },
   {
     "id": "film-1292219",
@@ -9960,12 +10656,15 @@
       }
     ],
     "tmdbId": 16664,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "关于莉莉周的一切",
+    "originalDirector": "岩井俊二",
+    "chineseDirector": "岩井俊二"
   },
   {
     "id": "film-1291548",
     "title": "Dead Poets Society",
-    "originalTitle": "死亡诗社",
+    "originalTitle": "Dead Poets Society",
     "type": "film",
     "director": "Peter Weir",
     "year": 1989,
@@ -9989,7 +10688,10 @@
       }
     ],
     "tmdbId": 207,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "死亡诗社",
+    "originalDirector": "Peter Weir",
+    "chineseDirector": "彼得·威尔"
   },
   {
     "id": "film-26588308",
@@ -10024,7 +10726,7 @@
   {
     "id": "film-7046723",
     "title": "Dawn of the Planet of the Apes",
-    "originalTitle": "猩球崛起2：黎明之战",
+    "originalTitle": "Dawn of the Planet of the Apes",
     "type": "film",
     "director": "Matt Reeves",
     "year": 2014,
@@ -10048,7 +10750,10 @@
       }
     ],
     "tmdbId": 119450,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "猩球崛起2：黎明之战",
+    "originalDirector": "Matt Reeves",
+    "chineseDirector": "马特·里夫斯"
   },
   {
     "id": "film-3718279",
@@ -10083,7 +10788,7 @@
   {
     "id": "film-20438964",
     "title": "Ralph Breaks the Internet",
-    "originalTitle": "无敌破坏王2：大闹互联网",
+    "originalTitle": "Ralph Breaks the Internet",
     "type": "film",
     "director": "Rich Moore, Phil Johnston",
     "year": 2018,
@@ -10107,12 +10812,15 @@
       }
     ],
     "tmdbId": 404368,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "无敌破坏王2：大闹互联网",
+    "originalDirector": "Rich Moore, Phil Johnston",
+    "chineseDirector": "里奇·摩尔, 菲尔·约翰斯顿"
   },
   {
     "id": "film-1291577",
     "title": "The Incredibles",
-    "originalTitle": "超人总动员",
+    "originalTitle": "The Incredibles",
     "type": "film",
     "director": "Brad Bird",
     "year": 2004,
@@ -10136,12 +10844,15 @@
       }
     ],
     "tmdbId": 9806,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "超人总动员",
+    "originalDirector": "Brad Bird",
+    "chineseDirector": "布拉德·伯德"
   },
   {
     "id": "film-3274505",
     "title": "Rise of the Planet of the Apes",
-    "originalTitle": "猩球崛起",
+    "originalTitle": "Rise of the Planet of the Apes",
     "type": "film",
     "director": "Rupert Wyatt",
     "year": 2011,
@@ -10165,12 +10876,15 @@
       }
     ],
     "tmdbId": 61791,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "猩球崛起",
+    "originalDirector": "Rupert Wyatt",
+    "chineseDirector": "鲁珀特·怀亚特"
   },
   {
     "id": "film-1482072",
     "title": "The Devil Wears Prada",
-    "originalTitle": "穿普拉达的女王",
+    "originalTitle": "The Devil Wears Prada",
     "type": "film",
     "director": "David Frankel",
     "year": 2006,
@@ -10194,7 +10908,10 @@
       }
     ],
     "tmdbId": 350,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "穿普拉达的女王",
+    "originalDirector": "David Frankel",
+    "chineseDirector": "大卫·弗兰克尔"
   },
   {
     "id": "film-4914468",
@@ -10287,7 +11004,7 @@
   {
     "id": "film-3789848",
     "title": "Monsters University",
-    "originalTitle": "怪兽大学",
+    "originalTitle": "Monsters University",
     "type": "film",
     "director": "Dan Scanlon",
     "year": 2013,
@@ -10311,12 +11028,15 @@
       }
     ],
     "tmdbId": 62211,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "怪兽大学",
+    "originalDirector": "Dan Scanlon",
+    "chineseDirector": "丹·斯坎伦"
   },
   {
     "id": "film-1293088",
     "title": "Home Alone",
-    "originalTitle": "小鬼当家",
+    "originalTitle": "Home Alone",
     "type": "film",
     "director": "Chris Columbus",
     "year": 1990,
@@ -10340,12 +11060,15 @@
       }
     ],
     "tmdbId": 771,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "小鬼当家",
+    "originalDirector": "Chris Columbus",
+    "chineseDirector": "克里斯·哥伦布"
   },
   {
     "id": "film-1793491",
     "title": "Ratatouille",
-    "originalTitle": "美食总动员",
+    "originalTitle": "Ratatouille",
     "type": "film",
     "director": "Brad Bird",
     "year": 2007,
@@ -10369,7 +11092,10 @@
       }
     ],
     "tmdbId": 2062,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "美食总动员",
+    "originalDirector": "Brad Bird",
+    "chineseDirector": "布拉德·伯德"
   },
   {
     "id": "film-3642835",
@@ -10491,7 +11217,7 @@
   {
     "id": "film-1291580",
     "title": "Kill Bill: Vol. 1",
-    "originalTitle": "杀死比尔",
+    "originalTitle": "Kill Bill: Vol. 1",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 2003,
@@ -10515,12 +11241,15 @@
       }
     ],
     "tmdbId": 24,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "杀死比尔",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-26931786",
     "title": "Spider-Man: Far From Home",
-    "originalTitle": "蜘蛛侠：英雄远征",
+    "originalTitle": "Spider-Man: Far From Home",
     "type": "film",
     "director": "Jon Watts",
     "year": 2019,
@@ -10543,7 +11272,10 @@
         "comment": ""
       }
     ],
-    "tmdbId": 429617
+    "tmdbId": 429617,
+    "chineseTitle": "蜘蛛侠：英雄远征",
+    "originalDirector": "Jon Watts",
+    "chineseDirector": "乔恩·沃茨"
   },
   {
     "id": "film-24773958",
@@ -10577,7 +11309,7 @@
   {
     "id": "film-24753477",
     "title": "Spider-Man: Homecoming",
-    "originalTitle": "蜘蛛侠：英雄归来",
+    "originalTitle": "Spider-Man: Homecoming",
     "type": "film",
     "director": "Jon Watts",
     "year": 2017,
@@ -10600,12 +11332,15 @@
         "comment": ""
       }
     ],
-    "tmdbId": 315635
+    "tmdbId": 315635,
+    "chineseTitle": "蜘蛛侠：英雄归来",
+    "originalDirector": "Jon Watts",
+    "chineseDirector": "乔恩·沃茨"
   },
   {
     "id": "film-3231742",
     "title": "Iron Man 3",
-    "originalTitle": "钢铁侠3",
+    "originalTitle": "Iron Man 3",
     "type": "film",
     "director": "Shane Black",
     "year": 2013,
@@ -10628,7 +11363,10 @@
         "comment": ""
       }
     ],
-    "tmdbId": 68721
+    "tmdbId": 68721,
+    "chineseTitle": "钢铁侠3",
+    "originalDirector": "Shane Black",
+    "chineseDirector": "肖恩·布莱克"
   },
   {
     "id": "film-1866479",
@@ -10662,7 +11400,7 @@
   {
     "id": "film-3066739",
     "title": "Iron Man 2",
-    "originalTitle": "钢铁侠2",
+    "originalTitle": "Iron Man 2",
     "type": "film",
     "director": "Jon Favreau",
     "year": 2010,
@@ -10685,12 +11423,15 @@
         "comment": ""
       }
     ],
-    "tmdbId": 10138
+    "tmdbId": 10138,
+    "chineseTitle": "钢铁侠2",
+    "originalDirector": "Jon Favreau",
+    "chineseDirector": "乔恩·费儒"
   },
   {
     "id": "film-1432146",
     "title": "Iron Man",
-    "originalTitle": "钢铁侠",
+    "originalTitle": "Iron Man",
     "type": "film",
     "director": "Jon Favreau",
     "year": 2008,
@@ -10714,7 +11455,10 @@
       }
     ],
     "tmdbId": 1726,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "钢铁侠",
+    "originalDirector": "Jon Favreau",
+    "chineseDirector": "乔恩·费儒"
   },
   {
     "id": "film-4286017",
@@ -10779,7 +11523,7 @@
   {
     "id": "film-4202982",
     "title": "Frozen",
-    "originalTitle": "冰雪奇缘",
+    "originalTitle": "Frozen",
     "type": "film",
     "director": "Chris Buck, Jennifer Lee",
     "year": 2013,
@@ -10803,7 +11547,10 @@
       }
     ],
     "tmdbId": 109445,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "冰雪奇缘",
+    "originalDirector": "Chris Buck, Jennifer Lee",
+    "chineseDirector": "克里斯·巴克, 詹妮弗·李"
   },
   {
     "id": "film-35256092",
@@ -10832,7 +11579,10 @@
       }
     ],
     "tmdbId": 1115379,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "河边的错误",
+    "originalDirector": "魏书钧",
+    "chineseDirector": "魏书钧"
   },
   {
     "id": "film-35267224",
@@ -10867,7 +11617,7 @@
   {
     "id": "film-1292401",
     "title": "Love Actually",
-    "originalTitle": "真爱至上",
+    "originalTitle": "Love Actually",
     "type": "film",
     "director": "Richard Curtis",
     "year": 2003,
@@ -10891,12 +11641,15 @@
       }
     ],
     "tmdbId": 508,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "真爱至上",
+    "originalDirector": "Richard Curtis",
+    "chineseDirector": "理查德·柯蒂斯"
   },
   {
     "id": "film-27060077",
     "title": "Green Book",
-    "originalTitle": "绿皮书",
+    "originalTitle": "Green Book",
     "type": "film",
     "director": "Peter Farrelly",
     "year": 2018,
@@ -10920,12 +11673,15 @@
       }
     ],
     "tmdbId": 490132,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "绿皮书",
+    "originalDirector": "Peter Farrelly",
+    "chineseDirector": "彼得·法雷利"
   },
   {
     "id": "film-26374197",
     "title": "Spider-Man: Into the Spider-Verse",
-    "originalTitle": "蜘蛛侠：平行宇宙",
+    "originalTitle": "Spider-Man: Into the Spider-Verse",
     "type": "film",
     "director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
     "year": 2018,
@@ -10949,12 +11705,15 @@
       }
     ],
     "tmdbId": 324857,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "蜘蛛侠：平行宇宙",
+    "originalDirector": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+    "chineseDirector": "鲍勃·佩尔西凯蒂, 彼得·拉姆齐, 罗德尼·罗斯曼"
   },
   {
     "id": "film-1433330",
     "title": "Harry Potter and the Half-Blood Prince",
-    "originalTitle": "哈利·波特与混血王子",
+    "originalTitle": "Harry Potter and the Half-Blood Prince",
     "type": "film",
     "director": "David Yates",
     "year": 2009,
@@ -10978,12 +11737,15 @@
       }
     ],
     "tmdbId": 767,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈利·波特与混血王子",
+    "originalDirector": "David Yates",
+    "chineseDirector": "大卫·叶茨"
   },
   {
     "id": "film-1457217",
     "title": "Harry Potter and the Order of the Phoenix",
-    "originalTitle": "哈利·波特与凤凰社",
+    "originalTitle": "Harry Potter and the Order of the Phoenix",
     "type": "film",
     "director": "David Yates",
     "year": 2007,
@@ -11007,7 +11769,10 @@
       }
     ],
     "tmdbId": 675,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈利·波特与凤凰社",
+    "originalDirector": "David Yates",
+    "chineseDirector": "大卫·叶茨"
   },
   {
     "id": "film-1308807",
@@ -11036,7 +11801,10 @@
       }
     ],
     "tmdbId": 4935,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈尔的移动城堡",
+    "originalDirector": "宮崎駿",
+    "chineseDirector": "宫崎骏"
   },
   {
     "id": "film-1959877",
@@ -11065,7 +11833,10 @@
       }
     ],
     "tmdbId": 12429,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "崖上的波妞",
+    "originalDirector": "宮崎駿",
+    "chineseDirector": "宫崎骏"
   },
   {
     "id": "film-26794435",
@@ -11094,12 +11865,15 @@
       }
     ],
     "tmdbId": 615453,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哪吒之魔童降世",
+    "originalDirector": "饺子",
+    "chineseDirector": "饺子"
   },
   {
     "id": "film-30391186",
     "title": "Spider-Man: Across the Spider-Verse",
-    "originalTitle": "蜘蛛侠：纵横宇宙",
+    "originalTitle": "Spider-Man: Across the Spider-Verse",
     "type": "film",
     "director": "Kemp Powers, Justin K. Thompson, Joaquim Dos Santos",
     "year": 2023,
@@ -11123,7 +11897,10 @@
       }
     ],
     "tmdbId": 569094,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蜘蛛侠：纵横宇宙",
+    "originalDirector": "Kemp Powers, Justin K. Thompson, Joaquim Dos Santos",
+    "chineseDirector": "肯普·鲍尔斯, 贾斯汀·K·汤普森, 乔伊姆·多斯·桑托斯"
   },
   {
     "id": "film-26259677",
@@ -11152,12 +11929,15 @@
       }
     ],
     "tmdbId": 349498,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "垫底辣妹",
+    "originalDirector": "土井裕泰",
+    "chineseDirector": "土井裕泰"
   },
   {
     "id": "film-30314848",
     "title": "Everything Everywhere All at Once",
-    "originalTitle": "瞬息全宇宙",
+    "originalTitle": "Everything Everywhere All at Once",
     "type": "film",
     "director": "Daniel Scheinert, Daniel Kwan",
     "year": 2022,
@@ -11181,12 +11961,15 @@
       }
     ],
     "tmdbId": 545611,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "瞬息全宇宙",
+    "originalDirector": "Daniel Scheinert, Daniel Kwan",
+    "chineseDirector": "丹尼尔·谢纳特, 关家永"
   },
   {
     "id": "film-2051007",
     "title": "Harry Potter and the Deathly Hallows: Part 1",
-    "originalTitle": "哈利·波特与死亡圣器(上)",
+    "originalTitle": "Harry Potter and the Deathly Hallows: Part 1",
     "type": "film",
     "director": "David Yates",
     "year": 2010,
@@ -11210,7 +11993,10 @@
       }
     ],
     "tmdbId": 12444,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈利·波特与死亡圣器(上)",
+    "originalDirector": "David Yates",
+    "chineseDirector": "大卫·叶茨"
   },
   {
     "id": "film-34874432",
@@ -11239,12 +12025,15 @@
       }
     ],
     "tmdbId": 695932,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "花束般的恋爱",
+    "originalDirector": "土井裕泰",
+    "chineseDirector": "土井裕泰"
   },
   {
     "id": "film-5300054",
     "title": "Bohemian Rhapsody",
-    "originalTitle": "波西米亚狂想曲",
+    "originalTitle": "Bohemian Rhapsody",
     "type": "film",
     "director": "Bryan Singer",
     "year": 2018,
@@ -11268,7 +12057,10 @@
       }
     ],
     "tmdbId": 424694,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "波西米亚狂想曲",
+    "originalDirector": "Bryan Singer",
+    "chineseDirector": "布莱恩·辛格"
   },
   {
     "id": "film-4268598",
@@ -11297,7 +12089,10 @@
       }
     ],
     "tmdbId": 54186,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "告白",
+    "originalDirector": "中島哲也",
+    "chineseDirector": "中岛哲也"
   },
   {
     "id": "tv-1429",
@@ -11334,7 +12129,7 @@
         "id": "tv-1429-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "第 1 季",
+        "originalTitle": "進撃の巨人",
         "year": 2013,
         "releaseDate": "2013-04-07",
         "runtime": "25 Episodes",
@@ -11346,13 +12141,15 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/1429/season/1"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gC78bsXhdU2PwT3FkLcn8R5YcHb.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gC78bsXhdU2PwT3FkLcn8R5YcHb.jpg",
+        "chineseTitle": "进击的巨人",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-1429-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "第 2 季",
+        "originalTitle": "進撃の巨人",
         "year": 2017,
         "releaseDate": "2017-04-01",
         "runtime": "12 Episodes",
@@ -11364,13 +12161,15 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/1429/season/2"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/2fhK0wbFixskgRyuq6YvaMn75et.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/2fhK0wbFixskgRyuq6YvaMn75et.jpg",
+        "chineseTitle": "进击的巨人",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-1429-season-3",
         "seasonNumber": 3,
         "title": "Season 3",
-        "originalTitle": "第 3 季",
+        "originalTitle": "進撃の巨人",
         "year": 2018,
         "releaseDate": "2018-07-23",
         "runtime": "22 Episodes",
@@ -11382,13 +12181,15 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/1429/season/3"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ynow2o9v0G341PLv1chCRDufCgc.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ynow2o9v0G341PLv1chCRDufCgc.jpg",
+        "chineseTitle": "进击的巨人",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-1429-season-4",
         "seasonNumber": 4,
         "title": "Season 4 · The Final Season",
-        "originalTitle": "第 4 季",
+        "originalTitle": "進撃の巨人",
         "year": 2020,
         "releaseDate": "2020-12-07",
         "runtime": "28 Episodes",
@@ -11408,9 +12209,14 @@
           "platform": "Douban",
           "url": "https://movie.douban.com/subject/35853587/"
         },
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sfbSjGlLHsvFQrMUSNR9RrwZgV1.jpg"
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sfbSjGlLHsvFQrMUSNR9RrwZgV1.jpg",
+        "chineseTitle": "进击的巨人",
+        "partLabel": "第 4 季"
       }
-    ]
+    ],
+    "chineseTitle": "进击的巨人",
+    "originalDirector": "諫山創",
+    "chineseDirector": "谏山创"
   },
   {
     "id": "film-1292371",
@@ -11439,12 +12245,15 @@
       }
     ],
     "tmdbId": 72933,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "四月物语",
+    "originalDirector": "岩井俊二",
+    "chineseDirector": "岩井俊二"
   },
   {
     "id": "film-2129132",
     "title": "The Amazing Spider-Man",
-    "originalTitle": "超凡蜘蛛侠",
+    "originalTitle": "The Amazing Spider-Man",
     "type": "film",
     "director": "Marc Webb",
     "year": 2012,
@@ -11468,12 +12277,15 @@
       }
     ],
     "tmdbId": 1930,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "超凡蜘蛛侠",
+    "originalDirector": "Marc Webb",
+    "chineseDirector": "马克·韦伯"
   },
   {
     "id": "film-6082518",
     "title": "The Amazing Spider-Man 2",
-    "originalTitle": "超凡蜘蛛侠2",
+    "originalTitle": "The Amazing Spider-Man 2",
     "type": "film",
     "director": "Marc Webb",
     "year": 2014,
@@ -11497,7 +12309,10 @@
       }
     ],
     "tmdbId": 102382,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "超凡蜘蛛侠2",
+    "originalDirector": "Marc Webb",
+    "chineseDirector": "马克·韦伯"
   },
   {
     "id": "film-30459571",
@@ -11586,12 +12401,15 @@
       }
     ],
     "tmdbId": 297222,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "我的个神啊",
+    "originalDirector": "Rajkumar Hirani",
+    "chineseDirector": "拉吉库马尔·希拉尼"
   },
   {
     "id": "film-1482911",
     "title": "Resident Evil: Extinction",
-    "originalTitle": "生化危机3：灭绝",
+    "originalTitle": "Resident Evil: Extinction",
     "type": "film",
     "director": "Russell Mulcahy",
     "year": 2007,
@@ -11615,12 +12433,15 @@
       }
     ],
     "tmdbId": 7737,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "生化危机3：灭绝",
+    "originalDirector": "Russell Mulcahy",
+    "chineseDirector": "拉塞尔·穆卡希"
   },
   {
     "id": "film-1308755",
     "title": "Shaun of the Dead",
-    "originalTitle": "僵尸肖恩",
+    "originalTitle": "Shaun of the Dead",
     "type": "film",
     "director": "Edgar Wright",
     "year": 2004,
@@ -11644,12 +12465,15 @@
       }
     ],
     "tmdbId": 747,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "僵尸肖恩",
+    "originalDirector": "Edgar Wright",
+    "chineseDirector": "埃德加·赖特"
   },
   {
     "id": "film-1308752",
     "title": "Resident Evil: Apocalypse",
-    "originalTitle": "生化危机2：启示录",
+    "originalTitle": "Resident Evil: Apocalypse",
     "type": "film",
     "director": "Alexander Witt",
     "year": 2004,
@@ -11673,12 +12497,15 @@
       }
     ],
     "tmdbId": 1577,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "生化危机2：启示录",
+    "originalDirector": "Alexander Witt",
+    "chineseDirector": "亚历山大·维特"
   },
   {
     "id": "film-1306809",
     "title": "Resident Evil",
-    "originalTitle": "生化危机",
+    "originalTitle": "Resident Evil",
     "type": "film",
     "director": "Paul W. S. Anderson",
     "year": 2002,
@@ -11702,12 +12529,15 @@
       }
     ],
     "tmdbId": 1576,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "生化危机",
+    "originalDirector": "Paul W. S. Anderson",
+    "chineseDirector": "保罗·安德森"
   },
   {
     "id": "film-25934014",
     "title": "La La Land",
-    "originalTitle": "爱乐之城",
+    "originalTitle": "La La Land",
     "type": "film",
     "director": "Damien Chazelle",
     "year": 2016,
@@ -11731,7 +12561,10 @@
       }
     ],
     "tmdbId": 313369,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "爱乐之城",
+    "originalDirector": "Damien Chazelle",
+    "chineseDirector": "达米恩·查泽雷"
   },
   {
     "id": "film-1937946",
@@ -11760,12 +12593,15 @@
       }
     ],
     "tmdbId": 14069,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "穿越时空的少女",
+    "originalDirector": "細田守",
+    "chineseDirector": "细田守"
   },
   {
     "id": "film-25807345",
     "title": "Coherence",
-    "originalTitle": "彗星来的那一夜",
+    "originalTitle": "Coherence",
     "type": "film",
     "director": "James Ward Byrkit",
     "year": 2014,
@@ -11789,12 +12625,15 @@
       }
     ],
     "tmdbId": 220289,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "彗星来的那一夜",
+    "originalDirector": "James Ward Byrkit",
+    "chineseDirector": "詹姆斯·沃德·布柯特"
   },
   {
     "id": "film-27119724",
     "title": "Joker",
-    "originalTitle": "小丑",
+    "originalTitle": "Joker",
     "type": "film",
     "director": "Todd Phillips",
     "year": 2019,
@@ -11818,7 +12657,10 @@
       }
     ],
     "tmdbId": 475557,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "小丑",
+    "originalDirector": "Todd Phillips",
+    "chineseDirector": "托德·菲利普斯"
   },
   {
     "id": "film-1291879",
@@ -11847,7 +12689,10 @@
       }
     ],
     "tmdbId": 548,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "罗生门",
+    "originalDirector": "黒澤明",
+    "chineseDirector": "黑泽明"
   },
   {
     "id": "film-4739952",
@@ -11876,12 +12721,15 @@
       }
     ],
     "tmdbId": 57627,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "初恋这件小事",
+    "originalDirector": "วศิน ปกป้อง, พุฒิพงศ์ พรหมสาขา ณ สกลนคร",
+    "chineseDirector": ", "
   },
   {
     "id": "film-1292226",
     "title": "2001: A Space Odyssey",
-    "originalTitle": "2001太空漫游",
+    "originalTitle": "2001: A Space Odyssey",
     "type": "film",
     "director": "Stanley Kubrick",
     "year": 1968,
@@ -11905,7 +12753,10 @@
       }
     ],
     "tmdbId": 62,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "2001太空漫游",
+    "originalDirector": "Stanley Kubrick",
+    "chineseDirector": "斯坦利·库布里克"
   },
   {
     "id": "film-1291578",
@@ -11940,7 +12791,7 @@
   {
     "id": "film-6534248",
     "title": "Wreck-It Ralph",
-    "originalTitle": "无敌破坏王",
+    "originalTitle": "Wreck-It Ralph",
     "type": "film",
     "director": "Rich Moore",
     "year": 2012,
@@ -11964,12 +12815,15 @@
       }
     ],
     "tmdbId": 82690,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "无敌破坏王",
+    "originalDirector": "Rich Moore",
+    "chineseDirector": "里奇·摩尔"
   },
   {
     "id": "film-2209573",
     "title": "Slumdog Millionaire",
-    "originalTitle": "贫民窟的百万富翁",
+    "originalTitle": "Slumdog Millionaire",
     "type": "film",
     "director": "Danny Boyle",
     "year": 2008,
@@ -11993,12 +12847,15 @@
       }
     ],
     "tmdbId": 12405,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "贫民窟的百万富翁",
+    "originalDirector": "Danny Boyle",
+    "chineseDirector": "丹尼·博伊尔"
   },
   {
     "id": "film-25773932",
     "title": "Whiplash",
-    "originalTitle": "爆裂鼓手",
+    "originalTitle": "Whiplash",
     "type": "film",
     "director": "Damien Chazelle",
     "year": 2014,
@@ -12022,7 +12879,10 @@
       }
     ],
     "tmdbId": 244786,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "爆裂鼓手",
+    "originalDirector": "Damien Chazelle",
+    "chineseDirector": "达米恩·查泽雷"
   },
   {
     "id": "film-26683290",
@@ -12051,12 +12911,15 @@
       }
     ],
     "tmdbId": 372058,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "你的名字。",
+    "originalDirector": "新海誠",
+    "chineseDirector": "新海诚"
   },
   {
     "id": "film-10533913",
     "title": "Inside Out",
-    "originalTitle": "头脑特工队",
+    "originalTitle": "Inside Out",
     "type": "film",
     "director": "Pete Docter",
     "year": 2015,
@@ -12080,12 +12943,15 @@
       }
     ],
     "tmdbId": 150540,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "头脑特工队",
+    "originalDirector": "Pete Docter",
+    "chineseDirector": "皮特·多克特"
   },
   {
     "id": "film-1417598",
     "title": "Saw",
-    "originalTitle": "电锯惊魂",
+    "originalTitle": "Saw",
     "type": "film",
     "director": "James Wan",
     "year": 2004,
@@ -12109,12 +12975,15 @@
       }
     ],
     "tmdbId": 176,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "电锯惊魂",
+    "originalDirector": "James Wan",
+    "chineseDirector": "温子仁"
   },
   {
     "id": "film-1309055",
     "title": "Harry Potter and the Goblet of Fire",
-    "originalTitle": "哈利·波特与火焰杯",
+    "originalTitle": "Harry Potter and the Goblet of Fire",
     "type": "film",
     "director": "Mike Newell",
     "year": 2005,
@@ -12138,12 +13007,15 @@
       }
     ],
     "tmdbId": 674,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈利·波特与火焰杯",
+    "originalDirector": "Mike Newell",
+    "chineseDirector": "迈克·内威尔"
   },
   {
     "id": "film-4920389",
     "title": "Ready Player One",
-    "originalTitle": "头号玩家",
+    "originalTitle": "Ready Player One",
     "type": "film",
     "director": "Steven Spielberg",
     "year": 2018,
@@ -12167,7 +13039,10 @@
       }
     ],
     "tmdbId": 333339,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "头号玩家",
+    "originalDirector": "Steven Spielberg",
+    "chineseDirector": "史蒂文·斯皮尔伯格"
   },
   {
     "id": "film-27010768",
@@ -12196,7 +13071,10 @@
       }
     ],
     "tmdbId": 496243,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "寄生虫",
+    "originalDirector": "봉준호",
+    "chineseDirector": "奉俊昊"
   },
   {
     "id": "film-25986180",
@@ -12225,7 +13103,10 @@
       }
     ],
     "tmdbId": 396535,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "釜山行",
+    "originalDirector": "연상호",
+    "chineseDirector": "延尚昊"
   },
   {
     "id": "film-3287562",
@@ -12260,7 +13141,7 @@
   {
     "id": "film-1291545",
     "title": "Big Fish",
-    "originalTitle": "大鱼",
+    "originalTitle": "Big Fish",
     "type": "film",
     "director": "Tim Burton",
     "year": 2003,
@@ -12284,12 +13165,15 @@
       }
     ],
     "tmdbId": 587,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "大鱼",
+    "originalDirector": "Tim Burton",
+    "chineseDirector": "蒂姆·伯顿"
   },
   {
     "id": "film-1291579",
     "title": "Monsters, Inc.",
-    "originalTitle": "怪兽电力公司",
+    "originalTitle": "Monsters, Inc.",
     "type": "film",
     "director": "Pete Docter",
     "year": 2001,
@@ -12313,12 +13197,15 @@
       }
     ],
     "tmdbId": 585,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "怪兽电力公司",
+    "originalDirector": "Pete Docter",
+    "chineseDirector": "皮特·多克特"
   },
   {
     "id": "film-10577869",
     "title": "About Time",
-    "originalTitle": "时空恋旅人",
+    "originalTitle": "About Time",
     "type": "film",
     "director": "Richard Curtis",
     "year": 2013,
@@ -12342,12 +13229,15 @@
       }
     ],
     "tmdbId": 122906,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "时空恋旅人",
+    "originalDirector": "Richard Curtis",
+    "chineseDirector": "理查德·柯蒂斯"
   },
   {
     "id": "film-2353023",
     "title": "How to Train Your Dragon",
-    "originalTitle": "驯龙高手",
+    "originalTitle": "How to Train Your Dragon",
     "type": "film",
     "director": "Chris Sanders, Dean DeBlois",
     "year": 2010,
@@ -12371,7 +13261,10 @@
       }
     ],
     "tmdbId": 10191,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "驯龙高手",
+    "originalDirector": "Chris Sanders, Dean DeBlois",
+    "chineseDirector": "克里斯·桑德斯, 迪恩·德布洛斯"
   },
   {
     "id": "film-11026735",
@@ -12406,7 +13299,7 @@
   {
     "id": "film-1296996",
     "title": "Harry Potter and the Chamber of Secrets",
-    "originalTitle": "哈利·波特与密室",
+    "originalTitle": "Harry Potter and the Chamber of Secrets",
     "type": "film",
     "director": "Chris Columbus",
     "year": 2002,
@@ -12430,7 +13323,10 @@
       }
     ],
     "tmdbId": 672,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "哈利·波特与密室",
+    "originalDirector": "Chris Columbus",
+    "chineseDirector": "克里斯·哥伦布"
   },
   {
     "id": "film-2149806",
@@ -12459,7 +13355,10 @@
       }
     ],
     "tmdbId": 16804,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "入殓师",
+    "originalDirector": "滝田洋二郎",
+    "chineseDirector": "泷田洋二郎"
   },
   {
     "id": "film-1306249",
@@ -12488,12 +13387,15 @@
       }
     ],
     "tmdbId": 37703,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "唐伯虎点秋香",
+    "originalDirector": "李力持",
+    "chineseDirector": "李力持"
   },
   {
     "id": "film-1291544",
     "title": "Harry Potter and the Prisoner of Azkaban",
-    "originalTitle": "哈利·波特与阿兹卡班的囚徒",
+    "originalTitle": "Harry Potter and the Prisoner of Azkaban",
     "type": "film",
     "director": "Alfonso Cuarón",
     "year": 2004,
@@ -12517,7 +13419,10 @@
       }
     ],
     "tmdbId": 673,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈利·波特与阿兹卡班的囚徒",
+    "originalDirector": "Alfonso Cuarón",
+    "chineseDirector": "阿方索·卡隆"
   },
   {
     "id": "film-1291543",
@@ -12546,7 +13451,10 @@
       }
     ],
     "tmdbId": 9470,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "功夫",
+    "originalDirector": "周星馳",
+    "chineseDirector": "周星驰"
   },
   {
     "id": "film-1302425",
@@ -12575,12 +13483,15 @@
       }
     ],
     "tmdbId": 53168,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "喜剧之王",
+    "originalDirector": "周星馳, 李力持",
+    "chineseDirector": "周星驰, 李力持"
   },
   {
     "id": "film-1292223",
     "title": "Se7en",
-    "originalTitle": "七宗罪",
+    "originalTitle": "Se7en",
     "type": "film",
     "director": "David Fincher",
     "year": 1995,
@@ -12604,12 +13515,15 @@
       }
     ],
     "tmdbId": 807,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "七宗罪",
+    "originalDirector": "David Fincher",
+    "chineseDirector": "大卫·芬奇"
   },
   {
     "id": "film-1292343",
     "title": "The Butterfly Effect",
-    "originalTitle": "蝴蝶效应",
+    "originalTitle": "The Butterfly Effect",
     "type": "film",
     "director": "J. Mackye Gruber, Eric Bress",
     "year": 2004,
@@ -12633,12 +13547,15 @@
       }
     ],
     "tmdbId": 1954,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蝴蝶效应",
+    "originalDirector": "J. Mackye Gruber, Eric Bress",
+    "chineseDirector": "J·麦基·格鲁伯, 埃里克·布雷斯"
   },
   {
     "id": "film-3011235",
     "title": "Harry Potter and the Deathly Hallows: Part 2",
-    "originalTitle": "哈利·波特与死亡圣器(下)",
+    "originalTitle": "Harry Potter and the Deathly Hallows: Part 2",
     "type": "film",
     "director": "David Yates",
     "year": 2011,
@@ -12662,7 +13579,10 @@
       }
     ],
     "tmdbId": 12445,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈利·波特与死亡圣器(下)",
+    "originalDirector": "David Yates",
+    "chineseDirector": "大卫·叶茨"
   },
   {
     "id": "film-26580232",
@@ -12691,7 +13611,10 @@
       }
     ],
     "tmdbId": 411088,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "看不见的客人",
+    "originalDirector": "Oriol Paulo",
+    "chineseDirector": "奥里奥尔·保罗"
   },
   {
     "id": "film-1292402",
@@ -12720,7 +13643,10 @@
       }
     ],
     "tmdbId": 10867,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "西西里的美丽传说",
+    "originalDirector": "Giuseppe Tornatore",
+    "chineseDirector": "朱塞佩·托纳多雷"
   },
   {
     "id": "film-1292220",
@@ -12749,12 +13675,15 @@
       }
     ],
     "tmdbId": 47002,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "情书",
+    "originalDirector": "岩井俊二",
+    "chineseDirector": "岩井俊二"
   },
   {
     "id": "film-1485260",
     "title": "The Curious Case of Benjamin Button",
-    "originalTitle": "本杰明·巴顿奇事",
+    "originalTitle": "The Curious Case of Benjamin Button",
     "type": "film",
     "director": "David Fincher",
     "year": 2008,
@@ -12778,12 +13707,15 @@
       }
     ],
     "tmdbId": 4922,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "本杰明·巴顿奇事",
+    "originalDirector": "David Fincher",
+    "chineseDirector": "大卫·芬奇"
   },
   {
     "id": "film-1306029",
     "title": "A Beautiful Mind",
-    "originalTitle": "美丽心灵",
+    "originalTitle": "A Beautiful Mind",
     "type": "film",
     "director": "Ron Howard",
     "year": 2001,
@@ -12807,12 +13739,15 @@
       }
     ],
     "tmdbId": 453,
-    "rating": "3 / 5"
+    "rating": "3 / 5",
+    "chineseTitle": "美丽心灵",
+    "originalDirector": "Ron Howard",
+    "chineseDirector": "朗·霍华德"
   },
   {
     "id": "film-1291843",
     "title": "The Matrix",
-    "originalTitle": "黑客帝国",
+    "originalTitle": "The Matrix",
     "type": "film",
     "director": "Lana Wachowski, Lilly Wachowski",
     "year": 1999,
@@ -12836,12 +13771,15 @@
       }
     ],
     "tmdbId": 603,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "黑客帝国",
+    "originalDirector": "Lana Wachowski, Lilly Wachowski",
+    "chineseDirector": "拉娜·沃卓斯基, 莉莉·沃卓斯基"
   },
   {
     "id": "film-1305487",
     "title": "Catch Me If You Can",
-    "originalTitle": "猫鼠游戏",
+    "originalTitle": "Catch Me If You Can",
     "type": "film",
     "director": "Steven Spielberg",
     "year": 2002,
@@ -12865,7 +13803,10 @@
       }
     ],
     "tmdbId": 640,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "猫鼠游戏",
+    "originalDirector": "Steven Spielberg",
+    "chineseDirector": "史蒂文·斯皮尔伯格"
   },
   {
     "id": "film-1299398",
@@ -12894,12 +13835,15 @@
       }
     ],
     "tmdbId": 13345,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "大话西游之月光宝盒",
+    "originalDirector": "劉鎮偉",
+    "chineseDirector": "刘镇伟"
   },
   {
     "id": "film-1293182",
     "title": "12 Angry Men",
-    "originalTitle": "十二怒汉",
+    "originalTitle": "12 Angry Men",
     "type": "film",
     "director": "Sidney Lumet",
     "year": 1957,
@@ -12923,7 +13867,10 @@
       }
     ],
     "tmdbId": 389,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "十二怒汉",
+    "originalDirector": "Sidney Lumet",
+    "chineseDirector": "西德尼·吕美特"
   },
   {
     "id": "film-26752088",
@@ -12952,7 +13899,10 @@
       }
     ],
     "tmdbId": 532753,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "我不是药神",
+    "originalDirector": "文牧野",
+    "chineseDirector": "文牧野"
   },
   {
     "id": "film-26387939",
@@ -12981,12 +13931,15 @@
       }
     ],
     "tmdbId": 360814,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "摔跤吧！爸爸",
+    "originalDirector": "Nitesh Tiwari",
+    "chineseDirector": "尼特什·提瓦瑞"
   },
   {
     "id": "film-1300267",
     "title": "Gone with the Wind",
-    "originalTitle": "乱世佳人",
+    "originalTitle": "Gone with the Wind",
     "type": "film",
     "director": "Victor Fleming",
     "year": 1939,
@@ -13010,12 +13963,15 @@
       }
     ],
     "tmdbId": 770,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "乱世佳人",
+    "originalDirector": "Victor Fleming",
+    "chineseDirector": "维克多·弗莱明"
   },
   {
     "id": "film-1295038",
     "title": "Harry Potter and the Philosopher's Stone",
-    "originalTitle": "哈利·波特与魔法石",
+    "originalTitle": "Harry Potter and the Philosopher's Stone",
     "type": "film",
     "director": "Chris Columbus",
     "year": 2001,
@@ -13039,12 +13995,15 @@
       }
     ],
     "tmdbId": 671,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "哈利·波特与魔法石",
+    "originalDirector": "Chris Columbus",
+    "chineseDirector": "克里斯·哥伦布"
   },
   {
     "id": "film-20495023",
     "title": "Coco",
-    "originalTitle": "寻梦环游记",
+    "originalTitle": "Coco",
     "type": "film",
     "director": "Lee Unkrich",
     "year": 2017,
@@ -13068,12 +14027,15 @@
       }
     ],
     "tmdbId": 354912,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "寻梦环游记",
+    "originalDirector": "Lee Unkrich",
+    "chineseDirector": "李·昂克里奇"
   },
   {
     "id": "film-1293172",
     "title": "The Last Emperor",
-    "originalTitle": "末代皇帝",
+    "originalTitle": "The Last Emperor",
     "type": "film",
     "director": "Bernardo Bertolucci",
     "year": 1987,
@@ -13097,12 +14059,15 @@
       }
     ],
     "tmdbId": 746,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "末代皇帝",
+    "originalDirector": "Bernardo Bertolucci",
+    "chineseDirector": "贝纳尔多·贝托鲁奇"
   },
   {
     "id": "film-1296141",
     "title": "Witness for the Prosecution",
-    "originalTitle": "控方证人",
+    "originalTitle": "Witness for the Prosecution",
     "type": "film",
     "director": "Billy Wilder",
     "year": 1957,
@@ -13126,12 +14091,15 @@
       }
     ],
     "tmdbId": 37257,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "控方证人",
+    "originalDirector": "Billy Wilder",
+    "chineseDirector": "比利·怀尔德"
   },
   {
     "id": "film-1300613",
     "title": "Groundhog Day",
-    "originalTitle": "土拨鼠之日",
+    "originalTitle": "Groundhog Day",
     "type": "film",
     "director": "Harold Ramis",
     "year": 1993,
@@ -13155,12 +14123,15 @@
       }
     ],
     "tmdbId": 137,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "土拨鼠之日",
+    "originalDirector": "Harold Ramis",
+    "chineseDirector": "哈罗德·拉米斯"
   },
   {
     "id": "film-1851857",
     "title": "The Dark Knight",
-    "originalTitle": "蝙蝠侠：黑暗骑士",
+    "originalTitle": "The Dark Knight",
     "type": "film",
     "director": "Christopher Nolan",
     "year": 2008,
@@ -13184,12 +14155,15 @@
       }
     ],
     "tmdbId": 155,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "蝙蝠侠：黑暗骑士",
+    "originalDirector": "Christopher Nolan",
+    "chineseDirector": "克里斯托弗·诺兰"
   },
   {
     "id": "film-3319755",
     "title": "Flipped",
-    "originalTitle": "怦然心动",
+    "originalTitle": "Flipped",
     "type": "film",
     "director": "Rob Reiner",
     "year": 2010,
@@ -13213,12 +14187,15 @@
       }
     ],
     "tmdbId": 43949,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "怦然心动",
+    "originalDirector": "Rob Reiner",
+    "chineseDirector": "罗伯·莱纳"
   },
   {
     "id": "film-1849031",
     "title": "The Pursuit of Happyness",
-    "originalTitle": "当幸福来敲门",
+    "originalTitle": "The Pursuit of Happyness",
     "type": "film",
     "director": "Gabriele Muccino",
     "year": 2006,
@@ -13242,12 +14219,15 @@
       }
     ],
     "tmdbId": 1402,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "当幸福来敲门",
+    "originalDirector": "Gabriele Muccino",
+    "chineseDirector": "加布里埃尔·穆奇诺"
   },
   {
     "id": "film-25662329",
     "title": "Zootopia",
-    "originalTitle": "疯狂动物城",
+    "originalTitle": "Zootopia",
     "type": "film",
     "director": "Byron Howard, Rich Moore",
     "year": 2016,
@@ -13271,7 +14251,10 @@
       }
     ],
     "tmdbId": 269149,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "疯狂动物城",
+    "originalDirector": "Byron Howard, Rich Moore",
+    "chineseDirector": "拜恩·霍华德, 里奇·摩尔"
   },
   {
     "id": "film-1292213",
@@ -13300,12 +14283,15 @@
       }
     ],
     "tmdbId": 21835,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "大话西游之大圣娶亲",
+    "originalDirector": "劉鎮偉",
+    "chineseDirector": "刘镇伟"
   },
   {
     "id": "film-2131459",
     "title": "WALL·E",
-    "originalTitle": "机器人总动员",
+    "originalTitle": "WALL·E",
     "type": "film",
     "director": "Andrew Stanton",
     "year": 2008,
@@ -13329,12 +14315,15 @@
       }
     ],
     "tmdbId": 10681,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "机器人总动员",
+    "originalDirector": "Andrew Stanton",
+    "chineseDirector": "安德鲁·斯坦顿"
   },
   {
     "id": "film-3793023",
     "title": "3 Idiots",
-    "originalTitle": "三傻大闹宝莱坞",
+    "originalTitle": "3 Idiots",
     "type": "film",
     "director": "Rajkumar Hirani",
     "year": 2009,
@@ -13358,12 +14347,15 @@
       }
     ],
     "tmdbId": 20453,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "三傻大闹宝莱坞",
+    "originalDirector": "Rajkumar Hirani",
+    "chineseDirector": "拉吉库马尔·希拉尼"
   },
   {
     "id": "film-1889243",
     "title": "Interstellar",
-    "originalTitle": "星际穿越",
+    "originalTitle": "Interstellar",
     "type": "film",
     "director": "Christopher Nolan",
     "year": 2014,
@@ -13387,12 +14379,15 @@
       }
     ],
     "tmdbId": 157336,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "星际穿越",
+    "originalDirector": "Christopher Nolan",
+    "chineseDirector": "克里斯托弗·诺兰"
   },
   {
     "id": "film-1292064",
     "title": "The Truman Show",
-    "originalTitle": "楚门的世界",
+    "originalTitle": "The Truman Show",
     "type": "film",
     "director": "Peter Weir",
     "year": 1998,
@@ -13416,7 +14411,10 @@
       }
     ],
     "tmdbId": 37165,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "楚门的世界",
+    "originalDirector": "Peter Weir",
+    "chineseDirector": "彼得·威尔"
   },
   {
     "id": "film-1292001",
@@ -13445,12 +14443,15 @@
       }
     ],
     "tmdbId": 10376,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "海上钢琴师",
+    "originalDirector": "Giuseppe Tornatore",
+    "chineseDirector": "朱塞佩·托纳多雷"
   },
   {
     "id": "film-3011091",
     "title": "Hachi: A Dog's Tale",
-    "originalTitle": "忠犬八公的故事",
+    "originalTitle": "Hachi: A Dog's Tale",
     "type": "film",
     "director": "Lasse Hallström",
     "year": 2009,
@@ -13474,7 +14475,10 @@
       }
     ],
     "tmdbId": 28178,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "忠犬八公的故事",
+    "originalDirector": "Lasse Hallström",
+    "chineseDirector": "莱塞·霍尔斯道姆"
   },
   {
     "id": "film-1291561",
@@ -13503,12 +14507,15 @@
       }
     ],
     "tmdbId": 129,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "千与千寻",
+    "originalDirector": "宮崎駿",
+    "chineseDirector": "宫崎骏"
   },
   {
     "id": "film-1292722",
     "title": "Titanic",
-    "originalTitle": "泰坦尼克号",
+    "originalTitle": "Titanic",
     "type": "film",
     "director": "James Cameron",
     "year": 1997,
@@ -13532,7 +14539,10 @@
       }
     ],
     "tmdbId": 597,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "泰坦尼克号",
+    "originalDirector": "James Cameron",
+    "chineseDirector": "詹姆斯·卡梅隆"
   },
   {
     "id": "film-1295644",
@@ -13561,12 +14571,15 @@
       }
     ],
     "tmdbId": 101,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "这个杀手不太冷",
+    "originalDirector": "Luc Besson",
+    "chineseDirector": "吕克·贝松"
   },
   {
     "id": "film-1292720",
     "title": "Forrest Gump",
-    "originalTitle": "阿甘正传",
+    "originalTitle": "Forrest Gump",
     "type": "film",
     "director": "Robert Zemeckis",
     "year": 1994,
@@ -13590,12 +14603,15 @@
       }
     ],
     "tmdbId": 13,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "阿甘正传",
+    "originalDirector": "Robert Zemeckis",
+    "chineseDirector": "罗伯特·泽米吉斯"
   },
   {
     "id": "film-1292052",
     "title": "The Shawshank Redemption",
-    "originalTitle": "肖申克的救赎",
+    "originalTitle": "The Shawshank Redemption",
     "type": "film",
     "director": "Frank Darabont",
     "year": 1994,
@@ -13619,12 +14635,15 @@
       }
     ],
     "tmdbId": 278,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "肖申克的救赎",
+    "originalDirector": "Frank Darabont",
+    "chineseDirector": "弗兰克·德拉邦特"
   },
   {
     "id": "film-1291832",
     "title": "Pulp Fiction",
-    "originalTitle": "低俗小说",
+    "originalTitle": "Pulp Fiction",
     "type": "film",
     "director": "Quentin Tarantino",
     "year": 1994,
@@ -13648,12 +14667,15 @@
       }
     ],
     "tmdbId": 680,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "低俗小说",
+    "originalDirector": "Quentin Tarantino",
+    "chineseDirector": "昆汀·塔伦蒂诺"
   },
   {
     "id": "film-1298653",
     "title": "Cast Away",
-    "originalTitle": "荒岛余生",
+    "originalTitle": "Cast Away",
     "type": "film",
     "director": "Robert Zemeckis",
     "year": 2000,
@@ -13677,12 +14699,15 @@
       }
     ],
     "tmdbId": 8358,
-    "rating": "4 / 5"
+    "rating": "4 / 5",
+    "chineseTitle": "荒岛余生",
+    "originalDirector": "Robert Zemeckis",
+    "chineseDirector": "罗伯特·泽米吉斯"
   },
   {
     "id": "film-1298624",
     "title": "Scent of a Woman",
-    "originalTitle": "闻香识女人",
+    "originalTitle": "Scent of a Woman",
     "type": "film",
     "director": "Martin Brest",
     "year": 1992,
@@ -13706,7 +14731,10 @@
       }
     ],
     "tmdbId": 9475,
-    "rating": "5 / 5"
+    "rating": "5 / 5",
+    "chineseTitle": "闻香识女人",
+    "originalDirector": "Martin Brest",
+    "chineseDirector": "马丁·布雷斯特"
   },
   {
     "id": "tv-37854",
@@ -13733,7 +14761,7 @@
         "id": "tv-37854-part-37854-season-1",
         "seasonNumber": 1,
         "title": "East Blue",
-        "originalTitle": "ワンピース · 第 1 季",
+        "originalTitle": "ワンピース",
         "year": 1999,
         "releaseDate": "1999-10-20",
         "runtime": "61 Episodes",
@@ -13745,13 +14773,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/1"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-37854-part-37854-season-2",
         "seasonNumber": 2,
         "title": "Whiskey Peak & Little Garden",
-        "originalTitle": "ワンピース · 第 2 季",
+        "originalTitle": "ワンピース",
         "year": 2001,
         "releaseDate": "2001-03-21",
         "runtime": "16 Episodes",
@@ -13763,13 +14793,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/2"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-37854-part-37854-season-3",
         "seasonNumber": 3,
         "title": "Drum Island",
-        "originalTitle": "ワンピース · 第 3 季",
+        "originalTitle": "ワンピース",
         "year": 2001,
         "releaseDate": "2001-08-26",
         "runtime": "14 Episodes",
@@ -13781,13 +14813,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/3"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-37854-part-37854-season-4",
         "seasonNumber": 4,
         "title": "Alabasta",
-        "originalTitle": "ワンピース · 第 4 季",
+        "originalTitle": "ワンピース",
         "year": 2001,
         "releaseDate": "2001-12-09",
         "runtime": "39 Episodes",
@@ -13799,13 +14833,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/4"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-37854-part-37854-season-5",
         "seasonNumber": 5,
         "title": "Dreams!, The Zenny Pirate Crew Sortie!, Beyond the Rainbow",
-        "originalTitle": "ワンピース · 第 5 季",
+        "originalTitle": "ワンピース",
         "year": 2002,
         "releaseDate": "2002-11-03",
         "runtime": "13 Episodes",
@@ -13817,13 +14853,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/5"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 5 季"
       },
       {
         "id": "tv-37854-part-37854-season-6",
         "seasonNumber": 6,
         "title": "Skypiea",
-        "originalTitle": "ワンピース · 第 6 季",
+        "originalTitle": "ワンピース",
         "year": 2003,
         "releaseDate": "2003-02-09",
         "runtime": "52 Episodes",
@@ -13835,13 +14873,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/6"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 6 季"
       },
       {
         "id": "tv-37854-part-37854-season-7",
         "seasonNumber": 7,
         "title": "G-8 & Long Ring Long Land",
-        "originalTitle": "ワンピース · 第 7 季",
+        "originalTitle": "ワンピース",
         "year": 2004,
         "releaseDate": "2004-06-20",
         "runtime": "33 Episodes",
@@ -13853,13 +14893,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/7"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 7 季"
       },
       {
         "id": "tv-37854-part-37854-season-8",
         "seasonNumber": 8,
         "title": "Water Seven",
-        "originalTitle": "ワンピース · 第 8 季",
+        "originalTitle": "ワンピース",
         "year": 2005,
         "releaseDate": "2005-04-17",
         "runtime": "35 Episodes",
@@ -13871,13 +14913,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/8"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 8 季"
       },
       {
         "id": "tv-37854-part-37854-season-9",
         "seasonNumber": 9,
         "title": "Enies Lobby",
-        "originalTitle": "ワンピース · 第 9 季",
+        "originalTitle": "ワンピース",
         "year": 2006,
         "releaseDate": "2006-05-21",
         "runtime": "73 Episodes",
@@ -13889,13 +14933,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/9"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 9 季"
       },
       {
         "id": "tv-37854-part-37854-season-10",
         "seasonNumber": 10,
         "title": "Thriller Bark",
-        "originalTitle": "ワンピース · 第 10 季",
+        "originalTitle": "ワンピース",
         "year": 2008,
         "releaseDate": "2008-01-06",
         "runtime": "45 Episodes",
@@ -13907,13 +14953,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/10"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 10 季"
       },
       {
         "id": "tv-37854-part-37854-season-11",
         "seasonNumber": 11,
         "title": "Sabaody Archipelago",
-        "originalTitle": "ワンピース · 第 11 季",
+        "originalTitle": "ワンピース",
         "year": 2008,
         "releaseDate": "2008-12-21",
         "runtime": "26 Episodes",
@@ -13925,13 +14973,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/11"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 11 季"
       },
       {
         "id": "tv-37854-part-37854-season-12",
         "seasonNumber": 12,
         "title": "Amazon Lily",
-        "originalTitle": "ワンピース · 第 12 季",
+        "originalTitle": "ワンピース",
         "year": 2009,
         "releaseDate": "2009-07-05",
         "runtime": "14 Episodes",
@@ -13943,13 +14993,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/12"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 12 季"
       },
       {
         "id": "tv-37854-part-37854-season-13",
         "seasonNumber": 13,
         "title": "Impel Down & Marineford",
-        "originalTitle": "ワンピース · 第 13 季",
+        "originalTitle": "ワンピース",
         "year": 2009,
         "releaseDate": "2009-10-18",
         "runtime": "101 Episodes",
@@ -13961,13 +15013,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/13"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 13 季"
       },
       {
         "id": "tv-37854-part-37854-season-14",
         "seasonNumber": 14,
         "title": "Fishman Island",
-        "originalTitle": "ワンピース · 第 14 季",
+        "originalTitle": "ワンピース",
         "year": 2011,
         "releaseDate": "2011-11-13",
         "runtime": "58 Episodes",
@@ -13979,13 +15033,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/14"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 14 季"
       },
       {
         "id": "tv-37854-part-37854-season-15",
         "seasonNumber": 15,
         "title": "Punk Hazard",
-        "originalTitle": "ワンピース · 第 15 季",
+        "originalTitle": "ワンピース",
         "year": 2013,
         "releaseDate": "2013-01-20",
         "runtime": "62 Episodes",
@@ -13997,13 +15053,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/15"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 15 季"
       },
       {
         "id": "tv-37854-part-37854-season-16",
         "seasonNumber": 16,
         "title": "Dressrosa",
-        "originalTitle": "ワンピース · 第 16 季",
+        "originalTitle": "ワンピース",
         "year": 2014,
         "releaseDate": "2014-05-04",
         "runtime": "50 Episodes",
@@ -14015,13 +15073,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/16"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 16 季"
       },
       {
         "id": "tv-37854-part-37854-season-17",
         "seasonNumber": 17,
         "title": "Dressrosa (2)",
-        "originalTitle": "ワンピース · 第 17 季",
+        "originalTitle": "ワンピース",
         "year": 2015,
         "releaseDate": "2015-05-17",
         "runtime": "56 Episodes",
@@ -14033,13 +15093,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/17"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 17 季"
       },
       {
         "id": "tv-37854-part-37854-season-18",
         "seasonNumber": 18,
         "title": "Zou",
-        "originalTitle": "ワンピース · 第 18 季",
+        "originalTitle": "ワンピース",
         "year": 2016,
         "releaseDate": "2016-07-09",
         "runtime": "55 Episodes",
@@ -14051,13 +15113,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/18"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 18 季"
       },
       {
         "id": "tv-37854-part-37854-season-19",
         "seasonNumber": 19,
         "title": "Whole Cake Island",
-        "originalTitle": "ワンピース · 第 19 季",
+        "originalTitle": "ワンピース",
         "year": 2017,
         "releaseDate": "2017-09-03",
         "runtime": "74 Episodes",
@@ -14069,13 +15133,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/19"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 19 季"
       },
       {
         "id": "tv-37854-part-37854-season-20",
         "seasonNumber": 20,
         "title": "Levely Arc",
-        "originalTitle": "ワンピース · 第 20 季",
+        "originalTitle": "ワンピース",
         "year": 2019,
         "releaseDate": "2019-03-31",
         "runtime": "14 Episodes",
@@ -14087,13 +15153,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/20"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 20 季"
       },
       {
         "id": "tv-37854-part-37854-season-21",
         "seasonNumber": 21,
         "title": "Wano Country Arc",
-        "originalTitle": "ワンピース · 第 21 季",
+        "originalTitle": "ワンピース",
         "year": 2019,
         "releaseDate": "2019-07-07",
         "runtime": "197 Episodes",
@@ -14105,13 +15173,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/21"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 21 季"
       },
       {
         "id": "tv-37854-part-37854-season-22",
         "seasonNumber": 22,
         "title": "Egghead",
-        "originalTitle": "ワンピース · 第 22 季",
+        "originalTitle": "ワンピース",
         "year": 2024,
         "releaseDate": "2024-01-07",
         "runtime": "67 Episodes",
@@ -14123,13 +15193,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/22"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 22 季"
       },
       {
         "id": "tv-37854-part-37854-season-23",
         "seasonNumber": 23,
         "title": "Elbaph",
-        "originalTitle": "ワンピース · 第 23 季",
+        "originalTitle": "ワンピース",
         "year": 2026,
         "releaseDate": "2026-04-05",
         "runtime": "26 Episodes",
@@ -14141,9 +15213,13 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/37854/season/23"
-        }
+        },
+        "chineseTitle": "海贼王",
+        "partLabel": "第 23 季"
       }
-    ]
+    ],
+    "chineseTitle": "海贼王",
+    "chineseDirector": "尾田荣一郎"
   },
   {
     "id": "tv-46260",
@@ -14170,7 +15246,7 @@
         "id": "tv-46260-part-46260-season-1",
         "seasonNumber": 1,
         "title": "Naruto · Season 1",
-        "originalTitle": "ナルト · 第 1 季",
+        "originalTitle": "ナルト",
         "year": 2002,
         "releaseDate": "2002-10-03",
         "runtime": "52 Episodes",
@@ -14182,13 +15258,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46260/season/1"
-        }
+        },
+        "chineseTitle": "火影忍者",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-46260-part-46260-season-2",
         "seasonNumber": 2,
         "title": "Naruto · Season 2",
-        "originalTitle": "ナルト · 第 2 季",
+        "originalTitle": "ナルト",
         "year": 2003,
         "releaseDate": "2003-10-08",
         "runtime": "52 Episodes",
@@ -14200,13 +15278,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46260/season/2"
-        }
+        },
+        "chineseTitle": "火影忍者",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-46260-part-46260-season-3",
         "seasonNumber": 3,
         "title": "Naruto · Season 3",
-        "originalTitle": "ナルト · 第 3 季",
+        "originalTitle": "ナルト",
         "year": 2004,
         "releaseDate": "2004-10-20",
         "runtime": "54 Episodes",
@@ -14218,13 +15298,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46260/season/3"
-        }
+        },
+        "chineseTitle": "火影忍者",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-46260-part-46260-season-4",
         "seasonNumber": 4,
         "title": "Naruto · Season 4",
-        "originalTitle": "ナルト · 第 4 季",
+        "originalTitle": "ナルト",
         "year": 2005,
         "releaseDate": "2005-11-09",
         "runtime": "62 Episodes",
@@ -14236,13 +15318,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46260/season/4"
-        }
+        },
+        "chineseTitle": "火影忍者",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-46260-part-31910-season-1",
         "seasonNumber": 1,
         "title": "Naruto Shippūden · Kazekage Rescue",
-        "originalTitle": "ナルト 疾風伝 · 第 1 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2007,
         "releaseDate": "2007-02-15",
         "runtime": "32 Episodes",
@@ -14254,13 +15338,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/1"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-46260-part-31910-season-2",
         "seasonNumber": 2,
         "title": "Naruto Shippūden · Long-Awaited Reunion",
-        "originalTitle": "ナルト 疾風伝 · 第 2 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2007,
         "releaseDate": "2007-11-08",
         "runtime": "21 Episodes",
@@ -14272,13 +15358,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/2"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-46260-part-31910-season-3",
         "seasonNumber": 3,
         "title": "Naruto Shippūden · Guardian Shinobi Twelve",
-        "originalTitle": "ナルト 疾風伝 · 第 3 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2008,
         "releaseDate": "2008-04-03",
         "runtime": "18 Episodes",
@@ -14290,13 +15378,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/3"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-46260-part-31910-season-4",
         "seasonNumber": 4,
         "title": "Naruto Shippūden · Immortal Devastators: Hidan and Kakuzu",
-        "originalTitle": "ナルト 疾風伝 · 第 4 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2008,
         "releaseDate": "2008-08-21",
         "runtime": "17 Episodes",
@@ -14308,13 +15398,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/4"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-46260-part-31910-season-5",
         "seasonNumber": 5,
         "title": "Naruto Shippūden · Three Tails' Appearance",
-        "originalTitle": "ナルト 疾風伝 · 第 5 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2008,
         "releaseDate": "2008-12-18",
         "runtime": "24 Episodes",
@@ -14326,13 +15418,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/5"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 5 季"
       },
       {
         "id": "tv-46260-part-31910-season-6",
         "seasonNumber": 6,
         "title": "Naruto Shippūden · Master's Prophecy and Vengeance",
-        "originalTitle": "ナルト 疾風伝 · 第 6 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2009,
         "releaseDate": "2009-06-11",
         "runtime": "31 Episodes",
@@ -14344,13 +15438,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/6"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 6 季"
       },
       {
         "id": "tv-46260-part-31910-season-7",
         "seasonNumber": 7,
         "title": "Naruto Shippūden · Six Tails Unleashed",
-        "originalTitle": "ナルト 疾風伝 · 第 7 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2010,
         "releaseDate": "2010-01-21",
         "runtime": "8 Episodes",
@@ -14362,13 +15458,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/7"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 7 季"
       },
       {
         "id": "tv-46260-part-31910-season-8",
         "seasonNumber": 8,
         "title": "Naruto Shippūden · Two Saviors",
-        "originalTitle": "ナルト 疾風伝 · 第 8 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2010,
         "releaseDate": "2010-03-25",
         "runtime": "24 Episodes",
@@ -14380,13 +15478,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/8"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 8 季"
       },
       {
         "id": "tv-46260-part-31910-season-9",
         "seasonNumber": 9,
         "title": "Naruto Shippūden · Past Arc: The Locus of the Leaf",
-        "originalTitle": "ナルト 疾風伝 · 第 9 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2010,
         "releaseDate": "2010-09-02",
         "runtime": "21 Episodes",
@@ -14398,13 +15498,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/9"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 9 季"
       },
       {
         "id": "tv-46260-part-31910-season-10",
         "seasonNumber": 10,
         "title": "Naruto Shippūden · The Five Kage Assemble",
-        "originalTitle": "ナルト 疾風伝 · 第 10 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2011,
         "releaseDate": "2011-02-10",
         "runtime": "25 Episodes",
@@ -14416,13 +15518,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/10"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 10 季"
       },
       {
         "id": "tv-46260-part-31910-season-11",
         "seasonNumber": 11,
         "title": "Naruto Shippūden · Paradise Life on a Boat",
-        "originalTitle": "ナルト 疾風伝 · 第 11 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2011,
         "releaseDate": "2011-07-28",
         "runtime": "21 Episodes",
@@ -14434,13 +15538,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/11"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 11 季"
       },
       {
         "id": "tv-46260-part-31910-season-12",
         "seasonNumber": 12,
         "title": "Naruto Shippūden · Nine-Tails Taming and Karmic Encounters",
-        "originalTitle": "ナルト 疾風伝 · 第 12 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2012,
         "releaseDate": "2012-01-05",
         "runtime": "33 Episodes",
@@ -14452,13 +15558,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/12"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 12 季"
       },
       {
         "id": "tv-46260-part-31910-season-13",
         "seasonNumber": 13,
         "title": "Naruto Shippūden · The Seven Ninja Swordsman",
-        "originalTitle": "ナルト 疾風伝 · 第 13 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2012,
         "releaseDate": "2012-08-23",
         "runtime": "20 Episodes",
@@ -14470,13 +15578,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/13"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 13 季"
       },
       {
         "id": "tv-46260-part-31910-season-14",
         "seasonNumber": 14,
         "title": "Naruto Shippūden · The Fourth Great Ninja War: Assailants From Afar",
-        "originalTitle": "ナルト 疾風伝 · 第 14 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2013,
         "releaseDate": "2013-01-17",
         "runtime": "25 Episodes",
@@ -14488,13 +15598,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/14"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 14 季"
       },
       {
         "id": "tv-46260-part-31910-season-15",
         "seasonNumber": 15,
         "title": "Naruto Shippūden · The Fourth Great Ninja War: Sasuke and Itachi",
-        "originalTitle": "ナルト 疾風伝 · 第 15 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2013,
         "releaseDate": "2013-07-18",
         "runtime": "28 Episodes",
@@ -14506,13 +15618,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/15"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 15 季"
       },
       {
         "id": "tv-46260-part-31910-season-16",
         "seasonNumber": 16,
         "title": "Naruto Shippūden · Kakashi: Shadow of the ANBU Black Ops",
-        "originalTitle": "ナルト 疾風伝 · 第 16 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2014,
         "releaseDate": "2014-02-06",
         "runtime": "13 Episodes",
@@ -14524,13 +15638,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/16"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 16 季"
       },
       {
         "id": "tv-46260-part-31910-season-17",
         "seasonNumber": 17,
         "title": "Naruto Shippūden · The Fourth Great Ninja War: Team 7 Returns",
-        "originalTitle": "ナルト 疾風伝 · 第 17 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2014,
         "releaseDate": "2014-05-15",
         "runtime": "11 Episodes",
@@ -14542,13 +15658,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/17"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 17 季"
       },
       {
         "id": "tv-46260-part-31910-season-18",
         "seasonNumber": 18,
         "title": "Naruto Shippūden · The Fourth Great Ninja War: Obito Uchiha",
-        "originalTitle": "ナルト 疾風伝 · 第 18 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2014,
         "releaseDate": "2014-08-21",
         "runtime": "21 Episodes",
@@ -14560,13 +15678,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/18"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 18 季"
       },
       {
         "id": "tv-46260-part-31910-season-19",
         "seasonNumber": 19,
         "title": "Naruto Shippūden · In Naruto's Footsteps: The Friends' Path",
-        "originalTitle": "ナルト 疾風伝 · 第 19 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2015,
         "releaseDate": "2015-01-08",
         "runtime": "20 Episodes",
@@ -14578,13 +15698,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/19"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 19 季"
       },
       {
         "id": "tv-46260-part-31910-season-20",
         "seasonNumber": 20,
         "title": "Naruto Shippūden · Infinite Tsukuyomi: The Invocation",
-        "originalTitle": "ナルト 疾風伝 · 第 20 季",
+        "originalTitle": "ナルト 疾風伝",
         "year": 2015,
         "releaseDate": "2015-05-28",
         "runtime": "87 Episodes",
@@ -14596,9 +15718,13 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/31910/season/20"
-        }
+        },
+        "chineseTitle": "火影忍者：疾风传",
+        "partLabel": "第 20 季"
       }
-    ]
+    ],
+    "chineseTitle": "火影忍者",
+    "chineseDirector": "岸本齐史"
   },
   {
     "id": "tv-46261",
@@ -14625,7 +15751,7 @@
         "id": "tv-46261-part-46261-season-1",
         "seasonNumber": 1,
         "title": "Season 1",
-        "originalTitle": "FAIRY TAIL · 第 1 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2009,
         "releaseDate": "2009-10-12",
         "runtime": "48 Episodes",
@@ -14637,13 +15763,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/1"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-46261-part-46261-season-2",
         "seasonNumber": 2,
         "title": "Season 2",
-        "originalTitle": "FAIRY TAIL · 第 2 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2010,
         "releaseDate": "2010-10-11",
         "runtime": "48 Episodes",
@@ -14655,13 +15783,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/2"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 2 季"
       },
       {
         "id": "tv-46261-part-46261-season-3",
         "seasonNumber": 3,
         "title": "Season 3",
-        "originalTitle": "FAIRY TAIL · 第 3 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2011,
         "releaseDate": "2011-09-17",
         "runtime": "54 Episodes",
@@ -14673,13 +15803,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/3"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 3 季"
       },
       {
         "id": "tv-46261-part-46261-season-4",
         "seasonNumber": 4,
         "title": "Season 4",
-        "originalTitle": "FAIRY TAIL · 第 4 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2012,
         "releaseDate": "2012-10-06",
         "runtime": "25 Episodes",
@@ -14691,13 +15823,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/4"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 4 季"
       },
       {
         "id": "tv-46261-part-46261-season-5",
         "seasonNumber": 5,
         "title": "Season 5",
-        "originalTitle": "FAIRY TAIL · 第 5 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2014,
         "releaseDate": "2014-04-05",
         "runtime": "51 Episodes",
@@ -14709,13 +15843,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/5"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 5 季"
       },
       {
         "id": "tv-46261-part-46261-season-6",
         "seasonNumber": 6,
         "title": "Season 6",
-        "originalTitle": "FAIRY TAIL · 第 6 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2015,
         "releaseDate": "2015-04-04",
         "runtime": "39 Episodes",
@@ -14727,13 +15863,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/6"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 6 季"
       },
       {
         "id": "tv-46261-part-46261-season-7",
         "seasonNumber": 7,
         "title": "FAIRY TAIL ZERØ",
-        "originalTitle": "FAIRY TAIL · 第 7 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2016,
         "releaseDate": "2016-01-09",
         "runtime": "12 Episodes",
@@ -14745,13 +15883,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/7"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 7 季"
       },
       {
         "id": "tv-46261-part-46261-season-8",
         "seasonNumber": 8,
         "title": "Final Series",
-        "originalTitle": "FAIRY TAIL · 第 8 季",
+        "originalTitle": "FAIRY TAIL",
         "year": 2018,
         "releaseDate": "2018-10-07",
         "runtime": "51 Episodes",
@@ -14763,13 +15903,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/46261/season/8"
-        }
+        },
+        "chineseTitle": "妖精的尾巴",
+        "partLabel": "第 8 季"
       },
       {
         "id": "tv-46261-part-248947-season-1",
         "seasonNumber": 1,
         "title": "100 Years Quest",
-        "originalTitle": "FAIRY TAIL 100年クエスト · 第 1 季",
+        "originalTitle": "FAIRY TAIL 100年クエスト",
         "year": 2024,
         "releaseDate": "2024-07-07",
         "runtime": "25 Episodes",
@@ -14781,9 +15923,13 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/248947/season/1"
-        }
+        },
+        "chineseTitle": "妖精的尾巴 百年任务",
+        "partLabel": "第 1 季"
       }
-    ]
+    ],
+    "chineseTitle": "妖精的尾巴",
+    "chineseDirector": ""
   },
   {
     "id": "tv-30984",
@@ -14810,7 +15956,7 @@
         "id": "tv-30984-part-30984-season-1",
         "seasonNumber": 1,
         "title": "Bleach",
-        "originalTitle": "BLEACH · 第 1 季",
+        "originalTitle": "BLEACH",
         "year": 2004,
         "releaseDate": "2004-10-05",
         "runtime": "366 Episodes",
@@ -14822,13 +15968,15 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/30984/season/1"
-        }
+        },
+        "chineseTitle": "死神",
+        "partLabel": "第 1 季"
       },
       {
         "id": "tv-30984-part-30984-season-2",
         "seasonNumber": 2,
         "title": "Thousand-Year Blood War",
-        "originalTitle": "BLEACH · 第 2 季",
+        "originalTitle": "BLEACH",
         "year": 2022,
         "releaseDate": "2022-10-11",
         "runtime": "50 Episodes",
@@ -14840,8 +15988,12 @@
         "externalLink": {
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/30984/season/2"
-        }
+        },
+        "chineseTitle": "死神",
+        "partLabel": "第 2 季"
       }
-    ]
+    ],
+    "chineseTitle": "死神",
+    "chineseDirector": "久保带人"
   }
 ]

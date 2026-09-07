@@ -7,10 +7,13 @@ export interface MediaItem {
   hidden?: boolean;
   id: string;
   title: string;                 // English display title
+  chineseTitle?: string;
+  partLabel?: string;
   originalTitle?: string;        // Original native title (e.g. "東京物語")
   type: 'film' | 'series';       // 'film' or 'series'
   director: string;              // Director or Showrunner
   creditRole?: string;          // Actual role of the displayed credit
+  chineseDirector?: string;
   originalDirector?: string;     // Native director name (e.g. "岩井俊二", "小津安二郎")
   year: number | string;         // Start year (e.g. 1953, 2015)
   span?: string;                 // Year span for series (e.g. "2015–2022")
