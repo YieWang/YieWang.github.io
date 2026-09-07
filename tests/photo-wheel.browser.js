@@ -1,5 +1,23 @@
 // Open the built photography page, then pass this function to playwright-cli run-code.
 async (page) => {
+  // The initial thumbnails must render even before the React bundle arrives.
+  const coldContext = await page.context().browser().newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } });
+  try {
+    const cold = await coldContext.newPage();
+    await cold.goto(page.url());
+    const initial = await cold.locator('[data-rwp-option]').evaluateAll(items => items
+      .filter(item => getComputedStyle(item).visibility === 'visible')
+      .map(item => Number(item.dataset.index)));
+    if (JSON.stringify(initial) !== '[0,1,2,3]') throw Error(`Missing initial thumbnails: ${JSON.stringify(initial)}`);
+    for (const img of await cold.locator('[data-rwp-option][style*="visibility:visible"] img').all()) {
+      await img.evaluate(img => img.decode());
+    }
+    await cold.screenshot({ path: 'output/playwright/photo-wheel-before-js-desktop.png' });
+    await cold.setViewportSize({ width: 390, height: 844 });
+    await cold.screenshot({ path: 'output/playwright/photo-wheel-before-js-mobile.png' });
+  } finally {
+    await coldContext.close();
+  }
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.reload();
   const picker = page.locator('.photo-wheel-scroll');

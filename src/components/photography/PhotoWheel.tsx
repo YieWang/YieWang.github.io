@@ -20,6 +20,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
   const wheel = useRef<HTMLUListElement>(null);
   const highlight = useRef<HTMLUListElement>(null);
   const selected = useRef(value);
+  const initialIndex = useRef(Math.max(0, options.findIndex(option => option.value === value))).current;
   const notify = useRef(onValueChange);
   notify.current = onValueChange;
   const drag = useRef<{ y: number; top: number; lastY: number; time: number; speed: number; moved: boolean } | null>(null);
@@ -140,16 +141,16 @@ export default function PhotoWheel({ options, value, onValueChange }: {
 
   return (
     <div data-rwp style={{ height }}>
-      <ul ref={wheel} data-rwp-options aria-hidden="true" style={{ pointerEvents: 'none' }}>
+      <ul ref={wheel} data-rwp-options aria-hidden="true" style={{ pointerEvents: 'none', transform: `translateZ(${-radius}px) rotateX(${initialIndex * itemAngle}deg)` }}>
         {options.map((option, index) => (
           <li key={option.value} data-rwp-option data-index={index} className="photo-wheel-option"
-            style={{ top: -itemHeight / 2, height: itemHeight, lineHeight: `${itemHeight}px`, visibility: 'hidden', transform: `rotateX(${-index * itemAngle}deg) translateZ(${radius}px)` }}>
+            style={{ top: -itemHeight / 2, height: itemHeight, lineHeight: `${itemHeight}px`, visibility: Math.abs(index - initialIndex) < 4 ? 'visible' : 'hidden', transform: `rotateX(${-index * itemAngle}deg) translateZ(${radius}px)` }}>
             {option.label}
           </li>
         ))}
       </ul>
       <div data-rwp-highlight-wrapper className="photo-wheel-highlight-wrapper" aria-hidden="true" style={{ height: itemHeight, lineHeight: `${itemHeight}px` }}>
-        <ul ref={highlight} data-rwp-highlight-list>
+        <ul ref={highlight} data-rwp-highlight-list style={{ transform: `translateY(${-initialIndex * itemHeight}px)` }}>
           {options.map(option => <li key={option.value} data-rwp-highlight-item className="photo-wheel-highlight-item" style={{ height: itemHeight }}>{option.label}</li>)}
         </ul>
       </div>
