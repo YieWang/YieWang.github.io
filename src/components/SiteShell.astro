@@ -2,6 +2,7 @@
 import Header from './Header.astro';
 import LiteratureBook from './LiteratureBook.astro';
 import { allPhotos } from '../data/photography';
+import { allCinemaItems } from '../data/cinema';
 
 import { profileData } from '../data/profile';
 import { notesData, expositionData, templateData } from '../data/mathematics';
@@ -14,7 +15,9 @@ interface Props {
 const { initialSection = 'home' } = Astro.props;
 
 const archivePrint = allPhotos.find(photo => photo.id === '202408-tokyo-10')!;
-const lakePrint = allPhotos.find(photo => photo.id === '202412-hangzhou-west-lake-01')!;
+const lakePrint = allPhotos.find(photo => photo.id === '202303-hangzhou-west-lake-01')!;
+const cinemaFrames = ['film-1298624', 'film-1291832', 'film-1296141', 'film-1296339']
+  .map(id => allCinemaItems.find(item => item.id === id)!);
 
 
 const racketOutline = 'M80 6 C123 6 152 39 152 82 C152 116 134 141 99 150 L94 156 C91 177 93 203 97 223 Q99 229 90 229 L70 229 Q61 229 63 223 C67 203 69 177 66 156 L61 150 C26 141 8 116 8 82 C8 39 37 6 80 6 Z';
@@ -320,7 +323,7 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
               </div>
               <div class="photo-primary">
                 <img src={lakePrint.thumbnailUrl} alt="" width={500} loading="lazy" decoding="async" />
-                <span>WEST LAKE · GOLDEN LEAVES</span>
+                <span>WEST LAKE · MORNING MIST</span>
               </div>
             </div>
           </a>
@@ -332,7 +335,7 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
             <div class="cinema-scene" aria-hidden="true">
               <div class="cinema-strip">
                 <div class="cinema-track">
-                  {Array.from({ length: 12 }, () => <div class="cinema-frame"><span></span></div>)}
+                  {[...cinemaFrames, ...cinemaFrames].map(film => <div class="cinema-frame"><img src={film.posterUrl} alt="" width="82" height="108" loading="lazy" decoding="async" /></div>)}
                 </div>
                 <div class="cinema-glow"></div>
               </div>
@@ -738,12 +741,12 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
   /* Flat film transport with a soft, slowly varying projector glow. */
   .cinema-scene { position: relative; width: 380px; height: 250px; translate: -12px 0; display: flex; align-items: center; justify-content: center; }
   .cinema-strip { position: relative; flex-shrink: 0; width: 400px; height: 140px; overflow: hidden; border-radius: 1px; box-shadow: 0 8px 18px #32271b18; }
-  .cinema-track { position: relative; display: flex; width: max-content; height: 140px; padding: 16px 0; background: #25231f; animation: cinema-transport 24s linear infinite paused; }
+  .cinema-track { position: relative; display: flex; width: max-content; height: 140px; padding: 16px 0; background: #25231f; animation: cinema-transport 16s linear infinite paused; }
   .cinema-track::before, .cinema-track::after { content: ''; position: absolute; left: 0; right: 0; height: 7px; background: repeating-linear-gradient(to right, transparent 0 4px, #faf9f5 4px 11px, transparent 11px 20px); }
   .cinema-track::before { top: 4px; }
   .cinema-track::after { bottom: 4px; }
   .cinema-frame { flex: 0 0 100px; padding: 0 9px; }
-  .cinema-frame span { display: block; width: 82px; height: 108px; background: linear-gradient(135deg, #756b5e, #302d29); }
+  .cinema-frame img { display: block; width: 82px; height: 108px; object-fit: cover; }
   .cinema-glow { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 12% 48%, #ffe0a9 0%, #f2be6caa 28%, transparent 72%), linear-gradient(105deg, transparent 25%, #fff8df88 49%, transparent 75%); mix-blend-mode: screen; opacity: 0.3; animation: cinema-lamplight 4.3s linear infinite paused; }
   .is-expanded .cinema-track, .is-expanded .cinema-glow { animation-play-state: running; }
   @keyframes cinema-transport { to { transform: translateX(-50%); } }

@@ -1,4 +1,5 @@
 import importedMusic from './music-import.json';
+import sortNames from './music-sort-names.json';
 
 export interface MusicTrack {
   id?: string;
@@ -43,5 +44,9 @@ export interface MusicArtist {
   albumIds: string[];
 }
 
-export const musicArtists = importedMusic.artists as MusicArtist[];
+// ponytail: static romanizations cover current artists; extend the map when adding non-Latin names.
+const artistOrder = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
+const artistSortName = (artist: MusicArtist) => (sortNames as Record<string, string>)[artist.name] || artist.name;
+export const musicArtists = [...importedMusic.artists as MusicArtist[]]
+  .sort((a, b) => artistOrder.compare(artistSortName(a), artistSortName(b)) || artistOrder.compare(a.name, b.name));
 export const musicAlbums = importedMusic.albums as MusicAlbum[];

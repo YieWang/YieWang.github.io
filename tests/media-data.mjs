@@ -78,3 +78,17 @@ const page = read('src/pages/marginalia/music/index.astro');
 assert.ok(page.includes('const displayTracks = album.tracks;'));
 assert.ok(!page.includes('album.tracks.filter('));
 console.log('Media source coverage, series grouping, watch dates, poster mappings and HTML escaping: passed');
+
+// Shared export must interleave Chinese pinyin and Latin names for both page columns.
+const sortedContext = { exports: {}, require: name => ({ default: json('src/data/' + name.replace('./', '')) }) };
+vm.runInNewContext(ts.transpile(read('src/data/music.ts'), { module: ts.ModuleKind.CommonJS }), sortedContext);
+const sortedNames = Array.from(sortedContext.exports.musicArtists, a => a.name);
+assert.equal(sortedNames.length, music.artists.length);
+assert.ok(sortedNames.indexOf('陈奕迅') < sortedNames.indexOf('Coldplay'));
+assert.ok(sortedNames.indexOf('林俊杰') < sortedNames.indexOf('Linked Horizon'));
+assert.ok(sortedNames.indexOf('周杰伦') > sortedNames.indexOf('Queen'));
+const keys = json('src/data/music-sort-names.json');
+for (const name of sortedNames.filter(name => /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(name))) assert.ok(keys[name], `Missing romanization: ${name}`);
+const collator = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
+for (let i = 1; i < sortedNames.length; i++) assert.ok(collator.compare(keys[sortedNames[i-1]] || sortedNames[i-1], keys[sortedNames[i]] || sortedNames[i]) <= 0);
+console.log('Mixed pinyin and Latin artist ordering: passed');
