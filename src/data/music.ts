@@ -1,4 +1,9 @@
+import importedMusic from './music-import.json';
+
 export interface MusicTrack {
+  id?: string;
+  source?: 'apple-music' | 'netease';
+  discNo?: number;
   trackNo: number;
   title: string;
   duration: string;
@@ -12,7 +17,9 @@ export interface MusicAlbum {
   artistId: string;
   artistName: string;
   artistDisplayName: string; // 严格原名
-  year: number;
+  year: number | string;
+  source?: 'apple-music' | 'netease';
+  metadataIncomplete?: boolean;
   genre?: string;
   label?: string;
   catalogNo?: string;
@@ -35,5 +42,5 @@ export interface MusicArtist {
   albumIds: string[];
 }
 
-export const musicArtists: MusicArtist[] = [];
-export const musicAlbums: MusicAlbum[] = [];
+export const musicArtists = importedMusic.artists as MusicArtist[];
+export const musicAlbums = importedMusic.albums as MusicAlbum[];

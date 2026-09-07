@@ -1,3 +1,5 @@
+import importedCinema from './cinema-import.json';
+
 export interface MediaItem {
   id: string;
   title: string;                 // English display title
@@ -18,9 +20,11 @@ export interface MediaItem {
   firstWatched?: string;         // First watch date e.g. "2019.04"
   rewatched?: string;            // Rewatch dates e.g. "2021.04, 2024.04"
   externalLink: {
-    platform: 'IMDb';
+    platform: 'IMDb' | 'Douban';
     url: string;
   };
+  tmdbId?: number;
+  watchedEntries?: { doubanId: string; title: string; firstWatched: string; rating: string; comment: string }[];
   review?: {
     rating: string;              // e.g. "5.0 / 5.0"
     date?: string;               // e.g. "2026.02"
@@ -30,6 +34,7 @@ export interface MediaItem {
   };
 }
 
-export const cinemaFilms: MediaItem[] = [];
-export const cinemaSeries: MediaItem[] = [];
+const importedItems = importedCinema as MediaItem[];
+export const cinemaFilms = importedItems.filter(item => item.type === 'film');
+export const cinemaSeries = importedItems.filter(item => item.type === 'series');
 export const allCinemaItems: MediaItem[] = [...cinemaFilms, ...cinemaSeries];

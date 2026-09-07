@@ -9,7 +9,7 @@ const { artists } = Astro.props;
     {artists.map((artist, index) => (
       <a href={`#section-${artist.id}`} class="artist-row" data-artist={artist.id}
         aria-current={index === 0 ? 'true' : undefined}>
-        <img src={artist.avatarUrl} alt="" width="48" height="48" loading="lazy" class:list={{ 'band-portrait': artist.id === 'radiohead' }} />
+        {artist.avatarUrl ? <img src={artist.avatarUrl} alt="" width="48" height="48" loading="lazy" /> : <span class="artist-initial" aria-hidden="true">{Array.from(artist.displayName)[0]}</span>}
         <span>{artist.displayName}</span>
       </a>
     ))}
@@ -22,14 +22,14 @@ const { artists } = Astro.props;
   #artist-wheel::-webkit-scrollbar { display: none; }
   .artist-row { height: 72px; display: flex; align-items: center; gap: 12px; padding: 0 6px; scroll-snap-align: center; color: #777; text-decoration: none; opacity: .35; transition: opacity 220ms, color 220ms; cursor: default; }
   .artist-row img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .artist-row img.band-portrait { object-fit: contain; background: #eee; }
+  .artist-initial { width: 48px; height: 48px; border-radius: 50%; background: #eee; display: grid; place-items: center; flex-shrink: 0; }
   .artist-row span { font-size: .78rem; line-height: 1.4; font-family: 'Montserrat', 'PingFang SC', sans-serif; }
   .artist-row[aria-current] { opacity: 1; color: #111; font-weight: 700; }
   .artist-row:focus-visible { outline: 1px solid #aaa; outline-offset: -2px; }
   @media (max-width: 639px) {
     .artist-rail { left: 6px; }
     .artist-row { gap: 7px; padding-inline: 2px; }
-    .artist-row img { width: 34px; height: 34px; }
+    .artist-row img, .artist-initial { width: 34px; height: 34px; }
     .artist-row span { font-size: .65rem; }
   }
 </style>

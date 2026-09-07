@@ -63,7 +63,7 @@ const artistGroups = musicArtists.map(artist => {
                           <div class="w-[64%] h-[64%] rounded-full border border-white/[0.05] flex items-center justify-center">
                             <!-- Center Vinyl Label -->
                             <div class="w-[38%] h-[38%] rounded-full bg-[#202022] border border-black/40 overflow-hidden relative flex items-center justify-center">
-                              <img src={album.coverUrl} alt="" class="w-full h-full object-cover scale-150 blur-[0.4px] opacity-85" />
+                              {album.coverUrl && <img src={album.coverUrl} alt="" loading="lazy" class="w-full h-full object-cover scale-150 blur-[0.4px] opacity-85" />}
                               <!-- Center Spindle Hole -->
                               <div class="w-2 h-2 rounded-full bg-[#0E0E10] border border-white/20 absolute z-10"></div>
                             </div>
@@ -79,12 +79,12 @@ const artistGroups = musicArtists.map(artist => {
                       <!-- Right Opening Shadow -->
                       <div class="absolute right-0 top-0 bottom-0 w-[3px] bg-gradient-to-l from-black/15 to-transparent z-20 pointer-events-none"></div>
 
-                      <img
+                      {album.coverUrl ? <img
                         src={album.coverUrl}
                         alt={album.title}
                         loading="lazy"
                         class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
-                      />
+                      /> : <span class="w-full h-full flex items-center justify-center p-4 text-center text-sm text-[#777777]">{album.title}</span>}
                     </div>
 
                   </div>
@@ -144,6 +144,7 @@ const artistGroups = musicArtists.map(artist => {
 
 <script>
   import type { MusicAlbum } from '../../../data/music';
+  import { escapeHtml } from '../../../lib/html';
 
   const musicCards = document.querySelectorAll<HTMLElement>('.music-card');
   const modalBackdrop = document.getElementById('music-modal-backdrop');
@@ -163,9 +164,8 @@ const artistGroups = musicArtists.map(artist => {
       closeTimer = null;
     }
 
-    // Filter favorite tracks
-    const favTracks = album.tracks.filter(t => t.isFavorite || t.note);
-    const displayTracks = favTracks.length > 0 ? favTracks : album.tracks;
+    // Every collected track is shown, including albums with a single collected song.
+    const displayTracks = album.tracks;
 
     // Track rows with clean SVG Chevron toggle, COLLAPSED by default
     const favoriteTracksHtml = displayTracks.map((t, idx) => {
@@ -177,12 +177,12 @@ const artistGroups = musicArtists.map(artist => {
             data-track-index="${idx}"
           >
             <div class="flex items-baseline gap-2.5 min-w-0">
-              <span class="font-mono text-[0.70rem] text-[#888888] w-4 shrink-0">${String(t.trackNo).padStart(2, '0')}</span>
-              <span class="font-semibold text-[#1E1E1E] tracking-wide truncate group-hover:text-black">${t.title}</span>
+              <span class="font-mono text-[0.70rem] text-[#888888] w-4 shrink-0">${t.trackNo ? String(t.trackNo).padStart(2, '0') : '—'}</span>
+              <span class="font-semibold text-[#1E1E1E] tracking-wide truncate group-hover:text-black">${escapeHtml(t.title)}</span>
             </div>
             
             <div class="flex items-center gap-3 shrink-0">
-              <span class="font-mono text-[0.70rem] sm:text-[0.74rem] text-[#888888]">${t.duration}</span>
+              <span class="font-mono text-[0.70rem] sm:text-[0.74rem] text-[#888888]">${escapeHtml(t.duration)}</span>
               ${hasNote ? `
                 <button
                   type="button"
@@ -205,7 +205,7 @@ const artistGroups = musicArtists.map(artist => {
               class="track-note-container hidden pt-1.5 pb-1 pl-6 pr-2 text-[0.82rem] sm:text-[0.85rem] text-[#444444] leading-[1.85] text-justify font-normal"
               style="text-indent: 1.5em;"
             >
-              ${t.note}
+              ${escapeHtml(t.note)}
             </div>
           ` : ''}
         </div>
@@ -219,7 +219,8 @@ const artistGroups = musicArtists.map(artist => {
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words"
           style="font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;"
         >
-          ${album.title}
+          ${escapeHtml(album.title)}
+          ${album.metadataIncomplete ? '<span class="block mt-1 text-xs font-normal text-[#888888]">Album not specified</span>' : ''}
         </h2>
       </div>
 
@@ -233,7 +234,7 @@ const artistGroups = musicArtists.map(artist => {
             <!-- 1:1 Real Cover Frame -->
             <div class="w-[85px] sm:w-full aspect-square bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
               <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
-              <img src="${album.coverUrl}" alt="${album.title}" class="w-full h-full object-cover" />
+              ${album.coverUrl ? `<img src="${escapeHtml(album.coverUrl)}" alt="${escapeHtml(album.title)}" class="w-full h-full object-cover" />` : ''}
             </div>
 
             <!-- Clean Key Metadata: Artist & Year Only -->
@@ -241,14 +242,14 @@ const artistGroups = musicArtists.map(artist => {
               <div class="space-y-0.5 min-w-0">
                 <div class="text-[#999999] uppercase text-[0.60rem] tracking-wider font-mono">ARTIST</div>
                 <div class="text-black font-medium text-[0.82rem] sm:text-[0.86rem] truncate">
-                  ${album.artistDisplayName}
+                  ${escapeHtml(album.artistDisplayName)}
                 </div>
               </div>
 
               <div class="space-y-0.5 min-w-0">
                 <div class="text-[#999999] uppercase text-[0.60rem] tracking-wider font-mono">RELEASED</div>
                 <div class="text-black font-mono text-[0.80rem] sm:text-[0.84rem]">
-                  ${album.year}
+                  ${escapeHtml(album.year || '—')}
                 </div>
               </div>
             </div>

@@ -180,6 +180,12 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
       </section>
 
     </main>
+    <aside aria-label="Credits" class="mt-16 text-[0.65rem] leading-relaxed text-[#888888]">
+      <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.themoviedb.org/assets/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB" width="80" height="11" loading="lazy" class="mb-2" />
+      </a>
+      <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+    </aside>
   </div>
 
   <!-- SCHEME A MODAL / LIGHTBOX (Pure White, Two-Column Curatorial Studio) -->
@@ -201,6 +207,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
 
 <script>
   import type { MediaItem } from '../../../data/cinema';
+  import { escapeHtml } from '../../../lib/html';
 
   const cinemaCards = document.querySelectorAll<HTMLElement>('.cinema-card');
   const modalBackdrop = document.getElementById('cinema-modal-backdrop');
@@ -239,15 +246,15 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
       const fullText = item.review.content.trim();
       const paragraphs = fullText.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
 
-      if (paragraphs.length > 1 || fullText.length > 220) {
+      if (paragraphs.length > 1) {
         isLongReview = true;
-        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${paragraphs[0]}</p>`;
+        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${escapeHtml(paragraphs[0])}</p>`;
         remainingHtml = paragraphs
           .slice(1)
-          .map(p => `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line pt-3.5" style="text-indent: 2em;">${p}</p>`)
+          .map(p => `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line pt-3.5" style="text-indent: 2em;">${escapeHtml(p)}</p>`)
           .join('');
       } else {
-        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${fullText}</p>`;
+        previewHtml = `<p class="leading-[1.9] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${escapeHtml(fullText)}</p>`;
       }
     }
 
@@ -258,8 +265,8 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words flex items-baseline gap-2.5 flex-wrap"
           style="font-family: 'Josefin Sans', sans-serif;"
         >
-          <span>${item.title}</span>
-          ${item.originalTitle ? `<span class="text-[0.88rem] font-normal text-[#888888]">${item.originalTitle}</span>` : ''}
+          <span>${escapeHtml(item.title)}</span>
+          ${item.originalTitle ? `<span class="text-[0.88rem] font-normal text-[#888888]">${escapeHtml(item.originalTitle)}</span>` : ''}
         </h2>
       </div>
 
@@ -271,7 +278,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
           <div class="flex sm:flex-col items-center sm:items-stretch gap-3 sm:space-y-3">
             <!-- 2:3 Poster Frame -->
             <div class="w-[85px] sm:w-full aspect-[2/3] bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0">
-              <img src="${item.posterUrl}" alt="${item.title}" class="w-full h-full object-cover" />
+              <img src="${escapeHtml(item.posterUrl)}" alt="${escapeHtml(item.title)}" class="w-full h-full object-cover" />
             </div>
 
             <!-- Personal Rating (Applies to all works, with or without full essay) -->
@@ -279,7 +286,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
               rating
                 ? `
               <div class="pt-0 sm:pt-1 text-center font-mono space-y-0.5">
-                <div class="text-[1.05rem] sm:text-[1.12rem] font-bold text-black tracking-tight">${rating}</div>
+                <div class="text-[1.05rem] sm:text-[1.12rem] font-bold text-black tracking-tight">${escapeHtml(rating)}</div>
                 <div class="text-[0.54rem] sm:text-[0.56rem] text-[#888888] tracking-widest uppercase font-mono">PERSONAL RATING</div>
               </div>
             `
@@ -290,12 +297,12 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
           <!-- IMDb Link Pinned at Bottom of Left Column (Minimal text link without card box or divider line) -->
           <div class="pt-2 sm:pt-4 sm:mt-auto w-auto sm:w-full text-center">
             <a
-              href="${item.externalLink.url}"
+              href="${escapeHtml(item.externalLink.url)}"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center text-[0.66rem] sm:text-[0.70rem] font-medium text-[#777777] hover:text-black tracking-[0.14rem] uppercase transition-colors whitespace-nowrap"
             >
-              <span>VIEW ON IMDB</span>
+              <span>VIEW ON ${escapeHtml(item.externalLink.platform)}</span>
               <span class="ml-1" aria-hidden="true">↗</span>
             </a>
           </div>
@@ -311,8 +318,8 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
                 ${item.type === 'series' ? 'CREATOR' : 'DIRECTED BY'}
               </div>
               <div class="text-black font-medium text-[0.82rem] sm:text-[0.85rem] break-words">
-                <span>${item.director}</span>
-                ${item.originalDirector && item.originalDirector !== item.director ? `<span class="text-[#777777] font-normal text-[0.78rem] ml-1.5 font-sans">(${item.originalDirector})</span>` : ''}
+                <span>${escapeHtml(item.director)}</span>
+                ${item.originalDirector && item.originalDirector !== item.director ? `<span class="text-[#777777] font-normal text-[0.78rem] ml-1.5 font-sans">(${escapeHtml(item.originalDirector)})</span>` : ''}
               </div>
             </div>
             <div class="space-y-0.5 min-w-0">
@@ -320,7 +327,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
                 RELEASE & SPECS
               </div>
               <div class="text-black font-mono text-[0.80rem] sm:text-[0.84rem] leading-snug break-words">
-                ${specsLine}
+                ${escapeHtml(specsLine)}
               </div>
             </div>
             ${
@@ -331,7 +338,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
                 FIRST WATCHED
               </div>
               <div class="text-black font-mono text-[0.82rem] sm:text-[0.85rem] leading-snug">
-                ${item.firstWatched}
+                ${escapeHtml(item.firstWatched)}
               </div>
             </div>
             `
@@ -345,7 +352,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
                 REWATCHED
               </div>
               <div class="text-black font-mono text-[0.82rem] sm:text-[0.85rem] leading-snug">
-                ${item.rewatched}
+                ${escapeHtml(item.rewatched)}
               </div>
             </div>
             `
@@ -359,6 +366,12 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
             class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2.5 pt-3 space-y-3.5"
             style="scrollbar-gutter: stable;"
           >
+            ${item.type === 'series' ? (item.watchedEntries || []).map(entry => `
+              <div class="watched-entry border-b border-[#F0F0F0] pb-3 space-y-1">
+                <div class="text-[0.84rem] font-medium">${escapeHtml(entry.title)}</div>
+                <div class="text-[0.7rem] font-mono text-[#888888]">${escapeHtml(entry.firstWatched)}${entry.rating ? ` · ${escapeHtml(entry.rating)}` : ''}</div>
+                ${entry.comment ? `<p class="text-[0.84rem] leading-relaxed whitespace-pre-line">${escapeHtml(entry.comment)}</p>` : ''}
+              </div>`).join('') : ''}
             ${
               hasReview
                 ? `
@@ -367,7 +380,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
                 item.review?.quote
                   ? `
                 <blockquote class="italic text-[0.82rem] sm:text-[0.86rem] text-[#333333] font-light pl-3 border-l-2 border-black/80 my-2">
-                  ${item.review.quote}
+                  ${escapeHtml(item.review.quote)}
                 </blockquote>
               `
                   : ''
@@ -379,7 +392,7 @@ const sortedSeries = [...cinemaSeries].sort((a, b) => (b.review ? 1 : 0) - (a.re
                   item.review?.date
                     ? `
                   <div class="text-[0.62rem] font-mono uppercase tracking-[0.14rem] text-[#888888]">
-                    ${item.review.date}
+                    ${escapeHtml(item.review.date)}
                   </div>
                 `
                     : ''

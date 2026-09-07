@@ -4,7 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import vm from 'node:vm';
 import ts from 'typescript';
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
-for (const file of ['music', 'cinema', 'literature']) {
+for (const file of ['literature']) {
   const context = { exports: {} };
   vm.runInNewContext(ts.transpile(read(`src/data/${file}.ts`), { module: ts.ModuleKind.CommonJS }), context);
   for (const collection of Object.values(context.exports)) assert.equal(collection.length, 0, `${file} must contain no demo records`);
@@ -18,4 +18,4 @@ for (const name of ['highlight', 'jump']) {
   const end = rail.indexOf('\n  }', start) + 4;
   vm.runInNewContext(ts.transpile(`const rows = []; const sections = []; let selected = -1;\n${rail.slice(start, end)}\n${name}(0);`));
 }
-console.log('Empty collections, empty artist navigation and external assets: passed');
+console.log('No demo literature, safe empty artist navigation and external assets: passed');
