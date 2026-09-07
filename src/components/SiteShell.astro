@@ -15,8 +15,12 @@ interface Props {
 
 const { initialSection = 'home' } = Astro.props;
 
-const archivePrint = allPhotos.find(photo => photo.id === '202408-tokyo-10')!;
-const lakePrint = allPhotos.find(photo => photo.id === '202303-hangzhou-west-lake-01')!;
+const photographyPrints = [
+  { id: '202408-tokyo-10', caption: 'TOKYO · FIREWORKS' },
+  { id: '202408-tokyo-22', caption: 'TOKYO · STREET' },
+  { id: '202412-hangzhou-west-lake-06', caption: 'WEST LAKE · GOLD' },
+  { id: '202303-hangzhou-west-lake-01', caption: 'WEST LAKE · MORNING MIST' },
+].map(print => ({ ...print, photo: allPhotos.find(photo => photo.id === print.id)! }));
 const musicCover = musicAlbums.find(album => album.id === 'apple-album-3e54067bb25e92d0')!;
 const cinemaFrames = ['film-1298624', 'film-1291832', 'film-1296141', 'film-1296339']
   .map(id => allCinemaItems.find(item => item.id === id)!);
@@ -315,18 +319,16 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
       <!-- Right Column: Interactive Stage (Distinct Physical Mediums, Elevated Level with Top Title) -->
       <div class="marginalia-stage sm:col-span-8 relative min-h-[250px] sm:min-h-[216px] flex items-start justify-center">
         
-        <!-- Photography: two archival prints. -->
+        <!-- Photography: four original-format prints, spread in sequence. -->
         <div id="stage-panel-photography" class="stage-panel" data-active="true" aria-hidden="false">
           <a href="/marginalia/photography" aria-label="Explore Photography" class="stage-art-link">
             <div class="photo-container" aria-hidden="true">
-              <div class="photo-secondary">
-                <img src={archivePrint.thumbnailUrl} alt="" width={archivePrint.width} height={archivePrint.height} loading="lazy" decoding="async" />
-                <span>TOKYO · FIREWORKS</span>
-              </div>
-              <div class="photo-primary">
-                <img src={lakePrint.thumbnailUrl} alt="" width={lakePrint.width} height={lakePrint.height} loading="lazy" decoding="async" />
-                <span>WEST LAKE · MORNING MIST</span>
-              </div>
+              {photographyPrints.map(({ photo, caption }) => (
+                <div class="photo-print">
+                  <img src={photo.thumbnailUrl} alt="" width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+                  <span>{caption}</span>
+                </div>
+              ))}
             </div>
           </a>
         </div>
@@ -716,30 +718,32 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
     .marginalia-stage { margin-top: 14px; min-height: 250px; transform: none; }
   }
 
-  /* Photography: restrained spread, real prints, soft contact shadows. */
-  .stage-panel#stage-panel-photography > a { left: calc(50% - 183px); }
+  /* Original image ratios and staggered placement keep the prints tangible. */
+  .stage-panel#stage-panel-photography > a { left: calc(50% - 200px); }
+  @media (min-width: 640px) {
+    .stage-panel#stage-panel-photography > a { left: calc(50% - 252px); }
+  }
   .photo-container { position: relative; width: 330px; height: 250px; display: flex; align-items: center; justify-content: center; }
-  .photo-primary, .photo-secondary {
-    position: absolute; padding: 8px 8px 0; background: #fff; border: 1px solid #ddd;
+  .photo-print {
+    position: absolute; padding: 7px 7px 0; background: #fff; border: 1px solid #ddd;
     box-shadow: 0 6px 15px #00000012; border-radius: 2px;
-    transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 650ms ease;
+    transform: translate(var(--x), var(--y)) rotate(var(--angle));
+    transition: translate 240ms cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 240ms ease;
   }
-  .photo-primary { width: 250px; z-index: 1; }
-  .photo-secondary { width: 250px; transform: rotate(-3deg); }
+  .photo-print:nth-child(1) { width: 190px; z-index: 2; --x: -70px; --y: -69px; --angle: -3deg; --delay: 0ms; --hover-x: -8px; --hover-y: -5px; }
+  .photo-print:nth-child(2) { width: 88px; z-index: 1; --x: 116px; --y: -62px; --angle: 3deg; --delay: 45ms; --hover-x: 8px; --hover-y: -3px; }
+  .photo-print:nth-child(3) { width: 114px; z-index: 0; --x: -108px; --y: 61px; --angle: -2deg; --delay: 90ms; --hover-x: -4px; --hover-y: 6px; }
+  .photo-print:nth-child(4) { width: 204px; z-index: 3; --x: 62px; --y: 85px; --angle: 2deg; --delay: 135ms; --hover-x: 2px; --hover-y: 9px; }
   .photo-container img { display: block; width: 100%; height: auto; }
-  .photo-primary img { filter: saturate(0.7); }
-  .photo-secondary img { filter: saturate(0.65); }
-  .photo-container span { display: block; padding: 9px 0; font-size: 7px; letter-spacing: 0.09em; color: #777; text-align: center; }
-  .is-expanded .photo-secondary { animation: photo-secondary-enter 850ms cubic-bezier(0.22, 0.7, 0.25, 1) 240ms both; transform: translate(-62px, 12px) rotate(-11deg); box-shadow: 0 10px 20px #00000016; }
-  .is-expanded .photo-primary { animation: photo-primary-enter 850ms cubic-bezier(0.22, 0.7, 0.25, 1) 240ms both; transform: translate(28px, -8px) rotate(4deg); box-shadow: 0 14px 25px #00000020; }
-
-  @keyframes photo-secondary-enter {
-    from { transform: translate(0, 0) rotate(-3deg); }
-    to { transform: translate(-62px, 12px) rotate(-11deg); }
+  .photo-container span { display: block; padding: 8px 0; font-size: 6px; letter-spacing: 0.07em; color: #777; text-align: center; white-space: nowrap; }
+  .is-expanded .photo-print { animation: photo-print-enter 420ms cubic-bezier(0.2, 0.7, 0.3, 1) var(--delay) both; box-shadow: 0 9px 18px #00000018; }
+  @media (hover: hover) {
+    .stage-art-link:hover .photo-print { translate: var(--hover-x) var(--hover-y); box-shadow: 0 13px 24px #00000020; }
   }
-  @keyframes photo-primary-enter {
-    from { transform: translate(0, 0) rotate(0); }
-    to { transform: translate(28px, -8px) rotate(4deg); }
+  .stage-art-link:focus-visible .photo-print { translate: var(--hover-x) var(--hover-y); }
+  @keyframes photo-print-enter {
+    from { transform: translate(0, 0) rotate(-3deg) scale(0.97); }
+    to { transform: translate(var(--x), var(--y)) rotate(var(--angle)); }
   }
 
   /* Flat film transport with a soft, slowly varying projector glow. */
