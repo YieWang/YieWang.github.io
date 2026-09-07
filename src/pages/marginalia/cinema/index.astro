@@ -79,7 +79,6 @@ const categories = [
               <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Whitespace-nowrap prevents wrapping) -->
               <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
                 <span class="whitespace-nowrap shrink-0">{film.year}</span>
-                {film.installments && <span>{film.installments.length} films</span>}
                 {(film.review || film.installments?.some(item => item.review)) && (
                   <span
                     class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"

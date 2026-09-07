@@ -18,6 +18,7 @@ for (const items of [cinemaFilms, cinemaAnimation, cinemaSeries]) {
   assert.deepEqual(films.map(x => x.id).sort(), Array.from(items, x => x.id).sort());
   for (const card of cards.filter(x => x.installments)) {
     assert.ok(card.installments.length > 1);
+    assert.equal(card.year, card.installments[0].year);
     assert.ok(card.installments.every(x => x.type === 'film' && !x.hidden));
     assert.deepEqual(Array.from(card.installments, x => Number(x.year)), Array.from(card.installments, x => Number(x.year)).sort((a,b) => a-b));
   }

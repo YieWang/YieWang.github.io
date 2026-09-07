@@ -94,7 +94,6 @@ export function groupFilmCollections(items: MediaItem[]): MediaItem[] {
     if (installments.length < 2) return installments;
     const first = installments[0];
     return [{ ...first, title: collectionTitles[cinemaGroups[group][0]] || first.title,
-      year: first.year === installments.at(-1)!.year ? first.year : `${first.year}–${installments.at(-1)!.year}`,
       director: [...new Set(installments.map(film => film.director))].join(', '), installments }];
   });
 }
