@@ -916,7 +916,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "加速世界",
     "originalDirector": "川原礫",
-    "chineseDirector": "川原砾"
+    "chineseDirector": "川原砾",
+    "studio": "Sunrise"
   },
   {
     "id": "tv-92602",
@@ -949,7 +950,8 @@
     "creditRole": "DIRECTED BY",
     "chineseTitle": "异度侵入",
     "originalDirector": "あおきえい",
-    "chineseDirector": "青木英"
+    "chineseDirector": "青木英",
+    "studio": "NAZ"
   },
   {
     "id": "tv-95479",
@@ -1048,7 +1050,8 @@
     ],
     "chineseTitle": "咒术回战",
     "originalDirector": "芥見下々",
-    "chineseDirector": "芥见下下"
+    "chineseDirector": "芥见下下",
+    "studio": "MAPPA"
   },
   {
     "id": "tv-117933",
@@ -1081,7 +1084,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "夏日重现",
     "originalDirector": "田中靖規",
-    "chineseDirector": "田中靖规"
+    "chineseDirector": "田中靖规",
+    "studio": "OLM"
   },
   {
     "id": "tv-83097",
@@ -1165,7 +1169,8 @@
     ],
     "chineseTitle": "约定的梦幻岛",
     "originalDirector": "白井カイウ, 出水ぽすか",
-    "chineseDirector": "白井海芋, "
+    "chineseDirector": "白井海芋, ",
+    "studio": "CloverWorks"
   },
   {
     "id": "tv-61663",
@@ -1199,7 +1204,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "四月是你的谎言",
     "originalDirector": "新川直司",
-    "chineseDirector": "新川直司"
+    "chineseDirector": "新川直司",
+    "studio": "A-1 Pictures"
   },
   {
     "id": "tv-82739",
@@ -1283,7 +1289,8 @@
     ],
     "chineseTitle": "青春猪头少年不会梦到兔女郎学姐",
     "originalDirector": "鴨志田一",
-    "chineseDirector": "鸭志田一"
+    "chineseDirector": "鸭志田一",
+    "studio": "CloverWorks"
   },
   {
     "id": "tv-105248",
@@ -1315,7 +1322,8 @@
     "rating": "5 / 5",
     "chineseTitle": "赛博朋克：边缘行者",
     "originalDirector": "Rafał Jaki",
-    "chineseDirector": "拉法乌·亚基"
+    "chineseDirector": "拉法乌·亚基",
+    "studio": "Trigger"
   },
   {
     "id": "tv-42942",
@@ -1348,7 +1356,8 @@
     "creditRole": "ORIGINAL STORY / SCREENPLAY",
     "chineseTitle": "天使的心跳！",
     "originalDirector": "麻枝准",
-    "chineseDirector": "麻枝准"
+    "chineseDirector": "麻枝准",
+    "studio": "P.A. Works"
   },
   {
     "id": "tv-82766",
@@ -1382,7 +1391,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "强风吹拂",
     "originalDirector": "三浦しをん",
-    "chineseDirector": "三浦紫苑"
+    "chineseDirector": "三浦紫苑",
+    "studio": "Production I.G"
   },
   {
     "id": "tv-31724",
@@ -1481,7 +1491,8 @@
     ],
     "chineseTitle": "反叛的鲁路修",
     "originalDirector": "大河内一楼, 谷口悟朗",
-    "chineseDirector": "大河内一楼, 谷口悟朗"
+    "chineseDirector": "大河内一楼, 谷口悟朗",
+    "studio": "Sunrise"
   },
   {
     "id": "tv-43125",
@@ -1515,7 +1526,8 @@
     "creditRole": "DIRECTED BY",
     "chineseTitle": "罪恶王冠",
     "originalDirector": "荒木哲郎",
-    "chineseDirector": "荒木哲郎"
+    "chineseDirector": "荒木哲郎",
+    "studio": "Production I.G"
   },
   {
     "id": "tv-45782",
@@ -1684,7 +1696,8 @@
     ],
     "chineseTitle": "刀剑神域",
     "originalDirector": "川原礫",
-    "chineseDirector": "川原砾"
+    "chineseDirector": "川原砾",
+    "studio": "A-1 Pictures"
   },
   {
     "id": "tv-61415",
@@ -1783,7 +1796,8 @@
     ],
     "chineseTitle": "命运之夜 无限剑制",
     "originalDirector": "奈須きのこ, TYPE-MOON",
-    "chineseDirector": "奈须蘑菇, "
+    "chineseDirector": "奈须蘑菇, ",
+    "studio": "ufotable"
   },
   {
     "id": "tv-45845",
@@ -1881,7 +1895,8 @@
     ],
     "chineseTitle": "命运之夜 前传",
     "originalDirector": "虚淵玄",
-    "chineseDirector": "虚渊玄"
+    "chineseDirector": "虚渊玄",
+    "studio": "ufotable"
   },
   {
     "id": "tv-139130",
@@ -1914,7 +1929,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "跃动青春",
     "originalDirector": "高松美咲",
-    "chineseDirector": "高松美咲"
+    "chineseDirector": "高松美咲",
+    "studio": "P.A. Works"
   },
   {
     "id": "tv-134182",
@@ -2068,7 +2084,8 @@
     ],
     "chineseTitle": "一拳超人",
     "originalDirector": "ONE, 村田雄介",
-    "chineseDirector": ", 村田雄介"
+    "chineseDirector": ", 村田雄介",
+    "studio": "Madhouse"
   },
   {
     "id": "tv-127714",
@@ -2102,7 +2119,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "异世界归来的舅舅",
     "originalDirector": "殆ど死んでいる",
-    "chineseDirector": ""
+    "chineseDirector": "",
+    "studio": "Atelier Pontdarc"
   },
   {
     "id": "tv-88803",
@@ -2201,7 +2219,8 @@
     ],
     "chineseTitle": "冰海战记",
     "originalDirector": "幸村誠",
-    "chineseDirector": "幸村诚"
+    "chineseDirector": "幸村诚",
+    "studio": "Wit Studio"
   },
   {
     "id": "tv-74091",
@@ -2233,7 +2252,8 @@
     "rating": "5 / 5",
     "chineseTitle": "宝石之国",
     "originalDirector": "京極尚彦",
-    "chineseDirector": "京极尚彦"
+    "chineseDirector": "京极尚彦",
+    "studio": "Orange"
   },
   {
     "id": "tv-67676",
@@ -2367,7 +2387,8 @@
     ],
     "chineseTitle": "齐木楠雄的灾难",
     "originalDirector": "麻生周一",
-    "chineseDirector": "麻生周一"
+    "chineseDirector": "麻生周一",
+    "studio": "J.C. Staff"
   },
   {
     "id": "tv-60863",
@@ -2549,7 +2570,8 @@
     ],
     "chineseTitle": "排球少年！！",
     "originalDirector": "古舘春一",
-    "chineseDirector": "古馆春一"
+    "chineseDirector": "古馆春一",
+    "studio": "Production I.G"
   },
   {
     "id": "tv-46671",
@@ -2583,7 +2605,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "未来日记",
     "originalDirector": "えすのサカエ",
-    "chineseDirector": ""
+    "chineseDirector": "",
+    "studio": "asread."
   },
   {
     "id": "tv-240411",
@@ -2617,7 +2640,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "胆大党",
     "originalDirector": "龍幸伸",
-    "chineseDirector": "龙幸伸"
+    "chineseDirector": "龙幸伸",
+    "studio": "Science SARU"
   },
   {
     "id": "tv-112613",
@@ -2651,7 +2675,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "国王排名",
     "originalDirector": "十日草輔",
-    "chineseDirector": "十日草輔"
+    "chineseDirector": "十日草輔",
+    "studio": "Wit Studio"
   },
   {
     "id": "tv-45790",
@@ -2917,7 +2942,8 @@
     ],
     "chineseTitle": "JOJO的奇妙冒险",
     "originalDirector": "荒木飛呂彦",
-    "chineseDirector": "荒木飞吕彦"
+    "chineseDirector": "荒木飞吕彦",
+    "studio": "David Production"
   },
   {
     "id": "tv-119100",
@@ -2950,7 +2976,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "孤独摇滚！",
     "originalDirector": "はまじあき",
-    "chineseDirector": "滨路晶"
+    "chineseDirector": "滨路晶",
+    "studio": "CloverWorks"
   },
   {
     "id": "tv-72636",
@@ -3049,7 +3076,8 @@
     ],
     "chineseTitle": "来自深渊",
     "originalDirector": "つくしあきひと",
-    "chineseDirector": "土笔章人"
+    "chineseDirector": "土笔章人",
+    "studio": "Kinema Citrus"
   },
   {
     "id": "tv-124396",
@@ -3082,7 +3110,8 @@
     "creditRole": "DIRECTOR / SCREENWRITER",
     "chineseTitle": "漂流少年",
     "originalDirector": "夏目真悟",
-    "chineseDirector": "夏目真悟"
+    "chineseDirector": "夏目真悟",
+    "studio": "Madhouse"
   },
   {
     "id": "film-25808075",
@@ -3676,7 +3705,8 @@
     "rating": "5 / 5",
     "chineseTitle": "攻壳机动队",
     "originalDirector": "押井守",
-    "chineseDirector": "押井守"
+    "chineseDirector": "押井守",
+    "studio": "Production I.G"
   },
   {
     "id": "film-26611076",
@@ -3990,7 +4020,8 @@
     "rating": "5 / 5",
     "chineseTitle": "精灵旅社",
     "originalDirector": "Genndy Tartakovsky",
-    "chineseDirector": ""
+    "chineseDirector": "",
+    "studio": "Sony Pictures Animation"
   },
   {
     "id": "film-26925317",
@@ -4443,7 +4474,8 @@
     "rating": "5 / 5",
     "chineseTitle": "百米。",
     "originalDirector": "岩井澤健治",
-    "chineseDirector": "岩井泽健治"
+    "chineseDirector": "岩井泽健治",
+    "studio": "Rock'n Roll Mountain"
   },
   {
     "id": "film-25870084",
@@ -5495,7 +5527,8 @@
     "rating": "5 / 5",
     "chineseTitle": "言叶之庭",
     "originalDirector": "新海誠",
-    "chineseDirector": "新海诚"
+    "chineseDirector": "新海诚",
+    "studio": "CoMix Wave Films"
   },
   {
     "id": "film-35371261",
@@ -5527,7 +5560,8 @@
     "rating": "4 / 5",
     "chineseTitle": "铃芽之旅",
     "originalDirector": "新海誠",
-    "chineseDirector": "新海诚"
+    "chineseDirector": "新海诚",
+    "studio": "CoMix Wave Films"
   },
   {
     "id": "film-2043546",
@@ -5559,7 +5593,8 @@
     "rating": "5 / 5",
     "chineseTitle": "秒速5厘米",
     "originalDirector": "新海誠",
-    "chineseDirector": "新海诚"
+    "chineseDirector": "新海诚",
+    "studio": "CoMix Wave Films"
   },
   {
     "id": "film-25796222",
@@ -5590,7 +5625,8 @@
     "tmdbId": 257475,
     "chineseTitle": "玉子爱情故事",
     "originalDirector": "山田尚子",
-    "chineseDirector": "山田尚子"
+    "chineseDirector": "山田尚子",
+    "studio": "Kyoto Animation"
   },
   {
     "id": "film-26933210",
@@ -5652,7 +5688,8 @@
     "tmdbId": 378064,
     "chineseTitle": "声之形",
     "originalDirector": "山田尚子",
-    "chineseDirector": "山田尚子"
+    "chineseDirector": "山田尚子",
+    "studio": "Kyoto Animation"
   },
   {
     "id": "film-30401194",
@@ -5683,7 +5720,8 @@
     "tmdbId": 604605,
     "chineseTitle": "你好世界",
     "originalDirector": "伊藤智彦",
-    "chineseDirector": "伊藤智彦"
+    "chineseDirector": "伊藤智彦",
+    "studio": "Graphinica"
   },
   {
     "id": "film-27107140",
@@ -5714,7 +5752,8 @@
     "tmdbId": 504253,
     "chineseTitle": "我想吃掉你的胰脏",
     "originalDirector": "牛嶋新一郎",
-    "chineseDirector": "牛岛新一郎"
+    "chineseDirector": "牛岛新一郎",
+    "studio": "Studio VOLN"
   },
   {
     "id": "film-26282448",
@@ -6512,7 +6551,8 @@
     ],
     "chineseTitle": "鬼灭之刃",
     "originalDirector": "吾峠呼世晴",
-    "chineseDirector": "吾峠呼世晴"
+    "chineseDirector": "吾峠呼世晴",
+    "studio": "ufotable"
   },
   {
     "id": "film-36524559",
@@ -6894,7 +6934,8 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "葬送的芙莉莲",
     "originalDirector": "山田鐘人, アベツカサ",
-    "chineseDirector": "山田钟人, 阿部司"
+    "chineseDirector": "山田钟人, 阿部司",
+    "studio": "Madhouse"
   },
   {
     "id": "film-1307793",
@@ -7775,7 +7816,8 @@
     "rating": "4 / 5",
     "chineseTitle": "功夫熊猫4",
     "originalDirector": "Mike Mitchell",
-    "chineseDirector": "迈克·米歇尔"
+    "chineseDirector": "迈克·米歇尔",
+    "studio": "DreamWorks Animation"
   },
   {
     "id": "film-11589036",
@@ -7807,7 +7849,8 @@
     "rating": "4 / 5",
     "chineseTitle": "功夫熊猫3",
     "originalDirector": "Jennifer Yuh Nelson, Alessandro Carloni",
-    "chineseDirector": "吕寅荣, "
+    "chineseDirector": "吕寅荣, ",
+    "studio": "DreamWorks Animation"
   },
   {
     "id": "film-3233635",
@@ -7839,7 +7882,8 @@
     "rating": "5 / 5",
     "chineseTitle": "功夫熊猫2",
     "originalDirector": "Jennifer Yuh Nelson",
-    "chineseDirector": "吕寅荣"
+    "chineseDirector": "吕寅荣",
+    "studio": "DreamWorks Animation"
   },
   {
     "id": "film-1783457",
@@ -7871,7 +7915,8 @@
     "rating": "5 / 5",
     "chineseTitle": "功夫熊猫",
     "originalDirector": "Mark Osborne, John Stevenson",
-    "chineseDirector": "马克·奥斯本, 约翰·斯蒂芬森"
+    "chineseDirector": "马克·奥斯本, 约翰·斯蒂芬森",
+    "studio": "DreamWorks Animation"
   },
   {
     "id": "tv-276903",
@@ -8325,7 +8370,8 @@
     "rating": "5 / 5",
     "chineseTitle": "龙猫",
     "originalDirector": "宮崎駿",
-    "chineseDirector": "宫崎骏"
+    "chineseDirector": "宫崎骏",
+    "studio": "Studio Ghibli"
   },
   {
     "id": "film-25846858",
@@ -8453,7 +8499,8 @@
     "rating": "5 / 5",
     "chineseTitle": "天气之子",
     "originalDirector": "新海誠",
-    "chineseDirector": "新海诚"
+    "chineseDirector": "新海诚",
+    "studio": "CoMix Wave Films"
   },
   {
     "id": "film-34780991",
@@ -8485,7 +8532,8 @@
     "rating": "3 / 5",
     "chineseTitle": "哪吒之魔童闹海",
     "originalDirector": "饺子",
-    "chineseDirector": "饺子"
+    "chineseDirector": "饺子",
+    "studio": "Chengdu Coco Cartoon"
   },
   {
     "id": "film-30163509",
@@ -8834,7 +8882,8 @@
     "rating": "5 / 5",
     "chineseTitle": "蓦然回首",
     "originalDirector": "押山清高",
-    "chineseDirector": "押山清高"
+    "chineseDirector": "押山清高",
+    "studio": "Studio Durian"
   },
   {
     "id": "film-25805741",
@@ -10284,7 +10333,8 @@
     "rating": "4 / 5",
     "chineseTitle": "烟花",
     "originalDirector": "武内宣之, 新房昭之",
-    "chineseDirector": "武内宣之, 新房昭之"
+    "chineseDirector": "武内宣之, 新房昭之",
+    "studio": "Shaft"
   },
   {
     "id": "tv-210955",
@@ -11720,7 +11770,8 @@
     "rating": "4 / 5",
     "chineseTitle": "蜘蛛侠：平行宇宙",
     "originalDirector": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
-    "chineseDirector": "鲍勃·佩尔西凯蒂, 彼得·拉姆齐, 罗德尼·罗斯曼"
+    "chineseDirector": "鲍勃·佩尔西凯蒂, 彼得·拉姆齐, 罗德尼·罗斯曼",
+    "studio": "Sony Pictures Animation"
   },
   {
     "id": "film-1433330",
@@ -11816,7 +11867,8 @@
     "rating": "5 / 5",
     "chineseTitle": "哈尔的移动城堡",
     "originalDirector": "宮崎駿",
-    "chineseDirector": "宫崎骏"
+    "chineseDirector": "宫崎骏",
+    "studio": "Studio Ghibli"
   },
   {
     "id": "film-1959877",
@@ -11848,7 +11900,8 @@
     "rating": "5 / 5",
     "chineseTitle": "崖上的波妞",
     "originalDirector": "宮崎駿",
-    "chineseDirector": "宫崎骏"
+    "chineseDirector": "宫崎骏",
+    "studio": "Studio Ghibli"
   },
   {
     "id": "film-26794435",
@@ -11880,7 +11933,8 @@
     "rating": "5 / 5",
     "chineseTitle": "哪吒之魔童降世",
     "originalDirector": "饺子",
-    "chineseDirector": "饺子"
+    "chineseDirector": "饺子",
+    "studio": "Chengdu Coco Cartoon"
   },
   {
     "id": "film-30391186",
@@ -11912,7 +11966,8 @@
     "rating": "5 / 5",
     "chineseTitle": "蜘蛛侠：纵横宇宙",
     "originalDirector": "Kemp Powers, Justin K. Thompson, Joaquim Dos Santos",
-    "chineseDirector": "肯普·鲍尔斯, 贾斯汀·K·汤普森, 乔伊姆·多斯·桑托斯"
+    "chineseDirector": "肯普·鲍尔斯, 贾斯汀·K·汤普森, 乔伊姆·多斯·桑托斯",
+    "studio": "Sony Pictures Animation"
   },
   {
     "id": "film-26259677",
@@ -12228,7 +12283,8 @@
     ],
     "chineseTitle": "进击的巨人",
     "originalDirector": "諫山創",
-    "chineseDirector": "谏山创"
+    "chineseDirector": "谏山创",
+    "studio": "Wit Studio"
   },
   {
     "id": "film-1292371",
@@ -12608,7 +12664,8 @@
     "rating": "5 / 5",
     "chineseTitle": "穿越时空的少女",
     "originalDirector": "細田守",
-    "chineseDirector": "细田守"
+    "chineseDirector": "细田守",
+    "studio": "Madhouse"
   },
   {
     "id": "film-25807345",
@@ -12927,7 +12984,8 @@
     "rating": "5 / 5",
     "chineseTitle": "你的名字。",
     "originalDirector": "新海誠",
-    "chineseDirector": "新海诚"
+    "chineseDirector": "新海诚",
+    "studio": "CoMix Wave Films"
   },
   {
     "id": "film-10533913",
@@ -13279,7 +13337,8 @@
     "rating": "3 / 5",
     "chineseTitle": "驯龙高手",
     "originalDirector": "Chris Sanders, Dean DeBlois",
-    "chineseDirector": "克里斯·桑德斯, 迪恩·德布洛斯"
+    "chineseDirector": "克里斯·桑德斯, 迪恩·德布洛斯",
+    "studio": "DreamWorks Animation"
   },
   {
     "id": "film-11026735",
@@ -14528,7 +14587,8 @@
     "rating": "4 / 5",
     "chineseTitle": "千与千寻",
     "originalDirector": "宮崎駿",
-    "chineseDirector": "宫崎骏"
+    "chineseDirector": "宫崎骏",
+    "studio": "Studio Ghibli"
   },
   {
     "id": "film-1292722",
@@ -14775,7 +14835,8 @@
     "watchedEntries": [],
     "tmdbId": 37854,
     "chineseTitle": "海贼王",
-    "chineseDirector": "尾田荣一郎"
+    "chineseDirector": "尾田荣一郎",
+    "studio": "Toei Animation"
   },
   {
     "id": "tv-46260",
@@ -14836,7 +14897,8 @@
       }
     ],
     "chineseTitle": "火影忍者",
-    "chineseDirector": "岸本齐史"
+    "chineseDirector": "岸本齐史",
+    "studio": "Pierrot"
   },
   {
     "id": "tv-46261",
@@ -14897,7 +14959,8 @@
       }
     ],
     "chineseTitle": "妖精的尾巴",
-    "chineseDirector": ""
+    "chineseDirector": "",
+    "studio": "A-1 Pictures / Satelight"
   },
   {
     "id": "tv-30984",
@@ -14958,6 +15021,7 @@
       }
     ],
     "chineseTitle": "死神",
-    "chineseDirector": "久保带人"
+    "chineseDirector": "久保带人",
+    "studio": "Pierrot"
   }
 ]

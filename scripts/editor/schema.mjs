@@ -22,7 +22,7 @@ export const documents = {
     title, rating, posterUrl: image('海报'), originalTitle: text('原名'), chineseTitle: text('中文译名'), type: text('类型', { required: true, options: [['film', '电影'], ['series', '剧集']] }),
     director: text('导演／创作者'), originalDirector: text('创作者原名'), chineseDirector: text('创作者中文名'), creditRole: text('署名角色'), year,
     span: text('年份范围'), country: text('国家／地区'), genre: text('类型标签（动画请含 Animation，以英文逗号和空格分隔）', { required: true }),
-    studio: text('动画制作公司', { options: ['', 'Pixar', 'Disney'] }), runtime: text('时长／季数'), format: text('规格'), stillUrl: image('剧照'),
+    studio: text('动画制作公司（系列按首部）'), runtime: text('时长／季数'), format: text('规格'), stillUrl: image('剧照'),
     summary: area('简介'), firstWatched: text('首次观看日期'), rewatched: text('重看日期'),
     review: object('长评', { rating, date: text('日期'), quote: area('引文'), excerpt: area('摘要'), content: { ...area('正文（空行分段）'), required: true } }),
     seasons: { ...array('分季详情', { title, originalTitle: text('作品原名'), chineseTitle: text('中文译名'), partLabel: text('分季标记'), year, releaseDate: text('首播日期'), posterUrl: image('本季海报'), runtime: text('集数／时长'), firstWatched: text('观看日期'), rating, summary: area('简介'), review,
