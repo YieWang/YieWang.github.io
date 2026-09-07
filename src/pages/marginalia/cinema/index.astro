@@ -129,7 +129,10 @@ const categories = [
       const section = document.getElementById(tab.getAttribute('aria-controls')!);
       if (section) section.hidden = !selected;
     });
+    history.replaceState({ ...history.state, cinemaCategory: button.dataset.cinemaTab }, '');
   }));
+  // Restore the category before the browser restores this entry's scroll position.
+  Array.from(categoryButtons).find(tab => tab.dataset.cinemaTab === history.state?.cinemaCategory)?.click();
 
   const cinemaCards = document.querySelectorAll<HTMLElement>('.cinema-card');
   const modalBackdrop = document.getElementById('cinema-modal-backdrop');
