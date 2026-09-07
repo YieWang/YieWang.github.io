@@ -42,8 +42,8 @@ const artistGroups = musicArtists.map(artist => {
             </h2>
           </div>
 
-          <!-- Leave room for the 22% vinyl slide and the next sleeve's 8px left shift. -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-12 min-[480px]:gap-x-16 gap-y-9 sm:gap-y-11">
+          <!-- Preserve the original cover sizes; cap the vinyl slide to fit the existing gaps. -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-6 sm:gap-x-7 md:gap-x-8 gap-y-9 sm:gap-y-11">
             {group.albums.map((album) => (
               <article
                 class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index]"
@@ -56,7 +56,7 @@ const artistGroups = musicArtists.map(artist => {
                   <div class="relative w-full aspect-square flex items-center select-none">
                     
                     <!-- Sliding Vinyl Disc: NO shadow, rotates 40deg, glides into the gap safely -->
-                    <div class="vinyl-disc absolute right-0 top-0 bottom-0 aspect-square rounded-full bg-[#111112] shadow-none z-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu translate-x-0 rotate-0 group-hover:translate-x-[22%] group-hover:rotate-[40deg] pointer-events-none flex items-center justify-center">
+                    <div class="vinyl-disc absolute right-0 top-0 bottom-0 aspect-square rounded-full bg-[#111112] shadow-none z-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu translate-x-0 rotate-0 group-hover:translate-x-[min(22%,0.5rem)] sm:group-hover:translate-x-[min(22%,0.75rem)] md:group-hover:translate-x-[min(22%,1rem)] group-hover:rotate-[40deg] pointer-events-none flex items-center justify-center">
                       <!-- Concentric Vinyl Grooves -->
                       <div class="w-[90%] h-[90%] rounded-full border border-white/[0.08] flex items-center justify-center">
                         <div class="w-[78%] h-[78%] rounded-full border border-white/[0.06] flex items-center justify-center">

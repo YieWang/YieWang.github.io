@@ -15,11 +15,20 @@ async (page) => {
       const matrix = new DOMMatrix(style.transform);
       // Circular vinyl's visible edge, independent of its rotated square bounding box.
       const clearance = next.left - r.right - matrix.m41;
-      return { clearance, slide: matrix.m41 / r.width, rotation: Math.atan2(matrix.b, matrix.a) * 180 / Math.PI, duration: style.transitionDuration, overflow: document.documentElement.scrollWidth > innerWidth };
+      const grid = getComputedStyle(el.parentElement);
+      return { clearance, coverWidth: r.width, columns: grid.gridTemplateColumns.split(' ').length, gap: parseFloat(grid.columnGap), slide: matrix.m41, rotation: Math.atan2(matrix.b, matrix.a) * 180 / Math.PI, duration: style.transitionDuration, overflow: document.documentElement.scrollWidth > innerWidth };
     });
     // Reserve another 8px for the neighboring sleeve during rapid hover transitions.
-    if (geometry.clearance < 16) throw Error(`${width}px: insufficient clearance ${geometry.clearance}`);
-    if (Math.abs(geometry.slide - 0.22) > 0.001 || Math.abs(geometry.rotation - 40) > 0.1 || geometry.duration !== '0.5s') throw Error('Vinyl animation changed');
+    if (geometry.clearance < 15.9) throw Error(`${width}px: insufficient clearance ${geometry.clearance}`);
+    const gap = width < 640 ? 24 : width < 768 ? 28 : 32;
+    const columns = width < 640 ? 2 : width < 768 ? 3 : width < 1024 ? 4 : 6;
+    const outerPadding = width < 640 ? 16 : width < 768 ? 32 : 48;
+    const leftPadding = width < 640 ? 141 : Math.min(230, Math.max(160, width * 0.17)) + 60;
+    const rightPadding = width < 640 ? 16 : width < 768 ? 32 : 48;
+    const originalWidth = (Math.min(1760, width - outerPadding) - leftPadding - rightPadding - (columns - 1) * gap) / columns;
+    if (geometry.columns !== columns || geometry.gap !== gap || Math.abs(geometry.coverWidth - originalWidth) > 0.1) throw Error('Original cover size or grid changed');
+    const slide = Math.min(geometry.coverWidth * 0.22, gap - 16);
+    if (Math.abs(geometry.slide - slide) > 0.01 || Math.abs(geometry.rotation - 40) > 0.1 || geometry.duration !== '0.5s') throw Error('Unexpected vinyl animation');
     if (geometry.overflow) throw Error(`${width}px: horizontal overflow`);
     results.push({ width, clearance: Math.round(geometry.clearance * 10) / 10 });
   }
@@ -28,5 +37,5 @@ async (page) => {
   await page.keyboard.press('Escape');
   await page.waitForFunction(() => document.getElementById('music-modal-backdrop').classList.contains('pointer-events-none'));
   if (await page.locator('#nav-cv').getAttribute('href')) throw Error('CV must remain disabled');
-  return { results, animation: 'unchanged', modal: 'passed', cv: 'disabled' };
+  return { results, coversAndColumns: 'original sizes preserved', animation: 'shorter slide, same rotation and timing', modal: 'passed', cv: 'disabled' };
 }
