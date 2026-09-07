@@ -23,6 +23,8 @@ for (const album of music.albums) {
   assert.ok(artist?.albumIds.includes(album.id));
   assert.ok(album.tracks.length);
   const proof = audit.albums[album.id];
+  assert.equal(Number(album.year), proof.originalReleaseYear, `Original release year: ${album.title}`);
+  assert.match(proof.originalReleaseYearSource, /^https:\/\//);
   assert.equal(proof.catalogAlbumId, album.catalogAlbumId);
   assert.equal(proof.title, album.title);
   assert.match(proof.standardEditionSource, /^https:\/\//);
