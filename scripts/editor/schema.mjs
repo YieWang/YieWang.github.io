@@ -43,7 +43,7 @@ export const documents = {
   }) },
   literature: { file: 'literature.json', label: '文学', schema: object('文学', {
     books: array('书籍', { title, originalTitle: text('原名'), author: text('作者'), originalAuthor: text('作者原名'),
-      translator: text('译者'), edition: text('出版社与版本'), year, coverUrl: image('封面'), firstRead: text('初读日期'), reread: text('重读日期'), review, hidden }),
+      translator: text('译者'), edition: text('出版社与版本'), year, coverUrl: image('封面'), collection: text('所属系列'), partOrder: number('系列顺序', { min: 1 }), firstRead: text('初读日期'), reread: text('重读日期'), review, hidden }),
     essays: array('随笔', { title, author: text('作者'), year, date: text('日期'), location: text('地点'), content: area('正文（空行分段）'), hidden }),
   }) },
   photography: { file: 'photography.json', label: '摄影', schema: array('年份', {

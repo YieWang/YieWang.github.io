@@ -1,10 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
-import { literatureBooks, literatureEssays, type BookItem, type EssayItem } from '../../../data/literature';
-
-// Sort books with reviews to the front
-const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.review ? 1 : 0));
+import { literatureBookCards, literatureEssays } from '../../../data/literature';
 ---
 
 <Layout
@@ -39,12 +36,17 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
 
     <!-- VIEW 1: BOOKS GALLERY (Homepage: Only Original Title) -->
     <main id="view-books" class="transition-opacity duration-300">
-      {literatureBooks.length === 0 && <p class="text-sm text-[#888888] text-center">No books yet.</p>}
+      {literatureBookCards.length === 0 && <p class="text-sm text-[#888888] text-center">No books yet.</p>}
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-10 sm:gap-y-14">
-        {sortedBooks.map((book) => (
+        {literatureBookCards.map((book) => (
           <article
             class="book-card group cursor-pointer flex flex-col justify-between select-none"
             data-book-json={JSON.stringify(book)}
+            data-book-id={book.id}
+            data-collection={book.installments ? 'true' : undefined}
+            tabindex="0"
+            role="button"
+            aria-label={book.title}
           >
             <!-- Top: 1:1.414 Book Cover Frame + Original Title & Author -->
             <div class="space-y-3 text-left">
@@ -56,7 +58,8 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
                   src={book.coverUrl}
                   alt={book.title}
                   loading="lazy"
-                  class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
+                  class="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-95"
+                  style={{ objectFit: book.coverFit || 'contain' }}
                 />
               </div>
 
@@ -82,7 +85,7 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
             <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Zero ratings) -->
             <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
               <span class="whitespace-nowrap shrink-0">{book.year}</span>
-              {book.review && (
+              {(book.review || book.collectionReview || book.installments?.some(part => part.review)) && (
                 <span
                   class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"
                   title="Includes personal critical review"
@@ -206,25 +209,27 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
   let bookCloseTimer: ReturnType<typeof setTimeout> | null = null;
   let essayCloseTimer: ReturnType<typeof setTimeout> | null = null;
 
-  function openBookModal(book: BookItem) {
+  function openBookModal(selection: BookItem, installmentIndex = 0, listScrollTop = 0) {
     if (!bookModalSlot || !bookModalBackdrop || !bookModalContainer) return;
     if (bookCloseTimer) {
       clearTimeout(bookCloseTimer);
       bookCloseTimer = null;
     }
 
-    const hasReview = !!book.review;
+    const book = selection.installments?.[installmentIndex] || selection;
+    const review = book.review || selection.collectionReview;
+    const hasReview = !!review;
 
     // Smart Paragraph Splitting with Cinema-Style In-Place Folding
     let isLongReview = false;
     let previewHtml = '';
     let remainingHtml = '';
 
-    if (hasReview && book.review) {
-      const fullText = book.review.content.trim();
+    if (review) {
+      const fullText = review.content.trim();
       const paragraphs = fullText.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 0);
 
-      if (paragraphs.length > 1 || fullText.length > 200) {
+      if (paragraphs.length > 1) {
         isLongReview = true;
         previewHtml = `<p class="leading-[1.92] text-[0.84rem] sm:text-[0.88rem] text-[#333333] font-normal tracking-wide whitespace-pre-line" style="text-indent: 2em;">${escapeHtml(paragraphs[0])}</p>`;
         remainingHtml = paragraphs
@@ -254,7 +259,7 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
         <div class="w-full sm:w-[170px] md:w-[180px] shrink-0 flex flex-col items-center sm:items-stretch justify-start h-auto sm:h-full">
           <div class="w-[95px] sm:w-full aspect-[1/1.414] bg-[#F2EFE9] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
             <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
-            <img src="${escapeHtml(book.coverUrl)}" alt="${escapeHtml(book.title)}" class="w-full h-full object-cover" />
+            <img src="${escapeHtml(book.coverUrl)}" alt="${escapeHtml(book.title)}" class="w-full h-full object-contain" style="object-fit: ${book.coverFit === 'cover' ? 'cover' : 'contain'}" />
           </div>
         </div>
 
@@ -328,12 +333,20 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
             class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2 pt-2.5 space-y-3"
             style="scrollbar-gutter: stable;"
           >
+            ${selection.installments ? `
+              <div class="space-y-2" aria-label="Books in this collection">
+                ${selection.installments.map((part, index) => `
+                  <button type="button" data-installment="${index}" aria-pressed="${index === installmentIndex}"
+                    class="block w-full text-left border-b border-[#F0F0F0] pb-2 cursor-pointer text-[#777777] hover:text-black aria-pressed:text-black aria-pressed:font-semibold focus-visible:outline focus-visible:outline-1">
+                    <span class="block text-[0.84rem]">${escapeHtml(part.title)}</span>
+                  </button>`).join('')}
+              </div>` : ''}
             ${
-              hasReview && book.review
+              hasReview && review
                 ? `
               <div class="space-y-2">
                 <div class="text-[0.62rem] font-mono uppercase tracking-[0.14rem] text-[#888888]">
-                  ${book.review.date}
+                  ${!book.review && selection.collectionReview ? `${escapeHtml(selection.title)} · ` : ''}${escapeHtml(review.date)}
                 </div>
                 
                 <!-- Indented First Paragraph -->
@@ -369,6 +382,17 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
         </div>
       </div>
     `;
+
+    bookModalSlot.querySelectorAll<HTMLButtonElement>('[data-installment]').forEach(button => {
+      button.addEventListener('click', () => {
+        const index = Number(button.dataset.installment);
+        const scrollTop = document.getElementById('book-modal-scroll-pane')?.scrollTop || 0;
+        openBookModal(selection, index, scrollTop);
+        bookModalSlot.querySelector<HTMLButtonElement>(`[data-installment="${index}"]`)?.focus({ preventScroll: true });
+      });
+    });
+    const scrollPane = document.getElementById('book-modal-scroll-pane');
+    if (scrollPane) scrollPane.scrollTop = listScrollTop;
 
     // Bind In-Place Essay Expansion Toggle
     const toggleBtn = document.getElementById('toggle-essay-btn');
@@ -522,6 +546,12 @@ const sortedBooks = [...literatureBooks].sort((a, b) => (b.review ? 1 : 0) - (a.
 
   // Card & Item clicks
   bookCards.forEach((card) => {
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        card.click();
+      }
+    });
     card.addEventListener('click', () => {
       const json = card.dataset.bookJson;
       if (json) {
