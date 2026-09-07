@@ -42,8 +42,8 @@ const artistGroups = musicArtists.map(artist => {
             </h2>
           </div>
 
-          <!-- Enlarged Vinyl Grid: Generous gap-x to guarantee vinyl peek never overlaps adjacent album -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-6 sm:gap-x-7 md:gap-x-8 gap-y-9 sm:gap-y-11">
+          <!-- Leave room for the 22% vinyl slide and the next sleeve's 8px left shift. -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-12 min-[480px]:gap-x-16 gap-y-9 sm:gap-y-11">
             {group.albums.map((album) => (
               <article
                 class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index]"
