@@ -14748,7 +14748,7 @@
     "year": 1999,
     "country": "JP",
     "genre": "Action & Adventure, Comedy, Animation",
-    "runtime": "23 Parts",
+    "runtime": "TV Series",
     "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/01c2afc54b6d2791-e3d6f321c562.webp",
     "summary": "",
     "externalLink": {
@@ -14757,468 +14757,6 @@
     },
     "watchedEntries": [],
     "tmdbId": 37854,
-    "seasons": [
-      {
-        "id": "tv-37854-part-37854-season-1",
-        "seasonNumber": 1,
-        "title": "East Blue",
-        "originalTitle": "ワンピース",
-        "year": 1999,
-        "releaseDate": "1999-10-20",
-        "runtime": "61 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/01c2afc54b6d2791-e3d6f321c562.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/9hW62RDq5Dno8vLABXscddjEq9M.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/1"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 1 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-2",
-        "seasonNumber": 2,
-        "title": "Whiskey Peak & Little Garden",
-        "originalTitle": "ワンピース",
-        "year": 2001,
-        "releaseDate": "2001-03-21",
-        "runtime": "16 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1150ed291f3cb6fe-aa91739ffc3e.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gMPQIxlTDt463pnuvr2axpkkB13.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/2"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 2 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-3",
-        "seasonNumber": 3,
-        "title": "Drum Island",
-        "originalTitle": "ワンピース",
-        "year": 2001,
-        "releaseDate": "2001-08-26",
-        "runtime": "14 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/2b6642e98893b00d-d89f744e16aa.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fyOt2eCAVAB5tUpf4oOrLqX1cYD.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/3"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 3 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-4",
-        "seasonNumber": 4,
-        "title": "Alabasta",
-        "originalTitle": "ワンピース",
-        "year": 2001,
-        "releaseDate": "2001-12-09",
-        "runtime": "39 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/33c9fd74140d22fc-8fe655799b0f.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/lmO3xnBHVlT8On8E6AukMDyhKzv.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/4"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 4 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-5",
-        "seasonNumber": 5,
-        "title": "Dreams!, The Zenny Pirate Crew Sortie!, Beyond the Rainbow",
-        "originalTitle": "ワンピース",
-        "year": 2002,
-        "releaseDate": "2002-11-03",
-        "runtime": "13 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/d341b5a04b6a29e4-6f792966ade1.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dJHWwdcNzsbBUAnXdNsrIAgkmiK.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/5"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 5 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-6",
-        "seasonNumber": 6,
-        "title": "Skypiea",
-        "originalTitle": "ワンピース",
-        "year": 2003,
-        "releaseDate": "2003-02-09",
-        "runtime": "52 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/17c1161b26501745-08ae12c3b79a.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hYasiagbhomaEj0Vv1LMqewOuBE.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/6"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 6 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-7",
-        "seasonNumber": 7,
-        "title": "G-8 & Long Ring Long Land",
-        "originalTitle": "ワンピース",
-        "year": 2004,
-        "releaseDate": "2004-06-20",
-        "runtime": "33 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/3ffcad31c20c1266-0ee210b59ba9.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/A2msjyMOBEdbSHjiPHWLZhKI5HS.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/7"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 7 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-8",
-        "seasonNumber": 8,
-        "title": "Water Seven",
-        "originalTitle": "ワンピース",
-        "year": 2005,
-        "releaseDate": "2005-04-17",
-        "runtime": "35 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/e0241f20f91599e2-690657d0386c.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ww1JO056uv4KhDSycDTLkNRveIg.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/8"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 8 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-9",
-        "seasonNumber": 9,
-        "title": "Enies Lobby",
-        "originalTitle": "ワンピース",
-        "year": 2006,
-        "releaseDate": "2006-05-21",
-        "runtime": "73 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/e3e02705facafe97-1f4b449b1b20.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/7y6yoAIepNVrNTLMxgHEEgjEEge.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/9"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 9 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-10",
-        "seasonNumber": 10,
-        "title": "Thriller Bark",
-        "originalTitle": "ワンピース",
-        "year": 2008,
-        "releaseDate": "2008-01-06",
-        "runtime": "45 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/f9f380c66ebd9e4f-42409532b67c.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/aznhNoyRyJOh6cxFYkcU2zGxOEo.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/10"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 10 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-11",
-        "seasonNumber": 11,
-        "title": "Sabaody Archipelago",
-        "originalTitle": "ワンピース",
-        "year": 2008,
-        "releaseDate": "2008-12-21",
-        "runtime": "26 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1463dc7d5ddabe8c-2e3e15d6562e.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kMvtZUg4jCZ4JzEqvOCjkiklQfF.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/11"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 11 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-12",
-        "seasonNumber": 12,
-        "title": "Amazon Lily",
-        "originalTitle": "ワンピース",
-        "year": 2009,
-        "releaseDate": "2009-07-05",
-        "runtime": "14 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/5bfcd7924e28a915-466dd687a73c.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/bVjlWX17j9t6XB3AZ3KOv7ya7g7.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/12"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 12 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-13",
-        "seasonNumber": 13,
-        "title": "Impel Down & Marineford",
-        "originalTitle": "ワンピース",
-        "year": 2009,
-        "releaseDate": "2009-10-18",
-        "runtime": "101 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/4c0924107d2a3dcd-ce1afca65135.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zcVNRh5sqdgSgoXm0Z2GlTxF6DN.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/13"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 13 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-14",
-        "seasonNumber": 14,
-        "title": "Fishman Island",
-        "originalTitle": "ワンピース",
-        "year": 2011,
-        "releaseDate": "2011-11-13",
-        "runtime": "58 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/5560d5a6077b2947-bef76284c5a7.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wpVC1e0RVK2qRtZMFDYu1c6mHcy.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/14"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 14 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-15",
-        "seasonNumber": 15,
-        "title": "Punk Hazard",
-        "originalTitle": "ワンピース",
-        "year": 2013,
-        "releaseDate": "2013-01-20",
-        "runtime": "62 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/208716acc7ec1cad-2080352062f0.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/slTtfpqvqelTNoRTxTuiSvqWoTU.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/15"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 15 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-16",
-        "seasonNumber": 16,
-        "title": "Dressrosa",
-        "originalTitle": "ワンピース",
-        "year": 2014,
-        "releaseDate": "2014-05-04",
-        "runtime": "50 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/e47531952badafb6-12f020e9bf3b.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sDzpqSCuCyvKIcJADOhPD261maG.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/16"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 16 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-17",
-        "seasonNumber": 17,
-        "title": "Dressrosa (2)",
-        "originalTitle": "ワンピース",
-        "year": 2015,
-        "releaseDate": "2015-05-17",
-        "runtime": "56 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/97ff1f5c51305db7-a18152318c80.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/nXyJ2Yor5VUX8Zpwf0eQbuDOsF0.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/17"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 17 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-18",
-        "seasonNumber": 18,
-        "title": "Zou",
-        "originalTitle": "ワンピース",
-        "year": 2016,
-        "releaseDate": "2016-07-09",
-        "runtime": "55 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/3b3c558a8113d8a5-469a83d9df3a.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wg7ngI5lw0u54xRY5FwmlvzS9cu.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/18"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 18 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-19",
-        "seasonNumber": 19,
-        "title": "Whole Cake Island",
-        "originalTitle": "ワンピース",
-        "year": 2017,
-        "releaseDate": "2017-09-03",
-        "runtime": "74 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/178fe32abd455a7e-152d0ece9fe5.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/59G8pVHbFqSuAQAitdK9CKGAZXX.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/19"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 19 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-20",
-        "seasonNumber": 20,
-        "title": "Levely Arc",
-        "originalTitle": "ワンピース",
-        "year": 2019,
-        "releaseDate": "2019-03-31",
-        "runtime": "14 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/9b6b3165f74858e5-bbc77ac7aaa7.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/huF0TU9U8UIt2BaLGn6Ujbjikbg.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/20"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 20 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-21",
-        "seasonNumber": 21,
-        "title": "Wano Country Arc",
-        "originalTitle": "ワンピース",
-        "year": 2019,
-        "releaseDate": "2019-07-07",
-        "runtime": "197 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/b7ecc43f5d014378-f2059c9273b8.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/awSahTRht2V11NKVp8KaMyd3z2v.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/21"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 21 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-22",
-        "seasonNumber": 22,
-        "title": "Egghead",
-        "originalTitle": "ワンピース",
-        "year": 2024,
-        "releaseDate": "2024-01-07",
-        "runtime": "67 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/371d46ea2be536b7-62a40099eda6.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fqOUJhVYQchjaxOPHiBJ6I7Gr1l.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/22"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 22 季"
-      },
-      {
-        "id": "tv-37854-part-37854-season-23",
-        "seasonNumber": 23,
-        "title": "Elbaph",
-        "originalTitle": "ワンピース",
-        "year": 2026,
-        "releaseDate": "2026-04-05",
-        "runtime": "26 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/029ad0676724fd87-99b587790afd.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/9L4GHTq4YZq1wVq51yFxrdindrB.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/37854/season/23"
-        },
-        "chineseTitle": "海贼王",
-        "partLabel": "第 23 季"
-      }
-    ],
     "chineseTitle": "海贼王",
     "chineseDirector": "尾田荣一郎"
   },
@@ -15233,7 +14771,7 @@
     "year": 2002,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
-    "runtime": "24 Parts",
+    "runtime": "2 Parts",
     "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/16af3bc2cd3150dd-5e91dbe7fdba.webp",
     "summary": "",
     "externalLink": {
@@ -15244,13 +14782,12 @@
     "tmdbId": 46260,
     "seasons": [
       {
-        "id": "tv-46260-part-46260-season-1",
-        "seasonNumber": 1,
-        "title": "Naruto · Season 1",
+        "id": "tv-46260-part-46260",
+        "title": "Naruto",
         "originalTitle": "ナルト",
         "year": 2002,
         "releaseDate": "2002-10-03",
-        "runtime": "52 Episodes",
+        "runtime": "220 Episodes",
         "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/16af3bc2cd3150dd-5e91dbe7fdba.webp",
         "posterSourceUrl": "https://image.tmdb.org/t/p/original/rZN89Puog5PgKBLnJIyl7vyEReG.jpg",
         "firstWatched": "",
@@ -15258,79 +14795,17 @@
         "watchedEntries": [],
         "externalLink": {
           "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46260/season/1"
+          "url": "https://www.themoviedb.org/tv/46260"
         },
-        "chineseTitle": "火影忍者",
-        "partLabel": "第 1 季"
+        "chineseTitle": "火影忍者"
       },
       {
-        "id": "tv-46260-part-46260-season-2",
-        "seasonNumber": 2,
-        "title": "Naruto · Season 2",
-        "originalTitle": "ナルト",
-        "year": 2003,
-        "releaseDate": "2003-10-08",
-        "runtime": "52 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/5a2f7d00b7fabcdd-39bc5928aa02.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/yBHXns4g7gWcWuQfOzL4Jekj74e.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46260/season/2"
-        },
-        "chineseTitle": "火影忍者",
-        "partLabel": "第 2 季"
-      },
-      {
-        "id": "tv-46260-part-46260-season-3",
-        "seasonNumber": 3,
-        "title": "Naruto · Season 3",
-        "originalTitle": "ナルト",
-        "year": 2004,
-        "releaseDate": "2004-10-20",
-        "runtime": "54 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/14009942b9a35e51-bf454975636d.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/tZxX4fgjhAeC4by6wRLXXh8KnJR.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46260/season/3"
-        },
-        "chineseTitle": "火影忍者",
-        "partLabel": "第 3 季"
-      },
-      {
-        "id": "tv-46260-part-46260-season-4",
-        "seasonNumber": 4,
-        "title": "Naruto · Season 4",
-        "originalTitle": "ナルト",
-        "year": 2005,
-        "releaseDate": "2005-11-09",
-        "runtime": "62 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/4c94a01524b5d0be-4e4622619540.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/jN77xxkOJG0dWMQZPu7KHzPFQoZ.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46260/season/4"
-        },
-        "chineseTitle": "火影忍者",
-        "partLabel": "第 4 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-1",
-        "seasonNumber": 1,
-        "title": "Naruto Shippūden · Kazekage Rescue",
+        "id": "tv-46260-part-31910",
+        "title": "Naruto Shippūden",
         "originalTitle": "ナルト 疾風伝",
         "year": 2007,
         "releaseDate": "2007-02-15",
-        "runtime": "32 Episodes",
+        "runtime": "500 Episodes",
         "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/af365347a3a0c9cb-40ef4c5c6bed.webp",
         "posterSourceUrl": "https://image.tmdb.org/t/p/original/cZVmDRYOPjGRpcmXBwH7RULiS4v.jpg",
         "firstWatched": "",
@@ -15338,390 +14813,9 @@
         "watchedEntries": [],
         "externalLink": {
           "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/1"
+          "url": "https://www.themoviedb.org/tv/31910"
         },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 1 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-2",
-        "seasonNumber": 2,
-        "title": "Naruto Shippūden · Long-Awaited Reunion",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2007,
-        "releaseDate": "2007-11-08",
-        "runtime": "21 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1ae25aaee78c760b-0b386105b713.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/tq4UidtV47OkUbx8fIxMFlK3dAA.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/2"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 2 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-3",
-        "seasonNumber": 3,
-        "title": "Naruto Shippūden · Guardian Shinobi Twelve",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2008,
-        "releaseDate": "2008-04-03",
-        "runtime": "18 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/2b13fe415e787bd2-c27f1da805dc.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/nRk4DOpHKEoyhpGKw8GjYNIt56m.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/3"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 3 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-4",
-        "seasonNumber": 4,
-        "title": "Naruto Shippūden · Immortal Devastators: Hidan and Kakuzu",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2008,
-        "releaseDate": "2008-08-21",
-        "runtime": "17 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/353ad9dc98d3ab21-36f3be03fec2.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/lduWgBtWKMlIXmEXlVjuzCsewbV.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/4"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 4 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-5",
-        "seasonNumber": 5,
-        "title": "Naruto Shippūden · Three Tails' Appearance",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2008,
-        "releaseDate": "2008-12-18",
-        "runtime": "24 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ba3405e8b9035c2d-bbe4e1ff6cd3.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/cMi80FKQ1iTbPdXvbMbP5gaVaeR.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/5"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 5 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-6",
-        "seasonNumber": 6,
-        "title": "Naruto Shippūden · Master's Prophecy and Vengeance",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2009,
-        "releaseDate": "2009-06-11",
-        "runtime": "31 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/c6d2621246b6d886-097490f3648b.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/o3iBQZgcntiawRcFQeKXaYgIUsS.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/6"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 6 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-7",
-        "seasonNumber": 7,
-        "title": "Naruto Shippūden · Six Tails Unleashed",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2010,
-        "releaseDate": "2010-01-21",
-        "runtime": "8 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/07060ef1012641cc-d1c7348b613f.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/42QaFSno1zuAPoaSydZw0koukvw.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/7"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 7 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-8",
-        "seasonNumber": 8,
-        "title": "Naruto Shippūden · Two Saviors",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2010,
-        "releaseDate": "2010-03-25",
-        "runtime": "24 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/83b5c6afe96b0070-4fc41f352866.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/msnDBdYwXyNgLUzAC5SX1o1mqvq.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/8"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 8 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-9",
-        "seasonNumber": 9,
-        "title": "Naruto Shippūden · Past Arc: The Locus of the Leaf",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2010,
-        "releaseDate": "2010-09-02",
-        "runtime": "21 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/7b009458cf37cc2f-467256f1e2ab.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/1F7Z31SsD48go66RMVs9YDpae5V.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/9"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 9 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-10",
-        "seasonNumber": 10,
-        "title": "Naruto Shippūden · The Five Kage Assemble",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2011,
-        "releaseDate": "2011-02-10",
-        "runtime": "25 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/8e40546a4a1fdf46-e155079c2e19.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/6Xk2LsYYf4X1F5FDdjEFIE3egQb.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/10"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 10 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-11",
-        "seasonNumber": 11,
-        "title": "Naruto Shippūden · Paradise Life on a Boat",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2011,
-        "releaseDate": "2011-07-28",
-        "runtime": "21 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/90b622e9d92e8707-b7b69e2c65a4.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3rEBLrk8knUHQD3XoIdqGbHGSYE.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/11"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 11 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-12",
-        "seasonNumber": 12,
-        "title": "Naruto Shippūden · Nine-Tails Taming and Karmic Encounters",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2012,
-        "releaseDate": "2012-01-05",
-        "runtime": "33 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/4e386d254c722108-eb1896940a3b.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/rSFbKodY52tetk4ry5BBg8vPHff.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/12"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 12 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-13",
-        "seasonNumber": 13,
-        "title": "Naruto Shippūden · The Seven Ninja Swordsman",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2012,
-        "releaseDate": "2012-08-23",
-        "runtime": "20 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/3a34fbc80e6e438f-8c567e68e576.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zoVDEzuh4wyXZOHpkODNI7PTMsa.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/13"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 13 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-14",
-        "seasonNumber": 14,
-        "title": "Naruto Shippūden · The Fourth Great Ninja War: Assailants From Afar",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2013,
-        "releaseDate": "2013-01-17",
-        "runtime": "25 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/a2cba381777d2592-09e60fc30e7e.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/i5mXIVMCd314HIsdimeh6zEfUv4.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/14"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 14 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-15",
-        "seasonNumber": 15,
-        "title": "Naruto Shippūden · The Fourth Great Ninja War: Sasuke and Itachi",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2013,
-        "releaseDate": "2013-07-18",
-        "runtime": "28 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/dcb324a7e4f1deed-c043262f6957.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/mfg6EokRt3F0zLH4HVAzhJ9aBXH.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/15"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 15 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-16",
-        "seasonNumber": 16,
-        "title": "Naruto Shippūden · Kakashi: Shadow of the ANBU Black Ops",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2014,
-        "releaseDate": "2014-02-06",
-        "runtime": "13 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/2bb0e937af03617b-0fb66c5e137e.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/qk74cPdTULS59BOLhlJJX1dVFUq.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/16"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 16 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-17",
-        "seasonNumber": 17,
-        "title": "Naruto Shippūden · The Fourth Great Ninja War: Team 7 Returns",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2014,
-        "releaseDate": "2014-05-15",
-        "runtime": "11 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/6e230245f25d8bd6-3bcc2a3b4b62.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/A4VoEGcENojYNu6RjG0mN8zqPxr.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/17"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 17 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-18",
-        "seasonNumber": 18,
-        "title": "Naruto Shippūden · The Fourth Great Ninja War: Obito Uchiha",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2014,
-        "releaseDate": "2014-08-21",
-        "runtime": "21 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/34e1dc122d36dfde-8b928d23fcbe.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/x0E2Vlh9mZmy9DAKtsOcbAhoiBv.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/18"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 18 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-19",
-        "seasonNumber": 19,
-        "title": "Naruto Shippūden · In Naruto's Footsteps: The Friends' Path",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2015,
-        "releaseDate": "2015-01-08",
-        "runtime": "20 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/39276ec89dc7cd7f-936b5ca11958.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3ZZmcz65tpGse5Q8Pi8VIck4n0T.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/19"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 19 季"
-      },
-      {
-        "id": "tv-46260-part-31910-season-20",
-        "seasonNumber": 20,
-        "title": "Naruto Shippūden · Infinite Tsukuyomi: The Invocation",
-        "originalTitle": "ナルト 疾風伝",
-        "year": 2015,
-        "releaseDate": "2015-05-28",
-        "runtime": "87 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/1933f9a18909e567-c40923031d2e.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/eVp8V8v7FUJLTgLNcS0W3IY5H23.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/31910/season/20"
-        },
-        "chineseTitle": "火影忍者：疾风传",
-        "partLabel": "第 20 季"
+        "chineseTitle": "火影忍者：疾风传"
       }
     ],
     "chineseTitle": "火影忍者",
@@ -15738,7 +14832,7 @@
     "year": 2009,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Comedy, Sci-Fi & Fantasy",
-    "runtime": "9 Parts",
+    "runtime": "2 Parts",
     "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/591966844f9ce78d-7b3a5d03f636.webp",
     "summary": "",
     "externalLink": {
@@ -15749,13 +14843,12 @@
     "tmdbId": 46261,
     "seasons": [
       {
-        "id": "tv-46261-part-46261-season-1",
-        "seasonNumber": 1,
-        "title": "Season 1",
+        "id": "tv-46261-part-46261",
+        "title": "Fairy Tail",
         "originalTitle": "FAIRY TAIL",
         "year": 2009,
         "releaseDate": "2009-10-12",
-        "runtime": "48 Episodes",
+        "runtime": "328 Episodes",
         "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/591966844f9ce78d-7b3a5d03f636.webp",
         "posterSourceUrl": "https://image.tmdb.org/t/p/original/zo3BM6NB19sLfZ5INYa0TO9Tu4G.jpg",
         "firstWatched": "",
@@ -15763,154 +14856,12 @@
         "watchedEntries": [],
         "externalLink": {
           "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/1"
+          "url": "https://www.themoviedb.org/tv/46261"
         },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 1 季"
+        "chineseTitle": "妖精的尾巴"
       },
       {
-        "id": "tv-46261-part-46261-season-2",
-        "seasonNumber": 2,
-        "title": "Season 2",
-        "originalTitle": "FAIRY TAIL",
-        "year": 2010,
-        "releaseDate": "2010-10-11",
-        "runtime": "48 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/590fe7fd9f092b70-0b19d95d12c5.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/inIVJlVRcE0sui79vFvWAeV0NGU.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/2"
-        },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 2 季"
-      },
-      {
-        "id": "tv-46261-part-46261-season-3",
-        "seasonNumber": 3,
-        "title": "Season 3",
-        "originalTitle": "FAIRY TAIL",
-        "year": 2011,
-        "releaseDate": "2011-09-17",
-        "runtime": "54 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/515e4f6226d3d0f8-4bf1ac1f9d8e.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/mZAHfUEhQuWebFqVyRdBw9Y5I0i.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/3"
-        },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 3 季"
-      },
-      {
-        "id": "tv-46261-part-46261-season-4",
-        "seasonNumber": 4,
-        "title": "Season 4",
-        "originalTitle": "FAIRY TAIL",
-        "year": 2012,
-        "releaseDate": "2012-10-06",
-        "runtime": "25 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/2299a1fc0df5bd9e-3b374027ebfa.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/yg3gHDXReJuI2WEdJ7qLXRWew3f.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/4"
-        },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 4 季"
-      },
-      {
-        "id": "tv-46261-part-46261-season-5",
-        "seasonNumber": 5,
-        "title": "Season 5",
-        "originalTitle": "FAIRY TAIL",
-        "year": 2014,
-        "releaseDate": "2014-04-05",
-        "runtime": "51 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/72676e0b867bfdd8-b1f954af90ff.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ts6wU3uYv3NKk2uXXWVh2P1DiLf.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/5"
-        },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 5 季"
-      },
-      {
-        "id": "tv-46261-part-46261-season-6",
-        "seasonNumber": 6,
-        "title": "Season 6",
-        "originalTitle": "FAIRY TAIL",
-        "year": 2015,
-        "releaseDate": "2015-04-04",
-        "runtime": "39 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/faa96cdf4e73eaf0-a0a463440f45.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wsgfk09kkyYOUTJthJ4LaU7lsDg.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/6"
-        },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 6 季"
-      },
-      {
-        "id": "tv-46261-part-46261-season-7",
-        "seasonNumber": 7,
-        "title": "FAIRY TAIL ZERØ",
-        "originalTitle": "FAIRY TAIL",
-        "year": 2016,
-        "releaseDate": "2016-01-09",
-        "runtime": "12 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/05a73d655d0f79e5-9b6e338a21d2.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dorzFzD65utfD39pEu7PbcXmEFH.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/7"
-        },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 7 季"
-      },
-      {
-        "id": "tv-46261-part-46261-season-8",
-        "seasonNumber": 8,
-        "title": "Final Series",
-        "originalTitle": "FAIRY TAIL",
-        "year": 2018,
-        "releaseDate": "2018-10-07",
-        "runtime": "51 Episodes",
-        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/seasons/ffe53e0fae372ad7-28d0d974a333.webp",
-        "posterSourceUrl": "https://image.tmdb.org/t/p/original/n4K6J1zZTEvAwD5KnpWq8NRClkE.jpg",
-        "firstWatched": "",
-        "rating": "",
-        "watchedEntries": [],
-        "externalLink": {
-          "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/46261/season/8"
-        },
-        "chineseTitle": "妖精的尾巴",
-        "partLabel": "第 8 季"
-      },
-      {
-        "id": "tv-46261-part-248947-season-1",
-        "seasonNumber": 1,
+        "id": "tv-46261-part-248947",
         "title": "100 Years Quest",
         "originalTitle": "FAIRY TAIL 100年クエスト",
         "year": 2024,
@@ -15923,10 +14874,9 @@
         "watchedEntries": [],
         "externalLink": {
           "platform": "TMDb",
-          "url": "https://www.themoviedb.org/tv/248947/season/1"
+          "url": "https://www.themoviedb.org/tv/248947"
         },
-        "chineseTitle": "妖精的尾巴 百年任务",
-        "partLabel": "第 1 季"
+        "chineseTitle": "妖精的尾巴 百年任务"
       }
     ],
     "chineseTitle": "妖精的尾巴",
@@ -15955,7 +14905,6 @@
     "seasons": [
       {
         "id": "tv-30984-part-30984-season-1",
-        "seasonNumber": 1,
         "title": "Bleach",
         "originalTitle": "BLEACH",
         "year": 2004,
@@ -15970,12 +14919,10 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/30984/season/1"
         },
-        "chineseTitle": "死神",
-        "partLabel": "第 1 季"
+        "chineseTitle": "死神"
       },
       {
         "id": "tv-30984-part-30984-season-2",
-        "seasonNumber": 2,
         "title": "Thousand-Year Blood War",
         "originalTitle": "BLEACH",
         "year": 2022,
@@ -15990,8 +14937,7 @@
           "platform": "TMDb",
           "url": "https://www.themoviedb.org/tv/30984/season/2"
         },
-        "chineseTitle": "死神",
-        "partLabel": "第 2 季"
+        "chineseTitle": "死神 千年血战篇"
       }
     ],
     "chineseTitle": "死神",

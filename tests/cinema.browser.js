@@ -19,12 +19,9 @@ async page => {
   if (!(await page.locator('#section-animation .cinema-card:visible').count())) throw Error('Animation missing');
   if (await page.locator('#section-films').isVisible()) throw Error('Films should be hidden');
   await page.locator('[data-item-id="tv-46260"]').click();
-  const lastPart = page.locator('[data-installment="23"]');
-  await lastPart.scrollIntoViewIfNeeded();
-  const listTop = await page.locator('#modal-right-scroll-pane').evaluate(el => el.scrollTop);
-  if (listTop <= 0) throw Error('Long series regression requires a scrolled list');
-  await lastPart.click();
-  if (Math.abs(await page.locator('#modal-right-scroll-pane').evaluate(el => el.scrollTop) - listTop) > 1) throw Error('Switching parts reset the list position');
+  if (await page.locator('[data-installment]').count() !== 2) throw Error('Naruto must contain only the original and Shippuden');
+  await page.locator('[data-installment="1"]').click();
+  if (!(await page.locator('#modal-content-slot').innerText()).includes('500 EPISODES')) throw Error('Shippuden must show its complete episode count');
   await page.keyboard.press('Escape');
   await page.waitForFunction(() => document.getElementById('cinema-modal-backdrop').classList.contains('pointer-events-none'));
   await page.locator('[data-item-id="tv-95479"]').click();
