@@ -110,3 +110,7 @@ export function withSeasonDetails(item: MediaItem): MediaItem {
   }));
   return { ...series, year: installments[0].year, posterUrl: installments[0].posterUrl, installments };
 }
+
+export const cinemaAnimationCards = groupFilmCollections(cinemaAnimation).map(withSeasonDetails)
+  .sort((a, b) => Number(b.type === 'series') - Number(a.type === 'series')
+    || Number((b.installments?.length || 0) > 1) - Number((a.installments?.length || 0) > 1));

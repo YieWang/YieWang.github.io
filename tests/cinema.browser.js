@@ -3,7 +3,7 @@ async page => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.reload();
   if (!(await page.locator('.cinema-card[data-collection="true"]').count())) throw Error('Missing film collections');
-  if (await page.locator('.cinema-card[data-type="series"]').count() !== 51) throw Error('Series count');
+  if (await page.locator('.cinema-card[data-type="series"]').count() !== 55) throw Error('Series count');
   if (await page.locator('nav[aria-label="Screen categories"]').innerText().then(t => /[·・]/.test(t))) throw Error('Navigation separators');
   if (await page.locator('main h2').count()) throw Error('Section headings remain');
   const killBill = page.locator('.cinema-card').filter({ has: page.getByRole('heading', { name: 'Kill Bill', exact: true }) });
@@ -43,5 +43,5 @@ async page => {
   if (await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)) throw Error('Horizontal overflow');
   await page.screenshot({ path: 'output/playwright/cinema-series-mobile.png' });
   await page.keyboard.press('Escape');
-  return { series: 51, officeSeasons: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
+  return { series: 55, officeSeasons: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
 }

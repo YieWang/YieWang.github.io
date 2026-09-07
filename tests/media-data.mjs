@@ -28,7 +28,7 @@ for (const exclusion of curation.excludedTracks.filter(t => t.duplicateOf)) {
   assert.match(exclusion.isrc, /^[A-Z]{2}[A-Z0-9]{3}\d{7}$/);
 }
 assert.ok(cinema.every(x => !curation.excludedCinemaIds.includes(x.id)));
-assert.equal(cinema.filter(x => x.genre.split(', ').includes('Animation')).length, 110);
+assert.equal(cinema.filter(x => x.genre.split(', ').includes('Animation')).length, 114);
 assert.ok(cinema.every(x => x.director && x.country));
 assert.equal(cinema.find(x => x.id === 'tv-134182').country, 'CN');
 assert.equal(cinema.find(x => x.id === 'film-24735062').country, 'CN');
@@ -46,12 +46,12 @@ for (const rule of curation.musicGroups) {
   }
 }
 assert.equal(cinema.filter(x => x.type === 'film').length, 343);
-assert.equal(cinema.filter(x => x.type === 'series').length, 51);
+assert.equal(cinema.filter(x => x.type === 'series').length, 55);
 assert.ok(cinema.every(x => !x.review && x.watchedEntries.every(entry => !entry.comment)));
 const watched = cinema.flatMap(x => x.watchedEntries);
 assert.equal(watched.length, 441);
 assert.equal(new Set(watched.map(x => x.doubanId)).size, 441);
-assert.equal(new Set(cinema.filter(x => x.type === 'series').map(x => x.tmdbId)).size, 51);
+assert.equal(new Set(cinema.filter(x => x.type === 'series').map(x => x.tmdbId)).size, 55);
 assert.equal(cinema.find(x => x.id === 'tv-2316').watchedEntries.length, 9);
 assert.ok(cinema.find(x => x.id === 'tv-1429').watchedEntries.some(x => x.doubanId === '35853587'));
 for (const x of cinema) assert.equal(x.firstWatched, x.watchedEntries.map(m => m.firstWatched).sort()[0]);
@@ -109,7 +109,7 @@ const cinemaContext = { exports: {}, require: name => {
   return { ...data, default: data };
 } };
 vm.runInNewContext(ts.transpile(read('src/data/cinema.ts'), { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 }), cinemaContext);
-assert.equal(cinemaContext.exports.allCinemaItems.length, 296);
+assert.equal(cinemaContext.exports.allCinemaItems.length, 300);
 assert.equal(cinema.filter(item => item.hidden).length, 98);
 for (const id of ['film-26930504', 'film-25796222', 'tv-85937', 'film-1306809', 'film-27074316', 'film-4237879']) {
   assert.ok(cinemaContext.exports.allCinemaItems.some(item => item.id === id), `Must retain ${id}`);

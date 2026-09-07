@@ -45,3 +45,14 @@ for (const series of allCinemaItems.filter(x => x.seasons?.length)) {
   }
 }
 console.log('Season details, first covers, original watch records and missing ratings passed');
+
+const animationCards = Array.from(context.exports.cinemaAnimationCards);
+const order = card => (card.type === 'series' ? 0 : 2) + ((card.installments?.length || 0) > 1 ? 0 : 1);
+assert.deepEqual(animationCards.map(order), animationCards.map(order).sort((a, b) => a - b), 'Anime series first, then animated films; collections first in each section');
+for (const id of ['tv-37854', 'tv-46260', 'tv-46261', 'tv-30984']) {
+  const card = animationCards.find(x => x.id === id);
+  assert.ok(card?.installments.length > 1, 'New anime needs one series card with selectable parts');
+  assert.ok(card.installments.every(x => !x.firstWatched && !x.rating), 'New anime has no invented personal records');
+  assert.ok(card.installments.every(x => x.posterUrl.startsWith('https://homepage-assets.mathtranslations.org/')), 'New posters must be on R2');
+}
+console.log('Animation category order and four new franchise cards passed');
