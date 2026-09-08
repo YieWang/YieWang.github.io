@@ -6,7 +6,7 @@ type ReviewedItem = {
   seasons?: ReviewedItem[];
 };
 
-function hasComment(item: ReviewedItem): boolean {
+export function hasComment(item: ReviewedItem): boolean {
   return !item.hidden && (!!item.review?.content?.trim() || !!item.collectionReview?.content?.trim()
     || !!item.installments?.some(hasComment) || !!item.seasons?.some(hasComment));
 }

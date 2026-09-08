@@ -41,7 +41,7 @@
       "author": "村上春树",
       "edition": "南海出版公司 · 2010年版",
       "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4885241-c2ef09157a2b.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4885241-5a1926839fb6.webp",
       "sourceIds": [
         "4885241"
       ],
@@ -49,8 +49,8 @@
       "collection": "1Q84",
       "partOrder": 2,
       "coverSource": "https://book.douban.com/subject/4885241/",
-      "coverWidth": 900,
-      "coverHeight": 1298
+      "coverWidth": 1080,
+      "coverHeight": 1557
     },
     {
       "id": "book-3369600",
@@ -110,14 +110,14 @@
       "author": "斯蒂芬·茨威格",
       "edition": "上海译文出版社 · 2016年版",
       "year": 2016,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2158684-2adc089c8dbe.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2158684-27a6e7443d07.webp",
       "sourceIds": [
         "2158684"
       ],
       "translator": "韩耀成、关惠文",
       "coverSource": "https://www.kobo.com/tw/zh/ebook/Z_c9YaTFgjqHomlWYuj4JA",
-      "coverWidth": 353,
-      "coverHeight": 529
+      "coverWidth": 1200,
+      "coverHeight": 1800
     },
     {
       "id": "book-4166819",
@@ -253,30 +253,30 @@
       "title": "此间的少年",
       "originalTitle": "",
       "author": "江南",
-      "edition": "华文出版社 · 2007年版",
-      "year": 2007,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1020459-65edb96ff4fc.webp",
+      "edition": "北京联合出版公司 · 2011年版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1020459-c8869cfbc085.webp",
       "sourceIds": [
         "1020459"
       ],
-      "coverSource": "https://item.xhsd.com/items/1010000100770564",
-      "coverWidth": 600,
-      "coverHeight": 957
+      "coverSource": "https://book.douban.com/subject/6875231/",
+      "coverWidth": 1080,
+      "coverHeight": 1542
     },
     {
       "id": "book-1321017",
       "title": "九州·缥缈录",
       "originalTitle": "",
       "author": "江南",
-      "edition": "新世界出版社 · 2005年版",
-      "year": 2005,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1321017-f748fb3e79df.webp",
+      "edition": "人民文学出版社 · 2015年修订版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1321017-d2481ae5249a.webp",
       "sourceIds": [
         "1321017"
       ],
-      "coverSource": "https://book.douban.com/subject/1321017/",
-      "coverWidth": 900,
-      "coverHeight": 1205
+      "coverSource": "https://book.douban.com/subject/26261403/",
+      "coverWidth": 309,
+      "coverHeight": 432
     },
     {
       "id": "book-24754316",
@@ -430,20 +430,20 @@
       "title": "秘密",
       "originalTitle": "",
       "author": "东野圭吾",
-      "edition": "化学工业出版社 · 2014年版",
-      "year": 2014,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3102324-e0415e5a607d.webp",
+      "edition": "南海出版公司 · 2017年版",
+      "year": 2017,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3102324-c442a23037a1.webp",
       "sourceIds": [
         "3102324"
       ],
-      "translator": "章程",
+      "translator": "连子心",
       "review": {
         "date": "2025.05.14",
         "content": "要么被毁灭，要么…"
       },
-      "coverSource": "https://item.xhsd.com/items/1010000103416221",
-      "coverWidth": 1200,
-      "coverHeight": 1705
+      "coverSource": "https://book.douban.com/subject/27115970/",
+      "coverWidth": 1080,
+      "coverHeight": 1554
     },
     {
       "id": "book-4009552",
@@ -576,9 +576,9 @@
       "title": "献给阿尔吉侬的花束",
       "originalTitle": "Flowers for Algernon",
       "author": "丹尼尔·凯斯",
-      "edition": "广西师范大学出版社 · 2015年版",
-      "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/26362836-d4c7a27dbb9c.webp",
+      "edition": "河南文艺出版社 · 2022年版",
+      "year": 2022,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26362836-c4691a428756.webp",
       "sourceIds": [
         "26362836"
       ],
@@ -587,9 +587,9 @@
         "date": "2025.05.14",
         "content": "一切记忆消失的时候"
       },
-      "coverSource": "https://book.douban.com/subject/26362836/",
-      "coverWidth": 898,
-      "coverHeight": 1300
+      "coverSource": "https://book.douban.com/subject/35989392/",
+      "coverWidth": 1080,
+      "coverHeight": 1675
     },
     {
       "id": "book-1255625",
@@ -610,9 +610,9 @@
       "title": "1984",
       "originalTitle": "Nineteen Eighty-Four",
       "author": "乔治·奥威尔",
-      "edition": "译林出版社 · 2013年版",
-      "year": 2013,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4820710-aef5521321f2.webp",
+      "edition": "译林出版社 · 2019年版",
+      "year": 2019,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4820710-b830c7d409b8.webp",
       "sourceIds": [
         "4820710"
       ],
@@ -621,9 +621,9 @@
         "date": "2025.05.14",
         "content": "爱情是真的，威权也是真的。"
       },
-      "coverSource": "https://read.douban.com/ebook/3021999/",
-      "coverWidth": 330,
-      "coverHeight": 495
+      "coverSource": "https://book.douban.com/subject/33437080/",
+      "coverWidth": 1080,
+      "coverHeight": 1571
     },
     {
       "id": "book-1036274",
@@ -753,15 +753,15 @@
       "title": "球状闪电",
       "originalTitle": "",
       "author": "刘慈欣",
-      "edition": "四川科学技术出版社 · 2016年版",
+      "edition": "四川科学技术出版社 · 2016年典藏版",
       "year": 2016,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1192090-a35e9346f685.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1192090-ce3175f0ff9b.webp",
       "sourceIds": [
         "1192090"
       ],
-      "coverSource": "https://read.douban.com/ebook/116984494/",
-      "coverWidth": 330,
-      "coverHeight": 495
+      "coverSource": "https://book.douban.com/subject/26856061/",
+      "coverWidth": 1080,
+      "coverHeight": 1553
     },
     {
       "id": "book-26210487",
@@ -786,14 +786,14 @@
       "author": "毛姆",
       "edition": "开明出版社 · 2018年版",
       "year": 2018,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26757680-c23ebc618737.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26757680-348fd84fccd3.webp",
       "sourceIds": [
         "26757680"
       ],
       "translator": "田伟华",
       "coverSource": "https://www.overdrive.com/media/11857228/面纱",
-      "coverWidth": 300,
-      "coverHeight": 400
+      "coverWidth": 510,
+      "coverHeight": 680
     },
     {
       "id": "book-26425831",
@@ -838,7 +838,7 @@
       "author": "卡勒德·胡赛尼",
       "edition": "上海人民出版社 · 2007年版",
       "year": 2007,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2143732-507a395cbeee.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2143732-84d3e53b44a7.webp",
       "sourceIds": [
         "2143732"
       ],
@@ -847,9 +847,9 @@
         "date": "2024.02.20",
         "content": "“把我切开 把孩子给我”"
       },
-      "coverSource": "https://read.douban.com/ebook/3052392/",
-      "coverWidth": 330,
-      "coverHeight": 495
+      "coverSource": "https://book.douban.com/subject/2143732/",
+      "coverWidth": 698,
+      "coverHeight": 1000
     },
     {
       "id": "book-25829693",
@@ -922,20 +922,20 @@
       "title": "月亮和六便士",
       "originalTitle": "The Moon and Sixpence",
       "author": "毛姆",
-      "edition": "四川文艺出版社 · 2018年版",
+      "edition": "上海译文出版社 · 2018年译文40系列",
       "year": 2018,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1858513-75cfe6ab2ef4.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1858513-a4541cbcc869.webp",
       "sourceIds": [
         "1858513"
       ],
-      "translator": "赵文伟",
+      "translator": "傅惟慈",
       "review": {
         "date": "2024.02.20",
         "content": "他有多像魔鬼就有多接近上帝。"
       },
-      "coverSource": "https://se.zhangyue.com/book/detail?appId=ffceb692&bookId=11709291&bookType=1",
-      "coverWidth": 300,
-      "coverHeight": 400
+      "coverSource": "https://book.douban.com/subject/30203769/",
+      "coverWidth": 1080,
+      "coverHeight": 1492
     },
     {
       "id": "book-1254588",
@@ -1057,35 +1057,35 @@
       "title": "平凡的世界",
       "originalTitle": "",
       "author": "路遥",
-      "edition": "北京十月文艺出版社 · 2009年版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1200840-8624a18025c2.webp",
+      "edition": "北京十月文艺出版社 · 2021年版",
+      "year": 2021,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1200840-f69c6fcbb8b0.webp",
       "sourceIds": [
         "1200840"
       ],
-      "coverSource": "https://item.xhsd.com/items/1010000101060071",
-      "coverWidth": 600,
-      "coverHeight": 864
+      "coverSource": "https://www.readinglife.com/books.html?langType=zh",
+      "coverWidth": 1050,
+      "coverHeight": 1500
     },
     {
       "id": "book-1084336",
       "title": "小王子",
       "originalTitle": "Le Petit Prince",
       "author": "安东尼·德·圣-埃克苏佩里",
-      "edition": "新世界出版社 · 2021年版",
-      "year": 2021,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1084336-0115b5fddb62.webp",
+      "edition": "上海译文出版社 · 2012年夏洛书屋版",
+      "year": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1084336-d4e02dad2ac5.webp",
       "sourceIds": [
         "1084336"
       ],
-      "translator": "宋碧云",
+      "translator": "周克希",
       "review": {
         "date": "2024.02.20",
         "content": "我也想找到玫瑰。"
       },
-      "coverSource": "https://book.douban.com/subject/36103047/",
-      "coverWidth": 840,
-      "coverHeight": 1120
+      "coverSource": "https://book.douban.com/subject/11441808/",
+      "coverWidth": 349,
+      "coverHeight": 500
     },
     {
       "id": "book-10554308",
@@ -1114,14 +1114,14 @@
       "author": "乔治·奥威尔",
       "edition": "上海译文出版社 · 2010年版",
       "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2035179-b1f2e6a18e7c.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2035179-9c8ba286cca8.webp",
       "sourceIds": [
         "2035179"
       ],
       "translator": "荣如德",
-      "coverSource": "https://read.douban.com/ebook/13428753/",
-      "coverWidth": 330,
-      "coverHeight": 495
+      "coverSource": "https://www.kobo.com/fi/fi/ebook/8tMyQJrJdTeIH1x6VJWoNg",
+      "coverWidth": 1199,
+      "coverHeight": 1599
     },
     {
       "id": "book-1007914",
@@ -1172,25 +1172,24 @@
     {
       "id": "book-1041007",
       "title": "哈利·波特与魔法石",
-      "originalTitle": "",
+      "originalTitle": "Harry Potter and the Sorcerer's Stone",
       "author": "J. K. 罗琳",
-      "edition": "人民文学出版社 · 2000年版",
-      "year": 2000,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1041007-3d50e5f590fa.webp",
+      "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
+      "year": 2013,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1041007-7d829b569064.webp",
       "sourceIds": [
         "1041007",
         "24531956"
       ],
-      "translator": "苏农",
       "collection": "哈利·波特",
       "partOrder": 1,
       "collectionReview": {
         "date": "2024.02.20",
         "content": "献给魔法和少年。"
       },
-      "coverSource": "https://book.douban.com/subject/1117782/",
-      "coverWidth": 495,
-      "coverHeight": 689
+      "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
+      "coverWidth": 1175,
+      "coverHeight": 1800
     },
     {
       "id": "book-1012611",
@@ -1245,25 +1244,25 @@
       "title": "海边的卡夫卡",
       "originalTitle": "海辺のカフカ",
       "author": "村上春树",
-      "edition": "上海译文出版社 · 2007年版",
-      "year": 2007,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1010000103392313-acd5bf6001e9.webp",
+      "edition": "上海译文出版社 · 2018年版",
+      "year": 2018,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1059419-3c183dd42a83.webp",
       "sourceIds": [
         "1059419"
       ],
       "translator": "林少华",
-      "coverSource": "https://item.xhsd.com/items/1010000103392313",
-      "coverWidth": 900,
-      "coverHeight": 1294
+      "coverSource": "https://www.yiwen.com.cn/bookDetail?id=2090",
+      "coverWidth": 1400,
+      "coverHeight": 1987
     },
     {
       "id": "book-6082808",
       "title": "百年孤独",
       "originalTitle": "Cien años de soledad",
       "author": "加西亚·马尔克斯",
-      "edition": "南海出版公司 · 2020年版",
-      "year": 2020,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/6082808-830a591e7281.webp",
+      "edition": "南海出版公司 · 2017年50周年纪念版",
+      "year": 2017,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-6082808-1961c534a48f.webp",
       "sourceIds": [
         "6082808"
       ],
@@ -1272,9 +1271,9 @@
         "date": "2024.02.20",
         "content": "再多的赘述也不能再为这部伟大的作品增添任何一分色彩。\n这个孤独的家族的名字叫做何塞·阿尔卡蒂奥·奥雷里亚诺·布恩迪亚。\n过去读不懂的时候觉得世界上怎么会有这样一部小说，现在读懂了觉得世界上怎么会有这样一部小说。\n梦幻的语言和荒谬又真实的故事交织成这么一个马尔克斯的乌托邦。马孔多，陶渊明的南山，高更的塔希提岛，梭罗的瓦尔登湖，现代人可触不可及的伊甸园，全都被藏在这部小说里了。正如卷首语所说的那样，创世纪以来首部值得全人类去阅读的文学巨著。"
       },
-      "coverSource": "https://sykbooks.com/products/9787544299114",
-      "coverWidth": 900,
-      "coverHeight": 1242
+      "coverSource": "https://book.douban.com/subject/27107109/",
+      "coverWidth": 1018,
+      "coverHeight": 1619
     },
     {
       "id": "book-4913064",
@@ -1314,98 +1313,92 @@
     {
       "id": "book-1039487",
       "title": "哈利·波特与密室",
-      "originalTitle": "",
+      "originalTitle": "Harry Potter and the Chamber of Secrets",
       "author": "J. K. 罗琳",
-      "edition": "人民文学出版社 · 2000年版",
-      "year": 2000,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1039487-c1ffb0ccf5c1.webp",
-      "translator": "马爱新",
+      "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
+      "year": 2013,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1039487-d2fd888dea96.webp",
       "sourceIds": [],
       "collection": "哈利·波特",
       "partOrder": 2,
-      "coverSource": "https://book.douban.com/subject/1039487/",
-      "coverWidth": 490,
-      "coverHeight": 689
+      "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
+      "coverWidth": 1174,
+      "coverHeight": 1800
     },
     {
       "id": "book-1071241",
       "title": "哈利·波特与阿兹卡班的囚徒",
-      "originalTitle": "",
+      "originalTitle": "Harry Potter and the Prisoner of Azkaban",
       "author": "J. K. 罗琳",
-      "edition": "人民文学出版社 · 2000年版",
-      "year": 2000,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1071241-81392ab77f35.webp",
-      "translator": "郑须弥",
+      "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
+      "year": 2013,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1071241-3c17f717e475.webp",
       "sourceIds": [],
       "collection": "哈利·波特",
       "partOrder": 3,
-      "coverSource": "https://book.douban.com/subject/1071241/",
-      "coverWidth": 408,
-      "coverHeight": 576
+      "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
+      "coverWidth": 1181,
+      "coverHeight": 1800
     },
     {
       "id": "book-1009257",
       "title": "哈利·波特与火焰杯",
-      "originalTitle": "",
+      "originalTitle": "Harry Potter and the Goblet of Fire",
       "author": "J. K. 罗琳",
-      "edition": "人民文学出版社 · 2001年版",
-      "year": 2001,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1009257-6b8975dcccbc.webp",
-      "translator": "马爱新",
+      "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
+      "year": 2013,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1009257-1d71aaa9d669.webp",
       "sourceIds": [],
       "collection": "哈利·波特",
       "partOrder": 4,
-      "coverSource": "https://book.douban.com/subject/1009257/",
-      "coverWidth": 404,
-      "coverHeight": 584
+      "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
+      "coverWidth": 1181,
+      "coverHeight": 1800
     },
     {
       "id": "book-1013129",
       "title": "哈利·波特与凤凰社",
-      "originalTitle": "",
+      "originalTitle": "Harry Potter and the Order of the Phoenix",
       "author": "J. K. 罗琳",
-      "edition": "人民文学出版社 · 2003年版",
-      "year": 2003,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1013129-3319a3a9ae58.webp",
-      "translator": "马爱农、马爱新、蔡文",
+      "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
+      "year": 2013,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1013129-0fab7c3d731e.webp",
       "sourceIds": [],
       "collection": "哈利·波特",
       "partOrder": 5,
-      "coverSource": "https://www.hongniba.com.cn/bookclub/bookinfo.jsp?bookid=10000270",
-      "coverWidth": 216,
-      "coverHeight": 300
+      "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
+      "coverWidth": 1181,
+      "coverHeight": 1800
     },
     {
       "id": "book-1432596",
       "title": "哈利·波特与“混血王子”",
-      "originalTitle": "",
+      "originalTitle": "Harry Potter and the Half-Blood Prince",
       "author": "J. K. 罗琳",
-      "edition": "人民文学出版社 · 2005年版",
-      "year": 2005,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1432596-2a67fc2f457f.webp",
-      "translator": "马爱农、马爱新",
+      "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
+      "year": 2013,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1432596-d9d8f1f30059.webp",
       "sourceIds": [],
       "collection": "哈利·波特",
       "partOrder": 6,
-      "coverSource": "https://book.douban.com/subject/1432596/",
-      "coverWidth": 408,
-      "coverHeight": 576
+      "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
+      "coverWidth": 1181,
+      "coverHeight": 1800
     },
     {
       "id": "book-2295163",
       "title": "哈利·波特与死亡圣器",
-      "originalTitle": "",
+      "originalTitle": "Harry Potter and the Deathly Hallows",
       "author": "J. K. 罗琳",
-      "edition": "人民文学出版社 · 2007年版",
-      "year": 2007,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2295163-c22ebc0ec5e8.webp",
-      "translator": "马爱农、马爱新",
+      "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
+      "year": 2013,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2295163-f3938ca9d2df.webp",
       "sourceIds": [],
       "collection": "哈利·波特",
       "partOrder": 7,
-      "coverSource": "https://book.douban.com/subject/2295163/",
-      "coverWidth": 400,
-      "coverHeight": 567
+      "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
+      "coverWidth": 1181,
+      "coverHeight": 1800
     },
     {
       "id": "book-26389900",
@@ -1574,12 +1567,12 @@
     },
     {
       "id": "book-3686657",
-      "title": "明朝那些事儿 1",
+      "title": "明朝那些事儿 1：洪武大帝",
       "originalTitle": "",
       "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3686657-b51749538c10.webp",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3686657-b790bfceb637.webp",
       "sourceIds": [
         "3674537"
       ],
@@ -1589,99 +1582,99 @@
         "date": "2024.02.20",
         "content": "真正的成功是用自己的方式过完自己的一生。"
       },
-      "coverSource": "https://book.douban.com/subject/3686657/",
-      "coverWidth": 323,
-      "coverHeight": 500
+      "coverSource": "https://read.douban.com/ebook/1465780/",
+      "coverWidth": 330,
+      "coverHeight": 495
     },
     {
       "id": "book-3697785",
-      "title": "明朝那些事儿 2",
+      "title": "明朝那些事儿 2：万国来朝",
       "originalTitle": "",
       "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697785-cb2c83519dcb.webp",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697785-c7cb0014407f.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 2,
-      "coverSource": "https://book.douban.com/subject/3697785/",
-      "coverWidth": 335,
-      "coverHeight": 500
+      "coverSource": "https://read.douban.com/ebook/1465634/",
+      "coverWidth": 330,
+      "coverHeight": 495
     },
     {
       "id": "book-3697787",
-      "title": "明朝那些事儿 3",
+      "title": "明朝那些事儿 3：妖孽宫廷",
       "originalTitle": "",
       "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697787-d1379b638d23.webp",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697787-ec6127a4fcd8.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 3,
-      "coverSource": "https://book.douban.com/subject/3697787/",
-      "coverWidth": 320,
-      "coverHeight": 515
+      "coverSource": "https://read.douban.com/ebook/1492868/",
+      "coverWidth": 330,
+      "coverHeight": 495
     },
     {
       "id": "book-3697783",
-      "title": "明朝那些事儿 4",
+      "title": "明朝那些事儿 4：粉饰太平",
       "originalTitle": "",
       "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697783-6a1f378d8c60.webp",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697783-98b5cd916214.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 4,
-      "coverSource": "https://book.douban.com/subject/3697783/",
-      "coverWidth": 385,
-      "coverHeight": 613
+      "coverSource": "https://read.douban.com/ebook/1494003/",
+      "coverWidth": 330,
+      "coverHeight": 495
     },
     {
       "id": "book-3697784",
-      "title": "明朝那些事儿 5",
+      "title": "明朝那些事儿 5：帝国飘摇",
       "originalTitle": "",
       "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697784-b4eeaef9a963.webp",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697784-b800609bf162.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 5,
-      "coverSource": "https://book.douban.com/subject/3697784/",
-      "coverWidth": 600,
-      "coverHeight": 942
+      "coverSource": "https://read.douban.com/ebook/1502433/",
+      "coverWidth": 330,
+      "coverHeight": 495
     },
     {
       "id": "book-3697782",
-      "title": "明朝那些事儿 6",
+      "title": "明朝那些事儿 6：日暮西山",
       "originalTitle": "",
       "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697782-fca64442b511.webp",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697782-a998a05e4822.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 6,
-      "coverSource": "https://book.douban.com/subject/3697782/",
-      "coverWidth": 600,
-      "coverHeight": 931
+      "coverSource": "https://read.douban.com/ebook/1487343/",
+      "coverWidth": 330,
+      "coverHeight": 495
     },
     {
       "id": "book-3717122",
-      "title": "明朝那些事儿 7",
+      "title": "明朝那些事儿 7：大结局",
       "originalTitle": "",
       "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3717122-c47718722aae.webp",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3717122-2cc6c9aa0eac.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 7,
-      "coverSource": "https://book.douban.com/subject/3717122/",
-      "coverWidth": 600,
-      "coverHeight": 936
+      "coverSource": "https://read.douban.com/ebook/1485115/",
+      "coverWidth": 330,
+      "coverHeight": 495
     },
     {
       "id": "book-3717123",
@@ -1696,7 +1689,8 @@
       "partOrder": 8,
       "coverSource": "https://book.douban.com/subject/3717123/",
       "coverWidth": 300,
-      "coverHeight": 459
+      "coverHeight": 459,
+      "hidden": true
     },
     {
       "id": "book-3717124",
@@ -1711,7 +1705,8 @@
       "partOrder": 9,
       "coverSource": "https://book.douban.com/subject/3717124/",
       "coverWidth": 300,
-      "coverHeight": 463
+      "coverHeight": 463,
+      "hidden": true
     }
   ],
   "essays": []

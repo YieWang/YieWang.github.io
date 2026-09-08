@@ -55,15 +55,15 @@ export function groupBookCollections(books: BookItem[]): BookItem[] {
   });
 }
 
-// Match Screen: collections first, authors together, books ordered by year.
+// Keep each author's collections and standalone books together.
 const authorGroups = new Map<string, BookItem[]>();
 for (const book of groupBookCollections(literatureBooks)) {
-  const key = `${!!book.installments}:${book.author}`;
+  const key = book.author;
   const group = authorGroups.get(key) || [];
   group.push(book);
   authorGroups.set(key, group);
 }
 export const literatureBookCards = [...authorGroups.values()]
-  .map(group => group.sort((a, b) => Number(a.year) - Number(b.year)))
+  .map(group => group.sort((a, b) => Number(!!b.installments) - Number(!!a.installments) || Number(a.year) - Number(b.year)))
   .sort((a, b) => Number(!!b[0].installments) - Number(!!a[0].installments) || Number(a[0].year) - Number(b[0].year))
   .flat();

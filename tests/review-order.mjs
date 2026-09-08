@@ -25,7 +25,22 @@ const tabs = vm.runInNewContext(frontmatter + '\ncategories', {
   reviewFirst, cinemaFilmCards: items, cinemaSeries: items, cinemaAnimationCards: items, withSeasonDetails: item => item,
 });
 for (const tab of tabs) assert.deepEqual(Array.from(tab.items, x => x.id), [...items].sort(reviewFirst).map(x => x.id));
-assert.ok(read('src/pages/marginalia/literature/index.astro').includes('.sort(reviewFirst)'));
+// Author groups arrive together; stable review sorting keeps them together within each tier.
+const books = [
+  { id: 'a-plain', author: 'A' },
+  { id: 'a-review', author: 'A', review: { content: '书评' } },
+  { id: 'a-series', author: 'A', installments: [{ review: { content: '分部书评' } }] },
+  { id: 'b-review', author: 'B', review: { content: '书评' } },
+  { id: 'b-plain', author: 'B' },
+  { id: 'c-blank', author: 'C', review: { content: '　\n' } },
+];
+const booksBefore = JSON.stringify(books);
+const literatureFrontmatter = read('src/pages/marginalia/literature/index.astro').split('---')[1].replace(/^import .*;$/gm, '');
+const bookCards = vm.runInNewContext(literatureFrontmatter + '\nbookCards', {
+  ...context.exports, literatureBookCards: books, literatureEssays: [],
+});
+assert.deepEqual(Array.from(bookCards, book => book.id), ['a-review', 'a-series', 'b-review', 'a-plain', 'b-plain', 'c-blank']);
+assert.equal(JSON.stringify(books), booksBefore, 'Display sorting must preserve source books and installments');
 assert.ok(!read('src/pages/marginalia/[id].astro').includes('reviewFirst'));
 assert.ok(!read('src/pages/marginalia/music/index.astro').includes('reviewFirst'));
 console.log('Review priority: all Screen tabs, books, nested reviews, whitespace, stable order and game/music isolation passed.');

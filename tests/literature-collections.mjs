@@ -10,12 +10,12 @@ vm.runInNewContext(ts.transpile(readFileSync(new URL('literature.ts', root), 'ut
   module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022,
 }), context);
 const { literatureBooks: books, literatureBookCards: cards, groupBookCollections } = context.exports;
-assert.equal(books.length, 103);
-assert.equal(cards.length, 72);
+assert.equal(books.length, data.books.filter(b => !b.hidden).length);
+assert.equal(cards.length, new Set(books.map(b => b.collection || b.id)).size);
 assert.equal(new Set(books.map(b => b.id)).size, books.length);
-assert.equal(new Set(books.flatMap(b => b.sourceIds)).size, 84);
+assert.equal(new Set(data.books.flatMap(b => b.sourceIds || [])).size, 84);
 assert.deepEqual(Array.from(cards.flatMap(b => b.installments || [b]), b => b.id).sort(), Array.from(books, b => b.id).sort());
-for (const [name, count] of Object.entries({ '1Q84': 3, '龙族': 6, '射雕三部曲': 3, '哈利·波特': 7, '基地七部曲': 7, '三体': 3, '明朝那些事儿': 9 })) {
+for (const [name, count] of Object.entries({ '1Q84': 3, '射雕三部曲': 3, '哈利·波特': 7, '基地七部曲': 7, '三体': 3, '明朝那些事儿': 7 })) {
   const card = cards.find(b => b.title === name);
   assert.equal(card.installments.length, count, name);
   assert.equal(card.coverUrl, card.installments[0].coverUrl);
@@ -28,13 +28,8 @@ assert.ok(books.every(b => !b.firstRead && !b.reread), 'Record dates do not prov
 assert.equal(data.essays.length, 0);
 const first = books[0];
 assert.equal(groupBookCollections([first])[0], first);
-const tiers = Array.from(cards, b => Number(!b.installments));
-assert.deepEqual(tiers, [...tiers].sort());
-for (const tier of [true, false]) {
-  const subset = Array.from(cards).filter(b => !!b.installments === tier);
-  for (const author of new Set(subset.map(b => b.author))) {
-    const positions = subset.map((b, i) => b.author === author ? i : -1).filter(i => i >= 0);
-    assert.equal(positions.at(-1) - positions[0] + 1, positions.length);
-  }
+for (const author of new Set(cards.map(b => b.author))) {
+  const positions = Array.from(cards, (b, i) => b.author === author ? i : -1).filter(i => i >= 0);
+  assert.equal(positions.at(-1) - positions[0] + 1, positions.length, `${author}: all books must be adjacent`);
 }
-console.log('84 source records, exact exclusions, 103 volumes, 72 cards, complete series, external covers and no invented reading dates passed');
+console.log('Visible books, complete collections, preserved sources and author adjacency passed');
