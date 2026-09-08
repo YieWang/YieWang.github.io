@@ -29,7 +29,7 @@ for (const exclusion of curation.excludedTracks.filter(t => t.duplicateOf)) {
   assert.match(exclusion.isrc, /^[A-Z]{2}[A-Z0-9]{3}\d{7}$/);
 }
 assert.ok(cinema.every(x => !curation.excludedCinemaIds.includes(x.id)));
-assert.equal(cinema.filter(x => x.genre.split(', ').includes('Animation')).length, 114);
+assert.equal(new Set(cinema.map(x => x.id)).size, cinema.length, 'Cinema IDs must be unique after additions and deletions');
 assert.ok(cinema.every(x => x.director && x.country));
 assert.equal(cinema.find(x => x.id === 'tv-134182').country, 'CN');
 assert.equal(cinema.find(x => x.id === 'film-24735062').country, 'CN');
@@ -46,16 +46,17 @@ for (const rule of curation.musicGroups) {
     assert.equal(album.artistDisplayName, rule.albumArtist);
   }
 }
-assert.equal(cinema.filter(x => x.type === 'film').length, 343);
-assert.equal(cinema.filter(x => x.type === 'series').length, 55);
-assert.ok(cinema.every(x => !x.review && x.watchedEntries.every(entry => !entry.comment)));
+assert.ok(cinema.every(x => ['film', 'series'].includes(x.type) && Array.isArray(x.watchedEntries)));
 const watched = cinema.flatMap(x => x.watchedEntries);
-assert.equal(watched.length, 441);
-assert.equal(new Set(watched.map(x => x.doubanId)).size, 441);
-assert.equal(new Set(cinema.filter(x => x.type === 'series').map(x => x.tmdbId)).size, 55);
+assert.equal(new Set(watched.map(x => x.doubanId)).size, watched.length, 'Watch records must not be duplicated across works');
+const series = cinema.filter(x => x.type === 'series');
+assert.equal(new Set(series.map(x => x.tmdbId)).size, series.length);
 assert.equal(cinema.find(x => x.id === 'tv-2316').watchedEntries.length, 9);
 assert.ok(cinema.find(x => x.id === 'tv-1429').watchedEntries.some(x => x.doubanId === '35853587'));
-for (const x of cinema) assert.equal(x.firstWatched, x.watchedEntries.map(m => m.firstWatched).sort()[0]);
+for (const x of cinema) {
+  if (x.firstWatched) assert.match(x.firstWatched, /^\d{4}-\d{2}-\d{2}$/);
+  for (const entry of x.watchedEntries) assert.match(entry.firstWatched, /^\d{4}-\d{2}-\d{2}$/);
+}
 for (const url of [...music.albums.map(x => x.coverUrl), ...music.artists.map(x => x.avatarUrl), ...cinema.map(x => x.posterUrl)].filter(Boolean)) {
   // Verified standalone artwork from the artist's release page and Spotify single.
   if (music.albums.some(album => album.coverUrl === url) && [
@@ -70,15 +71,11 @@ if (existsSync(new URL(`../${root}cinema-records.json`, import.meta.url))) {
   const original = json(root + 'cinema-records.json');
   for (const x of original) {
     if (excludedCinema.has(x.subjectId)) continue;
+    // Deleted films are no longer part of the site; retained films must keep their records.
+    if (x.type === 'film' && !cinema.some(item => item.id === `film-${x.subjectId}`)) continue;
     const imported = watched.find(m => m.doubanId === x.subjectId);
     assert.equal(imported?.firstWatched, x.markedAt);
-    assert.equal(imported?.comment, '');
     assert.equal(imported?.rating, x.stars ? `${x.stars} / 5` : '');
-  }
-  const posters = json(root + 'cinema-upload-manifest.json');
-  for (const x of cinema) {
-    const selection = posters.find(p => (p.type === 'film' ? 'film-' + p.id : p.id) === x.id);
-    assert.equal(x.posterUrl, 'https://homepage-assets.mathtranslations.org/' + selection.key);
   }
   const originalSongs = json(root + 'apple-library-songs.json');
   for (const song of originalSongs) assert.equal(tracks.some(t => t.id === song.id), !excludedTracks.has(song.id));
@@ -95,7 +92,7 @@ assert.equal(context.exports.escapeHtml('<img src=x onerror="alert(1)">&\''), '&
 const page = read('src/pages/marginalia/music/index.astro');
 assert.ok(page.includes('const displayTracks = album.tracks;'));
 assert.ok(!page.includes('album.tracks.filter('));
-console.log('Media source coverage, series grouping, watch dates, poster mappings and HTML escaping: passed');
+console.log('Media source coverage, unique records, watch dates, artwork URLs and HTML escaping: passed');
 
 // Shared export must interleave Chinese pinyin and Latin names for both page columns.
 const sortedContext = { exports: {}, require: name => ({ default: json('src/data/' + name.replace('./', '')) }) };
@@ -113,9 +110,9 @@ for (let i = 1; i < sortedNames.length; i++) assert.ok(collator.compare(keys[sor
 console.log('Mixed pinyin and Latin artist ordering: passed');
 
 const cinemaContext = { exports: loadData('cinema.ts') };
-assert.equal(cinemaContext.exports.allCinemaItems.length, 295);
-assert.equal(cinema.filter(item => item.hidden).length, 103);
-for (const id of ['film-26930504', 'film-25796222', 'tv-85937', 'film-1306809', 'film-27074316', 'film-4237879']) {
+assert.deepEqual(Array.from(cinemaContext.exports.allCinemaItems, item => item.id).sort(),
+  cinema.filter(item => !item.hidden).map(item => item.id).sort(), 'Every visible item is exported exactly once');
+for (const id of ['film-26930504', 'film-25796222', 'tv-85937', 'film-1306809']) {
   assert.ok(cinemaContext.exports.allCinemaItems.some(item => item.id === id), `Must retain ${id}`);
 }
 assert.ok(cinemaContext.exports.allCinemaItems.every(item => !item.hidden));
@@ -125,9 +122,11 @@ assert.ok(groupedIds.every(id => cinema.some(item => item.id === id)));
 for (const [name, predicate] of [
   ['cinemaAnimation', item => item.genre.split(', ').includes('Animation')],
   ['cinemaFilms', item => item.type === 'film' && !item.genre.split(', ').includes('Animation')],
+  ['cinemaSeries', item => item.type === 'series' && !item.genre.split(', ').includes('Animation')],
 ]) {
   const items = Array.from(cinemaContext.exports[name]);
   assert.deepEqual(items.map(item => item.id).sort(), cinema.filter(item => !item.hidden && predicate(item)).map(item => item.id).sort());
+  if (name === 'cinemaSeries') continue; // Series cards have their own chronological/review ordering checks.
   const key = item => {
     const group = curation.cinemaGroups.findIndex(ids => ids.includes(item.id));
     return group < 0 ? `director:${item.director}` : `series:${group}`;

@@ -24,7 +24,7 @@ assert.equal(groupFilmCollections(cinemaSeries).length, cinemaSeries.length, 'Do
 // Regular episodes from the imported TMDb season records; specials are separate.
 for (const [id, episodes] of Object.entries({ 'tv-276903': 10, 'tv-16069': 11, 'tv-83119': 10,
   'tv-215197': 10, 'tv-38242': 21, 'tv-75701': 10, 'tv-155441': 15, 'tv-33823': 37,
-  'tv-94028': 8, 'tv-6100': 11, 'tv-4319': 11, 'tv-210955': 9 })) {
+  'tv-94028': 8, 'tv-6100': 11, 'tv-4319': 11, 'tv-210955': 9, 'tv-64840': 16 })) {
   assert.equal(cinemaSeries.find(item => item.id === id)?.runtime, `${episodes} Episodes`);
 }
 assert.ok(cinemaSeries.every(item => !/^1 Seasons?$/i.test(item.runtime || '')), 'Single-season television shows must display episodes');
@@ -35,6 +35,7 @@ for (const [id, episodes] of Object.entries({ 'tv-124396': 12, 'tv-42942': 13, '
   'tv-92602': 13, 'tv-105248': 10, 'tv-127714': 13, 'tv-139130': 12 })) {
   assert.equal(cinemaAnimation.find(item => item.id === id)?.runtime, `${episodes} Episodes`);
 }
+assert.ok(cinemaAnimation.every(item => !/^1 Seasons?$/i.test(item.runtime || '')), 'Single-season animation must also display episodes');
 const harryPotter = groupFilmCollections(cinemaFilms).find(x => x.title === 'Harry Potter');
 assert.equal(harryPotter.installments.length, 8);
 assert.ok(harryPotter.installments.every(x => x.title.startsWith('Harry Potter and ')));
@@ -42,6 +43,15 @@ assert.ok(!harryPotter.installments.some(x => x.id === 'film-25726614'), 'Fantas
 console.log('Collection membership, hidden films, release order, single films and TV preservation passed');
 
 const { allCinemaItems, withSeasonDetails } = context.exports;
+// Official seasons are 1–28 and 29–38; TMDb currently merges both into one season.
+// https://frieren-anime.jp/special/edillust/ | https://frieren-anime.jp/news/5419/
+const frieren = withSeasonDetails(allCinemaItems.find(item => item.id === 'tv-209867'));
+assert.deepEqual(Array.from(frieren.installments, item => item.runtime), ['28 Episodes', '10 Episodes']);
+assert.deepEqual(Array.from(frieren.installments, item => item.year), [2023, 2026]);
+assert.equal(frieren.installments[0].firstWatched, '2025-08-12');
+assert.equal(frieren.installments[1].firstWatched, '');
+assert.equal(frieren.installments[1].rating, '');
+assert.equal(frieren.installments[1].watchedEntries.length, 0, 'An aired season does not imply a personal watch record');
 const vinland = withSeasonDetails(allCinemaItems.find(x => x.id === 'tv-88803'));
 assert.deepEqual(Array.from(vinland.installments, x => x.year), [2019, 2023]);
 assert.notEqual(vinland.installments[0].posterUrl, vinland.installments[1].posterUrl);
