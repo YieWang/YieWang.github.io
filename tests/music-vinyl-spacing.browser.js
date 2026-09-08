@@ -5,6 +5,7 @@ async (page) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.mouse.move(0, 0);
     await page.waitForTimeout(550);
+    const contentWidth = await page.evaluate(() => document.documentElement.clientWidth);
     const grid = page.locator('section .grid').filter({ has: page.locator('.music-card:nth-child(6)') }).first();
     const cards = grid.locator('.music-card');
     const columns = width < 640 ? 2 : width < 768 ? 3 : width < 1024 ? 4 : 6;
@@ -12,7 +13,7 @@ async (page) => {
     const outerPadding = width < 640 ? 16 : width < 768 ? 32 : 48;
     const leftPadding = width < 640 ? 141 : Math.min(230, Math.max(160, width * 0.17)) + 60;
     const rightPadding = width < 640 ? 16 : width < 768 ? 32 : 48;
-    const originalWidth = (Math.min(1760, width - outerPadding) - leftPadding - rightPadding - (columns - 1) * gap) / columns;
+    const originalWidth = (Math.min(1760, contentWidth - outerPadding) - leftPadding - rightPadding - (columns - 1) * gap) / columns;
     let minimumGap = Infinity;
     for (let index = 0; index < columns; index++) {
       const card = cards.nth(index);
@@ -42,7 +43,7 @@ async (page) => {
           railRight: document.getElementById('artist-wheel').getBoundingClientRect().right
         };
       });
-      if (Math.abs(geometry.width - originalWidth) > 0.1 || geometry.columns !== columns) throw Error('Original cover size or column count changed');
+      if (Math.abs(geometry.width - originalWidth) > 0.1 || geometry.columns !== columns) throw Error(`${width}px viewport (${contentWidth}px content): expected ${originalWidth}px / ${columns} columns; got ${geometry.width}px / ${geometry.columns} columns`);
       if (geometry.otherCardsMoved) throw Error('Another album moved');
       if (index === 0 && geometry.leftEdge < geometry.railRight + 7.9) throw Error('Album too close to artist rail');
       if (geometry.rightGap < 7.9 || geometry.leftGap < 7.9) throw Error(`${width}px card ${index}: collision ${JSON.stringify(geometry)}`);

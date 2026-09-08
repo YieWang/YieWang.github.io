@@ -1,6 +1,7 @@
 // Run: node tests/literature-book.mjs
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import vm from 'node:vm';
 import ts from 'typescript';
 
@@ -51,7 +52,8 @@ assert.equal(pages.join('').match(/多年以后/g).length, 1);
 assert.equal(pages.length % 2, 0, 'inner pages must form complete spreads');
 assert.ok(preview.includes('https://homepage-assets.mathtranslations.org/images/literature/book/'));
 const pageImages = vm.runInNewContext(preview.split('---')[1] + '\npageImages');
-assert.equal(pageImages[0], '/images/literature/cover.webp');
+const coverVersion = createHash('sha256').update(readFileSync(new URL('../public/images/literature/cover.webp', import.meta.url))).digest('hex').slice(0, 12);
+assert.equal(pageImages[0], '/images/literature/cover.webp?v=' + coverVersion, 'New covers must bypass cached artwork');
 assert.equal(pageImages.length, pages.length + 2);
 // Later pages must not block the first turn; the engine stages them on demand.
 const requested = [], scheduled = [];

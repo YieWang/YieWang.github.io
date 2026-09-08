@@ -10,6 +10,13 @@ async (page) => {
   await page.waitForFunction(() => document.querySelector('.literature-book iframe').contentDocument.querySelector('#book')?.dataset.renderer);
   const originalFrame = await iframe.elementHandle().then(handle => handle.contentFrame());
   const loadedAt = await originalFrame.evaluate(() => performance.timeOrigin);
+  const bookCover = await book.evaluate(async el => {
+    const image = new Image();
+    image.src = JSON.parse(el.dataset.pages)[0];
+    await image.decode();
+    return { width: image.naturalWidth, height: image.naturalHeight };
+  });
+  if (!bookCover.width || !bookCover.height) throw new Error('Book cover failed to decode');
   const checkPhotos = async () => {
     for (const img of await page.locator('.photo-container img').all()) {
       const fits = await img.evaluate(async img => {
@@ -35,7 +42,7 @@ async (page) => {
   await page.screenshot({ path: 'output/playwright/marginalia-music.png' });
   await page.getByRole('link', { name: 'Literature', exact: true }).hover();
   await page.waitForTimeout(250);
-  const closedBook = await iframe.screenshot();
+  const closedBook = await iframe.screenshot({ path: 'output/playwright/marginalia-literature-cover.png' });
   await page.waitForTimeout(4500);
   if (closedBook.equals(await iframe.screenshot())) throw new Error('Book did not turn its pages');
   await page.screenshot({ path: 'output/playwright/marginalia-literature.png' });

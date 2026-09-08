@@ -125,6 +125,8 @@ export function prepare(root, head, snapshots, images) {
     console.log('正在检查内容并构建发布预览…');
     for (const [name, doc] of Object.entries(documents)) validateDocument(name, JSON.parse(readFileSync(join(release, 'src/data', doc.file))));
     run(process.execPath, ['node_modules/astro/astro.js', 'build', '--site', site, '--base', '/'], release);
+    console.log('正在运行发布检查…');
+    run('npm', ['test'], release, { stdio: 'inherit' });
     const evidence = Object.fromEntries(routes.map(route => [route, pageEvidence(readFileSync(join(release, 'dist', route, 'index.html'), 'utf8'))]));
     const changes = contentFiles.filter(file => !readFileSync(join(release, file)).equals(Buffer.from(gitBytes(root, head, file))));
     const after = new Map(contentFiles.map(file => [file, readFileSync(join(release, file))]));
@@ -163,7 +165,7 @@ export async function waitForDeployment(root, sha, forceRun = false) {
     if (match) {
       if (runId !== match.databaseId) { runId = match.databaseId; console.log(`部署进度：${match.url}`); }
       if (match.status === 'completed') {
-        if (match.conclusion !== 'success') throw Error(`线上部署未成功（${match.conclusion}）：${match.url}。重新运行发布可重试。`);
+        if (match.conclusion !== 'success') throw Error(`线上部署未成功（${match.conclusion}）：${match.url}。请查看失败步骤，修复后重新发布。`);
         return;
       }
     }

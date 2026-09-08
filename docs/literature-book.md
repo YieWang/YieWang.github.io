@@ -20,11 +20,12 @@ interests. Playback pauses when inactive; page unload calls `destroy()`.
 Startup waits for the cover and first spread, with later pages prefetched by ZineJS.
 Reduced-motion users see an open, static spread without automatic turns.
 
-The front cover (`public/images/literature/cover.webp`) contains only the title
-百年孤独 on a plain warm paper background. Both the poster and the engine use
-this small same-origin asset; the old publisher cover is no longer requested.
-The adjacent `cover.svg` is its editable source, rasterized at 468 × 672 pixels
-with Sharp WebP quality 90 for compatibility with the engine's bitmap decoder.
+The front cover (`public/images/literature/cover.webp`) uses the green French
+Cent ans de solitude cover supplied by the owner on 2026-09-08. It is resized
+proportionally to 624 × 903 pixels and encoded with Sharp WebP quality 92.
+Both the poster and the engine use this same-origin bitmap, with a content hash
+in its URL to refresh cached artwork. The adjacent `cover.svg` retains the
+previous plain title design and is not the source of the current cover.
 
 The initial pause is 150 ms, each turn takes 1100 ms, and the pause between
 the cover opening and the next turn is 1300 ms.

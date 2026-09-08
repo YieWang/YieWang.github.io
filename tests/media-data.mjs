@@ -60,7 +60,7 @@ for (const url of [...music.albums.map(x => x.coverUrl), ...music.artists.map(x 
     'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e9bfead25d05f8e25c9ffdb1',
   ].includes(url)) continue;
   if (music.albums.some(album => album.coverUrl === url) && /^https:\/\/is\d+-ssl\.mzstatic\.com\/image\/thumb\//.test(url)) continue;
-  assert.match(url, /^https:\/\/homepage-assets\.mathtranslations\.org\/images\/(music|cinema)\/[a-z0-9/.-]+\.webp$/);
+  assert.match(url, /^https:\/\/homepage-assets\.mathtranslations\.org\/images\/(?:(music|cinema)\/[a-z0-9/.-]+|local-editor\/[a-f0-9]{64})\.webp$/);
 }
 const root = 'Homepage-Assets/media/';
 if (existsSync(new URL(`../${root}cinema-records.json`, import.meta.url))) {

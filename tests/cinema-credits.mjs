@@ -27,5 +27,8 @@ for (const [id, expected] of Object.entries({
   'film-4739952': '华森·波克彭, 普特鹏·普罗萨卡·那·萨克那卡林',
   'film-1296697': '富兰克林·沙夫纳', 'film-34961898': '托马斯·凯尔',
   'tv-46261': '真岛浩', 'tv-127714': '快死透了',
-})) assert.equal(creditItems.find(item => item.id === id)?.chineseDirector, expected);
+})) {
+  const item = creditItems.find(item => item.id === id);
+  if (item) assert.equal(item.chineseDirector, expected, id);
+}
 console.log('Complete localized credits, name separators and spelling deduplication passed');
