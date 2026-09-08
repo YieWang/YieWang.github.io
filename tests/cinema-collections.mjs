@@ -27,6 +27,13 @@ const killBill = groupFilmCollections(cinemaFilms).find(x => x.title === 'Kill B
 assert.deepEqual(Array.from(killBill.installments, x => x.id), ['film-1291580', 'film-1291584']);
 assert.equal(groupFilmCollections([killBill.installments[1]])[0], killBill.installments[1], 'A single retained film stays a normal card');
 assert.equal(groupFilmCollections(cinemaSeries).length, cinemaSeries.length, 'Do not combine different TV shows');
+// Regular episodes from the imported TMDb season records; specials are separate.
+for (const [id, episodes] of Object.entries({ 'tv-276903': 10, 'tv-16069': 11, 'tv-83119': 10,
+  'tv-215197': 10, 'tv-38242': 21, 'tv-75701': 10, 'tv-155441': 15, 'tv-33823': 37,
+  'tv-94028': 8, 'tv-6100': 11, 'tv-4319': 11, 'tv-210955': 9 })) {
+  assert.equal(cinemaSeries.find(item => item.id === id)?.runtime, `${episodes} Episodes`);
+}
+assert.ok(cinemaSeries.every(item => !/^1 Seasons?$/i.test(item.runtime || '')), 'Single-season television shows must display episodes');
 const harryPotter = groupFilmCollections(cinemaFilms).find(x => x.title === 'Harry Potter');
 assert.equal(harryPotter.installments.length, 8);
 assert.ok(harryPotter.installments.every(x => x.title.startsWith('Harry Potter and ')));
