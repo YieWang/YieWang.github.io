@@ -10,7 +10,7 @@ const anime = (id, year, studio, extra = {}) => film(id, year, id, { genre: 'Ani
 const source = [
   film('single-old', 1900, 'Old'), film('a-old', 2000, 'A, B'), film('a-review', 2010, 'A', { review }),
   film('z-first', 1950, 'Z'), film('z-last', 1960, 'Z'),
-  film('b-first', 2000, 'B'), film('b-last', 2020, 'C', { review }),
+  film('b-early', 1990, 'B'), film('b-late', 2025, 'B'), film('b-first', 2000, 'B'), film('b-last', 2020, 'C', { review }),
   film('blank', 1901, 'Blank', { review: { content: '　\n' } }),
   show('tv-new', 2020), show('tv-old', 1990), show('tv-reviewed', 2010, { review }),
   show('tv-seasons', 2025, { seasons: [
@@ -29,8 +29,8 @@ const cinema = loadData('cinema.ts', {
   'cinema-import.json': source,
   'media-curation.json': { cinemaGroups: [['z-first','z-last'], ['b-first','b-last'], ['series-movie-first','series-movie-last']], cinemaCollectionTitles: {} },
 });
-assert.deepEqual(ids(cinema.cinemaFilmCards), ['b-first','z-first','a-old','a-review','single-old','blank']);
-assert.deepEqual(ids(cinema.cinemaFilmCards[0].installments), ['b-first','b-last']);
+assert.deepEqual(ids(cinema.cinemaFilmCards), ['a-old','a-review','b-early','b-first','b-late','blank','single-old','z-first']);
+assert.deepEqual(ids(cinema.cinemaFilmCards[3].installments), ['b-first','b-last']);
 assert.deepEqual(ids(cinema.cinemaSeriesCards), ['tv-seasons','tv-reviewed','tv-old','tv-new']);
 assert.deepEqual(ids(cinema.cinemaSeriesCards[0].installments), ['season-early','season-late']);
 assert.deepEqual(ids(cinema.cinemaAnimationCards), ['anime-multi','anime-single','series-movie-first','studio-a-old','studio-a-reviewed','movie-old']);
@@ -50,8 +50,8 @@ const data = { books, essays: [
 ] };
 const before = JSON.stringify(data);
 const literature = loadData('literature.ts', { 'literature.json': data });
-assert.deepEqual(ids(literature.literatureBookCards), ['z-old','z-new','a','b-one','b-single','keigo','liu']);
-assert.deepEqual(ids(literature.literatureBookCards[3].installments), ['b-one','b-two']);
+assert.deepEqual(ids(literature.literatureBookCards), ['z-old','z-new','a','b-single','b-one','keigo','liu']);
+assert.deepEqual(ids(literature.literatureBookCards[4].installments), ['b-one','b-two']);
 assert.deepEqual(ids(literature.literatureEssays), ['new-a','new-b','middle','old']);
 assert.equal(JSON.stringify(data), before);
 
@@ -70,3 +70,8 @@ for (const [author, expected] of [
   ['东野圭吾', ['恶意','秘密','白夜行','解忧杂货店']],
 ]) assert.deepEqual(Array.from(live.literatureBookCards.filter(b => b.author === author), b => b.title), expected);
 console.log('Tier priority, whole-group reviews, source chronology, romanized author names, essay dates and source preservation passed.');
+
+for (const author of new Set(live.literatureBookCards.map(b => b.author))) {
+  const years = Array.from(live.literatureBookCards.filter(b => b.author === author), b => b.originalYear);
+  assert.deepEqual(years, [...years].sort((a,b) => a-b), author);
+}

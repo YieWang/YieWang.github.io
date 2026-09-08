@@ -86,7 +86,7 @@ const bookCards = literatureBookCards;
 
             <!-- Fixed Baseline Row: Year pinned left, Review Icon pinned right (Zero ratings) -->
             <div class="pt-2.5 flex items-center justify-between font-mono text-[0.68rem] sm:text-[0.72rem] text-[#888888] border-t border-transparent">
-              <span class="whitespace-nowrap shrink-0">{book.year}</span>
+              <span class="whitespace-nowrap shrink-0">{book.originalYear ?? "—"}</span>
               {(book.review || book.collectionReview || book.installments?.some(part => part.review)) && (
                 <span
                   class="review-indicator-icon inline-flex items-center text-[#2A2A2A] hover:text-black transition-colors shrink-0"

@@ -17,7 +17,7 @@ export interface BookItem {
   translator?: string;          // Translator (only if this copy is a translation)
   edition: string;              // Combined concise publisher & edition (e.g. "上海译文出版社 · 2010年版")
   year: number | string;        // Publication year of the recorded edition
-  originalYear?: number;        // First publication of the work, used only for ordering
+  originalYear?: number;        // First publication of the work, used for ordering and the list year
   coverUrl: string;             // Public cover URL
   coverWidth?: number;          // Intrinsic size reserves space before the image loads
   coverHeight?: number;
@@ -75,8 +75,7 @@ for (const book of groupBookCollections(literatureBooks)) {
   authorGroups.set(key, group);
 }
 export const literatureBookCards = [...authorGroups.values()]
-  .map(group => group.sort((a, b) => Number(!!b.installments) - Number(!!a.installments)
-    || (a.originalYear ?? Infinity) - (b.originalYear ?? Infinity)))
+  .map(group => group.sort((a, b) => (a.originalYear ?? Infinity) - (b.originalYear ?? Infinity)))
   .sort((a, b) => Number(b.some(hasComment)) - Number(a.some(hasComment))
     || authorOrder.compare(authorSortName(a[0]), authorSortName(b[0])))
   .flat();

@@ -86,26 +86,24 @@ for (const id of excludedIds) {
   assert.ok(!allCinemaItems.some(x => x.id === id), `Deleted films must stay removed: ${id}`);
 }
 assert.deepEqual(filmCards.map(x => x.id).sort(), Array.from(groupFilmCollections(cinemaFilms), x => x.id).sort(), 'Sorting preserves every existing film card');
-const tiers = filmCards.map(x => Number(!x.installments));
-assert.deepEqual(tiers, [...tiers].sort(), 'All film collections precede standalone films');
 const leadDirector = x => (x.installments?.[0] || x).director.split(',')[0].trim();
-for (const collection of [true, false]) {
-  const cards = filmCards.filter(x => !!x.installments === collection);
-  const groups = new Map();
-  cards.forEach((card, index) => {
-    const director = leadDirector(card);
-    const group = groups.get(director) || [];
-    group.push({ card, index }); groups.set(director, group);
-  });
-  const firstYears = [];
-  for (const group of groups.values()) {
-    assert.equal(group.at(-1).index - group[0].index + 1, group.length, 'Same lead director stays adjacent within a tier');
-    const years = group.map(x => Number(x.card.year));
-    assert.deepEqual(years, [...years].sort((a,b) => a-b));
-    firstYears.push({ year: years[0], reviewed: group.some(x => hasComment(x.card)) });
-  }
-  assert.deepEqual(firstYears, [...firstYears].sort((a,b) => Number(b.reviewed)-Number(a.reviewed) || a.year-b.year), 'Reviewed director groups first, then earliest release within each review tier');
+const names = JSON.parse(readFileSync(new URL('cinema-sort-names.json', root), 'utf8'));
+const directorNameOrder = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
+const groups = new Map();
+filmCards.forEach((card, index) => {
+  const director = leadDirector(card);
+  const group = groups.get(director) || [];
+  group.push({ card, index }); groups.set(director, group);
+});
+const groupOrder = [];
+for (const [director, group] of groups) {
+  assert.equal(group.at(-1).index - group[0].index + 1, group.length, 'Same lead director stays adjacent across card types');
+  const years = group.map(x => Number(x.card.year));
+  assert.deepEqual(years, [...years].sort((a,b) => a-b));
+  groupOrder.push({ name: names[director] || director, reviewed: group.some(x => hasComment(x.card)) });
 }
+assert.deepEqual(groupOrder, [...groupOrder].sort((a,b) => Number(b.reviewed)-Number(a.reviewed) || directorNameOrder.compare(a.name,b.name)));
+assert.equal(names['Stephen Chow'], 'Zhou Xing Chi');
 assert.equal(leadDirector(filmCards.find(x => x.title === 'Harry Potter')), 'Chris Columbus');
 assert.equal(leadDirector(filmCards.find(x => x.title === 'King of Comedy')), 'Stephen Chow');
 for (const id of ['film-1474189', 'film-1309045', 'film-1417598',
@@ -113,4 +111,4 @@ for (const id of ['film-1474189', 'film-1309045', 'film-1417598',
   'film-3231742', 'film-3066739', 'film-1432146']) {
   assert.ok(!allCinemaItems.some(x => x.id === id), `Deleted series must stay hidden: ${id}`);
 }
-console.log('Films: series first, adjacent lead directors, chronological groups and intact membership passed');
+console.log('Films: adjacent lead directors, chronological groups and intact membership passed');

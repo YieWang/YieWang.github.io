@@ -1,3 +1,4 @@
+import directorSortNames from './cinema-sort-names.json';
 import importedCinema from './cinema-import.json';
 import { cinemaGroups, cinemaCollectionTitles } from './media-curation.json';
 import { hasComment, reviewFirst } from '../lib/review-order';
@@ -84,20 +85,21 @@ export function groupFilmCollections(items: MediaItem[]): MediaItem[] {
   });
 }
 
-// Series first; keep each lead director's cards together within each tier.
+// Keep a director's collections and standalone films together, in release order.
+const leadDirector = (item: MediaItem) => (item.installments?.[0] || item).director.split(',')[0].trim();
+const directorSortName = (item: MediaItem) => (directorSortNames as Record<string, string>)[leadDirector(item)] || leadDirector(item);
+const directorOrder = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
 const filmDirectorGroups = new Map<string, MediaItem[]>();
 for (const item of groupFilmCollections(cinemaFilms)) {
-  const director = (item.installments?.[0] || item).director.split(',')[0].trim();
-  const key = `${!!item.installments}:${director || item.id}`;
+  const key = leadDirector(item) || item.id;
   const group = filmDirectorGroups.get(key) || [];
   group.push(item);
   filmDirectorGroups.set(key, group);
 }
 export const cinemaFilmCards = [...filmDirectorGroups.values()]
   .map(group => group.sort((a, b) => Number(a.year) - Number(b.year)))
-  .sort((a, b) => Number(!!b[0].installments) - Number(!!a[0].installments)
-    || Number(b.some(hasComment)) - Number(a.some(hasComment))
-    || Number(a[0].year) - Number(b[0].year))
+  .sort((a, b) => Number(b.some(hasComment)) - Number(a.some(hasComment))
+    || directorOrder.compare(directorSortName(a[0]), directorSortName(b[0])))
   .flat();
 
 // Seasons reuse the same detail switcher as film collections.
