@@ -260,11 +260,8 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
       <!-- Two-Column Body (Left Pinned, Right Scrollable, Identical to Cinema) -->
       <div class="flex flex-col sm:flex-row items-stretch gap-5 sm:gap-6 flex-1 min-h-0 overflow-hidden">
         <!-- Left Column: Full Book Artwork (100% Pinned, Never Scrolls) -->
-        <div class="detail-sidebar w-full sm:w-[170px] md:w-[180px] shrink-0 flex flex-col items-center sm:items-stretch justify-start h-auto sm:h-full">
-          <div class="detail-artwork w-[95px] sm:w-full bg-[#F2EFE9] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
-            <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
-            <img src="${escapeHtml(book.coverUrl)}" alt="${escapeHtml(book.title)}" ${book.coverWidth && book.coverHeight ? `width="${Number(book.coverWidth)}" height="${Number(book.coverHeight)}"` : ''} class="block w-full h-auto" />
-          </div>
+        <div class="detail-sidebar w-full sm:w-[170px] md:w-[180px] shrink-0 flex flex-col items-center sm:items-start justify-start h-auto sm:h-full">
+          <img src="${escapeHtml(book.coverUrl)}" alt="${escapeHtml(book.title)}" ${book.coverWidth && book.coverHeight ? `width="${Number(book.coverWidth)}" height="${Number(book.coverHeight)}"` : ''} class="block w-[95px] sm:w-full h-auto min-h-0 max-w-full max-h-full object-contain object-left-top drop-shadow-sm" />
         </div>
 
         <!-- Right Column: Concise Metadata & Scrollable Review (ONLY the review area scrolls) -->
