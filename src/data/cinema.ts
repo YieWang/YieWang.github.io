@@ -1,5 +1,6 @@
 import importedCinema from './cinema-import.json';
 import { cinemaGroups, cinemaCollectionTitles } from './media-curation.json';
+import { hasComment, reviewFirst } from '../lib/review-order';
 
 export interface MediaItem {
   installments?: MediaItem[];   // Films or seasons sharing one collection card
@@ -95,6 +96,7 @@ for (const item of groupFilmCollections(cinemaFilms)) {
 export const cinemaFilmCards = [...filmDirectorGroups.values()]
   .map(group => group.sort((a, b) => Number(a.year) - Number(b.year)))
   .sort((a, b) => Number(!!b[0].installments) - Number(!!a[0].installments)
+    || Number(b.some(hasComment)) - Number(a.some(hasComment))
     || Number(a[0].year) - Number(b[0].year))
   .flat();
 
@@ -110,11 +112,14 @@ export function withSeasonDetails(item: MediaItem): MediaItem {
   return { ...series, year: installments[0].year, posterUrl: installments[0].posterUrl, installments };
 }
 
-const animationCards = groupFilmCollections(cinemaAnimation).map(withSeasonDetails)
-  .sort((a, b) => Number(b.type === 'series') - Number(a.type === 'series')
-    || Number((b.installments?.length || 0) > 1) - Number((a.installments?.length || 0) > 1));
+export const cinemaSeriesCards = cinemaSeries.map(withSeasonDetails)
+  .sort((a, b) => reviewFirst(a, b) || Number(a.year) - Number(b.year));
 
-// Keep each studio at its first position within the existing sorting tiers.
+const animationCards = groupFilmCollections(cinemaAnimation).map(withSeasonDetails);
+const animationTier = (item: MediaItem) => (item.type === 'series' ? 0 : 2)
+  + ((item.installments?.length || 0) > 1 ? 0 : 1);
+
+// Review priority moves whole studio groups, without crossing the four tiers.
 const studioGroups = new Map<string, MediaItem[]>();
 for (const item of animationCards) {
   const key = item.studio ? `${item.type}:${(item.installments?.length || 0) > 1}:${item.studio}` : item.id;
@@ -122,5 +127,9 @@ for (const item of animationCards) {
   group.push(item);
   studioGroups.set(key, group);
 }
-export const cinemaAnimationCards = [...studioGroups.values()].flatMap(group =>
-  group.sort((a, b) => Number(a.year) - Number(b.year)));
+export const cinemaAnimationCards = [...studioGroups.values()]
+  .map(group => group.sort((a, b) => Number(a.year) - Number(b.year)))
+  .sort((a, b) => animationTier(a[0]) - animationTier(b[0])
+    || Number(b.some(hasComment)) - Number(a.some(hasComment))
+    || Number(a[0].year) - Number(b[0].year))
+  .flat();

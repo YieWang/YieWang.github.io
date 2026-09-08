@@ -1,0 +1,298 @@
+{
+  "checkedAt": "2026-09-08",
+  "scope": "70 visible books; ordering metadata only. Displayed editions, covers, reviews, hidden status and partOrder are preserved.",
+  "notes": [
+    "Names are original-name romanizations or Chinese pinyin; display names are unchanged.",
+    "眠 uses the 2010 rewritten illustrated work ねむり, rather than its 1989 short-story precursor.",
+    "我与地坛 uses the title essay first published in 1991; it is currently the only card by Shi Tiesheng.",
+    "Serialized works use the first publication of the work (Jin Yong and 三体); reprints do not reset the year.",
+    "Multi-part entries use the first volume year; Foundation retains the owner-defined reading order."
+  ],
+  "books": {
+    "眠": {
+      "year": 2010,
+      "source": "https://www.shinchosha.co.jp/book/353426/"
+    },
+    "1Q84 BOOK 1": {
+      "year": 2009,
+      "source": "https://www.bookmark.jpf.go.jp/media/2024/10/JBNPDF62.pdf"
+    },
+    "1Q84 BOOK 2": {
+      "year": 2009,
+      "source": "https://www.bookmark.jpf.go.jp/media/2024/10/JBNPDF62.pdf"
+    },
+    "1Q84 BOOK 3": {
+      "year": 2010,
+      "source": "https://en.wikipedia.org/wiki/Haruki_Murakami"
+    },
+    "挪威的森林": {
+      "year": 1987,
+      "source": "https://snl.no/Haruki_Murakami"
+    },
+    "海边的卡夫卡": {
+      "year": 2002,
+      "source": "https://1q84.shinchosha.co.jp/murakami/2002.html"
+    },
+    "当我谈跑步时我谈些什么": {
+      "year": 2007,
+      "source": "https://books.bunshun.jp/ud/book/num/9784163695808"
+    },
+    "象棋的故事": {
+      "year": 1942,
+      "source": "https://www.nyrb.com/products/chess-story"
+    },
+    "上海堡垒": {
+      "year": 2009,
+      "source": "https://www.cctss.org/task/library/704?lang=zh"
+    },
+    "此间的少年": {
+      "year": 2002,
+      "source": "https://news.zongheng.com/zhuanti/jiangnan/jn_index.html"
+    },
+    "九州·缥缈录": {
+      "year": 2005,
+      "source": "https://book.douban.com/subject/1321017/"
+    },
+    "射雕英雄传": {
+      "year": 1957,
+      "source": "https://paper.people.com.cn/rmrbhwb/html/2014-04/26/content_1420142.htm"
+    },
+    "神雕侠侣": {
+      "year": 1959,
+      "source": "https://paper.people.com.cn/rmrbhwb/html/2014-04/26/content_1420142.htm"
+    },
+    "倚天屠龙记": {
+      "year": 1961,
+      "source": "https://paper.people.com.cn/rmrbhwb/html/2014-04/26/content_1420142.htm"
+    },
+    "笑傲江湖": {
+      "year": 1967,
+      "source": "https://paper.people.com.cn/rmrbhwb/html/2014-04/26/content_1420142.htm"
+    },
+    "秘密": {
+      "year": 1998,
+      "source": "https://www.asahi-net.or.jp/~qn6k-kjtn/mobile/book/higashino.htm"
+    },
+    "恶意": {
+      "year": 1996,
+      "source": "https://www.asahi-net.or.jp/~qn6k-kjtn/mobile/book/higashino.htm"
+    },
+    "白夜行": {
+      "year": 1999,
+      "source": "https://www.asahi-net.or.jp/~qn6k-kjtn/mobile/book/higashino.htm"
+    },
+    "解忧杂货店": {
+      "year": 2012,
+      "source": "https://www.asahi-net.or.jp/~qn6k-kjtn/mobile/book/higashino.htm"
+    },
+    "献给阿尔吉侬的花束": {
+      "year": 1966,
+      "source": "https://danielkeyesauthor.com/faq.html"
+    },
+    "1984": {
+      "year": 1949,
+      "source": "https://www.orwellfoundation.com/the-orwell-foundation/about/about-the-orwell-foundation-2/"
+    },
+    "动物农场": {
+      "year": 1945,
+      "source": "https://www.orwellfoundation.com/the-orwell-foundation/about/about-the-orwell-foundation-2/"
+    },
+    "尼罗河上的惨案": {
+      "year": 1937,
+      "source": "https://www.agathachristie.com/en/stories/death-on-the-nile"
+    },
+    "罗杰疑案": {
+      "year": 1926,
+      "source": "https://www.agathachristie.com/en/stories/the-murder-of-roger-ackroyd"
+    },
+    "东方快车谋杀案": {
+      "year": 1934,
+      "source": "https://www.agathachristie.com/en/stories/murder-on-the-orient-express"
+    },
+    "球状闪电": {
+      "year": 2004,
+      "source": "https://en.wikipedia.org/wiki/Liu_Cixin"
+    },
+    "强风吹拂": {
+      "year": 2006,
+      "source": "https://www.shinchosha.co.jp/book/454104/"
+    },
+    "面纱": {
+      "year": 1925,
+      "source": "https://en-academic.com/dic.nsf/enwiki/1979945/"
+    },
+    "月亮和六便士": {
+      "year": 1919,
+      "source": "https://en-academic.com/dic.nsf/enwiki/1979945/"
+    },
+    "刀锋": {
+      "year": 1944,
+      "source": "https://en-academic.com/dic.nsf/enwiki/1979945/"
+    },
+    "斯通纳": {
+      "year": 1965,
+      "source": "https://www.nyrb.com/products/stoner"
+    },
+    "飞鸟集": {
+      "year": 1916,
+      "source": "https://en.wikisource.org/wiki/Stray_Birds"
+    },
+    "灿烂千阳": {
+      "year": 2007,
+      "source": "https://khaledhosseini.com/book-facts/"
+    },
+    "追风筝的人": {
+      "year": 2003,
+      "source": "https://khaledhosseini.com/"
+    },
+    "永恒的终结": {
+      "year": 1955,
+      "source": "https://iro-vics.org/s/Asimov-BG.pdf"
+    },
+    "霍乱时期的爱情": {
+      "year": 1985,
+      "source": "https://en.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez_bibliography"
+    },
+    "百年孤独": {
+      "year": 1967,
+      "source": "https://www.nobelprize.org/laureate/659"
+    },
+    "许三观卖血记": {
+      "year": 1995,
+      "source": "https://en.wikipedia.org/wiki/Yu_Hua"
+    },
+    "活着": {
+      "year": 1993,
+      "source": "https://en.wikipedia.org/wiki/Yu_Hua"
+    },
+    "兄弟": {
+      "year": 2005,
+      "source": "https://en.wikipedia.org/wiki/Yu_Hua"
+    },
+    "我与地坛": {
+      "year": 1991,
+      "source": "https://www.chinawriter.com.cn/n1/2019/1025/c427894-31419972.html"
+    },
+    "围城": {
+      "year": 1947,
+      "source": "https://xsg.tsinghua.edu.cn/info/1004/3261.htm"
+    },
+    "局外人": {
+      "year": 1942,
+      "source": "https://catalogue.bnf.fr/ark:/12148/cb41630073g"
+    },
+    "平凡的世界": {
+      "year": 1986,
+      "source": "https://www.chinawriter.com.cn/n1/2022/0402/c404063-32390470.html"
+    },
+    "小王子": {
+      "year": 1943,
+      "source": "https://www.lepetitprince.com/en/the-book/"
+    },
+    "无声告白": {
+      "year": 2014,
+      "source": "https://www.arts.gov/initiatives/nea-big-read/everything-i-never-told-you"
+    },
+    "哈利·波特与魔法石": {
+      "year": 1997,
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter"
+    },
+    "哈利·波特与密室": {
+      "year": 1998,
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter"
+    },
+    "哈利·波特与阿兹卡班的囚徒": {
+      "year": 1999,
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter"
+    },
+    "哈利·波特与火焰杯": {
+      "year": 2000,
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter"
+    },
+    "哈利·波特与凤凰社": {
+      "year": 2003,
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter"
+    },
+    "哈利·波特与“混血王子”": {
+      "year": 2005,
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter"
+    },
+    "哈利·波特与死亡圣器": {
+      "year": 2007,
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter"
+    },
+    "基地": {
+      "year": 1951,
+      "source": "https://en.wikipedia.org/wiki/Foundation_(novel_series)"
+    },
+    "基地与帝国": {
+      "year": 1952,
+      "source": "https://en.wikipedia.org/wiki/Foundation_(novel_series)"
+    },
+    "第二基地": {
+      "year": 1953,
+      "source": "https://en.wikipedia.org/wiki/Foundation_(novel_series)"
+    },
+    "基地前奏": {
+      "year": 1988,
+      "source": "https://en.wikipedia.org/wiki/Foundation_(novel_series)"
+    },
+    "迈向基地": {
+      "year": 1993,
+      "source": "https://en.wikipedia.org/wiki/Foundation_(novel_series)"
+    },
+    "基地边缘": {
+      "year": 1982,
+      "source": "https://en.wikipedia.org/wiki/Foundation_(novel_series)"
+    },
+    "基地与地球": {
+      "year": 1986,
+      "source": "https://en.wikipedia.org/wiki/Foundation_(novel_series)"
+    },
+    "三体": {
+      "year": 2006,
+      "source": "https://en.wikipedia.org/wiki/Liu_Cixin"
+    },
+    "三体Ⅱ：黑暗森林": {
+      "year": 2008,
+      "source": "https://en.wikipedia.org/wiki/Liu_Cixin"
+    },
+    "三体Ⅲ：死神永生": {
+      "year": 2010,
+      "source": "https://en.wikipedia.org/wiki/Liu_Cixin"
+    },
+    "明朝那些事儿 1：洪武大帝": {
+      "year": 2006,
+      "source": "https://book.douban.com/press/2416/"
+    },
+    "明朝那些事儿 2：万国来朝": {
+      "year": 2007,
+      "source": "https://book.douban.com/press/2416/"
+    },
+    "明朝那些事儿 3：妖孽宫廷": {
+      "year": 2007,
+      "source": "https://book.douban.com/press/2416/"
+    },
+    "明朝那些事儿 4：粉饰太平": {
+      "year": 2007,
+      "source": "https://book.douban.com/press/2416/"
+    },
+    "明朝那些事儿 5：帝国飘摇": {
+      "year": 2008,
+      "source": "https://book.douban.com/press/2416/"
+    },
+    "明朝那些事儿 6：日暮西山": {
+      "year": 2008,
+      "source": "https://book.douban.com/press/2416/"
+    },
+    "明朝那些事儿 7：大结局": {
+      "year": 2009,
+      "source": "https://book.douban.com/press/2416/"
+    }
+  },
+  "additionalSources": [
+    "https://book.douban.com/press/2416/?page=2",
+    "https://www.chinanews.com.cn/cul/news/2008/11-18/1453286.shtml",
+    "https://www.goodreads.com/work/editions/27101343"
+  ]
+}

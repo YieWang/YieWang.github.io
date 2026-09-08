@@ -1,9 +1,8 @@
 ---
-import { reviewFirst } from '../../../lib/review-order';
 import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import { literatureBookCards, literatureEssays } from '../../../data/literature';
-const bookCards = [...literatureBookCards].sort(reviewFirst);
+const bookCards = literatureBookCards;
 ---
 
 <Layout

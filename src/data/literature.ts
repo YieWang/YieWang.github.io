@@ -1,4 +1,6 @@
 import literature from './literature.json';
+import authorSortNames from './literature-sort-names.json';
+import { hasComment } from '../lib/review-order';
 
 export interface BookItem {
   collection?: string;          // Explicit narrative series, not a publisher's imprint
@@ -15,6 +17,7 @@ export interface BookItem {
   translator?: string;          // Translator (only if this copy is a translation)
   edition: string;              // Combined concise publisher & edition (e.g. "上海译文出版社 · 2010年版")
   year: number | string;        // Publication year of the recorded edition
+  originalYear?: number;        // First publication of the work, used only for ordering
   coverUrl: string;             // Public cover URL
   coverWidth?: number;          // Intrinsic size reserves space before the image loads
   coverHeight?: number;
@@ -38,7 +41,12 @@ export interface EssayItem {
 }
 
 export const literatureBooks: BookItem[] = (literature.books as BookItem[]).filter(book => !book.hidden);
-export const literatureEssays: EssayItem[] = (literature.essays as EssayItem[]).filter(essay => !essay.hidden);
+const essayDate = (essay: EssayItem) => {
+  const [year = 0, month = 0, day = 0] = essay.date.split(/\D+/).map(Number);
+  return year * 10000 + month * 100 + day;
+};
+export const literatureEssays: EssayItem[] = (literature.essays as EssayItem[])
+  .filter(essay => !essay.hidden).sort((a, b) => essayDate(b) - essayDate(a));
 
 export function groupBookCollections(books: BookItem[]): BookItem[] {
   const groups = new Map<string, BookItem[]>();
@@ -56,14 +64,19 @@ export function groupBookCollections(books: BookItem[]): BookItem[] {
 }
 
 // Keep each author's collections and standalone books together.
+const authorOrder = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
+const authorName = (book: BookItem) => book.originalAuthor || book.author;
+const authorSortName = (book: BookItem) => (authorSortNames as Record<string, string>)[authorName(book)] || authorName(book);
 const authorGroups = new Map<string, BookItem[]>();
 for (const book of groupBookCollections(literatureBooks)) {
-  const key = book.author;
+  const key = authorName(book);
   const group = authorGroups.get(key) || [];
   group.push(book);
   authorGroups.set(key, group);
 }
 export const literatureBookCards = [...authorGroups.values()]
-  .map(group => group.sort((a, b) => Number(!!b.installments) - Number(!!a.installments) || Number(a.year) - Number(b.year)))
-  .sort((a, b) => Number(!!b[0].installments) - Number(!!a[0].installments) || Number(a[0].year) - Number(b[0].year))
+  .map(group => group.sort((a, b) => Number(!!b.installments) - Number(!!a.installments)
+    || (a.originalYear ?? Infinity) - (b.originalYear ?? Infinity)))
+  .sort((a, b) => Number(b.some(hasComment)) - Number(a.some(hasComment))
+    || authorOrder.compare(authorSortName(a[0]), authorSortName(b[0])))
   .flat();

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import ts from 'typescript';
 import vm from 'node:vm';
+import { loadData } from './load-data.mjs';
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const json = path => JSON.parse(read(path));
 const music = json('src/data/music-import.json');
@@ -111,11 +112,7 @@ const collator = new Intl.Collator('en', { sensitivity: 'base', numeric: true, i
 for (let i = 1; i < sortedNames.length; i++) assert.ok(collator.compare(keys[sortedNames[i-1]] || sortedNames[i-1], keys[sortedNames[i]] || sortedNames[i]) <= 0);
 console.log('Mixed pinyin and Latin artist ordering: passed');
 
-const cinemaContext = { exports: {}, require: name => {
-  const data = json('src/data/' + name.replace('./', ''));
-  return { ...data, default: data };
-} };
-vm.runInNewContext(ts.transpile(read('src/data/cinema.ts'), { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 }), cinemaContext);
+const cinemaContext = { exports: loadData('cinema.ts') };
 assert.equal(cinemaContext.exports.allCinemaItems.length, 295);
 assert.equal(cinema.filter(item => item.hidden).length, 103);
 for (const id of ['film-26930504', 'film-25796222', 'tv-85937', 'film-1306809', 'film-27074316', 'film-4237879']) {

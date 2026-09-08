@@ -1,14 +1,10 @@
 // node tests/literature-collections.mjs
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import vm from 'node:vm';
-import ts from 'typescript';
+import { loadData } from './load-data.mjs';
 const root = new URL('../src/data/', import.meta.url);
 const data = JSON.parse(readFileSync(new URL('literature.json', root), 'utf8'));
-const context = { exports: {}, require: () => ({ default: data }) };
-vm.runInNewContext(ts.transpile(readFileSync(new URL('literature.ts', root), 'utf8'), {
-  module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022,
-}), context);
+const context = { exports: loadData('literature.ts') };
 const { literatureBooks: books, literatureBookCards: cards, groupBookCollections } = context.exports;
 assert.equal(books.length, data.books.filter(b => !b.hidden).length);
 assert.equal(cards.length, new Set(books.map(b => b.collection || b.id)).size);

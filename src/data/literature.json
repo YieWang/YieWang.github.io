@@ -14,7 +14,8 @@
       "translator": "施小炜",
       "coverSource": "https://book.douban.com/subject/21692813/",
       "coverWidth": 873,
-      "coverHeight": 1300
+      "coverHeight": 1300,
+      "originalYear": 2010
     },
     {
       "id": "book-5502995",
@@ -32,7 +33,8 @@
       "partOrder": 3,
       "coverSource": "https://book.douban.com/subject/5502995/",
       "coverWidth": 857,
-      "coverHeight": 1236
+      "coverHeight": 1236,
+      "originalYear": 2010
     },
     {
       "id": "book-4885241",
@@ -50,7 +52,8 @@
       "partOrder": 2,
       "coverSource": "https://book.douban.com/subject/4885241/",
       "coverWidth": 1080,
-      "coverHeight": 1557
+      "coverHeight": 1557,
+      "originalYear": 2009
     },
     {
       "id": "book-3369600",
@@ -66,7 +69,8 @@
       "translator": "施小炜",
       "coverSource": "https://item.xhsd.com/items/1010000101043446",
       "coverWidth": 600,
-      "coverHeight": 909
+      "coverHeight": 909,
+      "originalYear": 2007
     },
     {
       "id": "book-4742918",
@@ -85,7 +89,8 @@
       "partOrder": 1,
       "coverSource": "https://book.douban.com/subject/4742918/",
       "coverWidth": 343,
-      "coverHeight": 494
+      "coverHeight": 494,
+      "originalYear": 2009
     },
     {
       "id": "book-27200257",
@@ -101,7 +106,8 @@
       "translator": "林少华",
       "coverSource": "https://book.douban.com/subject/27200257/",
       "coverWidth": 900,
-      "coverHeight": 1277
+      "coverHeight": 1277,
+      "originalYear": 1987
     },
     {
       "id": "book-2158684",
@@ -117,7 +123,8 @@
       "translator": "韩耀成、关惠文",
       "coverSource": "https://www.kobo.com/tw/zh/ebook/Z_c9YaTFgjqHomlWYuj4JA",
       "coverWidth": 1200,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 1942
     },
     {
       "id": "book-4166819",
@@ -178,7 +185,8 @@
       ],
       "coverSource": "https://item.xhsd.com/items/1010000101054167",
       "coverWidth": 600,
-      "coverHeight": 855
+      "coverHeight": 855,
+      "originalYear": 2009
     },
     {
       "id": "book-20472730",
@@ -261,7 +269,8 @@
       ],
       "coverSource": "https://book.douban.com/subject/6875231/",
       "coverWidth": 1080,
-      "coverHeight": 1542
+      "coverHeight": 1542,
+      "originalYear": 2002
     },
     {
       "id": "book-1321017",
@@ -276,7 +285,8 @@
       ],
       "coverSource": "https://book.douban.com/subject/26261403/",
       "coverWidth": 309,
-      "coverHeight": 432
+      "coverHeight": 432,
+      "originalYear": 2005
     },
     {
       "id": "book-24754316",
@@ -311,7 +321,8 @@
       "partOrder": 3,
       "coverSource": "https://book.douban.com/subject/1070851/",
       "coverWidth": 798,
-      "coverHeight": 1300
+      "coverHeight": 1300,
+      "originalYear": 1961
     },
     {
       "id": "book-1043815",
@@ -443,7 +454,8 @@
       },
       "coverSource": "https://book.douban.com/subject/27115970/",
       "coverWidth": 1080,
-      "coverHeight": 1554
+      "coverHeight": 1554,
+      "originalYear": 1998
     },
     {
       "id": "book-4009552",
@@ -497,7 +509,8 @@
       "translator": "李盈春",
       "coverSource": "https://yuyi.com.sg/products/9787544298995",
       "coverWidth": 1200,
-      "coverHeight": 1722
+      "coverHeight": 1722,
+      "originalYear": 2012
     },
     {
       "id": "book-2284311",
@@ -529,7 +542,8 @@
       "partOrder": 2,
       "coverSource": "https://www.dedao.cn/ebook/detail?id=DLnMGAEG7gKLyYmkAbPaEXxD8BM4J0Ly96WROrpdZn19VNzv2o5e6lqjQQ1poxqy&source=douban",
       "coverWidth": 600,
-      "coverHeight": 790
+      "coverHeight": 790,
+      "originalYear": 1959
     },
     {
       "id": "book-1044547",
@@ -550,7 +564,8 @@
       "partOrder": 1,
       "coverSource": "https://book.douban.com/subject/1044547/",
       "coverWidth": 787,
-      "coverHeight": 1300
+      "coverHeight": 1300,
+      "originalYear": 1957
     },
     {
       "id": "book-1002299",
@@ -569,7 +584,8 @@
       },
       "coverSource": "https://book.douban.com/subject/1002299/",
       "coverWidth": 300,
-      "coverHeight": 463
+      "coverHeight": 463,
+      "originalYear": 1967
     },
     {
       "id": "book-26362836",
@@ -589,7 +605,8 @@
       },
       "coverSource": "https://book.douban.com/subject/35989392/",
       "coverWidth": 1080,
-      "coverHeight": 1675
+      "coverHeight": 1675,
+      "originalYear": 1966
     },
     {
       "id": "book-1255625",
@@ -623,7 +640,8 @@
       },
       "coverSource": "https://book.douban.com/subject/33437080/",
       "coverWidth": 1080,
-      "coverHeight": 1571
+      "coverHeight": 1571,
+      "originalYear": 1949
     },
     {
       "id": "book-1036274",
@@ -672,7 +690,8 @@
       "translator": "张乐敏",
       "coverSource": "https://item.xhsd.com/items/1010000102851556",
       "coverWidth": 1195,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 1937
     },
     {
       "id": "book-4207781",
@@ -732,7 +751,8 @@
       "translator": "娄美莲",
       "coverSource": "https://amomentbooks.com/products/多伦多-渥太华-书店-danxi-日本文学-东野圭吾-恶意",
       "coverWidth": 377,
-      "coverHeight": 541
+      "coverHeight": 541,
+      "originalYear": 1996
     },
     {
       "id": "book-1052990",
@@ -761,7 +781,8 @@
       ],
       "coverSource": "https://book.douban.com/subject/26856061/",
       "coverWidth": 1080,
-      "coverHeight": 1553
+      "coverHeight": 1553,
+      "originalYear": 2004
     },
     {
       "id": "book-26210487",
@@ -777,7 +798,8 @@
       "translator": "林佩瑾、李建铨、杨正敏",
       "coverSource": "https://book.douban.com/subject/26210487/",
       "coverWidth": 875,
-      "coverHeight": 1300
+      "coverHeight": 1300,
+      "originalYear": 2006
     },
     {
       "id": "book-26757680",
@@ -793,7 +815,8 @@
       "translator": "田伟华",
       "coverSource": "https://www.overdrive.com/media/11857228/面纱",
       "coverWidth": 510,
-      "coverHeight": 680
+      "coverHeight": 680,
+      "originalYear": 1925
     },
     {
       "id": "book-26425831",
@@ -809,7 +832,8 @@
       "translator": "杨向荣",
       "coverSource": "https://book.douban.com/subject/26425831/",
       "coverWidth": 893,
-      "coverHeight": 1300
+      "coverHeight": 1300,
+      "originalYear": 1965
     },
     {
       "id": "book-1058661",
@@ -829,7 +853,8 @@
       },
       "coverSource": "https://se.zhangyue.com/book/detail?appId=7f8f7dfd&bookId=12971149&bookType=1",
       "coverWidth": 300,
-      "coverHeight": 400
+      "coverHeight": 400,
+      "originalYear": 1916
     },
     {
       "id": "book-2143732",
@@ -849,7 +874,8 @@
       },
       "coverSource": "https://book.douban.com/subject/2143732/",
       "coverWidth": 698,
-      "coverHeight": 1000
+      "coverHeight": 1000,
+      "originalYear": 2007
     },
     {
       "id": "book-25829693",
@@ -865,7 +891,8 @@
       "translator": "崔正男",
       "coverSource": "https://book.douban.com/subject/25829693/",
       "coverWidth": 552,
-      "coverHeight": 807
+      "coverHeight": 807,
+      "originalYear": 1955
     },
     {
       "id": "book-3211779",
@@ -915,7 +942,8 @@
       },
       "coverSource": "https://book.douban.com/subject/1770782/",
       "coverWidth": 600,
-      "coverHeight": 841
+      "coverHeight": 841,
+      "originalYear": 2003
     },
     {
       "id": "book-1858513",
@@ -935,7 +963,8 @@
       },
       "coverSource": "https://book.douban.com/subject/30203769/",
       "coverWidth": 1080,
-      "coverHeight": 1492
+      "coverHeight": 1492,
+      "originalYear": 1919
     },
     {
       "id": "book-1254588",
@@ -973,7 +1002,8 @@
       },
       "coverSource": "https://ferrybooks.com/products/霍乱时期的爱情",
       "coverWidth": 1814,
-      "coverHeight": 2593
+      "coverHeight": 2593,
+      "originalYear": 1985
     },
     {
       "id": "book-4760224",
@@ -988,7 +1018,8 @@
       ],
       "coverSource": "https://www.easternbooknyc.com/product-page/许三观卖血记",
       "coverWidth": 559,
-      "coverHeight": 812
+      "coverHeight": 812,
+      "originalYear": 1995
     },
     {
       "id": "book-1209899",
@@ -1003,7 +1034,8 @@
       ],
       "coverSource": "https://item.xhsd.com/items/1010000101335125",
       "coverWidth": 1200,
-      "coverHeight": 1792
+      "coverHeight": 1792,
+      "originalYear": 1991
     },
     {
       "id": "book-21371175",
@@ -1019,7 +1051,8 @@
       "translator": "常禾",
       "coverSource": "https://book.douban.com/subject/21371175/",
       "coverWidth": 853,
-      "coverHeight": 1300
+      "coverHeight": 1300,
+      "originalYear": 1926
     },
     {
       "id": "book-1008145",
@@ -1034,7 +1067,8 @@
       ],
       "coverSource": "https://item.xhsd.com/items/1010000102842161",
       "coverWidth": 1200,
-      "coverHeight": 1717
+      "coverHeight": 1717,
+      "originalYear": 1947
     },
     {
       "id": "book-4908885",
@@ -1050,7 +1084,8 @@
       "translator": "李玉民",
       "coverSource": "https://se.zhangyue.com/book/detail?appId=ab91264d&bookId=12989636&bookType=1",
       "coverWidth": 300,
-      "coverHeight": 400
+      "coverHeight": 400,
+      "originalYear": 1942
     },
     {
       "id": "book-1200840",
@@ -1065,7 +1100,8 @@
       ],
       "coverSource": "https://www.readinglife.com/books.html?langType=zh",
       "coverWidth": 876,
-      "coverHeight": 1316
+      "coverHeight": 1316,
+      "originalYear": 1986
     },
     {
       "id": "book-1084336",
@@ -1085,7 +1121,8 @@
       },
       "coverSource": "https://book.douban.com/subject/11441808/",
       "coverWidth": 349,
-      "coverHeight": 500
+      "coverHeight": 500,
+      "originalYear": 1943
     },
     {
       "id": "book-10554308",
@@ -1105,7 +1142,8 @@
       },
       "coverSource": "https://item.xhsd.com/items/1010000101015177",
       "coverWidth": 600,
-      "coverHeight": 869
+      "coverHeight": 869,
+      "originalYear": 1999
     },
     {
       "id": "book-2035179",
@@ -1121,7 +1159,8 @@
       "translator": "荣如德",
       "coverSource": "https://www.kobo.com/fi/fi/ebook/8tMyQJrJdTeIH1x6VJWoNg",
       "coverWidth": 1199,
-      "coverHeight": 1599
+      "coverHeight": 1599,
+      "originalYear": 1945
     },
     {
       "id": "book-1007914",
@@ -1151,7 +1190,8 @@
       ],
       "coverSource": "https://item.xhsd.com/items/1010000103013180",
       "coverWidth": 600,
-      "coverHeight": 882
+      "coverHeight": 882,
+      "originalYear": 2005
     },
     {
       "id": "book-4011670",
@@ -1189,7 +1229,8 @@
       },
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1175,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 1997
     },
     {
       "id": "book-1012611",
@@ -1220,7 +1261,8 @@
       "translator": "韦清琦",
       "coverSource": "https://book.douban.com/subject/27125077/",
       "coverWidth": 1080,
-      "coverHeight": 1635
+      "coverHeight": 1635,
+      "originalYear": 1944
     },
     {
       "id": "book-24153048",
@@ -1237,7 +1279,8 @@
       "translator": "郑桥",
       "coverSource": "https://book.douban.com/subject/24153048/",
       "coverWidth": 878,
-      "coverHeight": 1300
+      "coverHeight": 1300,
+      "originalYear": 1934
     },
     {
       "id": "book-1059419",
@@ -1253,7 +1296,8 @@
       "translator": "林少华",
       "coverSource": "https://www.yiwen.com.cn/bookDetail?id=2090",
       "coverWidth": 1400,
-      "coverHeight": 1987
+      "coverHeight": 1987,
+      "originalYear": 2002
     },
     {
       "id": "book-6082808",
@@ -1273,7 +1317,8 @@
       },
       "coverSource": "https://book.douban.com/subject/27107109/",
       "coverWidth": 1018,
-      "coverHeight": 1619
+      "coverHeight": 1619,
+      "originalYear": 1967
     },
     {
       "id": "book-4913064",
@@ -1288,7 +1333,8 @@
       ],
       "coverSource": "https://item.xhsd.com/items/1010000101274876",
       "coverWidth": 600,
-      "coverHeight": 888
+      "coverHeight": 888,
+      "originalYear": 1993
     },
     {
       "id": "book-26382433",
@@ -1308,7 +1354,8 @@
       },
       "coverSource": "https://book.douban.com/subject/26382433/",
       "coverWidth": 883,
-      "coverHeight": 1271
+      "coverHeight": 1271,
+      "originalYear": 2014
     },
     {
       "id": "book-1039487",
@@ -1323,7 +1370,8 @@
       "partOrder": 2,
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1174,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 1998
     },
     {
       "id": "book-1071241",
@@ -1338,7 +1386,8 @@
       "partOrder": 3,
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 1999
     },
     {
       "id": "book-1009257",
@@ -1353,7 +1402,8 @@
       "partOrder": 4,
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 2000
     },
     {
       "id": "book-1013129",
@@ -1368,7 +1418,8 @@
       "partOrder": 5,
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 2003
     },
     {
       "id": "book-1432596",
@@ -1383,7 +1434,8 @@
       "partOrder": 6,
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 2005
     },
     {
       "id": "book-2295163",
@@ -1398,7 +1450,8 @@
       "partOrder": 7,
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
-      "coverHeight": 1800
+      "coverHeight": 1800,
+      "originalYear": 2007
     },
     {
       "id": "book-26389900",
@@ -1416,7 +1469,8 @@
       "partOrder": 1,
       "coverSource": "https://read.douban.com/ebook/5968669/",
       "coverWidth": 402,
-      "coverHeight": 600
+      "coverHeight": 600,
+      "originalYear": 1951
     },
     {
       "id": "book-26389896",
@@ -1432,7 +1486,8 @@
       "partOrder": 2,
       "coverSource": "https://read.douban.com/ebook/5968784/",
       "coverWidth": 300,
-      "coverHeight": 450
+      "coverHeight": 450,
+      "originalYear": 1952
     },
     {
       "id": "book-26389894",
@@ -1448,7 +1503,8 @@
       "partOrder": 3,
       "coverSource": "https://read.douban.com/ebook/5969832/",
       "coverWidth": 300,
-      "coverHeight": 450
+      "coverHeight": 450,
+      "originalYear": 1953
     },
     {
       "id": "book-26389893",
@@ -1464,7 +1520,8 @@
       "partOrder": 4,
       "coverSource": "https://read.douban.com/ebook/5970502/",
       "coverWidth": 300,
-      "coverHeight": 450
+      "coverHeight": 450,
+      "originalYear": 1988
     },
     {
       "id": "book-26389901",
@@ -1480,7 +1537,8 @@
       "partOrder": 5,
       "coverSource": "https://read.douban.com/ebook/5971031/",
       "coverWidth": 300,
-      "coverHeight": 450
+      "coverHeight": 450,
+      "originalYear": 1993
     },
     {
       "id": "book-26389899",
@@ -1496,7 +1554,8 @@
       "partOrder": 6,
       "coverSource": "https://read.douban.com/ebook/5973180/",
       "coverWidth": 300,
-      "coverHeight": 450
+      "coverHeight": 450,
+      "originalYear": 1982
     },
     {
       "id": "book-26389902",
@@ -1512,7 +1571,8 @@
       "partOrder": 7,
       "coverSource": "https://read.douban.com/ebook/5976630/",
       "coverWidth": 300,
-      "coverHeight": 450
+      "coverHeight": 450,
+      "originalYear": 1986
     },
     {
       "id": "book-2567698",
@@ -1533,7 +1593,8 @@
       },
       "coverSource": "https://read.douban.com/ebook/594929245/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2006
     },
     {
       "id": "book-3066477",
@@ -1548,7 +1609,8 @@
       "partOrder": 2,
       "coverSource": "https://read.douban.com/ebook/594929363/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2008
     },
     {
       "id": "book-5363767",
@@ -1563,7 +1625,8 @@
       "partOrder": 3,
       "coverSource": "https://read.douban.com/ebook/594929542/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2010
     },
     {
       "id": "book-3686657",
@@ -1584,7 +1647,8 @@
       },
       "coverSource": "https://read.douban.com/ebook/1465780/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2006
     },
     {
       "id": "book-3697785",
@@ -1599,7 +1663,8 @@
       "partOrder": 2,
       "coverSource": "https://read.douban.com/ebook/1465634/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2007
     },
     {
       "id": "book-3697787",
@@ -1614,7 +1679,8 @@
       "partOrder": 3,
       "coverSource": "https://read.douban.com/ebook/1492868/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2007
     },
     {
       "id": "book-3697783",
@@ -1629,7 +1695,8 @@
       "partOrder": 4,
       "coverSource": "https://read.douban.com/ebook/1494003/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2007
     },
     {
       "id": "book-3697784",
@@ -1644,7 +1711,8 @@
       "partOrder": 5,
       "coverSource": "https://read.douban.com/ebook/1502433/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2008
     },
     {
       "id": "book-3697782",
@@ -1659,7 +1727,8 @@
       "partOrder": 6,
       "coverSource": "https://read.douban.com/ebook/1487343/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2008
     },
     {
       "id": "book-3717122",
@@ -1674,7 +1743,8 @@
       "partOrder": 7,
       "coverSource": "https://read.douban.com/ebook/1485115/",
       "coverWidth": 330,
-      "coverHeight": 495
+      "coverHeight": 495,
+      "originalYear": 2009
     },
     {
       "id": "book-3717123",

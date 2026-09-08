@@ -1,17 +1,11 @@
 // node tests/cinema-collections.mjs
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import vm from 'node:vm';
-import ts from 'typescript';
+import { loadData } from './load-data.mjs';
 const root = new URL('../src/data/', import.meta.url);
-const context = { exports: {}, require: name => {
-  const data = JSON.parse(readFileSync(new URL(name, root), 'utf8'));
-  return { ...data, default: data };
-} };
-vm.runInNewContext(ts.transpile(readFileSync(new URL('cinema.ts', root), 'utf8'), {
-  module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022,
-}), context);
+const context = { exports: loadData('cinema.ts') };
 const { groupFilmCollections, cinemaFilms, cinemaAnimation, cinemaSeries } = context.exports;
+const { hasComment } = loadData('../lib/review-order.ts');
 for (const items of [cinemaFilms, cinemaAnimation, cinemaSeries]) {
   const cards = Array.from(groupFilmCollections(items));
   const films = cards.flatMap(card => Array.from(card.installments || [card]));
@@ -73,7 +67,6 @@ assert.deepEqual(Array.from(animationCards.find(x => x.id === 'tv-46260').instal
 assert.deepEqual(Array.from(animationCards.find(x => x.id === 'tv-46261').installments, x => x.runtime), ['328 Episodes', '25 Episodes']);
 
 const beforeStudios = Array.from(groupFilmCollections(cinemaAnimation), withSeasonDetails).sort((a,b) => order(a)-order(b));
-assert.deepEqual(animationCards.filter(x => !x.studio).map(x => x.id), beforeStudios.filter(x => !x.studio).map(x => x.id), 'Keep all other cards in their relative order');
 for (const tier of [0,1,2,3]) {
   for (const studio of new Set(animationCards.filter(x => order(x) === tier).map(x => x.studio).filter(Boolean))) {
     const positions = animationCards.map((x,index) => x.studio === studio && order(x) === tier ? index : -1).filter(index => index >= 0);
@@ -83,7 +76,7 @@ for (const tier of [0,1,2,3]) {
   }
 }
 const groupKey = x => `${order(x)}:${x.studio || x.id}`;
-assert.deepEqual([...new Set(animationCards.map(groupKey))],[...new Set(beforeStudios.map(groupKey))],'Keep groups at their first existing position');
+assert.deepEqual([...new Set(animationCards.map(groupKey))].sort(),[...new Set(beforeStudios.map(groupKey))].sort(),'Preserve every studio group');
 assert.ok(animationCards.some(x => x.id === 'tv-37854'), 'One Piece remains visible');
 
 const filmCards = Array.from(context.exports.cinemaFilmCards);
@@ -109,9 +102,9 @@ for (const collection of [true, false]) {
     assert.equal(group.at(-1).index - group[0].index + 1, group.length, 'Same lead director stays adjacent within a tier');
     const years = group.map(x => Number(x.card.year));
     assert.deepEqual(years, [...years].sort((a,b) => a-b));
-    firstYears.push(years[0]);
+    firstYears.push({ year: years[0], reviewed: group.some(x => hasComment(x.card)) });
   }
-  assert.deepEqual(firstYears, [...firstYears].sort((a,b) => a-b), 'Director groups follow their earliest release');
+  assert.deepEqual(firstYears, [...firstYears].sort((a,b) => Number(b.reviewed)-Number(a.reviewed) || a.year-b.year), 'Reviewed director groups first, then earliest release within each review tier');
 }
 assert.equal(leadDirector(filmCards.find(x => x.title === 'Harry Potter')), 'Chris Columbus');
 assert.equal(leadDirector(filmCards.find(x => x.title === 'King of Comedy')), 'Stephen Chow');
