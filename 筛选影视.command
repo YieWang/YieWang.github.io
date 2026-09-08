@@ -9,10 +9,15 @@ if ! command -v node >/dev/null || [[ ! -d node_modules ]]; then
   read '?按回车关闭…'
   exit 1
 fi
-if curl --silent --max-time 2 http://127.0.0.1:4399/__editor/status | /usr/bin/grep -q '"editor":true'; then
+if curl --noproxy '*' --fail --silent --max-time 2 http://127.0.0.1:4399/__editor/status | /usr/bin/grep -q '"editor":true'; then
   open 'http://127.0.0.1:4399/__editor/cinema'
   exit 0
 fi
+if lsof -nP -iTCP:4399 -sTCP:LISTEN >/dev/null 2>&1; then
+  print '编辑器端口 4399 已被占用，但编辑接口不可用。请让 Codex 检查并停止占用此端口的测试服务，再双击启动。'
+  read '?按回车关闭…'
+  exit 1
+fi
 print '正在打开影视筛选器。保持此窗口开启；按 Control-C 停止。'
 export HOMEPAGE_EDITOR=1
-node node_modules/astro/astro.js dev --host 127.0.0.1 --port 4399 --open /__editor/cinema
+exec node node_modules/astro/astro.js dev --host 127.0.0.1 --port 4399 --open /__editor/cinema

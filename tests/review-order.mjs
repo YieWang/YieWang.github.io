@@ -20,7 +20,7 @@ const before = JSON.stringify(items);
 assert.deepEqual([...items].sort(reviewFirst).map(x => x.id), ['film','series','season','collection','plain','blank','hidden-part']);
 assert.equal(JSON.stringify(items), before, 'Display sorting must not rewrite records or reorder installments');
 // Run the actual Screen frontmatter so all three tabs use the common rule.
-const frontmatter = read('src/pages/marginalia/cinema/index.astro').split('---')[1].replace(/^import .*;$/gm, '');
+const frontmatter = read('src/pages/marginalia/screen/index.astro').split('---')[1].replace(/^import .*;$/gm, '');
 const tabs = vm.runInNewContext(frontmatter + '\ncategories', {
   reviewFirst, cinemaFilmCards: items, cinemaSeries: items, cinemaAnimationCards: items, withSeasonDetails: item => item,
 });

@@ -239,11 +239,11 @@ const artistGroups = musicArtists.map(artist => {
       <div class="flex flex-col sm:flex-row items-stretch gap-6 sm:gap-7 flex-1 min-h-0 overflow-hidden">
         
         <!-- LEFT COLUMN: 1:1 Cover Artwork & Minimal Info (100% Pinned, Never Scrolls) -->
-        <div class="w-full sm:w-[170px] md:w-[185px] shrink-0 flex flex-row sm:flex-col items-center sm:items-stretch justify-start h-auto sm:h-full gap-4 sm:gap-0">
+        <div class="detail-sidebar w-full sm:w-[170px] md:w-[185px] shrink-0 flex flex-row sm:flex-col items-center sm:items-stretch justify-start h-auto sm:h-full gap-4 sm:gap-0">
           <div class="flex sm:flex-col items-center sm:items-stretch gap-3 sm:space-y-4 w-full">
             
             <!-- 1:1 Real Cover Frame -->
-            <div class="w-[85px] sm:w-full aspect-square bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
+            <div class="detail-artwork w-[85px] sm:w-full aspect-square bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
               <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
               ${album.coverUrl ? `<img src="${escapeHtml(album.coverUrl)}" alt="${escapeHtml(album.title)}" class="w-full h-full object-cover" />` : ''}
             </div>

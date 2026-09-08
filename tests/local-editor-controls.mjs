@@ -5,6 +5,8 @@ import vm from 'node:vm';
 import { documents, matchesSearch } from '../scripts/editor/schema.mjs';
 
 const ui = readFileSync(new URL('../scripts/editor/ui.js', import.meta.url), 'utf8');
+const routeSource = ui.slice(ui.indexOf('const section ='), ui.indexOf('const style ='));
+assert.equal(vm.runInNewContext(routeSource + '\ndocName;', { location: { pathname: '/marginalia/screen/' } }), 'cinema');
 const moveStart = ui.indexOf('  const move = (from, to)');
 const moveSource = ui.slice(moveStart, ui.indexOf('  const render = () =>', moveStart));
 const items = ['A', 'B', 'C', 'D'];

@@ -29,7 +29,7 @@
 | Mathematics | `/mathematics` | 数学相关内容，沿用当前分区 |
 | Marginalia | `/marginalia` | 个人兴趣入口与对应动画 |
 | Photography | `/marginalia/photography` | 照片浏览 |
-| Screen | `/marginalia/cinema` | 电影、电视剧、动漫收藏；对外名称为 Screen |
+| Screen | `/marginalia/screen` | 电影、电视剧、动漫收藏；对外名称为 Screen |
 | Music | `/marginalia/music` | 艺术家导航与完整专辑列表 |
 | Literature | `/marginalia/literature` | 真实书籍与阅读内容 |
 | Games | `/marginalia/games` | 游戏收藏 |
@@ -37,7 +37,7 @@
 
 - 顶部导航为 Home、Mathematics、Marginalia、CV，各页统一沿用首页的样式、位置和固定导航行为。
 - CV 当前保留文字但不可点击，后续由站主决定恢复。
-- 首页、Mathematics、Marginalia 在桌面端保持单屏，移动端允许滚动；内容长页面正常滚动。
+- 首页、Mathematics、Marginalia 在电脑端保持单屏，移动端竖屏和横屏都允许滚动；内容长页面正常滚动。
 - 首页保留现有城市坐标与波形展示，不恢复旧版肖像布局；联系方式沿用单个邮箱图标。
 - Screen、Music、Literature、Games 使用统一的返回顶部按钮。
 - 不再以旧版 `#research`、`#notes` 作为本站页面架构。

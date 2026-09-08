@@ -4,7 +4,7 @@ async (page) => {
   const results = [];
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: 844 });
-    for (const route of ['cinema', 'music', 'literature', 'games']) {
+    for (const route of ['screen', 'music', 'literature', 'games']) {
       await page.emulateMedia({ reducedMotion: width === 390 ? 'reduce' : 'no-preference' });
       await page.goto(`${origin}/marginalia/${route}/`);
       const button = page.locator('#back-to-top');
@@ -21,7 +21,7 @@ async (page) => {
       const box = await button.boundingBox();
       if (box.width !== 44 || box.height !== 44 || box.x + box.width > width) throw Error(`${route}: button dimensions`);
       if (route !== 'games') {
-        const card = { cinema: '.cinema-card', music: '.music-card', literature: '.book-card' }[route];
+        const card = { screen: '.cinema-card', music: '.music-card', literature: '.book-card' }[route];
         await page.locator(card).first().evaluate(node => node.click());
         await button.waitFor({ state: 'hidden' });
         await page.keyboard.press('Escape');

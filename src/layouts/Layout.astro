@@ -52,7 +52,7 @@ const {
       </main>
       {!zeroScroll && <Footer />}
     </div>
-    {/^\/marginalia\/(cinema|music|literature|games)\/?$/.test(Astro.url.pathname) && <BackToTop />}
+    {/^\/marginalia\/(screen|music|literature|games)\/?$/.test(Astro.url.pathname) && <BackToTop />}
     {import.meta.env.DEV && process.env.HOMEPAGE_EDITOR === '1' && (
       <script is:inline type="module" src="/__editor/ui.js"></script>
     )}
@@ -88,7 +88,7 @@ const {
   }
 
   /* 移动端学术画卷流 (Mobile Academic Scroll Flow) */
-  @media (max-width: 767px) {
+  @media (max-width: 767px), (hover: none) and (pointer: coarse) {
     body.is-home {
       overflow-y: auto;
       height: auto;

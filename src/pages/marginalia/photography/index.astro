@@ -118,6 +118,16 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
 </Layout>
 
 <style>
+  @media (max-width: 767px), (max-height: 500px) {
+    #bottom-meta-footer { height: auto; flex-direction: column; align-items: stretch; gap: 10px; overflow: visible; }
+    #bottom-meta-footer > div:first-child > div { flex-direction: column; gap: 3px; white-space: normal; overflow: visible; }
+    #meta-title { font-size: 14px; line-height: 1.35; overflow-wrap: anywhere; }
+    #meta-location, #meta-story { white-space: normal; overflow: visible; overflow-wrap: anywhere; }
+    #photo-camera-meta { min-width: 0; align-items: flex-start; text-align: left; }
+    #photo-camera-meta > div { flex-wrap: wrap; justify-content: flex-start; }
+    #photo-camera-meta span { overflow-wrap: anywhere; min-width: 0; }
+  }
+
   /* Defer depth mask to photo-wheel-viewport for pixel-accurate hairline docking */
   [data-rwp] {
     -webkit-mask-image: none !important;

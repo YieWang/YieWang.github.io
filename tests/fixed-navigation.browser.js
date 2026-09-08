@@ -1,7 +1,7 @@
 // Open the site, then pass this function to playwright-cli run-code.
 async (page) => {
   const origin = await page.evaluate(() => location.origin);
-  const routes = ['/', '/mathematics/', '/marginalia/', '/marginalia/photography/', '/marginalia/cinema/', '/marginalia/music/', '/marginalia/literature/', '/marginalia/games/', '/marginalia/table-tennis/'];
+  const routes = ['/', '/mathematics/', '/marginalia/', '/marginalia/photography/', '/marginalia/screen/', '/marginalia/music/', '/marginalia/literature/', '/marginalia/games/', '/marginalia/table-tennis/'];
   const positions = () => page.locator('#header .nav-link').evaluateAll(links => links.map(link => {
     const { x, y, width, height } = link.getBoundingClientRect();
     return [x, y, width, height];

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 import ts from 'typescript';
 
-const page = readFileSync(new URL('../src/pages/marginalia/cinema/index.astro', import.meta.url), 'utf8');
+const page = readFileSync(new URL('../src/pages/marginalia/screen/index.astro', import.meta.url), 'utf8');
 const source = page.slice(page.indexOf('    let isLongReview ='), page.indexOf('    modalContentSlot.innerHTML ='));
 const html = { exports: {}, require: name => JSON.parse(readFileSync(new URL(name, new URL('../src/lib/', import.meta.url)), 'utf8')) };
 vm.runInNewContext(ts.transpile(readFileSync(new URL('../src/lib/html.ts', import.meta.url), 'utf8'), { module: ts.ModuleKind.CommonJS }), html);

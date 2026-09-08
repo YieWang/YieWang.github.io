@@ -105,8 +105,8 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
         </div>
 
         <!-- Middle Vertical Canvas -->
-        <div class="relative flex-1 min-h-[100px] sm:min-h-[180px] md:min-h-[220px] w-full my-1 sm:my-2 flex items-center justify-center overflow-hidden">
-          <canvas id="geodetic-canvas-vertical" class="w-full h-full block" style="touch-action: none;"></canvas>
+        <div class="relative flex-none md:flex-1 h-[300px] md:h-auto md:min-h-[220px] w-full my-1 sm:my-2 flex items-center justify-center overflow-hidden">
+          <canvas id="geodetic-canvas-vertical" class="w-full h-full block" style="touch-action: pan-y;"></canvas>
         </div>
 
         <!-- Bottom Anchor: HANGZHOU -->
@@ -335,7 +335,7 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
 
         <!-- Cinema: two identical runs of flat film make one seamless loop. -->
         <div id="stage-panel-cinema" class="stage-panel" inert aria-hidden="true">
-          <a href="/marginalia/cinema" aria-label="Explore Screen" class="stage-art-link">
+          <a href="/marginalia/screen" aria-label="Explore Screen" class="stage-art-link">
             <div class="cinema-scene" aria-hidden="true">
               <div class="cinema-strip">
                 <div class="cinema-track">

@@ -1,4 +1,4 @@
-// Open /marginalia/cinema/, then pass this function to playwright-cli run-code.
+// Open /marginalia/screen/, then pass this function to playwright-cli run-code.
 async page => {
   const url = page.url();
   await page.setViewportSize({ width: 1440, height: 900 });

@@ -1,7 +1,7 @@
 import { fresh, matchesSearch } from '/__editor/schema.js';
 
 const section = location.pathname.split('/')[2];
-const docName = section === 'table-tennis' ? 'interest-text' : ['cinema', 'music', 'literature', 'photography', 'games'].includes(section) ? section : null;
+const docName = section === 'screen' ? 'cinema' : section === 'table-tennis' ? 'interest-text' : ['cinema', 'music', 'literature', 'photography', 'games'].includes(section) ? section : null;
 const style = document.createElement('link');
 style.rel = 'stylesheet'; style.href = '/__editor/style.css'; document.head.append(style);
 const el = (tag, text, attrs = {}) => {
@@ -32,7 +32,7 @@ const manageButton = button('新增 / 管理', () => manage());
 const saveButton = button('保存', save);
 const status = el('span', '', { role: 'status' });
 const navigation = el('select', null, { ariaLabel: '选择兴趣栏目' });
-for (const [value, name] of [['', '选择栏目'], ['photography', '摄影'], ['cinema', '影视'], ['music', '音乐'], ['literature', '文学'], ['games', '游戏'], ['table-tennis', '乒乓球']]) {
+for (const [value, name] of [['', '选择栏目'], ['photography', '摄影'], ['screen', '影视'], ['music', '音乐'], ['literature', '文学'], ['games', '游戏'], ['table-tennis', '乒乓球']]) {
   navigation.append(el('option', name, { value, selected: value === section }));
 }
 navigation.addEventListener('change', () => { if (navigation.value) location.href = '/marginalia/' + navigation.value; });

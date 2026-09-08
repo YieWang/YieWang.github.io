@@ -204,10 +204,10 @@ const categories = [
       <div class="flex flex-col sm:flex-row items-stretch gap-6 sm:gap-7 flex-1 min-h-0 overflow-hidden">
         
         <!-- LEFT COLUMN: Poster, Rating & IMDb Link (100% Pinned, Never Scrolls) -->
-        <div class="w-full sm:w-[175px] md:w-[185px] shrink-0 flex flex-row sm:flex-col items-center sm:items-stretch justify-between h-auto sm:h-full gap-4 sm:gap-0">
+        <div class="detail-sidebar w-full sm:w-[175px] md:w-[185px] shrink-0 flex flex-row sm:flex-col items-center sm:items-stretch justify-between h-auto sm:h-full gap-4 sm:gap-0">
           <div class="flex sm:flex-col items-center sm:items-stretch gap-3 sm:space-y-3">
             <!-- 2:3 Poster Frame -->
-            <div class="w-[85px] sm:w-full aspect-[2/3] bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0">
+            <div class="detail-artwork w-[85px] sm:w-full aspect-[2/3] bg-[#EAEAEA] rounded-[2px] overflow-hidden shadow-xs shrink-0">
               <img src="${escapeHtml(item.posterUrl)}" alt="${escapeHtml(item.title)}" class="w-full h-full object-cover" />
             </div>
 

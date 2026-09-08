@@ -7,6 +7,7 @@ const editing = process.env.HOMEPAGE_EDITOR === '1';
 
 // https://astro.build/config
 export default defineConfig({
+  redirects: { '/marginalia/cinema': '/marginalia/screen/' },
   devToolbar: { enabled: !editing },
   integrations: [
     tailwind({

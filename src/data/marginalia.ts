@@ -26,7 +26,7 @@ export const marginaliaData: MarginaliaData = {
     {
       id: "cinema",
       title: "Screen",
-      href: "/marginalia/cinema",
+      href: "/marginalia/screen",
     },
     {
       id: "literature",

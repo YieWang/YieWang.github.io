@@ -154,7 +154,7 @@ for (const [name, predicate] of [
     if (positions.length) assert.equal(positions.at(-1) - positions[0] + 1, positions.length);
   }
 }
-assert.ok(!read('src/pages/marginalia/cinema/index.astro').includes('items: [...category.items].sort'));
+assert.ok(!read('src/pages/marginalia/screen/index.astro').includes('items: [...category.items].sort'));
 assert.equal(context.exports.secondaryNames(['Parasite'], '기생충', '寄生虫'), '기생충 · 寄生虫');
 assert.equal(context.exports.secondaryNames(['Bleach'], 'BLEACH', '死神', '第 2 季'), '死神 · 第 2 季');
 assert.equal(context.exports.secondaryNames(['Reset'], '开端', '开端'), '开端');
