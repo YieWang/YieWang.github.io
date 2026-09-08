@@ -192,19 +192,29 @@ export default function PhotographyWheelPicker({
 
         /* 3D Photo Wheel Items: ZERO conflicting transform transitions for 60/120fps smoothness */
         .photo-wheel-option {
-          opacity: 0.32;
-          transition: opacity 0.18s ease-out;
           cursor: pointer;
-          will-change: transform, opacity;
+          will-change: transform;
+          transform-style: preserve-3d;
         }
-        .photo-wheel-option:hover {
-          opacity: 0.8;
+        .photo-wheel-option > div {
+          transform-style: preserve-3d;
+        }
+        /* One face-on caption: ancestor opacity/will-change:opacity would flatten it. */
+        .photo-wheel-option .city-header-badge {
+          transform: rotateX(calc(var(--photo-item-angle) - var(--photo-wheel-angle)));
+          opacity: calc(1 - 0.68 * var(--photo-caption-distance));
+          filter: blur(calc(0.4px * var(--photo-caption-distance)));
+        }
+        .photo-wheel-highlight-item .city-header-badge {
+          visibility: hidden;
         }
         .photo-wheel-option .photo-paper-card {
+          opacity: 0.32;
           filter: blur(0.4px);
-          transition: filter 0.18s ease-out;
+          transition: opacity 0.18s ease-out, filter 0.18s ease-out;
         }
         .photo-wheel-option:hover .photo-paper-card {
+          opacity: 0.8;
           filter: blur(0px);
         }
         .photo-wheel-highlight-wrapper {

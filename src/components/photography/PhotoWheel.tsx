@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 
 export interface PhotoWheelOption {
   value: string;
@@ -27,8 +27,18 @@ export default function PhotoWheel({ options, value, onValueChange }: {
   notify.current = onValueChange;
   const drag = useRef<{ y: number; top: number; lastY: number; time: number; speed: number; moved: boolean } | null>(null);
   const ignoreClick = useRef(false);
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
+    const media = matchMedia('(max-width: 767px), (hover: none) and (pointer: coarse)');
+    const update = () => setMobile(media.matches);
+    update();
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    if (mobile) return;
     const element = scroller.current!;
     const gallery = element.closest('#gallery-viewport-root') as HTMLElement;
     const stage = gallery.querySelector('#right-showcase-stage') as HTMLElement;
@@ -57,9 +67,11 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     const draw = () => {
       const position = element.scrollTop / itemHeight;
       wheel.current!.style.transform = `translateZ(${-radius}px) rotateX(${position * itemAngle}deg)`;
+      wheel.current!.style.setProperty('--photo-wheel-angle', `${position * itemAngle}deg`);
       highlight.current!.style.transform = `translateY(${-element.scrollTop}px)`;
       Array.from(wheel.current!.children).forEach((child, index) => {
         (child as HTMLElement).style.visibility = Math.abs(index - position) < 4 ? 'visible' : 'hidden';
+        (child as HTMLElement).style.setProperty('--photo-caption-distance', String(Math.min(1, Math.abs(index - position))));
       });
     };
     const settle = () => {
@@ -240,7 +252,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       gallery.removeEventListener('pointercancel', onPointerCancel);
       stage.style.touchAction = previousTouchAction;
     };
-  }, [options]);
+  }, [options, mobile]);
 
   useEffect(() => {
     if (value === selected.current) return;
@@ -252,10 +264,10 @@ export default function PhotoWheel({ options, value, onValueChange }: {
 
   return (
     <div data-rwp style={{ height }}>
-      <ul ref={wheel} data-rwp-options aria-hidden="true" style={{ pointerEvents: 'none', transform: `translateZ(${-radius}px) rotateX(${initialIndex * itemAngle}deg)` }}>
+      <ul ref={wheel} data-rwp-options aria-hidden="true" style={{ pointerEvents: 'none', '--photo-wheel-angle': `${initialIndex * itemAngle}deg`, transform: `translateZ(${-radius}px) rotateX(${initialIndex * itemAngle}deg)` } as CSSProperties}>
         {options.map((option, index) => (
           <li key={option.value} data-rwp-option data-index={index} className="photo-wheel-option"
-            style={{ top: -itemHeight / 2, height: itemHeight, lineHeight: `${itemHeight}px`, visibility: Math.abs(index - initialIndex) < 4 ? 'visible' : 'hidden', transform: `rotateX(${-index * itemAngle}deg) translateZ(${radius}px)` }}>
+            style={{ top: -itemHeight / 2, height: itemHeight, lineHeight: `${itemHeight}px`, '--photo-item-angle': `${index * itemAngle}deg`, '--photo-caption-distance': Math.min(1, Math.abs(index - initialIndex)), visibility: Math.abs(index - initialIndex) < 4 ? 'visible' : 'hidden', transform: `rotateX(${-index * itemAngle}deg) translateZ(${radius}px)` } as CSSProperties}>
             {option.label}
           </li>
         ))}

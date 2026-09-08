@@ -41,9 +41,10 @@ const page = readFileSync(new URL('../src/pages/marginalia/photography/index.ast
 const elements = Object.fromEntries(['cameraMeta', 'metaTitle', 'metaLocation', 'metaStory', 'exifCam', 'exifLens', 'exifFilm', 'exifFilmDot', 'exifOptics'].map(name => [name, { textContent: '', style: {} }]));
 const gallery = vm.createContext({
   ...elements, allPhotos, photoOptics, photoLocation,
+  canvas: null, thumbnails: null, yearSelect: null, city: null,
   morphToImage() {}, preloadPhoto() {},
 });
-vm.runInContext(ts.transpile('let currentPhotoIndex = 0;\n' + page.slice(
+vm.runInContext(ts.transpile('let activeIndex = 0;\n' + page.slice(
   page.indexOf('    function activatePhotoByIndex('),
   page.indexOf('    // Listen for custom event'),
 )), gallery);
