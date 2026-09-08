@@ -127,52 +127,6 @@
       "originalYear": 1942
     },
     {
-      "id": "book-4166819",
-      "title": "你好，旧时光",
-      "originalTitle": "玛丽苏病例报告",
-      "author": "八月长安",
-      "edition": "金城出版社 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4166819-a22ba6bc0bb7.webp",
-      "sourceIds": [
-        "4166819"
-      ],
-      "coverSource": "https://item.xhsd.com/items/1010000103034911",
-      "hidden": true
-    },
-    {
-      "id": "book-24877320",
-      "title": "龙族Ⅲ：黑月之潮（中）",
-      "originalTitle": "",
-      "author": "江南",
-      "edition": "长江出版社 · 2013年版",
-      "year": 2013,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/24877320-882152ce1855.webp",
-      "sourceIds": [
-        "24877320"
-      ],
-      "collection": "龙族",
-      "partOrder": 4,
-      "coverSource": "https://book.douban.com/subject/24877320/",
-      "hidden": true
-    },
-    {
-      "id": "book-26647621",
-      "title": "龙族Ⅳ：奥丁之渊",
-      "originalTitle": "",
-      "author": "江南",
-      "edition": "长江出版社 · 2015年版",
-      "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/26647621-7e5d47f22f30.webp",
-      "sourceIds": [
-        "26647621"
-      ],
-      "collection": "龙族",
-      "partOrder": 6,
-      "coverSource": "https://book.douban.com/subject/26647621/",
-      "hidden": true
-    },
-    {
       "id": "book-3268399",
       "title": "上海堡垒",
       "originalTitle": "",
@@ -187,74 +141,6 @@
       "coverWidth": 600,
       "coverHeight": 855,
       "originalYear": 2009
-    },
-    {
-      "id": "book-20472730",
-      "title": "龙族Ⅲ：黑月之潮（上）",
-      "originalTitle": "",
-      "author": "江南",
-      "edition": "长江出版社 · 2013年版",
-      "year": 2013,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/20472730-2bc891e0319c.webp",
-      "sourceIds": [
-        "20472730"
-      ],
-      "collection": "龙族",
-      "partOrder": 3,
-      "coverSource": "https://book.douban.com/subject/20472730/",
-      "hidden": true
-    },
-    {
-      "id": "book-25825717",
-      "title": "龙族Ⅲ：黑月之潮（下）",
-      "originalTitle": "",
-      "author": "江南",
-      "edition": "长江出版社 · 2013年版",
-      "year": 2013,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/25825717-ff3028b30ff1.webp",
-      "sourceIds": [
-        "25825717"
-      ],
-      "collection": "龙族",
-      "partOrder": 5,
-      "coverSource": "https://book.douban.com/subject/25825717/",
-      "hidden": true
-    },
-    {
-      "id": "book-6434543",
-      "title": "龙族Ⅱ：悼亡者之瞳",
-      "originalTitle": "",
-      "author": "江南",
-      "edition": "长江出版社 · 2011年版",
-      "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/6434543-90a3291cd67c.webp",
-      "sourceIds": [
-        "6434543"
-      ],
-      "review": {
-        "date": "2025.05.14",
-        "content": "史诗的开头"
-      },
-      "collection": "龙族",
-      "partOrder": 2,
-      "coverSource": "https://book.douban.com/subject/6434543/",
-      "hidden": true
-    },
-    {
-      "id": "book-4737329",
-      "title": "龙族Ⅰ：火之晨曦",
-      "originalTitle": "",
-      "author": "江南",
-      "edition": "长江出版社 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4737329-f73dbb18f7bb.webp",
-      "sourceIds": [
-        "4737329"
-      ],
-      "collection": "龙族",
-      "partOrder": 1,
-      "coverSource": "https://book.douban.com/subject/4737329/",
-      "hidden": true
     },
     {
       "id": "book-1020459",
@@ -274,7 +160,7 @@
     },
     {
       "id": "book-1321017",
-      "title": "九州·缥缈录",
+      "title": "九州·缥缈录Ⅰ：蛮荒",
       "originalTitle": "",
       "author": "江南",
       "edition": "人民文学出版社 · 2015年修订版",
@@ -286,21 +172,89 @@
       "coverSource": "https://book.douban.com/subject/26261403/",
       "coverWidth": 309,
       "coverHeight": 432,
+      "originalYear": 2005,
+      "collection": "九州·缥缈录",
+      "partOrder": 1
+    },
+    {
+      "id": "book-26405967",
+      "title": "九州·缥缈录Ⅱ：苍云古齿",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405967-27e9305159ff.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 2,
+      "coverSource": "https://book.douban.com/subject/26405967/",
+      "coverWidth": 1080,
+      "coverHeight": 1514,
       "originalYear": 2005
     },
     {
-      "id": "book-24754316",
-      "title": "最好的我们",
-      "originalTitle": "流水混账",
-      "author": "八月长安",
-      "edition": "湖南文艺出版社 · 2013年版",
-      "year": 2013,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-24754316-fc7476ffd6c3.webp",
-      "sourceIds": [
-        "24754316"
-      ],
-      "coverSource": "https://item.xhsd.com/items/1010000103357746",
-      "hidden": true
+      "id": "book-26405970",
+      "title": "九州·缥缈录Ⅲ：天下名将",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405970-efb7a4c65600.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 3,
+      "coverSource": "https://book.douban.com/subject/26405970/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2007
+    },
+    {
+      "id": "book-26405972",
+      "title": "九州·缥缈录Ⅳ：辰月之征",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405972-fa454ef6428b.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 4,
+      "coverSource": "https://book.douban.com/subject/26405972/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2007
+    },
+    {
+      "id": "book-26405975",
+      "title": "九州·缥缈录Ⅴ：一生之盟",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405975-bf99e7754ac8.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 5,
+      "coverSource": "https://book.douban.com/subject/26405975/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2009
+    },
+    {
+      "id": "book-26405980",
+      "title": "九州·缥缈录Ⅵ：豹魂",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405980-562bfc79d661.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 6,
+      "coverSource": "https://book.douban.com/subject/26405980/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2009
     },
     {
       "id": "book-1070851",
@@ -325,118 +279,6 @@
       "originalYear": 1961
     },
     {
-      "id": "book-1043815",
-      "title": "骆驼祥子",
-      "originalTitle": "",
-      "author": "老舍",
-      "edition": "人民文学出版社 · 1962年版",
-      "year": 1962,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1043815-b34febdd8d71.webp",
-      "sourceIds": [
-        "1043815"
-      ],
-      "coverSource": "https://book.douban.com/subject/1043815/",
-      "hidden": true
-    },
-    {
-      "id": "book-4723740",
-      "title": "回廊亭杀人事件",
-      "originalTitle": "回廊亭殺人事件",
-      "author": "东野圭吾",
-      "edition": "华文出版社 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4723740-8e308f14e79d.webp",
-      "sourceIds": [
-        "4723740"
-      ],
-      "translator": "陈祖懿",
-      "coverSource": "https://book.douban.com/subject/4723740/",
-      "hidden": true
-    },
-    {
-      "id": "book-3926665",
-      "title": "伽利略的苦恼",
-      "originalTitle": "",
-      "author": "东野圭吾",
-      "edition": "当代世界出版社 · 2009年版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/3926665-7418619d7677.webp",
-      "sourceIds": [
-        "3926665"
-      ],
-      "translator": "袁斌",
-      "coverSource": "https://book.douban.com/subject/3926665/",
-      "hidden": true
-    },
-    {
-      "id": "book-4718973",
-      "title": "毒笑小说",
-      "originalTitle": "どくしょうしょうせつ",
-      "author": "东野圭吾",
-      "edition": "南海出版公司 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4718973-b0fce95c42da.webp",
-      "sourceIds": [
-        "4718973"
-      ],
-      "translator": "李盈春",
-      "coverSource": "https://book.douban.com/subject/4718973/",
-      "hidden": true
-    },
-    {
-      "id": "book-4213995",
-      "title": "黑笑小说",
-      "originalTitle": "黒笑小説",
-      "author": "东野圭吾",
-      "edition": "南海出版公司 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4213995-f0466177d371.webp",
-      "sourceIds": [
-        "4213995"
-      ],
-      "translator": "李盈春",
-      "coverSource": "https://book.douban.com/subject/4213995/",
-      "hidden": true
-    },
-    {
-      "id": "book-4928387",
-      "title": "单恋",
-      "originalTitle": "片想い",
-      "author": "东野圭吾",
-      "edition": "南海出版公司 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4928387-3c13850258ea.webp",
-      "sourceIds": [
-        "4928387"
-      ],
-      "translator": "赵峻",
-      "review": {
-        "date": "2025.05.14",
-        "content": "已经忘了情节，但模糊记得还不错"
-      },
-      "coverSource": "https://book.douban.com/subject/4928387/",
-      "hidden": true
-    },
-    {
-      "id": "book-3713327",
-      "title": "圣女的救济",
-      "originalTitle": "",
-      "author": "东野圭吾",
-      "edition": "当代世界出版社 · 2009年版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1010000101116363-23cf3272560a.webp",
-      "sourceIds": [
-        "3713327"
-      ],
-      "translator": "袁斌",
-      "review": {
-        "date": "2025.05.14",
-        "content": "我喜欢这个诡计，这是由病态的爱构成的，但又那样忠贞。"
-      },
-      "coverSource": "https://item.xhsd.com/items/1010000101116363",
-      "hidden": true
-    },
-    {
       "id": "book-3102324",
       "title": "秘密",
       "originalTitle": "",
@@ -458,44 +300,6 @@
       "originalYear": 1998
     },
     {
-      "id": "book-4009552",
-      "title": "幻夜",
-      "originalTitle": "",
-      "author": "东野圭吾",
-      "edition": "南海出版公司 · 2009年版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4009552-43f98df34cb2.webp",
-      "sourceIds": [
-        "4009552"
-      ],
-      "translator": "李炜",
-      "review": {
-        "date": "2025.05.14",
-        "content": "那些被遗忘的"
-      },
-      "coverSource": "https://book.douban.com/subject/4009552/",
-      "hidden": true
-    },
-    {
-      "id": "book-4074636",
-      "title": "放学后",
-      "originalTitle": "はうかご",
-      "author": "东野圭吾",
-      "edition": "南海出版公司 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4074636-38487a6809bf.webp",
-      "sourceIds": [
-        "4074636"
-      ],
-      "translator": "赵峻",
-      "review": {
-        "date": "2025.05.14",
-        "content": "本格"
-      },
-      "coverSource": "https://book.douban.com/subject/4074636/",
-      "hidden": true
-    },
-    {
       "id": "book-25862578",
       "title": "解忧杂货店",
       "originalTitle": "ナミヤ雑貨店の奇蹟",
@@ -511,21 +315,6 @@
       "coverWidth": 1200,
       "coverHeight": 1722,
       "originalYear": 2012
-    },
-    {
-      "id": "book-2284311",
-      "title": "苏菲的世界",
-      "originalTitle": "Sofies verden",
-      "author": "乔斯坦·贾德",
-      "edition": "作家出版社 · 2017年版",
-      "year": 2017,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2284311-b3f667347936.webp",
-      "sourceIds": [
-        "2284311"
-      ],
-      "translator": "萧宝森",
-      "coverSource": "https://item.xhsd.com/items/110000104152544",
-      "hidden": true
     },
     {
       "id": "book-1255624",
@@ -609,72 +398,25 @@
       "originalYear": 1966
     },
     {
-      "id": "book-1255625",
-      "title": "天龙八部",
-      "originalTitle": "",
-      "author": "金庸",
-      "edition": "广州出版社 · 2013年版",
-      "year": 2013,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1255625-e0b0972a16ad.webp",
-      "sourceIds": [
-        "1255625"
-      ],
-      "coverSource": "https://item.xhsd.com/items/110000104449444",
-      "hidden": true
-    },
-    {
       "id": "book-4820710",
-      "title": "1984",
+      "title": "一九八四",
       "originalTitle": "Nineteen Eighty-Four",
       "author": "乔治·奥威尔",
-      "edition": "译林出版社 · 2019年版",
-      "year": 2019,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4820710-b830c7d409b8.webp",
+      "edition": "上海译文出版社 · 2018年版",
+      "year": 2018,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4820710-2778293c7e65.webp",
       "sourceIds": [
         "4820710"
       ],
-      "translator": "孙仲旭",
+      "translator": "董乐山",
       "review": {
         "date": "2025.05.14",
         "content": "爱情是真的，威权也是真的。"
       },
-      "coverSource": "https://book.douban.com/subject/33437080/",
+      "coverSource": "https://book.douban.com/subject/30200857/",
       "coverWidth": 1080,
-      "coverHeight": 1571,
+      "coverHeight": 1492,
       "originalYear": 1949
-    },
-    {
-      "id": "book-1036274",
-      "title": "夏洛的网",
-      "originalTitle": "Charlotte's Web",
-      "author": "E. B. 怀特",
-      "edition": "上海译文出版社 · 2004年版",
-      "year": 2004,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1036274-546b61ebda2a.webp",
-      "sourceIds": [
-        "1036274"
-      ],
-      "translator": "任溶溶",
-      "coverSource": "https://book.douban.com/subject/1036274/",
-      "hidden": true
-    },
-    {
-      "id": "book-1013416",
-      "title": "雷雨",
-      "originalTitle": "",
-      "author": "曹禺",
-      "edition": "人民文学出版社 · 1999年版",
-      "year": 1999,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1013416-ce2fb3a3a325.webp",
-      "sourceIds": [
-        "1013416"
-      ],
-      "review": {
-        "date": "2024.02.20",
-        "content": "戏剧张力达到极点"
-      },
-      "coverSource": "https://book.douban.com/subject/1013416/",
-      "hidden": true
     },
     {
       "id": "book-1818347",
@@ -694,50 +436,6 @@
       "originalYear": 1937
     },
     {
-      "id": "book-4207781",
-      "title": "孩子你慢慢来",
-      "originalTitle": "",
-      "author": "龙应台",
-      "edition": "生活·读书·新知三联书店 · 2009年版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4207781-2bc0c153ce30.webp",
-      "sourceIds": [
-        "4207781"
-      ],
-      "coverSource": "https://book.douban.com/subject/4207781/",
-      "hidden": true
-    },
-    {
-      "id": "book-1080370",
-      "title": "情书",
-      "originalTitle": "ラヴレター",
-      "author": "岩井俊二",
-      "edition": "天津人民出版社 · 2004年版",
-      "year": 2004,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1080370-a414de6265ea.webp",
-      "sourceIds": [
-        "1080370"
-      ],
-      "translator": "穆晓芳",
-      "coverSource": "https://book.douban.com/subject/1080370/",
-      "hidden": true
-    },
-    {
-      "id": "book-1051193",
-      "title": "麦琪的礼物",
-      "originalTitle": "",
-      "author": "欧·亨利",
-      "edition": "上海社会科学院出版社 · 2003年版",
-      "year": 2003,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1051193-583c69af45c2.webp",
-      "sourceIds": [
-        "1051193"
-      ],
-      "translator": "张经浩",
-      "coverSource": "https://book.douban.com/subject/1051193/",
-      "hidden": true
-    },
-    {
       "id": "book-26877752",
       "title": "恶意",
       "originalTitle": "悪意",
@@ -753,20 +451,6 @@
       "coverWidth": 377,
       "coverHeight": 541,
       "originalYear": 1996
-    },
-    {
-      "id": "book-1052990",
-      "title": "草房子",
-      "originalTitle": "",
-      "author": "曹文轩",
-      "edition": "江苏少年儿童出版社 · 2009年版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1052990-8967d2985cec.webp",
-      "sourceIds": [
-        "1052990"
-      ],
-      "coverSource": "https://book.douban.com/subject/1052990/",
-      "hidden": true
     },
     {
       "id": "book-1192090",
@@ -895,36 +579,6 @@
       "originalYear": 1955
     },
     {
-      "id": "book-3211779",
-      "title": "嫌疑人X的献身",
-      "originalTitle": "容疑者Xの献身",
-      "author": "东野圭吾",
-      "edition": "南海出版公司 · 2008年版",
-      "year": 2008,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/3211779-2de03a01c732.webp",
-      "sourceIds": [
-        "3211779"
-      ],
-      "translator": "刘子倩",
-      "coverSource": "https://book.douban.com/subject/3211779/",
-      "hidden": true
-    },
-    {
-      "id": "book-3006581",
-      "title": "无人生还",
-      "originalTitle": "And Then There Were None",
-      "author": "阿加莎·克里斯蒂",
-      "edition": "新星出版社 · 2025年版",
-      "year": 2025,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3006581-d53d56740300.webp",
-      "sourceIds": [
-        "3006581"
-      ],
-      "translator": "夏阳",
-      "coverSource": "https://item.xhsd.com/items/110000104738081",
-      "hidden": true
-    },
-    {
       "id": "book-1770782",
       "title": "追风筝的人",
       "originalTitle": "The Kite Runner",
@@ -967,24 +621,6 @@
       "originalYear": 1919
     },
     {
-      "id": "book-1254588",
-      "title": "城南旧事",
-      "originalTitle": "",
-      "author": "林海音",
-      "edition": "中国青年出版社 · 2003年版",
-      "year": 2003,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1254588-f2a510e01d5b.webp",
-      "sourceIds": [
-        "1254588"
-      ],
-      "review": {
-        "date": "2024.02.20",
-        "content": "本四星，另一星是因为我住的地方就叫城南。"
-      },
-      "coverSource": "https://book.douban.com/subject/1254588/",
-      "hidden": true
-    },
-    {
       "id": "book-10594787",
       "title": "霍乱时期的爱情",
       "originalTitle": "El amor en los tiempos del cólera",
@@ -1010,15 +646,15 @@
       "title": "许三观卖血记",
       "originalTitle": "",
       "author": "余华",
-      "edition": "北京十月文艺出版社 · 2024年版",
-      "year": 2024,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4760224-b1e94db4bf1c.webp",
+      "edition": "作家出版社 · 2012年版",
+      "year": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4760224-64dd42798e6e.webp",
       "sourceIds": [
         "4760224"
       ],
-      "coverSource": "https://www.easternbooknyc.com/product-page/许三观卖血记",
-      "coverWidth": 559,
-      "coverHeight": 812,
+      "coverSource": "https://book.douban.com/subject/4760224/",
+      "coverWidth": 331,
+      "coverHeight": 500,
       "originalYear": 1995
     },
     {
@@ -1163,51 +799,20 @@
       "originalYear": 1945
     },
     {
-      "id": "book-1007914",
-      "title": "窗边的小豆豆",
-      "originalTitle": "窓ぎわのトットちゃん",
-      "author": "黑柳彻子",
-      "edition": "南海出版公司 · 2011年版",
-      "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1007914-849cfdbf13a5.webp",
-      "sourceIds": [
-        "1007914"
-      ],
-      "translator": "赵玉皎",
-      "coverSource": "https://item.xhsd.com/items/1010000100000403",
-      "hidden": true
-    },
-    {
       "id": "book-20441957",
       "title": "兄弟",
       "originalTitle": "",
       "author": "余华",
-      "edition": "作家出版社 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-20441957-4839784fe552.webp",
+      "edition": "作家出版社 · 2012年版",
+      "year": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-20441957-4d202ca10688.webp",
       "sourceIds": [
         "20441957"
       ],
-      "coverSource": "https://item.xhsd.com/items/1010000103013180",
-      "coverWidth": 600,
-      "coverHeight": 882,
+      "coverSource": "https://book.douban.com/subject/20441957/",
+      "coverWidth": 339,
+      "coverHeight": 500,
       "originalYear": 2005
-    },
-    {
-      "id": "book-4011670",
-      "title": "人间失格",
-      "originalTitle": "人間失格",
-      "author": "太宰治",
-      "edition": "山西人民出版社 · 2020年版",
-      "year": 2020,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/110000102007168-d2ac915da734.webp",
-      "sourceIds": [
-        "4011670"
-      ],
-      "translator": "沈佳炜",
-      "coverSource": "https://item.xhsd.com/items/110000102007168",
-      "coverFit": "cover",
-      "hidden": true
     },
     {
       "id": "book-1041007",
@@ -1231,21 +836,6 @@
       "coverWidth": 1175,
       "coverHeight": 1800,
       "originalYear": 1997
-    },
-    {
-      "id": "book-1012611",
-      "title": "乌合之众",
-      "originalTitle": "The Crowd: A Study of the Popular Mind",
-      "author": "古斯塔夫·勒庞",
-      "edition": "中央编译出版社 · 2005年版",
-      "year": 2005,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1012611-6ba8a515f74d.webp",
-      "sourceIds": [
-        "1012611"
-      ],
-      "translator": "冯克利",
-      "coverSource": "https://book.douban.com/subject/1012611/",
-      "hidden": true
     },
     {
       "id": "book-2035162",
@@ -1325,15 +915,15 @@
       "title": "活着",
       "originalTitle": "",
       "author": "余华",
-      "edition": "作家出版社 · 2010年版",
-      "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4913064-1b84c34e3e32.webp",
+      "edition": "作家出版社 · 2012年版",
+      "year": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4913064-36c5c013ea8e.webp",
       "sourceIds": [
         "4913064"
       ],
-      "coverSource": "https://item.xhsd.com/items/1010000101274876",
-      "coverWidth": 600,
-      "coverHeight": 888,
+      "coverSource": "https://book.douban.com/subject/4913064/",
+      "coverWidth": 347,
+      "coverHeight": 500,
       "originalYear": 1993
     },
     {
@@ -1747,47 +1337,15 @@
       "originalYear": 2009
     },
     {
-      "id": "book-3717123",
-      "title": "明朝那些事儿 8",
-      "originalTitle": "",
-      "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3717123-d9f80a985486.webp",
-      "sourceIds": [],
-      "collection": "明朝那些事儿",
-      "partOrder": 8,
-      "coverSource": "https://book.douban.com/subject/3717123/",
-      "coverWidth": 300,
-      "coverHeight": 459,
-      "hidden": true
-    },
-    {
-      "id": "book-3717124",
-      "title": "明朝那些事儿 9",
-      "originalTitle": "",
-      "author": "当年明月",
-      "edition": "中国海关出版社 · 2009年典藏版",
-      "year": 2009,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3717124-118cb28fb6f4.webp",
-      "sourceIds": [],
-      "collection": "明朝那些事儿",
-      "partOrder": 9,
-      "coverSource": "https://book.douban.com/subject/3717124/",
-      "coverWidth": 300,
-      "coverHeight": 463,
-      "hidden": true
-    },
-    {
       "id": "book-24540864",
       "title": "第七天",
       "originalTitle": "第七天",
       "author": "余华",
-      "edition": "新星出版社 · 2013年版",
-      "year": 2013,
+      "edition": "新星出版社 · 2018年版",
+      "year": 2018,
       "originalYear": 2013,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-0-5f983ef46ead.webp",
-      "coverSource": "https://book.douban.com/subject/24540864/",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-24540864-2a78382f71b7.webp",
+      "coverSource": "https://book.douban.com/subject/30259153/",
       "coverWidth": 1080,
       "coverHeight": 1586
     },

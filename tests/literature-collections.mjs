@@ -9,9 +9,9 @@ const { literatureBooks: books, literatureBookCards: cards, groupBookCollections
 assert.equal(books.length, data.books.filter(b => !b.hidden).length);
 assert.equal(cards.length, new Set(books.map(b => b.collection || b.id)).size);
 assert.equal(new Set(books.map(b => b.id)).size, books.length);
-assert.equal(new Set(data.books.flatMap(b => b.sourceIds || [])).size, 84);
+assert.equal(new Set(data.books.flatMap(b => b.sourceIds || [])).size, 53, 'Retained source records after removing hidden books');
 assert.deepEqual(Array.from(cards.flatMap(b => b.installments || [b]), b => b.id).sort(), Array.from(books, b => b.id).sort());
-for (const [name, count] of Object.entries({ '1Q84': 3, '射雕三部曲': 3, '哈利·波特': 7, '基地七部曲': 7, '三体': 3, '明朝那些事儿': 7 })) {
+for (const [name, count] of Object.entries({ '1Q84': 3, '射雕三部曲': 3, '哈利·波特': 7, '基地七部曲': 7, '三体': 3, '明朝那些事儿': 7, '九州·缥缈录': 6 })) {
   const card = cards.find(b => b.title === name);
   assert.equal(card.installments.length, count, name);
   assert.equal(card.coverUrl, card.installments[0].coverUrl);

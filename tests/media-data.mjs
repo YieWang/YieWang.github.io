@@ -10,7 +10,6 @@ const music = json('src/data/music-import.json');
 const cinema = json('src/data/cinema-import.json');
 const curation = json('src/data/media-curation.json');
 const excludedTracks = new Set(curation.excludedTracks.map(t => t.id));
-const excludedCinema = new Set(curation.excludedCinemaIds.map(id => id.replace('film-', '')));
 const tracks = music.albums.flatMap(album => album.tracks);
 assert.equal(tracks.length, 965 - excludedTracks.size);
 assert.equal(new Set(tracks.map(t => t.id)).size, 965 - excludedTracks.size);
@@ -31,9 +30,6 @@ for (const exclusion of curation.excludedTracks.filter(t => t.duplicateOf)) {
 assert.ok(cinema.every(x => !curation.excludedCinemaIds.includes(x.id)));
 assert.equal(new Set(cinema.map(x => x.id)).size, cinema.length, 'Cinema IDs must be unique after additions and deletions');
 assert.ok(cinema.every(x => x.director && x.country));
-assert.equal(cinema.find(x => x.id === 'tv-134182').country, 'CN');
-assert.equal(cinema.find(x => x.id === 'film-24735062').country, 'CN');
-assert.equal(cinema.find(x => x.id === 'tv-95479').creditRole, 'ORIGINAL WORK');
 assert.ok(!music.artists.some(x => x.name === 'Soundtracks'));
 assert.ok(!music.artists.some(x => x.name === 'Compilations'));
 assert.ok(music.albums.every(x => x.coverUrl));
@@ -69,13 +65,11 @@ for (const url of [...music.albums.map(x => x.coverUrl), ...music.artists.map(x 
 const root = 'Homepage-Assets/media/';
 if (existsSync(new URL(`../${root}cinema-records.json`, import.meta.url))) {
   const original = json(root + 'cinema-records.json');
-  for (const x of original) {
-    if (excludedCinema.has(x.subjectId)) continue;
-    // Deleted films are no longer part of the site; retained films must keep their records.
-    if (x.type === 'film' && !cinema.some(item => item.id === `film-${x.subjectId}`)) continue;
-    const imported = watched.find(m => m.doubanId === x.subjectId);
-    assert.equal(imported?.firstWatched, x.markedAt);
-    assert.equal(imported?.rating, x.stars ? `${x.stars} / 5` : '');
+  for (const imported of watched) {
+    const source = original.find(x => x.subjectId === imported.doubanId);
+    assert.ok(source, `Missing source watch record: ${imported.doubanId}`);
+    assert.equal(imported.firstWatched, source.markedAt);
+    assert.equal(imported.rating, source.stars ? `${source.stars} / 5` : '');
   }
   const originalSongs = json(root + 'apple-library-songs.json');
   for (const song of originalSongs) assert.equal(tracks.some(t => t.id === song.id), !excludedTracks.has(song.id));

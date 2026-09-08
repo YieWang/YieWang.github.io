@@ -14,7 +14,6 @@ for (const doc of Object.values(documents)) {
   validate(JSON.parse(bytes), doc.schema);
   writeFileSync(join(root, 'src/data', doc.file), bytes);
 }
-writeFileSync(join(root, 'src/data/media-curation.json'), readFileSync(new URL('../src/data/media-curation.json', import.meta.url)));
 let middleware;
 localEditor(root).configureServer({ middlewares: { use(fn) { middleware = fn; } }, moduleGraph: { invalidateAll() {} } });
 const server = createServer((req, res) => middleware(req, res, () => { res.statusCode = 404; res.end(); }));
@@ -25,12 +24,6 @@ const post = (path, data, headers = {}) => fetch(origin + '/__editor/' + path, {
   method: 'POST', headers: { Origin: origin, 'X-Homepage-Editor': '1', 'Content-Type': 'application/json', ...headers }, body: JSON.stringify(data),
 });
 try {
-  const grouping = await (await fetch(origin + '/__editor/cinema-groups')).json();
-  assert.ok(grouping.groups.some(ids => ids.includes('film-1295038')));
-  assert.equal(grouping.titles['film-1433330'], 'Harry Potter');
-  const curator = await fetch(origin + '/__editor/cinema');
-  assert.equal(curator.status, 200);
-  assert.ok((await curator.text()).includes('筛选影视'));
   for (const name of ['cinema', 'music', 'literature']) {
     for (const hidden of [true, false]) {
       const before = await read(name);
@@ -44,6 +37,9 @@ try {
   }
   for (const name of Object.keys(documents)) assert.equal((await post('data/' + name, await read(name))).status, 200, name);
   const original = await read('cinema');
+  writeFileSync(join(root, '.local-editor/publish.lock'), String(process.pid));
+  assert.equal((await post('data/cinema', original)).status, 400, 'publishing must prevent a concurrent editor save');
+  rmSync(join(root, '.local-editor/publish.lock'));
   const edited = structuredClone(original);
   edited.data[0].title = '测试 <文字> & 原样保存'; edited.data[0].rating = '4.5 / 5';
   let response = await post('data/cinema', edited);

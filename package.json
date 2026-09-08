@@ -3,6 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
+    "publish": "node scripts/publish.mjs",
+    "publish:check": "node scripts/publish.mjs --check",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",

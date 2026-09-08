@@ -38,6 +38,6 @@ for (const [id, count] of [[31816, 2], [1418, 12], [42509, 2], [83121, 3], [6256
   assert.equal(x.posterUrl, x.seasons[0].posterUrl);
 }
 assert.equal(cinema.filter(x => x.tmdbId === 4935).length, 1, 'Howl is already present');
-assert.ok(cinema.find(x => x.id === 'film-26837952').hidden, 'Keep excluded spin-off films hidden');
+assert.ok(!cinema.some(x => x.id === 'film-26837952'), 'Excluded spin-off films stay deleted');
 assert.equal(new Set(cinema.map(x => x.id)).size, cinema.length);
 console.log('All 29 requested titles are present once, with correct categories, full season groups and no invented personal records.');

@@ -34,13 +34,9 @@ function uniqueIds(value, ids = new Set()) {
   }
   Object.values(value).forEach(child => uniqueIds(child, ids));
 }
-// Synchronous compare + atomic rename prevents overlapping saves from silently overwriting one another.
-export function saveDocument(root, name, revision, data) {
+export function validateDocument(name, data) {
   const doc = documents[name];
   if (!doc) throw Error('未知栏目');
-  const file = resolve(root, 'src/data', doc.file);
-  const before = readFileSync(file);
-  if (hash(before) !== revision) return { conflict: true };
   safeTree(data);
   validate(data, doc.schema);
   uniqueIds(data);
@@ -51,6 +47,16 @@ export function saveDocument(root, name, revision, data) {
     }
     for (const artist of data.artists) artist.albumIds = data.albums.filter(a => a.artistId === artist.id).map(a => a.id);
   }
+}
+// Synchronous compare + atomic rename prevents overlapping saves from silently overwriting one another.
+export function saveDocument(root, name, revision, data) {
+  if (existsSync(resolve(root, '.local-editor/publish.lock'))) throw Error('正在检查或发布主页，请等待发布窗口结束后刷新页面，再继续保存。填写内容仍保留。');
+  const doc = documents[name];
+  if (!doc) throw Error('未知栏目');
+  const file = resolve(root, 'src/data', doc.file);
+  const before = readFileSync(file);
+  if (hash(before) !== revision) return { conflict: true };
+  validateDocument(name, data);
   const after = JSON.stringify(data, null, 2) + '\n';
   const backup = resolve(root, '.local-editor/backups', doc.file);
   mkdirSync(dirname(backup), { recursive: true });
@@ -82,15 +88,11 @@ export function localEditor(root = process.cwd()) {
           return reply(res, 403, { error: '请从本地编辑页面保存' });
         }
         try {
-          const assets = { '/__editor/cinema': ['cinema.html', 'text/html'], '/__editor/ui.js': ['ui.js', 'text/javascript'], '/__editor/schema.js': ['schema.mjs', 'text/javascript'], '/__editor/style.css': ['style.css', 'text/css'] };
+          const assets = { '/__editor/ui.js': ['ui.js', 'text/javascript'], '/__editor/schema.js': ['schema.mjs', 'text/javascript'], '/__editor/style.css': ['style.css', 'text/css'] };
           if (req.method === 'GET' && assets[path]) {
             const [file, type] = assets[path];
             res.writeHead(200, { 'Content-Type': `${type}; charset=utf-8`, 'Cache-Control': 'no-store' });
             return res.end(readFileSync(new URL(file, import.meta.url)));
-          }
-          if (req.method === 'GET' && path === '/__editor/cinema-groups') {
-            const { cinemaGroups, cinemaCollectionTitles } = JSON.parse(readFileSync(resolve(root, 'src/data/media-curation.json')));
-            return reply(res, 200, { groups: cinemaGroups, titles: cinemaCollectionTitles });
           }
           if (req.method === 'GET' && path === '/__editor/status') return reply(res, 200, { editor: true });
           if (req.method === 'POST' && path === '/__editor/image') {

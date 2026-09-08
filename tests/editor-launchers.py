@@ -5,10 +5,10 @@ import subprocess
 import tempfile
 
 root = Path(__file__).resolve().parents[1]
-for name in ('筛选影视.command', '编辑主页.command'):
+for name in ('编辑主页.command', '发布主页.command'):
     script = (root / name).read_text()
     # Exercise the launcher's actual setup, without starting or opening a server.
-    setup = script.split('if curl ', 1)[0] + '\nnode --version\n'
+    setup = script.split('node scripts/publish.mjs' if name == '发布主页.command' else 'if curl ', 1)[0] + '\nnode --version\n'
     result = subprocess.run(
         ['/bin/zsh', '-c', setup, str(root / name)],
         env={'HOME': os.environ['HOME'], 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'},
@@ -29,7 +29,7 @@ with tempfile.TemporaryDirectory() as directory:
         path = Path(directory) / name
         path.write_text('#!/bin/sh\n' + body + '\n')
         path.chmod(0o755)
-    for name, route in (('编辑主页.command', '/marginalia'), ('筛选影视.command', '/__editor/cinema')):
+    for name, route in (('编辑主页.command', '/marginalia'),):
         for case in ('ready', 'occupied', 'free'):
             result = subprocess.run(
                 ['/bin/zsh', str(root / name)],

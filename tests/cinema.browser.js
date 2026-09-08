@@ -29,10 +29,6 @@ async page => {
   if (!(await page.locator('#modal-content-slot').innerText()).includes('500 EPISODES')) throw Error('Shippuden must show its complete episode count');
   await page.keyboard.press('Escape');
   await page.waitForFunction(() => document.getElementById('cinema-modal-backdrop').classList.contains('pointer-events-none'));
-  await page.locator('[data-item-id="tv-95479"]').click();
-  if (!(await page.locator('#modal-content-slot').innerText()).includes('ORIGINAL WORK')) throw Error('Credit role must distinguish original author from director');
-  await page.keyboard.press('Escape');
-  await page.waitForFunction(() => document.getElementById('cinema-modal-backdrop').classList.contains('pointer-events-none'));
   await page.getByRole('button', { name: 'Series', exact: true }).click();
   if (await page.locator('#section-animation').isVisible()) throw Error('Animation should be hidden');
   const office = page.locator('.cinema-card[data-item-id="tv-2316"]');

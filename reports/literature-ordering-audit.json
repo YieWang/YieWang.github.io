@@ -50,10 +50,6 @@
       "year": 2002,
       "source": "https://news.zongheng.com/zhuanti/jiangnan/jn_index.html"
     },
-    "九州·缥缈录": {
-      "year": 2005,
-      "source": "https://book.douban.com/subject/1321017/"
-    },
     "射雕英雄传": {
       "year": 1957,
       "source": "https://paper.people.com.cn/rmrbhwb/html/2014-04/26/content_1420142.htm"
@@ -89,10 +85,6 @@
     "献给阿尔吉侬的花束": {
       "year": 1966,
       "source": "https://danielkeyesauthor.com/faq.html"
-    },
-    "1984": {
-      "year": 1949,
-      "source": "https://www.orwellfoundation.com/the-orwell-foundation/about/about-the-orwell-foundation-2/"
     },
     "动物农场": {
       "year": 1945,
@@ -329,6 +321,34 @@
     "一个人的朝圣": {
       "year": 2012,
       "source": "https://xoeditions.com/en/livres/the-unlikely-pilgrimage-of-harold-fry/"
+    },
+    "九州·缥缈录Ⅰ：蛮荒": {
+      "year": 2005,
+      "source": "https://book.douban.com/subject/1321017/"
+    },
+    "九州·缥缈录Ⅱ：苍云古齿": {
+      "year": 2005,
+      "source": "https://book.douban.com/subject/1431779/"
+    },
+    "九州·缥缈录Ⅲ：天下名将": {
+      "year": 2007,
+      "source": "https://book.douban.com/subject/2253753/"
+    },
+    "九州·缥缈录Ⅳ：辰月之征": {
+      "year": 2007,
+      "source": "https://book.douban.com/subject/2286313/"
+    },
+    "九州·缥缈录Ⅴ：一生之盟": {
+      "year": 2009,
+      "source": "https://book.douban.com/subject/3851790/"
+    },
+    "九州·缥缈录Ⅵ：豹魂": {
+      "year": 2009,
+      "source": "https://book.douban.com/subject/3854066/"
+    },
+    "一九八四": {
+      "year": 1949,
+      "source": "https://www.orwellfoundation.com/the-orwell-foundation/about/about-the-orwell-foundation-2/"
     }
   },
   "additionalSources": [

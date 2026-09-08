@@ -49,7 +49,125 @@
     "film-3878007",
     "film-4237879",
     "film-6082518",
-    "film-7046723"
+    "film-7046723",
+    "film-35811064",
+    "film-36812879",
+    "film-36965301",
+    "film-37311135",
+    "tv-95479",
+    "tv-117933",
+    "tv-83097",
+    "tv-134182",
+    "tv-240411",
+    "tv-112613",
+    "tv-119100",
+    "film-1474189",
+    "film-24843198",
+    "film-24735062",
+    "film-25884801",
+    "film-30209818",
+    "film-27027913",
+    "film-6973376",
+    "film-1433990",
+    "film-4924142",
+    "film-35875180",
+    "film-1309045",
+    "film-25769362",
+    "film-35208467",
+    "film-21349345",
+    "film-3269068",
+    "film-26925317",
+    "film-25907124",
+    "film-25728006",
+    "film-26260853",
+    "film-6537500",
+    "film-2132930",
+    "film-1652618",
+    "film-1307442",
+    "film-1304899",
+    "film-23761370",
+    "film-25870084",
+    "film-11624706",
+    "film-30170847",
+    "film-4915857",
+    "film-25812712",
+    "film-24404677",
+    "film-26277313",
+    "film-27074316",
+    "film-6873143",
+    "film-25726614",
+    "film-26985127",
+    "film-35096844",
+    "film-25723907",
+    "film-1961963",
+    "film-19944106",
+    "film-26311973",
+    "film-33414470",
+    "film-26611801",
+    "film-35183042",
+    "film-36653918",
+    "film-25964071",
+    "film-26282448",
+    "film-2051813",
+    "film-25938113",
+    "film-7152908",
+    "film-27591193",
+    "film-26837952",
+    "film-30329902",
+    "film-36680624",
+    "film-34845781",
+    "film-36188879",
+    "film-33393167",
+    "film-35327724",
+    "film-35231832",
+    "film-35651911",
+    "film-35691909",
+    "film-36524559",
+    "film-11529526",
+    "film-36185502",
+    "film-10467125",
+    "film-3915458",
+    "film-34780991",
+    "film-30163509",
+    "film-1308843",
+    "film-25805741",
+    "film-26366465",
+    "film-32659890",
+    "film-26266893",
+    "film-30128916",
+    "film-35422807",
+    "film-34841067",
+    "film-35208463",
+    "film-35725869",
+    "film-36190889",
+    "film-36208094",
+    "film-36369452",
+    "film-36060209",
+    "film-36154853",
+    "film-26698897",
+    "film-27605698",
+    "film-24875534",
+    "film-1482072",
+    "film-4914468",
+    "film-1437342",
+    "film-2357162",
+    "film-1293088",
+    "film-3642835",
+    "film-1295280",
+    "film-19971676",
+    "film-1301445",
+    "film-4286017",
+    "film-35256092",
+    "film-35267224",
+    "film-26794435",
+    "film-30459571",
+    "film-30337388",
+    "film-1291578",
+    "film-1417598",
+    "film-4920389",
+    "film-3287562",
+    "film-2353023",
+    "film-1306029"
   ],
   "excludedTracks": [
     {
@@ -3600,27 +3718,6 @@
         "https://id-invaded-anime.com/cast_staff/"
       ]
     },
-    "tv-95479": {
-      "director": "Gege Akutami",
-      "creditRole": "ORIGINAL WORK",
-      "sources": [
-        "https://jujutsukaisen.jp/staffcast/"
-      ]
-    },
-    "tv-117933": {
-      "director": "Yasuki Tanaka",
-      "creditRole": "ORIGINAL WORK",
-      "sources": [
-        "https://summertime-anime.com/staffcast/"
-      ]
-    },
-    "tv-83097": {
-      "director": "Kaiu Shirai, Posuka Demizu",
-      "creditRole": "ORIGINAL WORK",
-      "sources": [
-        "https://neverland-anime.com/1st/staffcast/"
-      ]
-    },
     "tv-61663": {
       "director": "Naoshi Arakawa",
       "creditRole": "ORIGINAL WORK",
@@ -3684,15 +3781,6 @@
         "https://skip-and-loafer.com/1st/index.html"
       ]
     },
-    "tv-134182": {
-      "director": "Wang Wei",
-      "creditRole": "DIRECTED BY",
-      "sources": [
-        "https://bangumi.tv/subject/136249",
-        "https://www.tvmao.com/drama/KyodMWo="
-      ],
-      "country": "CN"
-    },
     "tv-63926": {
       "director": "ONE, Yusuke Murata",
       "creditRole": "ORIGINAL WORK",
@@ -3735,32 +3823,11 @@
         "https://future-diary.tv/staffcast/"
       ]
     },
-    "tv-240411": {
-      "director": "Yukinobu Tatsu",
-      "creditRole": "ORIGINAL WORK",
-      "sources": [
-        "https://anime-dandadan.com/staffcast/"
-      ]
-    },
-    "tv-112613": {
-      "director": "Sosuke Toka",
-      "creditRole": "ORIGINAL WORK",
-      "sources": [
-        "https://osama-ranking.com/staff/"
-      ]
-    },
     "tv-45790": {
       "director": "Hirohiko Araki",
       "creditRole": "ORIGINAL WORK",
       "sources": [
         "https://jojo-animation.com/fb_bt/staff/"
-      ]
-    },
-    "tv-119100": {
-      "director": "Aki Hamazi",
-      "creditRole": "ORIGINAL WORK",
-      "sources": [
-        "https://bocchi.rocks/"
       ]
     },
     "tv-72636": {
@@ -3831,12 +3898,6 @@
       "creditRole": "ORIGINAL WORK",
       "sources": [
         "https://shingeki.tv/season1/"
-      ]
-    },
-    "film-24735062": {
-      "country": "CN",
-      "sources": [
-        "https://www.1905.com/mdb/film/2220274/"
       ]
     }
   },
@@ -4082,34 +4143,8 @@
   ],
   "cinemaGroups": [
     [
-      "film-37311135",
-      "film-30163509",
-      "film-36369452"
-    ],
-    [
-      "tv-82739",
-      "film-30329902"
-    ],
-    [
       "tv-61415",
       "tv-45845"
-    ],
-    [
-      "tv-60863",
-      "film-36060209"
-    ],
-    [
-      "tv-72636",
-      "film-27591193"
-    ],
-    [
-      "film-1474189",
-      "film-1309045",
-      "film-1417598"
-    ],
-    [
-      "film-30209818",
-      "film-27027913"
     ],
     [
       "film-6532822",
@@ -4118,28 +4153,6 @@
       "film-1482911",
       "film-1308752",
       "film-1306809"
-    ],
-    [
-      "film-25728006",
-      "film-26260853",
-      "film-6537500",
-      "film-2132930",
-      "film-1652618",
-      "film-1307442",
-      "film-1304899",
-      "film-23761370",
-      "film-4286017"
-    ],
-    [
-      "film-11624706",
-      "film-30170847",
-      "film-4915857",
-      "film-25812712",
-      "film-3287562"
-    ],
-    [
-      "film-27074316",
-      "film-6873143"
     ],
     [
       "film-25887288",
@@ -4156,42 +4169,16 @@
       "film-1295038"
     ],
     [
-      "film-26311973",
-      "film-26698897"
-    ],
-    [
       "film-26817136",
       "film-25662329"
-    ],
-    [
-      "film-26282448",
-      "film-2051813",
-      "film-25938113",
-      "film-7152908"
     ],
     [
       "film-1305053",
       "film-1293544"
     ],
     [
-      "film-36680624",
-      "film-34845781",
-      "film-36188879",
-      "film-33393167",
-      "film-35327724",
-      "film-35231832",
-      "film-35651911",
-      "film-35691909",
-      "tv-85937",
-      "film-36524559"
-    ],
-    [
       "film-1291584",
       "film-1291580"
-    ],
-    [
-      "film-10467125",
-      "film-3915458"
     ],
     [
       "film-26715496",
@@ -4204,10 +4191,6 @@
       "film-10533913"
     ],
     [
-      "film-34780991",
-      "film-26794435"
-    ],
-    [
       "film-10808442",
       "film-1291990",
       "film-1296339"
@@ -4217,20 +4200,8 @@
       "film-6534248"
     ],
     [
-      "film-4914468",
-      "film-1437342",
-      "film-2357162",
-      "film-1291578"
-    ],
-    [
       "film-3789848",
       "film-1291579"
-    ],
-    [
-      "film-3642835",
-      "film-1295280",
-      "film-19971676",
-      "film-1301445"
     ],
     [
       "film-1299398",
@@ -4252,30 +4223,17 @@
     "remaster": "Original album tracklists govern display; a remaster of the same performance is not a new album."
   },
   "cinemaCollectionTitles": {
-    "film-37311135": "Pegasus",
-    "film-1474189": "Saw",
-    "film-30209818": "Happy Death Day",
     "film-6532822": "Resident Evil",
-    "film-25728006": "Fast & Furious",
-    "film-11624706": "Despicable Me",
-    "film-27074316": "A Dog’s Purpose",
     "film-25887288": "Frozen",
     "film-1433330": "Harry Potter",
-    "film-26311973": "Detective Chinatown",
     "film-26817136": "Zootopia",
-    "film-26282448": "Naruto",
     "film-1305053": "Hannibal Lecter",
-    "film-36680624": "Demon Slayer",
     "film-1291584": "Kill Bill",
-    "film-10467125": "One Piece",
     "film-26715496": "Kung Fu Panda",
     "film-36090457": "Inside Out",
-    "film-34780991": "Ne Zha",
     "film-10808442": "Before Trilogy",
     "film-20438964": "Wreck-It Ralph",
-    "film-4914468": "Ice Age",
     "film-3789848": "Monsters, Inc.",
-    "film-3642835": "Men in Black",
     "film-1299398": "A Chinese Odyssey"
   }
 }

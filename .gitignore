@@ -19,10 +19,10 @@ pnpm-debug.log*
 .DS_Store
 
 # Local photography assets and preparation records
-/Homepage-Photography/
+/Homepage-Photography
 
 # Local assets staged for R2
-/Homepage-Assets/
+/Homepage-Assets
 
 # Local browser verification artifacts
 /.playwright-cli/
@@ -30,13 +30,4 @@ pnpm-debug.log*
 
 # Local editor backups and original uploads
 /.local-editor/
-/编辑主页.command
-
-# Intermediate curation reports kept locally; final reports and audit data stay tracked
-/reports/music-cleanup-first-pass.md
-/reports/music-standard-editions-preflight.md
-/reports/music-standard-editions-progress.md
-/reports/screen-full-curation-review-2026-09-08.md
-/reports/screen-remaining-preference-review-2026-09-08.md
-/reports/screen-second-curation-review-2026-09-08.md
-/reports/screen-series-curation-current-2026-09-08.md
+/public/local-uploads/
