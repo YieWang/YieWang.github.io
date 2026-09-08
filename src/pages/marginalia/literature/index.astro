@@ -49,18 +49,19 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
             role="button"
             aria-label={book.title}
           >
-            <!-- Top: 1:1.414 Book Cover Frame + Original Title & Author -->
+            <!-- Top: Full Book Cover + Original Title & Author -->
             <div class="space-y-3 text-left">
               <!-- Book Cover Frame with Subtle Paper Spine Ridge -->
-              <div class="relative w-full aspect-[1/1.414] bg-[#F2EFE9] overflow-hidden rounded-[2px] shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out group-hover:scale-[1.02] group-hover:shadow-[0_8px_22px_rgba(0,0,0,0.12)]">
+              <div class="relative w-full bg-[#F2EFE9] overflow-hidden rounded-[2px] shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out group-hover:scale-[1.02] group-hover:shadow-[0_8px_22px_rgba(0,0,0,0.12)]">
                 <!-- Spine shadow ridge -->
                 <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
                 <img
                   src={book.coverUrl}
                   alt={book.title}
+                  width={book.coverWidth}
+                  height={book.coverHeight}
                   loading="lazy"
-                  class="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-95"
-                  style={{ objectFit: book.coverFit || 'contain' }}
+                  class="block w-full h-auto transition-opacity duration-300 group-hover:opacity-95"
                 />
               </div>
 
@@ -258,11 +259,11 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
 
       <!-- Two-Column Body (Left Pinned, Right Scrollable, Identical to Cinema) -->
       <div class="flex flex-col sm:flex-row items-stretch gap-5 sm:gap-6 flex-1 min-h-0 overflow-hidden">
-        <!-- Left Column: Pure 1:1.414 Book Artwork (100% Pinned, Never Scrolls) -->
+        <!-- Left Column: Full Book Artwork (100% Pinned, Never Scrolls) -->
         <div class="detail-sidebar w-full sm:w-[170px] md:w-[180px] shrink-0 flex flex-col items-center sm:items-stretch justify-start h-auto sm:h-full">
-          <div class="detail-artwork w-[95px] sm:w-full aspect-[1/1.414] bg-[#F2EFE9] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
+          <div class="detail-artwork w-[95px] sm:w-full bg-[#F2EFE9] rounded-[2px] overflow-hidden shadow-xs shrink-0 relative">
             <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
-            <img src="${escapeHtml(book.coverUrl)}" alt="${escapeHtml(book.title)}" class="w-full h-full object-contain" style="object-fit: ${book.coverFit === 'cover' ? 'cover' : 'contain'}" />
+            <img src="${escapeHtml(book.coverUrl)}" alt="${escapeHtml(book.title)}" ${book.coverWidth && book.coverHeight ? `width="${Number(book.coverWidth)}" height="${Number(book.coverHeight)}"` : ''} class="block w-full h-auto" />
           </div>
         </div>
 

@@ -16,7 +16,8 @@ export interface BookItem {
   edition: string;              // Combined concise publisher & edition (e.g. "上海译文出版社 · 2010年版")
   year: number | string;        // Publication year of the recorded edition
   coverUrl: string;             // Public cover URL
-  coverFit?: 'cover' | 'contain'; // Square retailer images include white margins
+  coverWidth?: number;          // Intrinsic size reserves space before the image loads
+  coverHeight?: number;
   firstRead?: string;           // First read date e.g. "2019.04"
   reread?: string;              // Reread dates e.g. "2021.04, 2024.04"
   review?: {
