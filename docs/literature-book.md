@@ -10,10 +10,10 @@ ZineJS uses its standard cone curl and WebGL2 lighting, with its native CSS
 fallback on unsupported devices. No custom page geometry or animation.
 Controls, hints, zoom, loading UI and deep links are disabled.
 
-The novel passage was supplied by the site owner; page breaks preserve its text.
+The novel passage uses the original Spanish text of Cien años de soledad; page breaks preserve its text.
 `scripts/render-book-pages.py` generates the 3x artwork using Pillow and macOS
-Songti SC Regular. Regenerate with `python scripts/render-book-pages.py`; another
-Song font may be supplied with `--font` and `--font-index`.
+Georgia serif typeface. Regenerate with `python scripts/render-book-pages.py`; another
+serif font may be supplied with `--font` and `--font-index`.
 
 The preview iframe warms on entry to Marginalia and stays loaded when switching
 interests. Playback pauses and rewinds to the cover when inactive or hidden, preserving
