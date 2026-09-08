@@ -49,10 +49,10 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
             role="button"
             aria-label={book.title}
           >
-            <!-- Top: Full Book Cover + Original Title & Author -->
+            <!-- Top: Uniform Book Cover Frame + Original Title & Author -->
             <div class="space-y-3 text-left">
               <!-- Book Cover Frame with Subtle Paper Spine Ridge -->
-              <div class="relative w-full bg-[#F2EFE9] overflow-hidden rounded-[2px] shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out group-hover:scale-[1.02] group-hover:shadow-[0_8px_22px_rgba(0,0,0,0.12)]">
+              <div class="relative w-full aspect-[1/1.414] bg-[#F2EFE9] overflow-hidden rounded-[2px] shadow-[0_4px_14px_rgba(0,0,0,0.06)] transition-all duration-300 ease-out group-hover:scale-[1.02] group-hover:shadow-[0_8px_22px_rgba(0,0,0,0.12)]">
                 <!-- Spine shadow ridge -->
                 <div class="absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-black/25 via-black/10 to-transparent z-10 pointer-events-none"></div>
                 <img
@@ -61,7 +61,7 @@ import { literatureBookCards, literatureEssays } from '../../../data/literature'
                   width={book.coverWidth}
                   height={book.coverHeight}
                   loading="lazy"
-                  class="block w-full h-auto transition-opacity duration-300 group-hover:opacity-95"
+                  class="block w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
                 />
               </div>
 
