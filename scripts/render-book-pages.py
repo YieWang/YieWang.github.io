@@ -41,7 +41,7 @@ for index in range(len(pages) + 2):
         words = pages[index - 1].split(' ')
         lines = []
         cur = []
-        indent_pt = 0 if index == 1 else 9
+        indent_pt = 9
         max_w = 122 * scale
         for w in words:
             line_indent = (indent_pt * scale) if len(lines) == 0 else 0

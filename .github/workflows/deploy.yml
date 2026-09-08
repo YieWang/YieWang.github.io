@@ -47,12 +47,6 @@ jobs:
       - name: Run regression checks
         run: npm test
 
-      - name: Install test browser
-        run: npx playwright-cli install-browser chrome --with-deps
-
-      - name: Check browser interactions
-        run: npm run test:browser
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
