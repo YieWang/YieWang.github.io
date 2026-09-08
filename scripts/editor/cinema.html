@@ -15,6 +15,7 @@
 <input id="search" type="search" placeholder="搜索片名、导演" aria-label="搜索片名、导演">
 <select id="category" aria-label="作品类型"><option value="all">全部类型</option><option value="film">电影</option><option value="series">电视剧</option><option value="animation">动漫</option></select>
 <select id="filter" aria-label="保留状态"><option value="all">全部作品</option><option value="kept" selected>已保留</option><option value="deleted">已删除</option></select>
+<select id="rating-filter" aria-label="评分状态"><option value="all">全部评分</option><option value="unrated">未评分</option></select>
 </div>
 <p id="status" role="status">正在加载…</p><p id="error" role="alert"></p>
 <small>仅保存到本机，发布后才会更新网站。 <a href="/marginalia/screen/" target="_blank" rel="noopener">预览 Screen ↗</a></small>
@@ -23,6 +24,7 @@
 <script type="module">
 const main = document.querySelector('main'), status = document.querySelector('#status'), error = document.querySelector('#error');
 const search = document.querySelector('#search'), category = document.querySelector('#category'), filter = document.querySelector('#filter');
+const ratingFilter = document.querySelector('#rating-filter');
 const section = new URLSearchParams(location.search).get('section');
 const kind = ['music','literature'].includes(section) ? section : 'cinema';
 const label = {cinema:'影视',music:'音乐',literature:'书籍'}[kind];
@@ -66,6 +68,10 @@ function bookCollectionItems(items) {
 function setHidden(data, ids, hidden) {
   for (const item of records(data)) if (ids.includes(item.id)) item.hidden = hidden;
 }
+function hasUnrated(item) {
+  return (item.parts || [item]).some(part => !String(part.rating ?? '').trim()
+    || (part.seasons || []).some(season => !String(season.rating ?? '').trim()));
+}
 const node = (tag, text) => { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; return n; };
 async function api(data) {
   const response = await fetch('/__editor/data/' + kind, data ? {method:'POST',headers:{'Content-Type':'application/json','X-Homepage-Editor':'1'},body:JSON.stringify(data)} : {cache:'no-store'});
@@ -84,6 +90,7 @@ function render() {
     const type = (item.genre || '').split(', ').includes('Animation') ? 'animation' : item.type;
     return (category.value === 'all' || category.value === type)
       && (filter.value === 'all' || (filter.value === 'deleted' ? item.hidden || item.partial : !item.hidden))
+      && (ratingFilter.value === 'all' || hasUnrated(item))
       && [item.title,...(item.parts || [item]).flatMap(part => [part.title,part.originalTitle,part.chineseTitle,part.director,part.originalDirector,part.author,part.originalAuthor,part.artistName,part.artistDisplayName,...(part.watchedEntries || []).map(entry => entry.title)])].some(text => String(text || '').toLocaleLowerCase().includes(query));
   });
   for (const item of items) {
@@ -119,7 +126,7 @@ async function save(ids, hidden) {
   finally { busy = false; render(); }
 }
 window.addEventListener('beforeunload', event => { if (busy) { event.preventDefault(); event.returnValue = ''; } });
-for (const input of [search,category,filter]) input.addEventListener('input', () => { if (state) render(); });
+for (const input of [search,category,filter,ratingFilter]) input.addEventListener('input', () => { if (state) render(); });
 try {
   if (kind === 'cinema') {
     const response = await fetch('/__editor/cinema-groups', {cache:'no-store'});

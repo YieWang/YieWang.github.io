@@ -4514,37 +4514,6 @@
     "hidden": true
   },
   {
-    "id": "film-4920528",
-    "title": "You Are the Apple of My Eye",
-    "originalTitle": "那些年，我們一起追的女孩",
-    "type": "film",
-    "director": "Giddens Ko",
-    "year": 2011,
-    "country": "TW",
-    "genre": "Romance, Comedy, Drama",
-    "runtime": "109 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/films/tmdb-84111-553f2961740e.webp",
-    "firstWatched": "2026-02-11",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt2036416/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "4920528",
-        "title": "那些年，我们一起追的女孩",
-        "firstWatched": "2026-02-11",
-        "rating": "5 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 84111,
-    "rating": "5 / 5",
-    "chineseTitle": "那些年，我们一起追的女孩",
-    "originalDirector": "九把刀",
-    "chineseDirector": "九把刀"
-  },
-  {
     "id": "film-27074316",
     "title": "A Dog's Journey",
     "originalTitle": "A Dog's Journey",
@@ -9366,42 +9335,6 @@
     "chineseTitle": "她",
     "originalDirector": "Spike Jonze",
     "chineseDirector": "斯派克·琼斯"
-  },
-  {
-    "id": "film-36587974",
-    "title": "Like A Rolling Stone",
-    "originalTitle": "出走的决心",
-    "type": "film",
-    "director": "Yin Lichuan",
-    "year": 2024,
-    "country": "CN",
-    "genre": "Drama, Family",
-    "runtime": "106 min",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/local-uploads/33495a6482ab150600ce.webp",
-    "firstWatched": "2024-12-01",
-    "externalLink": {
-      "platform": "IMDb",
-      "url": "https://www.imdb.com/title/tt29510245/"
-    },
-    "watchedEntries": [
-      {
-        "doubanId": "36587974",
-        "title": "出走的决心",
-        "firstWatched": "2024-12-01",
-        "rating": "5 / 5",
-        "comment": ""
-      }
-    ],
-    "tmdbId": 1324509,
-    "rating": "5 / 5",
-    "chineseTitle": "出走的决心",
-    "originalDirector": "尹丽川",
-    "chineseDirector": "尹丽川",
-    "review": {
-      "content": "一句懂事困住少女，一句明事理困住妇女。虽然未竟的梦想殆死胎中，但是此刻死去的愿望生出双翅。\n\t这部电影太真实了，真实到我闭上眼就是我妈弯着腰打扫房间的景象，闭上眼就是我爷爷坐着跟大老板似的吩咐我奶奶做七做八的。丈夫对妻子像是对奴仆般的吩咐是绝大部分农村家庭的缩影。这使我想起高中语文老师对女生的劝诫说：结婚后自己一定要有经济能力。\n\t又想起刘小样说宁可痛苦不要麻木。但沉默的大多数实际上是没有这种想法的。她们只会忍耐着、低声下气、麻木着，直到最后忍了一辈子到棺材里，或者生出点病别人还要指责疯掉。\n\t经济是枷锁，挣脱。观念是桎梏，挣脱。家庭是束缚，挣脱。这叫做出走的决心，这是决绝的。不是一时意气也不是愤懑之下的想法，这是决绝的一生一世的心。这自然让我想到月亮与六便士里的Skryland，一开始他们会觉得你是在闹别扭，后来他们会惶恐，最后他们会愤恨或释然。\n\t“我等不了了。我这辈子等着我弟弟长大结婚，我等着我也能结了婚嫁个好男人。我等着你长大，我等着你结婚。我等着大宝二宝上幼儿园。现在我要等着你，你的事业。我以后还要等大宝二宝长大，等着他们。我等到啥时候去？我再等下去我永远都走不了了。”\n\t“这路是都封掉了吗？”“总有路的，山路、野路。”\n\t李红最后隔着大半辈子和河对岸的自己说，我迟到了，但是没失约，我一直在路上。\n\t（这个孙大勇算是集齐了封建家庭男性的所有恶：爱面子、大男子主义、在亲人旁说风凉话、在家庭关系里隐身，基本上可以算是个小方鸿渐：是个好人但并无大用。姜武演的太好了，看得我想跳进屏幕里骂他几万句再扇几十个巴掌。）",
-      "quote": "一句懂事困住少女，一句明事理困住妇女。虽然未竟的梦想殆死胎中，但是此刻死去的愿望生出双翅。",
-      "date": "2024.12.1"
-    }
   },
   {
     "id": "film-36154853",
