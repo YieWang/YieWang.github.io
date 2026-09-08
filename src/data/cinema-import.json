@@ -1771,7 +1771,7 @@
     ],
     "chineseTitle": "命运之夜 无限剑制",
     "originalDirector": "奈須きのこ, TYPE-MOON",
-    "chineseDirector": "奈须蘑菇, ",
+    "chineseDirector": "奈须蘑菇, TYPE-MOON",
     "studio": "ufotable"
   },
   {
@@ -2055,7 +2055,7 @@
     ],
     "chineseTitle": "一拳超人",
     "originalDirector": "ONE, 村田雄介",
-    "chineseDirector": ", 村田雄介",
+    "chineseDirector": "ONE, 村田雄介",
     "studio": "Madhouse"
   },
   {
@@ -2089,7 +2089,7 @@
     "creditRole": "ORIGINAL WORK",
     "chineseTitle": "异世界归来的舅舅",
     "originalDirector": "殆ど死んでいる",
-    "chineseDirector": "",
+    "chineseDirector": "快死透了",
     "studio": "Atelier Pontdarc"
   },
   {
@@ -5686,7 +5686,7 @@
     "rating": "5 / 5",
     "chineseTitle": "汉密尔顿",
     "originalDirector": "Thomas Kail",
-    "chineseDirector": ""
+    "chineseDirector": "托马斯·凯尔"
   },
   {
     "id": "film-36680624",
@@ -7352,7 +7352,7 @@
     "rating": "4 / 5",
     "chineseTitle": "功夫熊猫3",
     "originalDirector": "Jennifer Yuh Nelson, Alessandro Carloni",
-    "chineseDirector": "吕寅荣, ",
+    "chineseDirector": "吕寅荣, 亚历山德罗·卡罗尼",
     "studio": "DreamWorks Animation"
   },
   {
@@ -8207,7 +8207,7 @@
     "rating": "5 / 5",
     "chineseTitle": "人猿星球",
     "originalDirector": "Franklin J. Schaffner",
-    "chineseDirector": ""
+    "chineseDirector": "富兰克林·沙夫纳"
   },
   {
     "id": "film-21324900",
@@ -11597,7 +11597,7 @@
     "rating": "5 / 5",
     "chineseTitle": "初恋这件小事",
     "originalDirector": "วศิน ปกป้อง, พุฒิพงศ์ พรหมสาขา ณ สกลนคร",
-    "chineseDirector": ", "
+    "chineseDirector": "华森·波克彭, 普特鹏·普罗萨卡·那·萨克那卡林"
   },
   {
     "id": "film-1292226",
@@ -13615,7 +13615,7 @@
       }
     ],
     "chineseTitle": "妖精的尾巴",
-    "chineseDirector": "",
+    "chineseDirector": "真岛浩",
     "studio": "A-1 Pictures / Satelight"
   },
   {
@@ -13699,5 +13699,954 @@
     },
     "tmdbId": 14037,
     "watchedEntries": []
+  },
+  {
+    "id": "tv-31816",
+    "title": "Dragon Sakura",
+    "originalTitle": "ドラゴン桜",
+    "chineseTitle": "龙樱",
+    "type": "series",
+    "director": "Renpei Tsukamoto, Marehiro Karaki, Takashi Komatsu",
+    "originalDirector": "塚本連平, 唐木希浩, 小松隆志",
+    "chineseDirector": "冢本连平、唐木希浩、小松隆志",
+    "year": 2005,
+    "country": "JP",
+    "genre": "Drama, Comedy",
+    "runtime": "2 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-31816-0-461706d52767.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/rOmebMcRAMrlIFisAuVx4TQvmcA.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/31816"
+    },
+    "tmdbId": 31816,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-31816-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "ドラゴン桜",
+        "chineseTitle": "龙樱",
+        "partLabel": "第 1 季",
+        "year": 2005,
+        "releaseDate": "2005-07-08",
+        "runtime": "11 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-31816-0-461706d52767.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/rOmebMcRAMrlIFisAuVx4TQvmcA.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/31816/season/1"
+        }
+      },
+      {
+        "id": "tv-31816-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "ドラゴン桜",
+        "chineseTitle": "龙樱",
+        "partLabel": "第 2 季",
+        "year": 2021,
+        "releaseDate": "2021-04-25",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-31816-s2-aa0cb329b5fe.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/6sKHoHRpO0nzYdyfBOQMx75EDBx.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/31816/season/2"
+        },
+        "director": "Katsuo Fukuzawa",
+        "originalDirector": "福澤克雄",
+        "chineseDirector": "福泽克雄"
+      }
+    ]
+  },
+  {
+    "id": "tv-1418",
+    "title": "The Big Bang Theory",
+    "originalTitle": "The Big Bang Theory",
+    "chineseTitle": "生活大爆炸",
+    "type": "series",
+    "director": "Chuck Lorre, Bill Prady",
+    "originalDirector": "Chuck Lorre, Bill Prady",
+    "chineseDirector": "查克·洛尔、比尔·普拉迪",
+    "year": 2007,
+    "country": "US",
+    "genre": "Comedy",
+    "runtime": "12 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-0-31dda7a58c6f.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/zqAL2rav7Tg8uwDtLurqZVN3mtr.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/1418"
+    },
+    "tmdbId": 1418,
+    "watchedEntries": [],
+    "creditRole": "CREATORS",
+    "seasons": [
+      {
+        "id": "tv-1418-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 1 季",
+        "year": 2007,
+        "releaseDate": "2007-09-24",
+        "runtime": "17 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-0-31dda7a58c6f.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zqAL2rav7Tg8uwDtLurqZVN3mtr.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/1"
+        }
+      },
+      {
+        "id": "tv-1418-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 2 季",
+        "year": 2008,
+        "releaseDate": "2008-09-22",
+        "runtime": "23 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s2-3702ff181493.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/2NBwUBZ4clwj6qO9fBinfxiB0dR.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/2"
+        }
+      },
+      {
+        "id": "tv-1418-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 3 季",
+        "year": 2009,
+        "releaseDate": "2009-09-21",
+        "runtime": "23 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s3-778d6547fc26.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/j64iUb52W2IYE9qV9pLi5tFq8IE.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/3"
+        }
+      },
+      {
+        "id": "tv-1418-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 4 季",
+        "year": 2010,
+        "releaseDate": "2010-09-23",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s4-394da8b2c21f.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hM2TYCmOVXop1xhLA1Mbqyg60ze.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/4"
+        }
+      },
+      {
+        "id": "tv-1418-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 5 季",
+        "year": 2011,
+        "releaseDate": "2011-09-22",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s5-11db19ba88d5.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/l08Z8ihAsTRPEuOehbwk4axg3cu.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/5"
+        }
+      },
+      {
+        "id": "tv-1418-season-6",
+        "seasonNumber": 6,
+        "title": "Season 6",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 6 季",
+        "year": 2012,
+        "releaseDate": "2012-09-27",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s6-a1c8df111161.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/2Rsb94mlt4OHhiO2UWatDOhnBqv.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/6"
+        }
+      },
+      {
+        "id": "tv-1418-season-7",
+        "seasonNumber": 7,
+        "title": "Season 7",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 7 季",
+        "year": 2013,
+        "releaseDate": "2013-09-26",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s7-c9857daa3819.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/e0qyw3fMp7HDIA3dtCkaQD18Ra9.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/7"
+        }
+      },
+      {
+        "id": "tv-1418-season-8",
+        "seasonNumber": 8,
+        "title": "Season 8",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 8 季",
+        "year": 2014,
+        "releaseDate": "2014-09-22",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s8-5d4759969009.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zwb4rlgJg587XcL2cekvNDnqPpq.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/8"
+        }
+      },
+      {
+        "id": "tv-1418-season-9",
+        "seasonNumber": 9,
+        "title": "Season 9",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 9 季",
+        "year": 2015,
+        "releaseDate": "2015-09-21",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s9-0134897760dd.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dGEugT2ojCWBQjCqovm0GponQ0W.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/9"
+        }
+      },
+      {
+        "id": "tv-1418-season-10",
+        "seasonNumber": 10,
+        "title": "Season 10",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 10 季",
+        "year": 2016,
+        "releaseDate": "2016-09-19",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s10-728f05092693.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/dz2Mq1bpjBFiTOJbomCEP59kqJV.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/10"
+        }
+      },
+      {
+        "id": "tv-1418-season-11",
+        "seasonNumber": 11,
+        "title": "Season 11",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 11 季",
+        "year": 2017,
+        "releaseDate": "2017-09-25",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s11-50c239d84fc7.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/A373F7AzZtIFy3l2LryC2yr2hC2.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/11"
+        }
+      },
+      {
+        "id": "tv-1418-season-12",
+        "seasonNumber": 12,
+        "title": "Season 12",
+        "originalTitle": "The Big Bang Theory",
+        "chineseTitle": "生活大爆炸",
+        "partLabel": "第 12 季",
+        "year": 2018,
+        "releaseDate": "2018-09-24",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1418-s12-43c87eb81828.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/txta7TTNUfGCgsJI9oB6vb6uFlA.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1418/season/12"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-64280",
+    "title": "5→9 From Five to Nine",
+    "originalTitle": "5→9～私に恋したお坊さん～",
+    "chineseTitle": "朝九晚五",
+    "type": "series",
+    "director": "Shin Hirano",
+    "originalDirector": "平野眞",
+    "chineseDirector": "平野真",
+    "year": 2015,
+    "country": "JP",
+    "genre": "Comedy, Drama",
+    "runtime": "10 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-64280-1-f89a447de025.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/dpELkvThLWpiUWTpkZrljI5R2AC.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/64280"
+    },
+    "tmdbId": 64280,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-61459",
+    "title": "Parasyte -the maxim-",
+    "originalTitle": "寄生獣 セイの格率",
+    "chineseTitle": "寄生兽",
+    "type": "series",
+    "director": "Kenichi Shimizu",
+    "originalDirector": "清水健一",
+    "chineseDirector": "清水健一",
+    "year": 2014,
+    "country": "JP",
+    "genre": "Animation, Drama, Sci-Fi & Fantasy, Action & Adventure",
+    "runtime": "24 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61459-2-6965b13754ad.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/2ngHwPQhHGPpLkLQd2MTAI3iXPq.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/61459"
+    },
+    "tmdbId": 61459,
+    "watchedEntries": [],
+    "studio": "Madhouse"
+  },
+  {
+    "id": "tv-53052",
+    "title": "From the New World",
+    "originalTitle": "新世界より",
+    "chineseTitle": "来自新世界",
+    "type": "series",
+    "director": "Masashi Ishihama",
+    "originalDirector": "石浜真史",
+    "chineseDirector": "石滨真史",
+    "year": 2012,
+    "country": "JP",
+    "genre": "Animation, Sci-Fi & Fantasy",
+    "runtime": "25 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-53052-2-81ef53516a4d.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/mrjvDz3LMhaq7hCPKPbcgdhFRZL.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/53052"
+    },
+    "tmdbId": 53052,
+    "watchedEntries": [],
+    "studio": "A-1 Pictures"
+  },
+  {
+    "id": "tv-65249",
+    "title": "ERASED",
+    "originalTitle": "僕だけがいない街",
+    "chineseTitle": "只有我不存在的城市",
+    "type": "series",
+    "director": "Tomohiko Ito",
+    "originalDirector": "伊藤智彦",
+    "chineseDirector": "伊藤智彦",
+    "year": 2016,
+    "country": "JP",
+    "genre": "Animation, Drama, Mystery",
+    "runtime": "12 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65249-2-8bc85203ad12.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/kue03QHO1O9LrTCBOTZH5F1E2KZ.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/65249"
+    },
+    "tmdbId": 65249,
+    "watchedEntries": [],
+    "studio": "A-1 Pictures"
+  },
+  {
+    "id": "tv-42509",
+    "title": "Steins;Gate",
+    "originalTitle": "Steins;Gate",
+    "chineseTitle": "命运石之门",
+    "type": "series",
+    "director": "Takuya Sato, Hiroshi Hamasaki",
+    "originalDirector": "佐藤卓哉, 浜崎博嗣",
+    "chineseDirector": "佐藤卓哉、滨崎博嗣",
+    "year": 2011,
+    "country": "JP",
+    "genre": "Animation, Sci-Fi & Fantasy, Mystery, Comedy",
+    "runtime": "2 Series",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42509-1-cdca25948bf8.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/ce0kVdxBGdXBrWmQgawkHwdqFX9.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/42509"
+    },
+    "tmdbId": 42509,
+    "watchedEntries": [],
+    "studio": "White Fox",
+    "seasons": [
+      {
+        "id": "tv-42509-part",
+        "title": "Steins;Gate",
+        "originalTitle": "Steins;Gate",
+        "chineseTitle": "命运石之门",
+        "type": "series",
+        "director": "Takuya Sato, Hiroshi Hamasaki",
+        "originalDirector": "佐藤卓哉, 浜崎博嗣",
+        "chineseDirector": "佐藤卓哉、滨崎博嗣",
+        "year": 2011,
+        "country": "JP",
+        "genre": "Animation, Sci-Fi & Fantasy, Mystery, Comedy",
+        "runtime": "24 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42509-1-cdca25948bf8.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ce0kVdxBGdXBrWmQgawkHwdqFX9.jpg",
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42509"
+        },
+        "tmdbId": 42509,
+        "watchedEntries": [],
+        "studio": "White Fox",
+        "releaseDate": "2011-04-06"
+      },
+      {
+        "id": "tv-78102-part",
+        "title": "Steins;Gate 0",
+        "originalTitle": "シュタインズ・ゲート ゼロ",
+        "chineseTitle": "命运石之门 0",
+        "type": "series",
+        "director": "Kenichi Kawamura",
+        "originalDirector": "川村賢一",
+        "chineseDirector": "川村贤一",
+        "year": 2018,
+        "country": "JP",
+        "genre": "Sci-Fi & Fantasy, Animation, Drama",
+        "runtime": "23 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-78102-1-8aac408d8c6b.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/4ztfZujsNN0c66OkE4ZKFQ0ZQTf.jpg",
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/78102"
+        },
+        "tmdbId": 78102,
+        "watchedEntries": [],
+        "studio": "White Fox",
+        "releaseDate": "2018-04-12"
+      }
+    ]
+  },
+  {
+    "id": "tv-70880",
+    "title": "Tsukigakirei",
+    "originalTitle": "月がきれい",
+    "chineseTitle": "月色真美",
+    "type": "series",
+    "director": "Seiji Kishi",
+    "originalDirector": "岸誠二",
+    "chineseDirector": "岸诚二",
+    "year": 2017,
+    "country": "JP",
+    "genre": "Animation, Drama",
+    "runtime": "12 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-70880-0-624f24468958.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/fmjmGpZH3QTbP5Z9RCHAkOgaFQd.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/70880"
+    },
+    "tmdbId": 70880,
+    "watchedEntries": [],
+    "studio": "feel."
+  },
+  {
+    "id": "tv-83121",
+    "title": "Kaguya-sama: Love Is War",
+    "originalTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
+    "chineseTitle": "辉夜大小姐想让我告白",
+    "type": "series",
+    "director": "Mamoru Hatakeyama",
+    "originalDirector": "畠山守",
+    "chineseDirector": "畠山守",
+    "year": 2019,
+    "country": "JP",
+    "genre": "Comedy, Animation",
+    "runtime": "3 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-83121-0-80977ffcf9a2.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/5khbC6AuNgnvnoDbjIMKCOhEtIc.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/83121"
+    },
+    "tmdbId": 83121,
+    "watchedEntries": [],
+    "studio": "A-1 Pictures",
+    "seasons": [
+      {
+        "id": "tv-83121-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
+        "chineseTitle": "辉夜大小姐想让我告白",
+        "partLabel": "第 1 季",
+        "year": 2019,
+        "releaseDate": "2019-01-10",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-83121-0-80977ffcf9a2.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5khbC6AuNgnvnoDbjIMKCOhEtIc.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/83121/season/1"
+        }
+      },
+      {
+        "id": "tv-83121-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
+        "chineseTitle": "辉夜大小姐想让我告白",
+        "partLabel": "第 2 季",
+        "year": 2020,
+        "releaseDate": "2020-04-11",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-83121-s2-cae84929dc6a.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/luFcIT4xZlhcojVbqbB3PPmAqVB.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/83121/season/2"
+        }
+      },
+      {
+        "id": "tv-83121-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
+        "chineseTitle": "辉夜大小姐想让我告白",
+        "partLabel": "第 3 季",
+        "year": 2022,
+        "releaseDate": "2022-04-09",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-83121-s3-e26fe1910155.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/eO9HZHNhncJbMGxAEZlWdGLNeFC.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/83121/season/3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-116727",
+    "title": "ODDTAXI",
+    "originalTitle": "オッドタクシー",
+    "chineseTitle": "奇巧计程车",
+    "type": "series",
+    "director": "Baku Kinoshita",
+    "originalDirector": "木下麦",
+    "chineseDirector": "木下麦",
+    "year": 2021,
+    "country": "JP",
+    "genre": "Animation, Comedy, Mystery, Crime",
+    "runtime": "13 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-116727-3-08a6c0c423ba.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/sceyNrl0lsk79yknMXGyYa6KoCk.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/116727"
+    },
+    "tmdbId": 116727,
+    "watchedEntries": [],
+    "studio": "OLM / P.I.C.S."
+  },
+  {
+    "id": "tv-39218",
+    "title": "Puella Magi Madoka Magica",
+    "originalTitle": "魔法少女まどか☆マギカ",
+    "chineseTitle": "魔法少女小圆",
+    "type": "series",
+    "director": "Akiyuki Shinbo, Yukihiro Miyamoto",
+    "originalDirector": "新房昭之, 宮本幸裕",
+    "chineseDirector": "新房昭之、宫本幸裕",
+    "year": 2011,
+    "country": "JP",
+    "genre": "Animation, Drama, Sci-Fi & Fantasy",
+    "runtime": "12 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-39218-3-f2e8de71ed1a.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/48GLvRh3lgh5gjl0uVen60bslRM.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/39218"
+    },
+    "tmdbId": 39218,
+    "watchedEntries": [],
+    "studio": "Shaft"
+  },
+  {
+    "id": "tv-13916",
+    "title": "Death Note",
+    "originalTitle": "DEATH NOTE",
+    "chineseTitle": "死亡笔记",
+    "type": "series",
+    "director": "Tetsuro Araki",
+    "originalDirector": "荒木哲郎",
+    "chineseDirector": "荒木哲郎",
+    "year": 2006,
+    "country": "JP",
+    "genre": "Animation, Mystery, Sci-Fi & Fantasy",
+    "runtime": "37 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-13916-0-b06d1c384be2.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/1BloDOEmKxPFzbCIuNCLmCrcx6L.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/13916"
+    },
+    "tmdbId": 13916,
+    "watchedEntries": [],
+    "studio": "Madhouse"
+  },
+  {
+    "id": "tv-62564",
+    "title": "Sound! Euphonium",
+    "originalTitle": "響け！ユーフォニアム",
+    "chineseTitle": "吹响吧！上低音号",
+    "type": "series",
+    "director": "Tatsuya Ishihara, Naoko Yamada",
+    "originalDirector": "石原立也, 山田尚子",
+    "chineseDirector": "石原立也、山田尚子",
+    "year": 2015,
+    "country": "JP",
+    "genre": "Animation, Drama",
+    "runtime": "3 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-62564-2-e7b6245b8e16.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/5PwD9F9ot5z3CUvb95qXtk3PGsf.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/62564"
+    },
+    "tmdbId": 62564,
+    "watchedEntries": [],
+    "studio": "Kyoto Animation",
+    "seasons": [
+      {
+        "id": "tv-62564-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "響け！ユーフォニアム",
+        "chineseTitle": "吹响吧！上低音号",
+        "partLabel": "第 1 季",
+        "year": 2015,
+        "releaseDate": "2015-04-08",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-62564-2-e7b6245b8e16.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5PwD9F9ot5z3CUvb95qXtk3PGsf.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/62564/season/1"
+        }
+      },
+      {
+        "id": "tv-62564-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "響け！ユーフォニアム",
+        "chineseTitle": "吹响吧！上低音号",
+        "partLabel": "第 2 季",
+        "year": 2016,
+        "releaseDate": "2016-10-06",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-62564-s2-9e2a672c4cab.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/v7NYq7ah20qggS1lohgyMVMN6bO.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/62564/season/2"
+        }
+      },
+      {
+        "id": "tv-62564-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "響け！ユーフォニアム",
+        "chineseTitle": "吹响吧！上低音号",
+        "partLabel": "第 3 季",
+        "year": 2024,
+        "releaseDate": "2024-04-07",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-62564-s3-3b26d4665f69.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/10theiNqb6v3Um4a4vhkWQRI5ai.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/62564/season/3"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-42511",
+    "title": "The Melancholy of Haruhi Suzumiya",
+    "originalTitle": "涼宮ハルヒの憂鬱",
+    "chineseTitle": "凉宫春日的忧郁",
+    "type": "series",
+    "director": "Tatsuya Ishihara",
+    "originalDirector": "石原立也",
+    "chineseDirector": "石原立也",
+    "year": 2006,
+    "country": "JP",
+    "genre": "Comedy, Animation, Sci-Fi & Fantasy",
+    "runtime": "2 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42511-0-79bfafc5a00a.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/fHxqpr7u0c2ZnTjjP69Rff78bxL.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/42511"
+    },
+    "tmdbId": 42511,
+    "watchedEntries": [],
+    "studio": "Kyoto Animation",
+    "seasons": [
+      {
+        "id": "tv-42511-season-1",
+        "title": "Season 1",
+        "originalTitle": "涼宮ハルヒの憂鬱",
+        "chineseTitle": "凉宫春日的忧郁",
+        "type": "series",
+        "director": "Tatsuya Ishihara",
+        "originalDirector": "石原立也",
+        "chineseDirector": "石原立也",
+        "year": 2006,
+        "country": "JP",
+        "genre": "Comedy, Animation, Sci-Fi & Fantasy",
+        "runtime": "14 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42511-0-79bfafc5a00a.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fHxqpr7u0c2ZnTjjP69Rff78bxL.jpg",
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42511"
+        },
+        "tmdbId": 42511,
+        "watchedEntries": [],
+        "studio": "Kyoto Animation",
+        "partLabel": "第 1 季",
+        "releaseDate": "2006-04-03"
+      },
+      {
+        "id": "tv-42511-season-2",
+        "title": "Season 2",
+        "originalTitle": "涼宮ハルヒの憂鬱",
+        "chineseTitle": "凉宫春日的忧郁",
+        "type": "series",
+        "director": "Tatsuya Ishihara",
+        "originalDirector": "石原立也",
+        "chineseDirector": "石原立也",
+        "year": 2009,
+        "country": "JP",
+        "genre": "Comedy, Animation, Sci-Fi & Fantasy",
+        "runtime": "14 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42511-0-79bfafc5a00a.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fHxqpr7u0c2ZnTjjP69Rff78bxL.jpg",
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42511"
+        },
+        "tmdbId": 42511,
+        "watchedEntries": [],
+        "studio": "Kyoto Animation",
+        "partLabel": "第 2 季",
+        "releaseDate": "2009-05-22"
+      }
+    ]
+  },
+  {
+    "id": "tv-60808",
+    "title": "No Game No Life",
+    "originalTitle": "ノーゲーム・ノーライフ",
+    "chineseTitle": "游戏人生",
+    "type": "series",
+    "director": "Atsuko Ishizuka",
+    "originalDirector": "いしづかあつこ",
+    "chineseDirector": "石冢敦子",
+    "year": 2014,
+    "country": "JP",
+    "genre": "Animation, Sci-Fi & Fantasy, Action & Adventure, Comedy",
+    "runtime": "12 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60808-2-93341c377d1c.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/qoj8t5XdsyBJGMWV8MfZviz7gcA.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/60808"
+    },
+    "tmdbId": 60808,
+    "watchedEntries": [],
+    "studio": "Madhouse"
+  },
+  {
+    "id": "tv-65329",
+    "title": "Hyouka",
+    "originalTitle": "氷菓",
+    "chineseTitle": "冰菓",
+    "type": "series",
+    "director": "Yasuhiro Takemoto",
+    "originalDirector": "武本康弘",
+    "chineseDirector": "武本康弘",
+    "year": 2012,
+    "country": "JP",
+    "genre": "Animation, Mystery, Comedy",
+    "runtime": "22 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65329-2-5265921397dc.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/jLqFI9DNx5omo3SCUlvtHyhfhYa.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/65329"
+    },
+    "tmdbId": 65329,
+    "watchedEntries": [],
+    "studio": "Kyoto Animation"
+  },
+  {
+    "id": "tv-65676",
+    "title": "My Teen Romantic Comedy SNAFU",
+    "originalTitle": "やはり俺の青春ラブコメはまちがっている。",
+    "chineseTitle": "我的青春恋爱物语果然有问题",
+    "type": "series",
+    "director": "Ai Yoshimura",
+    "originalDirector": "吉村愛",
+    "chineseDirector": "吉村爱",
+    "year": 2013,
+    "country": "JP",
+    "genre": "Animation, Comedy, Drama",
+    "runtime": "3 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65676-1-9bbdee6a73b8.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/sb5MNoeZGHX21qvtwhmizUsJJqq.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/65676"
+    },
+    "tmdbId": 65676,
+    "watchedEntries": [],
+    "studio": "Brain's Base",
+    "seasons": [
+      {
+        "id": "tv-65676-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "やはり俺の青春ラブコメはまちがっている。",
+        "chineseTitle": "我的青春恋爱物语果然有问题",
+        "partLabel": "第 1 季",
+        "year": 2013,
+        "releaseDate": "2013-04-05",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65676-1-9bbdee6a73b8.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sb5MNoeZGHX21qvtwhmizUsJJqq.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/65676/season/1"
+        }
+      },
+      {
+        "id": "tv-65676-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "originalTitle": "やはり俺の青春ラブコメはまちがっている。",
+        "chineseTitle": "我的青春恋爱物语果然有问题",
+        "partLabel": "第 2 季",
+        "year": 2015,
+        "releaseDate": "2015-04-03",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65676-s2-601adcc3c7de.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/tcEh9TAImq2BRSStJR5YXF1FWp4.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/65676/season/2"
+        },
+        "director": "Kei Oikawa",
+        "originalDirector": "及川啓",
+        "chineseDirector": "及川启",
+        "studio": "feel."
+      },
+      {
+        "id": "tv-65676-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "originalTitle": "やはり俺の青春ラブコメはまちがっている。",
+        "chineseTitle": "我的青春恋爱物语果然有问题",
+        "partLabel": "第 3 季",
+        "year": 2020,
+        "releaseDate": "2020-07-10",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65676-s3-c2176429972f.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zps4Tpj2Klyaq2lca5SbgcVlRL6.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/65676/season/3"
+        },
+        "director": "Kei Oikawa",
+        "originalDirector": "及川啓",
+        "chineseDirector": "及川启",
+        "studio": "feel."
+      }
+    ]
+  },
+  {
+    "id": "tv-118797",
+    "title": "Rainbow Sea",
+    "originalTitle": "星游记",
+    "chineseTitle": "星游记",
+    "type": "series",
+    "director": "Liu Bei, Sun Tian",
+    "originalDirector": "刘北, 孙甜",
+    "chineseDirector": "刘北、孙甜",
+    "year": 2011,
+    "country": "CN",
+    "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
+    "runtime": "26 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-118797-1-2387f7edf242.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/3X8oTTVbIJbjsQXXympw73O32sO.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/118797"
+    },
+    "tmdbId": 118797,
+    "watchedEntries": [],
+    "studio": "TINKID Animation"
   }
 ]

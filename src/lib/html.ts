@@ -16,4 +16,13 @@ export function secondaryNames(primary: string[], ...names: (string | undefined)
     return true;
   }).map(name => name.trim()).join(' · ');
 }
+
+export function creatorNames(primary: string, original?: string, chinese?: string): string {
+  // Preserve empty slots so each translated name stays with its credited creator.
+  const split = (names = '') => names.split(/\s*[,，、;；]\s*|\s+\/\s+/).map(name => name.trim());
+  const directors = split(primary), originals = split(original), translations = split(chinese);
+  const localized = directors.map((name, index) => secondaryNames([name], originals[index], translations[index]));
+  // A mixed-language credit must still include creators such as ONE and TYPE-MOON.
+  return localized.some(Boolean) ? localized.map((name, index) => name || directors[index]).join(' · ') : '';
+}
 import nameVariants from '../data/screen-name-variants.json';

@@ -1,12 +1,13 @@
 {
   "checkedAt": "2026-09-08",
-  "scope": "70 visible books; ordering metadata only. Displayed editions, covers, reviews, hidden status and partOrder are preserved.",
+  "scope": "80 visible books; ordering metadata and owner-requested additions.",
   "notes": [
     "Names are original-name romanizations or Chinese pinyin; display names are unchanged.",
     "眠 uses the 2010 rewritten illustrated work ねむり, rather than its 1989 short-story precursor.",
     "我与地坛 uses the title essay first published in 1991; it is currently the only card by Shi Tiesheng.",
     "Serialized works use the first publication of the work (Jin Yong and 三体); reprints do not reset the year.",
-    "Multi-part entries use the first volume year; Foundation retains the owner-defined reading order."
+    "Multi-part entries use the first volume year; Foundation retains the owner-defined reading order.",
+    "没有人给他写信的上校 uses its 1958 publication in Mito; the separate book edition followed in 1961."
   ],
   "books": {
     "眠": {
@@ -288,6 +289,46 @@
     "明朝那些事儿 7：大结局": {
       "year": 2009,
       "source": "https://book.douban.com/press/2416/"
+    },
+    "第七天": {
+      "year": 2013,
+      "source": "https://book.douban.com/subject/24540864/"
+    },
+    "群山回唱": {
+      "year": 2013,
+      "source": "https://book.douban.com/subject/24845582/"
+    },
+    "没有人给他写信的上校": {
+      "year": 1958,
+      "source": "https://www.ucentral.edu.co/sites/default/files/inline-files/2014-05-noticentral-48.pdf"
+    },
+    "变形记": {
+      "year": 1915,
+      "source": "https://www.franzkafka.de/werk/saemtliche-titel/die-verwandlung"
+    },
+    "审判": {
+      "year": 1925,
+      "source": "https://www.franzkafka.de/werk/saemtliche-titel/der-process"
+    },
+    "城堡": {
+      "year": 1926,
+      "source": "https://www.franzkafka.de/werk/saemtliche-titel/das-schloss"
+    },
+    "判决": {
+      "year": 1913,
+      "source": "https://www.franzkafka.de/werk/saemtliche-titel/das-urteil"
+    },
+    "一个陌生女人的来信": {
+      "year": 1922,
+      "source": "https://en.wikipedia.org/wiki/Letter_from_an_Unknown_Woman"
+    },
+    "牧羊少年奇幻之旅": {
+      "year": 1988,
+      "source": "https://en.wikipedia.org/wiki/The_Alchemist_(novel)"
+    },
+    "一个人的朝圣": {
+      "year": 2012,
+      "source": "https://xoeditions.com/en/livres/the-unlikely-pilgrimage-of-harold-fry/"
     }
   },
   "additionalSources": [

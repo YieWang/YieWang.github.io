@@ -119,7 +119,7 @@ const categories = [
 
 <script>
   import type { MediaItem } from '../../../data/cinema';
-  import { escapeHtml, secondaryNames } from '../../../lib/html';
+  import { escapeHtml, secondaryNames, creatorNames } from '../../../lib/html';
 
   const categoryButtons = document.querySelectorAll<HTMLButtonElement>('[data-cinema-tab]');
   categoryButtons.forEach(button => button.addEventListener('click', () => {
@@ -156,11 +156,7 @@ const categories = [
     const title = item.type === 'film' ? item.title : selection.title;
     const nativeTitle = secondaryNames([title], item.originalTitle,
       item.originalTitle?.includes(item.chineseTitle || '\0') ? undefined : item.chineseTitle, item.partLabel);
-    const chineseDirectors = item.chineseDirector?.split(', ') || [];
-    const originalDirectors = item.originalDirector?.split(', ') || [];
-    const directors = item.director.split(/, | \/ /);
-    const nativeDirector = secondaryNames(directors,
-      ...directors.flatMap((_, index) => [originalDirectors[index], chineseDirectors[index]]));
+    const nativeDirector = creatorNames(item.director, item.originalDirector, item.chineseDirector);
     const hasReview = !!item.review;
     const rating = item.rating;
 
