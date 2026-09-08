@@ -6461,7 +6461,7 @@
     "year": 2023,
     "country": "JP",
     "genre": "Animation, Action & Adventure, Drama, Sci-Fi & Fantasy",
-    "runtime": "1 Seasons",
+    "runtime": "2 Seasons",
     "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-209867-0007aee86a41.webp",
     "firstWatched": "2025-08-12",
     "externalLink": {
@@ -6484,7 +6484,47 @@
     "chineseTitle": "葬送的芙莉莲",
     "originalDirector": "山田鐘人, アベツカサ",
     "chineseDirector": "山田钟人, 阿部司",
-    "studio": "Madhouse"
+    "studio": "Madhouse",
+    "seasons": [
+      {
+        "id": "tv-209867-season-1",
+        "title": "Season 1",
+        "seasonNumber": 1,
+        "year": 2023,
+        "releaseDate": "2023-09-29",
+        "runtime": "28 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-209867-0007aee86a41.webp",
+        "partLabel": "第 1 季",
+        "firstWatched": "2025-08-12",
+        "rating": "5 / 5",
+        "watchedEntries": [
+          {
+            "doubanId": "36093351",
+            "title": "葬送的芙莉莲",
+            "firstWatched": "2025-08-12",
+            "rating": "5 / 5",
+            "comment": ""
+          }
+        ],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/36093351/"
+        }
+      },
+      {
+        "id": "tv-209867-season-2",
+        "title": "Season 2",
+        "seasonNumber": 2,
+        "year": 2026,
+        "releaseDate": "2026-01-16",
+        "runtime": "10 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-209867-0007aee86a41.webp",
+        "partLabel": "第 2 季",
+        "firstWatched": "",
+        "rating": "",
+        "watchedEntries": []
+      }
+    ]
   },
   {
     "id": "film-1307793",
@@ -7459,7 +7499,7 @@
     "year": 2016,
     "country": "KR",
     "genre": "Crime, Mystery, Sci-Fi & Fantasy, Drama",
-    "runtime": "2 Seasons",
+    "runtime": "16 Episodes",
     "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/series/tmdb-64840-b01679a38c3f.webp",
     "firstWatched": "2025-05-14",
     "externalLink": {
