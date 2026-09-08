@@ -692,7 +692,7 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
   }
   .stage-panel > a {
     position: absolute;
-    left: calc(50% - 237px);
+    left: calc(50% - 200px);
     top: calc(50% - 135px);
     width: 400px;
     height: 270px;
@@ -702,7 +702,11 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
     padding-top: 10px;
     transform-origin: 50% 50%;
   }
-  .stage-panel:not(#stage-panel-cinema) > a { left: calc(50% - 249px); }
+  @media (min-width: 640px) {
+    .stage-panel > a { left: calc(50% - 237px); }
+    .stage-panel:not(#stage-panel-cinema) > a { left: calc(50% - 249px); }
+    .cinema-scene { translate: -12px 0; }
+  }
   .stage-panel > a > div { flex-shrink: 0; }
   .stage-panel > a:focus-visible { outline: 2px solid #777; outline-offset: 4px; border-radius: 4px; }
   .stage-touch-hint { display: none; font-size: 10px; color: #777; text-align: center; }
@@ -719,7 +723,6 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
   }
 
   /* Original image ratios and staggered placement keep the prints tangible. */
-  .stage-panel#stage-panel-photography > a { left: calc(50% - 200px); }
   @media (min-width: 640px) {
     .stage-panel#stage-panel-photography > a { left: calc(50% - 252px); }
   }
@@ -747,7 +750,7 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
   }
 
   /* Flat film transport with a soft, slowly varying projector glow. */
-  .cinema-scene { position: relative; width: 380px; height: 250px; translate: -12px 0; display: flex; align-items: center; justify-content: center; }
+  .cinema-scene { position: relative; width: 380px; height: 250px; display: flex; align-items: center; justify-content: center; }
   .cinema-strip { position: relative; flex-shrink: 0; width: 400px; height: 140px; overflow: hidden; border-radius: 1px; box-shadow: 0 8px 18px #32271b18; }
   .cinema-track { position: relative; display: flex; width: max-content; height: 140px; padding: 16px 0; background: #25231f; animation: cinema-transport 16s linear infinite paused; }
   .cinema-track::before, .cinema-track::after { content: ''; position: absolute; left: 0; right: 0; height: 7px; background: repeating-linear-gradient(to right, transparent 0 4px, #faf9f5 4px 11px, transparent 11px 20px); }
