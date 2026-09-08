@@ -28,6 +28,13 @@ for (const [id, episodes] of Object.entries({ 'tv-276903': 10, 'tv-16069': 11, '
   assert.equal(cinemaSeries.find(item => item.id === id)?.runtime, `${episodes} Episodes`);
 }
 assert.ok(cinemaSeries.every(item => !/^1 Seasons?$/i.test(item.runtime || '')), 'Single-season television shows must display episodes');
+// Regular season episodes from the imported TMDb records; do not add specials or future seasons.
+// Skip and Loafer season 2 airs in April 2027: https://skip-and-loafer.com/news.html
+for (const [id, episodes] of Object.entries({ 'tv-124396': 12, 'tv-42942': 13, 'tv-43125': 22,
+  'tv-82766': 23, 'tv-46671': 26, 'tv-43167': 24, 'tv-61663': 22, 'tv-74091': 12,
+  'tv-92602': 13, 'tv-105248': 10, 'tv-127714': 13, 'tv-139130': 12 })) {
+  assert.equal(cinemaAnimation.find(item => item.id === id)?.runtime, `${episodes} Episodes`);
+}
 const harryPotter = groupFilmCollections(cinemaFilms).find(x => x.title === 'Harry Potter');
 assert.equal(harryPotter.installments.length, 8);
 assert.ok(harryPotter.installments.every(x => x.title.startsWith('Harry Potter and ')));
