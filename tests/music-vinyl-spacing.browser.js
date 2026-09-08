@@ -5,7 +5,7 @@ async (page) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.mouse.move(0, 0);
     await page.waitForTimeout(550);
-    const contentWidth = await page.evaluate(() => document.documentElement.clientWidth);
+    const contentWidth = await page.evaluate(() => document.body.getBoundingClientRect().width);
     const grid = page.locator('section .grid').filter({ has: page.locator('.music-card:nth-child(6)') }).first();
     const cards = grid.locator('.music-card');
     const columns = width < 640 ? 2 : width < 768 ? 3 : width < 1024 ? 4 : 6;
