@@ -16,7 +16,8 @@ Songti SC Regular. Regenerate with `python scripts/render-book-pages.py`; anothe
 Song font may be supplied with `--font` and `--font-index`.
 
 The preview iframe warms on entry to Marginalia and stays loaded when switching
-interests. Playback pauses when inactive; page unload calls `destroy()`.
+interests. Playback pauses and rewinds to the cover when inactive or hidden, preserving
+the engine across back-forward cache restorations.
 Startup waits for the cover and first spread, with later pages prefetched by ZineJS.
 Reduced-motion users see an open, static spread without automatic turns.
 

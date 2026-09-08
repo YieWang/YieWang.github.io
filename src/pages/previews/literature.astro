@@ -65,7 +65,8 @@ const pageImages = Array.from({ length: pages.length + 2 }, (_, i) => i === 0
       if (frame) new MutationObserver(syncPlayback).observe(frame, { attributes: true, attributeFilter: ['data-active'] });
       document.addEventListener('visibilitychange', syncPlayback);
       reducedMotion.addEventListener('change', () => location.reload());
-      window.addEventListener('pagehide', () => { clearTimeout(timer); zine.destroy(); });
+      window.addEventListener('pagehide', () => { clearTimeout(timer); zine.flipTo(0); });
+      window.addEventListener('pageshow', syncPlayback);
     </script>
   </body>
 </html>

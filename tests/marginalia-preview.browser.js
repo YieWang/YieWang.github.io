@@ -41,12 +41,33 @@ async (page) => {
   await page.waitForTimeout(900);
   await page.screenshot({ path: 'output/playwright/marginalia-music.png' });
   await page.getByRole('link', { name: 'Literature', exact: true }).hover();
-  await page.waitForTimeout(250);
   const closedBook = await iframe.screenshot({ path: 'output/playwright/marginalia-literature-cover.png' });
   await page.waitForTimeout(4500);
   if (closedBook.equals(await iframe.screenshot())) throw new Error('Book did not turn its pages');
   await page.screenshot({ path: 'output/playwright/marginalia-literature.png' });
   if (await book.getAttribute('data-error')) throw new Error('Book failed to initialize');
+  // Verify back navigation and bfcache preservation of Literature preview
+  await page.evaluate(() => {
+    const frame = document.querySelector('.literature-book iframe');
+    frame.contentWindow.dispatchEvent(new PageTransitionEvent('pagehide', { persisted: true }));
+    frame.contentWindow.dispatchEvent(new PageTransitionEvent('pageshow', { persisted: true }));
+  });
+  await page.getByRole('link', { name: 'Literature', exact: true }).hover();
+  await page.waitForTimeout(250);
+  const bfcacheCover = await iframe.screenshot();
+  await page.waitForTimeout(4500);
+  if (bfcacheCover.equals(await iframe.screenshot())) throw new Error('Book did not turn its pages after bfcache pagehide/pageshow');
+
+  await page.getByRole('link', { name: 'Screen', exact: true }).click();
+  await page.waitForURL('**/marginalia/screen*');
+  await page.goBack();
+  await page.waitForFunction(() => location.pathname === '/marginalia' || location.pathname === '/marginalia/');
+  await page.waitForFunction(() => document.querySelector('.literature-book iframe')?.contentDocument?.querySelector('#book')?.dataset.renderer);
+  await page.getByRole('link', { name: 'Literature', exact: true }).hover();
+  await page.waitForTimeout(250);
+  const backNavCover = await iframe.screenshot();
+  await page.waitForTimeout(4500);
+  if (backNavCover.equals(await iframe.screenshot())) throw new Error('Book did not turn its pages after returning from Screen');
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.waitForTimeout(800);
   await page.waitForFunction(() => document.querySelector('.literature-book iframe').contentDocument.querySelector('#book')?.dataset.renderer);

@@ -1132,6 +1132,16 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
 
   if (document.getElementById('marginalia-section')?.classList.contains('active-section')) enterMarginalia();
 
+  window.addEventListener('pageshow', () => {
+    if (stage) stage.removeAttribute('data-paused');
+    const activeSec = document.querySelector('.page-section.active-section');
+    if (activeSec?.id === 'marginalia-section') {
+      enterMarginalia();
+    } else if (activeSec?.id === 'home-section') {
+      window.dispatchEvent(new Event('resize'));
+    }
+  });
+
   // =========================================================================
   // GEODETIC HARMONIC WAVE ENGINE (纵向算术调和测地波)
   // =========================================================================
