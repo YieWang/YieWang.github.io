@@ -469,19 +469,8 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
                 <div class="gameboy-side-bottom"></div>
                 <div class="gameboy-side-corner"></div>
 
-                <svg class="gameboy-circuit" viewBox="0 0 186 258" aria-hidden="true">
-                  <rect x="12" y="15" width="162" height="226" rx="13" fill="#777d7e" />
-                  <g fill="none" stroke="#c6cdcb" stroke-width="1" opacity="0.6">
-                    <path d="M24 129H78V171H136V223 M30 134H72V180H124V236 M157 110V149H107V211H50 M163 115V156H115V202H35 M34 220H77V197H153" />
-                    <circle cx="46" cy="174" r="25" /><circle cx="141" cy="167" r="17" />
-                  </g>
-                  <rect x="83" y="144" width="18" height="23" rx="2" fill="#303536" />
-                  {[25, 160].map(x => [22, 229].map(y => <g><circle cx={x} cy={y} r="7" fill="#e3e7e7" fill-opacity="0.5" stroke="#f5f7f7" /><circle cx={x} cy={y} r="2" fill="#707777" /></g>))}
-                  <g fill="#c3c8c5">{[0, 1, 2, 3, 4].map(i => <rect x={82 + i * 4} y="176" width="2" height="8" rx="0.5" />)}</g>
-                </svg>
-
                 <!-- 3D Front Shell Face -->
-                <div class="gameboy-front absolute inset-0 rounded-t-[14px] rounded-bl-[14px] bg-[#ECECE8] border border-[#D5D4CD] shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.85),inset_-1px_-1px_2px_rgba(0,0,0,0.08)] p-3 flex flex-col justify-between" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%); transform: translateZ(var(--gameboy-depth));">
+                <div class="gameboy-front absolute inset-0 rounded-t-[14px] rounded-bl-[14px] bg-[#D9D7CE] border border-[#CAC8BF] shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.85),inset_-1px_-1px_2px_rgba(0,0,0,0.1)] p-3 flex flex-col justify-between" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%); transform: translateZ(var(--gameboy-depth));">
 
                 <!-- Top Shell: Power Switch & Cartridge Slot Ridge -->
                 <div class="w-full flex justify-between items-center -mt-1 px-1">
@@ -521,8 +510,8 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
                       <span class="text-[0.28rem] font-mono text-[#AAAAAA] tracking-tighter scale-90">BATTERY</span>
                     </div>
 
-                    <!-- Neutral monochrome LCD screen with 8-Bit Pixel Art (Tetris), recessed into bezel -->
-                    <div class="gameboy-lcd flex-1 h-[64px] sm:h-[70px] rounded-[2px] bg-[#FAFAFA] border border-[#969696] shadow-[inset_0_3px_8px_rgba(0,0,0,0.6),inset_0_-1px_2px_rgba(0,0,0,0.25),0_1px_0_rgba(255,255,255,0.14)] p-1.5 flex justify-between relative overflow-hidden">
+                    <!-- Authentic Olive-Green Pea LCD Screen with 8-Bit Pixel Art (Tetris), recessed into bezel -->
+                    <div class="gameboy-lcd flex-1 h-[64px] sm:h-[70px] rounded-[2px] bg-[#8BAC0F] border border-[#304B02] shadow-[inset_0_3px_8px_rgba(0,0,0,0.6),inset_0_-1px_2px_rgba(0,0,0,0.25),0_1px_0_rgba(255,255,255,0.14)] p-1.5 flex justify-between relative overflow-hidden">
                       
                       <!-- Screen Glare Diagonal Reflection -->
                       <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/15 to-transparent pointer-events-none z-20"></div>
@@ -540,17 +529,17 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
                       </svg>
 
                       <!-- Right: Game Stats (Score, Level, Lines) -->
-                      <div class="w-[40%] h-full flex flex-col justify-between pl-1 text-[0.32rem] sm:text-[0.36rem] font-mono font-bold text-[#333333] z-10 leading-none">
+                      <div class="w-[40%] h-full flex flex-col justify-between pl-1 text-[0.32rem] sm:text-[0.36rem] font-mono font-bold text-[#0F380F] z-10 leading-none">
                         <div>
-                          <div class="text-[0.28rem] text-[#666666]">SCORE</div>
+                          <div class="text-[0.28rem] text-[#306230]">SCORE</div>
                           <div class="gameboy-score"><span>024500</span><span>024800</span></div>
                         </div>
                         <div>
-                          <div class="text-[0.28rem] text-[#666666]">LEVEL</div>
+                          <div class="text-[0.28rem] text-[#306230]">LEVEL</div>
                           <div>01</div>
                         </div>
                         <div>
-                          <div class="text-[0.28rem] text-[#666666]">LINES</div>
+                          <div class="text-[0.28rem] text-[#306230]">LINES</div>
                           <div class="gameboy-score"><span>028</span><span>030</span></div>
                         </div>
                       </div>
@@ -573,7 +562,7 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
                   <!-- Left: Classic Matte Black D-Pad (Cross with Center Depression) -->
                   <div class="relative w-11 sm:w-12 h-11 sm:h-12 flex items-center justify-center">
                     <!-- Base socket -->
-                    <div class="absolute inset-0 rounded-full bg-[#acb4b499] shadow-inner"></div>
+                    <div class="absolute inset-0 rounded-full bg-[#C6C4BB] shadow-inner"></div>
                     <!-- Cross vertical bar -->
                     <div class="absolute w-3.5 h-10 sm:h-11 bg-gradient-to-r from-[#2B2D31] via-[#1E1F22] to-[#141517] rounded-[2px] shadow-[0_4px_8px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.4),inset_1px_0_1px_rgba(255,255,255,0.25)] flex flex-col justify-between items-center py-0.5">
                       <span class="text-[0.3rem] text-[#666666] leading-none">▲</span>
@@ -601,7 +590,7 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
                   </div>
 
                   <!-- Right: Diagonal Ruby/Magenta A & B Action Buttons -->
-                  <div class="relative p-1 bg-[#acb4b499] rounded-[20px] shadow-inner transform -rotate-[25deg] mb-1">
+                  <div class="relative p-1 bg-[#C6C4BB] rounded-[20px] shadow-inner transform -rotate-[25deg] mb-1">
                     <div class="flex space-x-2 items-center">
                       <!-- B Button -->
                       <div class="flex flex-col items-center">
@@ -620,12 +609,12 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
 
                 <!-- Bottom-Right: 6 Diagonal Speaker Grille Slots (6道斜向扬声器孔条) -->
                 <div class="absolute bottom-3 right-3 flex space-x-1 transform -rotate-[28deg] pointer-events-none">
-                  <div class="w-1 h-3.5 bg-[#646d6e] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-4.5 bg-[#646d6e] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-5.5 bg-[#646d6e] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-5.5 bg-[#646d6e] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-4.5 bg-[#646d6e] rounded-full shadow-inner"></div>
-                  <div class="w-1 h-3.5 bg-[#646d6e] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-3.5 bg-[#8E8C83] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-4.5 bg-[#8E8C83] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-5.5 bg-[#8E8C83] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-5.5 bg-[#8E8C83] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-4.5 bg-[#8E8C83] rounded-full shadow-inner"></div>
+                  <div class="w-1 h-3.5 bg-[#8E8C83] rounded-full shadow-inner"></div>
                 </div>
 
                 <!-- Bottom Edge: Phones Jack Indication -->
@@ -829,23 +818,22 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
     transform: rotateY(-30deg) rotateX(12deg) rotateZ(-2deg) translateY(-4px);
 
   }
-  .gameboy-back { position: absolute; inset: 0; border-radius: 14px 14px 26px 14px; background: #c0c7c766; border: 1px solid #a3aeae99; box-shadow: 5px 9px 16px #00000020; }
-  .gameboy-side-right, .gameboy-side-left { position: absolute; top: 13px; bottom: 24px; width: var(--gameboy-depth); transform-origin: left; transform: rotateY(-90deg); background: linear-gradient(to right, #7f8a8abd, #d5dede77 45%, #77848499 49%, #f8ffffcc 53%, #c7d2d266); border: 1px solid #ffffffbb; }
+  .gameboy-back { position: absolute; inset: 0; border-radius: 14px 14px 26px 14px; background: #C4C2BA; border: 1px solid #B0AEA6; box-shadow: 5px 9px 18px rgba(0, 0, 0, 0.22); }
+  .gameboy-side-right, .gameboy-side-left { position: absolute; top: 13px; bottom: 24px; width: var(--gameboy-depth); transform-origin: left; transform: rotateY(-90deg); background: linear-gradient(to right, #C8C6BD, #D8D6CD 45%, #C2C0B7 49%, #E4E2DA 53%, #BFBDB4); border: 1px solid #BAB8B0; }
   .gameboy-side-right { left: 100%; }
-  .gameboy-side-left { left: 0; border-color: #91a0a0bb; background: linear-gradient(to right, #94a0a099, #edf1f1aa 42%, #9ba8a8aa 49%, #ffffffcc 55%, #c4cece88); }
-  .gameboy-side-top, .gameboy-side-bottom { position: absolute; left: 13px; right: 13px; height: var(--gameboy-depth); transform-origin: top; transform: rotateX(90deg); background: linear-gradient(to bottom, #94a0a077, #dfe6e677 48%, #7e898977 51%, #f5f9f999 55%); }
+  .gameboy-side-left { left: 0; border-color: #ABA9A0; background: linear-gradient(to right, #BCBAAF, #CCCAC0 42%, #B5B3A8 49%, #D4D2C9 55%, #ABA99F); }
+  .gameboy-side-top, .gameboy-side-bottom { position: absolute; left: 13px; right: 13px; height: var(--gameboy-depth); transform-origin: top; transform: rotateX(90deg); background: linear-gradient(to bottom, #CCCAC1, #DFDDD5 48%, #C0BEB5 51%, #EAE8E0 55%); }
   .gameboy-side-top { top: 0; }
   .gameboy-side-bottom { top: 100%; right: 24px; }
-  .gameboy-side-corner { position: absolute; left: 100%; top: calc(100% - 24px); width: 33.94px; height: var(--gameboy-depth); transform-origin: top left; transform: rotateZ(135deg) rotateX(90deg); background: linear-gradient(to bottom, #8e9a9a88, #dfe6e677 48%, #7b898977 51%, #dde5e588 55%); }
+  .gameboy-side-corner { position: absolute; left: 100%; top: calc(100% - 24px); width: 33.94px; height: var(--gameboy-depth); transform-origin: top left; transform: rotateZ(135deg) rotateX(90deg); background: linear-gradient(to bottom, #BCBAAF, #CCCAC0 48%, #B2B0A6 51%, #D2D0C6 55%); }
   .gameboy-volume { position: absolute; top: 45px; left: 10px; width: 12px; height: 31px; border-radius: 3px; background: repeating-linear-gradient(#333b3d 0 2px, #717b7d 2px 3px); box-shadow: 0 0 0 2px #a6afb0; }
-  .gameboy-circuit { position: absolute; inset: 0; width: 100%; height: 100%; transform: translateZ(27px); }
   .gameboy-white .gameboy-front {
-    background: linear-gradient(120deg, #ffffffa3, #d9e0e047 42%, #f2f6f66b 70%, #aab8b847);
-    border-color: #ffffffcc;
-    box-shadow: inset 2px 0 1px #87939399, inset 4px 0 2px #ffffffdd, inset 0 2px 2px #ffffffdd, inset -2px -1px 3px #76858577;
+    background: linear-gradient(145deg, #DFDDD5, #D2D0C7);
+    border-color: #CAC8BF;
+    box-shadow: inset 1.5px 1.5px 1px rgba(255, 255, 255, 0.9), inset -1.5px -1.5px 2px rgba(0, 0, 0, 0.12), inset 0 -2px 3px rgba(0, 0, 0, 0.08);
   }
-  .gameboy-front::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(120deg, transparent 15%, #ffffff26 16%, #ffffff09 33%, transparent 34%, transparent 75%, #ffffff20 76%, transparent 91%); }
-  .gameboy-white .gameboy-bezel { background-color: #41494c; border-color: #30393c; }
+  .gameboy-front::after { display: none; }
+  .gameboy-white .gameboy-bezel { background-color: #505459; border-color: #3A3D42; }
   .gameboy-ground-shadow {
     transform: translateX(12px) translateY(8px);
     transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
@@ -862,16 +850,17 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
     box-shadow: 0 0 5px #ef444455;
   }
   .gameboy-lcd {
-    background: linear-gradient(145deg, #ffffff, #eeeeee);
+    background: linear-gradient(145deg, #9BBC0F, #8BAC0F);
+    border-color: #304B02;
     transition: filter 0.4s ease;
   }
   .is-expanded .gameboy-lcd {
-    filter: brightness(1.08) contrast(1.05);
+    filter: brightness(1.06) contrast(1.05);
   }
   .gameboy-controls { position: relative; height: 76px; }
   .gameboy-system-buttons { position: absolute; bottom: 0; left: 30px; }
   .gameboy-ground-shadow { opacity: 0.15; }
-  .gameboy-well { width: 58%; height: 100%; color: #333333; overflow: hidden; }
+  .gameboy-well { width: 58%; height: 100%; color: #0F380F; overflow: hidden; }
   .gameboy-falling-block { transform: translateY(60px); }
   .gameboy-score { position: relative; }
   .gameboy-score span:last-child { position: absolute; left: 0; top: 0; opacity: 0; }

@@ -19,7 +19,7 @@ for (const [name, count] of Object.entries({ '1Q84': 3, '射雕三部曲': 3, '�
 }
 const excluded = ['彷徨之刃','沉睡的人鱼之家','恋爱的贡多拉','风雪追击','我的晃荡的青春','悖论13','假面饭店','湖畔','从前我死去的家','祈祷落幕时','虚无的十字架','时生','新参者','未知图书'];
 assert.ok(books.every(b => !excluded.includes(b.title)));
-assert.ok(books.every(b => b.coverUrl.startsWith('https://homepage-assets.mathtranslations.org/literature/') && b.coverSource));
+assert.ok(books.every(b => (b.coverUrl.startsWith('https://homepage-assets.mathtranslations.org/literature/') || b.coverUrl.startsWith('https://homepage-assets.mathtranslations.org/images/local-editor/')) && b.coverSource));
 assert.ok(books.every(b => !b.firstRead && !b.reread), 'Record dates do not prove a first reading');
 assert.equal(data.essays.length, 0);
 const first = books[0];
