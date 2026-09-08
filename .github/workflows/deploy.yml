@@ -33,13 +33,25 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Check types
+        run: npm run check
 
       - name: Build with Astro
         run: |
           npx astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
+
+      - name: Run regression checks
+        run: npm test
+
+      - name: Install test browser
+        run: npx playwright-cli install-browser chrome --with-deps
+
+      - name: Check browser interactions
+        run: npm run test:browser
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

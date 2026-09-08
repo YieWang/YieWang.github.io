@@ -112,6 +112,8 @@ const bookCards = literatureBookCards;
         {literatureEssays.map((essay) => (
           <article
             class="essay-item py-4.5 sm:py-5 cursor-pointer flex items-baseline justify-between gap-6 group select-none transition-all duration-300"
+            role="button"
+            tabindex="0"
             data-essay-json={JSON.stringify(essay)}
           >
             <h3
@@ -133,8 +135,9 @@ const bookCards = literatureBookCards;
   </div>
 
   <!-- BOOK LIGHTBOX MODAL (Pure White Two-Column Curatorial Studio, Identical to Cinema) -->
-  <div
+  <dialog
     id="book-modal-backdrop"
+    aria-labelledby="book-modal-title"
     class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
     style="will-change: opacity;"
   >
@@ -145,11 +148,12 @@ const bookCards = literatureBookCards;
     >
       <div id="book-modal-slot" class="w-full h-full flex flex-col min-h-0"></div>
     </div>
-  </div>
+  </dialog>
 
   <!-- ESSAY LIGHTBOX MODAL (Pure Editorial Studio: Title, Author, Year, Location, Body) -->
-  <div
+  <dialog
     id="essay-modal-backdrop"
+    aria-labelledby="essay-modal-title"
     class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
     style="will-change: opacity;"
   >
@@ -160,7 +164,7 @@ const bookCards = literatureBookCards;
     >
       <div id="essay-modal-slot" class="w-full h-full flex flex-col min-h-0"></div>
     </div>
-  </div>
+  </dialog>
 </Layout>
 
 <script>
@@ -201,13 +205,12 @@ const bookCards = literatureBookCards;
 
   // 2. Book Modal Lightbox
   const bookCards = document.querySelectorAll<HTMLElement>('.book-card');
-  const bookModalBackdrop = document.getElementById('book-modal-backdrop');
+  const bookModalBackdrop = document.getElementById('book-modal-backdrop') as HTMLDialogElement | null;
   const bookModalContainer = document.getElementById('book-modal-container');
   const bookModalSlot = document.getElementById('book-modal-slot');
 
   let isBookModalOpen = false;
   let isEssayModalOpen = false;
-  let lockedScrollTop = 0;
   let isMouseDownOnBookBackdrop = false;
   let isMouseDownOnEssayBackdrop = false;
   let bookCloseTimer: ReturnType<typeof setTimeout> | null = null;
@@ -249,6 +252,7 @@ const bookCards = literatureBookCards;
       <!-- Fixed Header: 仿照 Cinema 页面 (主书名 + 灰色原名) -->
       <div class="border-b border-[#F0F0F0] pb-2.5 mb-3 shrink-0 flex items-baseline justify-between gap-3">
         <h2
+          id="book-modal-title"
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words flex items-baseline gap-2.5 flex-wrap"
           style="font-family: 'Josefin Sans', sans-serif;"
         >
@@ -417,7 +421,7 @@ const bookCards = literatureBookCards;
       }
     });
 
-    lockedScrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+    if (!bookModalBackdrop.open) bookModalBackdrop.showModal();
     isBookModalOpen = true;
 
     bookModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
@@ -443,13 +447,14 @@ const bookCards = literatureBookCards;
     bookCloseTimer = setTimeout(() => {
       bookModalBackdrop.classList.remove('pointer-events-auto');
       bookModalBackdrop.classList.add('pointer-events-none');
+      bookModalBackdrop.close();
       if (bookModalSlot) bookModalSlot.innerHTML = '';
     }, 250);
   }
 
   // 3. Essay Lightbox Modal (Only: 题目, 作者, 年份, 地点, 文章)
   const essayItems = document.querySelectorAll<HTMLElement>('.essay-item');
-  const essayModalBackdrop = document.getElementById('essay-modal-backdrop');
+  const essayModalBackdrop = document.getElementById('essay-modal-backdrop') as HTMLDialogElement | null;
   const essayModalContainer = document.getElementById('essay-modal-container');
   const essayModalSlot = document.getElementById('essay-modal-slot');
 
@@ -469,6 +474,7 @@ const bookCards = literatureBookCards;
       <!-- Fixed Header: 仅题目 -->
       <div class="border-b border-[#F0F0F0] pb-3 mb-2.5 shrink-0">
         <h2
+          id="essay-modal-title"
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#1E1E1E] tracking-[0.02rem] leading-tight break-words"
           style="font-family: 'Josefin Sans', sans-serif;"
         >
@@ -492,7 +498,7 @@ const bookCards = literatureBookCards;
       </div>
     `;
 
-    lockedScrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+    if (!essayModalBackdrop.open) essayModalBackdrop.showModal();
     isEssayModalOpen = true;
 
     essayModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
@@ -518,6 +524,7 @@ const bookCards = literatureBookCards;
     essayCloseTimer = setTimeout(() => {
       essayModalBackdrop.classList.remove('pointer-events-auto');
       essayModalBackdrop.classList.add('pointer-events-none');
+      essayModalBackdrop.close();
       if (essayModalSlot) essayModalSlot.innerHTML = '';
     }, 250);
   }
@@ -537,12 +544,13 @@ const bookCards = literatureBookCards;
     if (e.target === essayModalBackdrop && isMouseDownOnEssayBackdrop) closeEssayModal();
   });
 
-  // ESC key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      if (isBookModalOpen) closeBookModal();
-      if (isEssayModalOpen) closeEssayModal();
-    }
+  bookModalBackdrop?.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeBookModal();
+  });
+  essayModalBackdrop?.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeEssayModal();
   });
 
   // Card & Item clicks
@@ -566,6 +574,12 @@ const bookCards = literatureBookCards;
   });
 
   essayItems.forEach((item) => {
+    item.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        item.click();
+      }
+    });
     item.addEventListener('click', () => {
       const json = item.dataset.essayJson;
       if (json) {

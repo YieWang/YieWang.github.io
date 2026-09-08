@@ -46,6 +46,8 @@ const artistGroups = musicArtists.map(artist => {
           <div class="music-album-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-y-9 sm:gap-y-11">
             {group.albums.map((album) => (
               <article
+                role="button"
+                tabindex="0"
                 class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index]"
                 data-album-id={album.id}
                 data-album-json={JSON.stringify(album)}
@@ -117,8 +119,9 @@ const artistGroups = musicArtists.map(artist => {
   </div>
 
   <!-- MODAL / LIGHTBOX (100% Matching Cinema Backdrop & Exit Pattern) -->
-  <div
+  <dialog
     id="music-modal-backdrop"
+    aria-labelledby="music-modal-title"
     class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
     style="will-change: opacity;"
   >
@@ -130,7 +133,7 @@ const artistGroups = musicArtists.map(artist => {
       <!-- Injected by Modal Script -->
       <div id="music-modal-content" class="w-full h-full flex flex-col min-h-0"></div>
     </div>
-  </div>
+  </dialog>
 </Layout>
 
 <style>
@@ -158,7 +161,7 @@ const artistGroups = musicArtists.map(artist => {
   import { escapeHtml } from '../../../lib/html';
 
   const musicCards = document.querySelectorAll<HTMLElement>('.music-card');
-  const modalBackdrop = document.getElementById('music-modal-backdrop');
+  const modalBackdrop = document.getElementById('music-modal-backdrop') as HTMLDialogElement | null;
   const modalContainer = document.getElementById('music-modal-container');
   const modalContentSlot = document.getElementById('music-modal-content');
 
@@ -227,6 +230,7 @@ const artistGroups = musicArtists.map(artist => {
       <!-- 1. TOP BAR (Fixed Header, Authentic Title Only, No Duplicate Names) -->
       <div class="border-b border-[#F0F0F0] pb-3 mb-4 shrink-0 flex items-baseline justify-between gap-3 select-none">
         <h2
+          id="music-modal-title"
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words"
           style="font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;"
         >
@@ -314,6 +318,8 @@ const artistGroups = musicArtists.map(artist => {
       });
     });
 
+    if (!modalBackdrop.open) modalBackdrop.showModal();
+
     // Reset right scroll pane to top
     const scrollPane = document.getElementById('modal-right-scroll-pane');
     if (scrollPane) scrollPane.scrollTop = 0;
@@ -347,6 +353,7 @@ const artistGroups = musicArtists.map(artist => {
     closeTimer = setTimeout(() => {
       modalBackdrop.classList.remove('pointer-events-auto');
       modalBackdrop.classList.add('pointer-events-none');
+      modalBackdrop.close();
       if (modalContentSlot) modalContentSlot.innerHTML = '';
       closeTimer = null;
     }, 250);
@@ -354,6 +361,12 @@ const artistGroups = musicArtists.map(artist => {
 
   // Click card to open modal
   musicCards.forEach((card) => {
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        card.click();
+      }
+    });
     card.addEventListener('click', () => {
       const json = card.dataset.albumJson;
       if (json) {
@@ -379,11 +392,9 @@ const artistGroups = musicArtists.map(artist => {
     isMouseDownOnBackdrop = false;
   });
 
-  // ESC key listener (Cinema exact pattern)
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isModalOpen) {
-      closeModal();
-    }
+  modalBackdrop?.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeModal();
   });
 
   // Wheel lock during modal open (Cinema exact pattern)

@@ -9,7 +9,7 @@ const source = page.slice(page.indexOf('    let isLongReview ='), page.indexOf('
 const html = { exports: {}, require: name => JSON.parse(readFileSync(new URL(name, new URL('../src/lib/', import.meta.url)), 'utf8')) };
 vm.runInNewContext(ts.transpile(readFileSync(new URL('../src/lib/html.ts', import.meta.url), 'utf8'), { module: ts.ModuleKind.CommonJS }), html);
 const render = content => vm.runInNewContext(ts.transpile(source + '\n({ isLongReview, previewHtml, remainingHtml });'), {
-  hasReview: true, item: { review: { content } }, escapeHtml: html.exports.escapeHtml,
+  hasReview: true, review: { content }, escapeHtml: html.exports.escapeHtml,
 });
 const textOf = html => [...html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/g)].map(match => match[1]).join('\n');
 for (const content of ['短评', '甲'.repeat(200), '第一段\n\n第二段']) {

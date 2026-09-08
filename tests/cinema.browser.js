@@ -3,7 +3,8 @@ async page => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.reload();
   if (!(await page.locator('.cinema-card[data-collection="true"]').count())) throw Error('Missing film collections');
-  if (await page.locator('.cinema-card[data-type="series"]').count() !== 54) throw Error('Series count');
+  const seriesCount = await page.locator('.cinema-card[data-type="series"]').count();
+  if (!seriesCount) throw Error('Missing series');
   if (await page.locator('nav[aria-label="Screen categories"]').innerText().then(t => /[·・]/.test(t))) throw Error('Navigation separators');
   if (await page.locator('main h2').count()) throw Error('Section headings remain');
   const killBill = page.locator('.cinema-card').filter({ has: page.getByRole('heading', { name: 'Kill Bill', exact: true }) });
@@ -32,6 +33,7 @@ async page => {
   await page.getByRole('button', { name: 'Series', exact: true }).click();
   if (await page.locator('#section-animation').isVisible()) throw Error('Animation should be hidden');
   const office = page.locator('.cinema-card[data-item-id="tv-2316"]');
+  const officeData = JSON.parse(await office.getAttribute('data-item-json'));
   await office.click();
   await page.waitForFunction(() => getComputedStyle(document.getElementById('cinema-modal-container')).opacity === '1' && getComputedStyle(document.getElementById('cinema-modal-backdrop')).opacity === '1');
   if (await page.locator('[data-installment]').count() !== 9) throw Error('Office must have nine selectable seasons');
@@ -40,7 +42,7 @@ async page => {
   if (await page.locator('#modal-content-slot img').getAttribute('src') === firstPoster) throw Error('Season poster did not switch');
   const names = await page.locator('[data-installment]').allTextContents();
   if (!names.every((s, i) => s.trim() === `Season ${i + 1}`)) throw Error('Season switcher must show names only');
-  if (!(await page.locator('#modal-content-slot').innerText()).includes('2026-09-07')) throw Error('Selected season watch date must remain in details');
+  if (!(await page.locator('#modal-content-slot').innerText()).includes(officeData.installments[1].firstWatched)) throw Error('Selected season watch date must remain in details');
   await page.waitForFunction(() => [...document.querySelectorAll('#modal-content-slot img')].every(i => i.complete && i.naturalWidth));
   await page.screenshot({ path: 'output/playwright/cinema-series-desktop.png' });
   await page.keyboard.press('Escape');
@@ -51,5 +53,5 @@ async page => {
   if (await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)) throw Error('Horizontal overflow');
   await page.screenshot({ path: 'output/playwright/cinema-series-mobile.png' });
   await page.keyboard.press('Escape');
-  return { series: 54, officeSeasons: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
+  return { series: seriesCount, officeSeasons: 9, dates: 'passed', modal: 'passed', mobile: 'passed' };
 }

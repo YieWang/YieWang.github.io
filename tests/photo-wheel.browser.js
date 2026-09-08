@@ -109,9 +109,11 @@ async (page) => {
   if (await settle() !== 0) throw Error('Home must return to first photo');
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2 + 75);
   if (await settle() !== 1) throw Error('Clicking the next thumbnail must select it');
-  await page.getByTitle('跳转至 2025 年').click();
+  const yearButton = page.locator('button[title^="跳转至 "]').first();
+  const targetYear = (await yearButton.getAttribute('title')).match(/\d{4}/)[0];
+  await yearButton.click();
   await settle();
   const selectedLabel = await picker.locator('[aria-selected="true"]').getAttribute('aria-label');
-  if (!selectedLabel.startsWith('2025')) throw Error('External year selection failed');
+  if (!selectedLabel.startsWith(targetYear)) throw Error('External year selection failed');
   return { gentle, rightGentle, fast, intermediateFrames: frames, cursor, reverse: 'passed', keyboard: 'passed', drag: 'both sides passed', boundaries: 'passed', thumbnailClick: 'passed', yearJump: 'passed' };
 }

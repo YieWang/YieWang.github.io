@@ -38,6 +38,8 @@ const categories = [
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 2xl:grid-cols-6 gap-x-4 sm:gap-x-5 md:gap-x-6 gap-y-9 sm:gap-y-11 md:gap-y-12">
           {category.items.map((film) => (
             <article
+              role="button"
+              tabindex="0"
               class="cinema-card group cursor-pointer flex flex-col justify-between select-none"
               data-item-id={film.id}
               data-type={film.type}
@@ -101,8 +103,9 @@ const categories = [
   </div>
 
   <!-- SCHEME A MODAL / LIGHTBOX (Pure White, Two-Column Curatorial Studio) -->
-  <div
+  <dialog
     id="cinema-modal-backdrop"
+    aria-labelledby="cinema-modal-title"
     class="fixed inset-0 z-50 bg-black/45 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-250 flex items-center justify-center p-3 sm:p-6 overscroll-contain select-none"
     style="will-change: opacity;"
   >
@@ -114,7 +117,7 @@ const categories = [
       <!-- Modal Dynamic Body Content injected by JS -->
       <div id="modal-content-slot" class="w-full h-full flex flex-col min-h-0"></div>
     </div>
-  </div>
+  </dialog>
 </Layout>
 
 <script>
@@ -135,7 +138,7 @@ const categories = [
   Array.from(categoryButtons).find(tab => tab.dataset.cinemaTab === history.state?.cinemaCategory)?.click();
 
   const cinemaCards = document.querySelectorAll<HTMLElement>('.cinema-card');
-  const modalBackdrop = document.getElementById('cinema-modal-backdrop');
+  const modalBackdrop = document.getElementById('cinema-modal-backdrop') as HTMLDialogElement | null;
   const modalContainer = document.getElementById('cinema-modal-container');
   const modalContentSlot = document.getElementById('modal-content-slot');
 
@@ -144,6 +147,10 @@ const categories = [
   let isMouseDownOnBackdrop = false;
   let closeTimer: ReturnType<typeof setTimeout> | null = null;
   let touchStartY = 0;
+
+  const getScrollPane = () => document.getElementById(
+    window.matchMedia('(max-width: 639px)').matches ? 'cinema-detail-body' : 'modal-right-scroll-pane'
+  );
 
   function openModal(selection: MediaItem, installmentIndex = 0, listScrollTop = 0) {
     if (!modalContentSlot || !modalBackdrop || !modalContainer) return;
@@ -157,7 +164,8 @@ const categories = [
     const nativeTitle = secondaryNames([title], item.originalTitle,
       item.originalTitle?.includes(item.chineseTitle || '\0') ? undefined : item.chineseTitle, item.partLabel);
     const nativeDirector = creatorNames(item.director, item.originalDirector, item.chineseDirector);
-    const hasReview = !!item.review;
+    const review = item.review || (selection.type === 'series' ? selection.review : undefined);
+    const hasReview = !!review;
     const rating = item.rating;
 
     // Origin, Year & Runtime inline specs (e.g. "JAPAN · 1998 · 67 MIN" or "USA · 2015–2022 · 6 SEASONS")
@@ -172,8 +180,8 @@ const categories = [
     let previewHtml = '';
     let remainingHtml = '';
 
-    if (hasReview && item.review) {
-      const fullText = item.review.content.trim();
+    if (hasReview && review) {
+      const fullText = review.content.trim();
       const characters = Array.from(fullText);
       isLongReview = characters.length > 200;
       const renderParagraphs = (text: string) => text.split(/\r?\n+/)
@@ -187,6 +195,7 @@ const categories = [
       <!-- 1. TOP BAR (Fixed Header, Never Scrolls) -->
       <div class="border-b border-[#F0F0F0] pb-3 mb-4 shrink-0 flex items-baseline justify-between gap-3">
         <h2
+          id="cinema-modal-title"
           class="text-[1.25rem] sm:text-[1.45rem] font-bold text-[#222222] tracking-[0.02rem] leading-tight break-words flex items-baseline gap-2.5 flex-wrap"
           style="font-family: 'Josefin Sans', sans-serif;"
         >
@@ -196,7 +205,7 @@ const categories = [
       </div>
 
       <!-- 2. TWO-COLUMN MAIN BODY (Left Pinned, Right Scrollable) -->
-      <div class="flex flex-col sm:flex-row items-stretch gap-6 sm:gap-7 flex-1 min-h-0 overflow-hidden">
+      <div id="cinema-detail-body" class="flex flex-col sm:flex-row items-stretch gap-6 sm:gap-7 flex-1 min-h-0 overflow-y-auto sm:overflow-hidden overscroll-contain">
         
         <!-- LEFT COLUMN: Poster, Rating & IMDb Link (100% Pinned, Never Scrolls) -->
         <div class="detail-sidebar w-full sm:w-[175px] md:w-[185px] shrink-0 flex flex-row sm:flex-col items-center sm:items-stretch justify-between h-auto sm:h-full gap-4 sm:gap-0">
@@ -221,12 +230,12 @@ const categories = [
 
           <!-- IMDb Link Pinned at Bottom of Left Column (Minimal text link without card box or divider line) -->
           ${item.externalLink?.url ? `
-          <div class="pt-2 sm:pt-4 sm:mt-auto w-auto sm:w-full text-center">
+          <div class="pt-2 sm:pt-4 sm:mt-auto w-auto sm:w-full min-w-0 text-center">
             <a
               href="${escapeHtml(item.externalLink.url)}"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center text-[0.66rem] sm:text-[0.70rem] font-medium text-[#777777] hover:text-black tracking-[0.14rem] uppercase transition-colors whitespace-nowrap"
+              class="inline-flex max-w-full items-center justify-center text-[0.66rem] sm:text-[0.70rem] font-medium text-[#777777] hover:text-black tracking-[0.14rem] uppercase transition-colors whitespace-normal sm:whitespace-nowrap"
             >
               <span>VIEW ON ${escapeHtml(item.externalLink.platform)}</span>
               <span class="ml-1" aria-hidden="true">↗</span>
@@ -235,7 +244,7 @@ const categories = [
         </div>
 
         <!-- RIGHT COLUMN: Metadata & Scrollable Review / Details (ONLY the text area scrolls) -->
-        <div class="flex-1 min-w-0 flex flex-col h-full overflow-hidden">
+        <div class="shrink-0 sm:flex-1 min-w-0 flex flex-col sm:h-full sm:overflow-hidden">
           
           <!-- Top Fixed Metadata: DIRECTED BY, RELEASE YEAR, FIRST WATCHED, REWATCHED (2x2 Clean Grid) -->
           <div class="grid grid-cols-2 gap-x-6 gap-y-3 pb-3.5 border-b border-[#F0F0F0] shrink-0">
@@ -289,7 +298,7 @@ const categories = [
           <!-- Scrollable Text Area (ONLY this section scrolls when content expands) -->
           <div
             id="modal-right-scroll-pane"
-            class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2.5 pt-3 space-y-3.5"
+            class="sm:flex-1 sm:min-h-0 sm:overflow-y-auto overscroll-contain sm:pr-2.5 pt-3 space-y-3.5"
             style="scrollbar-gutter: stable;"
           >
             ${selection.installments ? `
@@ -310,10 +319,10 @@ const categories = [
                 ? `
               <!-- Quote (if available) -->
               ${
-                item.review?.quote
+                review?.quote
                   ? `
                 <blockquote class="italic text-[0.82rem] sm:text-[0.86rem] text-[#333333] font-light pl-3 border-l-2 border-black/80 my-2">
-                  ${escapeHtml(item.review.quote)}
+                  ${escapeHtml(review.quote)}
                 </blockquote>
               `
                   : ''
@@ -322,10 +331,10 @@ const categories = [
               <!-- Review Body -->
               <div class="space-y-2">
                 ${
-                  item.review?.date
+                  review?.date
                     ? `
                   <div class="text-[0.62rem] font-mono uppercase tracking-[0.14rem] text-[#888888]">
-                    ${escapeHtml(item.review.date)}
+                    ${escapeHtml(review.date)}
                   </div>
                 `
                     : ''
@@ -371,7 +380,7 @@ const categories = [
     modalContentSlot.querySelectorAll<HTMLButtonElement>('[data-installment]').forEach(button => {
       button.addEventListener('click', () => {
         const index = Number(button.dataset.installment);
-        const listScrollTop = document.getElementById('modal-right-scroll-pane')?.scrollTop || 0;
+        const listScrollTop = getScrollPane()?.scrollTop || 0;
         openModal(selection, index, listScrollTop);
         modalContentSlot.querySelector<HTMLButtonElement>(`[data-installment="${index}"]`)?.focus({ preventScroll: true });
       });
@@ -396,13 +405,14 @@ const categories = [
         toggleBtn.textContent = '↓';
         toggleBtn.setAttribute('title', 'Expand full essay');
         toggleBtn.setAttribute('aria-label', 'Expand full essay');
-        const scrollPane = document.getElementById('modal-right-scroll-pane');
+        const scrollPane = getScrollPane();
         if (scrollPane) scrollPane.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
 
     // Preserve list position when switching parts; new detail views start at the top.
-    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    if (!modalBackdrop.open) modalBackdrop.showModal();
+    const scrollPane = getScrollPane();
     if (scrollPane) scrollPane.scrollTop = listScrollTop;
 
     // Lock window scroll position without altering DOM/scrollbar
@@ -435,6 +445,7 @@ const categories = [
     closeTimer = setTimeout(() => {
       modalBackdrop.classList.remove('pointer-events-auto');
       modalBackdrop.classList.add('pointer-events-none');
+      modalBackdrop.close();
       if (modalContentSlot) modalContentSlot.innerHTML = '';
     }, 250);
   }
@@ -450,14 +461,13 @@ const categories = [
     }
   });
 
-  // Press Escape key to close
+  modalBackdrop?.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeModal();
+  });
+
   document.addEventListener('keydown', (e) => {
     if (!isModalOpen) return;
-
-    if (e.key === 'Escape') {
-      closeModal();
-      return;
-    }
 
     // Intercept scroll keys to target the right scroll pane
     const scrollKeys = ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '];
@@ -465,7 +475,7 @@ const categories = [
       const activeTag = (document.activeElement?.tagName || '').toUpperCase();
       if (!['INPUT', 'TEXTAREA', 'BUTTON', 'SELECT', 'A'].includes(activeTag)) {
         e.preventDefault();
-        const scrollPane = document.getElementById('modal-right-scroll-pane');
+        const scrollPane = getScrollPane();
         if (scrollPane && scrollPane.scrollHeight > scrollPane.clientHeight) {
           const step = (e.key === ' ' || e.key === 'PageDown') ? 220 :
                        (e.key === 'PageUp') ? -220 :
@@ -483,7 +493,7 @@ const categories = [
   window.addEventListener('wheel', (e) => {
     if (!isModalOpen) return;
 
-    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    const scrollPane = getScrollPane();
     if (scrollPane && scrollPane.contains(e.target as Node)) {
       const { scrollTop, scrollHeight, clientHeight } = scrollPane;
       const isScrollable = scrollHeight > clientHeight;
@@ -517,7 +527,7 @@ const categories = [
   window.addEventListener('touchmove', (e) => {
     if (!isModalOpen) return;
 
-    const scrollPane = document.getElementById('modal-right-scroll-pane');
+    const scrollPane = getScrollPane();
     if (scrollPane && scrollPane.contains(e.target as Node)) {
       const { scrollTop, scrollHeight, clientHeight } = scrollPane;
       const isScrollable = scrollHeight > clientHeight;
@@ -551,6 +561,12 @@ const categories = [
 
   // Bind Card Clicks
   cinemaCards.forEach((card) => {
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        card.click();
+      }
+    });
     card.addEventListener('click', () => {
       const jsonStr = card.dataset.itemJson;
       if (!jsonStr) return;

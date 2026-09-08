@@ -58,6 +58,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     let keyTapTarget = 0;
     const stopKeyboard = () => {
       heldKey = '';
+      keyHolding = false;
       cancelAnimationFrame(keyFrame);
       keyFrame = 0;
       keyVelocity = 0;
@@ -159,7 +160,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       }
       const direction = steps[event.key];
       const position = element.scrollTop / itemHeight;
-      const reversing = keyboardTarget.current !== null && (keyboardTarget.current - position) * direction < 0;
+      const reversing = keyHolding && keyboardTarget.current !== null && (keyboardTarget.current - position) * direction < 0;
       const index = (reversing ? Math.round(position) : keyboardTarget.current ?? Math.round(position)) + direction;
       keyTapTarget = Math.max(0, Math.min(options.length - 1, index));
       element.style.scrollSnapType = 'none';

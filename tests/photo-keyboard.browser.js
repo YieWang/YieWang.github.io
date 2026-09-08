@@ -13,7 +13,8 @@ async (page) => {
     }, index);
   };
   const results = [];
-  for (const width of [1440, 390]) {
+  // Touch layouts use their own controls, covered by photography-mobile.browser.js.
+  for (const width of [1440, 900]) {
     await page.setViewportSize({ width, height: 900 });
     await picker.focus();
     // Wait for hydration as well as the initial server-rendered listbox.

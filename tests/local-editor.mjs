@@ -62,12 +62,14 @@ try {
   literature.data.essays.push({ id: 'test-essay', title: 'Test', author: 'Owner', content: '<script>text</script>' });
   assert.equal((await post('data/literature', literature)).status, 200);
   assert.equal((await read('literature')).data.essays[0].content, '<script>text</script>');
-  const png = await sharp({ create: { width: 400, height: 250, channels: 3, background: '#789065' } }).png().toBuffer();
-  response = await fetch(origin + '/__editor/image', { method: 'POST', headers: { Origin: origin, 'X-Homepage-Editor': '1' }, body: png });
-  assert.equal(response.status, 200);
-  const image = await response.json();
-  assert.equal(image.width, 400); assert.equal(image.height, 250);
-  assert.equal((await sharp(readFileSync(join(root, 'public', image.thumbnailUrl))).metadata()).width, 320);
+  for (const format of ['png', 'jpeg', 'webp', 'gif', 'tiff']) {
+    const input = await sharp({ create: { width: 400, height: 250, channels: 3, background: '#789065' } })[format]().toBuffer();
+    response = await fetch(origin + '/__editor/image', { method: 'POST', headers: { Origin: origin, 'X-Homepage-Editor': '1' }, body: input });
+    assert.equal(response.status, 200, `${format} import`);
+    const image = await response.json();
+    assert.equal(image.width, 400); assert.equal(image.height, 250);
+    assert.equal((await sharp(readFileSync(join(root, 'public', image.thumbnailUrl))).metadata()).width, 320);
+  }
   response = await fetch(origin + '/__editor/image', { method: 'POST', headers: { Origin: origin, 'X-Homepage-Editor': '1' }, body: '<svg><script>alert(1)</script></svg>' });
   assert.equal(response.status, 400);
   console.log('Local editor: persisted edits, backup, conflicts, validation, same-origin access, artist relations and real image conversion passed.');

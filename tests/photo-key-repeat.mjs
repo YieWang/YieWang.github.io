@@ -33,6 +33,16 @@ const finish = () => {
   while (frames.size && n++ < 60) tick();
   assert.equal(frames.size, 0, 'settle within one second after release');
 };
+// Short taps accumulate against their destination even while the animation is moving.
+for (const gap of [0, 16, 80]) {
+  cancelKeyboard.current(); element.scrollTop = 2 * 82;
+  for (const key of ['ArrowDown', 'ArrowDown', 'ArrowUp']) {
+    down({ key, target: element, preventDefault() {} }); up({ key });
+    if (gap) tick(gap);
+  }
+  finish();
+  assert.equal(element.scrollTop, 3 * 82, 'down, down, up must advance one photo');
+}
 for (const target of [element, { closest: () => null }]) {
   for (const dt of [8, 16, 32]) {
     cancelKeyboard.current(); element.scrollTop = 50 * 82; calls.length = 0;
