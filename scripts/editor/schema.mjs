@@ -29,7 +29,7 @@ export const documents = {
       externalLink: object('外部链接', { platform: text('平台', { options: ['IMDb', 'Douban', 'TMDb'] }), url: url('地址') }),
     }), required: false, reorder: false },
     watchedEntries: { ...array('导入观看记录', { title, firstWatched: text('观看日期'), rating, comment: area('短评') }), advanced: true, reorder: false },
-    externalLink: object('外部链接', { platform: text('平台', { options: ['IMDb', 'Douban'] }), url: url('地址') }), hidden,
+    externalLink: object('外部链接', { platform: text('平台', { options: ['IMDb', 'Douban', 'TMDb'] }), url: url('地址') }), hidden,
   }) },
   music: { file: 'music-import.json', label: '音乐', schema: object('音乐', {
     albums: array('专辑', {

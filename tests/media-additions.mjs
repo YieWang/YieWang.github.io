@@ -2,8 +2,10 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { loadData } from './load-data.mjs';
+import { documents, validate } from '../scripts/editor/schema.mjs';
 const read = file => JSON.parse(readFileSync(new URL(`../src/data/${file}`, import.meta.url), 'utf8'));
 const cinema = read('cinema-import.json');
+validate(cinema, documents.cinema.schema);
 const literature = loadData('literature.ts');
 const books = ['第七天', '群山回唱', '没有人给他写信的上校', '变形记', '审判', '城堡', '判决', '一个陌生女人的来信', '牧羊少年奇幻之旅', '一个人的朝圣'];
 const seriesIds = [31816, 1418, 64280];
