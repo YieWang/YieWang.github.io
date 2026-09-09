@@ -30,7 +30,26 @@ const racketOutline = 'M80 6 C123 6 152 39 152 82 C152 116 134 141 99 150 L94 15
 const rubberOutline = 'M80 10 C120 10 148 41 148 82 C148 115 130 139 96 147 Q80 153 64 147 C30 139 12 115 12 82 C12 41 40 10 80 10 Z';
 const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 229 L70 229 Q61 229 63 223 C67 203 70 177 66 149 Z';
 
-
+const gameboySlices = Array.from({ length: 58 }, (_, i) => {
+  const z = Number(((i + 1) * 0.6).toFixed(1));
+  const stops = [
+    { z: 0, c: [200, 198, 189] },
+    { z: 16.2, c: [216, 214, 205] },
+    { z: 17.64, c: [194, 192, 183] },
+    { z: 19.08, c: [228, 226, 218] },
+    { z: 36, c: [191, 189, 180] },
+  ];
+  let k = 0;
+  while (k < stops.length - 1 && z > stops[k + 1].z) k++;
+  const s1 = stops[k];
+  const s2 = stops[k + 1] || s1;
+  const t = s2.z === s1.z ? 0 : Math.max(0, Math.min(1, (z - s1.z) / (s2.z - s1.z)));
+  const r = Math.round(s1.c[0] + (s2.c[0] - s1.c[0]) * t);
+  const g = Math.round(s1.c[1] + (s2.c[1] - s1.c[1]) * t);
+  const b = Math.round(s1.c[2] + (s2.c[2] - s1.c[2]) * t);
+  const col = `rgb(${r}, ${g}, ${b})`;
+  return { z: `${z}px`, bg: col, border: col, shadow: 'none' };
+});
 ---
 
 <Header activeTab={initialSection} />
@@ -463,14 +482,16 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
               <div class="gameboy-white relative z-10 w-[170px] sm:w-[186px] h-[238px] sm:h-[258px] select-none" style="transform-style: preserve-3d;">
                 
                 <div class="gameboy-back"></div>
+                {gameboySlices.map(slice => (
+                  <div
+                    class="gameboy-slice"
+                    style={`transform: translateZ(${slice.z}); background: ${slice.bg}; border-color: ${slice.border}; box-shadow: ${slice.shadow};`}
+                  />
+                ))}
                 <div class="gameboy-side-right"><div class="gameboy-volume"></div></div>
-                <div class="gameboy-side-left"></div>
-                <div class="gameboy-side-top"></div>
-                <div class="gameboy-side-bottom"></div>
-                <div class="gameboy-side-corner"></div>
 
                 <!-- 3D Front Shell Face -->
-                <div class="gameboy-front absolute inset-0 rounded-t-[14px] rounded-bl-[14px] bg-[#D9D7CE] border border-[#CAC8BF] shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.85),inset_-1px_-1px_2px_rgba(0,0,0,0.1)] p-3 flex flex-col justify-between" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%); transform: translateZ(var(--gameboy-depth));">
+                <div class="gameboy-front absolute inset-0 rounded-[14px] rounded-br-[40px] bg-[#D9D7CE] border border-[#CAC8BF] shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.85),inset_-1px_-1px_2px_rgba(0,0,0,0.1)] p-3 flex flex-col justify-between" style="transform: translateZ(var(--gameboy-depth));">
 
                 <!-- Top Shell: Power Switch & Cartridge Slot Ridge -->
                 <div class="w-full flex justify-between items-center -mt-1 px-1">
@@ -617,10 +638,6 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
                   <div class="w-1 h-3.5 bg-[#8E8C83] rounded-full shadow-inner"></div>
                 </div>
 
-                <!-- Bottom Edge: Phones Jack Indication -->
-                <div class="w-full flex justify-start items-center -mb-1 px-2 text-[0.28rem] font-mono text-[#8C8B85]">
-                  <span>🎧 PHONES</span>
-                </div>
 
                 </div>
                 <!-- End of gameboy-front -->
@@ -818,16 +835,23 @@ const handleOutline = 'M66 149 Q80 154 94 149 C90 177 93 203 97 223 Q99 229 90 2
     transform: rotateY(-30deg) rotateX(12deg) rotateZ(-2deg) translateY(-4px);
 
   }
-  .gameboy-back { position: absolute; inset: 0; border-radius: 14px 14px 26px 14px; background: #C4C2BA; border: 1px solid #B0AEA6; box-shadow: 5px 9px 18px rgba(0, 0, 0, 0.22); }
-  .gameboy-side-right, .gameboy-side-left { position: absolute; top: 13px; bottom: 24px; width: var(--gameboy-depth); transform-origin: left; transform: rotateY(-90deg); background: linear-gradient(to right, #C8C6BD, #D8D6CD 45%, #C2C0B7 49%, #E4E2DA 53%, #BFBDB4); border: 1px solid #BAB8B0; }
-  .gameboy-side-right { left: 100%; }
-  .gameboy-side-left { left: 0; border-color: #ABA9A0; background: linear-gradient(to right, #BCBAAF, #CCCAC0 42%, #B5B3A8 49%, #D4D2C9 55%, #ABA99F); }
-  .gameboy-side-top, .gameboy-side-bottom { position: absolute; left: 13px; right: 13px; height: var(--gameboy-depth); transform-origin: top; transform: rotateX(90deg); background: linear-gradient(to bottom, #CCCAC1, #DFDDD5 48%, #C0BEB5 51%, #EAE8E0 55%); }
-  .gameboy-side-top { top: 0; }
-  .gameboy-side-bottom { top: 100%; right: 24px; }
-  .gameboy-side-corner { position: absolute; left: 100%; top: calc(100% - 24px); width: 33.94px; height: var(--gameboy-depth); transform-origin: top left; transform: rotateZ(135deg) rotateX(90deg); background: linear-gradient(to bottom, #BCBAAF, #CCCAC0 48%, #B2B0A6 51%, #D2D0C6 55%); }
+  .gameboy-back { position: absolute; inset: 0; border-radius: 14px 14px 40px 14px; background: #C4C2BA; border: 1px solid #B0AEA6; box-shadow: 5px 9px 18px rgba(0, 0, 0, 0.22); }
+  .gameboy-slice { position: absolute; inset: 0 0.5px 0 0; border-radius: 14px 14px 40px 14px; border: 1px solid; pointer-events: none; }
+  .gameboy-side-right {
+    position: absolute;
+    top: 14px;
+    height: calc(100% - 54px);
+    left: 100%;
+    width: var(--gameboy-depth);
+    transform-origin: left;
+    transform: rotateY(-90deg) translateZ(0.2px);
+    background: linear-gradient(to right, #C8C6BD 0%, #D8D6CD 45%, #C2C0B7 49%, #E4E2DA 53%, #BFBDB4 100%);
+    border: none;
+    z-index: 30;
+  }
   .gameboy-volume { position: absolute; top: 45px; left: 10px; width: 12px; height: 31px; border-radius: 3px; background: repeating-linear-gradient(#333b3d 0 2px, #717b7d 2px 3px); box-shadow: 0 0 0 2px #a6afb0; }
   .gameboy-white .gameboy-front {
+    border-radius: 14px 14px 40px 14px;
     background: linear-gradient(145deg, #DFDDD5, #D2D0C7);
     border-color: #CAC8BF;
     box-shadow: inset 1.5px 1.5px 1px rgba(255, 255, 255, 0.9), inset -1.5px -1.5px 2px rgba(0, 0, 0, 0.12), inset 0 -2px 3px rgba(0, 0, 0, 0.08);
