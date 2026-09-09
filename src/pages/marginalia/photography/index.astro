@@ -223,15 +223,18 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       img.onload = () => imageCache.add(url);
     }
 
-    // Warm only the next two photos; full images load as the user explores.
-    allPhotos.slice(1, 3).forEach(p => preloadPhoto(p.imageUrl));
+    // Warm the initial photos; full images load as the user explores.
+    allPhotos.slice(1, 6).forEach(p => preloadPhoto(p.imageUrl));
 
     // Seamless Optical Morphing Image Switcher
     function morphToImage(imageUrl: string, title: string) {
       const request = ++imageRequest;
       if (!layerA || !layerB) return;
 
+      let swapped = false;
       const performSwap = () => {
+        if (swapped) return;
+        swapped = true;
         requestAnimationFrame(() => {
           if (request !== imageRequest) return;
           const incomingLayer = activeLayer === 'A' ? layerB : layerA;
@@ -247,6 +250,9 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       const preloader = new Image();
       preloader.onload = performSwap;
       preloader.src = imageUrl;
+      if (preloader.complete) {
+        performSwap();
+      }
     }
 
     function activatePhotoByIndex(index: number, options: { fromWheel?: boolean } = {}) {
@@ -287,7 +293,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       }
 
       // 3. Warm the nearest photos without loading the whole archive.
-      for (let offset = -1; offset <= 2; offset++) {
+      for (let offset = -3; offset <= 4; offset++) {
         const target = index + offset;
         if (offset !== 0 && target >= 0 && target < allPhotos.length) {
           preloadPhoto(allPhotos[target].imageUrl);

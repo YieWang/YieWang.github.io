@@ -65,6 +65,15 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       keyboardTarget.current = null;
     };
     cancelKeyboard.current = stopKeyboard;
+    const commit = (index: number) => {
+      const next = options[index]?.value;
+      if (typeof selected !== 'undefined' && typeof notify !== 'undefined') {
+        if (next && next !== selected.current) {
+          selected.current = next;
+          notify.current(next);
+        }
+      }
+    };
     const draw = () => {
       const position = element.scrollTop / itemHeight;
       wheel.current!.style.transform = `translateZ(${-radius}px) rotateX(${position * itemAngle}deg)`;
@@ -82,11 +91,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       if (keyboardTarget.current !== null && index !== keyboardTarget.current) return;
       keyboardTarget.current = null;
       element.style.scrollSnapType = '';
-      const next = options[index]?.value;
-      if (next && next !== selected.current) {
-        selected.current = next;
-        notify.current(next);
-      }
+      commit(index);
     };
     const scroll = () => {
       cancelAnimationFrame(frame);
@@ -96,7 +101,9 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     };
     const stopAt = (top: number) => {
       clearTimeout(settleTimer);
-      element.scrollTo({ top: Math.max(0, Math.min(options.length - 1, Math.round(top / itemHeight))) * itemHeight, behavior: 'smooth' });
+      const index = Math.max(0, Math.min(options.length - 1, Math.round(top / itemHeight)));
+      commit(index);
+      element.scrollTo({ top: index * itemHeight, behavior: 'smooth' });
       settleTimer = setTimeout(settle, 160);
     };
     const steps: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1 };
@@ -138,9 +145,14 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     };
     const onKeyUp = (event: KeyboardEvent) => {
       if (event.key !== heldKey) return;
-      // Only release confirms a tap; a hold never commits an initial single-step selection.
-      if (!keyHolding) keyboardTarget.current = keyTapTarget;
+      const wasHolding = keyHolding;
       heldKey = '';
+      if (!wasHolding) {
+        keyboardTarget.current = keyTapTarget;
+        commit(keyTapTarget);
+      } else if (keyboardTarget.current !== null) {
+        commit(keyboardTarget.current);
+      }
     };
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.defaultPrevented || (event.target as HTMLElement)?.closest('input, textarea, select, [contenteditable="true"]')) return;
@@ -285,7 +297,13 @@ export default function PhotoWheel({ options, value, onValueChange }: {
           cancelKeyboard.current();
           keyboardTarget.current = null;
           const offset = event.clientY - event.currentTarget.getBoundingClientRect().top - height / 2;
-          event.currentTarget.scrollTo({ top: Math.round((event.currentTarget.scrollTop + offset) / itemHeight) * itemHeight, behavior: 'smooth' });
+          const targetIndex = Math.max(0, Math.min(options.length - 1, Math.round((event.currentTarget.scrollTop + offset) / itemHeight)));
+          const next = options[targetIndex]?.value;
+          if (next && next !== selected.current) {
+            selected.current = next;
+            notify.current(next);
+          }
+          event.currentTarget.scrollTo({ top: targetIndex * itemHeight, behavior: 'smooth' });
         }}
       >
         {options.map(option => <div key={option.value} id={`photo-option-${option.value}`} role="option"

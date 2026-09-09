@@ -25,29 +25,6 @@ Welcome to the source repository for the personal academic homepage of **Yi Wang
   - 3D Interactive WebGL / Canvas Elements (Game Boy & Literature Flipbook)
 - **Typography**: Josefin Sans (Name Heading) & Montserrat (Body & Nav)
 - **Deployment**: GitHub Pages via GitHub Actions CI/CD
-
----
-
-## 🛠️ Local Development
-
-```bash
-# Install dependencies
-npm install
-
-# Start local development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build locally
-npm run preview
-
-# Run type check and regression tests
-npm run check
-npm test
-```
-
 ---
 
 ## 📄 License
