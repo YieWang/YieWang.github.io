@@ -663,13 +663,13 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
     opacity: 1;
     transform: scale(1);
     transform-origin: 50% 0%;
-    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .page-section.inactive {
     opacity: 0;
-    transform: scale(0.96);
+    transform: scale(0.97);
     transform-origin: 50% 0%;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.1s cubic-bezier(0.4, 0, 0.2, 1), transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
   }
   .page-section.hidden {
@@ -1022,7 +1022,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
       if (targetId === 'marginalia') enterMarginalia();
 
       transitionTimer = null;
-    }, 180);
+    }, 80);
   }
 
   // 监听导航点击事件：拦截内部链接，保持 1:1 丝滑交错动画并推入干净路由 (无 #)
@@ -1042,8 +1042,8 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
     let targetId = link.getAttribute('data-target');
     if (!targetId) {
       if (href === '/' || href === '/#home' || href === '#home') targetId = 'home';
-      else if (href === '/mathematics' || href === '/#mathematics' || href === '#mathematics') targetId = 'mathematics';
-      else if (href === '/marginalia' || href === '/#marginalia' || href === '#marginalia') targetId = 'marginalia';
+      else if (href === '/mathematics' || href === '/mathematics/' || href === '/#mathematics' || href === '#mathematics') targetId = 'mathematics';
+      else if (href === '/marginalia' || href === '/marginalia/' || href === '/#marginalia' || href === '#marginalia') targetId = 'marginalia';
     }
 
     if (targetId) {
