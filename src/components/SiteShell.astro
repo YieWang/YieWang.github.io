@@ -224,26 +224,24 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         TEMPLATE
       </h3>
     </div>
-    <div class="space-y-3.5 sm:space-y-4.5 text-left">
+    <div class="grid grid-cols-[max-content_1fr] gap-x-4 sm:gap-x-5 gap-y-5 sm:gap-y-6 items-baseline text-left">
       {templateData.map((item) => (
-        <article class="space-y-1">
+        <>
           <h4
-            class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5] font-bold text-[#333333]"
+            class="text-[0.875rem] sm:text-[0.9375rem] leading-normal font-bold text-[#333333]"
             style="font-family: 'Montserrat', sans-serif;"
           >
             {item.title}
           </h4>
-          <p
-            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem] flex items-center gap-2 flex-wrap"
+          <div
+            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem] flex items-baseline gap-2"
             style="font-family: 'Montserrat', sans-serif;"
           >
-            <span>{item.type}</span>
-            <span class="text-[#D1D1D1]">·</span>
             <a
               href={item.previewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200 py-1"
+              class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
             >
               Preview
             </a>
@@ -251,12 +249,12 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
             <a
               href={item.sourceUrl}
               download
-              class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200 py-1"
+              class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
             >
               Source
             </a>
-          </p>
-        </article>
+          </div>
+        </>
       ))}
     </div>
   </div>

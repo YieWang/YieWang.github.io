@@ -38,19 +38,19 @@ export const expositionData: ExpositionItem[] = [
 
 export const templateData: TemplateItem[] = [
   {
-    title: "Chinese Template",
-    type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template_Preview.pdf?v=2",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template.zip?v=2",
-  },
-  {
-    title: "English Template",
+    title: "English",
     type: "LaTeX template",
     previewUrl: "https://homepage-assets.mathtranslations.org/templates/English_Template_Preview.pdf?v=2",
     sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English_Template.zip?v=2",
   },
   {
-    title: "Seminar Template",
+    title: "Chinese",
+    type: "LaTeX template",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template_Preview.pdf?v=2",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template.zip?v=2",
+  },
+  {
+    title: "Seminar",
     type: "LaTeX template",
     previewUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar_Template_Preview.pdf?v=3",
     sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar_Template.zip?v=3",
