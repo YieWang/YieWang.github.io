@@ -1,0 +1,1587 @@
+[
+  {
+    "book": {
+      "id": "book-1002299",
+      "title": "笑傲江湖",
+      "originalTitle": "",
+      "author": "金庸",
+      "edition": "生活·读书·新知三联书店 · 1994年版",
+      "year": 1994,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1002299-f35c7d18a97c.webp",
+      "sourceIds": [
+        "1002299"
+      ],
+      "review": {
+        "date": "2025.05.14",
+        "content": "最成熟的一本"
+      },
+      "coverSource": "https://book.douban.com/subject/1002299/",
+      "coverWidth": 300,
+      "coverHeight": 463,
+      "originalYear": 1967
+    },
+    "best": {
+      "id": "4832584",
+      "title": "笑傲江湖",
+      "author": "金庸",
+      "year": "2011",
+      "url": "https://book.douban.com/subject/4832584/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s35545602.jpg",
+      "w": 1080,
+      "h": 1609
+    },
+    "candidates": [
+      {
+        "id": "4832584",
+        "title": "笑傲江湖",
+        "author": "金庸",
+        "year": "2011",
+        "url": "https://book.douban.com/subject/4832584/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s35545602.jpg",
+        "w": 1080,
+        "h": 1609
+      },
+      {
+        "id": "1002299",
+        "title": "笑傲江湖（全四册）",
+        "author": "金庸",
+        "year": "1994",
+        "url": "https://book.douban.com/subject/1002299/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s2157335.jpg",
+        "w": 300,
+        "h": 463
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-1058661",
+      "title": "飞鸟集",
+      "originalTitle": "",
+      "author": "罗宾德拉纳德·泰戈尔",
+      "edition": "花城出版社 · 2023年版",
+      "year": 2023,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1058661-1bfdd3a4983d.webp",
+      "sourceIds": [
+        "1058661"
+      ],
+      "translator": "郑振铎",
+      "review": {
+        "date": "2024.02.20",
+        "content": "绝对的诗性"
+      },
+      "coverSource": "https://se.zhangyue.com/book/detail?appId=7f8f7dfd&bookId=12971149&bookType=1",
+      "coverWidth": 300,
+      "coverHeight": 400,
+      "originalYear": 1916
+    },
+    "best": {
+      "id": "1762527",
+      "title": "飞鸟集",
+      "author": "泰戈尔",
+      "year": "1992",
+      "url": "https://book.douban.com/subject/1762527/",
+      "pic": "https://img2.doubanio.com/view/subject/l/public/s35150741.jpg",
+      "w": 1080,
+      "h": 1858
+    },
+    "candidates": [
+      {
+        "id": "1762527",
+        "title": "飞鸟集",
+        "author": "泰戈尔",
+        "year": "1992",
+        "url": "https://book.douban.com/subject/1762527/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s35150741.jpg",
+        "w": 1080,
+        "h": 1858
+      },
+      {
+        "id": "1058661",
+        "title": "飞鸟集",
+        "author": "[印] 罗宾德拉纳德·泰戈尔",
+        "year": "2004",
+        "url": "https://book.douban.com/subject/1058661/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s1044902.jpg",
+        "w": 429,
+        "h": 425
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-4908885",
+      "title": "局外人",
+      "originalTitle": "L'Etranger",
+      "author": "阿尔贝·加缪",
+      "edition": "花城出版社 · 2023年版",
+      "year": 2023,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4908885-94453ec1169d.webp",
+      "sourceIds": [
+        "4908885"
+      ],
+      "translator": "李玉民",
+      "coverSource": "https://se.zhangyue.com/book/detail?appId=ab91264d&bookId=12989636&bookType=1",
+      "coverWidth": 300,
+      "coverHeight": 400,
+      "originalYear": 1942
+    },
+    "best": {
+      "id": "24257486",
+      "title": "局外人",
+      "author": "[法] 阿尔贝·加缪",
+      "year": "2013",
+      "url": "https://book.douban.com/subject/24257486/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s27003183.jpg",
+      "w": 1080,
+      "h": 1554
+    },
+    "candidates": [
+      {
+        "id": "24257486",
+        "title": "局外人",
+        "author": "[法] 阿尔贝·加缪",
+        "year": "2013",
+        "url": "https://book.douban.com/subject/24257486/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s27003183.jpg",
+        "w": 1080,
+        "h": 1554
+      },
+      {
+        "id": "30468519",
+        "title": "局外人",
+        "author": "[法] 阿尔贝·加缪",
+        "year": "2019",
+        "url": "https://book.douban.com/subject/30468519/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s30012665.jpg",
+        "w": 1080,
+        "h": 1548
+      },
+      {
+        "id": "26839300",
+        "title": "局外人",
+        "author": "[法]加缪",
+        "year": "2016",
+        "url": "https://book.douban.com/subject/26839300/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s34494921.jpg",
+        "w": 428,
+        "h": 616
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26389896",
+      "title": "基地与帝国",
+      "originalTitle": "",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389896-cb549fc9497d.webp",
+      "translator": "叶李华",
+      "sourceIds": [],
+      "collection": "基地七部曲",
+      "partOrder": 2,
+      "coverSource": "https://read.douban.com/ebook/5968784/",
+      "coverWidth": 300,
+      "coverHeight": 450,
+      "originalYear": 1952
+    },
+    "best": {
+      "id": "26389896",
+      "title": "银河帝国2：基地与帝国",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26389896/",
+      "pic": "https://img2.doubanio.com/view/subject/l/public/s28283771.jpg",
+      "w": 600,
+      "h": 871
+    },
+    "candidates": [
+      {
+        "id": "26389896",
+        "title": "银河帝国2：基地与帝国",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26389896/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s28283771.jpg",
+        "w": 600,
+        "h": 871
+      },
+      {
+        "id": "7065529",
+        "title": "银河帝国2：基地与帝国",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/7065529/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s9117163.jpg",
+        "w": 543,
+        "h": 802
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26389894",
+      "title": "第二基地",
+      "originalTitle": "",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389894-cd277d452b0b.webp",
+      "translator": "叶李华",
+      "sourceIds": [],
+      "collection": "基地七部曲",
+      "partOrder": 3,
+      "coverSource": "https://read.douban.com/ebook/5969832/",
+      "coverWidth": 300,
+      "coverHeight": 450,
+      "originalYear": 1953
+    },
+    "best": {
+      "id": "26389894",
+      "title": "银河帝国3 ：第二基地",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26389894/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s28283777.jpg",
+      "w": 600,
+      "h": 859
+    },
+    "candidates": [
+      {
+        "id": "26389894",
+        "title": "银河帝国3 ：第二基地",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26389894/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s28283777.jpg",
+        "w": 600,
+        "h": 859
+      },
+      {
+        "id": "10604915",
+        "title": "银河帝国3：第二基地",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/10604915/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s10393872.jpg",
+        "w": 402,
+        "h": 590
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26389893",
+      "title": "基地前奏",
+      "originalTitle": "",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389893-ca2482660928.webp",
+      "translator": "叶李华",
+      "sourceIds": [],
+      "collection": "基地七部曲",
+      "partOrder": 4,
+      "coverSource": "https://read.douban.com/ebook/5970502/",
+      "coverWidth": 300,
+      "coverHeight": 450,
+      "originalYear": 1988
+    },
+    "best": {
+      "id": "26389893",
+      "title": "银河帝国 4：基地前奏",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26389893/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s28283769.jpg",
+      "w": 600,
+      "h": 874
+    },
+    "candidates": [
+      {
+        "id": "26389893",
+        "title": "银河帝国 4：基地前奏",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26389893/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s28283769.jpg",
+        "w": 600,
+        "h": 874
+      },
+      {
+        "id": "11525217",
+        "title": "银河帝国4：基地前奏",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/11525217/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s11150397.jpg",
+        "w": 401,
+        "h": 588
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26389901",
+      "title": "迈向基地",
+      "originalTitle": "",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389901-96e94a604f9e.webp",
+      "translator": "叶李华",
+      "sourceIds": [],
+      "collection": "基地七部曲",
+      "partOrder": 5,
+      "coverSource": "https://read.douban.com/ebook/5971031/",
+      "coverWidth": 300,
+      "coverHeight": 450,
+      "originalYear": 1993
+    },
+    "best": {
+      "id": "26389901",
+      "title": "银河帝国5：迈向基地",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26389901/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s28283779.jpg",
+      "w": 600,
+      "h": 864
+    },
+    "candidates": [
+      {
+        "id": "26389901",
+        "title": "银河帝国5：迈向基地",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26389901/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s28283779.jpg",
+        "w": 600,
+        "h": 864
+      },
+      {
+        "id": "11528306",
+        "title": "银河帝国5：迈向基地",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/11528306/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s11162055.jpg",
+        "w": 400,
+        "h": 587
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26389899",
+      "title": "基地边缘",
+      "originalTitle": "",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389899-a5ec84f59ff7.webp",
+      "translator": "叶李华",
+      "sourceIds": [],
+      "collection": "基地七部曲",
+      "partOrder": 6,
+      "coverSource": "https://read.douban.com/ebook/5973180/",
+      "coverWidth": 300,
+      "coverHeight": 450,
+      "originalYear": 1982
+    },
+    "best": {
+      "id": "26389899",
+      "title": "银河帝国6 ：基地边缘",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26389899/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s28283780.jpg",
+      "w": 600,
+      "h": 866
+    },
+    "candidates": [
+      {
+        "id": "26389899",
+        "title": "银河帝国6 ：基地边缘",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26389899/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s28283780.jpg",
+        "w": 600,
+        "h": 866
+      },
+      {
+        "id": "11528307",
+        "title": "银河帝国6：基地边缘",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/11528307/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s11363809.jpg",
+        "w": 399,
+        "h": 586
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26389902",
+      "title": "基地与地球",
+      "originalTitle": "",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389902-9399a317d9f1.webp",
+      "translator": "叶李华",
+      "sourceIds": [],
+      "collection": "基地七部曲",
+      "partOrder": 7,
+      "coverSource": "https://read.douban.com/ebook/5976630/",
+      "coverWidth": 300,
+      "coverHeight": 450,
+      "originalYear": 1986
+    },
+    "best": {
+      "id": "26389902",
+      "title": "银河帝国7 ：基地与地球",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26389902/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s28283778.jpg",
+      "w": 600,
+      "h": 866
+    },
+    "candidates": [
+      {
+        "id": "26389902",
+        "title": "银河帝国7 ：基地与地球",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26389902/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s28283778.jpg",
+        "w": 600,
+        "h": 866
+      },
+      {
+        "id": "11528308",
+        "title": "银河帝国7：基地与地球",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/11528308/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s23118735.jpg",
+        "w": 433,
+        "h": 636
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-11539568",
+      "title": "变形记",
+      "originalTitle": "Die Verwandlung",
+      "author": "弗兰茨·卡夫卡",
+      "edition": "上海译文出版社 · 2012年版",
+      "year": 2012,
+      "originalYear": 1915,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-3-e18c1e30cb6d.webp",
+      "coverSource": "https://book.douban.com/subject/11539568/",
+      "coverWidth": 300,
+      "coverHeight": 429,
+      "translator": "张荣昌"
+    },
+    "best": {
+      "id": "35096299",
+      "title": "变形记",
+      "author": "[奥地利] 弗朗茨·卡夫卡",
+      "year": "2020",
+      "url": "https://book.douban.com/subject/35096299/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s33760818.jpg",
+      "w": 1080,
+      "h": 1589
+    },
+    "candidates": [
+      {
+        "id": "35096299",
+        "title": "变形记",
+        "author": "[奥地利] 弗朗茨·卡夫卡",
+        "year": "2020",
+        "url": "https://book.douban.com/subject/35096299/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s33760818.jpg",
+        "w": 1080,
+        "h": 1589
+      },
+      {
+        "id": "35218475",
+        "title": "变形记",
+        "author": "[奥地利] 弗朗茨·卡夫卡",
+        "year": "2020",
+        "url": "https://book.douban.com/subject/35218475/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s33774031.jpg",
+        "w": 477,
+        "h": 800
+      },
+      {
+        "id": "11539568",
+        "title": "变形记",
+        "author": "[奥地利] 卡夫卡",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/11539568/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s22718999.jpg",
+        "w": 300,
+        "h": 429
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-1321017",
+      "title": "九州·缥缈录Ⅰ：蛮荒",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年修订版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1321017-d2481ae5249a.webp",
+      "sourceIds": [
+        "1321017"
+      ],
+      "coverSource": "https://book.douban.com/subject/26261403/",
+      "coverWidth": 309,
+      "coverHeight": 432,
+      "originalYear": 2005,
+      "collection": "九州·缥缈录",
+      "partOrder": 1
+    },
+    "best": {
+      "id": "26261403",
+      "title": "九州·缥缈录Ⅰ",
+      "author": "江南",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26261403/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s28381599.jpg",
+      "w": 309,
+      "h": 432
+    },
+    "candidates": [
+      {
+        "id": "26261403",
+        "title": "九州·缥缈录Ⅰ",
+        "author": "江南",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26261403/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s28381599.jpg",
+        "w": 309,
+        "h": 432
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-3686657",
+      "title": "明朝那些事儿 1：洪武大帝",
+      "originalTitle": "",
+      "author": "当年明月",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3686657-b790bfceb637.webp",
+      "sourceIds": [
+        "3674537"
+      ],
+      "collection": "明朝那些事儿",
+      "partOrder": 1,
+      "collectionReview": {
+        "date": "2024.02.20",
+        "content": "真正的成功是用自己的方式过完自己的一生。"
+      },
+      "coverSource": "https://read.douban.com/ebook/1465780/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "originalYear": 2006
+    },
+    "candidates": []
+  },
+  {
+    "book": {
+      "id": "book-3697785",
+      "title": "明朝那些事儿 2：万国来朝",
+      "originalTitle": "",
+      "author": "当年明月",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697785-c7cb0014407f.webp",
+      "sourceIds": [],
+      "collection": "明朝那些事儿",
+      "partOrder": 2,
+      "coverSource": "https://read.douban.com/ebook/1465634/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "originalYear": 2007
+    },
+    "candidates": []
+  },
+  {
+    "book": {
+      "id": "book-3697787",
+      "title": "明朝那些事儿 3：妖孽宫廷",
+      "originalTitle": "",
+      "author": "当年明月",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697787-ec6127a4fcd8.webp",
+      "sourceIds": [],
+      "collection": "明朝那些事儿",
+      "partOrder": 3,
+      "coverSource": "https://read.douban.com/ebook/1492868/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "originalYear": 2007
+    },
+    "candidates": []
+  },
+  {
+    "book": {
+      "id": "book-3697783",
+      "title": "明朝那些事儿 4：粉饰太平",
+      "originalTitle": "",
+      "author": "当年明月",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697783-98b5cd916214.webp",
+      "sourceIds": [],
+      "collection": "明朝那些事儿",
+      "partOrder": 4,
+      "coverSource": "https://read.douban.com/ebook/1494003/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "originalYear": 2007
+    },
+    "candidates": []
+  },
+  {
+    "book": {
+      "id": "book-3697784",
+      "title": "明朝那些事儿 5：帝国飘摇",
+      "originalTitle": "",
+      "author": "当年明月",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697784-b800609bf162.webp",
+      "sourceIds": [],
+      "collection": "明朝那些事儿",
+      "partOrder": 5,
+      "coverSource": "https://read.douban.com/ebook/1502433/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "originalYear": 2008
+    },
+    "candidates": []
+  },
+  {
+    "book": {
+      "id": "book-3697782",
+      "title": "明朝那些事儿 6：日暮西山",
+      "originalTitle": "",
+      "author": "当年明月",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697782-a998a05e4822.webp",
+      "sourceIds": [],
+      "collection": "明朝那些事儿",
+      "partOrder": 6,
+      "coverSource": "https://read.douban.com/ebook/1487343/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "originalYear": 2008
+    },
+    "candidates": []
+  },
+  {
+    "book": {
+      "id": "book-3717122",
+      "title": "明朝那些事儿 7：大结局",
+      "originalTitle": "",
+      "author": "当年明月",
+      "edition": "浙江人民出版社 · 2011年七册版",
+      "year": 2011,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3717122-2cc6c9aa0eac.webp",
+      "sourceIds": [],
+      "collection": "明朝那些事儿",
+      "partOrder": 7,
+      "coverSource": "https://read.douban.com/ebook/1485115/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "originalYear": 2009
+    },
+    "candidates": []
+  },
+  {
+    "book": {
+      "id": "book-read-310091695",
+      "title": "判决",
+      "originalTitle": "Das Urteil",
+      "author": "弗兰茨·卡夫卡",
+      "edition": "北京燕山出版社 · 2021年版",
+      "year": 2021,
+      "originalYear": 1913,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-6-c6ddd71b2eab.webp",
+      "coverSource": "https://read.douban.com/ebook/310091695/",
+      "coverWidth": 330,
+      "coverHeight": 495,
+      "translator": "彤雅立"
+    },
+    "best": {
+      "id": "35219184",
+      "title": "判决",
+      "author": "[奥地利] 弗朗茨·卡夫卡",
+      "year": "2021",
+      "url": "https://book.douban.com/subject/35219184/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s33774037.jpg",
+      "w": 484,
+      "h": 800
+    },
+    "candidates": [
+      {
+        "id": "35219184",
+        "title": "判决",
+        "author": "[奥地利] 弗朗茨·卡夫卡",
+        "year": "2021",
+        "url": "https://book.douban.com/subject/35219184/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s33774037.jpg",
+        "w": 484,
+        "h": 800
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-4760224",
+      "title": "许三观卖血记",
+      "originalTitle": "",
+      "author": "余华",
+      "edition": "作家出版社 · 2012年版",
+      "year": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4760224-64dd42798e6e.webp",
+      "sourceIds": [
+        "4760224"
+      ],
+      "coverSource": "https://book.douban.com/subject/4760224/",
+      "coverWidth": 331,
+      "coverHeight": 500,
+      "originalYear": 1995
+    },
+    "best": {
+      "id": "27141102",
+      "title": "许三观卖血记",
+      "author": "余华",
+      "year": "2017",
+      "url": "https://book.douban.com/subject/27141102/",
+      "pic": "https://img9.doubanio.com/view/subject/l/public/s29544766.jpg",
+      "w": 1080,
+      "h": 1550
+    },
+    "candidates": [
+      {
+        "id": "27141102",
+        "title": "许三观卖血记",
+        "author": "余华",
+        "year": "2017",
+        "url": "https://book.douban.com/subject/27141102/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s29544766.jpg",
+        "w": 1080,
+        "h": 1550
+      },
+      {
+        "id": "35481712",
+        "title": "许三观卖血记",
+        "author": "余华",
+        "year": "2024",
+        "url": "https://book.douban.com/subject/35481712/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s34804285.jpg",
+        "w": 553,
+        "h": 800
+      },
+      {
+        "id": "4760224",
+        "title": "许三观卖血记",
+        "author": "余华",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/4760224/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s24575140.jpg",
+        "w": 331,
+        "h": 500
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-20441957",
+      "title": "兄弟",
+      "originalTitle": "",
+      "author": "余华",
+      "edition": "作家出版社 · 2012年版",
+      "year": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-20441957-4d202ca10688.webp",
+      "sourceIds": [
+        "20441957"
+      ],
+      "coverSource": "https://book.douban.com/subject/20441957/",
+      "coverWidth": 339,
+      "coverHeight": 500,
+      "originalYear": 2005
+    },
+    "best": {
+      "id": "35907578",
+      "title": "兄弟",
+      "author": "余华",
+      "year": "2022",
+      "url": "https://book.douban.com/subject/35907578/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s34254299.jpg",
+      "w": 1080,
+      "h": 1562
+    },
+    "candidates": [
+      {
+        "id": "35907578",
+        "title": "兄弟",
+        "author": "余华",
+        "year": "2022",
+        "url": "https://book.douban.com/subject/35907578/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s34254299.jpg",
+        "w": 1080,
+        "h": 1562
+      },
+      {
+        "id": "1401425",
+        "title": "兄弟（上）",
+        "author": "余华",
+        "year": "2005",
+        "url": "https://book.douban.com/subject/1401425/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s1427312.jpg",
+        "w": 396,
+        "h": 592
+      },
+      {
+        "id": "20441957",
+        "title": "兄弟",
+        "author": "余华",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/20441957/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s24936189.jpg",
+        "w": 339,
+        "h": 500
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-4742918",
+      "title": "1Q84 BOOK 1",
+      "originalTitle": "",
+      "author": "村上春树",
+      "edition": "南海出版公司 · 2010年版",
+      "year": 2010,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4742918-01a219cf7725.webp",
+      "sourceIds": [
+        "4742918",
+        "20428299"
+      ],
+      "translator": "施小炜",
+      "collection": "1Q84",
+      "partOrder": 1,
+      "coverSource": "https://book.douban.com/subject/4742918/",
+      "coverWidth": 343,
+      "coverHeight": 494,
+      "originalYear": 2009
+    },
+    "best": {
+      "id": "30203786",
+      "title": "1Q84 BOOK1",
+      "author": "[日]村上春树",
+      "year": "2018",
+      "url": "https://book.douban.com/subject/30203786/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s29782537.jpg",
+      "w": 1080,
+      "h": 1523
+    },
+    "candidates": [
+      {
+        "id": "30203786",
+        "title": "1Q84 BOOK1",
+        "author": "[日]村上春树",
+        "year": "2018",
+        "url": "https://book.douban.com/subject/30203786/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s29782537.jpg",
+        "w": 1080,
+        "h": 1523
+      },
+      {
+        "id": "4742918",
+        "title": "1Q84 BOOK 1",
+        "author": "[日] 村上春树",
+        "year": "2010",
+        "url": "https://book.douban.com/subject/4742918/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s4363464.jpg",
+        "w": 343,
+        "h": 494
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-4913064",
+      "title": "活着",
+      "originalTitle": "",
+      "author": "余华",
+      "edition": "作家出版社 · 2012年版",
+      "year": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4913064-36c5c013ea8e.webp",
+      "sourceIds": [
+        "4913064"
+      ],
+      "coverSource": "https://book.douban.com/subject/4913064/",
+      "coverWidth": 347,
+      "coverHeight": 500,
+      "originalYear": 1993
+    },
+    "best": {
+      "id": "27064488",
+      "title": "活着",
+      "author": "余华",
+      "year": "2017",
+      "url": "https://book.douban.com/subject/27064488/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s29652928.jpg",
+      "w": 1080,
+      "h": 1581
+    },
+    "candidates": [
+      {
+        "id": "27064488",
+        "title": "活着",
+        "author": "余华",
+        "year": "2017",
+        "url": "https://book.douban.com/subject/27064488/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s29652928.jpg",
+        "w": 1080,
+        "h": 1581
+      },
+      {
+        "id": "4913064",
+        "title": "活着",
+        "author": "余华",
+        "year": "2012",
+        "url": "https://book.douban.com/subject/4913064/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s29869926.jpg",
+        "w": 347,
+        "h": 500
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26986881",
+      "title": "城堡",
+      "originalTitle": "Das Schloss",
+      "author": "弗兰茨·卡夫卡",
+      "edition": "人民文学出版社 · 2018年版",
+      "year": 2018,
+      "originalYear": 1926,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-5-0e5416402c75.webp",
+      "coverSource": "https://book.douban.com/subject/26986881/",
+      "coverWidth": 353,
+      "coverHeight": 500,
+      "translator": "高年生"
+    },
+    "best": {
+      "id": "34856482",
+      "title": "城堡",
+      "author": "[奥] 弗兰茨·卡夫卡",
+      "year": "2020",
+      "url": "https://book.douban.com/subject/34856482/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s33544790.jpg",
+      "w": 1080,
+      "h": 1542
+    },
+    "candidates": [
+      {
+        "id": "34856482",
+        "title": "城堡",
+        "author": "[奥] 弗兰茨·卡夫卡",
+        "year": "2020",
+        "url": "https://book.douban.com/subject/34856482/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s33544790.jpg",
+        "w": 1080,
+        "h": 1542
+      },
+      {
+        "id": "36725605",
+        "title": "城堡",
+        "author": "弗兰兹·卡夫卡",
+        "year": "2024",
+        "url": "https://book.douban.com/subject/36725605/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s34861286.jpg",
+        "w": 800,
+        "h": 1139
+      },
+      {
+        "id": "26986881",
+        "title": "城堡",
+        "author": "卡夫卡",
+        "year": "2018",
+        "url": "https://book.douban.com/subject/26986881/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s33527339.jpg",
+        "w": 353,
+        "h": 500
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26877752",
+      "title": "恶意",
+      "originalTitle": "悪意",
+      "author": "东野圭吾",
+      "edition": "南海出版公司 · 2016年版",
+      "year": 2016,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26877752-8c0a6459f7f5.webp",
+      "sourceIds": [
+        "26877752"
+      ],
+      "translator": "娄美莲",
+      "coverSource": "https://amomentbooks.com/products/多伦多-渥太华-书店-danxi-日本文学-东野圭吾-恶意",
+      "coverWidth": 377,
+      "coverHeight": 541,
+      "originalYear": 1996
+    },
+    "best": {
+      "id": "35628298",
+      "title": "恶意",
+      "author": "[日] 东野圭吾",
+      "year": "2022",
+      "url": "https://book.douban.com/subject/35628298/",
+      "pic": "https://img2.doubanio.com/view/subject/l/public/s34092441.jpg",
+      "w": 1080,
+      "h": 1555
+    },
+    "candidates": [
+      {
+        "id": "35628298",
+        "title": "恶意",
+        "author": "[日] 东野圭吾",
+        "year": "2022",
+        "url": "https://book.douban.com/subject/35628298/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s34092441.jpg",
+        "w": 1080,
+        "h": 1555
+      },
+      {
+        "id": "3646172",
+        "title": "恶意",
+        "author": "[日] 东野圭吾",
+        "year": "2009",
+        "url": "https://book.douban.com/subject/3646172/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s3814606.jpg",
+        "w": 970,
+        "h": 1372
+      },
+      {
+        "id": "26877752",
+        "title": "恶意",
+        "author": "[日] 东野圭吾",
+        "year": "2016",
+        "url": "https://book.douban.com/subject/26877752/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s29827014.jpg",
+        "w": 250,
+        "h": 360
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-24934182",
+      "title": "一个人的朝圣",
+      "originalTitle": "The Unlikely Pilgrimage of Harold Fry",
+      "author": "蕾秋·乔伊斯",
+      "edition": "北京联合出版公司 · 2013年版",
+      "year": 2013,
+      "originalYear": 2012,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-9-0bfce0384654.webp",
+      "coverSource": "https://book.douban.com/subject/24934182/",
+      "coverWidth": 393,
+      "coverHeight": 569,
+      "translator": "黄妙瑜"
+    },
+    "best": {
+      "id": "24934182",
+      "title": "一个人的朝圣",
+      "author": "[英] 蕾秋·乔伊斯",
+      "year": "2013",
+      "url": "https://book.douban.com/subject/24934182/",
+      "pic": "https://img2.doubanio.com/view/subject/l/public/s26936721.jpg",
+      "w": 393,
+      "h": 569
+    },
+    "candidates": [
+      {
+        "id": "24934182",
+        "title": "一个人的朝圣",
+        "author": "[英] 蕾秋·乔伊斯",
+        "year": "2013",
+        "url": "https://book.douban.com/subject/24934182/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s26936721.jpg",
+        "w": 393,
+        "h": 569
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26389900",
+      "title": "基地",
+      "originalTitle": "",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389900-5e08cb7c3aca.webp",
+      "translator": "叶李华",
+      "sourceIds": [
+        "26389895"
+      ],
+      "collection": "基地七部曲",
+      "partOrder": 1,
+      "coverSource": "https://read.douban.com/ebook/5968669/",
+      "coverWidth": 402,
+      "coverHeight": 600,
+      "originalYear": 1951
+    },
+    "best": {
+      "id": "1258490",
+      "title": "基地",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2005",
+      "url": "https://book.douban.com/subject/1258490/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s1328663.jpg",
+      "w": 400,
+      "h": 588
+    },
+    "candidates": [
+      {
+        "id": "1258490",
+        "title": "基地",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2005",
+        "url": "https://book.douban.com/subject/1258490/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s1328663.jpg",
+        "w": 400,
+        "h": 588
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-3066477",
+      "title": "三体Ⅱ：黑暗森林",
+      "originalTitle": "",
+      "author": "刘慈欣",
+      "edition": "重庆出版社 · 2008年版",
+      "year": 2008,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3066477-2b0d0338d6f4.webp",
+      "sourceIds": [],
+      "collection": "三体",
+      "partOrder": 2,
+      "coverSource": "https://www.aolifo.de/de/cixin-liu-der-dunkle-wald-the-dark-forest-chinesische-ausgabe-isbn-9787536693968.html",
+      "coverWidth": 420,
+      "coverHeight": 600,
+      "originalYear": 2008
+    },
+    "best": {
+      "id": "3066477",
+      "title": "三体Ⅱ",
+      "author": "刘慈欣",
+      "year": "2008",
+      "url": "https://book.douban.com/subject/3066477/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s3078482.jpg",
+      "w": 356,
+      "h": 504
+    },
+    "candidates": [
+      {
+        "id": "3066477",
+        "title": "三体Ⅱ",
+        "author": "刘慈欣",
+        "year": "2008",
+        "url": "https://book.douban.com/subject/3066477/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s3078482.jpg",
+        "w": 356,
+        "h": 504
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26405970",
+      "title": "九州·缥缈录Ⅲ：天下名将",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405970-efb7a4c65600.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 3,
+      "coverSource": "https://book.douban.com/subject/26405970/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2007
+    },
+    "best": {
+      "id": "2253753",
+      "title": "九州·缥缈录Ⅲ·天下名将",
+      "author": "江南",
+      "year": "2007",
+      "url": "https://book.douban.com/subject/2253753/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s2698647.jpg",
+      "w": 1000,
+      "h": 1454
+    },
+    "candidates": [
+      {
+        "id": "2253753",
+        "title": "九州·缥缈录Ⅲ·天下名将",
+        "author": "江南",
+        "year": "2007",
+        "url": "https://book.douban.com/subject/2253753/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s2698647.jpg",
+        "w": 1000,
+        "h": 1454
+      },
+      {
+        "id": "26405970",
+        "title": "九州·缥缈录Ⅲ",
+        "author": "江南",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26405970/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s34678741.jpg",
+        "w": 428,
+        "h": 616
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26405972",
+      "title": "九州·缥缈录Ⅳ：辰月之征",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405972-fa454ef6428b.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 4,
+      "coverSource": "https://book.douban.com/subject/26405972/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2007
+    },
+    "best": {
+      "id": "2286313",
+      "title": "九州·缥缈录Ⅳ·辰月之征",
+      "author": "江南",
+      "year": "2007",
+      "url": "https://book.douban.com/subject/2286313/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s2781187.jpg",
+      "w": 600,
+      "h": 886
+    },
+    "candidates": [
+      {
+        "id": "2286313",
+        "title": "九州·缥缈录Ⅳ·辰月之征",
+        "author": "江南",
+        "year": "2007",
+        "url": "https://book.douban.com/subject/2286313/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s2781187.jpg",
+        "w": 600,
+        "h": 886
+      },
+      {
+        "id": "26405972",
+        "title": "九州·缥缈录Ⅳ",
+        "author": "江南",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26405972/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s34678742.jpg",
+        "w": 428,
+        "h": 616
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26405975",
+      "title": "九州·缥缈录Ⅴ：一生之盟",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405975-bf99e7754ac8.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 5,
+      "coverSource": "https://book.douban.com/subject/26405975/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2009
+    },
+    "best": {
+      "id": "3851790",
+      "title": "九州·缥缈录V·一生之盟",
+      "author": "江南",
+      "year": "2009",
+      "url": "https://book.douban.com/subject/3851790/",
+      "pic": "https://img3.doubanio.com/view/subject/l/public/s3879732.jpg",
+      "w": 933,
+      "h": 1359
+    },
+    "candidates": [
+      {
+        "id": "3851790",
+        "title": "九州·缥缈录V·一生之盟",
+        "author": "江南",
+        "year": "2009",
+        "url": "https://book.douban.com/subject/3851790/",
+        "pic": "https://img3.doubanio.com/view/subject/l/public/s3879732.jpg",
+        "w": 933,
+        "h": 1359
+      },
+      {
+        "id": "26405975",
+        "title": "九州·缥缈录Ⅴ",
+        "author": "江南",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26405975/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s34678648.jpg",
+        "w": 428,
+        "h": 616
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26405980",
+      "title": "九州·缥缈录Ⅵ：豹魂",
+      "originalTitle": "",
+      "author": "江南",
+      "edition": "人民文学出版社 · 2015年版",
+      "year": 2015,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26405980-562bfc79d661.webp",
+      "sourceIds": [],
+      "collection": "九州·缥缈录",
+      "partOrder": 6,
+      "coverSource": "https://book.douban.com/subject/26405980/",
+      "coverWidth": 428,
+      "coverHeight": 616,
+      "originalYear": 2009
+    },
+    "best": {
+      "id": "26405980",
+      "title": "九州·缥缈录Ⅵ",
+      "author": "江南",
+      "year": "2015",
+      "url": "https://book.douban.com/subject/26405980/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s34678649.jpg",
+      "w": 428,
+      "h": 616
+    },
+    "candidates": [
+      {
+        "id": "26405980",
+        "title": "九州·缥缈录Ⅵ",
+        "author": "江南",
+        "year": "2015",
+        "url": "https://book.douban.com/subject/26405980/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s34678649.jpg",
+        "w": 428,
+        "h": 616
+      },
+      {
+        "id": "3854066",
+        "title": "九州·缥缈录VI·豹魂",
+        "author": "江南",
+        "year": "2009",
+        "url": "https://book.douban.com/subject/3854066/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s3880475.jpg",
+        "w": 258,
+        "h": 375
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-26757680",
+      "title": "面纱",
+      "originalTitle": "The Painted Veil",
+      "author": "毛姆",
+      "edition": "开明出版社 · 2018年版",
+      "year": 2018,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26757680-348fd84fccd3.webp",
+      "sourceIds": [
+        "26757680"
+      ],
+      "translator": "田伟华",
+      "coverSource": "https://www.overdrive.com/media/11857228/面纱",
+      "coverWidth": 510,
+      "coverHeight": 680,
+      "originalYear": 1925
+    },
+    "best": {
+      "id": "27091030",
+      "title": "面纱",
+      "author": "[英] 威廉·萨默塞特·毛姆",
+      "year": "2017",
+      "url": "https://book.douban.com/subject/27091030/",
+      "pic": "https://img1.doubanio.com/view/subject/l/public/s29506418.jpg",
+      "w": 1080,
+      "h": 1546
+    },
+    "candidates": [
+      {
+        "id": "27091030",
+        "title": "面纱",
+        "author": "[英] 威廉·萨默塞特·毛姆",
+        "year": "2017",
+        "url": "https://book.douban.com/subject/27091030/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s29506418.jpg",
+        "w": 1080,
+        "h": 1546
+      },
+      {
+        "id": "27125074",
+        "title": "面纱",
+        "author": "[英]威廉·萨默塞特·毛姆",
+        "year": "2017",
+        "url": "https://book.douban.com/subject/27125074/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s34333515.jpg",
+        "w": 1080,
+        "h": 1555
+      },
+      {
+        "id": "34856480",
+        "title": "面纱",
+        "author": "[英] 威廉·萨默塞特·毛姆",
+        "year": "2020",
+        "url": "https://book.douban.com/subject/34856480/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s33619890.jpg",
+        "w": 512,
+        "h": 745
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-25829693",
+      "title": "永恒的终结",
+      "originalTitle": "The End of Eternity",
+      "author": "艾萨克·阿西莫夫",
+      "edition": "江苏凤凰文艺出版社 · 2014年版",
+      "year": 2014,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/25829693-46d1843245c2.webp",
+      "sourceIds": [
+        "25829693"
+      ],
+      "translator": "崔正男",
+      "coverSource": "https://book.douban.com/subject/25829693/",
+      "coverWidth": 552,
+      "coverHeight": 807,
+      "originalYear": 1955
+    },
+    "best": {
+      "id": "25829693",
+      "title": "永恒的终结",
+      "author": "[美] 艾萨克·阿西莫夫",
+      "year": "2014",
+      "url": "https://book.douban.com/subject/25829693/",
+      "pic": "https://img2.doubanio.com/view/subject/l/public/s27409671.jpg",
+      "w": 552,
+      "h": 807
+    },
+    "candidates": [
+      {
+        "id": "25829693",
+        "title": "永恒的终结",
+        "author": "[美] 艾萨克·阿西莫夫",
+        "year": "2014",
+        "url": "https://book.douban.com/subject/25829693/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s27409671.jpg",
+        "w": 552,
+        "h": 807
+      }
+    ]
+  },
+  {
+    "book": {
+      "id": "book-2567698",
+      "title": "三体",
+      "originalTitle": "",
+      "author": "刘慈欣",
+      "edition": "重庆出版社 · 2008年版",
+      "year": 2008,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2567698-b335b72bef3a.webp",
+      "sourceIds": [
+        "6518605"
+      ],
+      "collection": "三体",
+      "partOrder": 1,
+      "collectionReview": {
+        "date": "2024.02.20",
+        "content": "看完之后很长一段时间脑海里还在回想章北海和那些面壁人，威慑时代云云……"
+      },
+      "coverSource": "https://www.aolifo.de/de/cixin-liu-die-drei-sonnen-the-three-body-problem-chinesische-ausgabe-isbn-9787536692930.html",
+      "coverWidth": 557,
+      "coverHeight": 800,
+      "originalYear": 2006
+    },
+    "best": {
+      "id": "36201294",
+      "title": "一说《三体》",
+      "author": "王一",
+      "year": "2023",
+      "url": "https://book.douban.com/subject/36201294/",
+      "pic": "https://img2.doubanio.com/view/subject/l/public/s34568331.jpg",
+      "w": 1080,
+      "h": 1538
+    },
+    "candidates": [
+      {
+        "id": "36201294",
+        "title": "一说《三体》",
+        "author": "王一",
+        "year": "2023",
+        "url": "https://book.douban.com/subject/36201294/",
+        "pic": "https://img2.doubanio.com/view/subject/l/public/s34568331.jpg",
+        "w": 1080,
+        "h": 1538
+      },
+      {
+        "id": "38228582",
+        "title": "三体",
+        "author": "刘慈欣",
+        "year": "2026",
+        "url": "https://book.douban.com/subject/38228582/",
+        "pic": "https://img1.doubanio.com/view/subject/l/public/s35395868.jpg",
+        "w": 1080,
+        "h": 1591
+      },
+      {
+        "id": "5363767",
+        "title": "三体Ⅲ",
+        "author": "刘慈欣",
+        "year": "2010",
+        "url": "https://book.douban.com/subject/5363767/",
+        "pic": "https://img9.doubanio.com/view/subject/l/public/s26012674.jpg",
+        "w": 507,
+        "h": 721
+      }
+    ]
+  }
+]

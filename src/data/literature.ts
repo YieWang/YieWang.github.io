@@ -4,6 +4,7 @@ import { hasComment } from '../lib/review-order';
 
 export interface BookItem {
   collection?: string;          // Explicit narrative series, not a publisher's imprint
+  collectionEnglishTitle?: string;
   partOrder?: number;
   installments?: BookItem[];
   collectionReview?: BookItem['review'];
@@ -11,6 +12,7 @@ export interface BookItem {
   hidden?: boolean;
   id: string;
   title: string;                // Display title matching this specific copy (e.g. "局外人", "看不见的城市", "Gödel, Escher, Bach")
+  englishTitle?: string;        // Primary display title matching Cinema-style English shelf
   originalTitle: string;        // Original title in original language (e.g. "L'Étranger", "Le città invisibili")
   author: string;               // Author name matching this copy (e.g. "阿尔贝·加缪", "Douglas R. Hofstadter")
   originalAuthor?: string;      // Original author name in original language (e.g. "Albert Camus")
@@ -59,7 +61,12 @@ export function groupBookCollections(books: BookItem[]): BookItem[] {
   return [...groups.values()].map(group => {
     const installments = group.sort((a, b) => (a.partOrder || 0) - (b.partOrder || 0));
     const first = installments[0];
-    return installments.length > 1 ? { ...first, title: first.collection!, installments } : first;
+    return installments.length > 1 ? {
+      ...first,
+      title: first.collection!,
+      englishTitle: first.collectionEnglishTitle || first.englishTitle || first.collection!,
+      installments
+    } : first;
   });
 }
 

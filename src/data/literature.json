@@ -15,12 +15,13 @@
       "coverSource": "https://book.douban.com/subject/21692813/",
       "coverWidth": 873,
       "coverHeight": 1300,
-      "originalYear": 2010
+      "originalYear": 2010,
+      "englishTitle": "Sleep"
     },
     {
       "id": "book-5502995",
       "title": "1Q84 BOOK 3",
-      "originalTitle": "",
+      "originalTitle": "1Q84 BOOK 3",
       "author": "村上春树",
       "edition": "南海出版公司 · 2011年版",
       "year": 2011,
@@ -34,12 +35,14 @@
       "coverSource": "https://book.douban.com/subject/5502995/",
       "coverWidth": 857,
       "coverHeight": 1236,
-      "originalYear": 2010
+      "originalYear": 2010,
+      "englishTitle": "1Q84: Book 3",
+      "collectionEnglishTitle": "1Q84"
     },
     {
       "id": "book-4885241",
       "title": "1Q84 BOOK 2",
-      "originalTitle": "",
+      "originalTitle": "1Q84 BOOK 2",
       "author": "村上春树",
       "edition": "南海出版公司 · 2010年版",
       "year": 2010,
@@ -53,7 +56,9 @@
       "coverSource": "https://book.douban.com/subject/4885241/",
       "coverWidth": 1080,
       "coverHeight": 1557,
-      "originalYear": 2009
+      "originalYear": 2009,
+      "englishTitle": "1Q84: Book 2",
+      "collectionEnglishTitle": "1Q84"
     },
     {
       "id": "book-3369600",
@@ -70,16 +75,17 @@
       "coverSource": "https://item.xhsd.com/items/1010000101043446",
       "coverWidth": 600,
       "coverHeight": 909,
-      "originalYear": 2007
+      "originalYear": 2007,
+      "englishTitle": "What I Talk About When I Talk About Running"
     },
     {
       "id": "book-4742918",
       "title": "1Q84 BOOK 1",
-      "originalTitle": "",
+      "originalTitle": "1Q84 BOOK 1",
       "author": "村上春树",
       "edition": "南海出版公司 · 2010年版",
       "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4742918-01a219cf7725.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4742918-bf9b2632c863.webp",
       "sourceIds": [
         "4742918",
         "20428299"
@@ -88,9 +94,11 @@
       "collection": "1Q84",
       "partOrder": 1,
       "coverSource": "https://book.douban.com/subject/4742918/",
-      "coverWidth": 343,
-      "coverHeight": 494,
-      "originalYear": 2009
+      "coverWidth": 1080,
+      "coverHeight": 1523,
+      "originalYear": 2009,
+      "englishTitle": "1Q84: Book 1",
+      "collectionEnglishTitle": "1Q84"
     },
     {
       "id": "book-27200257",
@@ -107,12 +115,13 @@
       "coverSource": "https://book.douban.com/subject/27200257/",
       "coverWidth": 900,
       "coverHeight": 1277,
-      "originalYear": 1987
+      "originalYear": 1987,
+      "englishTitle": "Norwegian Wood"
     },
     {
       "id": "book-2158684",
       "title": "象棋的故事",
-      "originalTitle": "",
+      "originalTitle": "Schachnovelle",
       "author": "斯蒂芬·茨威格",
       "edition": "上海译文出版社 · 2016年版",
       "year": 2016,
@@ -124,12 +133,13 @@
       "coverSource": "https://www.kobo.com/tw/zh/ebook/Z_c9YaTFgjqHomlWYuj4JA",
       "coverWidth": 1200,
       "coverHeight": 1800,
-      "originalYear": 1942
+      "originalYear": 1942,
+      "englishTitle": "Chess Story"
     },
     {
       "id": "book-3268399",
       "title": "上海堡垒",
-      "originalTitle": "",
+      "originalTitle": "上海堡垒",
       "author": "江南",
       "edition": "万卷出版公司 · 2009年版",
       "year": 2009,
@@ -140,12 +150,13 @@
       "coverSource": "https://item.xhsd.com/items/1010000101054167",
       "coverWidth": 600,
       "coverHeight": 855,
-      "originalYear": 2009
+      "originalYear": 2009,
+      "englishTitle": "Shanghai Fortress"
     },
     {
       "id": "book-1020459",
       "title": "此间的少年",
-      "originalTitle": "",
+      "originalTitle": "此间的少年",
       "author": "江南",
       "edition": "北京联合出版公司 · 2011年版",
       "year": 2011,
@@ -156,7 +167,8 @@
       "coverSource": "https://book.douban.com/subject/6875231/",
       "coverWidth": 1080,
       "coverHeight": 1542,
-      "originalYear": 2002
+      "originalYear": 2002,
+      "englishTitle": "There They Were"
     },
     {
       "id": "book-1321017",
@@ -174,7 +186,8 @@
       "coverHeight": 432,
       "originalYear": 2005,
       "collection": "九州·缥缈录",
-      "partOrder": 1
+      "partOrder": 1,
+      "hidden": true
     },
     {
       "id": "book-26405967",
@@ -190,7 +203,8 @@
       "coverSource": "https://book.douban.com/subject/26405967/",
       "coverWidth": 1080,
       "coverHeight": 1514,
-      "originalYear": 2005
+      "originalYear": 2005,
+      "hidden": true
     },
     {
       "id": "book-26405970",
@@ -206,7 +220,8 @@
       "coverSource": "https://book.douban.com/subject/26405970/",
       "coverWidth": 428,
       "coverHeight": 616,
-      "originalYear": 2007
+      "originalYear": 2007,
+      "hidden": true
     },
     {
       "id": "book-26405972",
@@ -222,7 +237,8 @@
       "coverSource": "https://book.douban.com/subject/26405972/",
       "coverWidth": 428,
       "coverHeight": 616,
-      "originalYear": 2007
+      "originalYear": 2007,
+      "hidden": true
     },
     {
       "id": "book-26405975",
@@ -238,7 +254,8 @@
       "coverSource": "https://book.douban.com/subject/26405975/",
       "coverWidth": 428,
       "coverHeight": 616,
-      "originalYear": 2009
+      "originalYear": 2009,
+      "hidden": true
     },
     {
       "id": "book-26405980",
@@ -254,12 +271,13 @@
       "coverSource": "https://book.douban.com/subject/26405980/",
       "coverWidth": 428,
       "coverHeight": 616,
-      "originalYear": 2009
+      "originalYear": 2009,
+      "hidden": true
     },
     {
       "id": "book-1070851",
       "title": "倚天屠龙记",
-      "originalTitle": "",
+      "originalTitle": "倚天屠龍記",
       "author": "金庸",
       "edition": "生活·读书·新知三联书店 · 1999年版",
       "year": 1999,
@@ -276,12 +294,14 @@
       "coverSource": "https://book.douban.com/subject/1070851/",
       "coverWidth": 798,
       "coverHeight": 1300,
-      "originalYear": 1961
+      "originalYear": 1961,
+      "englishTitle": "The Heaven Sword and Dragon Saber",
+      "collectionEnglishTitle": "Condor Trilogy"
     },
     {
       "id": "book-3102324",
       "title": "秘密",
-      "originalTitle": "",
+      "originalTitle": "秘密",
       "author": "东野圭吾",
       "edition": "南海出版公司 · 2017年版",
       "year": 2017,
@@ -297,7 +317,8 @@
       "coverSource": "https://book.douban.com/subject/27115970/",
       "coverWidth": 1080,
       "coverHeight": 1554,
-      "originalYear": 1998
+      "originalYear": 1998,
+      "englishTitle": "Naoko"
     },
     {
       "id": "book-25862578",
@@ -314,7 +335,8 @@
       "coverSource": "https://yuyi.com.sg/products/9787544298995",
       "coverWidth": 1200,
       "coverHeight": 1722,
-      "originalYear": 2012
+      "originalYear": 2012,
+      "englishTitle": "The Miracles of the Namiya General Store"
     },
     {
       "id": "book-1255624",
@@ -332,12 +354,14 @@
       "coverSource": "https://www.dedao.cn/ebook/detail?id=DLnMGAEG7gKLyYmkAbPaEXxD8BM4J0Ly96WROrpdZn19VNzv2o5e6lqjQQ1poxqy&source=douban",
       "coverWidth": 600,
       "coverHeight": 790,
-      "originalYear": 1959
+      "originalYear": 1959,
+      "englishTitle": "The Return of the Condor Heroes",
+      "collectionEnglishTitle": "Condor Trilogy"
     },
     {
       "id": "book-1044547",
       "title": "射雕英雄传",
-      "originalTitle": "",
+      "originalTitle": "射鵰英雄傳",
       "author": "金庸",
       "edition": "生活·读书·新知三联书店 · 1999年版",
       "year": 1999,
@@ -354,16 +378,18 @@
       "coverSource": "https://book.douban.com/subject/1044547/",
       "coverWidth": 787,
       "coverHeight": 1300,
-      "originalYear": 1957
+      "originalYear": 1957,
+      "englishTitle": "The Legend of the Condor Heroes",
+      "collectionEnglishTitle": "Condor Trilogy"
     },
     {
       "id": "book-1002299",
       "title": "笑傲江湖",
-      "originalTitle": "",
+      "originalTitle": "笑傲江湖",
       "author": "金庸",
       "edition": "生活·读书·新知三联书店 · 1994年版",
       "year": 1994,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/1002299-f35c7d18a97c.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1002299-cca669b7917d.webp",
       "sourceIds": [
         "1002299"
       ],
@@ -372,9 +398,10 @@
         "content": "最成熟的一本"
       },
       "coverSource": "https://book.douban.com/subject/1002299/",
-      "coverWidth": 300,
-      "coverHeight": 463,
-      "originalYear": 1967
+      "coverWidth": 1080,
+      "coverHeight": 1609,
+      "originalYear": 1967,
+      "englishTitle": "The Smiling, Proud Wanderer"
     },
     {
       "id": "book-26362836",
@@ -395,7 +422,8 @@
       "coverSource": "https://book.douban.com/subject/35989392/",
       "coverWidth": 1080,
       "coverHeight": 1675,
-      "originalYear": 1966
+      "originalYear": 1966,
+      "englishTitle": "Flowers for Algernon"
     },
     {
       "id": "book-4820710",
@@ -416,7 +444,8 @@
       "coverSource": "https://book.douban.com/subject/30200857/",
       "coverWidth": 1080,
       "coverHeight": 1492,
-      "originalYear": 1949
+      "originalYear": 1949,
+      "englishTitle": "1984"
     },
     {
       "id": "book-1818347",
@@ -433,7 +462,8 @@
       "coverSource": "https://item.xhsd.com/items/1010000102851556",
       "coverWidth": 1195,
       "coverHeight": 1800,
-      "originalYear": 1937
+      "originalYear": 1937,
+      "englishTitle": "Death on the Nile"
     },
     {
       "id": "book-26877752",
@@ -442,20 +472,21 @@
       "author": "东野圭吾",
       "edition": "南海出版公司 · 2016年版",
       "year": 2016,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26877752-8c0a6459f7f5.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26877752-92a67d3c4adf.webp",
       "sourceIds": [
         "26877752"
       ],
       "translator": "娄美莲",
       "coverSource": "https://amomentbooks.com/products/多伦多-渥太华-书店-danxi-日本文学-东野圭吾-恶意",
-      "coverWidth": 377,
-      "coverHeight": 541,
-      "originalYear": 1996
+      "coverWidth": 1080,
+      "coverHeight": 1555,
+      "originalYear": 1996,
+      "englishTitle": "Malice"
     },
     {
       "id": "book-1192090",
       "title": "球状闪电",
-      "originalTitle": "",
+      "originalTitle": "球状闪电",
       "author": "刘慈欣",
       "edition": "四川科学技术出版社 · 2016年典藏版",
       "year": 2016,
@@ -466,7 +497,8 @@
       "coverSource": "https://book.douban.com/subject/26856061/",
       "coverWidth": 1080,
       "coverHeight": 1553,
-      "originalYear": 2004
+      "originalYear": 2004,
+      "englishTitle": "Ball Lightning"
     },
     {
       "id": "book-26210487",
@@ -483,7 +515,8 @@
       "coverSource": "https://book.douban.com/subject/26210487/",
       "coverWidth": 875,
       "coverHeight": 1300,
-      "originalYear": 2006
+      "originalYear": 2006,
+      "englishTitle": "Feel the Wind"
     },
     {
       "id": "book-26757680",
@@ -492,15 +525,16 @@
       "author": "毛姆",
       "edition": "开明出版社 · 2018年版",
       "year": 2018,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26757680-348fd84fccd3.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26757680-0d4952e22a07.webp",
       "sourceIds": [
         "26757680"
       ],
       "translator": "田伟华",
       "coverSource": "https://www.overdrive.com/media/11857228/面纱",
-      "coverWidth": 510,
-      "coverHeight": 680,
-      "originalYear": 1925
+      "coverWidth": 1080,
+      "coverHeight": 1546,
+      "originalYear": 1925,
+      "englishTitle": "The Painted Veil"
     },
     {
       "id": "book-26425831",
@@ -517,16 +551,17 @@
       "coverSource": "https://book.douban.com/subject/26425831/",
       "coverWidth": 893,
       "coverHeight": 1300,
-      "originalYear": 1965
+      "originalYear": 1965,
+      "englishTitle": "Stoner"
     },
     {
       "id": "book-1058661",
       "title": "飞鸟集",
-      "originalTitle": "",
+      "originalTitle": "Stray Birds",
       "author": "罗宾德拉纳德·泰戈尔",
       "edition": "花城出版社 · 2023年版",
       "year": 2023,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1058661-1bfdd3a4983d.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1058661-49ceedd75cb8.webp",
       "sourceIds": [
         "1058661"
       ],
@@ -536,9 +571,10 @@
         "content": "绝对的诗性"
       },
       "coverSource": "https://se.zhangyue.com/book/detail?appId=7f8f7dfd&bookId=12971149&bookType=1",
-      "coverWidth": 300,
-      "coverHeight": 400,
-      "originalYear": 1916
+      "coverWidth": 1080,
+      "coverHeight": 1858,
+      "originalYear": 1916,
+      "englishTitle": "Stray Birds"
     },
     {
       "id": "book-2143732",
@@ -559,7 +595,8 @@
       "coverSource": "https://book.douban.com/subject/2143732/",
       "coverWidth": 698,
       "coverHeight": 1000,
-      "originalYear": 2007
+      "originalYear": 2007,
+      "englishTitle": "A Thousand Splendid Suns"
     },
     {
       "id": "book-25829693",
@@ -568,15 +605,16 @@
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2014年版",
       "year": 2014,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/25829693-46d1843245c2.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-25829693-14dd6207b15e.webp",
       "sourceIds": [
         "25829693"
       ],
       "translator": "崔正男",
       "coverSource": "https://book.douban.com/subject/25829693/",
-      "coverWidth": 552,
-      "coverHeight": 807,
-      "originalYear": 1955
+      "coverWidth": 461,
+      "coverHeight": 797,
+      "originalYear": 1955,
+      "englishTitle": "The End of Eternity"
     },
     {
       "id": "book-1770782",
@@ -597,7 +635,8 @@
       "coverSource": "https://book.douban.com/subject/1770782/",
       "coverWidth": 600,
       "coverHeight": 841,
-      "originalYear": 2003
+      "originalYear": 2003,
+      "englishTitle": "The Kite Runner"
     },
     {
       "id": "book-1858513",
@@ -618,7 +657,8 @@
       "coverSource": "https://book.douban.com/subject/30203769/",
       "coverWidth": 1080,
       "coverHeight": 1492,
-      "originalYear": 1919
+      "originalYear": 1919,
+      "englishTitle": "The Moon and Sixpence"
     },
     {
       "id": "book-10594787",
@@ -639,28 +679,30 @@
       "coverSource": "https://ferrybooks.com/products/霍乱时期的爱情",
       "coverWidth": 1814,
       "coverHeight": 2593,
-      "originalYear": 1985
+      "originalYear": 1985,
+      "englishTitle": "Love in the Time of Cholera"
     },
     {
       "id": "book-4760224",
       "title": "许三观卖血记",
-      "originalTitle": "",
+      "originalTitle": "许三观卖血记",
       "author": "余华",
       "edition": "作家出版社 · 2012年版",
       "year": 2012,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/4760224-64dd42798e6e.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4760224-2a5aa79ce811.webp",
       "sourceIds": [
         "4760224"
       ],
       "coverSource": "https://book.douban.com/subject/4760224/",
-      "coverWidth": 331,
-      "coverHeight": 500,
-      "originalYear": 1995
+      "coverWidth": 1080,
+      "coverHeight": 1550,
+      "originalYear": 1995,
+      "englishTitle": "Chronicle of a Blood Merchant"
     },
     {
       "id": "book-1209899",
       "title": "我与地坛",
-      "originalTitle": "",
+      "originalTitle": "我与地坛",
       "author": "史铁生",
       "edition": "人民文学出版社 · 2011年版",
       "year": 2011,
@@ -671,7 +713,8 @@
       "coverSource": "https://item.xhsd.com/items/1010000101335125",
       "coverWidth": 1200,
       "coverHeight": 1792,
-      "originalYear": 1991
+      "originalYear": 1991,
+      "englishTitle": "The Temple of Earth and I"
     },
     {
       "id": "book-21371175",
@@ -688,12 +731,13 @@
       "coverSource": "https://book.douban.com/subject/21371175/",
       "coverWidth": 853,
       "coverHeight": 1300,
-      "originalYear": 1926
+      "originalYear": 1926,
+      "englishTitle": "The Murder of Roger Ackroyd"
     },
     {
       "id": "book-1008145",
       "title": "围城",
-      "originalTitle": "",
+      "originalTitle": "围城",
       "author": "钱锺书",
       "edition": "人民文学出版社 · 1991年版",
       "year": 1991,
@@ -704,29 +748,31 @@
       "coverSource": "https://item.xhsd.com/items/1010000102842161",
       "coverWidth": 1200,
       "coverHeight": 1717,
-      "originalYear": 1947
+      "originalYear": 1947,
+      "englishTitle": "Fortress Besieged"
     },
     {
       "id": "book-4908885",
       "title": "局外人",
-      "originalTitle": "L'Etranger",
+      "originalTitle": "L'Étranger",
       "author": "阿尔贝·加缪",
       "edition": "花城出版社 · 2023年版",
       "year": 2023,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4908885-94453ec1169d.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4908885-007bb1618944.webp",
       "sourceIds": [
         "4908885"
       ],
       "translator": "李玉民",
       "coverSource": "https://se.zhangyue.com/book/detail?appId=ab91264d&bookId=12989636&bookType=1",
-      "coverWidth": 300,
-      "coverHeight": 400,
-      "originalYear": 1942
+      "coverWidth": 1080,
+      "coverHeight": 1554,
+      "originalYear": 1942,
+      "englishTitle": "The Stranger"
     },
     {
       "id": "book-1200840",
       "title": "平凡的世界",
-      "originalTitle": "",
+      "originalTitle": "平凡的世界",
       "author": "路遥",
       "edition": "北京十月文艺出版社 · 2021年版",
       "year": 2021,
@@ -737,7 +783,8 @@
       "coverSource": "https://www.readinglife.com/books.html?langType=zh",
       "coverWidth": 876,
       "coverHeight": 1316,
-      "originalYear": 1986
+      "originalYear": 1986,
+      "englishTitle": "Ordinary World"
     },
     {
       "id": "book-1084336",
@@ -758,7 +805,8 @@
       "coverSource": "https://book.douban.com/subject/11441808/",
       "coverWidth": 728,
       "coverHeight": 1024,
-      "originalYear": 1943
+      "originalYear": 1943,
+      "englishTitle": "The Little Prince"
     },
     {
       "id": "book-10554308",
@@ -779,7 +827,8 @@
       "coverSource": "https://item.xhsd.com/items/1010000101015177",
       "coverWidth": 600,
       "coverHeight": 869,
-      "originalYear": 1999
+      "originalYear": 1999,
+      "englishTitle": "Journey Under the Midnight Sun"
     },
     {
       "id": "book-2035179",
@@ -796,28 +845,30 @@
       "coverSource": "https://www.kobo.com/fi/fi/ebook/8tMyQJrJdTeIH1x6VJWoNg",
       "coverWidth": 1199,
       "coverHeight": 1599,
-      "originalYear": 1945
+      "originalYear": 1945,
+      "englishTitle": "Animal Farm"
     },
     {
       "id": "book-20441957",
       "title": "兄弟",
-      "originalTitle": "",
+      "originalTitle": "兄弟",
       "author": "余华",
       "edition": "作家出版社 · 2012年版",
       "year": 2012,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-20441957-4d202ca10688.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-20441957-02cc6ffe8474.webp",
       "sourceIds": [
         "20441957"
       ],
       "coverSource": "https://book.douban.com/subject/20441957/",
-      "coverWidth": 339,
-      "coverHeight": 500,
-      "originalYear": 2005
+      "coverWidth": 1080,
+      "coverHeight": 1562,
+      "originalYear": 2005,
+      "englishTitle": "Brothers"
     },
     {
       "id": "book-1041007",
       "title": "哈利·波特与魔法石",
-      "originalTitle": "Harry Potter and the Sorcerer's Stone",
+      "originalTitle": "Harry Potter and the Philosopher's Stone",
       "author": "J. K. 罗琳",
       "edition": "Scholastic · 2013年美国15周年版（Kazu Kibuishi封面）",
       "year": 2013,
@@ -835,7 +886,9 @@
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1175,
       "coverHeight": 1800,
-      "originalYear": 1997
+      "originalYear": 1997,
+      "englishTitle": "Harry Potter and the Philosopher's Stone",
+      "collectionEnglishTitle": "Harry Potter"
     },
     {
       "id": "book-2035162",
@@ -852,7 +905,8 @@
       "coverSource": "https://book.douban.com/subject/27125077/",
       "coverWidth": 1080,
       "coverHeight": 1635,
-      "originalYear": 1944
+      "originalYear": 1944,
+      "englishTitle": "The Razor's Edge"
     },
     {
       "id": "book-24153048",
@@ -870,7 +924,8 @@
       "coverSource": "https://book.douban.com/subject/24153048/",
       "coverWidth": 878,
       "coverHeight": 1300,
-      "originalYear": 1934
+      "originalYear": 1934,
+      "englishTitle": "Murder on the Orient Express"
     },
     {
       "id": "book-1059419",
@@ -887,7 +942,8 @@
       "coverSource": "https://www.yiwen.com.cn/bookDetail?id=2090",
       "coverWidth": 1400,
       "coverHeight": 1987,
-      "originalYear": 2002
+      "originalYear": 2002,
+      "englishTitle": "Kafka on the Shore"
     },
     {
       "id": "book-6082808",
@@ -908,23 +964,25 @@
       "coverSource": "https://book.douban.com/subject/27107109/",
       "coverWidth": 1018,
       "coverHeight": 1619,
-      "originalYear": 1967
+      "originalYear": 1967,
+      "englishTitle": "One Hundred Years of Solitude"
     },
     {
       "id": "book-4913064",
       "title": "活着",
-      "originalTitle": "",
+      "originalTitle": "活着",
       "author": "余华",
       "edition": "作家出版社 · 2012年版",
       "year": 2012,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4913064-36c5c013ea8e.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-4913064-68d2995cf2cf.webp",
       "sourceIds": [
         "4913064"
       ],
       "coverSource": "https://book.douban.com/subject/4913064/",
-      "coverWidth": 347,
-      "coverHeight": 500,
-      "originalYear": 1993
+      "coverWidth": 1080,
+      "coverHeight": 1581,
+      "originalYear": 1993,
+      "englishTitle": "To Live"
     },
     {
       "id": "book-26382433",
@@ -945,7 +1003,8 @@
       "coverSource": "https://book.douban.com/subject/26382433/",
       "coverWidth": 883,
       "coverHeight": 1271,
-      "originalYear": 2014
+      "originalYear": 2014,
+      "englishTitle": "Everything I Never Told You"
     },
     {
       "id": "book-1039487",
@@ -961,7 +1020,9 @@
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1174,
       "coverHeight": 1800,
-      "originalYear": 1998
+      "originalYear": 1998,
+      "englishTitle": "Harry Potter and the Chamber of Secrets",
+      "collectionEnglishTitle": "Harry Potter"
     },
     {
       "id": "book-1071241",
@@ -977,7 +1038,9 @@
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
       "coverHeight": 1800,
-      "originalYear": 1999
+      "originalYear": 1999,
+      "englishTitle": "Harry Potter and the Prisoner of Azkaban",
+      "collectionEnglishTitle": "Harry Potter"
     },
     {
       "id": "book-1009257",
@@ -993,7 +1056,9 @@
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
       "coverHeight": 1800,
-      "originalYear": 2000
+      "originalYear": 2000,
+      "englishTitle": "Harry Potter and the Goblet of Fire",
+      "collectionEnglishTitle": "Harry Potter"
     },
     {
       "id": "book-1013129",
@@ -1009,7 +1074,9 @@
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
       "coverHeight": 1800,
-      "originalYear": 2003
+      "originalYear": 2003,
+      "englishTitle": "Harry Potter and the Order of the Phoenix",
+      "collectionEnglishTitle": "Harry Potter"
     },
     {
       "id": "book-1432596",
@@ -1025,7 +1092,9 @@
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
       "coverHeight": 1800,
-      "originalYear": 2005
+      "originalYear": 2005,
+      "englishTitle": "Harry Potter and the Half-Blood Prince",
+      "collectionEnglishTitle": "Harry Potter"
     },
     {
       "id": "book-2295163",
@@ -1041,16 +1110,18 @@
       "coverSource": "https://www.scholastic.com/newsroom/online-press-kits/harry-potter.html",
       "coverWidth": 1181,
       "coverHeight": 1800,
-      "originalYear": 2007
+      "originalYear": 2007,
+      "englishTitle": "Harry Potter and the Deathly Hallows",
+      "collectionEnglishTitle": "Harry Potter"
     },
     {
       "id": "book-26389900",
       "title": "基地",
-      "originalTitle": "",
+      "originalTitle": "Foundation",
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2015年版",
       "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389900-5e08cb7c3aca.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389900-87ec8e14aeea.webp",
       "translator": "叶李华",
       "sourceIds": [
         "26389895"
@@ -1058,120 +1129,134 @@
       "collection": "基地七部曲",
       "partOrder": 1,
       "coverSource": "https://read.douban.com/ebook/5968669/",
-      "coverWidth": 402,
-      "coverHeight": 600,
-      "originalYear": 1951
+      "coverWidth": 1080,
+      "coverHeight": 1548,
+      "originalYear": 1951,
+      "englishTitle": "Foundation",
+      "collectionEnglishTitle": "Foundation Series"
     },
     {
       "id": "book-26389896",
       "title": "基地与帝国",
-      "originalTitle": "",
+      "originalTitle": "Foundation and Empire",
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2015年版",
       "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389896-cb549fc9497d.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389896-c3995a07897c.webp",
       "translator": "叶李华",
       "sourceIds": [],
       "collection": "基地七部曲",
       "partOrder": 2,
       "coverSource": "https://read.douban.com/ebook/5968784/",
-      "coverWidth": 300,
-      "coverHeight": 450,
-      "originalYear": 1952
+      "coverWidth": 600,
+      "coverHeight": 871,
+      "originalYear": 1952,
+      "englishTitle": "Foundation and Empire",
+      "collectionEnglishTitle": "Foundation Series"
     },
     {
       "id": "book-26389894",
       "title": "第二基地",
-      "originalTitle": "",
+      "originalTitle": "Second Foundation",
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2015年版",
       "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389894-cd277d452b0b.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389894-8fdb3729ba78.webp",
       "translator": "叶李华",
       "sourceIds": [],
       "collection": "基地七部曲",
       "partOrder": 3,
       "coverSource": "https://read.douban.com/ebook/5969832/",
-      "coverWidth": 300,
-      "coverHeight": 450,
-      "originalYear": 1953
+      "coverWidth": 600,
+      "coverHeight": 859,
+      "originalYear": 1953,
+      "englishTitle": "Second Foundation",
+      "collectionEnglishTitle": "Foundation Series"
     },
     {
       "id": "book-26389893",
       "title": "基地前奏",
-      "originalTitle": "",
+      "originalTitle": "Prelude to Foundation",
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2015年版",
       "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389893-ca2482660928.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389893-093f157a7256.webp",
       "translator": "叶李华",
       "sourceIds": [],
       "collection": "基地七部曲",
       "partOrder": 4,
       "coverSource": "https://read.douban.com/ebook/5970502/",
-      "coverWidth": 300,
-      "coverHeight": 450,
-      "originalYear": 1988
+      "coverWidth": 600,
+      "coverHeight": 874,
+      "originalYear": 1988,
+      "englishTitle": "Prelude to Foundation",
+      "collectionEnglishTitle": "Foundation Series"
     },
     {
       "id": "book-26389901",
       "title": "迈向基地",
-      "originalTitle": "",
+      "originalTitle": "Forward the Foundation",
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2015年版",
       "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389901-96e94a604f9e.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389901-68daf03190f8.webp",
       "translator": "叶李华",
       "sourceIds": [],
       "collection": "基地七部曲",
       "partOrder": 5,
       "coverSource": "https://read.douban.com/ebook/5971031/",
-      "coverWidth": 300,
-      "coverHeight": 450,
-      "originalYear": 1993
+      "coverWidth": 600,
+      "coverHeight": 864,
+      "originalYear": 1993,
+      "englishTitle": "Forward the Foundation",
+      "collectionEnglishTitle": "Foundation Series"
     },
     {
       "id": "book-26389899",
       "title": "基地边缘",
-      "originalTitle": "",
+      "originalTitle": "Foundation's Edge",
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2015年版",
       "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389899-a5ec84f59ff7.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389899-6e0e2566fc1e.webp",
       "translator": "叶李华",
       "sourceIds": [],
       "collection": "基地七部曲",
       "partOrder": 6,
       "coverSource": "https://read.douban.com/ebook/5973180/",
-      "coverWidth": 300,
-      "coverHeight": 450,
-      "originalYear": 1982
+      "coverWidth": 600,
+      "coverHeight": 866,
+      "originalYear": 1982,
+      "englishTitle": "Foundation's Edge",
+      "collectionEnglishTitle": "Foundation Series"
     },
     {
       "id": "book-26389902",
       "title": "基地与地球",
-      "originalTitle": "",
+      "originalTitle": "Foundation and Earth",
       "author": "艾萨克·阿西莫夫",
       "edition": "江苏凤凰文艺出版社 · 2015年版",
       "year": 2015,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389902-9399a317d9f1.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26389902-f847cd1ce313.webp",
       "translator": "叶李华",
       "sourceIds": [],
       "collection": "基地七部曲",
       "partOrder": 7,
       "coverSource": "https://read.douban.com/ebook/5976630/",
-      "coverWidth": 300,
-      "coverHeight": 450,
-      "originalYear": 1986
+      "coverWidth": 600,
+      "coverHeight": 866,
+      "originalYear": 1986,
+      "englishTitle": "Foundation and Earth",
+      "collectionEnglishTitle": "Foundation Series"
     },
     {
       "id": "book-2567698",
       "title": "三体",
-      "originalTitle": "",
+      "originalTitle": "三体",
       "author": "刘慈欣",
       "edition": "重庆出版社 · 2008年版",
       "year": 2008,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2567698-b335b72bef3a.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-2567698-ab76db518109.webp",
       "sourceIds": [
         "6518605"
       ],
@@ -1182,50 +1267,56 @@
         "content": "看完之后很长一段时间脑海里还在回想章北海和那些面壁人，威慑时代云云……"
       },
       "coverSource": "https://www.aolifo.de/de/cixin-liu-die-drei-sonnen-the-three-body-problem-chinesische-ausgabe-isbn-9787536692930.html",
-      "coverWidth": 557,
-      "coverHeight": 800,
-      "originalYear": 2006
+      "coverWidth": 1080,
+      "coverHeight": 1540,
+      "originalYear": 2006,
+      "englishTitle": "The Three-Body Problem",
+      "collectionEnglishTitle": "Remembrance of Earth's Past"
     },
     {
       "id": "book-3066477",
       "title": "三体Ⅱ：黑暗森林",
-      "originalTitle": "",
+      "originalTitle": "三体Ⅱ：黑暗森林",
       "author": "刘慈欣",
       "edition": "重庆出版社 · 2008年版",
       "year": 2008,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3066477-2b0d0338d6f4.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3066477-82ba3d863e1d.webp",
       "sourceIds": [],
       "collection": "三体",
       "partOrder": 2,
       "coverSource": "https://www.aolifo.de/de/cixin-liu-der-dunkle-wald-the-dark-forest-chinesische-ausgabe-isbn-9787536693968.html",
-      "coverWidth": 420,
-      "coverHeight": 600,
-      "originalYear": 2008
+      "coverWidth": 1080,
+      "coverHeight": 1540,
+      "originalYear": 2008,
+      "englishTitle": "The Dark Forest",
+      "collectionEnglishTitle": "Remembrance of Earth's Past"
     },
     {
       "id": "book-5363767",
       "title": "三体Ⅲ：死神永生",
-      "originalTitle": "",
+      "originalTitle": "三体Ⅲ：死神永生",
       "author": "刘慈欣",
       "edition": "重庆出版社 · 2010年版",
       "year": 2010,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-5363767-95aea35ffa84.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-5363767-8f086032f71d.webp",
       "sourceIds": [],
       "collection": "三体",
       "partOrder": 3,
       "coverSource": "https://item.xhsd.com/items/1010000100010547",
-      "coverWidth": 600,
-      "coverHeight": 872,
-      "originalYear": 2010
+      "coverWidth": 1080,
+      "coverHeight": 1540,
+      "originalYear": 2010,
+      "englishTitle": "Death's End",
+      "collectionEnglishTitle": "Remembrance of Earth's Past"
     },
     {
       "id": "book-3686657",
       "title": "明朝那些事儿 1：洪武大帝",
-      "originalTitle": "",
+      "originalTitle": "明朝那些事儿 1：洪武大帝",
       "author": "当年明月",
       "edition": "浙江人民出版社 · 2011年七册版",
       "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3686657-b790bfceb637.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3686657-2c215a216030.webp",
       "sourceIds": [
         "3674537"
       ],
@@ -1236,105 +1327,119 @@
         "content": "真正的成功是用自己的方式过完自己的一生。"
       },
       "coverSource": "https://read.douban.com/ebook/1465780/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "originalYear": 2006
+      "coverWidth": 518,
+      "coverHeight": 800,
+      "originalYear": 2006,
+      "englishTitle": "Stories of the Ming Dynasty 1: Emperor Hongwu",
+      "collectionEnglishTitle": "Stories of the Ming Dynasty"
     },
     {
       "id": "book-3697785",
       "title": "明朝那些事儿 2：万国来朝",
-      "originalTitle": "",
+      "originalTitle": "明朝那些事儿 2：万国来朝",
       "author": "当年明月",
       "edition": "浙江人民出版社 · 2011年七册版",
       "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697785-c7cb0014407f.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697785-ad5bb8da178c.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 2,
       "coverSource": "https://read.douban.com/ebook/1465634/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "originalYear": 2007
+      "coverWidth": 514,
+      "coverHeight": 800,
+      "originalYear": 2007,
+      "englishTitle": "Stories of the Ming Dynasty 2: Tribute from All Nations",
+      "collectionEnglishTitle": "Stories of the Ming Dynasty"
     },
     {
       "id": "book-3697787",
       "title": "明朝那些事儿 3：妖孽宫廷",
-      "originalTitle": "",
+      "originalTitle": "明朝那些事儿 3：妖孽宫廷",
       "author": "当年明月",
       "edition": "浙江人民出版社 · 2011年七册版",
       "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697787-ec6127a4fcd8.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697787-72cbc92fe1e2.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 3,
       "coverSource": "https://read.douban.com/ebook/1492868/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "originalYear": 2007
+      "coverWidth": 507,
+      "coverHeight": 800,
+      "originalYear": 2007,
+      "englishTitle": "Stories of the Ming Dynasty 3: Court Intrigues",
+      "collectionEnglishTitle": "Stories of the Ming Dynasty"
     },
     {
       "id": "book-3697783",
       "title": "明朝那些事儿 4：粉饰太平",
-      "originalTitle": "",
+      "originalTitle": "明朝那些事儿 4：粉饰太平",
       "author": "当年明月",
       "edition": "浙江人民出版社 · 2011年七册版",
       "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697783-98b5cd916214.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697783-7e4cb6a98872.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 4,
       "coverSource": "https://read.douban.com/ebook/1494003/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "originalYear": 2007
+      "coverWidth": 510,
+      "coverHeight": 800,
+      "originalYear": 2007,
+      "englishTitle": "Stories of the Ming Dynasty 4: Whitewashed Peace",
+      "collectionEnglishTitle": "Stories of the Ming Dynasty"
     },
     {
       "id": "book-3697784",
       "title": "明朝那些事儿 5：帝国飘摇",
-      "originalTitle": "",
+      "originalTitle": "明朝那些事儿 5：帝国飘摇",
       "author": "当年明月",
       "edition": "浙江人民出版社 · 2011年七册版",
       "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697784-b800609bf162.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697784-afd8469e9a34.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 5,
       "coverSource": "https://read.douban.com/ebook/1502433/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "originalYear": 2008
+      "coverWidth": 515,
+      "coverHeight": 800,
+      "originalYear": 2008,
+      "englishTitle": "Stories of the Ming Dynasty 5: Shaken Empire",
+      "collectionEnglishTitle": "Stories of the Ming Dynasty"
     },
     {
       "id": "book-3697782",
       "title": "明朝那些事儿 6：日暮西山",
-      "originalTitle": "",
+      "originalTitle": "明朝那些事儿 6：日暮西山",
       "author": "当年明月",
       "edition": "浙江人民出版社 · 2011年七册版",
       "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697782-a998a05e4822.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3697782-bd9ef09ce3c4.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 6,
       "coverSource": "https://read.douban.com/ebook/1487343/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "originalYear": 2008
+      "coverWidth": 521,
+      "coverHeight": 800,
+      "originalYear": 2008,
+      "englishTitle": "Stories of the Ming Dynasty 6: Setting Sun",
+      "collectionEnglishTitle": "Stories of the Ming Dynasty"
     },
     {
       "id": "book-3717122",
       "title": "明朝那些事儿 7：大结局",
-      "originalTitle": "",
+      "originalTitle": "明朝那些事儿 7：大结局",
       "author": "当年明月",
       "edition": "浙江人民出版社 · 2011年七册版",
       "year": 2011,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3717122-2cc6c9aa0eac.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-3717122-d5be7ee5c895.webp",
       "sourceIds": [],
       "collection": "明朝那些事儿",
       "partOrder": 7,
       "coverSource": "https://read.douban.com/ebook/1485115/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "originalYear": 2009
+      "coverWidth": 517,
+      "coverHeight": 800,
+      "originalYear": 2009,
+      "englishTitle": "Stories of the Ming Dynasty 7: The Grand Finale",
+      "collectionEnglishTitle": "Stories of the Ming Dynasty"
     },
     {
       "id": "book-24540864",
@@ -1347,7 +1452,8 @@
       "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-24540864-2a78382f71b7.webp",
       "coverSource": "https://book.douban.com/subject/30259153/",
       "coverWidth": 1080,
-      "coverHeight": 1586
+      "coverHeight": 1586,
+      "englishTitle": "The Seventh Day"
     },
     {
       "id": "book-24845582",
@@ -1361,7 +1467,8 @@
       "coverSource": "https://book.douban.com/subject/24845582/",
       "coverWidth": 1080,
       "coverHeight": 1527,
-      "translator": "康慨"
+      "translator": "康慨",
+      "englishTitle": "And the Mountains Echoed"
     },
     {
       "id": "book-30177172",
@@ -1375,7 +1482,8 @@
       "coverSource": "https://book.douban.com/subject/30177172/",
       "coverWidth": 1080,
       "coverHeight": 1653,
-      "translator": "陶玉平"
+      "translator": "陶玉平",
+      "englishTitle": "No One Writes to the Colonel"
     },
     {
       "id": "book-11539568",
@@ -1385,16 +1493,17 @@
       "edition": "上海译文出版社 · 2012年版",
       "year": 2012,
       "originalYear": 1915,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-3-e18c1e30cb6d.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-11539568-2af400c4b540.webp",
       "coverSource": "https://book.douban.com/subject/11539568/",
-      "coverWidth": 300,
-      "coverHeight": 429,
-      "translator": "张荣昌"
+      "coverWidth": 1080,
+      "coverHeight": 1589,
+      "translator": "张荣昌",
+      "englishTitle": "The Metamorphosis"
     },
     {
       "id": "book-33383582",
       "title": "审判",
-      "originalTitle": "Der Prozess",
+      "originalTitle": "Der Process",
       "author": "弗兰茨·卡夫卡",
       "edition": "天津人民出版社 · 2019年版",
       "year": 2019,
@@ -1403,7 +1512,8 @@
       "coverSource": "https://book.douban.com/subject/33383582/",
       "coverWidth": 1080,
       "coverHeight": 1542,
-      "translator": "文泽尔"
+      "translator": "文泽尔",
+      "englishTitle": "The Trial"
     },
     {
       "id": "book-26986881",
@@ -1413,11 +1523,12 @@
       "edition": "人民文学出版社 · 2018年版",
       "year": 2018,
       "originalYear": 1926,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-5-0e5416402c75.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-26986881-f13fbfe01628.webp",
       "coverSource": "https://book.douban.com/subject/26986881/",
-      "coverWidth": 353,
-      "coverHeight": 500,
-      "translator": "高年生"
+      "coverWidth": 1080,
+      "coverHeight": 1542,
+      "translator": "高年生",
+      "englishTitle": "The Castle"
     },
     {
       "id": "book-read-310091695",
@@ -1427,11 +1538,12 @@
       "edition": "北京燕山出版社 · 2021年版",
       "year": 2021,
       "originalYear": 1913,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-6-c6ddd71b2eab.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-read-310091695-8e5a8655c447.webp",
       "coverSource": "https://read.douban.com/ebook/310091695/",
-      "coverWidth": 330,
-      "coverHeight": 495,
-      "translator": "彤雅立"
+      "coverWidth": 484,
+      "coverHeight": 800,
+      "translator": "彤雅立",
+      "englishTitle": "The Judgement"
     },
     {
       "id": "book-3136255",
@@ -1445,7 +1557,8 @@
       "coverSource": "https://book.douban.com/subject/3136255/",
       "coverWidth": 769,
       "coverHeight": 1143,
-      "translator": "张玉书"
+      "translator": "张玉书",
+      "englishTitle": "Letter from an Unknown Woman"
     },
     {
       "id": "book-36091016",
@@ -1459,7 +1572,8 @@
       "coverSource": "https://book.douban.com/subject/36091016/",
       "coverWidth": 1080,
       "coverHeight": 1551,
-      "translator": "丁文林"
+      "translator": "丁文林",
+      "englishTitle": "The Alchemist"
     },
     {
       "id": "book-24934182",
@@ -1469,11 +1583,12 @@
       "edition": "北京联合出版公司 · 2013年版",
       "year": 2013,
       "originalYear": 2012,
-      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-addition-9-0bfce0384654.webp",
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-24934182-662cc0399dee.webp",
       "coverSource": "https://book.douban.com/subject/24934182/",
-      "coverWidth": 393,
-      "coverHeight": 569,
-      "translator": "黄妙瑜"
+      "coverWidth": 1080,
+      "coverHeight": 1527,
+      "translator": "黄妙瑜",
+      "englishTitle": "The Unlikely Pilgrimage of Harold Fry"
     }
   ],
   "essays": []

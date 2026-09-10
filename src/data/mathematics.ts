@@ -46,8 +46,8 @@ export const templateData: TemplateItem[] = [
   {
     title: "Chinese",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template_Preview.pdf?v=2",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template.zip?v=2",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template_Preview.pdf?v=3",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template.zip?v=3",
   },
   {
     title: "Seminar",

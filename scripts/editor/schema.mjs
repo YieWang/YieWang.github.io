@@ -42,8 +42,8 @@ export const documents = {
       avatarUrl: image('头像'), hidden }),
   }) },
   literature: { file: 'literature.json', label: '文学', schema: object('文学', {
-    books: array('书籍', { title, originalTitle: text('原名'), author: text('作者'), originalAuthor: text('作者原名'),
-      translator: text('译者'), edition: text('出版社与版本'), year, originalYear: number('作品首次出版年份（用于排序）', { min: 1 }), coverUrl: image('封面'), collection: text('所属系列'), partOrder: number('系列顺序', { min: 1 }), firstRead: text('初读日期'), reread: text('重读日期'), review, hidden }),
+    books: array('书籍', { title, englishTitle: text('英文名'), originalTitle: text('原名'), author: text('作者'), originalAuthor: text('作者原名'),
+      translator: text('译者'), edition: text('出版社与版本'), year, originalYear: number('作品首次出版年份（用于排序）', { min: 1 }), coverUrl: image('封面'), collection: text('所属系列'), collectionEnglishTitle: text('系列英文名'), partOrder: number('系列顺序', { min: 1 }), firstRead: text('初读日期'), reread: text('重读日期'), review, hidden }),
     essays: array('随笔', { title, author: text('作者'), year, date: text('日期'), location: text('地点'), content: area('正文（换行分段）'), hidden }),
   }) },
   photography: { file: 'photography.json', label: '摄影', schema: array('年份', {
