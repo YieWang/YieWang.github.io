@@ -248,7 +248,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
             <span class="text-[#D1D1D1]">·</span>
             <a
               href={item.sourceUrl}
-              download
+              download={`${item.title}.zip`}
               class="text-[#555555] hover:text-black underline underline-offset-4 decoration-[#CCCCCC] hover:decoration-black transition-colors duration-200"
             >
               Source

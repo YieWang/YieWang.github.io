@@ -40,19 +40,19 @@ export const templateData: TemplateItem[] = [
   {
     title: "English",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/English_Template_Preview.pdf?v=2",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English_Template.zip?v=2",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/English.pdf",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English.zip",
   },
   {
     title: "Chinese",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template_Preview.pdf?v=3",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese_Template.zip?v=3",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese.pdf",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese.zip",
   },
   {
     title: "Seminar",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar_Template_Preview.pdf?v=3",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar_Template.zip?v=3",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar.pdf",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar.zip",
   },
 ];
