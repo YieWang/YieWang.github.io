@@ -16,6 +16,7 @@ const { activeTab = 'home' } = Astro.props;
           id="nav-home"
           data-target="home"
           data-title="Home"
+          data-astro-prefetch="hover"
           class={`nav-link uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.08em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 cursor-pointer no-underline inline-flex ${
             activeTab === 'home'
               ? 'active-nav text-black font-bold'
@@ -32,6 +33,7 @@ const { activeTab = 'home' } = Astro.props;
           id="nav-mathematics"
           data-target="mathematics"
           data-title="Mathematics"
+          data-astro-prefetch="hover"
           class={`nav-link uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.08em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 cursor-pointer no-underline inline-flex ${
             activeTab === 'mathematics'
               ? 'active-nav text-black font-bold'
@@ -48,6 +50,7 @@ const { activeTab = 'home' } = Astro.props;
           id="nav-marginalia"
           data-target="marginalia"
           data-title="Marginalia"
+          data-astro-prefetch="hover"
           class={`nav-link uppercase text-[0.625rem] sm:text-[0.75rem] tracking-[0.08em] sm:tracking-[0.25rem] px-1 sm:px-2 py-1.5 sm:py-2 transition-colors duration-200 cursor-pointer no-underline inline-flex ${
             activeTab === 'marginalia'
               ? 'active-nav text-black font-bold'

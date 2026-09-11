@@ -322,6 +322,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
                     : 'text-[#666666] hover:text-black'
                 }`}
                 data-stage-id={item.id}
+                data-astro-prefetch="hover"
                 aria-controls={`stage-panel-${item.id}`}
                 aria-current={idx === 0 ? "true" : undefined}
                 style="font-family: 'Montserrat', sans-serif;"
@@ -338,7 +339,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         
         <!-- Photography: four original-format prints, spread in sequence. -->
         <div id="stage-panel-photography" class="stage-panel" data-active="true" aria-hidden="false">
-          <a href="/marginalia/photography" aria-label="Explore Photography" class="stage-art-link">
+          <a href="/marginalia/photography" aria-label="Explore Photography" class="stage-art-link" data-astro-prefetch="hover">
             <div class="photo-container" aria-hidden="true">
               {photographyPrints.map(({ photo, caption }) => (
                 <div class="photo-print">
@@ -352,7 +353,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
 
         <!-- Cinema: two identical runs of flat film make one seamless loop. -->
         <div id="stage-panel-cinema" class="stage-panel" inert aria-hidden="true">
-          <a href="/marginalia/screen" aria-label="Explore Screen" class="stage-art-link">
+          <a href="/marginalia/screen" aria-label="Explore Screen" class="stage-art-link" data-astro-prefetch="hover">
             <div class="cinema-scene" aria-hidden="true">
               <div class="cinema-strip">
                 <div class="cinema-track">
@@ -366,7 +367,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
 
         <!-- Literature: the unmodified ZineJS engine in a reusable preview. -->
         <div id="stage-panel-literature" class="stage-panel" inert aria-hidden="true">
-          <a href="/marginalia/literature" class="stage-art-link" aria-label="Explore Literature — 百年孤独">
+          <a href="/marginalia/literature" class="stage-art-link" aria-label="Explore Literature — 百年孤独" data-astro-prefetch="hover">
             <LiteratureBook />
           </a>
         </div>
@@ -380,6 +381,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
             href="/marginalia/music"
             class="relative w-full h-full flex items-start justify-center pt-2 sm:pt-2.5 cursor-pointer select-none overflow-visible"
             aria-label="Explore Music"
+            data-astro-prefetch="hover"
           >
             <div aria-hidden="true" class="music-container relative w-[280px] sm:w-[330px] h-[210px] sm:h-[240px] flex items-center justify-start pl-2 sm:pl-4 -translate-x-8 sm:-translate-x-12">
               
@@ -416,6 +418,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
             href="/marginalia/table-tennis"
             class="relative w-full h-full flex items-start justify-center pt-1 sm:pt-2 cursor-pointer select-none overflow-visible"
             aria-label="Explore Table Tennis"
+            data-astro-prefetch="hover"
           >
             <div aria-hidden="true" class="tt-container relative w-[320px] sm:w-[380px] h-[220px] sm:h-[250px] flex items-center justify-center">
               
@@ -469,6 +472,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
             href="/marginalia/games"
             class="relative w-full h-full flex items-start justify-center pt-0 sm:pt-0 cursor-pointer select-none overflow-visible"
             aria-label="Explore Games"
+            data-astro-prefetch="hover"
           >
             <div aria-hidden="true" class="gameboy-stage relative w-[290px] sm:w-[330px] h-[225px] sm:h-[255px] flex items-center justify-center -translate-x-8 sm:-translate-x-10">
 

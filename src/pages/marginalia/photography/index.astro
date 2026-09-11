@@ -49,6 +49,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
           id="stage-layer-a"
           src={firstPhoto.imageUrl}
           alt={firstPhoto.title}
+          fetchpriority="high"
           class="stage-layer-img absolute max-w-full max-h-full w-auto h-auto object-contain rounded-[2px] opacity-100"
           style="will-change: opacity;"
           decoding="async"
@@ -223,8 +224,20 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       img.onload = () => imageCache.add(url);
     }
 
-    // Warm the initial photos; full images load as the user explores.
-    allPhotos.slice(1, 6).forEach(p => preloadPhoto(p.imageUrl));
+    // Smoothly warm initial adjacent photos only after the hero image is loaded and during idle time
+    const warmInitial = () => {
+      const run = (window.requestIdleCallback || ((cb: () => void) => setTimeout(cb, 400)));
+      run(() => {
+        allPhotos.slice(1, 4).forEach((p, idx) => {
+          setTimeout(() => preloadPhoto(p.imageUrl), idx * 250);
+        });
+      });
+    };
+    if (layerA && layerA.complete) {
+      warmInitial();
+    } else if (layerA) {
+      layerA.addEventListener('load', warmInitial, { once: true });
+    }
 
     // Seamless Optical Morphing Image Switcher
     function morphToImage(imageUrl: string, title: string) {
