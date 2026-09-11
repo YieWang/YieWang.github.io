@@ -21,32 +21,32 @@ export const marginaliaData: MarginaliaData = {
     {
       id: "photography",
       title: "Photography",
-      href: "/marginalia/photography",
+      href: "/marginalia/photography/",
     },
     {
       id: "cinema",
       title: "Screen",
-      href: "/marginalia/screen",
+      href: "/marginalia/screen/",
     },
     {
       id: "literature",
       title: "Literature",
-      href: "/marginalia/literature",
+      href: "/marginalia/literature/",
     },
     {
       id: "music",
       title: "Music",
-      href: "/marginalia/music",
+      href: "/marginalia/music/",
     },
     {
       id: "table-tennis",
       title: "Table Tennis",
-      href: "/marginalia/table-tennis",
+      href: "/marginalia/table-tennis/",
     },
     {
       id: "games",
       title: "Games",
-      href: "/marginalia/games",
+      href: "/marginalia/games/",
     },
   ],
 };

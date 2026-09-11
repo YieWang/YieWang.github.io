@@ -33,6 +33,22 @@ const {
     <!-- Local Self-Hosted Fonts: Josefin Sans (700) & Montserrat (Variable 100-900) -->
     <link rel="preload" href="/fonts/josefin-sans-700-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- 样式自愈防护：若本地缓存的 HTML 请求了旧部署已删除的 CSS 导致 404，自动刷新拉取最新页面与样式表 -->
+    <script is:inline>
+      window.addEventListener('error', function (e) {
+        var t = e.target;
+        if (t && t.tagName === 'LINK' && t.rel === 'stylesheet') {
+          if (!sessionStorage.getItem('css_reload_guard')) {
+            sessionStorage.setItem('css_reload_guard', '1');
+            window.location.reload();
+          }
+        }
+      }, true);
+      window.addEventListener('DOMContentLoaded', function () {
+        sessionStorage.removeItem('css_reload_guard');
+      });
+    </script>
   </head>
   <body class={`bg-white text-[#474747] min-h-screen antialiased selection:bg-stone-200 ${isHome || zeroScroll ? "is-home" : ""}`}>
     <div
