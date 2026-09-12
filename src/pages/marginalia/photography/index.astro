@@ -153,7 +153,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       align-items: center;
       gap: 10px;
       overflow-x: auto;
-      padding: 6px calc(50% - 32px);
+      padding: 6px calc(50% - 30px);
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
       position: relative;
@@ -162,10 +162,11 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     #photo-mobile-thumbnails::-webkit-scrollbar { display: none; }
     #photo-mobile-thumbnails button {
       flex: 0 0 auto;
-      height: 64px;
-      min-width: 44px;
-      padding: 3px;
-      border-radius: 2px;
+      height: 60px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      border-radius: 0;
       opacity: 0.45;
       scroll-snap-align: center;
       scroll-snap-stop: normal;
@@ -174,18 +175,32 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       justify-content: center;
       box-sizing: border-box;
       outline: none;
-      transition: opacity 0.2s, box-shadow 0.2s;
+      transition: opacity 0.2s;
+      position: relative;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #photo-mobile-thumbnails button::before {
+      content: '';
+      position: absolute;
+      inset: -10px -5px;
     }
     #photo-mobile-thumbnails button[aria-pressed="true"] {
       opacity: 1;
-      box-shadow: 0 0 0 1.5px #222;
     }
     #photo-mobile-thumbnails img {
       width: auto;
-      height: 100%;
+      height: 60px;
       max-width: none;
       object-fit: contain;
       pointer-events: none;
+      display: block;
+      border-radius: 1px;
+      box-sizing: border-box;
+      transition: box-shadow 0.2s;
+    }
+    #photo-mobile-thumbnails button[aria-pressed="true"] img {
+      box-shadow: 0 0 0 1.5px #111;
     }
     #bottom-meta-footer { padding: 0 2px; height: auto; flex-direction: column; align-items: stretch; gap: 12px; overflow: visible; }
     #bottom-meta-footer > div:first-child > div { flex-direction: column; gap: 5px; white-space: normal; overflow: visible; }
@@ -306,8 +321,10 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     }
 
     let isProgrammaticScroll = false;
+    let programmaticTargetIdx: number | null = null;
     let programmaticScrollTimer: ReturnType<typeof setTimeout> | null = null;
     let scrollCommitTimer: ReturnType<typeof setTimeout> | null = null;
+    let isUserInteracting = false;
 
     function getCenteredThumbnailIndex(): number {
       if (!thumbnails) return activeIndex;
@@ -340,15 +357,36 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
         button.setAttribute('aria-pressed', String(selected));
         if (selected && mobileLayout.matches && !options.fromScroll) {
           isProgrammaticScroll = true;
+          programmaticTargetIdx = index;
           if (programmaticScrollTimer) clearTimeout(programmaticScrollTimer);
-          const targetLeft = button.offsetLeft - (thumbnails.clientWidth - button.offsetWidth) / 2;
+          const maxScroll = thumbnails.scrollWidth - thumbnails.clientWidth;
+          const rawTarget = button.offsetLeft - (thumbnails.clientWidth - button.offsetWidth) / 2;
+          const targetLeft = Math.max(0, Math.min(maxScroll, rawTarget));
           thumbnails.scrollTo({
             left: targetLeft,
             behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
           });
-          programmaticScrollTimer = setTimeout(() => {
-            isProgrammaticScroll = false;
-          }, 350);
+          const checkSettled = () => {
+            if (!thumbnails) return;
+            if (isUserInteracting) {
+              isProgrammaticScroll = false;
+              programmaticTargetIdx = null;
+              return;
+            }
+            if (Math.abs(thumbnails.scrollLeft - targetLeft) <= 1.5) {
+              isProgrammaticScroll = false;
+              programmaticTargetIdx = null;
+            } else {
+              programmaticScrollTimer = setTimeout(checkSettled, 50);
+            }
+          };
+          programmaticScrollTimer = setTimeout(checkSettled, 100);
+          setTimeout(() => {
+            if (isProgrammaticScroll && programmaticTargetIdx === index) {
+              isProgrammaticScroll = false;
+              programmaticTargetIdx = null;
+            }
+          }, 1200);
         }
       });
 
@@ -402,27 +440,49 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       if (button) activatePhotoByIndex(Number(button.dataset.photoIndex));
     });
 
+    thumbnails?.addEventListener('pointerdown', () => {
+      isUserInteracting = true;
+      isProgrammaticScroll = false;
+      programmaticTargetIdx = null;
+      if (programmaticScrollTimer) clearTimeout(programmaticScrollTimer);
+    }, { passive: true });
+
+    window.addEventListener('pointerup', () => {
+      isUserInteracting = false;
+    }, { passive: true });
+
+    window.addEventListener('pointercancel', () => {
+      isUserInteracting = false;
+    }, { passive: true });
+
+    const commitCenteredThumbnail = () => {
+      if (!mobileLayout.matches || isProgrammaticScroll || !thumbnails) return;
+      const closestIdx = getCenteredThumbnailIndex();
+      if (closestIdx !== activeIndex) {
+        activatePhotoByIndex(closestIdx, { fromScroll: true });
+      }
+    };
+
     const onThumbnailsScroll = () => {
       if (!mobileLayout.matches || isProgrammaticScroll) return;
 
       if (scrollCommitTimer) clearTimeout(scrollCommitTimer);
       scrollCommitTimer = setTimeout(() => {
         if (isProgrammaticScroll) return;
-        const closestIdx = getCenteredThumbnailIndex();
-        if (closestIdx !== activeIndex) {
-          activatePhotoByIndex(closestIdx, { fromScroll: true });
-        }
-      }, 70);
+        commitCenteredThumbnail();
+      }, 100);
     };
 
     thumbnails?.addEventListener('scroll', onThumbnailsScroll, { passive: true });
     thumbnails?.addEventListener('scrollend', () => {
-      if (!mobileLayout.matches || isProgrammaticScroll) return;
-      if (scrollCommitTimer) clearTimeout(scrollCommitTimer);
-      const closestIdx = getCenteredThumbnailIndex();
-      if (closestIdx !== activeIndex) {
-        activatePhotoByIndex(closestIdx, { fromScroll: true });
+      if (!mobileLayout.matches) return;
+      if (isProgrammaticScroll) {
+        isProgrammaticScroll = false;
+        programmaticTargetIdx = null;
+        if (programmaticScrollTimer) clearTimeout(programmaticScrollTimer);
       }
+      if (scrollCommitTimer) clearTimeout(scrollCommitTimer);
+      commitCenteredThumbnail();
     });
 
     yearSelect?.addEventListener('change', () => {
