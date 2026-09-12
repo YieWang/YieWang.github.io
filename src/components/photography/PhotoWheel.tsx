@@ -317,7 +317,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
           cursor: default; touch-action: none;
         }
         .photo-wheel-scroll::-webkit-scrollbar { display: none; }
-        .photo-wheel-scroll:focus-visible { outline: 1px solid #aaa; outline-offset: -1px; }
+        .photo-wheel-scroll:focus-visible { outline: none; }
       `}</style>
     </div>
   );
