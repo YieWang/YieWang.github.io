@@ -43,7 +43,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     >
       
       <!-- TOP: Dual-Layer Optical Morphing Canvas (Clean full-bleed, Zero floating arrows) -->
-      <div id="photo-canvas" style={`--photo-aspect: ${firstPhoto.width} / ${firstPhoto.height}`} class="flex-1 min-h-0 w-full flex items-center justify-center p-0.5 sm:p-1 overflow-hidden relative">
+      <div id="photo-canvas" class="flex-1 min-h-0 w-full flex items-center justify-center p-0.5 sm:p-1 overflow-hidden relative">
         <!-- Layer A -->
         <img
           id="stage-layer-a"
@@ -140,6 +140,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
   @media (max-width: 767px), (hover: none) and (pointer: coarse) {
     :global(body.is-home) { overflow-x: clip; overflow-y: visible; overscroll-behavior: auto !important; }
     :global(body.is-home #site-wrapper) { max-height: none; }
+    :global(body.is-home #site-wrapper > div:last-child) { display: block; }
     #gallery-viewport-root { height: auto; min-height: 0; flex: none; flex-direction: column; gap: 14px; margin-left: 0; padding: 8px 8px 28px; overflow: visible; }
     #gallery-viewport-root > aside { display: none; }
     #photo-mobile-heading { display: flex; align-items: center; gap: 12px; min-height: 44px; }
@@ -163,7 +164,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     }
     #photo-mobile-city { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
     #right-showcase-stage { width: 100%; height: auto; flex: none; padding: 0; overflow: visible; gap: 18px; }
-    #photo-canvas { flex: none; aspect-ratio: var(--photo-aspect); max-height: 65svh; padding: 0; touch-action: pan-y pinch-zoom; }
+    #photo-canvas { flex: none; height: clamp(180px, calc(100svh - 450px), 520px); padding: 0; touch-action: pan-y pinch-zoom; }
     .stage-layer-img { inset: 0; margin: auto; }
     #photo-mobile-thumbnails {
       width: 100%;
@@ -223,7 +224,8 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       display: block;
       border-radius: 1px;
     }
-    #bottom-meta-footer { padding: 0 2px; height: auto; flex-direction: column; align-items: stretch; gap: 12px; overflow: visible; }
+    #bottom-meta-footer { padding: 0 2px; height: auto; min-height: 120px; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 12px; overflow: visible; }
+    #bottom-meta-footer > div:first-child { flex: none; }
     #bottom-meta-footer > div:first-child > div { flex-direction: column; gap: 5px; white-space: normal; overflow: visible; }
     #meta-title { font-size: 17px; line-height: 1.4; overflow-wrap: anywhere; }
     #meta-location, #meta-story { white-space: normal; overflow: visible; overflow-wrap: anywhere; }
@@ -370,7 +372,6 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       const photo = allPhotos[index];
       if (!photo) return;
       activeIndex = index;
-      canvas?.style.setProperty('--photo-aspect', `${photo.width} / ${photo.height}`);
       if (yearSelect) yearSelect.value = String(photo.year);
       if (city) city.textContent = photo.locationEn;
       thumbnails?.querySelectorAll('button').forEach(button => {

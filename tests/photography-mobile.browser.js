@@ -45,8 +45,40 @@ async (page) => {
     }));
     await portrait.nth(portraitIndex).click();
     await synchronized();
-    for (const [width, height] of [[320, 568], [390, 844], [844, 390]]) {
+    for (const [width, height] of [[320, 568], [390, 844], [430, 932], [844, 390]]) {
       await mobile.setViewportSize({ width, height });
+      const positions = () => mobile.evaluate(() => ['#photo-mobile-thumbnails', '#bottom-meta-footer', '#meta-title', '#footer p'].map(selector => {
+        const rect = document.querySelector(selector).getBoundingClientRect();
+        return { x: rect.x, y: rect.y + scrollY };
+      }));
+      await portrait.first().click();
+      await synchronized();
+      const landscapePositions = await positions();
+      if (width === 390) await mobile.screenshot({ path: 'output/playwright/photography-stable-landscape.png', fullPage: true });
+      await portrait.nth(portraitIndex).click();
+      await synchronized();
+      const portraitPositions = await positions();
+      if (portraitPositions.some((point, i) => Math.abs(point.y - landscapePositions[i].y) > 0.5)) {
+        throw Error(`Photo switching moved the text or footer at ${width}x${height}`);
+      }
+      if (width === 390) await mobile.screenshot({ path: 'output/playwright/photography-stable-portrait.png', fullPage: true });
+      if (height >= 844) {
+        const reference = await context.newPage();
+        try {
+          await reference.setViewportSize({ width, height });
+          for (const route of ['/', '/mathematics/', '/marginalia/']) {
+            await reference.goto(await mobile.evaluate(() => location.origin) + route);
+            await reference.evaluate(() => document.fonts.ready);
+            const footer = await reference.locator('#footer p').boundingBox();
+            const photoFooter = portraitPositions[3];
+            if (Math.abs(footer.x - photoFooter.x) > 0.5 || Math.abs(footer.y - photoFooter.y) > 0.5) {
+              throw Error(`Photography copyright differs from ${route} at ${width}x${height}`);
+            }
+          }
+        } finally {
+          await reference.close();
+        }
+      }
       const valid = await mobile.evaluate(() => {
         const image = [...document.querySelectorAll('.stage-layer-img')].find(img => getComputedStyle(img).opacity === '1');
         const rect = image.getBoundingClientRect();
