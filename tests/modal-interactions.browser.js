@@ -108,6 +108,60 @@ async page => {
     await page.screenshot({ path: `output/playwright/screen-small-${title.startsWith('Frieren') ? 'frieren' : 'fate'}.png` });
     await close();
   }
+  await page.goto(`${origin}/marginalia/literature/`);
+  for (const [width, height] of [[390, 844], [320, 568], [568, 320], [844, 390], [1440, 900]]) {
+    await page.setViewportSize({ width, height });
+    const mobile = width < 640;
+    const pane = page.locator(mobile ? '#book-detail-body' : '#book-modal-scroll-pane');
+    for (const id of ['book-1084336', 'book-10554308', 'book-6082808', 'book-1041007']) {
+      await page.locator(`[data-book-id="${id}"]`).click();
+      await page.locator('#book-modal-slot img').evaluate(image => image.decode());
+      await page.evaluate(() => document.fonts.ready);
+      await page.waitForTimeout(300);
+      const label = `${id} at ${width}x${height}`;
+      const panel = await page.locator('#book-modal-container').boundingBox();
+      check(Math.abs(panel.height - Math.min(mobile ? 580 : 490, height * (mobile ? 0.88 : 0.86))) < 1, `${label}: wrong modal height`);
+      check(await pane.evaluate(e => getComputedStyle(e).overflowY === 'auto' && e.clientHeight > 100), `${label}: unusable reading area`);
+      if (mobile) check(await page.locator('#book-modal-scroll-pane').evaluate(e => getComputedStyle(e).overflowY === 'visible'), `${label}: nested review scrolling`);
+      const background = await page.evaluate(() => scrollY);
+      const titleTop = (await page.locator('#book-modal-title').boundingBox()).y;
+      if (width === 320 && id === 'book-1041007') {
+        const box = await pane.boundingBox();
+        const x = box.x + box.width / 2, y = box.y + 140;
+        await touch.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y }] });
+        for (let step = 1; step <= 5; step++) {
+          await touch.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x, y: y - step * 20 }] });
+          await page.waitForTimeout(20);
+        }
+        await touch.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+        await page.waitForFunction(() => document.getElementById('book-detail-body').scrollTop > 0);
+      }
+      const toggle = page.locator('#toggle-essay-btn');
+      if (await toggle.count()) await toggle.click();
+      const lastReview = page.locator('#book-modal-scroll-pane p').last();
+      await lastReview.scrollIntoViewIfNeeded();
+      check(await lastReview.evaluate((e, paneId) => {
+        const r = e.getBoundingClientRect(), p = document.getElementById(paneId).getBoundingClientRect();
+        return r.bottom <= p.bottom + 1 && r.top >= p.top - 1;
+      }, mobile ? 'book-detail-body' : 'book-modal-scroll-pane'), `${label}: review clipped`);
+      check(Math.abs((await page.locator('#book-modal-title').boundingBox()).y - titleTop) < 1, `${label}: title moved`);
+      check(await page.evaluate(() => scrollY) === background, `${label}: background moved`);
+      if (await toggle.count()) {
+        await toggle.click();
+        await page.waitForFunction(id => document.getElementById(id).scrollTop === 0, mobile ? 'book-detail-body' : 'book-modal-scroll-pane');
+      }
+      const lastPart = page.locator('#book-modal-slot [data-installment]').last();
+      if (await lastPart.count()) {
+        await lastPart.scrollIntoViewIfNeeded();
+        const before = await pane.evaluate(e => e.scrollTop);
+        await lastPart.click();
+        check(await lastPart.getAttribute('aria-pressed') === 'true', `${label}: last volume inaccessible`);
+        check(Math.abs(await pane.evaluate(e => e.scrollTop) - before) < 2, `${label}: volume switch reset scroll`);
+      }
+      if (id === 'book-1084336') await page.screenshot({ path: `output/playwright/book-review-${width}x${height}.png` });
+      await close();
+    }
+  }
   await touch.detach();
   return 'Keyboard activation, focus containment/restoration, background scroll lock, series review fallback and small-screen details passed';
 }

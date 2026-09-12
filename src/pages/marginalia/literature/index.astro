@@ -145,7 +145,7 @@ const bookCards = literatureBookCards;
     <div
       id="book-modal-container"
       tabindex="-1"
-      class="bg-white max-w-xl sm:max-w-3xl w-full h-[460px] sm:h-[490px] max-h-[86vh] rounded-[3px] shadow-2xl p-5 sm:p-6 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden outline-none"
+      class="bg-white max-w-xl sm:max-w-3xl w-full h-[580px] sm:h-[490px] max-h-[88vh] sm:max-h-[86vh] rounded-[3px] shadow-2xl p-5 sm:p-6 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden outline-none"
       style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
     >
       <div id="book-modal-slot" class="w-full h-full flex flex-col min-h-0"></div>
@@ -220,6 +220,10 @@ const bookCards = literatureBookCards;
   let bookCloseTimer: ReturnType<typeof setTimeout> | null = null;
   let essayCloseTimer: ReturnType<typeof setTimeout> | null = null;
 
+  const getBookScrollPane = () => document.getElementById(
+    window.matchMedia('(max-width: 639px)').matches ? 'book-detail-body' : 'book-modal-scroll-pane'
+  );
+
   function openBookModal(selection: BookItem, installmentIndex = 0, listScrollTop = 0) {
     if (!bookModalSlot || !bookModalBackdrop || !bookModalContainer) return;
     if (bookCloseTimer) {
@@ -269,15 +273,15 @@ const bookCards = literatureBookCards;
         </h2>
       </div>
 
-      <!-- Two-Column Body (Left Pinned, Right Scrollable, Identical to Cinema) -->
-      <div class="flex flex-col sm:flex-row items-stretch gap-5 sm:gap-6 flex-1 min-h-0 overflow-hidden">
-        <!-- Left Column: Full Book Artwork (100% Pinned, Never Scrolls) -->
+      <!-- Mobile scrolls the whole body; desktop keeps the cover pinned. -->
+      <div id="book-detail-body" class="flex flex-col sm:flex-row items-stretch gap-5 sm:gap-6 flex-1 min-h-0 overflow-y-auto sm:overflow-hidden overscroll-contain">
+        <!-- Full Book Artwork -->
         <div class="detail-sidebar w-full sm:w-[170px] md:w-[180px] shrink-0 flex flex-col items-center sm:items-start justify-start h-auto sm:h-full">
           <img src="${escapeHtml(book.coverUrl)}" alt="${escapeHtml(title)}" ${book.coverWidth && book.coverHeight ? `width="${Number(book.coverWidth)}" height="${Number(book.coverHeight)}"` : ''} class="block w-[95px] sm:w-full h-auto min-h-0 max-w-full max-h-full object-contain object-left-top drop-shadow-sm" />
         </div>
 
-        <!-- Right Column: Concise Metadata & Scrollable Review (ONLY the review area scrolls) -->
-        <div class="flex-1 min-w-0 flex flex-col h-full overflow-hidden">
+        <!-- Metadata and review flow together on mobile. -->
+        <div class="shrink-0 sm:flex-1 min-w-0 flex flex-col sm:h-full sm:overflow-hidden">
           <!-- Fixed Concise Metadata Grid -->
           <div class="grid grid-cols-2 gap-x-6 gap-y-2.5 pb-2.5 border-b border-[#F0F0F0] shrink-0">
             <!-- Author -->
@@ -340,10 +344,10 @@ const bookCards = literatureBookCards;
             }
           </div>
 
-          <!-- Scrollable Review Area (ONLY this section scrolls when content expands) -->
+          <!-- Desktop scrolls the review independently. -->
           <div
             id="book-modal-scroll-pane"
-            class="flex-1 min-h-0 overflow-y-auto overscroll-contain pr-2 pt-2.5 space-y-3"
+            class="sm:flex-1 sm:min-h-0 sm:overflow-y-auto overscroll-contain sm:pr-2 pt-2.5 space-y-3"
             style="scrollbar-gutter: stable;"
           >
             ${selection.installments ? `
@@ -399,12 +403,12 @@ const bookCards = literatureBookCards;
     bookModalSlot.querySelectorAll<HTMLButtonElement>('[data-installment]').forEach(button => {
       button.addEventListener('click', () => {
         const index = Number(button.dataset.installment);
-        const scrollTop = document.getElementById('book-modal-scroll-pane')?.scrollTop || 0;
+        const scrollTop = getBookScrollPane()?.scrollTop || 0;
         openBookModal(selection, index, scrollTop);
         bookModalSlot.querySelector<HTMLButtonElement>(`[data-installment="${index}"]`)?.focus({ preventScroll: true });
       });
     });
-    const scrollPane = document.getElementById('book-modal-scroll-pane');
+    const scrollPane = getBookScrollPane();
     if (scrollPane) scrollPane.scrollTop = listScrollTop;
 
     // Bind In-Place Essay Expansion Toggle
@@ -424,7 +428,7 @@ const bookCards = literatureBookCards;
         toggleBtn.textContent = '↓';
         toggleBtn.setAttribute('title', 'Expand full essay');
         toggleBtn.setAttribute('aria-label', 'Expand full essay');
-        const scrollPane = document.getElementById('book-modal-scroll-pane');
+        const scrollPane = getBookScrollPane();
         if (scrollPane) scrollPane.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
