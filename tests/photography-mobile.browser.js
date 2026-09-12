@@ -75,5 +75,20 @@ async (page) => {
   await page.waitForFunction(() => getComputedStyle(document.querySelector('#right-showcase-stage')).touchAction === 'none');
   await page.waitForFunction(() => document.querySelector('.photo-wheel-scroll [aria-selected="true"]').getAttribute('aria-label').endsWith(document.querySelector('#meta-title').textContent.trim()));
   if (await page.locator('#photo-mobile-thumbnails').isVisible()) throw Error('Mobile strip visible on desktop');
+  // Switching layouts during a held drag must not leave the new desktop scroller locked.
+  const stage = await page.locator('#right-showcase-stage').boundingBox();
+  await page.mouse.move(stage.x + stage.width / 2, stage.y + stage.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(stage.x + stage.width / 2, stage.y + stage.height / 2 - 115, { steps: 10 });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.waitForFunction(() => !document.querySelector('.photo-wheel-scroll'));
+  await page.mouse.up();
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.locator('.photo-wheel-scroll').focus();
+  await page.keyboard.press('ArrowDown');
+  await page.waitForFunction(() => {
+    const wheel = document.querySelector('.photo-wheel-scroll');
+    return wheel.children[3].getAttribute('aria-selected') === 'true' && Math.abs(wheel.scrollTop - 3 * 82) < 0.5;
+  });
   return 'Touch swipe, thumbnail selection, year jump, original ratios, portrait/landscape scrolling and desktop handoff passed.';
 }

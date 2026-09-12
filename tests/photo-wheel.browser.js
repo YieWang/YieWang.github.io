@@ -22,7 +22,14 @@ async (page) => {
   await page.reload();
   const picker = page.locator('.photo-wheel-scroll');
   await picker.waitFor();
-  const box = await picker.boundingBox();
+  await page.evaluate(() => {
+    window.nativePhotoWheels = [];
+    document.addEventListener('wheel', event => {
+      const scroller = event.target.closest('.photo-wheel-scroll');
+      if (scroller) window.nativePhotoWheels.push(!event.defaultPrevented);
+    });
+  });
+  const box = await page.locator('.photo-wheel-viewport').boundingBox();
   const position = () => picker.evaluate(element => element.scrollTop);
   const settle = async () => {
     await page.waitForTimeout(300);
@@ -70,6 +77,7 @@ async (page) => {
   }
   const rightGentle = await settle();
   if (rightGentle !== gentle) throw Error('Left and right wheel distances differ');
+  if (!await page.evaluate(() => window.nativePhotoWheels.length >= 24 && window.nativePhotoWheels.every(Boolean))) throw Error('Both sides must leave trackpad scrolling and gesture end to the browser');
   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
   await picker.evaluate(element => { element.scrollTop = 0; });
   await settle();
@@ -115,5 +123,32 @@ async (page) => {
   await settle();
   const selectedLabel = await picker.locator('[aria-selected="true"]').getAttribute('aria-label');
   if (!selectedLabel.startsWith(targetYear)) throw Error('External year selection failed');
-  return { gentle, rightGentle, fast, intermediateFrames: frames, cursor, reverse: 'passed', keyboard: 'passed', drag: 'both sides passed', boundaries: 'passed', thumbnailClick: 'passed', yearJump: 'passed' };
+  // A held drag owns the position, even if a mouse/trackpad also emits wheel events.
+  for (const surface of [page.locator('.photo-wheel-viewport'), page.locator('#right-showcase-stage')]) {
+    await picker.focus();
+    await page.keyboard.press('Home');
+    await settle();
+    const box = await surface.boundingBox();
+    const x = box.x + box.width / 2, y = box.y + box.height / 2;
+    await page.mouse.move(x, y);
+    await page.mouse.down();
+    try {
+      await page.mouse.move(x, y - 115, { steps: 10 });
+      const held = await position();
+      if (Math.abs(held - 115) > 1) throw Error('Drag must follow the pointer between photos');
+      for (const wheel of [false, true]) {
+        if (wheel) await page.mouse.wheel(0, 30);
+        await page.waitForTimeout(1500);
+        if (Math.abs(await position() - held) > 1) throw Error('Held drag snapped before release');
+        if (await picker.locator('[role="option"]').first().getAttribute('aria-selected') !== 'true') throw Error('Held drag changed selection');
+      }
+      await page.mouse.move(x, y - 135, { steps: 4 });
+      if (Math.abs(await position() - 135) > 1) throw Error('Drag must resume from the held position');
+      await page.waitForTimeout(100);
+    } finally {
+      await page.mouse.up();
+    }
+    if (await settle() !== 2) throw Error('Release must snap to the nearest photo');
+  }
+  return { gentle, rightGentle, fast, intermediateFrames: frames, cursor, reverse: 'passed', keyboard: 'passed', drag: 'both sides passed', heldDrag: 'both sides stay put until release, including wheel events', boundaries: 'passed', thumbnailClick: 'passed', yearJump: 'passed' };
 }

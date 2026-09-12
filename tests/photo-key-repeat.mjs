@@ -6,7 +6,7 @@ import ts from 'typescript';
 
 const source = readFileSync(new URL('../src/components/photography/PhotoWheel.tsx', import.meta.url), 'utf8');
 const setup = source.slice(source.indexOf("    let heldKey ="), source.indexOf('    const draw ='));
-const handler = source.slice(source.indexOf('    const steps:'), source.indexOf('    // Both sides'));
+const handler = source.slice(source.indexOf('    const steps:'), source.indexOf('    // Native scrolling'));
 let now = 0, frameId = 0;
 const frames = new Map(), calls = [];
 const keyboardTarget = { current: null }, cancelKeyboard = {};
@@ -16,7 +16,7 @@ const element = {
 };
 const { down, up, release } = vm.runInNewContext(ts.transpile(setup + handler + '\n({down:onKeyDown,up:onKeyUp,release:releaseKeyboard});'), {
   element, keyboardTarget, itemHeight: 82, options: Array(100), drag: { current: null },
-  cancelKeyboard, wheelTimer: 0, wheeling: false, clearTimeout() {},
+  cancelKeyboard,
   performance: { now: () => now },
   requestAnimationFrame(fn) { frames.set(++frameId, fn); return frameId; },
   cancelAnimationFrame(id) { frames.delete(id); },

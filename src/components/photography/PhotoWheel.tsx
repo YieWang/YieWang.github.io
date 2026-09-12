@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
 export interface PhotoWheelOption {
   value: string;
@@ -28,26 +29,24 @@ export default function PhotoWheel({ options, value, onValueChange }: {
   const drag = useRef<{ y: number; top: number; lastY: number; time: number; speed: number; moved: boolean } | null>(null);
   const ignoreClick = useRef(false);
   const [mobile, setMobile] = useState(false);
+  const [gallery, setGallery] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
     const media = matchMedia('(max-width: 767px), (hover: none) and (pointer: coarse)');
     const update = () => setMobile(media.matches);
+    setGallery(wheel.current!.closest<HTMLElement>('#gallery-viewport-root'));
     update();
     media.addEventListener('change', update);
     return () => media.removeEventListener('change', update);
   }, []);
 
   useEffect(() => {
-    if (mobile) return;
+    if (mobile || !gallery) return;
     const element = scroller.current!;
-    const gallery = element.closest('#gallery-viewport-root') as HTMLElement;
     const stage = gallery.querySelector('#right-showcase-stage') as HTMLElement;
     const previousTouchAction = stage.style.touchAction;
     stage.style.touchAction = 'none';
     let frame = 0;
-    let settleTimer: ReturnType<typeof setTimeout>;
-    let wheelTimer: ReturnType<typeof setTimeout>;
-    let wheeling = false;
     let heldKey = '';
     let keyFrame = 0;
     let keyTime = 0;
@@ -85,7 +84,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       });
     };
     const settle = () => {
-      if (drag.current || wheeling || keyFrame) return;
+      if (drag.current || keyFrame) return;
       const index = Math.max(0, Math.min(options.length - 1, Math.round(element.scrollTop / itemHeight)));
       if (Math.abs(element.scrollTop - index * itemHeight) > 0.5) return;
       if (keyboardTarget.current !== null && index !== keyboardTarget.current) return;
@@ -96,15 +95,11 @@ export default function PhotoWheel({ options, value, onValueChange }: {
     const scroll = () => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(draw);
-      clearTimeout(settleTimer);
-      settleTimer = setTimeout(settle, 160);
     };
     const stopAt = (top: number) => {
-      clearTimeout(settleTimer);
       const index = Math.max(0, Math.min(options.length - 1, Math.round(top / itemHeight)));
       commit(index);
       element.scrollTo({ top: index * itemHeight, behavior: 'smooth' });
-      settleTimer = setTimeout(settle, 160);
     };
     const steps: Record<string, number> = { ArrowDown: 1, ArrowUp: -1, ArrowRight: 1, ArrowLeft: -1 };
     const advanceKeyboard = (now: number) => {
@@ -161,8 +156,6 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       event.preventDefault();
       if (drag.current) return;
       if (event.repeat) return;
-      clearTimeout(wheelTimer);
-      wheeling = false;
       if (endpoint) {
         stopKeyboard();
         keyboardTarget.current = event.key === 'Home' ? 0 : options.length - 1;
@@ -189,18 +182,12 @@ export default function PhotoWheel({ options, value, onValueChange }: {
         keyFrame = requestAnimationFrame(advanceKeyboard);
       }
     };
-    // Both sides feed the same scroll position; trackpad momentum is already in deltaY.
+    // Native scrolling owns trackpad gesture end; a pause with fingers down is not a release.
     const onWheel = (event: WheelEvent) => {
       if (event.ctrlKey || !event.deltaY) return;
-      event.preventDefault();
+      if (drag.current) { event.preventDefault(); return; }
       stopKeyboard();
-      wheeling = true;
-      keyboardTarget.current = null;
-      element.style.scrollSnapType = 'none';
-      clearTimeout(wheelTimer);
-      const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? element.clientHeight : 1;
-      element.scrollBy({ top: event.deltaY * unit, behavior: 'instant' });
-      wheelTimer = setTimeout(() => { wheeling = false; stopAt(element.scrollTop); }, 140);
+      element.style.scrollSnapType = '';
     };
     const onPointerDown = (event: PointerEvent) => {
       if (event.button !== 0 || (event.target as Element).closest('a, button')) return;
@@ -211,10 +198,9 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       event.preventDefault();
       if (surface === element) element.focus({ preventScroll: true });
       ignoreClick.current = false;
-      clearTimeout(wheelTimer);
-      wheeling = false;
       drag.current = { y: event.clientY, top: element.scrollTop, lastY: event.clientY, time: performance.now(), speed: 0, moved: false };
       element.style.scrollSnapType = 'none';
+      element.scrollTo({ top: element.scrollTop, behavior: 'instant' });
       surface.setPointerCapture(event.pointerId);
     };
     const onPointerMove = (event: PointerEvent) => {
@@ -236,6 +222,11 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       stopAt(element.scrollTop + offset);
     };
     const onPointerCancel = () => { drag.current = null; stopAt(element.scrollTop); };
+    const resize = new ResizeObserver(() => {
+      element.style.paddingBlock = `${Math.max(0, (element.clientHeight - itemHeight) / 2)}px`;
+    });
+    element.style.paddingBlock = `${Math.max(0, (element.clientHeight - itemHeight) / 2)}px`;
+    resize.observe(element);
     element.scrollTop = Math.max(0, options.findIndex(option => option.value === selected.current)) * itemHeight;
     draw();
     element.addEventListener('scroll', scroll, { passive: true });
@@ -255,9 +246,9 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       window.removeEventListener('keyup', onKeyUp);
       window.removeEventListener('blur', releaseKeyboard);
       stopKeyboard();
+      drag.current = null;
       cancelAnimationFrame(frame);
-      clearTimeout(settleTimer);
-      clearTimeout(wheelTimer);
+      resize.disconnect();
       gallery.removeEventListener('wheel', onWheel);
       gallery.removeEventListener('pointerdown', onPointerDown);
       gallery.removeEventListener('pointermove', onPointerMove);
@@ -265,7 +256,7 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       gallery.removeEventListener('pointercancel', onPointerCancel);
       stage.style.touchAction = previousTouchAction;
     };
-  }, [options, mobile]);
+  }, [options, mobile, gallery]);
 
   useEffect(() => {
     if (value === selected.current) return;
@@ -290,13 +281,15 @@ export default function PhotoWheel({ options, value, onValueChange }: {
           {options.map(option => <li key={option.value} data-rwp-highlight-item className="photo-wheel-highlight-item" style={{ height: itemHeight }}>{option.label}</li>)}
         </ul>
       </div>
-      <div ref={scroller} className="photo-wheel-scroll" tabIndex={0} role="listbox" aria-label="Photographs"
+      {gallery && !mobile && createPortal(<div ref={scroller} className="photo-wheel-scroll" tabIndex={0} role="listbox" aria-label="Photographs"
         aria-activedescendant={`photo-option-${value}`}
         onClick={event => {
           if (ignoreClick.current) return;
+          const box = wheel.current!.closest('.photo-wheel-viewport')!.getBoundingClientRect();
+          if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) return;
           cancelKeyboard.current();
           keyboardTarget.current = null;
-          const offset = event.clientY - event.currentTarget.getBoundingClientRect().top - height / 2;
+          const offset = event.clientY - box.top - box.height / 2;
           const targetIndex = Math.max(0, Math.min(options.length - 1, Math.round((event.currentTarget.scrollTop + offset) / itemHeight)));
           const next = options[targetIndex]?.value;
           if (next && next !== selected.current) {
@@ -308,12 +301,11 @@ export default function PhotoWheel({ options, value, onValueChange }: {
       >
         {options.map(option => <div key={option.value} id={`photo-option-${option.value}`} role="option"
           aria-label={option.textValue} aria-selected={option.value === value} style={{ height: itemHeight, scrollSnapAlign: 'center' }} />)}
-      </div>
+      </div>, gallery)}
       <style>{`
         .photo-wheel-scroll {
-          position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain;
+          position: absolute; inset: 0; z-index: 10; overflow-y: auto; overscroll-behavior: contain; box-sizing: border-box;
           scroll-snap-type: y mandatory; scrollbar-width: none;
-          padding-block: ${(height - itemHeight) / 2}px;
           cursor: default; touch-action: none;
         }
         .photo-wheel-scroll::-webkit-scrollbar { display: none; }

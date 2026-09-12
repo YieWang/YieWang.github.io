@@ -29,7 +29,7 @@ async (page) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.reload();
   await picker.waitFor();
-  for (const surface of [picker, page.locator('#right-showcase-stage')]) {
+  for (const surface of [page.locator('.photo-wheel-viewport'), page.locator('#right-showcase-stage')]) {
     const before = await picker.evaluate(element => element.scrollTop);
     const box = await surface.boundingBox();
     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2 + 60);

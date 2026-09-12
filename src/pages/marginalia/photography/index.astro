@@ -133,6 +133,9 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
 </Layout>
 
 <style>
+  #gallery-viewport-root { position: relative; }
+  #gallery-viewport-root > aside { pointer-events: none; }
+  #gallery-viewport-root > aside :global(button) { pointer-events: auto; }
   #photo-mobile-heading, #photo-mobile-thumbnails { display: none; }
   @media (max-width: 767px), (hover: none) and (pointer: coarse) {
     :global(body.is-home) { overflow-x: clip; overflow-y: visible; overscroll-behavior: auto !important; }
