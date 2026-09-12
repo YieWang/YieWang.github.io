@@ -40,7 +40,7 @@ async page => {
     check(await cv.getAttribute('href') === '/CV_full_academic.pdf' && await cv.getAttribute('target') === '_blank', 'CV must open the supplied PDF in a new tab');
     const pdf = await context.request.get(origin + await cv.getAttribute('href'));
     check(pdf.ok() && (await pdf.body()).subarray(0, 5).toString() === '%PDF-', 'CV must serve a PDF');
-    check(await mobile.locator('link[rel="apple-touch-icon"]').getAttribute('href') === '/apple-touch-icon.png', 'Apple icon missing');
+    check(await mobile.locator('link[rel="apple-touch-icon"]').getAttribute('href') === '/apple-touch-icon.png?v=2', 'Apple icon missing');
   } finally {
     await context.close();
   }
