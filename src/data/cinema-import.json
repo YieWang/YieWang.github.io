@@ -339,7 +339,8 @@
     ],
     "chineseTitle": "办公室",
     "originalDirector": "Greg Daniels",
-    "chineseDirector": "克雷格·丹尼尔斯"
+    "chineseDirector": "克雷格·丹尼尔斯",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/d71JQWhX75ZE2D383DlIsHVH1In.jpg"
   },
   {
     "id": "film-1787291",
@@ -657,7 +658,8 @@
     ],
     "chineseTitle": "暗黑",
     "originalDirector": "Baran bo Odar, Jantje Friese",
-    "chineseDirector": "巴兰·博·奥达尔, 扬特耶·弗里泽"
+    "chineseDirector": "巴兰·博·奥达尔, 扬特耶·弗里泽",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/spN6icwSwuAuOcuZLC9bKjK6N2i.jpg"
   },
   {
     "id": "film-1291546",
@@ -934,7 +936,8 @@
     "chineseTitle": "青春猪头少年不会梦到兔女郎学姐",
     "originalDirector": "鴨志田一",
     "chineseDirector": "鸭志田一",
-    "studio": "CloverWorks"
+    "studio": "CloverWorks",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/bZ7ih7sC7VJ7Lmm6177lqwXt5PI.jpg"
   },
   {
     "id": "tv-105248",
@@ -1132,7 +1135,8 @@
     "chineseTitle": "反叛的鲁路修",
     "originalDirector": "大河内一楼, 谷口悟朗",
     "chineseDirector": "大河内一楼, 谷口悟朗",
-    "studio": "Sunrise"
+    "studio": "Sunrise",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/jSk1zsthAJ16F4i8e3LDXPwlrk2.jpg"
   },
   {
     "id": "tv-43125",
@@ -1335,7 +1339,8 @@
     "chineseTitle": "刀剑神域",
     "originalDirector": "川原礫",
     "chineseDirector": "川原砾",
-    "studio": "A-1 Pictures"
+    "studio": "A-1 Pictures",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/is3J0fmMgmqVt3Shm6J5KtULTyq.jpg"
   },
   {
     "id": "tv-61415",
@@ -1434,7 +1439,8 @@
     "chineseTitle": "命运之夜 无限剑制",
     "originalDirector": "奈須きのこ, TYPE-MOON",
     "chineseDirector": "奈须蘑菇, TYPE-MOON",
-    "studio": "ufotable"
+    "studio": "ufotable",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/ituw0pLNRC41C2BjZMgDgDvBfbd.jpg"
   },
   {
     "id": "tv-45845",
@@ -1532,7 +1538,8 @@
     "chineseTitle": "命运之夜 前传",
     "originalDirector": "虚淵玄",
     "chineseDirector": "虚渊玄",
-    "studio": "ufotable"
+    "studio": "ufotable",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/qRN0Gow4Ht0ScQMTfGXjqjS5HiF.jpg"
   },
   {
     "id": "tv-139130",
@@ -1684,7 +1691,8 @@
     "chineseTitle": "一拳超人",
     "originalDirector": "ONE, 村田雄介",
     "chineseDirector": "ONE, 村田雄介",
-    "studio": "Madhouse"
+    "studio": "Madhouse",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/ocv8PzwfQUsFHSSdUvK7wZI85Dx.jpg"
   },
   {
     "id": "tv-88803",
@@ -1783,7 +1791,8 @@
     "chineseTitle": "冰海战记",
     "originalDirector": "幸村誠",
     "chineseDirector": "幸村诚",
-    "studio": "Wit Studio"
+    "studio": "Wit Studio",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/vhasC3HdTY2pN94ww3r8RKdOGlr.jpg"
   },
   {
     "id": "tv-74091",
@@ -1949,7 +1958,8 @@
     "chineseTitle": "齐木楠雄的灾难",
     "originalDirector": "麻生周一",
     "chineseDirector": "麻生周一",
-    "studio": "J.C. Staff"
+    "studio": "J.C. Staff",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/tpym31HVeQgenaubvCxkMF3kFHy.jpg"
   },
   {
     "id": "tv-60863",
@@ -2131,7 +2141,8 @@
     "chineseTitle": "排球少年！！",
     "originalDirector": "古舘春一",
     "chineseDirector": "古馆春一",
-    "studio": "Production I.G"
+    "studio": "Production I.G",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/1Rfa9o5H6ZlXzbDVNlw4jULdXpi.jpg"
   },
   {
     "id": "tv-46671",
@@ -2431,7 +2442,8 @@
     "chineseTitle": "JOJO的奇妙冒险",
     "originalDirector": "荒木飛呂彦",
     "chineseDirector": "荒木飞吕彦",
-    "studio": "David Production"
+    "studio": "David Production",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/co0K9FS9rQPxPoKADs4nuGckk3A.jpg"
   },
   {
     "id": "tv-72636",
@@ -2530,7 +2542,8 @@
     "chineseTitle": "来自深渊",
     "originalDirector": "つくしあきひと",
     "chineseDirector": "土笔章人",
-    "studio": "Kinema Citrus"
+    "studio": "Kinema Citrus",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/uVK3H8CgtrVgySFpdImvNXkN7RK.jpg"
   },
   {
     "id": "tv-124396",
@@ -3831,7 +3844,8 @@
     "chineseTitle": "鬼灭之刃",
     "originalDirector": "吾峠呼世晴",
     "chineseDirector": "吾峠呼世晴",
-    "studio": "ufotable"
+    "studio": "ufotable",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/bV0ZCL0IqrTQKClu6EtXlZaJevD.jpg"
   },
   {
     "id": "film-1292335",
@@ -4576,7 +4590,8 @@
     ],
     "chineseTitle": "风骚律师",
     "originalDirector": "Vince Gilligan, Peter Gould",
-    "chineseDirector": "文斯·吉利根, 皮特·古尔德"
+    "chineseDirector": "文斯·吉利根, 皮特·古尔德",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/bAbZBZmz25Lqk8A8mwMWzAkvlAj.jpg"
   },
   {
     "id": "tv-1396",
@@ -4778,7 +4793,8 @@
     ],
     "chineseTitle": "绝命毒师",
     "originalDirector": "Vince Gilligan",
-    "chineseDirector": "文斯·吉利根"
+    "chineseDirector": "文斯·吉利根",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/1BP4xYv9ZG4ZVHkL7ocOziBbSYH.jpg"
   },
   {
     "id": "film-21937438",
@@ -5253,7 +5269,8 @@
     ],
     "chineseTitle": "胜者即是正义",
     "originalDirector": "古沢良太",
-    "chineseDirector": "古泽良太"
+    "chineseDirector": "古泽良太",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/co9yfvcRuH2ZAVDkrMzymTierxM.jpg"
   },
   {
     "id": "tv-215197",
@@ -7796,7 +7813,8 @@
     "chineseTitle": "进击的巨人",
     "originalDirector": "諫山創",
     "chineseDirector": "谏山创",
-    "studio": "Wit Studio"
+    "studio": "Wit Studio",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/gC78bsXhdU2PwT3FkLcn8R5YcHb.jpg"
   },
   {
     "id": "film-1292371",
@@ -9945,7 +9963,8 @@
     ],
     "chineseTitle": "火影忍者",
     "chineseDirector": "岸本齐史",
-    "studio": "Pierrot"
+    "studio": "Pierrot",
+    "posterSourceUrl": "https://mena-img-cdn-lb.aws.playco.com/474w/tvtokyo/NARUTOY1995S01E001/NARUTOY1995S01E001-474x677-PST.jpg"
   },
   {
     "id": "tv-46261",
@@ -10006,7 +10025,8 @@
     ],
     "chineseTitle": "妖精的尾巴",
     "chineseDirector": "真岛浩",
-    "studio": "A-1 Pictures / Satelight"
+    "studio": "A-1 Pictures / Satelight",
+    "posterSourceUrl": "https://media.senscritique.com/media/000006493968/0/fairy_tail.jpg"
   },
   {
     "id": "tv-30984",
@@ -10067,7 +10087,8 @@
     ],
     "chineseTitle": "死神",
     "chineseDirector": "久保带人",
-    "studio": "Pierrot"
+    "studio": "Pierrot",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/461sWAblO7ZHvnPI8UdhlgowmLW.jpg"
   },
   {
     "id": "tv-14037",
@@ -11038,5 +11059,1472 @@
     "tmdbId": 118797,
     "watchedEntries": [],
     "studio": "TINKID Animation"
+  },
+  {
+    "id": "tv-42009",
+    "title": "Black Mirror",
+    "originalTitle": "Black Mirror",
+    "chineseTitle": "黑镜",
+    "type": "series",
+    "director": "Charlie Brooker",
+    "chineseDirector": "查理·布鲁克",
+    "creditRole": "原创作者",
+    "year": 2011,
+    "span": "2011–2023",
+    "country": "GB",
+    "genre": "Drama, Sci-Fi & Fantasy",
+    "runtime": "6 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42009-s1-f0199a92c48b.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/ztdy1f1cAjwsO0GpVKzNuqZ0PMv.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/42009"
+    },
+    "tmdbId": 42009,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-42009-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "chineseTitle": "黑镜 第 1 季",
+        "partLabel": "第 1 季",
+        "year": 2011,
+        "releaseDate": "2011-12-04",
+        "runtime": "3 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42009-s1-f0199a92c48b.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ztdy1f1cAjwsO0GpVKzNuqZ0PMv.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42009/season/1"
+        }
+      },
+      {
+        "id": "tv-42009-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "chineseTitle": "黑镜 第 2 季",
+        "partLabel": "第 2 季",
+        "year": 2013,
+        "releaseDate": "2013-02-11",
+        "runtime": "4 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42009-s2-ee74d6e3c0ab.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/y71DeJiAv0dV8H8hiFnuIuyc0Gx.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42009/season/2"
+        }
+      },
+      {
+        "id": "tv-42009-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "chineseTitle": "黑镜 第 3 季",
+        "partLabel": "第 3 季",
+        "year": 2016,
+        "releaseDate": "2016-10-21",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42009-s3-ba3b32fbaa71.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/3mKYrlZpFbpFu7CaVxoleO68MFG.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42009/season/3"
+        }
+      },
+      {
+        "id": "tv-42009-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4",
+        "chineseTitle": "黑镜 第 4 季",
+        "partLabel": "第 4 季",
+        "year": 2017,
+        "releaseDate": "2017-12-29",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42009-s4-61a30cb16ada.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zvLZvFU6RhdIPEH4afbUa4rmYtW.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42009/season/4"
+        }
+      },
+      {
+        "id": "tv-42009-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5",
+        "chineseTitle": "黑镜 第 5 季",
+        "partLabel": "第 5 季",
+        "year": 2019,
+        "releaseDate": "2019-06-05",
+        "runtime": "3 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42009-s5-d4d009304194.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5xjf5aLeooPYWqH66vB80jMJT9u.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42009/season/5"
+        }
+      },
+      {
+        "id": "tv-42009-season-6",
+        "seasonNumber": 6,
+        "title": "Season 6",
+        "chineseTitle": "黑镜 第 6 季",
+        "partLabel": "第 6 季",
+        "year": 2023,
+        "releaseDate": "2023-06-15",
+        "runtime": "5 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42009-s6-2c1b778ad14e.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/kwATNh8JC1IJclnVwk8x7wZb2b4.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/42009/season/6"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-66732",
+    "title": "Stranger Things",
+    "originalTitle": "Stranger Things",
+    "chineseTitle": "怪奇物语",
+    "type": "series",
+    "director": "The Duffer Brothers",
+    "chineseDirector": "杜菲兄弟",
+    "creditRole": "原创作者",
+    "year": 2016,
+    "span": "2016–2022",
+    "country": "US",
+    "genre": "Drama, Mystery, Sci-Fi & Fantasy",
+    "runtime": "4 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-66732-s1-de11378af4a5.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/wW4p9vdo1traBlUUPomaVObX5sN.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/66732"
+    },
+    "tmdbId": 66732,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-66732-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "chineseTitle": "怪奇物语 第 1 季",
+        "partLabel": "第 1 季",
+        "year": 2016,
+        "releaseDate": "2016-07-15",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-66732-s1-de11378af4a5.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wW4p9vdo1traBlUUPomaVObX5sN.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/66732/season/1"
+        }
+      },
+      {
+        "id": "tv-66732-season-2",
+        "seasonNumber": 2,
+        "title": "Stranger Things 2",
+        "chineseTitle": "怪奇物语 第 2 季",
+        "partLabel": "第 2 季",
+        "year": 2017,
+        "releaseDate": "2017-10-27",
+        "runtime": "9 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-66732-s2-080d4a636836.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/9ZBjLYUOAHr2T8fPCgPWeRdMSt1.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/66732/season/2"
+        }
+      },
+      {
+        "id": "tv-66732-season-3",
+        "seasonNumber": 3,
+        "title": "Stranger Things 3",
+        "chineseTitle": "怪奇物语 第 3 季",
+        "partLabel": "第 3 季",
+        "year": 2019,
+        "releaseDate": "2019-07-04",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-66732-s3-95520ea17fa3.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/6yjpz9IDqRTSS0hOxj8kFrztSTD.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/66732/season/3"
+        }
+      },
+      {
+        "id": "tv-66732-season-4",
+        "seasonNumber": 4,
+        "title": "Stranger Things 4",
+        "chineseTitle": "怪奇物语 第 4 季",
+        "partLabel": "第 4 季",
+        "year": 2022,
+        "releaseDate": "2022-05-27",
+        "runtime": "9 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-66732-s4-e55bbe6a8a64.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/b2tq0D8k5acpciLuqckk1xVOWCx.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/66732/season/4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-1425",
+    "title": "House of Cards",
+    "originalTitle": "House of Cards",
+    "chineseTitle": "纸牌屋",
+    "type": "series",
+    "director": "Beau Willimon",
+    "chineseDirector": "博·威利蒙",
+    "creditRole": "原创作者",
+    "year": 2013,
+    "span": "2013–2018",
+    "country": "US",
+    "genre": "Drama",
+    "runtime": "6 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1425-s1-63465c7e05d6.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/p5rKpfx7bBL1ZIt9KPKbY7uesKm.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/1425"
+    },
+    "tmdbId": 1425,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-1425-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "chineseTitle": "纸牌屋 第 1 季",
+        "partLabel": "第 1 季",
+        "year": 2013,
+        "releaseDate": "2013-02-01",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1425-s1-63465c7e05d6.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/p5rKpfx7bBL1ZIt9KPKbY7uesKm.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1425/season/1"
+        }
+      },
+      {
+        "id": "tv-1425-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "chineseTitle": "纸牌屋 第 2 季",
+        "partLabel": "第 2 季",
+        "year": 2014,
+        "releaseDate": "2014-02-14",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1425-s2-59fe08dce560.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/rSrNRszzARLvba5Dsi8LJdagi49.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1425/season/2"
+        }
+      },
+      {
+        "id": "tv-1425-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "chineseTitle": "纸牌屋 第 3 季",
+        "partLabel": "第 3 季",
+        "year": 2015,
+        "releaseDate": "2015-02-27",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1425-s3-c0a072a21fb1.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/x3ZHBf9qaR1rNBezkG0fxfPpR2p.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1425/season/3"
+        }
+      },
+      {
+        "id": "tv-1425-season-4",
+        "seasonNumber": 4,
+        "title": "Season 4",
+        "chineseTitle": "纸牌屋 第 4 季",
+        "partLabel": "第 4 季",
+        "year": 2016,
+        "releaseDate": "2016-03-04",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1425-s4-ac3369caaf88.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/2lnLYNuWNGDjfv6NsornBb30SLD.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1425/season/4"
+        }
+      },
+      {
+        "id": "tv-1425-season-5",
+        "seasonNumber": 5,
+        "title": "Season 5",
+        "chineseTitle": "纸牌屋 第 5 季",
+        "partLabel": "第 5 季",
+        "year": 2017,
+        "releaseDate": "2017-05-30",
+        "runtime": "13 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1425-s5-c628a9590cbd.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/hESMiO6JqbtzgTbr3kPddG4vHUv.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1425/season/5"
+        }
+      },
+      {
+        "id": "tv-1425-season-6",
+        "seasonNumber": 6,
+        "title": "Season 6",
+        "chineseTitle": "纸牌屋 第 6 季",
+        "partLabel": "第 6 季",
+        "year": 2018,
+        "releaseDate": "2018-11-02",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-1425-s6-9a6db4a60aea.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/jjyMNmtUlVAYAZLKB5T2Hv7RMO6.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/1425/season/6"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-46648",
+    "title": "True Detective",
+    "originalTitle": "True Detective",
+    "chineseTitle": "真探",
+    "type": "series",
+    "director": "Nic Pizzolatto",
+    "chineseDirector": "尼克·皮佐拉托",
+    "creditRole": "原创作者",
+    "year": 2014,
+    "span": "2014–2024",
+    "country": "US",
+    "genre": "Crime, Drama, Mystery",
+    "runtime": "4 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-46648-s1-a93ffb6a36c4.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/gf5PFAwzcrRjd26zqcumqeMZV0W.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/46648"
+    },
+    "tmdbId": 46648,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-46648-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "chineseTitle": "真探 第 1 季",
+        "partLabel": "第 1 季",
+        "year": 2014,
+        "releaseDate": "2014-01-12",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-46648-s1-a93ffb6a36c4.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/gf5PFAwzcrRjd26zqcumqeMZV0W.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/46648/season/1"
+        }
+      },
+      {
+        "id": "tv-46648-season-2",
+        "seasonNumber": 2,
+        "title": "Season 2",
+        "chineseTitle": "真探 第 2 季",
+        "partLabel": "第 2 季",
+        "year": 2015,
+        "releaseDate": "2015-06-21",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-46648-s2-ea85747ba34d.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/owTL3WTY4Yax2qClnwbaDsOO72r.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/46648/season/2"
+        }
+      },
+      {
+        "id": "tv-46648-season-3",
+        "seasonNumber": 3,
+        "title": "Season 3",
+        "chineseTitle": "真探 第 3 季",
+        "partLabel": "第 3 季",
+        "year": 2019,
+        "releaseDate": "2019-01-13",
+        "runtime": "8 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-46648-s3-def4ac669167.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/qnD7ExuaBF4QdcgxlB1B1HyLxXA.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/46648/season/3"
+        }
+      },
+      {
+        "id": "tv-46648-season-4",
+        "seasonNumber": 4,
+        "title": "Night Country",
+        "chineseTitle": "真探：极地暗夜",
+        "partLabel": "第 4 季",
+        "year": 2024,
+        "releaseDate": "2024-01-14",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-46648-s4-ffb90ac629d4.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/9iJTJ4BTGGVRMzsfRszq9eEXcPD.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/46648/season/4"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-204541",
+    "title": "Three-Body",
+    "originalTitle": "三体",
+    "chineseTitle": "三体",
+    "type": "series",
+    "director": "Lei Yang",
+    "originalDirector": "杨磊",
+    "chineseDirector": "杨磊",
+    "year": 2023,
+    "country": "CN",
+    "genre": "Drama, Mystery, Sci-Fi & Fantasy",
+    "runtime": "30 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-204541-0-2d6f6254c425.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/q2sNliRi4j0ncXKUO1x0MldR20A.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/204541"
+    },
+    "tmdbId": 204541,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-61746",
+    "title": "Inside No. 9",
+    "originalTitle": "Inside No. 9",
+    "chineseTitle": "九号秘事",
+    "type": "series",
+    "director": "Reece Shearsmith, Steve Pemberton",
+    "chineseDirector": "里斯·谢尔史密斯、史蒂夫·佩姆伯顿",
+    "creditRole": "原创作者",
+    "year": 2014,
+    "span": "2014–2024",
+    "country": "GB",
+    "genre": "Comedy, Drama, Mystery",
+    "runtime": "9 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s1-89c3613bd4d9.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/yI15mU8VC9x92OuRMBfvt0vD90k.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/61746"
+    },
+    "tmdbId": 61746,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-61746-season-1",
+        "seasonNumber": 1,
+        "title": "Series 1",
+        "chineseTitle": "九号秘事 第 1 季",
+        "partLabel": "第 1 季",
+        "year": 2014,
+        "releaseDate": "2014-02-05",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s1-89c3613bd4d9.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/yI15mU8VC9x92OuRMBfvt0vD90k.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/1"
+        }
+      },
+      {
+        "id": "tv-61746-season-2",
+        "seasonNumber": 2,
+        "title": "Series 2",
+        "chineseTitle": "九号秘事 第 2 季",
+        "partLabel": "第 2 季",
+        "year": 2015,
+        "releaseDate": "2015-03-26",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s2-7a9c6e75894c.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5muYfmRlqqu7riB3lk0bSB6tN8D.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/2"
+        }
+      },
+      {
+        "id": "tv-61746-season-3",
+        "seasonNumber": 3,
+        "title": "Series 3",
+        "chineseTitle": "九号秘事 第 3 季",
+        "partLabel": "第 3 季",
+        "year": 2017,
+        "releaseDate": "2017-02-21",
+        "runtime": "5 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s3-41553bbcb6b8.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/nDNuWvdyDWnHTfaX5MmQYkVeUfZ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/3"
+        }
+      },
+      {
+        "id": "tv-61746-season-4",
+        "seasonNumber": 4,
+        "title": "Series 4",
+        "chineseTitle": "九号秘事 第 4 季",
+        "partLabel": "第 4 季",
+        "year": 2018,
+        "releaseDate": "2018-01-02",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s4-45dd97f3ddca.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/18sCu4ZMcLDzg7dlgvZYbZMSqXW.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/4"
+        }
+      },
+      {
+        "id": "tv-61746-season-5",
+        "seasonNumber": 5,
+        "title": "Series 5",
+        "chineseTitle": "九号秘事 第 5 季",
+        "partLabel": "第 5 季",
+        "year": 2020,
+        "releaseDate": "2020-02-03",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s5-530918040c3a.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fH126n7Ltvw5uc9a3IP1Yr7qDtT.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/5"
+        }
+      },
+      {
+        "id": "tv-61746-season-6",
+        "seasonNumber": 6,
+        "title": "Series 6",
+        "chineseTitle": "九号秘事 第 6 季",
+        "partLabel": "第 6 季",
+        "year": 2021,
+        "releaseDate": "2021-05-10",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s6-a0c59b9a28a9.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wqq1zTW2l9dSq8Eb9fc4yMibnkM.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/6"
+        }
+      },
+      {
+        "id": "tv-61746-season-7",
+        "seasonNumber": 7,
+        "title": "Series 7",
+        "chineseTitle": "九号秘事 第 7 季",
+        "partLabel": "第 7 季",
+        "year": 2022,
+        "releaseDate": "2022-04-20",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s7-37835c7b52a3.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/6Rs1fSZSEY5lKUGOXbcC7yJopM4.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/7"
+        }
+      },
+      {
+        "id": "tv-61746-season-8",
+        "seasonNumber": 8,
+        "title": "Series 8",
+        "chineseTitle": "九号秘事 第 8 季",
+        "partLabel": "第 8 季",
+        "year": 2023,
+        "releaseDate": "2023-04-27",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s8-86450506d762.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/tTgaHAdJ10zZajeEVTCHIaXcl5c.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/8"
+        }
+      },
+      {
+        "id": "tv-61746-season-9",
+        "seasonNumber": 9,
+        "title": "Series 9",
+        "chineseTitle": "九号秘事 第 9 季",
+        "partLabel": "第 9 季",
+        "year": 2024,
+        "releaseDate": "2024-05-08",
+        "runtime": "6 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61746-s9-8afe1bfc8629.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/a05v5odYd4bFtdxHKPH94VV9Wzb.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/61746/season/9"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-6710",
+    "title": "My Lucky Star",
+    "originalTitle": "放羊的星星",
+    "chineseTitle": "放羊的星星",
+    "type": "series",
+    "director": "Ming-Chuan Chen",
+    "originalDirector": "陳銘章",
+    "chineseDirector": "陈铭章",
+    "year": 2007,
+    "country": "TW",
+    "genre": "Comedy, Drama, Romance",
+    "runtime": "20 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-6710-0-98e6e44cc7b4.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/33Rmf3eSY3xCF4TBHxcYwmbqMXf.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/6710"
+    },
+    "tmdbId": 6710,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-78986",
+    "title": "My Huckleberry Friends",
+    "originalTitle": "你好，旧时光",
+    "chineseTitle": "你好，旧时光",
+    "type": "series",
+    "director": "Mo Sha",
+    "originalDirector": "沙漠",
+    "chineseDirector": "沙漠",
+    "year": 2017,
+    "country": "CN",
+    "genre": "Drama, Romance",
+    "runtime": "30 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-78986-0-749046b41868.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/pxTwQRcpa32fhaBALgzUxqVr2sM.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/78986"
+    },
+    "tmdbId": 78986,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-61611",
+    "title": "Pinocchio",
+    "originalTitle": "피노키오",
+    "chineseTitle": "匹诺曹",
+    "type": "series",
+    "director": "Jo Soo-won",
+    "originalDirector": "조수원",
+    "chineseDirector": "赵秀沅",
+    "year": 2014,
+    "country": "KR",
+    "genre": "Drama, Mystery, Romance",
+    "runtime": "20 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-61611-0-f1e0151f728a.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/zx9eY1xmzXAPuxF5DCey3FHVwla.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/61611"
+    },
+    "tmdbId": 61611,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-39434",
+    "title": "Anohana: The Flower We Saw That Day",
+    "originalTitle": "あの日見た花の名前を僕達はまだ知らない。",
+    "chineseTitle": "未闻花名",
+    "type": "series",
+    "director": "Tatsuyuki Nagai",
+    "originalDirector": "長井龍雪",
+    "chineseDirector": "长井龙雪",
+    "year": 2011,
+    "country": "JP",
+    "genre": "Animation, Drama, Mystery",
+    "studio": "A-1 Pictures",
+    "runtime": "11 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-39434-0-695ccc52f96c.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/cqjqnvgvBuViLvkrphSoG7pXUFH.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/39434"
+    },
+    "tmdbId": 39434,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-63145",
+    "title": "Charlotte",
+    "originalTitle": "Charlotte",
+    "chineseTitle": "夏洛特",
+    "type": "series",
+    "director": "Yoshiyuki Asai",
+    "originalDirector": "浅井義之",
+    "chineseDirector": "浅井义之",
+    "year": 2015,
+    "country": "JP",
+    "genre": "Animation, Comedy, Drama, Sci-Fi & Fantasy",
+    "studio": "P.A. Works",
+    "runtime": "13 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-63145-0-018ae969cfb1.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/dC61yNbMvQb4kDpuJLagNmWENQr.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/63145"
+    },
+    "tmdbId": 63145,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-60827",
+    "title": "One Week Friends",
+    "originalTitle": "一週間フレンズ。",
+    "chineseTitle": "一周的朋友",
+    "type": "series",
+    "director": "Taro Iwasaki",
+    "originalDirector": "岩崎太郎",
+    "chineseDirector": "岩崎太郎",
+    "year": 2014,
+    "country": "JP",
+    "genre": "Animation, Comedy, Drama",
+    "studio": "Brain's Base",
+    "runtime": "12 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60827-0-d1939dd3cd53.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/q9foALEsva3zOVa1ranDLQxrh3r.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/60827"
+    },
+    "tmdbId": 60827,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-42916",
+    "title": "Toradora!",
+    "originalTitle": "とらドラ!",
+    "chineseTitle": "龙与虎",
+    "type": "series",
+    "director": "Tatsuyuki Nagai",
+    "originalDirector": "長井龍雪",
+    "chineseDirector": "长井龙雪",
+    "year": 2008,
+    "country": "JP",
+    "genre": "Animation, Comedy, Drama",
+    "studio": "J.C. Staff",
+    "runtime": "25 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-42916-0-dd009980b819.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/iDzyuzi8vPToAghsDmm8xVSmgyl.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/42916"
+    },
+    "tmdbId": 42916,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-67126",
+    "title": "Himouto! Umaru-chan",
+    "originalTitle": "干物妹！うまるちゃん",
+    "chineseTitle": "干物妹！小埋",
+    "type": "series",
+    "director": "Masahiko Ohta",
+    "originalDirector": "太田雅彦",
+    "chineseDirector": "太田雅彦",
+    "year": 2015,
+    "span": "2015–2017",
+    "country": "JP",
+    "genre": "Animation, Comedy",
+    "studio": "Doga Kobo",
+    "runtime": "2 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-67126-s1-6bb1feb931c7.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/wQvdBhiPBwGj89PZwB2qmHE8zF9.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/67126"
+    },
+    "tmdbId": 67126,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-67126-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "干物妹！うまるちゃん",
+        "chineseTitle": "干物妹！小埋",
+        "partLabel": "第 1 季",
+        "year": 2015,
+        "releaseDate": "2015-07-09",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-67126-s1-6bb1feb931c7.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wQvdBhiPBwGj89PZwB2qmHE8zF9.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/67126/season/1"
+        }
+      },
+      {
+        "id": "tv-67126-season-2",
+        "seasonNumber": 2,
+        "title": "Himouto! Umaru-chan R",
+        "originalTitle": "干物妹！うまるちゃんR",
+        "chineseTitle": "干物妹！小埋R",
+        "partLabel": "第 2 季",
+        "year": 2017,
+        "releaseDate": "2017-10-08",
+        "runtime": "12 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-67126-s2-c38996836ef1.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/aR39XZRyJrQzCfBIM64hyDvPCED.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/67126/season/2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-65648",
+    "title": "Maid Sama!",
+    "originalTitle": "会長はメイド様!",
+    "chineseTitle": "会长是女仆大人！",
+    "type": "series",
+    "director": "Hiroaki Sakurai",
+    "originalDirector": "桜井弘明",
+    "chineseDirector": "樱井弘明",
+    "year": 2010,
+    "country": "JP",
+    "genre": "Animation, Comedy, Romance",
+    "studio": "J.C. Staff",
+    "runtime": "26 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65648-0-41d58d8824ba.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/igkn0M1bgMeATz59LShvVxZNdVd.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/65648"
+    },
+    "tmdbId": 65648,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-36243",
+    "title": "The Tatami Galaxy",
+    "originalTitle": "四畳半神話大系",
+    "chineseTitle": "四叠半神话大系",
+    "type": "series",
+    "director": "Masaaki Yuasa",
+    "originalDirector": "湯浅政明",
+    "chineseDirector": "汤浅政明",
+    "year": 2010,
+    "country": "JP",
+    "genre": "Animation, Comedy, Drama, Mystery",
+    "studio": "Madhouse",
+    "runtime": "11 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-36243-0-8e87feb1d621.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/lPvrDKvfwjqCp6fp6aCpLkpxyi6.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/36243"
+    },
+    "tmdbId": 36243,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-65944",
+    "title": "Haven't You Heard? I'm Sakamoto",
+    "originalTitle": "坂本ですが?",
+    "chineseTitle": "在下坂本，有何贵干？",
+    "type": "series",
+    "director": "Shinji Takamatsu",
+    "originalDirector": "高松信司",
+    "chineseDirector": "高松信司",
+    "year": 2016,
+    "country": "JP",
+    "genre": "Animation, Comedy",
+    "studio": "Studio Deen",
+    "runtime": "12 Episodes",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-65944-0-30fe8f329cd0.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/6WX3jJrrZleQ00FU84gVELoxwbF.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/65944"
+    },
+    "tmdbId": 65944,
+    "watchedEntries": []
+  },
+  {
+    "id": "tv-60572",
+    "title": "Pokémon",
+    "originalTitle": "ポケットモンスター",
+    "chineseTitle": "神奇宝贝",
+    "type": "series",
+    "director": "Kunihiko Yuyama",
+    "originalDirector": "湯山邦彦",
+    "chineseDirector": "汤山邦彦",
+    "year": 1997,
+    "span": "1997–2023",
+    "country": "JP",
+    "genre": "Action & Adventure, Animation, Sci-Fi & Fantasy",
+    "studio": "OLM",
+    "runtime": "25 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s1-cb5331fb2297.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/fBn957GLvYHnvSXwN7UW6oDrvRq.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/60572"
+    },
+    "tmdbId": 60572,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-60572-season-1",
+        "seasonNumber": 1,
+        "title": "Indigo League",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：石英联盟",
+        "partLabel": "第 1 季",
+        "year": 1997,
+        "releaseDate": "1997-04-01",
+        "runtime": "82 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s1-cb5331fb2297.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/fBn957GLvYHnvSXwN7UW6oDrvRq.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/1"
+        }
+      },
+      {
+        "id": "tv-60572-season-2",
+        "seasonNumber": 2,
+        "title": "Adventures in the Orange Islands",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：橘子联盟",
+        "partLabel": "第 2 季",
+        "year": 1999,
+        "releaseDate": "1999-01-28",
+        "runtime": "36 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s2-e837b7a40f22.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/evvGDN8QQkHEFDItfHyKakx41Uw.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/2"
+        }
+      },
+      {
+        "id": "tv-60572-season-3",
+        "seasonNumber": 3,
+        "title": "The Johto Journeys",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：城都联盟 (上)",
+        "partLabel": "第 3 季",
+        "year": 1999,
+        "releaseDate": "1999-10-14",
+        "runtime": "41 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s3-587ac9a769c4.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/q5SITwWnAclZUqWntAb6vCguYGw.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/3"
+        }
+      },
+      {
+        "id": "tv-60572-season-4",
+        "seasonNumber": 4,
+        "title": "Johto League Champions",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：城都联盟 (中)",
+        "partLabel": "第 4 季",
+        "year": 2000,
+        "releaseDate": "2000-08-03",
+        "runtime": "52 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s4-3c836a0e07fe.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/8gK8sesvgLbDWVdYA4nDHhjE9Rf.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/4"
+        }
+      },
+      {
+        "id": "tv-60572-season-5",
+        "seasonNumber": 5,
+        "title": "Master Quest",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：城都联盟 (下)",
+        "partLabel": "第 5 季",
+        "year": 2001,
+        "releaseDate": "2001-08-09",
+        "runtime": "65 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s5-f174d0894d93.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/4wSl5c3XegGMsvCJR8BWPyHmJIo.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/5"
+        }
+      },
+      {
+        "id": "tv-60572-season-6",
+        "seasonNumber": 6,
+        "title": "Advanced",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：超世代 (丰缘篇 上)",
+        "partLabel": "第 6 季",
+        "year": 2002,
+        "releaseDate": "2002-11-21",
+        "runtime": "40 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s6-51f710cdf887.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/7v30FvXvhbiNSYSzWk0vbqetnpa.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/6"
+        }
+      },
+      {
+        "id": "tv-60572-season-7",
+        "seasonNumber": 7,
+        "title": "Advanced Challenge",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：超世代 (丰缘篇 中)",
+        "partLabel": "第 7 季",
+        "year": 2003,
+        "releaseDate": "2003-09-04",
+        "runtime": "52 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s7-611ae5b7bcce.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ldLIE6VVtVkF8JMgyddGz2esjlR.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/7"
+        }
+      },
+      {
+        "id": "tv-60572-season-8",
+        "seasonNumber": 8,
+        "title": "Advanced Battle",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：超世代 (丰缘篇 下)",
+        "partLabel": "第 8 季",
+        "year": 2004,
+        "releaseDate": "2004-09-09",
+        "runtime": "53 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s8-b4cc5bc31de9.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/sSFqgzbqXcAIddLuAeUnIj3hMN8.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/8"
+        }
+      },
+      {
+        "id": "tv-60572-season-9",
+        "seasonNumber": 9,
+        "title": "Battle Frontier",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：超世代 (对战开拓区)",
+        "partLabel": "第 9 季",
+        "year": 2005,
+        "releaseDate": "2005-10-06",
+        "runtime": "46 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s9-cd9195d6b7a6.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/aVWveHEMYsSxPlmz6ePby5PZzff.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/9"
+        }
+      },
+      {
+        "id": "tv-60572-season-10",
+        "seasonNumber": 10,
+        "title": "Diamond and Pearl",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：钻石与珍珠 (第 1 篇)",
+        "partLabel": "第 10 季",
+        "year": 2006,
+        "releaseDate": "2006-09-28",
+        "runtime": "52 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s10-31ae1e4bab65.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5X1Uuei4idDVAsQ0CMJMLYGE2GZ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/10"
+        }
+      },
+      {
+        "id": "tv-60572-season-11",
+        "seasonNumber": 11,
+        "title": "Diamond and Pearl: Battle Dimension",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：钻石与珍珠 (第 2 篇)",
+        "partLabel": "第 11 季",
+        "year": 2007,
+        "releaseDate": "2007-11-08",
+        "runtime": "52 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s10-31ae1e4bab65.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5X1Uuei4idDVAsQ0CMJMLYGE2GZ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/11"
+        }
+      },
+      {
+        "id": "tv-60572-season-12",
+        "seasonNumber": 12,
+        "title": "Diamond and Pearl: Galactic Battles",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：钻石与珍珠 (第 3 篇)",
+        "partLabel": "第 12 季",
+        "year": 2008,
+        "releaseDate": "2008-12-04",
+        "runtime": "53 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s10-31ae1e4bab65.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5X1Uuei4idDVAsQ0CMJMLYGE2GZ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/12"
+        }
+      },
+      {
+        "id": "tv-60572-season-13",
+        "seasonNumber": 13,
+        "title": "Diamond and Pearl: Sinnoh League Victors",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：钻石与珍珠 (神奥联盟决战)",
+        "partLabel": "第 13 季",
+        "year": 2010,
+        "releaseDate": "2010-01-07",
+        "runtime": "34 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s10-31ae1e4bab65.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/5X1Uuei4idDVAsQ0CMJMLYGE2GZ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/13"
+        }
+      },
+      {
+        "id": "tv-60572-season-14",
+        "seasonNumber": 14,
+        "title": "Black & White",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：超级愿望 (合众篇 上)",
+        "partLabel": "第 14 季",
+        "year": 2010,
+        "releaseDate": "2010-09-23",
+        "runtime": "48 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s14-15408ef89e3e.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/flIL8YDsfbUQm7EWFvQ8tqYvksJ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/14"
+        }
+      },
+      {
+        "id": "tv-60572-season-15",
+        "seasonNumber": 15,
+        "title": "Black & White: Rival Destinies",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：超级愿望 (合众篇 中)",
+        "partLabel": "第 15 季",
+        "year": 2011,
+        "releaseDate": "2011-09-22",
+        "runtime": "49 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s14-15408ef89e3e.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/flIL8YDsfbUQm7EWFvQ8tqYvksJ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/15"
+        }
+      },
+      {
+        "id": "tv-60572-season-16",
+        "seasonNumber": 16,
+        "title": "Black & White: Adventures in Unova",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：超级愿望 (合众篇 下)",
+        "partLabel": "第 16 季",
+        "year": 2012,
+        "releaseDate": "2012-10-11",
+        "runtime": "45 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s14-15408ef89e3e.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/flIL8YDsfbUQm7EWFvQ8tqYvksJ.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/16"
+        }
+      },
+      {
+        "id": "tv-60572-season-17",
+        "seasonNumber": 17,
+        "title": "XY",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：XY (卡洛斯篇 上)",
+        "partLabel": "第 17 季",
+        "year": 2013,
+        "releaseDate": "2013-10-17",
+        "runtime": "48 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s17-ee7f4c5d239a.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/onboLLufdBqcSIpDP2z39SjXAUF.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/17"
+        }
+      },
+      {
+        "id": "tv-60572-season-18",
+        "seasonNumber": 18,
+        "title": "XY: Kalos Quest",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：XY (卡洛斯篇 中)",
+        "partLabel": "第 18 季",
+        "year": 2014,
+        "releaseDate": "2014-11-13",
+        "runtime": "45 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s18-7e33b4026ee2.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/lz0sFTMY8AmUY8blKmipNQ7yhJR.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/18"
+        }
+      },
+      {
+        "id": "tv-60572-season-19",
+        "seasonNumber": 19,
+        "title": "XYZ",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：XY&Z (卡洛斯篇 下)",
+        "partLabel": "第 19 季",
+        "year": 2015,
+        "releaseDate": "2015-10-29",
+        "runtime": "49 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s19-a125995f74f6.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/9MyizGcp89eMrVMLirSmw8YnjD7.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/19"
+        }
+      },
+      {
+        "id": "tv-60572-season-20",
+        "seasonNumber": 20,
+        "title": "Sun & Moon",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：太阳与月亮 (阿罗拉篇 上)",
+        "partLabel": "第 20 季",
+        "year": 2016,
+        "releaseDate": "2016-11-17",
+        "runtime": "43 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s20-547113c9edd4.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/anleSS2OH5Q0GacLQlHg1lFor4W.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/20"
+        }
+      },
+      {
+        "id": "tv-60572-season-21",
+        "seasonNumber": 21,
+        "title": "Sun & Moon: Ultra Adventures",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：太阳与月亮 (阿罗拉篇 中)",
+        "partLabel": "第 21 季",
+        "year": 2017,
+        "releaseDate": "2017-10-05",
+        "runtime": "49 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s21-2e2c431b7f24.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/aviZZx7fJw4JrjznOrr0IXfYhxC.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/21"
+        }
+      },
+      {
+        "id": "tv-60572-season-22",
+        "seasonNumber": 22,
+        "title": "Sun & Moon: Ultra Legends",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：太阳与月亮 (阿罗拉篇 下)",
+        "partLabel": "第 22 季",
+        "year": 2018,
+        "releaseDate": "2018-10-21",
+        "runtime": "54 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s22-a5d0eeea60c0.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/ON5JWu7bJ0Tuxz8DOwyy0v9poE.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/22"
+        }
+      },
+      {
+        "id": "tv-60572-season-23",
+        "seasonNumber": 23,
+        "title": "Journeys",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：旅途 (第 1 篇)",
+        "partLabel": "第 23 季",
+        "year": 2019,
+        "releaseDate": "2019-11-17",
+        "runtime": "48 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s23-801487d8efa4.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/zgsaiFQpZHEw0jnNkp7UNzjDg1o.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/23"
+        }
+      },
+      {
+        "id": "tv-60572-season-24",
+        "seasonNumber": 24,
+        "title": "Master Journeys",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：旅途 (第 2 篇)",
+        "partLabel": "第 24 季",
+        "year": 2020,
+        "releaseDate": "2020-12-04",
+        "runtime": "42 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s24-60234779f3b4.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/8eyex7nLe36XdZ7PnJenezaOsf1.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/24"
+        }
+      },
+      {
+        "id": "tv-60572-season-25",
+        "seasonNumber": 25,
+        "title": "Ultimate Journeys",
+        "originalTitle": "ポケットモンスター",
+        "chineseTitle": "宝可梦：旅途 (最终篇)",
+        "partLabel": "第 25 季",
+        "year": 2021,
+        "releaseDate": "2021-12-17",
+        "runtime": "57 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-60572-s24-60234779f3b4.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/8eyex7nLe36XdZ7PnJenezaOsf1.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/60572/season/25"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tv-102788",
+    "title": "Fog Hill of Five Elements",
+    "originalTitle": "雾山五行",
+    "chineseTitle": "雾山五行",
+    "type": "series",
+    "director": "Lin Hun",
+    "originalDirector": "林魂",
+    "chineseDirector": "林魂",
+    "year": 2020,
+    "span": "2020–2023",
+    "country": "CN",
+    "genre": "Action & Adventure, Animation, Fantasy",
+    "studio": "Samsara Animation",
+    "runtime": "2 Seasons",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-102788-s1-db9b93d75083.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/wacoMLOOlm1mGqt4lvFsAfFeCRK.jpg",
+    "externalLink": {
+      "platform": "TMDb",
+      "url": "https://www.themoviedb.org/tv/102788"
+    },
+    "tmdbId": 102788,
+    "watchedEntries": [],
+    "seasons": [
+      {
+        "id": "tv-102788-season-1",
+        "seasonNumber": 1,
+        "title": "Season 1",
+        "originalTitle": "雾山五行",
+        "chineseTitle": "雾山五行 第 1 季",
+        "partLabel": "第 1 季",
+        "year": 2020,
+        "releaseDate": "2020-07-26",
+        "runtime": "3 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-102788-s1-db9b93d75083.webp",
+        "posterSourceUrl": "https://image.tmdb.org/t/p/original/wacoMLOOlm1mGqt4lvFsAfFeCRK.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "TMDb",
+          "url": "https://www.themoviedb.org/tv/102788/season/1"
+        }
+      },
+      {
+        "id": "tv-102788-season-2",
+        "seasonNumber": 2,
+        "title": "Xichuan Fantasy Purple Forest",
+        "originalTitle": "雾山五行·犀川幻紫林",
+        "chineseTitle": "雾山五行·犀川幻紫林",
+        "partLabel": "第 2 季",
+        "year": 2023,
+        "releaseDate": "2023-07-26",
+        "runtime": "4 Episodes",
+        "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-102788-s2-1ee0cadb6f65.webp",
+        "posterSourceUrl": "https://img1.doubanio.com/view/photo/l/public/p2893658260.jpg",
+        "watchedEntries": [],
+        "externalLink": {
+          "platform": "Douban",
+          "url": "https://movie.douban.com/subject/35178776/"
+        }
+      }
+    ]
   }
 ]

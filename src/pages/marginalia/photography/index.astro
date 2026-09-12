@@ -162,11 +162,11 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     #photo-mobile-thumbnails::-webkit-scrollbar { display: none; }
     #photo-mobile-thumbnails button {
       flex: 0 0 auto;
-      height: 60px;
-      padding: 0;
+      height: 64px;
+      padding: 3px;
       border: none;
-      background: transparent;
-      border-radius: 0;
+      background: #ffffff;
+      border-radius: 2px;
       opacity: 0.45;
       scroll-snap-align: center;
       scroll-snap-stop: normal;
@@ -175,7 +175,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       justify-content: center;
       box-sizing: border-box;
       outline: none;
-      transition: opacity 0.2s;
+      transition: opacity 0.2s, box-shadow 0.2s;
       position: relative;
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
@@ -183,24 +183,20 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     #photo-mobile-thumbnails button::before {
       content: '';
       position: absolute;
-      inset: -10px -5px;
+      inset: -10px -6px;
     }
     #photo-mobile-thumbnails button[aria-pressed="true"] {
       opacity: 1;
+      box-shadow: 0 0 0 1.5px #222;
     }
     #photo-mobile-thumbnails img {
       width: auto;
-      height: 60px;
+      height: 100%;
       max-width: none;
       object-fit: contain;
       pointer-events: none;
       display: block;
       border-radius: 1px;
-      box-sizing: border-box;
-      transition: box-shadow 0.2s;
-    }
-    #photo-mobile-thumbnails button[aria-pressed="true"] img {
-      box-shadow: 0 0 0 1.5px #111;
     }
     #bottom-meta-footer { padding: 0 2px; height: auto; flex-direction: column; align-items: stretch; gap: 12px; overflow: visible; }
     #bottom-meta-footer > div:first-child > div { flex-direction: column; gap: 5px; white-space: normal; overflow: visible; }
