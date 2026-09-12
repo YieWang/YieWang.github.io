@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
+import { rmSync } from 'node:fs';
 import { localEditor } from './scripts/editor/server.mjs';
 
 const editing = process.env.HOMEPAGE_EDITOR === '1';
@@ -14,6 +15,12 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     react(),
+    {
+      name: 'exclude-local-editor-uploads',
+      hooks: {
+        'astro:build:done': ({ dir }) => rmSync(new URL('local-uploads/', dir), { recursive: true, force: true }),
+      },
+    },
   ],
   vite: {
     ...(editing ? { cacheDir: 'node_modules/.vite-editor' } : {}),
