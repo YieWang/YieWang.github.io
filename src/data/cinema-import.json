@@ -1106,7 +1106,7 @@
       {
         "id": "tv-31724-season-2",
         "seasonNumber": 2,
-        "title": "Season 2",
+        "title": "Season 2 · R2",
         "originalTitle": "コードギアス 反逆のルルーシュ",
         "year": 2008,
         "releaseDate": "2008-04-06",
@@ -10664,7 +10664,7 @@
       {
         "id": "tv-83121-season-3",
         "seasonNumber": 3,
-        "title": "Season 3",
+        "title": "Season 3 · Ultra Romantic",
         "originalTitle": "かぐや様は告らせたい～天才たちの恋愛頭脳戦～",
         "chineseTitle": "辉夜大小姐想让我告白",
         "partLabel": "第 3 季",
@@ -10994,7 +10994,7 @@
       {
         "id": "tv-65676-season-2",
         "seasonNumber": 2,
-        "title": "Season 2",
+        "title": "Season 2 · TOO!",
         "originalTitle": "やはり俺の青春ラブコメはまちがっている。",
         "chineseTitle": "我的青春恋爱物语果然有问题",
         "partLabel": "第 2 季",
@@ -11016,7 +11016,7 @@
       {
         "id": "tv-65676-season-3",
         "seasonNumber": 3,
-        "title": "Season 3",
+        "title": "Season 3 · Climax",
         "originalTitle": "やはり俺の青春ラブコメはまちがっている。",
         "chineseTitle": "我的青春恋爱物语果然有问题",
         "partLabel": "第 3 季",
@@ -11713,8 +11713,8 @@
     "country": "TW",
     "genre": "Comedy, Drama, Romance",
     "runtime": "20 Episodes",
-    "posterUrl": "https://homepage-assets.mathtranslations.org/images/cinema/tv-6710-0-76b950cfb8cd.webp",
-    "posterSourceUrl": "https://img1.doubanio.com/view/photo/raw/public/p2680796448.webp",
+    "posterUrl": "https://homepage-assets.mathtranslations.org/images/local-editor/fc5e94f111d76709a79d91fe41a80510ebd32f4213c6b5dea310f4640cea2e5f.webp",
+    "posterSourceUrl": "https://image.tmdb.org/t/p/original/33Rmf3eSY3xCF4TBHxcYwmbqMXf.jpg",
     "externalLink": {
       "platform": "TMDb",
       "url": "https://www.themoviedb.org/tv/6710"
