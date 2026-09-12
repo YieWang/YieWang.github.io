@@ -21,6 +21,12 @@
 @tailwind utilities;
 
 @layer base {
+  *, *::before, *::after {
+    -webkit-tap-highlight-color: transparent;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
   html {
     scrollbar-gutter: stable;
     overflow-y: scroll;

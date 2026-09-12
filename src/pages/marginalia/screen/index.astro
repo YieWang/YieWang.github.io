@@ -40,7 +40,7 @@ const categories = [
             <article
               role="button"
               tabindex="0"
-              class="cinema-card group cursor-pointer flex flex-col justify-between select-none"
+              class="cinema-card group cursor-pointer flex flex-col justify-between select-none outline-none focus:outline-none focus-visible:outline-none"
               data-item-id={film.id}
               data-type={film.type}
               data-collection={film.installments ? 'true' : undefined}
@@ -111,7 +111,8 @@ const categories = [
   >
     <div
       id="cinema-modal-container"
-      class="bg-white max-w-xl sm:max-w-3xl w-full h-[580px] sm:h-[620px] max-h-[88vh] rounded-[3px] shadow-2xl p-5 sm:p-7 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      tabindex="-1"
+      class="bg-white max-w-xl sm:max-w-3xl w-full h-[580px] sm:h-[620px] max-h-[88vh] rounded-[3px] shadow-2xl p-5 sm:p-7 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden outline-none"
       style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
     >
       <!-- Modal Dynamic Body Content injected by JS -->
@@ -235,7 +236,7 @@ const categories = [
               href="${escapeHtml(item.externalLink.url)}"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex max-w-full items-center justify-center text-[0.66rem] sm:text-[0.70rem] font-medium text-[#777777] hover:text-black tracking-[0.14rem] uppercase transition-colors whitespace-normal sm:whitespace-nowrap"
+              class="inline-flex max-w-full items-center justify-center text-[0.66rem] sm:text-[0.70rem] font-medium text-[#777777] hover:text-black tracking-[0.14rem] uppercase transition-colors whitespace-normal sm:whitespace-nowrap outline-none focus:outline-none focus-visible:outline-none"
             >
               <span>VIEW ON ${escapeHtml(item.externalLink.platform)}</span>
               <span class="ml-1" aria-hidden="true">↗</span>
@@ -412,6 +413,7 @@ const categories = [
 
     // Preserve list position when switching parts; new detail views start at the top.
     if (!modalBackdrop.open) modalBackdrop.showModal();
+    modalContainer.focus({ preventScroll: true });
     const scrollPane = getScrollPane();
     if (scrollPane) scrollPane.scrollTop = listScrollTop;
 

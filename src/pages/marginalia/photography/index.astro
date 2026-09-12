@@ -145,11 +145,48 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     #right-showcase-stage { width: 100%; height: auto; flex: none; padding: 0; overflow: visible; gap: 18px; }
     #photo-canvas { flex: none; aspect-ratio: var(--photo-aspect); max-height: 65svh; padding: 0; touch-action: pan-y pinch-zoom; }
     .stage-layer-img { inset: 0; margin: auto; }
-    #photo-mobile-thumbnails { display: flex; align-items: center; gap: 10px; overflow-x: auto; padding: 5px 2px; scroll-snap-type: x proximity; scrollbar-width: none; }
+    #photo-mobile-thumbnails {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 6px calc(50% - 32px);
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+    }
     #photo-mobile-thumbnails::-webkit-scrollbar { display: none; }
-    #photo-mobile-thumbnails button { flex: 0 0 auto; height: 64px; min-width: 44px; padding: 3px; border-radius: 2px; opacity: 0.5; scroll-snap-align: center; transition: opacity 0.2s; }
-    #photo-mobile-thumbnails button[aria-pressed="true"] { opacity: 1; box-shadow: 0 0 0 1px #555; }
-    #photo-mobile-thumbnails img { width: auto; height: 100%; max-width: none; object-fit: contain; }
+    #photo-mobile-thumbnails button {
+      flex: 0 0 auto;
+      height: 64px;
+      min-width: 44px;
+      padding: 3px;
+      border-radius: 2px;
+      opacity: 0.45;
+      scroll-snap-align: center;
+      scroll-snap-stop: normal;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      outline: none;
+      transition: opacity 0.2s, box-shadow 0.2s;
+    }
+    #photo-mobile-thumbnails button[aria-pressed="true"] {
+      opacity: 1;
+      box-shadow: 0 0 0 1.5px #222;
+    }
+    #photo-mobile-thumbnails img {
+      width: auto;
+      height: 100%;
+      max-width: none;
+      object-fit: contain;
+      pointer-events: none;
+    }
     #bottom-meta-footer { padding: 0 2px; height: auto; flex-direction: column; align-items: stretch; gap: 12px; overflow: visible; }
     #bottom-meta-footer > div:first-child > div { flex-direction: column; gap: 5px; white-space: normal; overflow: visible; }
     #meta-title { font-size: 17px; line-height: 1.4; overflow-wrap: anywhere; }
@@ -268,7 +305,29 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       }
     }
 
-    function activatePhotoByIndex(index: number, options: { fromWheel?: boolean } = {}) {
+    let isProgrammaticScroll = false;
+    let programmaticScrollTimer: ReturnType<typeof setTimeout> | null = null;
+    let scrollCommitTimer: ReturnType<typeof setTimeout> | null = null;
+
+    function getCenteredThumbnailIndex(): number {
+      if (!thumbnails) return activeIndex;
+      const containerCenter = thumbnails.scrollLeft + thumbnails.clientWidth / 2;
+      const buttons = thumbnails.querySelectorAll<HTMLButtonElement>('button[data-photo-index]');
+      let closestIdx = activeIndex;
+      let minDistance = Infinity;
+
+      buttons.forEach(btn => {
+        const btnCenter = btn.offsetLeft + btn.offsetWidth / 2;
+        const distance = Math.abs(btnCenter - containerCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIdx = Number(btn.dataset.photoIndex);
+        }
+      });
+      return closestIdx;
+    }
+
+    function activatePhotoByIndex(index: number, options: { fromWheel?: boolean; fromScroll?: boolean } = {}) {
       if (index < 0 || index >= allPhotos.length) return;
       const photo = allPhotos[index];
       if (!photo) return;
@@ -279,8 +338,17 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       thumbnails?.querySelectorAll('button').forEach(button => {
         const selected = Number(button.dataset.photoIndex) === index;
         button.setAttribute('aria-pressed', String(selected));
-        if (selected && mobileLayout.matches) {
-          thumbnails.scrollTo({ left: button.offsetLeft - thumbnails.offsetLeft - (thumbnails.clientWidth - button.offsetWidth) / 2, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+        if (selected && mobileLayout.matches && !options.fromScroll) {
+          isProgrammaticScroll = true;
+          if (programmaticScrollTimer) clearTimeout(programmaticScrollTimer);
+          const targetLeft = button.offsetLeft - (thumbnails.clientWidth - button.offsetWidth) / 2;
+          thumbnails.scrollTo({
+            left: targetLeft,
+            behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+          });
+          programmaticScrollTimer = setTimeout(() => {
+            isProgrammaticScroll = false;
+          }, 350);
         }
       });
 
@@ -333,6 +401,30 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
       const button = (event.target as Element).closest<HTMLButtonElement>('button[data-photo-index]');
       if (button) activatePhotoByIndex(Number(button.dataset.photoIndex));
     });
+
+    const onThumbnailsScroll = () => {
+      if (!mobileLayout.matches || isProgrammaticScroll) return;
+
+      if (scrollCommitTimer) clearTimeout(scrollCommitTimer);
+      scrollCommitTimer = setTimeout(() => {
+        if (isProgrammaticScroll) return;
+        const closestIdx = getCenteredThumbnailIndex();
+        if (closestIdx !== activeIndex) {
+          activatePhotoByIndex(closestIdx, { fromScroll: true });
+        }
+      }, 70);
+    };
+
+    thumbnails?.addEventListener('scroll', onThumbnailsScroll, { passive: true });
+    thumbnails?.addEventListener('scrollend', () => {
+      if (!mobileLayout.matches || isProgrammaticScroll) return;
+      if (scrollCommitTimer) clearTimeout(scrollCommitTimer);
+      const closestIdx = getCenteredThumbnailIndex();
+      if (closestIdx !== activeIndex) {
+        activatePhotoByIndex(closestIdx, { fromScroll: true });
+      }
+    });
+
     yearSelect?.addEventListener('change', () => {
       activatePhotoByIndex(allPhotos.findIndex(photo => photo.year === Number(yearSelect.value)));
     });

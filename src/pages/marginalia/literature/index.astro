@@ -42,7 +42,7 @@ const bookCards = literatureBookCards;
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-10 sm:gap-y-14">
         {bookCards.map((book) => (
           <article
-            class="book-card group cursor-pointer flex flex-col justify-between select-none"
+            class="book-card group cursor-pointer flex flex-col justify-between select-none outline-none focus:outline-none focus-visible:outline-none"
             data-book-json={JSON.stringify(book)}
             data-book-id={book.id}
             data-collection={book.installments ? 'true' : undefined}
@@ -144,7 +144,8 @@ const bookCards = literatureBookCards;
   >
     <div
       id="book-modal-container"
-      class="bg-white max-w-xl sm:max-w-3xl w-full h-[460px] sm:h-[490px] max-h-[86vh] rounded-[3px] shadow-2xl p-5 sm:p-6 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      tabindex="-1"
+      class="bg-white max-w-xl sm:max-w-3xl w-full h-[460px] sm:h-[490px] max-h-[86vh] rounded-[3px] shadow-2xl p-5 sm:p-6 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden outline-none"
       style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
     >
       <div id="book-modal-slot" class="w-full h-full flex flex-col min-h-0"></div>
@@ -160,7 +161,8 @@ const bookCards = literatureBookCards;
   >
     <div
       id="essay-modal-container"
-      class="bg-white max-w-xl sm:max-w-2xl w-full h-[580px] sm:h-[620px] max-h-[88vh] rounded-[3px] shadow-2xl p-6 sm:p-8 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      tabindex="-1"
+      class="bg-white max-w-xl sm:max-w-2xl w-full h-[580px] sm:h-[620px] max-h-[88vh] rounded-[3px] shadow-2xl p-6 sm:p-8 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden outline-none"
       style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
     >
       <div id="essay-modal-slot" class="w-full h-full flex flex-col min-h-0"></div>
@@ -346,15 +348,11 @@ const bookCards = literatureBookCards;
           >
             ${selection.installments ? `
               <div class="space-y-2" aria-label="Books in this collection">
-                ${selection.installments.map((part, index) => {
-                  const partTitle = part.englishTitle || part.title;
-                  const partNative = part.title !== partTitle ? part.title : '';
-                  return `
+                ${selection.installments.map((part, index) => `
                   <button type="button" data-installment="${index}" aria-pressed="${index === installmentIndex}"
                     class="block w-full text-left border-b border-[#F0F0F0] pb-2 cursor-pointer text-[#777777] hover:text-black aria-pressed:text-black aria-pressed:font-semibold focus-visible:outline focus-visible:outline-1">
-                    <span class="block text-[0.84rem]">${escapeHtml(partTitle)}${partNative ? `<span class="text-[0.78rem] font-normal text-[#888888] font-sans ml-1.5">${escapeHtml(partNative)}</span>` : ''}</span>
-                  </button>`;
-                }).join('')}
+                    <span class="block text-[0.84rem]">${escapeHtml(part.title)}</span>
+                  </button>`).join('')}
               </div>` : ''}
             ${
               hasReview && review
@@ -432,6 +430,7 @@ const bookCards = literatureBookCards;
     });
 
     if (!bookModalBackdrop.open) bookModalBackdrop.showModal();
+    bookModalContainer.focus({ preventScroll: true });
     isBookModalOpen = true;
 
     bookModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
@@ -509,6 +508,7 @@ const bookCards = literatureBookCards;
     `;
 
     if (!essayModalBackdrop.open) essayModalBackdrop.showModal();
+    essayModalContainer.focus({ preventScroll: true });
     isEssayModalOpen = true;
 
     essayModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
@@ -523,6 +523,7 @@ const bookCards = literatureBookCards;
   function closeEssayModal() {
     if (!essayModalBackdrop || !essayModalContainer || !isEssayModalOpen) return;
     isEssayModalOpen = false;
+    (document.activeElement as HTMLElement)?.blur();
 
     essayModalBackdrop.classList.remove('opacity-100');
     essayModalBackdrop.classList.add('opacity-0');
@@ -535,6 +536,7 @@ const bookCards = literatureBookCards;
       essayModalBackdrop.classList.remove('pointer-events-auto');
       essayModalBackdrop.classList.add('pointer-events-none');
       essayModalBackdrop.close();
+      (document.activeElement as HTMLElement)?.blur();
       if (essayModalSlot) essayModalSlot.innerHTML = '';
     }, 250);
   }

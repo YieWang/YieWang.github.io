@@ -62,7 +62,13 @@ const {
       }`}>
         <slot />
       </main>
-      {!zeroScroll && <Footer />}
+      {!zeroScroll ? (
+        <Footer />
+      ) : (
+        <div class="block md:hidden w-full">
+          <Footer />
+        </div>
+      )}
     </div>
     {/^\/marginalia\/(screen|music|literature|games)\/?$/.test(Astro.url.pathname) && <BackToTop />}
     {import.meta.env.DEV && process.env.HOMEPAGE_EDITOR === '1' && (

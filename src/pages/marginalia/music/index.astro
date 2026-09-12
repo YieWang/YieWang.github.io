@@ -24,7 +24,7 @@ const artistGroups = musicArtists.map(artist => {
   <MusicArtistNav artists={artistGroups.map(group => group.artist)} />
 
   <!-- Main Container: Pure Breath, Zero Breadcrumbs, Grouped by Artist -->
-  <div class="music-page-content max-w-[1760px] mx-auto w-full pb-28 pt-6 sm:pt-10 md:pt-12 px-4 sm:px-8 md:px-12">
+  <div class="music-page-content max-w-[1760px] mx-auto w-full pb-16 sm:pb-28 pt-6 sm:pt-10 md:pt-12 px-4 sm:px-8 md:px-12">
     
     <!-- MAIN GALLERY: Grouped by Artist -->
     <main class="space-y-16 sm:space-y-24">
@@ -48,7 +48,7 @@ const artistGroups = musicArtists.map(artist => {
               <article
                 role="button"
                 tabindex="0"
-                class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index]"
+                class="music-card group cursor-pointer flex flex-col justify-between relative z-10 hover:z-30 transition-[z-index] outline-none focus:outline-none focus-visible:outline-none"
                 data-album-id={album.id}
                 data-album-json={JSON.stringify(album)}
               >
@@ -127,7 +127,8 @@ const artistGroups = musicArtists.map(artist => {
   >
     <div
       id="music-modal-container"
-      class="bg-white max-w-xl sm:max-w-3xl w-full h-[540px] sm:h-[580px] max-h-[88vh] rounded-[3px] shadow-2xl p-5 sm:p-7 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden"
+      tabindex="-1"
+      class="bg-white max-w-xl sm:max-w-3xl w-full h-[540px] sm:h-[580px] max-h-[88vh] rounded-[3px] shadow-2xl p-5 sm:p-7 transform-gpu scale-[0.97] opacity-0 transition-[opacity,transform] duration-250 ease-out relative select-text flex flex-col overflow-hidden outline-none"
       style="will-change: transform, opacity; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;"
     >
       <!-- Injected by Modal Script -->
@@ -151,7 +152,7 @@ const artistGroups = musicArtists.map(artist => {
   @media (max-width: 639px) {
     /* Original mobile cover width is (100vw - 197px) / 2; allow its full 22% slide. */
     :global(body) { --artist-rail-width: calc(125px - max(0px, calc(11vw - 37.67px))); }
-    .music-page-content { --album-gap: max(24px, calc(11vw - 13.67px)); padding-left: calc(var(--artist-rail-width) + 16px); }
+    .music-page-content { --album-gap: max(24px, calc(11vw - 13.67px)); padding-left: calc(var(--artist-rail-width) + 16px); padding-bottom: 3rem; }
     .music-card:nth-child(2n) { --vinyl-room: 16px; }
   }
 </style>
@@ -319,6 +320,7 @@ const artistGroups = musicArtists.map(artist => {
     });
 
     if (!modalBackdrop.open) modalBackdrop.showModal();
+    modalContainer.focus({ preventScroll: true });
 
     // Reset right scroll pane to top
     const scrollPane = document.getElementById('modal-right-scroll-pane');
@@ -341,6 +343,7 @@ const artistGroups = musicArtists.map(artist => {
   function closeModal() {
     if (!modalBackdrop || !modalContainer || !isModalOpen) return;
     isModalOpen = false;
+    (document.activeElement as HTMLElement)?.blur();
 
     // Animate out smoothly (Cinema identical)
     modalBackdrop.classList.remove('opacity-100');
