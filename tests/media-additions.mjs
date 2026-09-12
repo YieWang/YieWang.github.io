@@ -29,7 +29,7 @@ for (const [ids, items] of [[seriesIds, cards.cinemaSeriesCards], [animeIds, car
     for (const part of x.installments || [x]) {
       assert.ok(part.director && part.chineseTitle && part.country);
       assert.match(part.posterUrl, /^https:\/\/homepage-assets\.mathtranslations\.org\//);
-      assert.match(part.posterSourceUrl, /^https:\/\/image\.tmdb\.org\//);
+      assert.match(part.posterSourceUrl, /^https:\/\/(?:image\.tmdb\.org|img\d+\.doubanio\.com)\//);
       assert.equal(part.externalLink?.platform, 'TMDb');
       if (part.partLabel) {
         assert.ok(!part.chineseTitle.includes(part.partLabel), `${part.chineseTitle} should not include ${part.partLabel}`);
