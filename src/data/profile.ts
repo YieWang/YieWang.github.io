@@ -14,6 +14,6 @@ export const profileData: ProfileData = {
   institution: "University of Regensburg",
   socials: {
     email: "mailto:Yi.Wang@stud.uni-regensburg.de",
-    cvUrl: "https://homepage-assets.mathtranslations.org/CV_full_academic_no_photo.pdf",
+    cvUrl: "/CV_full_academic.pdf",
   }
 };

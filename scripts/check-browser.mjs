@@ -20,6 +20,7 @@ const routes = {
   'music-vinyl-spacing': '/marginalia/music/',
   'mobile-layout': '/',
   'fixed-navigation': '/',
+  'section-alignment': '/',
   'back-to-top': '/',
   'marginalia-centering': '/marginalia/',
   'marginalia-preview': '/marginalia/',

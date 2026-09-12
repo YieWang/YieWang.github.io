@@ -8,6 +8,8 @@ for (const dir of ['public', 'dist']) {
   const files = readdirSync(new URL(`../${dir}`, import.meta.url), { recursive: true });
   for (const path of files.filter(path => /\.(jpg|jpeg|png|webp|pdf|zip)$/i.test(path))) {
     assert.ok(path === 'images/literature/cover.webp'
+      || path === 'apple-touch-icon.png'
+      || path === 'CV_full_academic.pdf'
       || (dir === 'public' && /^local-uploads\/[a-f0-9]{20}(?:-thumb)?\.webp$/.test(path)), `Unexpected binary asset: ${dir}/${path}`);
   }
   if (dir === 'dist') {

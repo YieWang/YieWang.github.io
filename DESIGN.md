@@ -35,7 +35,7 @@
 | Table Tennis | `/marginalia/table-tennis` | 乒乓球介绍与约球邀请 |
 
 - 顶部导航为 Home、Mathematics、Marginalia、CV，各页统一沿用首页的样式、位置和固定导航行为。
-- CV 当前保留文字但不可点击，后续由站主决定恢复。
+- CV 导航在新标签页打开站主提供的 `CV_full_academic.pdf`。
 - 首页、Mathematics、Marginalia 在电脑端保持单屏，移动端竖屏和横屏都允许滚动；内容长页面正常滚动。
 - 首页保留现有城市坐标与波形展示，不恢复旧版肖像布局；联系方式沿用单个邮箱图标。
 - Screen、Music、Literature、Games 使用统一的返回顶部按钮。

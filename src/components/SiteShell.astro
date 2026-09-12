@@ -149,6 +149,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
 <!-- ================================================================= -->
 <!-- SECTION 2: MATHEMATICS (NOTES · EXPOSITION · TEMPLATE)            -->
 <!-- ================================================================= -->
+<div class="section-pair">
 <section
   id="mathematics-section"
   class={`page-section max-w-2xl mx-auto w-full space-y-8 sm:space-y-12 my-auto py-2 sm:my-0 sm:pt-[clamp(4rem,7.5vh,5.5rem)] sm:pb-12 ${
@@ -654,11 +655,23 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
     </div>
   </div>
 </section>
+</div>
 
 <!-- ================================================================= -->
 <!-- STYLES: 1:1 Julian Perilla 丝滑交错缩放淡入淡出动效                  -->
 <!-- ================================================================= -->
 <style is:global>
+  .section-pair { display: contents; }
+  @media (max-width: 767px), (hover: none) {
+    .section-pair { display: none; }
+    .section-pair:has(> .active-section) { display: grid; width: 100%; margin-block: auto; }
+    .section-pair > .page-section { grid-area: 1 / 1; align-self: start; margin-block: 0; }
+    /* Both sections size the shared row, keeping headings and the footer aligned. */
+    .section-pair > .page-section.hidden { display: block !important; }
+    .section-pair > .page-section.hidden,
+    .section-pair > .page-section.hidden * { visibility: hidden !important; }
+  }
+
   /* Julian Perilla 1:1 Silky Smooth Crossfade */
   .page-section {
     opacity: 1;
