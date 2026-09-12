@@ -140,7 +140,24 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
     #gallery-viewport-root { height: auto; min-height: 0; flex: none; flex-direction: column; gap: 14px; margin-left: 0; padding: 8px 8px 28px; overflow: visible; }
     #gallery-viewport-root > aside { display: none; }
     #photo-mobile-heading { display: flex; align-items: center; gap: 12px; min-height: 44px; }
-    #photo-year-select { background: transparent; color: #222; font-size: 14px; font-weight: 600; min-height: 44px; padding: 0 4px; }
+    #photo-year-select {
+      background: transparent;
+      color: #222;
+      font-size: 14px;
+      font-weight: 600;
+      min-height: 44px;
+      padding: 0 4px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+    }
+    #photo-year-select:focus,
+    #photo-year-select:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
     #photo-mobile-city { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
     #right-showcase-stage { width: 100%; height: auto; flex: none; padding: 0; overflow: visible; gap: 18px; }
     #photo-canvas { flex: none; aspect-ratio: var(--photo-aspect); max-height: 65svh; padding: 0; touch-action: pan-y pinch-zoom; }
@@ -483,6 +500,7 @@ const firstPhoto = firstCity?.photos[0] || allPhotos[0];
 
     yearSelect?.addEventListener('change', () => {
       activatePhotoByIndex(allPhotos.findIndex(photo => photo.year === Number(yearSelect.value)));
+      yearSelect.blur();
     });
     // Let vertical gestures scroll the page; only a deliberate horizontal swipe changes photos.
     let swipe: { x: number; y: number; id: number } | null = null;
