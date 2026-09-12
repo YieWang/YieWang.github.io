@@ -24,7 +24,7 @@ const categories = [
     <nav aria-label="Screen categories" class="pt-2 sm:pt-4 flex items-center justify-center gap-6 sm:gap-14 select-none">
       {categories.map((category, index) => (
         <button type="button" data-cinema-tab={category.id} aria-controls={`section-${category.id}`} aria-pressed={index === 0}
-          class="cinema-tab uppercase text-[0.75rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-colors cursor-pointer aria-pressed:font-bold aria-pressed:text-black"
+          class="cinema-tab uppercase text-[0.75rem] sm:text-[0.82rem] tracking-[0.25rem] font-medium text-[#737373] hover:text-black transition-colors cursor-pointer aria-pressed:font-bold aria-pressed:text-black outline-none focus:outline-none focus-visible:outline-none"
           style="font-family: 'Montserrat', sans-serif;">{category.label}</button>
       ))}
     </nav>
@@ -306,7 +306,7 @@ const categories = [
               <div class="space-y-2" aria-label="${selection.type === 'series' ? 'Seasons in this series' : 'Films in this collection'}">
                 ${selection.installments.map((film, index) => `
                   <button type="button" data-installment="${index}" aria-pressed="${index === installmentIndex}"
-                    class="watched-entry block w-full text-left border-b border-[#F0F0F0] pb-2 cursor-pointer text-[#777777] hover:text-black aria-pressed:text-black aria-pressed:font-semibold focus-visible:outline focus-visible:outline-1">
+                    class="watched-entry block w-full text-left border-b border-[#F0F0F0] pb-2 cursor-pointer text-[#777777] hover:text-black aria-pressed:text-black aria-pressed:font-semibold outline-none focus:outline-none focus-visible:outline-none">
                     <span class="block text-[0.84rem]">${escapeHtml(film.title)}</span>
                   </button>`).join('')}
               </div>` : ''}
@@ -357,7 +357,7 @@ const categories = [
                   <button
                     id="toggle-essay-btn"
                     type="button"
-                    class="cursor-pointer text-[#888888] hover:text-black transition-colors duration-200 inline-flex items-center justify-center select-none text-[1.2rem] leading-none pt-2.5 pb-1"
+                    class="cursor-pointer text-[#888888] hover:text-black transition-colors duration-200 inline-flex items-center justify-center select-none text-[1.2rem] leading-none pt-2.5 pb-1 outline-none focus:outline-none focus-visible:outline-none"
                     aria-label="Expand full essay"
                     aria-expanded="false"
                     aria-controls="review-remaining-container"
