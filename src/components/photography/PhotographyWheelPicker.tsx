@@ -229,7 +229,7 @@ export default function PhotographyWheelPicker({
           z-index: 35;
         }
         .photo-wheel-highlight-item .photo-paper-card {
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14) !important;
+          box-shadow: 0 0 0 1.5px #222 !important;
           outline: none !important;
           border: none !important;
         }
