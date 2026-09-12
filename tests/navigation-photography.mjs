@@ -38,7 +38,7 @@ const layerA = { src: 'initial', style: { opacity: '1' } };
 const layerB = { src: '', style: { opacity: '0' } };
 const gallery = vm.createContext({
   layerA, layerB,
-  Image: class { constructor() { pending.push(this); } },
+  prioritizeImage: () => new Promise(resolve => pending.push(resolve)),
   requestAnimationFrame: (callback) => frames.push(callback),
 });
 run("let activeLayer = 'A'; let imageRequest = 0;" + between(
@@ -48,18 +48,19 @@ run("let activeLayer = 'A'; let imageRequest = 0;" + between(
 const select = (url) => run(`morphToImage('${url}', '${url}');`, gallery);
 const flush = () => { while (frames.length) frames.shift()(); };
 const visible = () => layerA.style.opacity === '1' ? layerA.src : layerB.src;
+const loaded = async index => { pending[index](true); await Promise.resolve(); };
 select('older');
 select('newer');
-pending[1].onload();
-pending[0].onload();
+await loaded(1);
+await loaded(0);
 flush();
 assert.equal(visible(), 'newer', 'Late old image must not overwrite latest selection');
 select('superseded-before-frame');
-pending[2].onload();
+await loaded(2);
 select('latest');
 flush();
 assert.equal(visible(), 'newer', 'An obsolete animation frame must not change the image');
-pending[3].onload();
+await loaded(3);
 flush();
 assert.equal(visible(), 'latest');
 

@@ -78,6 +78,12 @@ const {
   </body>
 </html>
 
+<script>
+  import { preloadImages } from '../lib/preload-images';
+
+  preloadImages([...document.querySelectorAll<HTMLImageElement>('img[src]:not([src=""])')]);
+</script>
+
 <style is:global>
 
   /* 桌面端单屏零滚动：首页、两个主栏目及单屏画廊 */

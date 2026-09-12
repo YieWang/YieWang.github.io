@@ -42,7 +42,7 @@ const elements = Object.fromEntries(['cameraMeta', 'metaTitle', 'metaLocation', 
 const gallery = vm.createContext({
   ...elements, allPhotos, photoOptics, photoLocation,
   canvas: null, thumbnails: null, yearSelect: null, city: null,
-  morphToImage() {}, preloadPhoto() {},
+  morphToImage() {},
 });
 vm.runInContext(ts.transpile('let activeIndex = 0;\n' + page.slice(
   page.indexOf('    function activatePhotoByIndex('),

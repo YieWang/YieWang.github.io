@@ -10,6 +10,7 @@ import { setTimeout as delay } from 'node:timers/promises';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const routes = {
   'photo-keyboard': '/marginalia/photography/',
+  'image-preloading': '/',
   'modal-interactions': '/',
   cinema: '/marginalia/screen/',
   'cinema-category-refresh': '/marginalia/screen/',
