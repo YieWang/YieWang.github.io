@@ -6,6 +6,7 @@ export interface BookItem {
   collection?: string;          // Explicit narrative series, not a publisher's imprint
   collectionEnglishTitle?: string;
   partOrder?: number;
+  partLabel?: string;
   installments?: BookItem[];
   collectionReview?: BookItem['review'];
   sourceIds?: string[];

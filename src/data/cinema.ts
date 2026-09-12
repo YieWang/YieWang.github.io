@@ -118,13 +118,14 @@ export const cinemaSeriesCards = cinemaSeries.map(withSeasonDetails)
   .sort((a, b) => reviewFirst(a, b) || Number(a.year) - Number(b.year));
 
 const animationCards = groupFilmCollections(cinemaAnimation).map(withSeasonDetails);
-const animationTier = (item: MediaItem) => (item.type === 'series' ? 0 : 2)
+const isLongRunningAnime = (item: MediaItem) => ['tv-60572', 'tv-37854', 'tv-46260', 'tv-30984', 'tv-46261'].includes(item.id);
+const animationTier = (item: MediaItem) => isLongRunningAnime(item) ? -1 : (item.type === 'series' ? 0 : 2)
   + ((item.installments?.length || 0) > 1 ? 0 : 1);
 
-// Review priority moves whole studio groups, without crossing the four tiers.
+// Review priority moves whole studio groups, without crossing the tiers.
 const studioGroups = new Map<string, MediaItem[]>();
 for (const item of animationCards) {
-  const key = item.studio ? `${item.type}:${(item.installments?.length || 0) > 1}:${item.studio}` : item.id;
+  const key = isLongRunningAnime(item) ? item.id : (item.studio ? `${item.type}:${(item.installments?.length || 0) > 1}:${item.studio}` : item.id);
   const group = studioGroups.get(key) || [];
   group.push(item);
   studioGroups.set(key, group);

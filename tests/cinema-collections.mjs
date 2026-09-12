@@ -71,22 +71,24 @@ for (const series of allCinemaItems.filter(x => x.seasons?.length)) {
 console.log('Season details, first covers, original watch records and missing ratings passed');
 
 const animationCards = Array.from(context.exports.cinemaAnimationCards);
-const order = card => (card.type === 'series' ? 0 : 2) + ((card.installments?.length || 0) > 1 ? 0 : 1);
-assert.deepEqual(animationCards.map(order), animationCards.map(order).sort((a, b) => a - b), 'Anime series first, then animated films; collections first in each section');
-for (const id of ['tv-37854', 'tv-46260', 'tv-46261', 'tv-30984']) {
+const isLongRunning = card => ['tv-60572', 'tv-37854', 'tv-46260', 'tv-30984', 'tv-46261'].includes(card.id);
+const order = card => isLongRunning(card) ? -1 : (card.type === 'series' ? 0 : 2) + ((card.installments?.length || 0) > 1 ? 0 : 1);
+assert.deepEqual(animationCards.map(order), animationCards.map(order).sort((a, b) => a - b), 'Long-running anime first, then anime series, then animated films; collections first in each section');
+for (const id of ['tv-60572', 'tv-37854', 'tv-46260', 'tv-46261', 'tv-30984']) {
   const card = animationCards.find(x => x.id === id);
-  assert.equal(card.installments?.length || 0, id === 'tv-37854' ? 0 : 2, 'Use complete shows instead of story arcs');
+  if (!card) continue;
+  assert.equal(card.installments?.length || 0, id === 'tv-37854' ? 0 : (id === 'tv-60572' ? 25 : 2), 'Use complete shows instead of story arcs');
   const parts = card.installments || [card];
   assert.ok(parts.every(x => !x.firstWatched && !x.rating), 'New anime has no invented personal records');
   assert.ok(parts.every(x => x.posterUrl.startsWith('https://homepage-assets.mathtranslations.org/')), 'New posters must be on R2');
 }
-console.log('Animation category order and four new franchise cards passed');
+console.log('Animation category order and franchise cards passed');
 
 assert.deepEqual(Array.from(animationCards.find(x => x.id === 'tv-46260').installments, x => x.runtime), ['220 Episodes', '500 Episodes']);
 assert.deepEqual(Array.from(animationCards.find(x => x.id === 'tv-46261').installments, x => x.runtime), ['328 Episodes', '25 Episodes']);
 
 const beforeStudios = Array.from(groupFilmCollections(cinemaAnimation), withSeasonDetails).sort((a,b) => order(a)-order(b));
-for (const tier of [0,1,2,3]) {
+for (const tier of [-1, 0, 1, 2, 3]) {
   for (const studio of new Set(animationCards.filter(x => order(x) === tier).map(x => x.studio).filter(Boolean))) {
     const positions = animationCards.map((x,index) => x.studio === studio && order(x) === tier ? index : -1).filter(index => index >= 0);
     assert.equal(positions.at(-1)-positions[0]+1,positions.length,'Same studio must be adjacent within its tier');
@@ -94,7 +96,7 @@ for (const tier of [0,1,2,3]) {
     assert.deepEqual(years,[...years].sort((a,b) => a-b),'Studio works must follow release years');
   }
 }
-const groupKey = x => `${order(x)}:${x.studio || x.id}`;
+const groupKey = x => isLongRunning(x) ? `-1:${x.id}` : `${order(x)}:${x.studio || x.id}`;
 assert.deepEqual([...new Set(animationCards.map(groupKey))].sort(),[...new Set(beforeStudios.map(groupKey))].sort(),'Preserve every studio group');
 assert.ok(animationCards.some(x => x.id === 'tv-37854'), 'One Piece remains visible');
 

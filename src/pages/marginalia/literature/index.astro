@@ -351,7 +351,7 @@ const bookCards = literatureBookCards;
                 ${selection.installments.map((part, index) => `
                   <button type="button" data-installment="${index}" aria-pressed="${index === installmentIndex}"
                     class="block w-full text-left border-b border-[#F0F0F0] pb-2 cursor-pointer text-[#777777] hover:text-black aria-pressed:text-black aria-pressed:font-semibold focus-visible:outline focus-visible:outline-1">
-                    <span class="block text-[0.84rem]">${escapeHtml(part.title)}</span>
+                    <span class="block text-[0.84rem]">${escapeHtml(part.partLabel || part.title)}</span>
                   </button>`).join('')}
               </div>` : ''}
             ${

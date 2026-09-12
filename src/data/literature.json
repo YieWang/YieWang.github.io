@@ -37,7 +37,8 @@
       "coverHeight": 1236,
       "originalYear": 2010,
       "englishTitle": "1Q84: Book 3",
-      "collectionEnglishTitle": "1Q84"
+      "collectionEnglishTitle": "1Q84",
+      "partLabel": "第三部"
     },
     {
       "id": "book-4885241",
@@ -58,7 +59,8 @@
       "coverHeight": 1557,
       "originalYear": 2009,
       "englishTitle": "1Q84: Book 2",
-      "collectionEnglishTitle": "1Q84"
+      "collectionEnglishTitle": "1Q84",
+      "partLabel": "第二部"
     },
     {
       "id": "book-3369600",
@@ -98,7 +100,8 @@
       "coverHeight": 1555,
       "originalYear": 2009,
       "englishTitle": "1Q84: Book 1",
-      "collectionEnglishTitle": "1Q84"
+      "collectionEnglishTitle": "1Q84",
+      "partLabel": "第一部"
     },
     {
       "id": "book-27200257",
@@ -771,8 +774,8 @@
     },
     {
       "id": "book-1200840",
-      "title": "平凡的世界",
-      "originalTitle": "平凡的世界",
+      "title": "平凡的世界 1",
+      "originalTitle": "平凡的世界 第一部",
       "author": "路遥",
       "edition": "北京十月文艺出版社 · 2021年版",
       "year": 2021,
@@ -784,7 +787,49 @@
       "coverWidth": 876,
       "coverHeight": 1316,
       "originalYear": 1986,
-      "englishTitle": "Ordinary World"
+      "englishTitle": "Ordinary World: Part 1",
+      "collection": "平凡的世界",
+      "collectionEnglishTitle": "Ordinary World",
+      "partOrder": 1,
+      "partLabel": "第一部"
+    },
+    {
+      "id": "book-1200840-2",
+      "title": "平凡的世界 2",
+      "englishTitle": "Ordinary World: Part 2",
+      "originalTitle": "平凡的世界 第二部",
+      "author": "路遥",
+      "edition": "北京十月文艺出版社 · 2021年版",
+      "year": 2021,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1200840-2-a7852999fd63.webp",
+      "sourceIds": [],
+      "collection": "平凡的世界",
+      "collectionEnglishTitle": "Ordinary World",
+      "partOrder": 2,
+      "partLabel": "第二部",
+      "coverSource": "https://book.douban.com/subject/36240091/",
+      "coverWidth": 1080,
+      "coverHeight": 1618,
+      "originalYear": 1986
+    },
+    {
+      "id": "book-1200840-3",
+      "title": "平凡的世界 3",
+      "englishTitle": "Ordinary World: Part 3",
+      "originalTitle": "平凡的世界 第三部",
+      "author": "路遥",
+      "edition": "北京十月文艺出版社 · 2021年版",
+      "year": 2021,
+      "coverUrl": "https://homepage-assets.mathtranslations.org/literature/book-1200840-3-5e282f942a6a.webp",
+      "sourceIds": [],
+      "collection": "平凡的世界",
+      "collectionEnglishTitle": "Ordinary World",
+      "partOrder": 3,
+      "partLabel": "第三部",
+      "coverSource": "https://book.douban.com/subject/36240093/",
+      "coverWidth": 982,
+      "coverHeight": 1521,
+      "originalYear": 1986
     },
     {
       "id": "book-1084336",
@@ -1331,7 +1376,8 @@
       "coverHeight": 495,
       "originalYear": 2006,
       "englishTitle": "Stories of the Ming Dynasty 1: Emperor Hongwu",
-      "collectionEnglishTitle": "Stories of the Ming Dynasty"
+      "collectionEnglishTitle": "Stories of the Ming Dynasty",
+      "partLabel": "1：洪武大帝"
     },
     {
       "id": "book-3697785",
@@ -1349,7 +1395,8 @@
       "coverHeight": 495,
       "originalYear": 2007,
       "englishTitle": "Stories of the Ming Dynasty 2: Tribute from All Nations",
-      "collectionEnglishTitle": "Stories of the Ming Dynasty"
+      "collectionEnglishTitle": "Stories of the Ming Dynasty",
+      "partLabel": "2：万国来朝"
     },
     {
       "id": "book-3697787",
@@ -1367,7 +1414,8 @@
       "coverHeight": 495,
       "originalYear": 2007,
       "englishTitle": "Stories of the Ming Dynasty 3: Court Intrigues",
-      "collectionEnglishTitle": "Stories of the Ming Dynasty"
+      "collectionEnglishTitle": "Stories of the Ming Dynasty",
+      "partLabel": "3：妖孽宫廷"
     },
     {
       "id": "book-3697783",
@@ -1385,7 +1433,8 @@
       "coverHeight": 495,
       "originalYear": 2007,
       "englishTitle": "Stories of the Ming Dynasty 4: Whitewashed Peace",
-      "collectionEnglishTitle": "Stories of the Ming Dynasty"
+      "collectionEnglishTitle": "Stories of the Ming Dynasty",
+      "partLabel": "4：粉饰太平"
     },
     {
       "id": "book-3697784",
@@ -1403,7 +1452,8 @@
       "coverHeight": 495,
       "originalYear": 2008,
       "englishTitle": "Stories of the Ming Dynasty 5: Shaken Empire",
-      "collectionEnglishTitle": "Stories of the Ming Dynasty"
+      "collectionEnglishTitle": "Stories of the Ming Dynasty",
+      "partLabel": "5：帝国飘摇"
     },
     {
       "id": "book-3697782",
@@ -1421,7 +1471,8 @@
       "coverHeight": 495,
       "originalYear": 2008,
       "englishTitle": "Stories of the Ming Dynasty 6: Setting Sun",
-      "collectionEnglishTitle": "Stories of the Ming Dynasty"
+      "collectionEnglishTitle": "Stories of the Ming Dynasty",
+      "partLabel": "6：日暮西山"
     },
     {
       "id": "book-3717122",
@@ -1439,7 +1490,8 @@
       "coverHeight": 495,
       "originalYear": 2009,
       "englishTitle": "Stories of the Ming Dynasty 7: The Grand Finale",
-      "collectionEnglishTitle": "Stories of the Ming Dynasty"
+      "collectionEnglishTitle": "Stories of the Ming Dynasty",
+      "partLabel": "7：大结局"
     },
     {
       "id": "book-24540864",
