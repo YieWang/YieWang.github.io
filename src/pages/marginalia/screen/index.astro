@@ -162,8 +162,11 @@ const categories = [
 
     const item = selection.installments?.[installmentIndex] || selection;
     const title = item.type === 'film' ? item.title : selection.title;
+    const seasonChinese = item.chineseTitle && item.partLabel && item.chineseTitle.includes(item.partLabel)
+      ? item.chineseTitle.replace(item.partLabel, '').trim()
+      : item.chineseTitle;
     const nativeTitle = secondaryNames([title], item.originalTitle,
-      item.originalTitle?.includes(item.chineseTitle || '\0') ? undefined : item.chineseTitle, item.partLabel);
+      item.originalTitle?.includes(seasonChinese || '\0') ? undefined : seasonChinese, item.partLabel);
     const nativeDirector = creatorNames(item.director, item.originalDirector, item.chineseDirector);
     const review = item.review || (selection.type === 'series' ? selection.review : undefined);
     const hasReview = !!review;
