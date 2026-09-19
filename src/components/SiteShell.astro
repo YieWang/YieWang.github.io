@@ -2,8 +2,10 @@
 import Header from './Header.astro';
 import LiteratureBook from './LiteratureBook.astro';
 import { allPhotos } from '../data/photography';
-import { allCinemaItems } from '../data/cinema';
-import { musicAlbums } from '../data/music';
+import { allCinemaItems, cinemaFilmCards } from '../data/cinema';
+import { musicAlbums, musicArtists } from '../data/music';
+import { literatureBookCards } from '../data/literature';
+import gameData from '../data/games.json';
 
 import { profileData } from '../data/profile';
 import { notesData, expositionData, templateData } from '../data/mathematics';
@@ -24,6 +26,40 @@ const photographyPrints = [
 const musicCover = musicAlbums.find(album => album.id === 'apple-album-3e54067bb25e92d0')!;
 const cinemaFrames = ['film-1298624', 'film-1291832', 'film-1296141', 'film-1296339']
   .map(id => allCinemaItems.find(item => item.id === id)!);
+
+// Critical first-screen assets for seamless speculative preloading
+const prefetchManifest = {
+  photography: {
+    pageUrl: '/marginalia/photography/',
+    heroImages: [allPhotos[0]?.imageUrl].filter(Boolean),
+    thumbnails: allPhotos.slice(0, 6).map(p => p.thumbnailUrl),
+  },
+  cinema: {
+    pageUrl: '/marginalia/screen/',
+    heroImages: cinemaFilmCards.slice(0, 12).map(f => f.posterUrl),
+    thumbnails: [],
+  },
+  literature: {
+    pageUrl: '/marginalia/literature/',
+    heroImages: literatureBookCards.slice(0, 12).map(b => b.coverUrl),
+    thumbnails: [],
+  },
+  music: {
+    pageUrl: '/marginalia/music/',
+    heroImages: musicAlbums.slice(0, 6).map(a => a.coverUrl),
+    thumbnails: musicArtists.slice(0, 4).map(a => a.avatarUrl),
+  },
+  'table-tennis': {
+    pageUrl: '/marginalia/table-tennis/',
+    heroImages: [],
+    thumbnails: [],
+  },
+  games: {
+    pageUrl: '/marginalia/games/',
+    heroImages: (gameData as any[]).filter(g => !('hidden' in g && g.hidden)).slice(0, 6).map(g => g.cover),
+    thumbnails: [],
+  },
+};
 
 
 const racketOutline = 'M80 6 C123 6 152 39 152 82 C152 116 134 141 99 150 L94 154 C91 172 93 197 96 212 Q97.5 216 89 216 L71 216 Q62.5 216 64 212 C67 197 69 172 66 154 L61 150 C26 141 8 116 8 82 C8 39 37 6 80 6 Z';
@@ -53,6 +89,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
 ---
 
 <Header activeTab={initialSection} />
+<script id="prefetch-manifest" type="application/json" set:html={JSON.stringify(prefetchManifest)} />
 
 <!-- ================================================================= -->
 <!-- SECTION 1: HOME (桌面单屏无滚动 + 移动端自适应画卷流)              -->
@@ -931,6 +968,15 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
 <!-- SCRIPTS: 客户端路由内核 + 纵向调和测地波渲染引擎                    -->
 <!-- ================================================================= -->
 <script>
+  import { scheduleIdlePrefetch, warmSection, prefetchPage, type SectionPrefetchManifest } from '../lib/prefetch-sections';
+
+  const manifestEl = document.getElementById('prefetch-manifest');
+  const prefetchManifest: SectionPrefetchManifest = manifestEl?.textContent
+    ? JSON.parse(manifestEl.textContent)
+    : {};
+
+  // Kick off background idle warmup of critical subpage images without disturbing initial render
+  scheduleIdlePrefetch(prefetchManifest);
 
   const pageTitles: Record<string, string> = {
     home: 'Yi Wang',
@@ -1100,6 +1146,9 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
   // MARGINALIA INTERACTIVE STAGE CONTROLLER (Scheme B + C)
   // =========================================================================
   function setStage(stageId: string) {
+    if (typeof prefetchManifest !== 'undefined' && typeof warmSection !== 'undefined' && prefetchManifest[stageId]) {
+      warmSection(prefetchManifest[stageId], 'high');
+    }
     const target = document.getElementById(`stage-panel-${stageId}`);
     if (!target || target.dataset.active === 'true') return;
     document.querySelectorAll<HTMLElement>('.stage-panel').forEach(panel => {
@@ -1121,6 +1170,9 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
   }
 
   function enterMarginalia() {
+    if (typeof prefetchManifest !== 'undefined' && typeof warmSection !== 'undefined' && prefetchManifest['photography']) {
+      warmSection(prefetchManifest['photography'], 'high');
+    }
     setStage('photography');
     const photo = document.getElementById('stage-panel-photography');
     if (!photo) return;
@@ -1134,7 +1186,17 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
     document.addEventListener(eventName, event => {
       if (event instanceof PointerEvent && event.pointerType !== 'mouse') return;
       const trigger = (event.target as Element).closest<HTMLElement>('.stage-trigger');
-      if (trigger?.dataset.stageId) setStage(trigger.dataset.stageId);
+      if (trigger?.dataset.stageId) {
+        if (typeof prefetchManifest !== 'undefined' && typeof warmSection !== 'undefined' && prefetchManifest[trigger.dataset.stageId]) {
+          warmSection(prefetchManifest[trigger.dataset.stageId], 'high');
+        }
+        setStage(trigger.dataset.stageId);
+      }
+      const artLink = (event.target as Element).closest<HTMLAnchorElement>('.stage-art-link, .stage-trigger a');
+      if (artLink) {
+        const href = artLink.getAttribute('href');
+        if (href && typeof prefetchPage !== 'undefined') prefetchPage(href);
+      }
     });
   }
   document.addEventListener('click', event => {
