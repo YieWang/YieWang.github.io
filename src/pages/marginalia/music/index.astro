@@ -29,7 +29,7 @@ const artistGroups = musicArtists.map(artist => {
     <!-- MAIN GALLERY: Grouped by Artist -->
     <main class="space-y-16 sm:space-y-24">
       {artistGroups.length === 0 && <p class="text-sm text-[#888888] text-center">No music yet.</p>}
-      {artistGroups.map((group) => (
+      {artistGroups.map((group, groupIdx) => (
         <section id={`section-${group.artist.id}`} class="space-y-6 select-none">
           
           <!-- Section Header: Only Native Artist Name on left, NO number on right -->
@@ -84,7 +84,8 @@ const artistGroups = musicArtists.map(artist => {
                       {album.coverUrl ? <img
                         src={album.coverUrl}
                         alt={album.title}
-                        loading="lazy"
+                        loading={groupIdx < 3 ? 'eager' : 'lazy'}
+                        decoding="async"
                         class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-95"
                       /> : <span class="w-full h-full flex items-center justify-center p-4 text-center text-sm text-[#777777]">{album.title}</span>}
                     </div>

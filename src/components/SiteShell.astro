@@ -27,6 +27,10 @@ const musicCover = musicAlbums.find(album => album.id === 'apple-album-3e54067bb
 const cinemaFrames = ['film-1298624', 'film-1291832', 'film-1296141', 'film-1296339']
   .map(id => allCinemaItems.find(item => item.id === id)!);
 
+const musicFirstScreenAlbums = musicArtists
+  .flatMap(artist => musicAlbums.filter(album => album.artistId === artist.id))
+  .slice(0, 8);
+
 // Critical first-screen assets for seamless speculative preloading
 const prefetchManifest = {
   photography: {
@@ -46,8 +50,8 @@ const prefetchManifest = {
   },
   music: {
     pageUrl: '/marginalia/music/',
-    heroImages: musicAlbums.slice(0, 6).map(a => a.coverUrl),
-    thumbnails: musicArtists.slice(0, 4).map(a => a.avatarUrl),
+    heroImages: musicFirstScreenAlbums.map(a => a.coverUrl),
+    thumbnails: musicArtists.slice(0, 5).map(a => a.avatarUrl).filter(Boolean),
   },
   'table-tennis': {
     pageUrl: '/marginalia/table-tennis/',
@@ -416,7 +420,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         >
           <a
             href="/marginalia/music/"
-            class="relative w-full h-full flex items-start justify-center pt-2 sm:pt-2.5 cursor-pointer select-none overflow-visible"
+            class="stage-art-link relative w-full h-full flex items-start justify-center pt-2 sm:pt-2.5 cursor-pointer select-none overflow-visible"
             aria-label="Explore Music"
           >
             <div aria-hidden="true" class="music-container relative w-[280px] sm:w-[330px] h-[210px] sm:h-[240px] flex items-center justify-start pl-2 sm:pl-4 -translate-x-8 sm:-translate-x-12">
@@ -452,7 +456,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         >
           <a
             href="/marginalia/table-tennis/"
-            class="relative w-full h-full flex items-start justify-center pt-1 sm:pt-2 cursor-pointer select-none overflow-visible"
+            class="stage-art-link relative w-full h-full flex items-start justify-center pt-1 sm:pt-2 cursor-pointer select-none overflow-visible"
             aria-label="Explore Table Tennis"
           >
             <div aria-hidden="true" class="tt-container relative w-[320px] sm:w-[380px] h-[220px] sm:h-[250px] flex items-center justify-center">
@@ -506,7 +510,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         >
           <a
             href="/marginalia/games/"
-            class="relative w-full h-full flex items-start justify-center pt-0 sm:pt-0 cursor-pointer select-none overflow-visible"
+            class="stage-art-link relative w-full h-full flex items-start justify-center pt-0 sm:pt-0 cursor-pointer select-none overflow-visible"
             aria-label="Explore Games"
           >
             <div aria-hidden="true" class="gameboy-stage relative w-[290px] sm:w-[330px] h-[225px] sm:h-[255px] flex items-center justify-center -translate-x-8 sm:-translate-x-10">
@@ -1192,8 +1196,13 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         }
         setStage(trigger.dataset.stageId);
       }
-      const artLink = (event.target as Element).closest<HTMLAnchorElement>('.stage-art-link, .stage-trigger a');
+      const artLink = (event.target as Element).closest<HTMLAnchorElement>('.stage-art-link, a.stage-trigger');
       if (artLink) {
+        const panel = artLink.closest<HTMLElement>('.stage-panel');
+        const stageId = panel?.id.replace('stage-panel-', '') || (artLink as HTMLElement).dataset.stageId;
+        if (stageId && typeof prefetchManifest !== 'undefined' && typeof warmSection !== 'undefined' && prefetchManifest[stageId]) {
+          warmSection(prefetchManifest[stageId], 'high');
+        }
         const href = artLink.getAttribute('href');
         if (href && typeof prefetchPage !== 'undefined') prefetchPage(href);
       }

@@ -41,10 +41,19 @@ const description = isGames
 
     {isGames ? (
       <div class="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-9 sm:gap-y-12 mt-7 sm:mt-9">
-        {games.map((game) => (
+        {games.map((game, idx) => (
           <article class="min-w-0">
             <a href={game.url} target="_blank" rel="noopener noreferrer" class="game-link group block rounded-sm">
-              <img src={game.cover} alt="" width="460" height="215" loading="lazy" class="w-full aspect-[460/215] object-cover rounded-[2px] bg-[#F0F0F0] transition-opacity duration-200 group-hover:opacity-90" />
+              <img
+                src={game.cover}
+                alt=""
+                width="460"
+                height="215"
+                loading={idx < 6 ? 'eager' : 'lazy'}
+                decoding="async"
+                fetchpriority={idx < 3 ? 'high' : 'auto'}
+                class="w-full aspect-[460/215] object-cover rounded-[2px] bg-[#F0F0F0] transition-opacity duration-200 group-hover:opacity-90"
+              />
               <h2 class="mt-3 text-[0.82rem] sm:text-[0.88rem] leading-relaxed font-medium text-[#1E1E1E]">{game.title}</h2>
             </a>
             {game.note && <p class="mt-2 text-[0.8rem] sm:text-[0.84rem] leading-[1.9] text-[#737373]">{game.note}</p>}

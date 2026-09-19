@@ -9,7 +9,7 @@ const { artists } = Astro.props;
     {artists.map((artist, index) => (
       <a href={`#section-${artist.id}`} class="artist-row" data-artist={artist.id}
         aria-current={index === 0 ? 'true' : undefined}>
-        {artist.avatarUrl ? <img src={artist.avatarUrl} alt="" width="48" height="48" loading="lazy" /> : <span class="artist-initial" aria-hidden="true">{Array.from(artist.displayName)[0]}</span>}
+        {artist.avatarUrl ? <img src={artist.avatarUrl} alt="" width="48" height="48" loading={index < 5 ? 'eager' : 'lazy'} decoding="async" /> : <span class="artist-initial" aria-hidden="true">{Array.from(artist.displayName)[0]}</span>}
         <span>{artist.displayName}</span>
       </a>
     ))}
