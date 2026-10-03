@@ -189,6 +189,13 @@ export async function verifyPages(root, evidence) {
   throw Error('部署已完成，但线上内容尚未与本地一致。请稍后重新运行发布检查。');
 }
 
+export function pendingCommits(root, head, remote) {
+  if (Number(git(root, 'rev-list', '--count', `${head}..${remote}`)) > 0) {
+    throw Error('远端已有本机尚未同步的更新，已停止，未覆盖任何修改。请先同步或处理冲突后重试。');
+  }
+  return git(root, 'log', '--oneline', `${remote}..${head}`);
+}
+
 export async function main(root, args) {
   if (args.some(a => !['--check', '--yes'].includes(a))) throw Error('用法：npm run publish；只检查：npm run publish:check');
   const check = args.includes('--check');
@@ -205,11 +212,7 @@ export async function main(root, args) {
     git(root, 'fetch', 'origin', 'main');
     let head = git(root, 'rev-parse', 'HEAD');
     const remote = git(root, 'rev-parse', 'origin/main');
-    const pending = head !== remote;
-    const [behind] = git(root, 'rev-list', '--left-right', '--count', `${remote}...${head}`).split(/\s+/).map(Number);
-    if (pending && !(behind === 0 && git(root, 'log', '--format=%s', `${remote}..${head}`).split('\n').every(s => s === subject) && git(root, 'diff', '--name-only', remote, head).split('\n').every(f => contentFiles.includes(f)))) {
-      throw Error('本地 main 与远端版本不同，已停止，未覆盖任何修改。请先用 git status 查看状态，并同步或处理自己的代码提交后重试。');
-    }
+    const pending = pendingCommits(root, head, remote);
     const snapshots = new Map(contentFiles.map(file => [file, readFileSync(join(root, file))]));
     for (const [name, doc] of Object.entries(documents)) validateDocument(name, JSON.parse(snapshots.get('src/data/' + doc.file)));
     const images = planImages(root, snapshots);
@@ -218,7 +221,7 @@ export async function main(root, args) {
     if (other.length) console.log(`另有程序文件修改，本次内容发布不包含：\n${other.join('\n')}`);
     if (!check) uploadImages(root, images.uploads);
     const prepared = prepare(root, head, snapshots, images);
-    if (pending) console.log('本次会一并推送上次中断留下的内容提交。');
+    if (pending) console.log(`确认发布后将同步以下本地更新：\n${pending}`);
     console.log(prepared.diff || (pending ? '没有后续编辑，继续完成上次发布。' : '没有新的内容修改；可以重新部署当前版本。'));
     if (check) { console.log('检查通过。尚未上传图片、提交或推送。正式发布请运行 npm run publish。'); return; }
     if (!args.includes('--yes')) {

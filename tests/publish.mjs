@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import sharp from 'sharp';
-import { planImages, replaceImages, digest, lock, commitContent, pageEvidence, waitForDeployment } from '../scripts/publish.mjs';
+import { planImages, replaceImages, digest, lock, commitContent, pageEvidence, waitForDeployment, pendingCommits } from '../scripts/publish.mjs';
 import { validateDocument } from '../scripts/editor/server.mjs';
 
 const root = mkdtempSync(join(tmpdir(), 'homepage-publish-test-'));
@@ -74,8 +74,14 @@ try {
   git('remote', 'set-url', 'origin', remote); git('push', 'origin', `${sha}:refs/heads/main`);
   assert.ok(git('ls-remote', 'origin', 'refs/heads/main').startsWith(sha));
   assert.equal(JSON.parse(git('--git-dir', remote, 'show', `main:${file}`)).review.content, '重试前补写的内容', 'retry must also publish subsequent saved edits');
+  assert.equal(pendingCommits(root, sha, sha), '');
+  git('commit', '--only', '-m', 'Repair local publishing checks', '--', 'other.css');
+  const repaired = git('rev-parse', 'HEAD');
+  assert.match(pendingCommits(root, repaired, sha), /Repair local publishing checks/, 'local committed repairs must be available for the next confirmed publish');
   const newer = git('commit-tree', `${sha}^{tree}`, '-p', sha, '-m', 'Another publisher');
   git('push', 'origin', `${newer}:refs/heads/main`);
+  assert.throws(() => pendingCommits(root, sha, newer), /远端/, 'a behind checkout must stop');
+  assert.throws(() => pendingCommits(root, repaired, newer), /远端/, 'divergent commits must stop');
   assert.throws(() => git('push', 'origin', `${sha}:refs/heads/main`), 'a newer remote must never be force-overwritten');
   assert.ok(git('ls-remote', 'origin', 'refs/heads/main').startsWith(newer));
 
