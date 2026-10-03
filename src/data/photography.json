@@ -428,28 +428,6 @@
             }
           },
           {
-            "id": "2026-regensburg-24",
-            "title": "A Tower after Sunset",
-            "subtitle": "日落后的塔",
-            "location": "雷根斯堡",
-            "locationEn": "Regensburg",
-            "year": 2026,
-            "date": "2026-10-03",
-            "imageUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-24-large-626c67477c.webp",
-            "thumbnailUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-24-thumb-54ae5d8e51.webp",
-            "width": 3368,
-            "height": 6000,
-            "story": "",
-            "camera": "Canon EOS M6",
-            "lens": "EF-M55-200mm f/4.5-6.3 IS STM",
-            "exif": {
-              "focalLength": "200mm",
-              "aperture": "f/6.3",
-              "shutter": "1/80s",
-              "iso": "4000"
-            }
-          },
-          {
             "id": "2026-regensburg-25",
             "title": "A Passing Figure",
             "subtitle": "夜色中的行人",
