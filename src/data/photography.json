@@ -252,28 +252,6 @@
             }
           },
           {
-            "id": "2026-regensburg-12",
-            "title": "Spires at Dusk",
-            "subtitle": "暮色双塔",
-            "location": "雷根斯堡",
-            "locationEn": "Regensburg",
-            "year": 2026,
-            "date": "2026-10-03",
-            "imageUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-12-large-657bb863b3.webp",
-            "thumbnailUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-12-thumb-bc4d155826.webp",
-            "width": 6000,
-            "height": 2510,
-            "story": "",
-            "camera": "Canon EOS M6",
-            "lens": "EF-M55-200mm f/4.5-6.3 IS STM",
-            "exif": {
-              "focalLength": "200mm",
-              "aperture": "f/6.3",
-              "shutter": "1/200s",
-              "iso": "500"
-            }
-          },
-          {
             "id": "2026-regensburg-13",
             "title": "Between the Streetlights",
             "subtitle": "路灯之间",
@@ -315,72 +293,6 @@
               "aperture": "f/6.3",
               "shutter": "1/200s",
               "iso": "6400"
-            }
-          },
-          {
-            "id": "2026-regensburg-15",
-            "title": "The Evening Clock",
-            "subtitle": "黄昏的钟",
-            "location": "雷根斯堡",
-            "locationEn": "Regensburg",
-            "year": 2026,
-            "date": "2026-10-03",
-            "imageUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-15-large-178cf65fb9.webp",
-            "thumbnailUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-15-thumb-895ab909ef.webp",
-            "width": 6000,
-            "height": 2510,
-            "story": "",
-            "camera": "Canon EOS M6",
-            "lens": "EF-M55-200mm f/4.5-6.3 IS STM",
-            "exif": {
-              "focalLength": "200mm",
-              "aperture": "f/6.3",
-              "shutter": "1/200s",
-              "iso": "1000"
-            }
-          },
-          {
-            "id": "2026-regensburg-16",
-            "title": "A Skyline in Silhouette",
-            "subtitle": "天际剪影",
-            "location": "雷根斯堡",
-            "locationEn": "Regensburg",
-            "year": 2026,
-            "date": "2026-10-03",
-            "imageUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-16-large-ca663197cf.webp",
-            "thumbnailUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-16-thumb-b6454afd77.webp",
-            "width": 6000,
-            "height": 2510,
-            "story": "",
-            "camera": "Canon EOS M6",
-            "lens": "EF-M55-200mm f/4.5-6.3 IS STM",
-            "exif": {
-              "focalLength": "200mm",
-              "aperture": "f/6.3",
-              "shutter": "1/200s",
-              "iso": "1250"
-            }
-          },
-          {
-            "id": "2026-regensburg-17",
-            "title": "Overhead Lines",
-            "subtitle": "城市上空",
-            "location": "雷根斯堡",
-            "locationEn": "Regensburg",
-            "year": 2026,
-            "date": "2026-10-03",
-            "imageUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-17-large-9b5ab130e1.webp",
-            "thumbnailUrl": "https://homepage-assets.mathtranslations.org/photography/2026-regensburg/2026-regensburg-17-thumb-28a85aada3.webp",
-            "width": 6000,
-            "height": 2510,
-            "story": "",
-            "camera": "Canon EOS M6",
-            "lens": "EF-M55-200mm f/4.5-6.3 IS STM",
-            "exif": {
-              "focalLength": "135mm",
-              "aperture": "f/5.6",
-              "shutter": "1/200s",
-              "iso": "1250"
             }
           },
           {
