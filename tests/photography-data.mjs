@@ -8,13 +8,13 @@ const source = readFileSync(new URL('../src/data/photography.ts', import.meta.ur
 const context = vm.createContext({ exports: {}, require: () => ({ default: JSON.parse(readFileSync(new URL('../src/data/photography.json', import.meta.url), 'utf8')) }) });
 vm.runInContext(ts.transpile(source, { module: ts.ModuleKind.CommonJS }), context);
 const { allPhotos, allCityAlbums, photoOptics, photoLocation } = context.exports;
-assert.equal(allPhotos.length, 64);
-assert.equal(allCityAlbums.length, 7);
+assert.equal(allPhotos.length, 89);
+assert.equal(allCityAlbums.length, 8);
 assert.ok(allCityAlbums.every(album => !album.id.includes('shantou')));
-assert.equal(new Set(allPhotos.map(photo => photo.id)).size, 64);
-assert.equal(allPhotos.filter(photo => photo.exif).length, 63);
+assert.equal(new Set(allPhotos.map(photo => photo.id)).size, 89);
+assert.equal(allPhotos.filter(photo => photo.exif).length, 88);
 const urls = allPhotos.flatMap(photo => [photo.imageUrl, photo.thumbnailUrl]);
-assert.equal(new Set(urls).size, 128);
+assert.equal(new Set(urls).size, 178);
 for (const url of urls) {
   assert.ok(url.startsWith('https://homepage-assets.mathtranslations.org/photography/'));
   assert.ok(url.endsWith('.webp'));
@@ -34,7 +34,7 @@ assert.equal(photoOptics(missing), '');
 const known = allPhotos.find(photo => photo.id === '202303-hangzhou-west-lake-01');
 assert.equal(known.camera, 'Canon EOS M6');
 assert.equal(photoOptics(known), 'f/2 · 1/100s · ISO 160');
-console.log('Photography import: 64 photos, 7 albums, 128 URLs; missing EXIF preserved.');
+console.log('Photography import: 89 photos, 8 albums, 178 URLs; missing EXIF preserved.');
 
 // Exercise the real metadata update when moving from a known photo to one without EXIF.
 const page = readFileSync(new URL('../src/pages/marginalia/photography/index.astro', import.meta.url), 'utf8');
