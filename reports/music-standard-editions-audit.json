@@ -21,7 +21,7 @@
   "after": {
     "artists": 92,
     "albums": 306,
-    "tracks": 552
+    "tracks": 551
   },
   "albums": {
     "apple-album-2653c2c5e498c813": {
@@ -6877,16 +6877,6 @@
           "duration": 265521,
           "disc": 1,
           "track": 11
-        },
-        {
-          "id": "1829873053",
-          "key": "爱",
-          "title": "愛",
-          "displayTitle": "爱",
-          "disc": 1,
-          "track": 3,
-          "duration": 193792,
-          "isrc": null
         }
       ],
       "originalReleaseYear": 2002,
@@ -12315,7 +12305,7 @@
       "artist": "Adele",
       "releaseType": "studio",
       "tracklistComplete": true,
-      "standardEditionSource": "https://music.apple.com/cn/album/19/270409624",
+      "standardEditionSource": "https://shop.adele.com/products/19-cd",
       "tracks": [
         {
           "id": "270409625",
@@ -12343,7 +12333,7 @@
           "isrc": "GBBKS0700574",
           "duration": 210507,
           "disc": 1,
-          "track": 1,
+          "track": 3,
           "displayTitle": "Chasing Pavements"
         },
         {
@@ -44534,9 +44524,11 @@
       "artist": "莫文蔚",
       "fromAlbum": "最爱回味",
       "fromAlbumId": "apple-album-258678406499fd61",
-      "status": "collected",
-      "reason": "No verified standard release/recording match",
-      "toAlbum": "i",
+      "status": "duplicate",
+      "reason": "Duplicate standard-album entry at disc 1 track 3; retain the original I catalog entry. No source ISRC is available, so this is a duplicate album-track assignment, not an ISRC match.",
+      "duplicateOf": "i.xrXvkY3FMDkW6k2",
+      "catalogSongId": "1829873053",
+      "toAlbum": "I",
       "toAlbumId": "apple-album-e5925c4c43a93338",
       "match": "Web-verified standard tracklist; artist and song; remaster labels normalized",
       "standardEditionSource": "https://zh.wikipedia.org/wiki/I_(莫文蔚專輯)",
@@ -64824,7 +64816,9 @@
     "The local 妥协 entry is matched to catalog song 332373354 (Compromise), track 4 of 花蝴蝶, with artist and duration verified.",
     "Taylor Swift original-edition-only policy was explicitly confirmed by the user.",
     "2026-09-08 web review: official release pages, label tracklists and public discographies supplement catalog evidence. Automated candidates require the same artist/title and duration within 15 seconds; featured/remix differences are rejected except the explicitly verified Disclosure production credit on Talk. Source-recording transfers with independent tracklist evidence are described in recordingProvenance.",
-    "The US Magical Mystery Tour LP is a compilation; Strawberry Fields Forever is not on the original UK EP and is kept as its real non-album single. Artists require at least two distinct eligible songs after release filtering."
+    "The US Magical Mystery Tour LP is a compilation; Strawberry Fields Forever is not on the original UK EP and is kept as its real non-album single. Artists require at least two distinct eligible songs after release filtering.",
+    "2026-10-04 track-position review: Chasing Pavements is track 3 on 19, confirmed by https://shop.adele.com/products/19-cd and the original library record. Cached catalog song 270409627 instead carries track 1 from Chasing Pavements - old SOTW (CA), album 273058338; song-level positions must not override the selected album tracklist.",
+    "2026-10-04 duplicate review: the compilation-source 爱 (i.vMX1YP1Tgrzp2zq) had been assigned to I, disc 1 track 3, already occupied by i.xrXvkY3FMDkW6k2. Keep the original album entry and exclude the redundant transfer; retain its source and matching history in decisions. All 306 displayed releases were checked for repeated disc/track positions and repeated reviewed song keys."
   ],
   "artistRenames": {
     "Utada": "Hikaru Utada",
@@ -64863,7 +64857,7 @@
       "album": "i",
       "source": "https://zh.wikipedia.org/wiki/I_(莫文蔚專輯)",
       "restored": true,
-      "finallyCollected": true
+      "finallyCollected": false
     },
     {
       "id": "i.EYVbJZGum2V1pVg",

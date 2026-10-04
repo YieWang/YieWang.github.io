@@ -171,6 +171,13 @@
   ],
   "excludedTracks": [
     {
+      "id": "i.vMX1YP1Tgrzp2zq",
+      "title": "爱",
+      "album": "最爱回味",
+      "artist": "莫文蔚",
+      "reason": "Duplicate standard-album entry: I, disc 1 track 3, is already collected as i.xrXvkY3FMDkW6k2. The compilation transfer has no verified ISRC; see the audit decision for provenance."
+    },
+    {
       "id": "i.aJGY7YdS3PO0ROz",
       "title": "飞机场的10:30 (Live)",
       "album": "Soul Power (现场原音专辑)",

@@ -15,6 +15,7 @@ assert.equal(new Set(music.albums.map(a => a.id)).size, music.albums.length);
 const catalogSongs = new Set();
 const isrcs = new Set();
 const families = new Set();
+const duplicatePositions = [];
 const forbidden = /deluxe|expanded|remaster|anniversary|bonus|drowning shadows|庆功|慶功|纪念盘|紀念盤|sound\s*track|原声带|原聲帶|精选|精選|合辑|合輯|greatest hits|Taylor[’']s Version/i;
 for (const album of music.albums) {
   assert.ok(['studio', 'single', 'ep'].includes(album.releaseType));
@@ -31,7 +32,13 @@ for (const album of music.albums) {
   const family = `${album.artistId}|${proof.familyKey}`;
   assert.ok(!families.has(family), `Duplicate album edition: ${album.title}`);
   families.add(family);
+  const trackPositions = new Set();
   for (const track of album.tracks) {
+    assert.ok(Number.isInteger(track.discNo) && track.discNo > 0);
+    assert.ok(Number.isInteger(track.trackNo) && track.trackNo > 0);
+    const position = `${track.discNo}:${track.trackNo}`;
+    if (trackPositions.has(position)) duplicatePositions.push(`${album.artistName} / ${album.title} / ${position}: ${track.title}`);
+    trackPositions.add(position);
     const canonical = proof.tracks.find(t => t.id === track.catalogSongId);
     assert.ok(canonical, `${album.title}: ${track.title}`);
     assert.equal(track.title, canonical.displayTitle || canonical.title);
@@ -48,6 +55,8 @@ for (const album of music.albums) {
     }
   }
 }
+assert.deepEqual(duplicatePositions, [], 'Collected tracks must have unique positions within each album');
+assert.equal(audit.after.tracks, tracks.length);
 for (const artist of music.artists) {
   assert.ok(artist.albumIds.length);
   const songs = music.albums.filter(a => a.artistId === artist.id).flatMap(a => a.tracks);
