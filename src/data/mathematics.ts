@@ -72,8 +72,8 @@ export const templateData: TemplateItem[] = [
   {
     title: "English",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/English.pdf?v=8",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English.zip?v=8",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/English.pdf?v=9",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English.zip?v=9",
   },
   {
     title: "Chinese",
@@ -96,13 +96,13 @@ export const templateData: TemplateItem[] = [
   {
     title: "Talk",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Talk.pdf?v=8",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Talk.zip?v=8",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Talk.pdf?v=9",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Talk.zip?v=9",
   },
   {
     title: "Homework",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Homework.pdf?v=8",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Homework.zip?v=8",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Homework.pdf?v=9",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Homework.zip?v=9",
   },
 ];
