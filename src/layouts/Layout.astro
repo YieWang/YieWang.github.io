@@ -103,16 +103,19 @@ const {
 
   /* Mathematics 内容较多：电脑端也允许往下滑 */
   @media (min-width: 768px) {
+    /* body 不做滚动容器、也不拦截滚动传递，由整页（html）滚动 */
     body.is-home.math-active {
-      overflow-y: auto;
+      overflow: visible;
       height: auto;
       min-height: 100vh;
+      overscroll-behavior: auto;
     }
     body.is-home.math-active #site-wrapper {
       height: auto;
       max-height: none;
       min-height: 100vh;
       overflow: visible;
+      overscroll-behavior: auto;
     }
   }
 
