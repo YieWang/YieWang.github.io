@@ -8,7 +8,7 @@ import { literatureBookCards } from '../data/literature';
 import gameData from '../data/games.json';
 
 import { profileData } from '../data/profile';
-import { notesData, expositionData, templateData } from '../data/mathematics';
+import { notesData, expositionData, talkData, templateData } from '../data/mathematics';
 import { marginaliaData } from '../data/marginalia';
 
 interface Props {
@@ -93,6 +93,9 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
 ---
 
 <Header activeTab={initialSection} />
+<script is:inline define:vars={{ initialSection }}>
+  if (initialSection === 'mathematics') document.body.classList.add('math-active');
+</script>
 <script id="prefetch-manifest" type="application/json" set:html={JSON.stringify(prefetchManifest)} />
 
 <!-- ================================================================= -->
@@ -211,15 +214,21 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
       {notesData.map((item) => (
         <article>
           <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
-              style="font-family: 'Montserrat', sans-serif;"
-            >
-              {item.title}
-            </a>
+            {item.url ? (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                {item.title}
+              </a>
+            ) : (
+              <span class="font-bold text-[#333333]" style="font-family: 'Montserrat', sans-serif;">
+                {item.title}
+              </span>
+            )}
           </h4>
         </article>
       ))}
@@ -256,7 +265,46 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
     </div>
   </div>
 
-  <!-- 3. TEMPLATE -->
+  <!-- 3. TALKS -->
+  <div class="space-y-4 sm:space-y-5.5 pt-2.5 sm:pt-3.5">
+    <div class="space-y-1">
+      <h3
+        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+        style="font-family: 'Montserrat', sans-serif;"
+      >
+        TALKS
+      </h3>
+    </div>
+    <div class="space-y-3.5 sm:space-y-4.5 text-left">
+      {talkData.map((item) => (
+        <article class="space-y-1">
+          <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
+            {item.url ? (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
+                style="font-family: 'Montserrat', sans-serif;"
+              >
+                {item.title}
+              </a>
+            ) : (
+              <span class="font-bold text-[#333333]" style="font-family: 'Montserrat', sans-serif;">{item.title}</span>
+            )}
+          </h4>
+          <p
+            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+            style="font-family: 'Montserrat', sans-serif;"
+          >
+            {item.event} · {item.year}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <!-- 4. TEMPLATE -->
   <div class="space-y-4 sm:space-y-5.5 pt-2.5 sm:pt-3.5">
     <div class="space-y-1">
       <h3
@@ -992,6 +1040,8 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
     document.documentElement.classList.add('is-home');
     document.body.classList.add('is-home');
     document.body.classList.toggle('home-active', targetId === 'home');
+    // Mathematics 内容较多：电脑端允许往下滑
+    document.body.classList.toggle('math-active', targetId === 'mathematics');
   }
 
   let transitionTimer: ReturnType<typeof setTimeout> | null = null;
