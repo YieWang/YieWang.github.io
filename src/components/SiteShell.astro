@@ -8,7 +8,7 @@ import { literatureBookCards } from '../data/literature';
 import gameData from '../data/games.json';
 
 import { profileData } from '../data/profile';
-import { notesData, expositionData, talkData, templateData } from '../data/mathematics';
+import { paperData, thesisData, talkData, conferenceData, teachingData, notesData, templateData } from '../data/mathematics';
 import { marginaliaData } from '../data/marginalia';
 
 interface Props {
@@ -16,6 +16,18 @@ interface Props {
 }
 
 const { initialSection = 'home' } = Astro.props;
+
+// Mathematics 栏目：顺序固定，没有条目的栏目不显示；Template 单独排在最后
+type MathEntry = { title: string; url?: string; detail?: string };
+const joinDetail = (...parts: (string | undefined)[]) => parts.filter(Boolean).join(' · ') || undefined;
+const mathGroups: { id: string; label: string; items: MathEntry[] }[] = [
+  { id: 'paper', label: 'Paper', items: paperData.map(p => ({ title: p.title, url: p.url, detail: joinDetail(p.coauthors, p.venue, p.year) })) },
+  { id: 'thesis', label: 'Thesis', items: thesisData.map(t => ({ title: t.title, url: t.url, detail: joinDetail(t.type, t.year) })) },
+  { id: 'talk', label: 'Talk', items: talkData.map(t => ({ title: t.title, url: t.url, detail: joinDetail(t.event, t.year) })) },
+  { id: 'conference', label: 'Conference', items: conferenceData.map(c => ({ title: c.title, url: c.url, detail: joinDetail(c.place, c.year) })) },
+  { id: 'teaching', label: 'Teaching', items: teachingData.map(t => ({ title: t.title, url: t.url, detail: joinDetail(t.role, t.term) })) },
+  { id: 'note', label: 'Note', items: notesData.map(n => ({ title: n.title, url: n.url })) },
+].filter(group => group.items.length > 0);
 
 const photographyPrints = [
   { id: '202408-tokyo-10', caption: 'TOKYO · FIREWORKS' },
@@ -168,7 +180,7 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         </div>
 
         <!-- Middle Vertical Canvas -->
-        <div class="relative flex-none md:flex-1 h-[210px] md:h-auto md:min-h-[220px] w-full my-1 sm:my-2 flex items-center justify-center overflow-hidden">
+        <div class="wave-canvas-frame relative flex-none md:flex-1 h-[210px] md:h-auto md:min-h-[220px] w-full my-1 sm:my-2 flex items-center justify-center overflow-hidden">
           <canvas id="geodetic-canvas-vertical" class="w-full h-full block" style="touch-action: pan-y;"></canvas>
         </div>
 
@@ -191,130 +203,73 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
 </section>
 
 <!-- ================================================================= -->
-<!-- SECTION 2: MATHEMATICS (NOTES · EXPOSITION · TEMPLATE)            -->
+<!-- SECTION 2: MATHEMATICS（可折叠栏目）                              -->
 <!-- ================================================================= -->
 <div class="section-pair">
 <section
   id="mathematics-section"
-  class={`page-section max-w-2xl mx-auto w-full space-y-8 sm:space-y-12 my-auto py-2 sm:my-0 sm:pt-[clamp(4rem,7.5vh,5.5rem)] sm:pb-12 ${
+  class={`page-section max-w-2xl mx-auto w-full my-auto py-2 sm:my-0 sm:pt-[clamp(4rem,7.5vh,5.5rem)] sm:pb-12 ${
     initialSection === 'mathematics' ? 'active-section block' : 'inactive hidden'
   }`}
 >
-  <!-- 1. NOTES -->
-  <div class="space-y-4 sm:space-y-5.5 pt-1 sm:pt-2">
-    <div class="space-y-1">
+  <!-- 手机：折叠栏目 + 下方线描（顶格，与 Marginalia 对齐）；电脑：左栏目名、右侧显示所选栏目，未选时显示线描，整体在页面中垂直居中（略偏上） -->
+  <div class="math-layout" style={`--math-count: ${mathGroups.length + 1};`}>
+  <!-- 栏目：Paper → Thesis → Talk → Conference → Teaching → Note（空栏目不显示），默认全部折叠 -->
+  {mathGroups.map((group, index) => (
+    <div id={group.id} class="math-group" data-math-group>
       <h3
         class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
-        style="font-family: 'Montserrat', sans-serif;"
+        style={`font-family: 'Montserrat', sans-serif; --row-m: ${index + 1}; --row-d: ${index + 2};`}
       >
-        NOTES
+        <button type="button" class="math-toggle" aria-expanded="false" aria-controls={`math-panel-${group.id}`}>{group.label}</button>
       </h3>
+      <div id={`math-panel-${group.id}`} class="math-panel" inert>
+        <div class="math-panel-inner">
+          <div class="math-panel-body space-y-3.5 sm:space-y-4.5 text-left">
+            {group.items.map((item) => (
+              <article class={item.detail ? 'space-y-1' : undefined}>
+                <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
+                  {item.url ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
+                      style="font-family: 'Montserrat', sans-serif;"
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    <span class="font-bold text-[#333333]" style="font-family: 'Montserrat', sans-serif;">{item.title}</span>
+                  )}
+                </h4>
+                {item.detail && (
+                  <p
+                    class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
+                    style="font-family: 'Montserrat', sans-serif;"
+                  >
+                    {item.detail}
+                  </p>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="space-y-3.5 sm:space-y-4.5 text-left">
-      {notesData.map((item) => (
-        <article>
-          <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
-            {item.url ? (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
-                style="font-family: 'Montserrat', sans-serif;"
-              >
-                {item.title}
-              </a>
-            ) : (
-              <span class="font-bold text-[#333333]" style="font-family: 'Montserrat', sans-serif;">
-                {item.title}
-              </span>
-            )}
-          </h4>
-        </article>
-      ))}
-    </div>
-  </div>
+  ))}
 
-  <!-- 2. EXPOSITION -->
-  <div class="space-y-4 sm:space-y-5.5 pt-2.5 sm:pt-3.5">
-    <div class="space-y-1">
-      <h3
-        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        EXPOSITION
-      </h3>
-    </div>
-    <div class="space-y-3.5 sm:space-y-4.5 text-left">
-      {expositionData.map((item) => (
-        <article class="space-y-1">
-          <h4
-            class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5] font-bold text-[#333333]"
-            style="font-family: 'Montserrat', sans-serif;"
-          >
-            {item.title}
-          </h4>
-          <p
-            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
-            style="font-family: 'Montserrat', sans-serif;"
-          >
-            {item.type} · {item.year}
-          </p>
-        </article>
-      ))}
-    </div>
-  </div>
-
-  <!-- 3. TALKS -->
-  <div class="space-y-4 sm:space-y-5.5 pt-2.5 sm:pt-3.5">
-    <div class="space-y-1">
-      <h3
-        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        TALKS
-      </h3>
-    </div>
-    <div class="space-y-3.5 sm:space-y-4.5 text-left">
-      {talkData.map((item) => (
-        <article class="space-y-1">
-          <h4 class="text-[0.875rem] sm:text-[0.9375rem] leading-[1.5]">
-            {item.url ? (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-bold text-[#333333] hover:text-black underline underline-offset-4 decoration-[#D1D1D1] hover:decoration-black transition-colors duration-200"
-                style="font-family: 'Montserrat', sans-serif;"
-              >
-                {item.title}
-              </a>
-            ) : (
-              <span class="font-bold text-[#333333]" style="font-family: 'Montserrat', sans-serif;">{item.title}</span>
-            )}
-          </h4>
-          <p
-            class="text-[0.75rem] sm:text-[0.8125rem] text-[#888888] font-light tracking-[0.02rem]"
-            style="font-family: 'Montserrat', sans-serif;"
-          >
-            {item.event} · {item.year}
-          </p>
-        </article>
-      ))}
-    </div>
-  </div>
-
-  <!-- 4. TEMPLATE -->
-  <div class="space-y-4 sm:space-y-5.5 pt-2.5 sm:pt-3.5">
-    <div class="space-y-1">
-      <h3
-        class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
-        style="font-family: 'Montserrat', sans-serif;"
-      >
-        TEMPLATE
-      </h3>
-    </div>
-    <div class="grid grid-cols-[max-content_1fr] gap-x-4 sm:gap-x-5 gap-y-5 sm:gap-y-6 items-baseline text-left">
+  <!-- Template（固定最后） -->
+  <div id="template" class="math-group" data-math-group>
+    <h3
+      class="text-[0.75rem] sm:text-[0.8125rem] font-bold uppercase tracking-[0.25rem] text-[#888888]"
+      style={`font-family: 'Montserrat', sans-serif; --row-m: ${mathGroups.length + 1}; --row-d: ${mathGroups.length + 2};`}
+    >
+      <button type="button" class="math-toggle" aria-expanded="false" aria-controls="math-panel-template">Template</button>
+    </h3>
+    <div id="math-panel-template" class="math-panel" inert>
+    <div class="math-panel-inner">
+    <div class="math-panel-body grid grid-cols-[max-content_1fr] gap-x-4 sm:gap-x-5 gap-y-5 items-baseline text-left">
       {templateData.map((item) => (
         <>
           <h4
@@ -347,6 +302,14 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
         </>
       ))}
     </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- 线描：三个缓慢漂移的正圆与一个绕行的小点（见 initMathFigure） -->
+  <div class="math-figure" aria-hidden="true">
+    <canvas id="math-figure-canvas"></canvas>
+  </div>
   </div>
 </section>
 
@@ -753,12 +716,176 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
   .section-pair { display: contents; }
   @media (max-width: 767px), (hover: none) {
     .section-pair { display: none; }
-    .section-pair:has(> .active-section) { display: grid; width: 100%; margin-block: auto; }
+    /* 两页都从导航下方顶格开始，Notes 与 Project 标题对齐。
+       隐藏的一页不参与撑高：Mathematics 超过一屏时，不能把 Marginalia 的版权也推到屏幕外。 */
+    .section-pair:has(> .active-section) { display: grid; width: 100%; margin-block: 0 auto; }
     .section-pair > .page-section { grid-area: 1 / 1; align-self: start; margin-block: 0; }
-    /* Both sections size the shared row, keeping headings and the footer aligned. */
-    .section-pair > .page-section.hidden { display: block !important; }
-    .section-pair > .page-section.hidden,
-    .section-pair > .page-section.hidden * { visibility: hidden !important; }
+  }
+
+  /* Mathematics：栏目名是触发项（同 Marginalia）。所选栏目与线描共用一个“展台”格子：
+     手机在栏目名下方，电脑在右列；未选栏目时展台显示线描。 */
+  .math-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(var(--math-count), auto) auto;
+    padding-top: 0.25rem;
+  }
+  @media (min-width: 640px) { .math-layout { padding-top: 0.5rem; } }
+  .math-layout > .math-group { display: contents; }
+  .math-layout > .math-group > h3 { grid-column: 1; grid-row: var(--row-m); margin-bottom: 1.75rem; }
+  .math-layout > .math-group > .math-panel,
+  .math-layout > .math-figure { grid-column: 1; grid-row: -2 / -1; margin-top: 0.75rem; }
+  .math-toggle {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .math-toggle:hover { color: #333333; }
+  .math-group[data-open] .math-toggle { color: #111111; }
+  .math-toggle:focus-visible { outline: 1px solid #888888; outline-offset: 4px; }
+  .math-panel {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+  .math-group[data-open] > .math-panel { opacity: 1; visibility: visible; transition: opacity 0.3s ease 0.05s, visibility 0s; }
+  .math-panel-body { padding-bottom: 0.25rem; }
+  .math-figure {
+    position: relative;
+    height: 240px;
+    transition: opacity 0.35s ease, visibility 0s linear 0s;
+  }
+  .math-layout:has(.math-group[data-open]) > .math-figure {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+  }
+  .math-figure > canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+  /* 宽屏：左栏目名、右展台；栏目内容从第一个栏目名的高度开始 */
+  @media (min-width: 768px) {
+    .math-layout {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      grid-template-rows: auto repeat(var(--math-count), auto) 1fr;
+      column-gap: 2.5rem;
+    }
+    .math-layout > .math-group > h3 { grid-row: var(--row-d); }
+    .math-layout > #template > h3 { margin-bottom: 0; }
+    .math-layout > .math-group > .math-panel { grid-column: 2; grid-row: 2 / -1; margin-top: 0; }
+    .math-layout > .math-figure { grid-column: 2; grid-row: 1 / -1; margin-top: 0; }
+    .math-figure { height: min(340px, 46vh); align-self: center; }
+    /* 右侧高度固定（由线描决定，从第一个栏目名到线描底边）：条目再多也不把页面撑长，
+       超出部分在框内滚动；下面还有内容时底边淡出，滚动后顶边也淡出。 */
+    .math-layout > .math-group > .math-panel {
+      contain: size;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: none;
+    }
+    .math-panel::-webkit-scrollbar { display: none; }
+    /* 有指示时淡出只需轻轻一笔：约 2.5rem，最淡到 25%，不完全透明 */
+    .math-panel.more-below {
+      -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5rem), rgba(0, 0, 0, 0.25));
+      mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5rem), rgba(0, 0, 0, 0.25));
+    }
+    .math-panel.more-above {
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), #000 2.5rem);
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), #000 2.5rem);
+    }
+    .math-panel.more-above.more-below {
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), #000 2.5rem, #000 calc(100% - 2.5rem), rgba(0, 0, 0, 0.25));
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), #000 2.5rem, #000 calc(100% - 2.5rem), rgba(0, 0, 0, 0.25));
+    }
+    /* 滚动指示：一段 1.5rem 的短竖条，位于栏目名与内容之间的空隙里，随滚动从上移到下；
+       各栏大小一致，只在内容超出时才会出现。刚进入一栏时出现一下（提示可以往下翻），
+       约 0.5 秒不滑动就淡出；滑动时再出现，停下约 0.5 秒后淡出。 */
+    .math-layout > .math-group > .math-scroll {
+      grid-column: 2;
+      grid-row: 2 / -1;
+      position: relative;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+    }
+    .math-group[data-open] > .math-scroll.is-active.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.25s ease, visibility 0s;
+    }
+    .ms-thumb {
+      position: absolute;
+      left: -1.25rem;
+      width: 1px;
+      height: 1.5rem;
+      top: calc(var(--progress, 0) * (100% - 1.5rem));
+      background: rgba(0, 0, 0, 0.45);
+      transition: top 0.12s linear;
+    }
+  }
+  @media (max-width: 767px) {
+    .math-scroll { display: none; }
+  }
+  /* 手机：收起的栏不占位置（否则最长的那一栏会在线描下方留出大片空白）；打开的栏淡入，线描让位 */
+  @media (max-width: 767px) {
+    .math-panel { display: none; }
+    .math-group[data-open] > .math-panel { display: block; animation: math-panel-in 0.3s ease; }
+    .math-layout:has(.math-group[data-open]) > .math-figure { display: none; }
+  }
+  @keyframes math-panel-in { from { opacity: 0; } to { opacity: 1; } }
+  /* 电脑（有鼠标）：像 Marginalia 一样从导航下方按固定距离起排，但比 Marginalia 略低一些
+     （内容更短，且栏目名在线描高度内居中）。触屏宽屏保持顶格，与 Marginalia 的标题对齐。 */
+  @media (min-width: 768px) and (hover: hover) {
+    #mathematics-section { padding-top: clamp(4.5rem, 10vh, 7rem); }
+    .math-layout { grid-template-rows: 1fr repeat(var(--math-count), auto) 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .math-panel, .math-figure { transition: none; animation: none; }
+  }
+
+  /* 手机竖排首页：剩余高度一半留在上方（姓名位置大致不变），一半让波形往下拉长，直到版权上方 */
+  @media (max-width: 767px) {
+    #home-section {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      margin-block: 0;
+      padding-bottom: 1.25rem;
+    }
+    #home-section::before {
+      content: '';
+      flex: 1 1 0;
+    }
+    #home-section > .grid {
+      flex: 1 1 auto;
+      height: auto;
+      grid-template-rows: auto 1fr;
+      align-items: stretch;
+    }
+    #wave-container-vertical {
+      justify-content: flex-start;
+    }
+    #wave-container-vertical > .wave-canvas-frame {
+      flex: 1 1 auto;
+      height: auto;
+      min-height: 210px;
+      max-height: 30rem;
+    }
+    /* 画布按外框绘制；自身像素高度不能反过来撑高外框 */
+    #wave-container-vertical > .wave-canvas-frame > canvas {
+      position: absolute;
+      inset: 0;
+    }
   }
 
   /* Julian Perilla 1:1 Silky Smooth Crossfade */
@@ -1184,7 +1311,13 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
   // 处理旧 URL 遗留的 # 锚点，并平滑升级至干净的斜杠 URL
   if (window.location.hash) {
     const hash = window.location.hash.substring(1).toLowerCase();
-    if (hash === 'mathematics' || hash === 'research') {
+    if (document.querySelector(`[data-math-group]#${CSS.escape(hash)}`)) {
+      // Mathematics 栏目链接（如 /mathematics/#talk）：留在 Mathematics，保留锚点，由 initMathGroups 展开
+      if (!document.getElementById('mathematics-section')?.classList.contains('active-section')) {
+        history.replaceState({ section: 'mathematics' }, '', `/mathematics#${hash}`);
+        activateSection('mathematics', true);
+      }
+    } else if (hash === 'mathematics' || hash === 'research') {
       history.replaceState({ section: 'mathematics' }, '', '/mathematics');
       activateSection('mathematics', true);
     } else if (hash === 'marginalia' || hash === 'notes') {
@@ -1304,9 +1437,9 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
     function resize() {
       if (!vCanvas || !vCtx) return;
       const dpr = window.devicePixelRatio || 1;
-      const rect = vCanvas.getBoundingClientRect();
-      vWidth = rect.width;
-      vHeight = rect.height;
+      // clientWidth/clientHeight 不受切换动画的 scale 影响
+      vWidth = vCanvas.clientWidth;
+      vHeight = vCanvas.clientHeight;
       vCanvas.width = Math.round(vWidth * dpr);
       vCanvas.height = Math.round(vHeight * dpr);
       vCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -1380,4 +1513,201 @@ const gameboySlices = Array.from({ length: 58 }, (_, i) => {
   }
 
   initGeodeticEngine();
+
+  // =========================================================================
+  // MATHEMATICS 折叠栏目：默认全部折叠；/mathematics/#talk 这类链接自动展开对应栏目
+  // =========================================================================
+  // 栏目名的触发方式同 Marginalia：
+  // 能悬停的设备（鼠标）——移到栏目名上即显示该栏；鼠标离开整个区域后回到线描。
+  // 触屏——点栏目名显示该栏，再点一次收起回到线描。
+  const mathHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  function initMathGroups() {
+    const layout = document.querySelector<HTMLElement>('.math-layout');
+    const groups = [...document.querySelectorAll<HTMLElement>('[data-math-group]')];
+    if (!layout) return;
+    let current: HTMLElement | null = null;
+    // 电脑端右侧高度固定：内容超出时按滚动位置给上下边缘加淡出，并更新滚动指示（短竖条）
+    const tracks = new Map<HTMLElement, HTMLElement>();
+    const hideTimers = new Map<HTMLElement, number>();
+    const resetting = new Set<HTMLElement>();
+    const updateFade = (panel: HTMLElement) => {
+      const overflow = panel.scrollHeight - panel.clientHeight > 2;
+      panel.classList.toggle('more-above', overflow && panel.scrollTop > 2);
+      panel.classList.toggle('more-below', overflow && panel.scrollTop + panel.clientHeight < panel.scrollHeight - 2);
+      const track = tracks.get(panel);
+      if (!track) return;
+      track.classList.toggle('is-active', overflow);
+      track.style.setProperty('--progress', overflow ? String(panel.scrollTop / (panel.scrollHeight - panel.clientHeight)) : '0');
+    };
+    // 让短竖条出现一会儿，过 ms 毫秒后淡出；期间再次调用会重新计时
+    const flash = (panel: HTMLElement, ms: number) => {
+      const track = tracks.get(panel);
+      if (!track || !track.classList.contains('is-active')) return;
+      track.classList.add('is-visible');
+      window.clearTimeout(hideTimers.get(panel));
+      hideTimers.set(panel, window.setTimeout(() => track.classList.remove('is-visible'), ms));
+    };
+    groups.forEach((group) => {
+      const panel = group.querySelector<HTMLElement>('.math-panel');
+      if (!panel) return;
+      const track = document.createElement('div');
+      track.className = 'math-scroll';
+      track.setAttribute('aria-hidden', 'true');
+      const thumb = document.createElement('i');
+      thumb.className = 'ms-thumb';
+      track.append(thumb);
+      panel.after(track);
+      tracks.set(panel, track);
+      panel.addEventListener('scroll', () => {
+        updateFade(panel);
+        // 打开栏目时把滚动位置归零也会触发一次滚动事件，这一次不算“滑动”
+        if (resetting.delete(panel)) return;
+        flash(panel, 500);
+      }, { passive: true });
+      new ResizeObserver(() => updateFade(panel)).observe(panel);
+    });
+    const select = (target: HTMLElement | null) => {
+      if (target === current) return;
+      current = target;
+      groups.forEach((group) => {
+        const open = group === target;
+        group.toggleAttribute('data-open', open);
+        group.querySelector('.math-toggle')?.setAttribute('aria-expanded', String(open));
+        const panel = group.querySelector<HTMLElement>('.math-panel');
+        if (!panel) return;
+        panel.inert = !open;
+        const track = tracks.get(panel);
+        if (open) {
+          if (panel.scrollTop !== 0) {
+            resetting.add(panel);
+            panel.scrollTop = 0;
+          }
+          updateFade(panel);
+          // 刚进入一栏：内容超出时，短竖条出现一下，不滑动约 0.5 秒后淡出
+          flash(panel, 500);
+        } else if (track) {
+          track.classList.remove('is-visible');
+          window.clearTimeout(hideTimers.get(panel));
+        }
+      });
+    };
+    let leaveTimer = 0;
+    groups.forEach((group) => {
+      const toggle = group.querySelector<HTMLElement>('.math-toggle');
+      if (!toggle) return;
+      toggle.addEventListener('mouseenter', () => {
+        if (!mathHover.matches) return;
+        window.clearTimeout(leaveTimer);
+        select(group);
+      });
+      toggle.addEventListener('focus', () => {
+        if (toggle.matches(':focus-visible')) select(group);
+      });
+      toggle.addEventListener('click', () => {
+        if (mathHover.matches) select(group);
+        else select(current === group ? null : group);
+      });
+    });
+    layout.addEventListener('mouseenter', () => window.clearTimeout(leaveTimer));
+    layout.addEventListener('mouseleave', () => {
+      if (!mathHover.matches) return;
+      window.clearTimeout(leaveTimer);
+      leaveTimer = window.setTimeout(() => select(null), 220);
+    });
+    layout.addEventListener('focusout', (event) => {
+      if (mathHover.matches && !layout.contains(event.relatedTarget as Node | null)) select(null);
+    });
+    const openFromHash = () => {
+      const id = decodeURIComponent(location.hash.slice(1));
+      const group = groups.find((g) => g.id === id);
+      if (group) select(group);
+    };
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+  }
+
+  // =========================================================================
+  // Mathematics 线描（与首页波形同一套三种浓淡）：三个正圆，圆心在很小的圆周上各自缓慢漂移、
+  // 彼此轻轻交叠；一个小点（样式同首页城市标记）沿深色圆缓慢绕行。
+  // 入场时三个圆依次从正上方顺时针描出，画完后小点淡入。
+  // =========================================================================
+  function initMathFigure() {
+    const canvas = document.getElementById('math-figure-canvas') as HTMLCanvasElement | null;
+    const section = document.getElementById('mathematics-section');
+    if (!canvas || !section) return;
+    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+    if (!ctx) return;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    let w = 0, h = 0;
+    const resize = () => {
+      const dpr = window.devicePixelRatio || 1;
+      w = canvas.clientWidth;
+      h = canvas.clientHeight;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    new ResizeObserver(resize).observe(canvas.parentElement!);
+    resize();
+
+    const TAU = Math.PI * 2;
+    const clamp01 = (v: number) => Math.max(0, Math.min(1, v));
+    const ease = (v: number) => 1 - Math.pow(1 - clamp01(v), 3);
+    // 圆心绕行的角速度（rad/s），三者各不相同，都很慢：深 0.22、中 −0.17（反向）、浅 0.12
+    const circles = [
+      { scale: 1, speed: 0.22, phase: 0, color: 'rgba(26, 26, 26, 0.88)', width: 1.25 },
+      { scale: 0.985, speed: -0.17, phase: 2.1, color: 'rgba(0, 0, 0, 0.28)', width: 1 },
+      { scale: 0.97, speed: 0.12, phase: 4.2, color: 'rgba(0, 0, 0, 0.10)', width: 0.8 },
+    ];
+
+    const draw = (p: number, t: number) => {
+      const R = Math.min(w, h) * 0.3;
+      const drift = R * 0.09;
+      const placed = circles.map((c) => {
+        const a = c.phase + t * c.speed;
+        return { ...c, x: w / 2 + drift * Math.cos(a), y: h / 2 + drift * Math.sin(a), r: R * c.scale };
+      });
+      placed.forEach((c, i) => {
+        const sweep = ease((p - i * 0.12) / 0.75);
+        if (sweep <= 0) return;
+        ctx.strokeStyle = c.color;
+        ctx.lineWidth = c.width;
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.r, -Math.PI / 2, -Math.PI / 2 + TAU * sweep);
+        ctx.stroke();
+      });
+      const show = ease((p - 0.8) / 0.4);
+      if (show <= 0) return;
+      const th = -Math.PI / 2 + t * 0.18;
+      const x = placed[0].x + placed[0].r * Math.cos(th), y = placed[0].y + placed[0].r * Math.sin(th);
+      ctx.globalAlpha = show;
+      ctx.strokeStyle = 'rgba(0, 0, 0, 0.35)';
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(x, y, 4, 0, TAU); ctx.stroke();
+      ctx.fillStyle = '#111111';
+      ctx.beginPath(); ctx.arc(x, y, 1.8, 0, TAU); ctx.fill();
+      ctx.globalAlpha = 1;
+    };
+
+    let introStart = 0;
+    let wasShown = false;
+    const startTime = performance.now();
+    function render(now: number) {
+      const shown = !section!.classList.contains('hidden') && !document.querySelector('.math-group[data-open]') && w > 0 && h > 0;
+      if (shown && !wasShown) introStart = now;
+      wasShown = shown;
+      if (shown) {
+        const still = reduceMotion.matches;
+        ctx.clearRect(0, 0, w, h);
+        draw(still ? 1 : (now - introStart) / 1800, still ? 0 : (now - startTime) / 1000);
+      }
+      requestAnimationFrame(render);
+    }
+    requestAnimationFrame(render);
+  }
+
+  initMathGroups();
+  initMathFigure();
 </script>

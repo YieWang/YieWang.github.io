@@ -31,5 +31,9 @@ async (page) => {
   await page.locator('#nav-mathematics').click();
   await page.waitForURL('**/mathematics');
   if (!await page.locator('#nav-mathematics').evaluate(link => link.classList.contains('active-nav'))) throw Error('Navigation activation failed');
+  // 从首页切走后，Home 悬停仍要变黑
+  await page.locator('#nav-home').hover();
+  await page.waitForTimeout(300);
+  if (await page.locator('#nav-home').evaluate(link => getComputedStyle(link).color) !== 'rgb(0, 0, 0)') throw Error('Home hover lost after switching sections');
   return results;
 }

@@ -21,15 +21,19 @@ async page => {
             return [box.x + scrollX, box.y + scrollY];
           };
           return {
-            anchors: [...section.querySelectorAll('h3')].slice(0, 2).map(position).concat([position(document.querySelector('#footer p'))]),
+            // 只要求第一个标题对齐（Mathematics 第一个栏目 ↔ Project）
+            anchors: [...section.querySelectorAll('h3')].slice(0, 1).map(position),
             footerClear: document.querySelector('#footer').getBoundingClientRect().top >= section.getBoundingClientRect().bottom,
             overflow: document.documentElement.scrollWidth > innerWidth,
-            hidden: [...document.querySelectorAll('.section-pair > .hidden a')].every(link => getComputedStyle(link).visibility === 'hidden'),
+            hidden: [...document.querySelectorAll('.section-pair > .hidden a')].every(link => link.getClientRects().length === 0),
+            fits: document.documentElement.scrollHeight <= innerHeight,
           };
         });
         baseline ??= geometry.anchors;
         check(geometry.anchors.every((point, i) => point.every((value, j) => Math.abs(value - baseline[i][j]) < 0.5)), `${width} ${section}: misaligned ${JSON.stringify(geometry)}`);
         check(geometry.footerClear && !geometry.overflow && geometry.hidden, `${width} ${section}: overlap, overflow or hidden links`);
+        // 竖屏手机上 Mathematics（全部折叠）和 Marginalia 都应一屏放下，版权不被推到屏幕外
+        if (height >= 844) check(geometry.fits, `${width}x${height} ${section}: should fit one screen ${JSON.stringify(geometry)}`);
         if (width === 390) await mobile.screenshot({ path: `output/playwright/${section}-aligned.png`, fullPage: true });
       }
       await mobile.locator('#nav-home').tap();
@@ -44,5 +48,5 @@ async page => {
   } finally {
     await context.close();
   }
-  return 'Mobile heading/footer alignment, direct loads, navigation, hidden links, CV and Apple icon passed';
+  return 'Mobile first-heading alignment, one-screen fit, direct loads, navigation, hidden links, CV and Apple icon passed';
 }

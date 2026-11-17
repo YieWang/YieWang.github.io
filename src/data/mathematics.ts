@@ -5,9 +5,20 @@ export interface NoteItem {
   url?: string;
 }
 
-export interface ExpositionItem {
+// Mathematics 栏目固定为 Paper → Thesis → Talk → Conference → Teaching → Note → Template；
+// 没有条目的栏目整栏不显示，填入条目后自动出现。
+
+export interface PaperItem {
   title: string;
-  type: string;
+  coauthors?: string; // 如 "with A. Author"
+  venue: string;      // 如 "Preprint"、期刊名
+  year: string;
+  url?: string;
+}
+
+export interface ThesisItem {
+  title: string;
+  type: string; // 如 "Bachelor's thesis"
   year: string;
   url?: string;
 }
@@ -16,6 +27,20 @@ export interface TalkItem {
   title: string;
   event: string;
   year: string;
+  url?: string;
+}
+
+export interface ConferenceItem {
+  title: string; // 会议名
+  place: string; // 如 "Regensburg"
+  year: string;
+  url?: string;
+}
+
+export interface TeachingItem {
+  title: string; // 课程名
+  role: string;  // 如 "Tutor"
+  term: string;  // 如 "Winter 2026/27"
   url?: string;
 }
 
@@ -51,7 +76,9 @@ export const notesData: NoteItem[] = [
   },
 ];
 
-export const expositionData: ExpositionItem[] = [
+export const paperData: PaperItem[] = [];
+
+export const thesisData: ThesisItem[] = [
   {
     title: "Research on Galois Theory in Algebra",
     type: "Bachelor's thesis",
@@ -67,6 +94,10 @@ export const talkData: TalkItem[] = [
     url: "https://homepage-assets.mathtranslations.org/talks/Riemann-Roch_and_Effective_Sections.pdf",
   },
 ];
+
+export const conferenceData: ConferenceItem[] = [];
+
+export const teachingData: TeachingItem[] = [];
 
 export const templateData: TemplateItem[] = [
   {

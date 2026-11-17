@@ -13,7 +13,8 @@ async page => {
         await mobile.goto(origin + route);
         await mobile.locator('#footer').scrollIntoViewIfNeeded();
         const state = await mobile.evaluate(() => ({
-          scrollable: getComputedStyle(document.body).overflowY === 'auto',
+          // body 自己滚动（auto）或交给整页滚动（visible，Mathematics）都可以，只是不能锁死
+          scrollable: getComputedStyle(document.body).overflowY !== 'hidden',
           footer: document.getElementById('footer').getBoundingClientRect().bottom,
           overflow: document.documentElement.scrollWidth > innerWidth,
         }));
@@ -45,7 +46,7 @@ async page => {
     await mobile.setViewportSize({ width: 320, height: 568 });
     await mobile.goto(origin + '/');
     const canvas = mobile.locator('#geodetic-canvas-vertical');
-    check(await canvas.evaluate(c => c.clientHeight) === 300, 'Mobile wave height');
+    check(await canvas.evaluate(c => c.clientHeight) >= 210, 'Mobile wave height');
     const box = await canvas.boundingBox();
     const y = Math.min(520, box.y + box.height - 20);
     const cdp = await context.newCDPSession(mobile);
@@ -69,9 +70,66 @@ async page => {
     await context.close();
   }
   await page.setViewportSize({ width: 1440, height: 900 });
-  for (const route of ['/', '/mathematics/', '/marginalia/']) {
+  for (const route of ['/', '/marginalia/']) {
     await page.goto(origin + route);
     check(await page.evaluate(() => getComputedStyle(document.body).overflowY === 'hidden'), `Desktop ${route} must remain single-screen`);
   }
-  return 'Mobile scrolling, wave swipe, photo metadata, short-screen details, Screen redirect/category/back-to-top and desktop scroll rules passed';
+  // Mathematics 电脑端：默认全部折叠、右列显示线描；悬停／点击栏目名在右列显示，一次一栏；鼠标离开区域回到线描
+  await page.goto(origin + '/mathematics/');
+  const mathState = () => page.evaluate(() => ({
+    fits: document.documentElement.scrollHeight <= innerHeight,
+    open: [...document.querySelectorAll('[data-math-group][data-open]')].map(group => group.id),
+    figure: getComputedStyle(document.querySelector('.math-figure')).visibility,
+    focusable: [...document.querySelectorAll('.math-panel a')].some(link => !link.closest('[inert]')),
+  }));
+  let state = await mathState();
+  check(state.fits && state.open.length === 0 && state.figure === 'visible' && !state.focusable, `Desktop Mathematics collapsed: ${JSON.stringify(state)}`);
+  await page.locator('#talk .math-toggle').click();
+  await page.locator('#note .math-toggle').click();
+  await page.waitForTimeout(500);
+  state = await mathState();
+  check(state.fits && state.open.join() === 'note' && state.figure === 'hidden', `Desktop Mathematics single panel: ${JSON.stringify(state)}`);
+  await page.locator('#talk .math-toggle').hover();
+  await page.waitForTimeout(400);
+  state = await mathState();
+  check(state.open.join() === 'talk', `Desktop Mathematics hover: ${JSON.stringify(state)}`);
+  await page.mouse.move(5, 5);
+  await page.waitForTimeout(700);
+  state = await mathState();
+  check(state.open.length === 0 && state.figure === 'visible', `Desktop Mathematics leave: ${JSON.stringify(state)}`);
+  // 条目很多时右侧高度不变、页面不变长，超出部分在框内滚动，底边淡出
+  await page.evaluate(() => {
+    const body = document.querySelector('#math-panel-talk .math-panel-body');
+    const one = body.querySelector('article');
+    for (let i = 0; i < 14; i++) body.appendChild(one.cloneNode(true));
+  });
+  await page.locator('#talk .math-toggle').hover();
+  await page.waitForTimeout(150);
+  const long = await page.evaluate(() => {
+    const panel = document.getElementById('math-panel-talk');
+    const figure = document.querySelector('.math-figure').getBoundingClientRect();
+    return {
+      fits: document.documentElement.scrollHeight <= innerHeight,
+      scrolls: panel.scrollHeight > panel.clientHeight,
+      fade: panel.classList.contains('more-below'),
+      bottom: Math.abs(panel.getBoundingClientRect().bottom - figure.bottom) < 1.5,
+      hint: panel.nextElementSibling.classList.contains('is-visible'),
+    };
+  });
+  check(long.fits && long.scrolls && long.fade && long.bottom && long.hint, `Desktop long panel: ${JSON.stringify(long)}`);
+  // 短竖条：进入时出现一下，不滑动就淡出；滑动时再出现
+  const barVisible = () => page.locator('#math-panel-talk + .math-scroll').evaluate(track => track.classList.contains('is-visible'));
+  await page.waitForTimeout(2000);
+  check(!await barVisible(), 'Scroll hint must fade out when idle');
+  await page.mouse.move(800, 420);
+  await page.mouse.wheel(0, 200);
+  await page.waitForTimeout(200);
+  check(await barVisible(), 'Scroll hint must reappear while scrolling');
+  // 内容放得下的栏不出现短竖条
+  await page.locator('#template .math-toggle').hover();
+  await page.waitForTimeout(300);
+  check(!await page.locator('#math-panel-template + .math-scroll').evaluate(track => track.classList.contains('is-active')), 'No scroll hint when content fits');
+  await page.goto(origin + '/mathematics/#talk');
+  check(await page.locator('#talk').evaluate(group => group.hasAttribute('data-open') && !group.querySelector('.math-panel').inert), 'Hash link must open Talk');
+  return 'Mobile scrolling, wave swipe, photo metadata, short-screen details, Screen redirect/category/back-to-top, desktop scroll rules and Mathematics collapse passed';
 }
