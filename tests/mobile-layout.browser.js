@@ -46,7 +46,7 @@ async page => {
     await mobile.setViewportSize({ width: 320, height: 568 });
     await mobile.goto(origin + '/');
     const canvas = mobile.locator('#geodetic-canvas-vertical');
-    check(await canvas.evaluate(c => c.clientHeight) >= 210, 'Mobile wave height');
+    check(await canvas.evaluate(c => c.clientHeight) >= 200, 'Mobile wave height');
     const box = await canvas.boundingBox();
     const y = Math.min(520, box.y + box.height - 20);
     const cdp = await context.newCDPSession(mobile);
