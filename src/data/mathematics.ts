@@ -67,6 +67,7 @@ export const notesData: NoteItem[] = [
     title: "Category Theory",
     type: "Notes",
     period: "2026–",
+    url: "https://homepage-assets.mathtranslations.org/notes/Category_Theory_Notes.pdf",
   },
   {
     title: "Atlas",
