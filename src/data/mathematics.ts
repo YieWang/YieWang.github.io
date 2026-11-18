@@ -73,7 +73,7 @@ export const notesData: NoteItem[] = [
     title: "Atlas",
     type: "Figures",
     period: "2026–",
-    url: "https://homepage-assets.mathtranslations.org/notes/Atlas.pdf",
+    url: "https://homepage-assets.mathtranslations.org/notes/Atlas.pdf?v=633ef11a",
   },
 ];
 
