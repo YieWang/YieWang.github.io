@@ -67,7 +67,7 @@ export const notesData: NoteItem[] = [
     title: "Category Theory",
     type: "Notes",
     period: "2026–",
-    url: "https://homepage-assets.mathtranslations.org/notes/Category_Theory_Notes.pdf",
+    url: "https://homepage-assets.mathtranslations.org/notes/Category_Theory_Notes.pdf?v=9c4a2a6c",
   },
   {
     title: "Atlas",
@@ -110,14 +110,14 @@ export const templateData: TemplateItem[] = [
   {
     title: "Chinese",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese.pdf?v=11",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese.zip?v=11",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese.pdf?v=13",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Chinese.zip?v=13",
   },
   {
     title: "Seminar",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar.pdf?v=11",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar.zip?v=11",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar.pdf?v=13",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/Seminar.zip?v=13",
   },
   {
     title: "Lecture",
