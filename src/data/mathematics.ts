@@ -104,8 +104,8 @@ export const templateData: TemplateItem[] = [
   {
     title: "English",
     type: "LaTeX template",
-    previewUrl: "https://homepage-assets.mathtranslations.org/templates/English.pdf?v=12",
-    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English.zip?v=12",
+    previewUrl: "https://homepage-assets.mathtranslations.org/templates/English.pdf?v=13",
+    sourceUrl: "https://homepage-assets.mathtranslations.org/templates/English.zip?v=13",
   },
   {
     title: "Chinese",
